@@ -11,3 +11,10 @@
 *.lai
 *.la
 *.a
+
+# css, html
+*.css
+*.html
+*.in
+*.txt
+SeatCode/
