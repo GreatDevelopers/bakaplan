@@ -9,7 +9,7 @@ class ArrangeRollNo : public ExapandRollNo
    public:
    
 //      void arrangeInput();
-      ArrangeRollNo(){cout << "Content-type:text/html\n\n";}
+      ArrangeRollNo(){}//cout << "Content-type:text/html\n\n";}
       void readRollNoRow(int, int);
       void setRollNoRow(int, int);
       void sortRollNo();

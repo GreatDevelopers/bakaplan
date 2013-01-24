@@ -5,8 +5,8 @@ class ReadRollNoDetails : public HTMLTags
     protected:
         int totalFields;
         
-        string rnoPrefix[MIN_SIZE], startRollNo[MIN_SIZE], endRollNo[MIN_SIZE],
-               notIncludedRollNo[MIN_SIZE];
+        string rnoPrefix[MINS_SIZE], startRollNo[MINS_SIZE], endRollNo[MINS_SIZE],
+               notIncludedRollNo[MINS_SIZE];
                
         // cgicc variables nd objts
         Cgicc formData;

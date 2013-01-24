@@ -17,7 +17,7 @@
 *.html
 *.in
 *.txt
-SeatCode/
-Code/Seat-Plan.out
+*.out
 Code/strategy
 Code/subject-wise-rollno
+Code/*.out

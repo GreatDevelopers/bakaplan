@@ -3,8 +3,9 @@ CFLAG   =   -c  -g      # Compilation Flag
 OFLAG   =   -o          # O/p Flag
 LCGICC  =   -lcgicc     # cgicc lib flag
 
-#---------------------------------------------------------------------------
-# Header files(pages)
+#--------------------------------------------------------------------------
+#                    Header files(pages)
+#--------------------------------------------------------------------------
 
 FILENAMES           =   file-names.h
 HEADER              =   header.h $(FILENAMES)
@@ -18,13 +19,15 @@ VALIDATION_HEADER   =   validation.h $(HTMLTAGS_HEADER)
 EXAM_HEADER         =   examdetails.h $(HTMLTAGS_HEADER)
 REPORT_HEADER       =   report.h $(HTMLTAGS_HEADER)
 
-#---------------------------------------------------------------------------
-# Header (CSS)
+#--------------------------------------------------------------------------
+#                           Header files(CSS)
+#--------------------------------------------------------------------------
 
 CSS_HEADER = css.h $(HEADER)
 
-#---------------------------------------------------------------------------
-# Linking Object Files
+#--------------------------------------------------------------------------
+#                        Linking of object files
+#--------------------------------------------------------------------------
 
 HTMLTags    =   htmltags.o # htmltags-main.o
 Home        =   $(HTMLTags) home.o home-main.o
@@ -37,12 +40,15 @@ Validation  =   $(HTMLTags) validation.o validation-main.o
 Exam        =   $(HTMLTags) examdetails.o examdetails-main.o
 Report      =   $(HTMLTags) report.o report-main.o
 
-#---------------------------------------------------------------------------
-# All Targets
+#--------------------------------------------------------------------------
+#                           All Targets
+#--------------------------------------------------------------------------
 
 all: home.css home.html branchdetails.html rollnodetails.html roomdetails.html strategy.html validation.html examdetails.html report.html
 
-#---------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+#                         COMMON HTML TAGS
+#--------------------------------------------------------------------------
 
 htmltags.o: htmltags.cc $(HEADER)
 	$(CC) $(CFLAG) htmltags.cc
@@ -56,7 +62,9 @@ htmltags: $(HTMLTags)
 htmltags-run: htmltags
 	./htmltags
 
-#---------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+#                           Home Page
+#--------------------------------------------------------------------------
 
 home.o: home.cc $(HOME_HEADER)
 	$(CC) $(CFLAG) home.cc
@@ -70,7 +78,9 @@ home.html: $(Home)
 home-run: home.html
 	./home.html
 
-#---------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+#                           CSS File
+#--------------------------------------------------------------------------
 
 css.o: css.cc $(CSS_HEADER)
 	$(CC) $(CFLAG) css.cc
@@ -84,7 +94,9 @@ home.css: $(CSS)
 css-run: home.css
 	./home.css
 
-#---------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+#                           Branch Details
+#--------------------------------------------------------------------------
 
 branchdetails.o: branchdetails.cc $(BRANCH_HEADER)
 	$(CC) $(CFLAG) branchdetails.cc
@@ -109,6 +121,10 @@ branch-run: branchdetails.html
 #	$(CC) $(OFLAG) readbranchdetails $(ReadBranchMain) $(LCGICC)
 #---------------------------------------------------------------------------
 
+#--------------------------------------------------------------------------
+#                           Roll No. Details
+#--------------------------------------------------------------------------
+
 rollnodetails.o: rollnodetails.cc $(ROLLNO_HEADER)
 	$(CC) $(CFLAG) rollnodetails.cc $(LCGICC)
 
@@ -124,7 +140,9 @@ rollnodetails.html: $(RollNo)
 rollno-run: rollnodetails.html
 	./rollnodetails.html
 
-#---------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+#                           Room Details
+#--------------------------------------------------------------------------
 
 roomdetails.o: roomdetails.cc $(ROOM_HEADER)
 	$(CC) $(CFLAG) roomdetails.cc $(LCGICC)
@@ -141,7 +159,9 @@ roomdetails.html: $(Room)
 room-run: rollnodetails.html
 	./rollnodetails.html
 
-#---------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+#                           Strategy
+#--------------------------------------------------------------------------
 
 strategy.o: strategy.cc $(STRATEGY_HEADER)
 	$(CC) $(CFLAG) strategy.cc $(LCGICC)
@@ -158,7 +178,9 @@ strategy.html: $(Strategy)
 strategy-run: strategy.html
 	./strategy.html
 
-#---------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+#                           Validation
+#--------------------------------------------------------------------------
 
 validation.o: validation.cc $(VALIDATION_HEADER)
 	$(CC) $(CFLAG) validation.cc
@@ -172,7 +194,9 @@ validation.html: $(Validation)
 validation-run: validation.html
 	./validation.html
 
-#---------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+#                              Exam Details
+#--------------------------------------------------------------------------
 
 examdetails.o: examdetails.cc $(EXAM_HEADER)
 	$(CC) $(CFLAG) examdetails.cc
@@ -186,7 +210,9 @@ examdetails.html: $(Exam)
 exam-run: examdetails.html
 	./examdetails.html
 
-#---------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+#                           Generate Reports
+#--------------------------------------------------------------------------
 
 report.o: report.cc $(REPORT_HEADER)
 	$(CC) $(CFLAG) report.cc
@@ -200,7 +226,11 @@ report.html: $(Report)
 report-run: report.html
 	./report.html
 
-#---------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+#                  remove exe. files and o/p files
+#--------------------------------------------------------------------------
 
 clean:
 	rm *.html *.o
+
+	

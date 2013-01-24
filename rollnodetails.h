@@ -4,11 +4,11 @@ class ReadBranchDetails : public HTMLTags
 {
     protected:
         // for branch details
-        int totalBranches, totalSubjects[MIN_SIZE];
-        string branchName[MIN_SIZE], subjectName[MIN_SIZE][MIN_SIZE],
-               subjectCode[MIN_SIZE][MIN_SIZE];
+        int totalBranches, totalSubjects[MINS_SIZE];
+        string branchName[MINS_SIZE], subjectName[MINS_SIZE][MINS_SIZE],
+               subjectCode[MINS_SIZE][MINS_SIZE];
         // for splitSujects 
-        string subjectcode[MIN_SIZE], subjectname[MIN_SIZE];
+        string subjectcode[MINS_SIZE], subjectname[MINS_SIZE];
         
         // temp string
         string temp;

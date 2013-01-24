@@ -3,10 +3,10 @@
 class ReadRoomDetails : public HTMLTags
 {
     protected:
-        int totalCentres, totalRooms[MIN_SIZE];
+        int totalCentres, totalRooms[MINS_SIZE];
         
-        string centreNo[MIN_SIZE], roomNo[MIN_SIZE][MIN_SIZE], 
-               roomRows[MIN_SIZE][MIN_SIZE], roomCols[MIN_SIZE][MIN_SIZE]; 
+        string centreNo[MINS_SIZE], roomNo[MINS_SIZE][MINS_SIZE], 
+               roomRows[MINS_SIZE][MINS_SIZE], roomCols[MINS_SIZE][MINS_SIZE]; 
         
         // cgicc variables nd objts
         Cgicc formData;
