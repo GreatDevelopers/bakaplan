@@ -12,12 +12,14 @@ HEADER              =   header.h $(FILENAMES)
 HTMLTAGS_HEADER     =   htmltags.h $(HEADER)
 HOME_HEADER         =   home.h $(HTMLTAGS_HEADER)
 BRANCH_HEADER       =   branchdetails.h $(HTMLTAGS_HEADER)
-ROLLNO_HEADER       =   rollnodetails.h $(HTMLTAGS_HEADER) #$(READBRANCH_HEADER)
+ROLLNO_HEADER       =   rollnodetails.h $(HTMLTAGS_HEADER)  #$(READBRANCH_HEADER)
 ROOM_HEADER         =   roomdetails.h $(HTMLTAGS_HEADER)
-STRATEGY_HEADER     =   strategy.h $(HTMLTAGS_HEADER)
+STRATEGY_HEADER     =   strategy.h $(HTMLTAGS_HEADER) $(SUBJECT_HEADER)
 VALIDATION_HEADER   =   validation.h $(HTMLTAGS_HEADER)
 EXAM_HEADER         =   examdetails.h $(HTMLTAGS_HEADER)
 REPORT_HEADER       =   report.h $(HTMLTAGS_HEADER)
+
+SUBJECT_HEADER      =   SeatPlan/subject-wise-rollno.h SeatPlan/arrange-rollno.h SeatPlan/expand-rollno.h SeatPlan/read-input.h
 
 #--------------------------------------------------------------------------
 #                           Header files(CSS)
@@ -35,10 +37,12 @@ CSS         =   css.o css-main.o
 Branch      =   $(HTMLTags) branchdetails.o branchdetails-main.o
 RollNo      =   $(HTMLTags) readbranchdetails.o rollnodetails.o rollnodetails-main.o
 Room        =   $(HTMLTags) readrollnodetails.o roomdetails.o roomdetails-main.o
-Strategy    =   $(HTMLTags) readroomdetails.o strategy.o strategy-main.o
+Strategy    =   $(HTMLTags) readroomdetails.o $(Subject) strategy.o strategy-main.o
 Validation  =   $(HTMLTags) validation.o validation-main.o
 Exam        =   $(HTMLTags) examdetails.o examdetails-main.o
 Report      =   $(HTMLTags) report.o report-main.o
+
+Subject     =   SeatPlan/subject-wise-rollno.o SeatPlan/arrange-rollno.o SeatPlan/expand-rollno.o SeatPlan/read-input.o
 
 #--------------------------------------------------------------------------
 #                           All Targets
@@ -164,7 +168,7 @@ room-run: rollnodetails.html
 #--------------------------------------------------------------------------
 
 strategy.o: strategy.cc $(STRATEGY_HEADER)
-	$(CC) $(CFLAG) strategy.cc $(LCGICC)
+	$(CC) $(CFLAG) strategy.cc $(Subject) $(LCGICC)
 
 readroomdetails.o: readroomdetails.cc $(STRATEGY_HEADER)
 	$(CC) $(CFLAG) readroomdetails.cc $(LCGICC)
