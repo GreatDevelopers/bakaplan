@@ -3,6 +3,11 @@
 class Validation : public HTMLTags
 {
     protected:
+        string strategyChoice;
+        
+        // cgicc variables nd objts
+        Cgicc formData;
+        form_iterator fi;
     
     public:
         Validation();
