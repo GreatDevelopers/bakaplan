@@ -22,7 +22,7 @@ void Strategy :: BodyContent()
     
     cout << "<div id = \"content\" class = \"content\">" << endl
     
-         << "<form name=\"strategy\" action=\"Code/subject-wise-rollno\" method=\"post\">"
+         << "<form name=\"strategy\" action=\"validation.html\" method=\"post\">"
          
          << "<br> <br><h2> Select Strategy </h2> <br> <br>"
          
@@ -45,7 +45,7 @@ void Strategy :: BodyContent()
          << "</table>"
          
          << "<br><br>";
-        cout << "Select Option <select name=\"Strategy\">"; 
+        cout << "Select Option <select name=\"" << strategy << "\">"; 
         for(i = 65; i < 69; i++)
         {
             char a = i;
