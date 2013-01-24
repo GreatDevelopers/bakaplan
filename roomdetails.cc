@@ -110,11 +110,13 @@ void RoomDetails :: Body()
 
 void RoomDetails :: Main()
 {
-    ReadRollNoDetails :: Main();
+    ReadRollNoDetails :: Main();    
+    
     HTMLStart();    
     
     Head();
     Body();
     
     HTMLEnd();
+    
 }
