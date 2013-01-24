@@ -56,9 +56,18 @@ void Validation :: BodyContent()
     if(next == "Y")
     {
         cout << "<br> <br>" 
-             << "<form name=\"validation\" action=\"report.html\" method=\"post\">" << endl 
+             << "<form name=\"validation\" action=\"examdetails.html\" method=\"post\">" << endl 
              
-             << "<br><input type=\"submit\" value=\"Generate Reports\">";
+             << "<br><input type=\"submit\" value=\"Next\">";
+        
+        cout << "</form>";
+    }
+    else
+    {
+        cout << "<br> <br>" 
+             << "<form name=\"validation\" action=\"roomdetails.html\" method=\"post\">" << endl 
+             
+             << "<br><input type=\"submit\" value=\"Back\">";
         
         cout << "</form>";
     }
