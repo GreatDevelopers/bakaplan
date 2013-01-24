@@ -68,7 +68,7 @@ void Strategy :: totalGroupStudents(int strategy)
                
     }
     sort(group_student_size, group_student_size + strategy);
-    
+    /*
     for(i = 0; i < strategy; i++)
     {
         cout << " grp size " 
@@ -88,7 +88,7 @@ void Strategy :: totalGroupStudents(int strategy)
         cout << 
         cout << temp[i] << "\t" << i << "\t" << sub_totalrno[index_value[i]] << "\t";
         cout << index_value[i] << "\t" << endl;
-    }
+    }*/
 }
 
 void Strategy :: groupCondition(int strategy)
