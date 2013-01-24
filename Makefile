@@ -15,11 +15,12 @@ BRANCH_HEADER       =   branchdetails.h $(HTMLTAGS_HEADER)
 ROLLNO_HEADER       =   rollnodetails.h $(HTMLTAGS_HEADER)  #$(READBRANCH_HEADER)
 ROOM_HEADER         =   roomdetails.h $(HTMLTAGS_HEADER)
 STRATEGY_HEADER     =   strategy.h $(HTMLTAGS_HEADER) $(SUBJECT_HEADER)
-VALIDATION_HEADER   =   validation.h $(HTMLTAGS_HEADER)
+VALIDATION_HEADER   =   validation.h $(HTMLTAGS_HEADER) $(SeatPlan_STRATEGY)
 EXAM_HEADER         =   examdetails.h $(HTMLTAGS_HEADER)
 REPORT_HEADER       =   report.h $(HTMLTAGS_HEADER)
 
 SUBJECT_HEADER      =   SeatPlan/subject-wise-rollno.h SeatPlan/arrange-rollno.h SeatPlan/expand-rollno.h SeatPlan/read-input.h
+SeatPlan_STRATEGY   =   SeatPlan/strategy.h SeatPlan/report.h SeatPlan/seatplan.h SeatPlan/header.h SeatPlan/file-names.h     
 
 #--------------------------------------------------------------------------
 #                           Header files(CSS)
@@ -38,11 +39,12 @@ Branch      =   $(HTMLTags) branchdetails.o branchdetails-main.o
 RollNo      =   $(HTMLTags) readbranchdetails.o rollnodetails.o rollnodetails-main.o
 Room        =   $(HTMLTags) readrollnodetails.o roomdetails.o roomdetails-main.o
 Strategy    =   $(HTMLTags) readroomdetails.o $(Subject) strategy.o strategy-main.o
-Validation  =   $(HTMLTags) validation.o validation-main.o
+Validation  =   $(HTMLTags) $(SeatPlan_Strategy) validation.o validation-main.o
 Exam        =   $(HTMLTags) examdetails.o examdetails-main.o
 Report      =   $(HTMLTags) report.o report-main.o
 
 Subject     =   SeatPlan/subject-wise-rollno.o SeatPlan/arrange-rollno.o SeatPlan/expand-rollno.o SeatPlan/read-input.o
+SeatPlan_Strategy   =   SeatPlan/strategy.o SeatPlan/report.o SeatPlan/branch-report.o SeatPlan/room-report.o SeatPlan/seatplan.o 
 
 #--------------------------------------------------------------------------
 #                           All Targets
@@ -187,13 +189,13 @@ strategy-run: strategy.html
 #--------------------------------------------------------------------------
 
 validation.o: validation.cc $(VALIDATION_HEADER)
-	$(CC) $(CFLAG) validation.cc
+	$(CC) $(CFLAG) validation.cc $(LCGICC)
 
 validation-main.o: validation-main.cpp $(VALIDATION_HEADER)
-	$(CC) $(CFLAG) validation-main.cpp
+	$(CC) $(CFLAG) validation-main.cpp $(LCGICC)
 
 validation.html: $(Validation)
-	$(CC) $(OFLAG) validation.html $(Validation)
+	$(CC) $(OFLAG) validation.html $(Validation) $(LCGICC)
 
 validation-run: validation.html
 	./validation.html
