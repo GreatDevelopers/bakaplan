@@ -32,7 +32,7 @@ STRATEGY            =    $(REPORT) strategy.o strategy-main.o
 #                           All Targets
 #--------------------------------------------------------------------------
 
-all: subject-wise-rollno
+all: subject-wise-rollno strategy
 #subject-wise-rollno-run
 #expand-rollno-run
 #subject-wise-rollno-run
