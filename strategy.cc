@@ -1,4 +1,5 @@
 #include "strategy.h"
+#include "SeatPlan/subject-wise-rollno.h"
 
 Strategy :: Strategy()
 {
@@ -73,6 +74,11 @@ void Strategy :: Body()
 void Strategy :: Main()
 {
     ReadRoomDetails :: Main();
+    
+    
+    SubjectWiseRollNo subject;
+    subject.Main();
+
     HTMLStart();    
     
     Head();
