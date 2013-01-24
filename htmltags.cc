@@ -22,6 +22,9 @@ HTMLTags :: HTMLTags()
     room_no         =    "RoomNo";
     rows            =    "Rows";
     cols            =    "Cols";
+    
+    // Strategy option
+    strategy        =    "Strategy";   
 }
 
 void HTMLTags :: ContentType()

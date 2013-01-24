@@ -18,6 +18,9 @@ class HTMLTags
     // room field names
     string total_centres, centre_no, total_rooms, room_no, rows, cols;
     
+    // strategy option
+    string strategy;
+    
     ifstream infile;
     ofstream outfile;
         
