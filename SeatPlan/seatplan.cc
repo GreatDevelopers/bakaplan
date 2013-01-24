@@ -142,7 +142,7 @@ void SeatPlan :: showSeatPlan()
     }
     outfile.close();
     
-    outfile.open(HTMLFile);
+    outfile.open(SeatPlan_HTMLFile);
     outfile << "<html><head><title>Seating Plan</title>"
             << "<style> @media print { div {page-break-before:always} } </style> </head>"
             << "<body align = \"center\" > <pre>"

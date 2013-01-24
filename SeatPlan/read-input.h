@@ -29,7 +29,7 @@ class ReadInput
       ofstream outfile;
       
    public:
-      ReadInput(){cout << "Content-type:text/html\n\n";} 
+//      ReadInput(){cout << "Content-type:text/html\n\n";} 
       void readRoomsInput(string);  // Rooms details
       void readRollNoInput(string); // Roll No Details
       void readBranchDetails(string); // Subject code Details

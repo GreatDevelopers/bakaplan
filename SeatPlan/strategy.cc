@@ -97,8 +97,8 @@ void Strategy :: groupCondition(int strategy)
     {
         int extra = (group_student_size[strategy-1] - total_group_seats);
         extra = extra * strategy;
-        cout << "\t condition in valid" << endl
-             << "\t Add " << extra << " more seats." << endl;
+        outfile << "\t condition invalid" << endl
+                << "\t Add " << extra << " more seats." << endl;
         
 //        for(i = 0; i < total_centres; i++)
 //        {
@@ -120,7 +120,8 @@ void Strategy :: groupCondition(int strategy)
     }
     else
     {
-        cout << "\t condition is valid" << endl;
+        outfile << "Y" << endl;
+        outfile << "\t condition is valid" << endl;
         seatingPlan(strategy);
         showSeatPlan();
         Report :: Main();
@@ -129,24 +130,44 @@ void Strategy :: groupCondition(int strategy)
 
 void Strategy :: checkValidation(int strategy)
 {
+    outfile.open(Validation_out);
+    
     totalSeats(strategy);
     totalStudents();
     totalGroupStudents(strategy);
     
-    cout << "\n\t Total Seats = " << total_seats << endl
-         << "\t Total Students = " << total_students << endl
-         << "\t Total Group Seats = " << total_group_seats << endl
-         << "\t Max Group Students = " << group_student_size[strategy-1] << endl;
+    outfile << "\n\t Total Seats = " << total_seats << endl
+            << "\t Total Students = " << total_students << endl
+            << "\t Total Group Seats = " << total_group_seats << endl
+            << "\t Max Group Students = " << group_student_size[strategy-1] << endl;
     
     if(total_seats < total_students)
-        cout << "\t Add More rooms!" << endl;
+        outfile << "\t Add More rooms!" << endl;
     else
         groupCondition(strategy);
+        
+    outfile.close();
 }
         
 void Strategy :: chooseStrategy()
 {
-    do
+    int choice;
+    infile.open(Input_Strategy);
+    infile >> strategy_choice;    
+    infile.close();
+    
+    if(strategy_choice == "A")
+        choice = 1;
+    if(strategy_choice == "B")
+        choice = 2;
+    if(strategy_choice == "C")
+        choice = 3;
+    if(strategy_choice == "D")
+        choice = 4;
+        
+    checkValidation(choice);
+        
+/*    do
     {
         system("clear");
     
@@ -183,15 +204,12 @@ void Strategy :: chooseStrategy()
             case 4:
                 checkValidation(strategy_choice);
                 break;
-            /*	case 2:
-                checkValidation(strategyChoice);
-                break;
-            */
             default:
                 cout<<"Oops!!! Wrong choice\n Enter your choice Again\n";
         }
 
     }while(strategy_choice < 1 || strategy_choice > 4);
+    */
 }
 
 void Strategy :: Main()
