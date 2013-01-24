@@ -9,7 +9,7 @@ void SubjectWiseRollNo :: setSubCode()
    }
    i = 0;
    // Putting values of subject code into another array sub_subcode
-   //for(i = 0; i < subject_size; i++)
+   for(i = 0; i < subject_size; i++)
    {
       for(j = 0; j < total_branches; j++)
       {
@@ -26,7 +26,7 @@ void SubjectWiseRollNo :: setSubCode()
 void SubjectWiseRollNo :: removeRedundantSubCode()
 {
    // Removing redundancy from sub_subcode array
-   total_code = total_branches;
+   total_code = subject_size;//total_branches;
        
    for(k = 0; k < total_code; k++)
    {
@@ -49,7 +49,9 @@ void SubjectWiseRollNo :: subjectWiseRollNo()
    setSubCode();
           
    removeRedundantSubCode();
-       
+   
+//   cout << "\n Total Code: " << total_code << endl;
+    
    for(i = 0; i < total_code; i++)
    {
       sub_totalrno[i] = 0;
@@ -86,8 +88,8 @@ void SubjectWiseRollNo :: showSubjectWiseRollNo()
       outfile << sub_subcode[i] << endl << sub_totalrno[i] << ' ';
       
       for(j = 0; j < sub_totalrno[i]; j++)//SizeOfArray(sub_rollno[0])
-         outfile<<sub_rollno[i][j]<<"\t";
-      outfile<<endl;
+         outfile << sub_rollno[i][j]<<"\t";
+      outfile << endl;
    }
    outfile.close();
 }

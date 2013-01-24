@@ -34,6 +34,7 @@ void Strategy :: totalGroupStudents(int strategy)
         temp[i] = sub_totalrno[i];
         index_value[i] = 0;
     }
+//    cout << "total code " << total_code << endl;
     
     for(i = 0; i < strategy; i++)
     {
@@ -68,13 +69,13 @@ void Strategy :: totalGroupStudents(int strategy)
     }
     sort(group_student_size, group_student_size + strategy);
     
-/*    for(i = 0; i < strategy; i++)
+    for(i = 0; i < strategy; i++)
     {
         cout << " grp size " 
              << group_student_size[i] << endl;
     }
     
-     displaying sorted array
+    // displaying sorted array
     for(i = 0; i < total_code; i++)
     {
         cout << sub_totalrno[i] << "\t" << i << endl;
@@ -84,11 +85,10 @@ void Strategy :: totalGroupStudents(int strategy)
     
     for(i = 0; i < total_code; i++)
     {
+        cout << 
         cout << temp[i] << "\t" << i << "\t" << sub_totalrno[index_value[i]] << "\t";
         cout << index_value[i] << "\t" << endl;
     }
-
-  */  
 }
 
 void Strategy :: groupCondition(int strategy)

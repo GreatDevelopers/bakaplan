@@ -1,10 +1,11 @@
-CC      =   g++     #   
-CFLAG   =   -c      # Compilation Flag
-OFLAG   =   -o      # O/p Flag
-LCGICC  =   -lcgicc # cgicc lib flag
+CC      =   g++           
+CFLAG   =   -c  -g      # Compilation Flag
+OFLAG   =   -o          # O/p Flag
+LCGICC  =   -lcgicc     # cgicc lib flag
 
 #---------------------------------------------------------------------------
 # Header files(pages)
+
 FILENAMES           =   file-names.h
 HEADER              =   header.h $(FILENAMES)
 HTMLTAGS_HEADER     =   htmltags.h $(HEADER)
@@ -19,9 +20,12 @@ REPORT_HEADER       =   report.h $(HTMLTAGS_HEADER)
 
 #---------------------------------------------------------------------------
 # Header (CSS)
+
 CSS_HEADER = css.h $(HEADER)
 
+#---------------------------------------------------------------------------
 # Linking Object Files
+
 HTMLTags    =   htmltags.o # htmltags-main.o
 Home        =   $(HTMLTags) home.o home-main.o
 CSS         =   css.o css-main.o
@@ -35,8 +39,11 @@ Report      =   $(HTMLTags) report.o report-main.o
 
 #---------------------------------------------------------------------------
 # All Targets
+
 all: home.css home.html branchdetails.html rollnodetails.html roomdetails.html strategy.html validation.html examdetails.html report.html
+
 #---------------------------------------------------------------------------
+
 htmltags.o: htmltags.cc $(HEADER)
 	$(CC) $(CFLAG) htmltags.cc
 
@@ -48,7 +55,9 @@ htmltags: $(HTMLTags)
 
 htmltags-run: htmltags
 	./htmltags
+
 #---------------------------------------------------------------------------
+
 home.o: home.cc $(HOME_HEADER)
 	$(CC) $(CFLAG) home.cc
 
@@ -60,7 +69,9 @@ home.html: $(Home)
 
 home-run: home.html
 	./home.html
+
 #---------------------------------------------------------------------------
+
 css.o: css.cc $(CSS_HEADER)
 	$(CC) $(CFLAG) css.cc
 
@@ -72,7 +83,9 @@ home.css: $(CSS)
 
 css-run: home.css
 	./home.css
+
 #---------------------------------------------------------------------------
+
 branchdetails.o: branchdetails.cc $(BRANCH_HEADER)
 	$(CC) $(CFLAG) branchdetails.cc
 
@@ -84,6 +97,7 @@ branchdetails.html: $(Branch)
 
 branch-run: branchdetails.html
 	./branchdetails.html
+
 #---------------------------------------------------------------------------
 #readbranchdetails.o: readbranchdetails.cc $(READBRANCH_HEADER) $(BRANCH_HEADER)
 #	$(CC) $(CFLAG) readbranchdetails.cc $(LCGICC)
@@ -94,6 +108,7 @@ branch-run: branchdetails.html
 #readbranchdetails: $(ReadBranchMain)
 #	$(CC) $(OFLAG) readbranchdetails $(ReadBranchMain) $(LCGICC)
 #---------------------------------------------------------------------------
+
 rollnodetails.o: rollnodetails.cc $(ROLLNO_HEADER)
 	$(CC) $(CFLAG) rollnodetails.cc $(LCGICC)
 
@@ -108,7 +123,9 @@ rollnodetails.html: $(RollNo)
 
 rollno-run: rollnodetails.html
 	./rollnodetails.html
+
 #---------------------------------------------------------------------------
+
 roomdetails.o: roomdetails.cc $(ROOM_HEADER)
 	$(CC) $(CFLAG) roomdetails.cc $(LCGICC)
 
@@ -123,7 +140,9 @@ roomdetails.html: $(Room)
 
 room-run: rollnodetails.html
 	./rollnodetails.html
+
 #---------------------------------------------------------------------------
+
 strategy.o: strategy.cc $(STRATEGY_HEADER)
 	$(CC) $(CFLAG) strategy.cc $(LCGICC)
 
@@ -138,7 +157,9 @@ strategy.html: $(Strategy)
 
 strategy-run: strategy.html
 	./strategy.html
+
 #---------------------------------------------------------------------------
+
 validation.o: validation.cc $(VALIDATION_HEADER)
 	$(CC) $(CFLAG) validation.cc
 
@@ -150,7 +171,9 @@ validation.html: $(Validation)
 
 validation-run: validation.html
 	./validation.html
+
 #---------------------------------------------------------------------------
+
 examdetails.o: examdetails.cc $(EXAM_HEADER)
 	$(CC) $(CFLAG) examdetails.cc
 
@@ -162,7 +185,9 @@ examdetails.html: $(Exam)
 
 exam-run: examdetails.html
 	./examdetails.html
+
 #---------------------------------------------------------------------------
+
 report.o: report.cc $(REPORT_HEADER)
 	$(CC) $(CFLAG) report.cc
 
@@ -174,6 +199,7 @@ report.html: $(Report)
 
 report-run: report.html
 	./report.html
+
 #---------------------------------------------------------------------------
 
 clean:
