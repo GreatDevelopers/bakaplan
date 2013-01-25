@@ -1,4 +1,0 @@
-bakaplan
-========
-
-Prepare "Seating Plan"
