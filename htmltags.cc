@@ -71,7 +71,7 @@ void HTMLTags :: BodyEnd()
 
 void HTMLTags :: Title(string title)
 {
-    ProjectName = "BaKaPlan";
+    ProjectName = "BaKaPlan-Beta";
     cout << "<title>" << ProjectName << ": " << title << "</title>";
 }
 
