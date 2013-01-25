@@ -86,7 +86,7 @@ void HTMLTags :: Header()
 {
     cout << "<div id = \"header\" >" << endl
 //         << "<h1><a href=\"http://localhost/~mandy/cgi-bin/SP/home.html\"> BeSeated </h1></a>" << endl
-         << "<h1> BakaPlan </h1>" << endl
+         << "<h1> BakaPlan-Beta </h1>" << endl
          << "<div id = \"image\">" << endl
          << "<img src=\"../../SeatPlan/images/image.jpg\" "
          << "width=\"100%\" height=\"200\" alt=\"some_text\">" << endl
