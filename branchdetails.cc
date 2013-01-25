@@ -1,3 +1,4 @@
+
 #include "branchdetails.h"
 
 BranchDetails :: BranchDetails()
