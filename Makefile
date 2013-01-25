@@ -41,7 +41,7 @@ Room        =   $(HTMLTags) readrollnodetails.o roomdetails.o roomdetails-main.o
 Strategy    =   $(HTMLTags) readroomdetails.o $(Subject) strategy.o strategy-main.o
 Validation  =   $(HTMLTags) $(SeatPlan_Strategy) validation.o validation-main.o
 Exam        =   $(HTMLTags) examdetails.o examdetails-main.o
-Report      =   $(HTMLTags) report.o report-main.o
+Report      =   $(HTMLTags) readexamdetails.o report.o report-main.o
 
 Subject     =   SeatPlan/subject-wise-rollno.o SeatPlan/arrange-rollno.o SeatPlan/expand-rollno.o SeatPlan/read-input.o
 SeatPlan_Strategy   =   SeatPlan/strategy.o SeatPlan/report.o SeatPlan/branch-report.o SeatPlan/room-report.o SeatPlan/seatplan.o 
@@ -221,13 +221,16 @@ exam-run: examdetails.html
 #--------------------------------------------------------------------------
 
 report.o: report.cc $(REPORT_HEADER)
-	$(CC) $(CFLAG) report.cc
+	$(CC) $(CFLAG) report.cc $(LCGICC)
+
+readexamdetails.o: readexamdetails.cc $(REPORT_HEADER)
+	$(CC) $(CFLAG) readexamdetails.cc $(LCGICC)	
 
 report-main.o: report-main.cpp $(REPORT_HEADER)
-	$(CC) $(CFLAG) report-main.cpp
+	$(CC) $(CFLAG) report-main.cpp $(LCGICC)
 
 report.html: $(Report)
-	$(CC) $(OFLAG) report.html $(Report)
+	$(CC) $(OFLAG) report.html $(Report) $(LCGICC)
 
 report-run: report.html
 	./report.html
