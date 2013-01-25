@@ -1,0 +1,9 @@
+*.o
+*.out
+*.txt
+SeatPlan/*.o
+SeatPlan/*.out
+SeatPlan/*.txt
+*.html
+SeatPlan/strategy
+SeatPlan/subject-wise-rollno
