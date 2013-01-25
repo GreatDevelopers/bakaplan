@@ -150,7 +150,7 @@ void SeatPlan :: showSeatPlan()
     infile.close();
     
     outfile.open(SeatPlan_HTMLFile);
-    outfile << "<html><head><title>Seating Plan</title>"
+    outfile << "<html><head><title>BaKa Plan</title>"
             << "<style> @media print { div {page-break-before:always} } </style> </head>"
             << "<body align = \"center\" > <pre>"
             //<< "<br><br> " //<h2> Seating Plan </h2> <br>";//" <b> Total Centres: "

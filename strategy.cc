@@ -32,13 +32,13 @@ void Strategy :: BodyContent()
          
          << "<tr> "
          
-         << " <td> Branch 1 <br> Branch 1 <br> Branch 1 <br> Branch 1</td> "
+         << " <td> Subject Code 1 <br> Subject Code 1 <br> Subject Code 1 <br> Subject Code 1</td> "
          
-         << " <td> Branch 1 <br> Branch 2 <br> Branch 1 <br> Branch 2 </td> "
+         << " <td> Subject Code 1 <br> Subject Code 2 <br> Subject Code 1 <br> Subject Code 2 </td> "
          
-         << " <td>  Branch 1 <br> Branch 2 <br> Branch 3 <br> Branch 1</td> "
+         << " <td> Subject Code 1 <br> Subject Code 2 <br> Subject Code 3 <br> Subject Code 1</td> "
          
-         << " <td>  Branch 1 <br> Branch 2 <br> Branch 3 <br> Branch 4</td> "
+         << " <td> Subject Code 1 <br> Subject Code 2 <br> Subject Code 3 <br> Subject Code 4</td> "
          
          << "</tr>"
          
