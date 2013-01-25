@@ -183,18 +183,23 @@ void SeatPlan :: showSeatPlan()
                         a = ' ';
                     else
                         a = i;
-                    outfile << "<th>" << a << "</th>";
+                    outfile << "<th width = \"80\" height = \"30\""
+                            << " align = \"center\" valign = \"center\">" 
+                            << a << "</th>";
                 }
                 outfile << "</tr>";
             for(row = 0; row < rows[centre][room]; row++)
             {
                 
-                outfile << "<tr><td>"
+                outfile << "<tr><td width = \"80\" height = \"30\" "
+                        << "align = \"center\" valign = \"center\">"
                         << row+1
                         << "</td>";
                 for(col = 0; col < cols[centre][room]; col++)
                 {
-                    outfile << "<td>" << seat[centre][room][row][col] 
+                    outfile << "<td width = \"80\" height = \"30\" "
+                            << "align = \"center\" valign = \"center\">" 
+                            << seat[centre][room][row][col] 
                             << "</td>";
                 }
                 outfile << "</tr>";
