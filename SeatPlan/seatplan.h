@@ -33,6 +33,9 @@ class SeatPlan
         
         ifstream infile;
         ofstream outfile;
+        
+        // exam details
+        string exam_name, exam_date, exam_time, exam_venue;
     
     public:
 //        SeatPlan(){cout << "Content-type:text/html\n\n";}

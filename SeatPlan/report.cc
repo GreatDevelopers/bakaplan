@@ -87,5 +87,5 @@ void Report :: readSeatPlan(string file)
 void Report :: Main()
 {
     readInputRollNo(Input_Rollno_out);
-    readSeatPlan(Seat_Plan_out);
+    readSeatPlan(SeatPlan_out);
 }

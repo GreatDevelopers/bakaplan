@@ -121,7 +121,7 @@ string SeatPlan :: rollNo(int s)
 
 void SeatPlan :: showSeatPlan()
 {
-    outfile.open(Seat_Plan_out);
+    outfile.open(SeatPlan_out);
     outfile << total_centres << endl;
     for(centre = 0; centre < total_centres; centre++)
     {
@@ -142,24 +142,35 @@ void SeatPlan :: showSeatPlan()
     }
     outfile.close();
     
+    infile.open(Input_ExamDetails);
+    getline(infile, exam_name, '\n');
+    getline(infile, exam_date, '\n');
+    getline(infile, exam_time, '\n');
+    getline(infile, exam_venue, '\n');
+    infile.close();
+    
     outfile.open(SeatPlan_HTMLFile);
     outfile << "<html><head><title>Seating Plan</title>"
             << "<style> @media print { div {page-break-before:always} } </style> </head>"
             << "<body align = \"center\" > <pre>"
-            << "<br><br> <h2> Seating Plan </h2> <br>";//" <b> Total Centres: " 
+            //<< "<br><br> " //<h2> Seating Plan </h2> <br>";//" <b> Total Centres: "
+            
+            << endl;
 //            << total_centres << "</b> " << endl;
     for(centre = 0; centre < total_centres; centre++)
     {
-//        outfile << "<b><br> Centre Name: </b>" << centre_no[centre] << endl
-//                <<  "<b>     Total Rooms: </b>" << total_rooms[centre] 
-//                << "<br>" << endl;
                 
         for(room = 0; room < total_rooms[centre]; room++)
         {
-            outfile << "<div>  </div>";
-            outfile << "<b><br> Centre Name: </b>" << centre_no[centre] << endl
+            outfile << "<h3>"
+                    << "Examination :   " << exam_name << "<br>"
+                    << "Date : " << exam_date << "<br>"
+                    << "Time : " << exam_time << "<br>"
+                    << "Venue : " << exam_venue << "<br>"
+                    << "</h3>";
+            
+            outfile << "<b><br> Centre Name: </b>" << centre_no[centre] << endl;
 //                <<  "<b>     Total Rooms: </b>" << total_rooms[centre] 
-                << "" << endl;
             outfile << "<br><b>Room No: </b>" << room_no[centre][room] << endl << "<br>"
                     << "<table align = \"center\" cellpadding = \"8\""
                     << " cellspacing = \"1\" border = \"1\">";
@@ -189,26 +200,10 @@ void SeatPlan :: showSeatPlan()
                 outfile << "</tr>";
             }
             outfile << "</table>";
+            outfile << "<div>  </div>";
         }
     }
     outfile.close();
-    
-//    outfile.open("checkRoom.txt");
-//    
-//    outfile << "----------------room details--------------------" << endl;
-//   outfile << total_centres << endl;
-//   for(i = 0; i < total_centres; i++)
-//   {
-//      outfile << centre_no[i] << endl;
-//      outfile << total_rooms[i] << endl;
-//      for (j = 0; j < total_rooms[i]; j++)
-//      {
-//         outfile << room_no[i][j]<< endl;
-//         outfile << rows[i][j] << " " << cols[i][j] << endl;
-//      }
-//   }
-//   
-//   outfile.close();
     
 }
 

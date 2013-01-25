@@ -124,7 +124,7 @@ void Strategy :: groupCondition(int strategy)
         outfile << "\t condition is valid" << endl;
         seatingPlan(strategy);
         showSeatPlan();
-        Report :: Main();
+//        Report :: Main();
     }
 }
 
