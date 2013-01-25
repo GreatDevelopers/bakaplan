@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> parent of edda50f... removed
 #include "branchdetails.h"
 
 BranchDetails :: BranchDetails()
