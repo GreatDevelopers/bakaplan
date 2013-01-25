@@ -24,7 +24,14 @@ HTMLTags :: HTMLTags()
     cols            =    "Cols";
     
     // Strategy option
-    strategy        =    "Strategy";   
+    strategy        =    "Strategy";
+    
+    // Exam Details
+    exam_name       =    "ExamName";
+    exam_time       =    "ExamTime";
+    exam_date       =    "ExamDate";
+    exam_venue      =    "ExamVenue";
+       
 }
 
 void HTMLTags :: ContentType()

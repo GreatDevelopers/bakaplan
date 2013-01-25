@@ -14,6 +14,7 @@ class ReadRoomDetails : public HTMLTags
         
         // temp
         string temp;    
+        
     public:
         ReadRoomDetails(){}
         void readRoomDetails();

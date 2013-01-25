@@ -62,7 +62,7 @@ void Validation :: BodyContent()
         
         cout << "</form>";
     }
-    else
+   /* else
     {
         cout << "<br> <br>" 
              << "<form name=\"validation\" action=\"roomdetails.html\" method=\"post\">" << endl 
@@ -70,7 +70,7 @@ void Validation :: BodyContent()
              << "<br><input type=\"submit\" value=\"Back\">";
         
         cout << "</form>";
-    }
+    }*/
          
     cout << "</div>" << endl
          << "</div>" << endl;

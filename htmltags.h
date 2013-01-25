@@ -21,6 +21,9 @@ class HTMLTags
     // strategy option
     string strategy;
     
+    // Exam Details
+    string exam_name, exam_time, exam_date, exam_venue;
+    
     ifstream infile;
     ofstream outfile;
         
