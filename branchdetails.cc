@@ -64,7 +64,7 @@ void BranchDetails :: BodyContent()
          << "<tr>"
          
          << "<th>Branch Name</th>"
-         << "<th>Total Subjects</th>"
+         << "<th width = \"30\">Total Subjects</th>"
          << "<th>Subject Name</th>"
          << "<th>Subject Code</th>"
          
@@ -75,7 +75,7 @@ void BranchDetails :: BodyContent()
         cout << "<tr>"
              << "<td>"
              << "<input type=\"text\" name=\"" << branch_name << j+1 << "\""
-             << "value = \" "<< branchName[j] << "\">"
+             << "value = \" "<< branchName[j] << "\" size = \"17\">"
              << "</td>"
              
              << "<td>"
