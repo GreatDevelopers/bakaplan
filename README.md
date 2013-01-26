@@ -13,7 +13,7 @@ REQUIREMENTS:
 
 INPUT FORMAT:
 ----------------------------
-Input from user is divided intu 3 parts:
+Input from user is divided into 3 parts:
 
 1) Branch Details
 
@@ -60,21 +60,32 @@ Total Branches : 2
 </table>
 
 
-Input format for branch details:
+Input format for room details:
+
+Total Centres : 2
+
+Centre Name : Centre 1              Total Rooms : 2
 
 <table>
-    <tr> <th> Branch Name </th> <th> Total subjects</th> <th> Subject Name</th>
-        <th>Subject Code </th>
+    <tr> <th> Room No. </th> <th> Rows</th> <th> Cols</th>
     </tr>
-     <tr> <th> Information Technology </th> <th> 2</th> <th> DBMS, SAD</th>
-        <th>IT-121, IT 201</th>
+    <tr> <td> Room 1 </td> <td> 6</td> <td>6 </td>
     </tr>
-     <tr> <th> Comp. Engg. </th> <th> 1</th> <th> CG</th>
-        <th>CSE 121 </th>
+    <tr> <td> Room 2 </td> <td> 8</td> <td>8 </td>
     </tr>
-
 
 </table>
+
+Centre Name : Centre 2              Total Rooms : 1
+
+<table>
+    <tr> <th> Room No. </th> <th> Rows</th> <th> Cols</th>
+    </tr>
+    <tr> <td> Room 1 </td> <td> 6</td> <td>6 </td>
+    </tr>
+
+</table>
+
 UASGE:
 ----------------------------
 
@@ -82,5 +93,8 @@ UASGE:
 AUTHORS:
 ----------------------------
 Mandeep Kaur
+
 Website: http://mandeepsimak.wordpress.com
+
 Email: meghasimak@gmail.com
+
