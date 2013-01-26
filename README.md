@@ -164,7 +164,7 @@ Now place this folder in ~/public_html folder.
 
 After all above steps open browser and open following link:
 
-http://localhost/~username/BaKaPlan/home.html
+http://localhost/~username/BaKaPlan
 
 NOTE:    Be sure that you must have write permission in the directory
          (~/public_html/cgi-bin/bakaplan/ and ~/public_html/)
