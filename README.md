@@ -2,7 +2,7 @@ BaKa Plan
 ============
 
 This software creates seating plan for examinations. It provides four different
-strategies to create saet plan.
+strategies to create seat plan.
 
 REQUIREMENTS:
 ----------------------------
@@ -138,7 +138,7 @@ If condition is valid then user moves on to next page and fill examination
 details. In which user fill examination name, date, time and venue.
 And then he/she can download seating plan for examination using this software.
 
-UASGE:
+USAGE:
 ----------------------------
 Download this repository bakaplan. This has all files for front end and backend 
 processing code.
