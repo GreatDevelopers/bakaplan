@@ -10,6 +10,21 @@ REQUIREMENTS:
 
 2) Configure public_html/cgi-bin folder for executing files on browser.
 
+3) CGICC Library
+    Download 3rd last package from ftp://ftp.gnu.org/gnu/cgicc/
+    
+    Then run following commands in terminal
+    
+    1) $tar xzf cgicc-X.X.X.tar.gz 
+    
+    2) $cd cgicc-X.X.X/ 
+    
+    3) $./configure --prefix=/usr 
+    
+    4) $make
+    
+    5) $make install
+
 
 INPUT FORMAT:
 ----------------------------
