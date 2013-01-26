@@ -86,6 +86,28 @@ Centre Name : Centre 2              Total Rooms : 1
 
 </table>
 
+After this User has to select strategy. There are 4 strategies as shown below:
+
+<table>
+
+    <tr> <th>A	 </th> <th>  B	 </th> <th>  C	 </th> <th>  D</th>
+    </tr>
+    <tr> <th>Subject Code 1 </th> <th>Subject Code 1</th> <th>Subject Code  1</th> 
+    <th>Subject Code 1</th>
+    </tr>
+    <tr> <th>Subject Code 1</th> <th>Subject Code 2</th> <th>Subject Code  2</th> 
+    <th>Subject Code 2</th>
+    </tr>
+    <tr> <th>Subject Code 1</th> <th>Subject Code 1</th> <th>Subject Code  3</th> 
+    <th>Subject Code 3</th>
+    </tr>
+    <tr> <th>Subject Code 1</th> <th>Subject Code 2</th> <th>Subject Code  1</th> 
+    <th>Subject Code 4</th>
+    </tr>
+
+</table>
+
+
 UASGE:
 ----------------------------
 
