@@ -11,6 +11,8 @@ void HomeCSS :: Main()
     cout << "body { background-image:url('../../BaKaPlan/images/bg.jpg'); }"
          << "h1 { color: FFF0F5; font-size: 100px;"
          << " font-family:\"Alex Brush\";}"
+         << "sup { color: FFF0F5; font-size: 30px;"
+         << " font-family:\"Alex Brush\";}"
          << ".center"
          << "{"
          << "margin:auto;"
