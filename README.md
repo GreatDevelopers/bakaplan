@@ -13,7 +13,7 @@ REQUIREMENTS:
 
 INPUT FORMAT:
 ----------------------------
-Input from user is divided into 3 parts:
+<b>Input from user</b> is divided into 3 parts:
 
 1) Branch Details
 
@@ -107,6 +107,9 @@ After this User has to select strategy. There are 4 strategies as shown below:
 
 </table>
 
+Select strategy : B
+
+Then
 
 UASGE:
 ----------------------------
