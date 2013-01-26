@@ -8,7 +8,7 @@ void HomeCSS :: ContentType()
 void HomeCSS :: Main()
 {
     ContentType();
-    cout << "body { background-image:url('../../SeatPlan/images/bg.jpg'); }"
+    cout << "body { background-image:url('../../BaKaPlan/images/bg.jpg'); }"
          << "h1 { color: FFF0F5; font-size: 100px;"
          << " font-family:\"Alex Brush\";}"
          << ".center"
