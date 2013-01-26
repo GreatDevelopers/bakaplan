@@ -64,7 +64,9 @@ Input format for room details:
 
 Total Centres : 2
 
-Centre Name : Centre 1              Total Rooms : 2
+Centre Name : Centre 1
+
+Total Rooms : 2
 
 <table>
     <tr> <th> Room No. </th> <th> Rows</th> <th> Cols</th>
@@ -76,7 +78,9 @@ Centre Name : Centre 1              Total Rooms : 2
 
 </table>
 
-Centre Name : Centre 2              Total Rooms : 1
+Centre Name : Centre 2
+
+Total Rooms : 1
 
 <table>
     <tr> <th> Room No. </th> <th> Rows</th> <th> Cols</th>
@@ -92,28 +96,75 @@ After this User has to select strategy. There are 4 strategies as shown below:
 
     <tr> <th>A	 </th> <th>  B	 </th> <th>  C	 </th> <th>  D</th>
     </tr>
-    <tr> <th>Subject Code 1 </th> <th>Subject Code 1</th> <th>Subject Code  1</th> 
-    <th>Subject Code 1</th>
+    <tr> <td>Subject Code 1 </td> <td>Subject Code 1</td> <td>Subject Code  1</td> 
+    <td>Subject Code 1</td>
     </tr>
-    <tr> <th>Subject Code 1</th> <th>Subject Code 2</th> <th>Subject Code  2</th> 
-    <th>Subject Code 2</th>
+    <tr> <td>Subject Code 1</td> <td>Subject Code 2</td> <td>Subject Code  2</td> 
+    <td>Subject Code 2</td>
     </tr>
-    <tr> <th>Subject Code 1</th> <th>Subject Code 1</th> <th>Subject Code  3</th> 
-    <th>Subject Code 3</th>
+    <tr> <td>Subject Code 1</td> <td>Subject Code 1</td> <td>Subject Code  3</td> 
+    <td>Subject Code 3</td>
     </tr>
-    <tr> <th>Subject Code 1</th> <th>Subject Code 2</th> <th>Subject Code  1</th> 
-    <th>Subject Code 4</th>
+    <tr> <td>Subject Code 1</td> <td>Subject Code 2</td> <td> Code  1</td> 
+    <td>Subject Code 4</td>
     </tr>
 
 </table>
 
 Select strategy : B
 
-Then
+Then conditions for strategy is checked. And validation page is shown to user 
+to add more rooms if condition is invalid or move on to next page if condition 
+is valid.
+
+Validation Page:
+
+Total Seats = value
+
+Total Students = value
+
+Total Group Seats = value
+
+Max Group Students = value
+
+condition is valid or invalid
+
+
+Here Total group seats and students defines the size of one group in selected 
+strategy. If group seats less than group students then condition is invalid
+and user has to add more rooms for that.
+
+If condition is valid then user moves on to next page and fill examination 
+details. In which user fill examination name, date, time and venue.
+And then he/she can download seating plan for examination using this software.
 
 UASGE:
 ----------------------------
+Download this repository bakaplan. This has all files for front end and backend 
+processing code.
 
+Then place it in cgi-bin/ folder and do as following
+
+1) $ cd cgi-bin/bakaplan
+
+2) $ make
+
+3) $ cd SeatPlan
+
+4) $ make
+
+After this you have to download another repository which has its landing page
+and images. 
+
+Download it from
+
+https://github.com/megha55/BaKaPlan
+
+Now place this folder in ~/public_html folder.
+
+NOTE:    Be sure that you must have write permission in the directory
+         (~/public_html/cgi-bin/bakaplan/ and ~/public_html/)
+         where outputfile is to be generated.
 
 AUTHORS:
 ----------------------------
