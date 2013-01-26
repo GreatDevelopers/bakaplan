@@ -31,13 +31,15 @@ Input format for branch details:
         <td>IT-121, IT 201</td>
     </tr>
      <tr> <td> Comp. Engg. </td> <td> 1</td> <td> CG</td>
-        <th>CSE 121 </th>
+        <td>CSE 121 </td>
     </tr>
 
 
 </table>
 
 Input format for Roll No. details:
+
+Total Branches : 2
 
 <table>
     <tr> <th> Branch Name </th> <th> Subject Code</th> <th>Prefix</th> <th> Start Roll No.</th>
@@ -51,7 +53,7 @@ Input format for Roll No. details:
     </tr>
     </tr>
      <tr> <td> Comp. Engg. </td> <td> CSE 121</td> <td>CSE </td>
-        <td>202</td> <td> 210 </td> <td>   </td>
+        <td>202</td> <td> 210 </td> <td>0 </td>
     </tr>
 
 
