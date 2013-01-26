@@ -23,6 +23,12 @@ Input format for branch details:
     <tr> <th> Branch Name </th> <th> Total subjects</th> <th> Subject Name</th>
         <th>Subject Code </th>
     </tr>
+     <tr> <th> Information Technology </th> <th> 2</th> <th> DBMS, SAD</th>
+        <th>IT-121, IT 201</th>
+    </tr>
+     <tr> <th> Comp. Engg. </th> <th> 1</th> <th> CG</th>
+        <th>CSE 121 </th>
+    </tr>
 
 
 </table>
