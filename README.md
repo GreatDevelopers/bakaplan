@@ -6,15 +6,19 @@ strategies to create saet plan.
 
 REQUIREMENTS:
 ----------------------------
-1) GNU G++ Compiler</br>
-2) Configure public_html/cgi-bin folder for executing files on browser.</br>
+1) GNU G++ Compiler
+
+2) Configure public_html/cgi-bin folder for executing files on browser.
 
 
 INPUT FORMAT:
 ----------------------------
 Input from user is divided intu 3 parts:
+
 1) Branch Details
+
 2) Roll No. Details
+
 3) Room Details
 
 Input format for branch details:
@@ -32,6 +36,7 @@ Input format for branch details:
 
 
 </table>
+
 
 
 UASGE:
