@@ -191,10 +191,4 @@ Mandeep Kaur
 
 Website: http://mandeepsimak.wordpress.com
 
-Email: meghasimak@gmail.com
-
-Inderpreet Singh
-
-Website: http://inderplus.ishwerdas.com/
-
-Email: indrplus@gmail.com
+Email: baithnekaplan@gmail.com
