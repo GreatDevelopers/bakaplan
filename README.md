@@ -31,7 +31,7 @@ Check USER GUIDE for Input format and its working.
 
 USAGE:
 ----------------------------
-Check INSTRUCTIONS.txt for using this software.
+Check INSTRUCTIONS for using this software.
 
 AUTHORS:
 ----------------------------
