@@ -2,6 +2,6 @@
 
 int main(void)
 {
-    Report report;
+    RoomReport report;
     report.Main();
 }

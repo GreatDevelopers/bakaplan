@@ -1,6 +1,6 @@
 #include "seatplan.h"
 
-class Report : public SeatPlan
+class RoomReport : public SeatPlan
 {
     protected:
         string rollno[MIN_SIZE][MIN_SIZE][MAX_SIZE], branch_name[MIN_SIZE],
@@ -11,12 +11,8 @@ class Report : public SeatPlan
     public:
         void readInputRollNo(string);
         void readSeatPlan(string);
-        void Main();
-};
-
-class RoomReport : public Report
-{
-    public:
+        void readExamDetails(string);
+        void writeSeatPlan(string);
         void Main();
 };
 

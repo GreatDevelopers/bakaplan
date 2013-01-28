@@ -17,10 +17,10 @@ ROOM_HEADER         =   roomdetails.h $(HTMLTAGS_HEADER)
 STRATEGY_HEADER     =   strategy.h $(HTMLTAGS_HEADER) $(SUBJECT_HEADER)
 VALIDATION_HEADER   =   validation.h $(HTMLTAGS_HEADER) $(SeatPlan_STRATEGY)
 EXAM_HEADER         =   examdetails.h $(HTMLTAGS_HEADER)
-REPORT_HEADER       =   report.h $(HTMLTAGS_HEADER)
+REPORT_HEADER       =   report.h $(HTMLTAGS_HEADER) SeatPlan/seatplan.h SeatPlan/header.h SeatPlan/file-names.h SeatPlan/report.h
 
 SUBJECT_HEADER      =   SeatPlan/subject-wise-rollno.h SeatPlan/arrange-rollno.h SeatPlan/expand-rollno.h SeatPlan/read-input.h
-SeatPlan_STRATEGY   =   SeatPlan/strategy.h SeatPlan/report.h SeatPlan/seatplan.h SeatPlan/header.h SeatPlan/file-names.h     
+SeatPlan_STRATEGY   =   SeatPlan/strategy.h SeatPlan/seatplan.h SeatPlan/header.h SeatPlan/file-names.h     
 
 #--------------------------------------------------------------------------
 #                           Header files(CSS)
@@ -41,16 +41,16 @@ Room        =   $(HTMLTags) readrollnodetails.o roomdetails.o roomdetails-main.o
 Strategy    =   $(HTMLTags) readroomdetails.o $(Subject) strategy.o strategy-main.o
 Validation  =   $(HTMLTags) $(SeatPlan_Strategy) validation.o validation-main.o
 Exam        =   $(HTMLTags) examdetails.o examdetails-main.o
-Report      =   $(HTMLTags) readexamdetails.o report.o report-main.o
+Report      =   $(HTMLTags) SeatPlan/room-report.o readexamdetails.o report.o report-main.o
 
 Subject     =   SeatPlan/subject-wise-rollno.o SeatPlan/arrange-rollno.o SeatPlan/expand-rollno.o SeatPlan/read-input.o
-SeatPlan_Strategy   =   SeatPlan/strategy.o SeatPlan/report.o SeatPlan/branch-report.o SeatPlan/room-report.o SeatPlan/seatplan.o 
+SeatPlan_Strategy   =   SeatPlan/strategy.o SeatPlan/seatplan.o 
 
 #--------------------------------------------------------------------------
 #                           All Targets
 #--------------------------------------------------------------------------
 
-all: home.css home.html branchdetails.html rollnodetails.html roomdetails.html strategy.html validation.html examdetails.html report.html
+all: home.css home.html branchdetails.html rollnodetails.html roomdetails.html strategy.html validation.html examdetails.html report.html make-SeatPlan
 
 #--------------------------------------------------------------------------
 #                         COMMON HTML TAGS
@@ -236,10 +236,16 @@ report-run: report.html
 	./report.html
 
 #--------------------------------------------------------------------------
+#                           Generate Reports
+#--------------------------------------------------------------------------
+
+make-SeatPlan: 
+	cd SeatPlan && make && cd ../
+
+#--------------------------------------------------------------------------
 #                  remove exe. files and o/p files
 #--------------------------------------------------------------------------
 
 clean:
-	rm *.html *.o
-
+	rm *.html *.o && cd SeatPlan && make clean && cd .. && rm ../../SeatPlan.html
 	

@@ -1,9 +1,6 @@
 #include "roomdetails.h"
 
-ReadRollNoDetails :: ReadRollNoDetails()
-{
-    
-}
+ReadRollNoDetails :: ReadRollNoDetails(){}
 
 void ReadRollNoDetails :: readRollNoDetails()
 {

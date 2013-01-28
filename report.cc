@@ -1,4 +1,5 @@
 #include "report.h"
+#include "SeatPlan/report.h"
 
 Report :: Report()
 {
@@ -44,6 +45,9 @@ void Report :: Body()
 void Report :: Main()
 {
     ReadExamDetails :: Main();
+    RoomReport report;
+    report.Main();
+    
     HTMLStart();    
     
     Head();

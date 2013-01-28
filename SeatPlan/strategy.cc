@@ -116,12 +116,13 @@ void Strategy :: groupCondition(int strategy)
 //            }
 //        }
         
-        
+        outfile.close();    
     }
     else
     {
         outfile << "Y" << endl;
         outfile << "\t condition is valid" << endl;
+        outfile.close();
         seatingPlan(strategy);
         showSeatPlan();
 //        Report :: Main();
@@ -142,11 +143,15 @@ void Strategy :: checkValidation(int strategy)
             << "\t Max Group Students = " << group_student_size[strategy-1] << endl;
     
     if(total_seats < total_students)
+    {
         outfile << "\t Add More rooms!" << endl;
+        outfile.close();
+    }
+        
     else
         groupCondition(strategy);
         
-    outfile.close();
+    //outfile.close();
 }
         
 void Strategy :: chooseStrategy()
