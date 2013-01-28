@@ -110,7 +110,7 @@ string SeatPlan :: rollNo(int s)
     string rno;
     
     if(seat_size[s] == size[s])
-        rno = "  ";
+        rno = "-";
     else
     {
         rno = seat_rollno[s][size[s]];
@@ -130,7 +130,10 @@ void SeatPlan :: showSeatPlan()
                 << total_rooms[centre] << endl;
         for(room = 0; room < total_rooms[centre]; room++)
         {
-            outfile << room_no[centre][room] << endl;
+            outfile << room_no[centre][room] << endl
+                    << rows[centre][room] << " "
+                    << cols[centre][room] << endl;
+                    
             for(row = 0; row < rows[centre][room]; row++)
             {
                 for(col = 0; col < cols[centre][room]; col++)
@@ -142,7 +145,7 @@ void SeatPlan :: showSeatPlan()
         }
     }
     outfile.close();
-    
+    /*
     infile.open(Input_ExamDetails);
     getline(infile, exam_name, '\n');
     getline(infile, exam_date, '\n');
@@ -209,6 +212,6 @@ void SeatPlan :: showSeatPlan()
             outfile << "<div>  </div>";
         }
     }
-    outfile.close();   
+    outfile.close();  */ 
 }
 

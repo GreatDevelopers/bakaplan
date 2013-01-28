@@ -26,7 +26,7 @@ ARRANGE_ROLLNO      =    $(EXPAND_ROLLNO) arrange-rollno.o #arrange-rollno-main.
 SUBJECTWISE_ROLLNO  =    $(ARRANGE_ROLLNO) subject-wise-rollno.o subject-wise-rollno-main.o
 SEATPLAN            =    seatplan.o
 STRATEGY            =    $(SEATPLAN) strategy.o strategy-main.o
-REPORT              =    $(SEATPLAN) report.o branch-report.o room-report.o report-main.o
+REPORT              =    $(SEATPLAN) branch-report.o room-report.o report-main.o
 
 #--------------------------------------------------------------------------
 #                           All Targets
@@ -114,9 +114,6 @@ seatplan.o: seatplan.cc $(SEATPLAN_HEADER)
 #                           create Reports
 #--------------------------------------------------------------------------	
 
-report.o: report.cc $(REPORT_HEADER)
-	$(CC) $(CFLAG) report.cc
-
 room-report.o: room-report.cc $(REPORT_HEADER)
 	$(CC) $(CFLAG) room-report.cc
 
@@ -153,7 +150,4 @@ strategy-run: $(INPUT) strategy
 #--------------------------------------------------------------------------
 	
 clean:
-	rm -f *.o *.out *.txt subject-wise-rollno strategy
-#read-input expand-rollno arrange-rollno  report
-	
-#	*.html *.pdf *.csv report strategyValid
+	rm -f *.o *.out *.txt subject-wise-rollno strategy report
