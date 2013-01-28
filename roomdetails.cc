@@ -117,6 +117,5 @@ void RoomDetails :: Main()
     Head();
     Body();
     
-    HTMLEnd();
-    
+    HTMLEnd(); 
 }

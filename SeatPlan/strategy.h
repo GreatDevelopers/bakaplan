@@ -1,15 +1,13 @@
-//#include "seatplan.h"
-#include "report.h"
+#include "seatplan.h"
+//#include "report.h"
 
-class Strategy : public Report //SeatPlan
+class Strategy : public SeatPlan
 {
     protected:
-//        int total_seats, total_students, room_size[MIN_SIZE][MIN_SIZE],
-//            strategy_choice, total_group_seats, temp[MIN_SIZE], 
-//            index_value[MIN_SIZE], group_student_size[MIN_SIZE];
-//            
-//        // temp
-//        int s;
+        string rollno[MIN_SIZE][MIN_SIZE][MAX_SIZE], branch_name[MIN_SIZE],
+               subject_name[MIN_SIZE][MIN_SIZE], subject_code[MIN_SIZE][MIN_SIZE];
+        int total_rollno[MIN_SIZE][MIN_SIZE], total_branches, 
+            total_subject[MIN_SIZE];
     
     public:
         

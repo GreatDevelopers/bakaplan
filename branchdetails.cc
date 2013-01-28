@@ -2,10 +2,7 @@
 
 BranchDetails :: BranchDetails()
 {
-    ContentType();
-    
-//    branchName[9] = {"Info. Tech.", "CSE", "ECE", "Mech. Engg.", "Production Engg.", "Electrical Engg.", "IT", "Electronics Engg.", "Comp. Sci. Engg.", "MBA"};
-    
+    ContentType();    
 }
 
 void BranchDetails :: Head()
@@ -18,16 +15,17 @@ void BranchDetails :: Head()
 
 void BranchDetails :: BodyContent()
 {
+    const int maxBranches = 10;
 
-    string branchName[10] = {"Info. Tech.", "CSE", "ECE", "Mech. Engg.", 
+    string branchName[maxBranches] = {"Info. Tech.", "CSE", "ECE", "Mech. Engg.", 
                              "Production Engg.", "Electrical Engg.", "IT", 
                              "Electronics Engg.", "Comp. Sci. Engg.", "MBA"};
                                  
-    string subjectName[10] = {"DBMS, SAD", "Maths,Physics", "OS, EVS", 
+    string subjectName[maxBranches] = {"DBMS, SAD", "Maths,Physics", "OS, EVS", 
                               "Java, C++", "EVS", "Chem.", "ED", "Maths",
                               "Maths,DBMS, Physics", "Multimedia, Dot Net, ED"};
         
-    string subjectCode[10] = {"IT-101, IT-102", "ME-10,CE-252", "EVS, ED-10",
+    string subjectCode[maxBranches] = {"IT-101, IT-102", "ME-10,CE-252", "EVS, ED-10",
                               "ED-10, IT-102", "IT-102", "IT-203", "CE-120",
                               "ME-140", "EE-109, 1234S, IT-203", "ME-101,ME-501,IT-101" };
 
@@ -46,7 +44,7 @@ void BranchDetails :: BodyContent()
          
          << "Total Branches <select name=\"TotalBranches\">";
          
-    for(i = 1; i <= 10; i++)
+    for(i = 1; i <= maxBranches; i++)
     {
         cout << "<option value=\""
              << i << "\"";
@@ -70,7 +68,7 @@ void BranchDetails :: BodyContent()
          
          << "</tr>";
 //         << "<br><br>"
-    for(j = 0; j < 10; j++)
+    for(j = 0; j < maxBranches; j++)
     {     
         cout << "<tr>"
              << "<td>"

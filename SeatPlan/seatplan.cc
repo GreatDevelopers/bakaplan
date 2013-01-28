@@ -121,6 +121,7 @@ string SeatPlan :: rollNo(int s)
 
 void SeatPlan :: showSeatPlan()
 {
+    outfile.close();
     outfile.open(SeatPlan_out);
     outfile << total_centres << endl;
     for(centre = 0; centre < total_centres; centre++)
@@ -208,7 +209,6 @@ void SeatPlan :: showSeatPlan()
             outfile << "<div>  </div>";
         }
     }
-    outfile.close();
-    
+    outfile.close();   
 }
 

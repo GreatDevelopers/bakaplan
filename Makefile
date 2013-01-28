@@ -50,7 +50,7 @@ SeatPlan_Strategy   =   SeatPlan/strategy.o SeatPlan/report.o SeatPlan/branch-re
 #                           All Targets
 #--------------------------------------------------------------------------
 
-all: home.css home.html branchdetails.html rollnodetails.html roomdetails.html strategy.html validation.html examdetails.html report.html
+all: home.css home.html branchdetails.html rollnodetails.html roomdetails.html strategy.html validation.html examdetails.html report.html make-SeatPlan
 
 #--------------------------------------------------------------------------
 #                         COMMON HTML TAGS
@@ -234,6 +234,13 @@ report.html: $(Report)
 
 report-run: report.html
 	./report.html
+
+#--------------------------------------------------------------------------
+#                           Generate Reports
+#--------------------------------------------------------------------------
+
+make-SeatPlan: 
+	cd SeatPlan && make && cd ../
 
 #--------------------------------------------------------------------------
 #                  remove exe. files and o/p files
