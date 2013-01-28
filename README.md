@@ -187,6 +187,14 @@ NOTE:    Be sure that you must have write permission in the directory
 
 AUTHORS:
 ----------------------------
+<b>Mentor and Manager</b>
+
+Dr. Hardeep Singh Rai
+
+Website: http://hs.raiandrai.com/
+
+<b>Developer</b>
+
 Mandeep Kaur
 
 Website: http://mandeepsimak.wordpress.com
