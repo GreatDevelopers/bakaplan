@@ -21,7 +21,7 @@ REQUIREMENTS:
   
     3) $./configure --prefix=/usr 
     
-    NOTE: If you got permissions error then use sudo with command.
+    NOTE: If you got permission error then use sudo with command.
     
     4) $make
     
