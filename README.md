@@ -27,11 +27,11 @@ REQUIREMENTS:
 
 INPUT FORMAT:
 ----------------------------
-USER GUIDE
+[USER GUIDE](https://github.com/GreatDevelopers/bakaplan/blob/master/USER%20GUIDE)
 
 INSTALLATION:
 ----------------------------
-Check [INSTALLATION]() file for using this software.
+Check [INSTALLATION](https://github.com/GreatDevelopers/bakaplan/blob/master/INSTALLATION) file for using this software.
 
 AUTHORS:
 ----------------------------
