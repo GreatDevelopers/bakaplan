@@ -77,7 +77,7 @@ void HTMLTags :: Title(string title)
 
 void HTMLTags :: CSS()
 {
-    cout << "<link rel=\"stylesheet\" type=\"text/css\" href=\"home.css\">" 
+    cout << "<link rel=\"stylesheet\" type=\"text/css\" href=\"home.css\">" //"~/public_html/BaKaPlan/bootstrap/css/bootstrap-responsive.css\">" //"home.css\">" 
          << endl;
 }
 

@@ -22,7 +22,7 @@ void Report :: BodyContent()
     
     cout << "<div id = \"content\" class = \"content\">" << endl
          
-         << " <br> <br> <h2> Check File</h2> <br> <br>"
+         << " <br> <br> <h2> HTML File for Room Report </h2> <br> <br>"
          
          << "<form name=\"report\" action=\"../../SeatPlan.html\" method=\"post\">"
          
