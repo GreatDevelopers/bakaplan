@@ -32,7 +32,7 @@ ________________________________________________________________________________
      Branch Name       |  Subject Code  | Prefix | Start Roll No. | End Roll No. | Not Included 
 _______________________|________________|________|________________|______________|______________
                        |                |        |                |              |              
-Information Technology |     IT-121     | 10037  |      102       |      130     |	 109 122
+Information Technology |     IT-121     | 10037  |      102       |      130     |   109 122
 _______________________|________________|________|________________|______________|______________
                        |                |        |                |              | 
 Information Technology |    IT 201      | 10038  |      102       |      130	 |   109 122    
@@ -74,20 +74,11 @@ ___________|_________|________
 
 After this User has to select strategy. There are 4 strategies as shown below:
 
-<<<<<<< HEAD
-      A	                  B	                  C	                  D
-Subject Code 1      Subject Code 1  	Subject Code 1	    Subject Code 1
-Subject Code 1	    Subject Code 2	    Subject Code 2	    Subject Code 2
-Subject Code 1	    Subject Code 1	    Subject Code 3	    Subject Code 3
-Subject Code 1	    Subject Code 2	    Subject Code 1      Subject Code 4
-=======
-      A	                   B	              C	                  D
-Subject Code 1  	Subject Code 1  	Subject Code 1	    Subject Code 1
+      A	                   B	              C                   D
+Subject Code 1      Subject Code 1      Subject Code 1      Subject Code 1
 Subject Code 1	    Subject Code 2	    Subject Code 2	    Subject Code 2
 Subject Code 1	    Subject Code 1	    Subject Code 3	    Subject Code 3
 Subject Code 1	    Subject Code 2	    Subject Code 1  	Subject Code 4
->>>>>>> parent of 628e899... Update USER GUIDE
-
 
 Select strategy : B
 
