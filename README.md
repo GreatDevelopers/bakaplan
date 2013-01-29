@@ -39,7 +39,7 @@ AUTHORS:
 
 Dr. Hardeep Singh Rai
 
-Website: http://hs.raiandrai.com/
+Website: http://gndec.ac.in/~hsrai
 
 <b>Developer</b>
 
