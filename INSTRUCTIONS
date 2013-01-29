@@ -19,7 +19,7 @@ For that do as follows:
 
 Run following commands in terminal:
 $ cd ~/public_html/cgi-bin/bakaplan
-$ cp BaKaPlan ~/public_html/
+$ make install
 
 After all above steps open browser and open following link:
 
