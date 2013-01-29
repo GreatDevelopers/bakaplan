@@ -31,7 +31,7 @@ INPUT FORMAT:
 
 INSTALLATION:
 ----------------------------
-Check [INSTALLATION](https://github.com/GreatDevelopers/bakaplan/blob/master/INSTALLATION) file for using this software.
+Check [INSTALLATION](https://github.com/GreatDevelopers/bakaplan/blob/master/INSTALLATION) steps for using this software.
 
 AUTHORS:
 ----------------------------
