@@ -27,11 +27,11 @@ REQUIREMENTS:
 
 INPUT FORMAT:
 ----------------------------
-Check USER GUIDE for Input format and its working.
+USER GUIDE
 
-USAGE:
+INSTALLATION:
 ----------------------------
-Check INSTRUCTIONS for using this software.
+Check [INSTALLATION]() file for using this software.
 
 AUTHORS:
 ----------------------------
