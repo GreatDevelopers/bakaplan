@@ -68,27 +68,6 @@ void Strategy :: totalGroupStudents(int strategy)
                
     }
     sort(group_student_size, group_student_size + strategy);
-    /*
-    for(i = 0; i < strategy; i++)
-    {
-        cout << " grp size " 
-             << group_student_size[i] << endl;
-    }
-    
-    // displaying sorted array
-    for(i = 0; i < total_code; i++)
-    {
-        cout << sub_totalrno[i] << "\t" << i << endl;
-    }
-    
-    cout << endl;
-    
-    for(i = 0; i < total_code; i++)
-    {
-        cout << 
-        cout << temp[i] << "\t" << i << "\t" << sub_totalrno[index_value[i]] << "\t";
-        cout << index_value[i] << "\t" << endl;
-    }*/
 }
 
 void Strategy :: groupCondition(int strategy)
@@ -99,22 +78,6 @@ void Strategy :: groupCondition(int strategy)
         extra = extra * strategy;
         outfile << "\t condition invalid" << endl
                 << "\t Add " << extra << " more seats." << endl;
-        
-//        for(i = 0; i < total_centres; i++)
-//        {
-//            for(j = 0; j < total_rooms[i]; j++)
-//            {
-//                if((room_size[i][j] / strategy) > extra)
-//                {    
-//                    //extra = room_size[i][j] / strategy;
-//                    
-//                    cout << "Add " <<  extra << " seats  (" << rows[i][j]
-//                         << " * " << cols[i][j] << " "
-//                         << " room)" << endl;
-//                    break;
-//                }
-//            }
-//        }
         
         outfile.close();    
     }
