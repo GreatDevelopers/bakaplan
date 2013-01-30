@@ -171,50 +171,6 @@ void Strategy :: chooseStrategy()
         choice = 4;
         
     checkValidation(choice);
-        
-/*    do
-    {
-        system("clear");
-    
-        cout<<"Select Strategy and enter your choice"<<endl
-            <<"\n1. Group of classes"<<endl
-            <<"\tA\tA\tA\t"<<endl
-            <<"\tA\tA\tA\t"<<endl
-            <<"\n2. Group of classes"<<endl
-            <<"\tA\tB\tA\t"<<endl
-            <<"\tB\tA\tB\t"<<endl
-            <<"\n3. Group of classes"<<endl
-            <<"\tA\tC\tA\t"<<endl
-            <<"\tB\tA\tB\t"<<endl
-            <<"\tC\tB\tC\t"<<endl
-            <<"\n4. Group of classes"<<endl
-            <<"\tA\tC\tA\t"<<endl
-            <<"\tB\tD\tB\t"<<endl
-            <<"\tC\tA\tC\t"<<endl
-            <<"\tD\tB\tD\t"<<endl
-            <<"\nEnter your choice:\n";
-        
-        cin >> strategy_choice;
-        switch(strategy_choice)
-        {
-            case 1:
-                checkValidation(strategy_choice);
-                break;
-            case 2:
-                checkValidation(strategy_choice);
-                break;
-            case 3:
-                checkValidation(strategy_choice);
-                break;
-            case 4:
-                checkValidation(strategy_choice);
-                break;
-            default:
-                cout<<"Oops!!! Wrong choice\n Enter your choice Again\n";
-        }
-
-    }while(strategy_choice < 1 || strategy_choice > 4);
-    */
 }
 
 void Strategy :: Main()

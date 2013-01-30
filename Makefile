@@ -260,5 +260,5 @@ install: all cp-BaKaPlan
 #--------------------------------------------------------------------------
 
 clean:
-	rm *.html *.o && cd SeatPlan && make clean && cd .. && rm ../../SeatPlan.html
+	rm *.html *.o && cd SeatPlan && make clean && cd .. && rm ~public_html/SeatPlan.html
 	
