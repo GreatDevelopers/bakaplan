@@ -11,7 +11,7 @@ REQUIREMENTS:
 2) Configure public_html/cgi-bin folder for executing files on browser.
 
 3) CGICC Library<br>
-    Download 3rd last package from ftp://ftp.gnu.org/gnu/cgicc/<br>
+    Download any package from http://ftp.gnu.org/gnu/cgicc/<br>
     
     Then run following commands in terminal
     
