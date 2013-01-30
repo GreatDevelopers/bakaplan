@@ -9,6 +9,13 @@ HTMLTags :: HTMLTags()
     subject_name    =    "SubjectName";
     total_branches  =    "TotalBranches";
     
+    // table header branch field names
+    h_branch_name     =    "Branch Name";
+    h_total_subjects  =    "Total Subjects";
+    h_subject_code    =    "Subject Code";
+    h_subject_name    =    "Subject Name";
+    h_total_branches  =    "Total Branches";
+    
     // rollno field names
     prefix          =    "Prefix";
     start_rollno    =    "StartRollNo";

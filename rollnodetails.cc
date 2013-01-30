@@ -53,7 +53,16 @@ void RollNoDetails :: BodyContent()
          << "<th> Start Roll No. </th>"
          << "<th> End Roll No </th>"
          << "<th> Not Included </th>"
-         << "<tr>";
+         << "</tr>";
+//         
+//         << "<tr>"
+//         << "<th> " << branch_name << "</th>"
+//         << "<th> " << subject_code << " </th>"
+//         << "<th> " << prefix << " </th>"
+//         << "<th> " << start_rollno << "</th>"
+//         << "<th> " << end_rollno << " </th>"
+//         << "<th> " << not_included << "</th>"
+//         << "</tr>";
          
     for(i = 0; i < totalBranches; i++)
     {

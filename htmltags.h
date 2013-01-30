@@ -24,6 +24,10 @@ class HTMLTags
     // Exam Details
     string exam_name, exam_time, exam_date, exam_venue;
     
+    // table header names
+    string h_branch_name, h_total_subjects, h_subject_code, h_subject_name,
+           h_total_branches;
+    
     ifstream infile;
     ofstream outfile;
         
