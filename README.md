@@ -15,17 +15,17 @@ REQUIREMENTS:
     
     Then run following commands in terminal
     
-    1) $tar xzf cgicc-X.X.X.tar.gz 
+    1) $ tar xzf cgicc-X.X.X.tar.gz 
     
-    2) $cd cgicc-X.X.X/ 
+    2) $ cd cgicc-X.X.X/ 
   
-    3) $./configure --prefix=/usr 
+    3) $ ./configure --prefix=/usr 
     
     NOTE: If you got permission error then use sudo with command.
     
-    4) $make
+    4) $ make
     
-    5) $make install
+    5) $ make install
 
 INPUT FORMAT:
 ----------------------------
@@ -50,3 +50,5 @@ Mandeep Kaur
 Website: http://mandeepsimak.wordpress.com
 
 Email: baithnekaplan@gmail.com
+
+
