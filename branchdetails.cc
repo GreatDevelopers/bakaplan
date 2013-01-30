@@ -61,10 +61,15 @@ void BranchDetails :: BodyContent()
          
          << "<tr>"
          
-         << "<th>Branch Name</th>"
-         << "<th width = \"30\">Total Subjects</th>"
-         << "<th>Subject Name</th>"
-         << "<th>Subject Code</th>"
+//         << "<th>Branch Name</th>"
+//         << "<th width = \"30\">Total Subjects</th>"
+//         << "<th>Subject Name</th>"
+//         << "<th>Subject Code</th>"
+         
+         << "<th>" << h_branch_name << "</th>"
+         << "<th width = \"30\">" << h_total_subjects << "</th>"
+         << "<th>" << h_subject_code << "</th>"
+         << "<th>" << h_subject_name << "</th>"
          
          << "</tr>";
 //         << "<br><br>"
