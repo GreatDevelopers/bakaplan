@@ -26,33 +26,6 @@ void RoomReport :: readInputRollNo(string file)
     
     infile.close();
     
-    /*/////////////////////////////////////////
-    
-    outfile.open("report.txt");
-    
-    outfile << total_branches << endl;
-    for(i = 0; i < total_branches; i++)
-    {
-        outfile << branch_name[i] << endl;
-        outfile << total_subject[i] << endl;
-        for(j = 0; j < total_subject[i]; j++)
-        {
-            outfile << subject_name[i][j] << endl;
-            outfile << subject_code[i][j] << endl;
-            outfile << total_rollno[i][j] << "\t";
-            for(k = 0; k < total_rollno[i][j]; k++)
-            {
-                outfile << rollno[i][j][k] << "\t";
-            }
-            outfile << endl;
-        }
-    }
-    
-    outfile.close();
-    
-    /////////////////////////////////////////*/
-    
-    
 }
 
 void RoomReport :: readSeatPlan(string file)
@@ -84,30 +57,6 @@ void RoomReport :: readSeatPlan(string file)
         getline(infile, centre_no[centre+1], '\n');
     }
     infile.close();
-    
-   /* outfile.open("test.txt");
-    outfile << "total centres : " << total_centres << endl;
-    for(centre = 0; centre < total_centres; centre++)
-    {
-        outfile << "centre no: " << centre_no[centre] << endl
-                << "total rooms: " << total_rooms[centre] << endl;
-        for(room = 0; room < total_rooms[centre]; room++)
-        {
-            outfile << room_no[centre][room] << endl
-                    << rows[centre][room] << " " << cols[centre][room]
-                    << endl;
-            for(row = 0; row < rows[centre][room]; row++)
-            {
-                for(col = 0; col < cols[centre][room]; col++)
-                {
-                    outfile << seat[centre][room][row][col] << "\t";
-                }
-                outfile << "\n";
-            }
-        }
-    }
-    outfile.close();*/
-    
 }
 
 void RoomReport :: readExamDetails(string file)

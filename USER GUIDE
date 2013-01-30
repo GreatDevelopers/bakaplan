@@ -87,6 +87,7 @@ to add more rooms if condition is invalid or move on to next page if condition
 is valid.
 
 Validation Page:
+----------------
 
 Total Seats = value
 
@@ -106,5 +107,4 @@ and user has to add more rooms for that.
 If condition is valid then user moves on to next page and fill examination 
 details. In which user fill examination name, date, time and venue.
 And then he/she can download seating plan for examination using this software.
-
 
