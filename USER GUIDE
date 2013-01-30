@@ -26,6 +26,10 @@ _______________________|________________|______________|___________________
       Comp. Engg.      |        1       |      CG      |      CSE 121
 _______________________|________________|______________|___________________
 
+Here, Branch name is name of branch/trade/class. Then enter total subjects 
+in next field.
+If total subjects = 2, then write to subject codes seperated with comma(,).
+
 Input format for Roll No. details:
 
 Total Branches : 2
@@ -43,6 +47,13 @@ _______________________|________________|________|________________|_____________
                        |                |        |                |              |        
      Comp. Engg.       |    CSE 121     |  CSE	 |      202       |      210	 |      0       
 _______________________|________________|________|________________|______________|______________
+
+Here, values of Subject code and Branch name automatically filled by reading 
+values from previous details. Add prefix if any (like common part in roll no) 
+else leave it balnk. Next 2 fields are for starting and ending roll no. 
+
+Fill roll nos that you dont want to include them in examination.
+
 
 Input format for room details:
 
