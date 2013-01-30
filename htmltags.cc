@@ -74,6 +74,9 @@ void HTMLTags :: BodyStart()
 void HTMLTags :: BodyEnd()
 {
     cout << "</body>" << endl;
+    
+//    cout << "<script src=\"http://code.jquery.com/jquery-latest.js\"></script>"
+//         << "<script src=\"~public_html/BaKaPlan/bootstrap/js/bootstrap.min.js\"></script>";  
 }
 
 void HTMLTags :: Title(string title)
@@ -84,6 +87,7 @@ void HTMLTags :: Title(string title)
 
 void HTMLTags :: CSS()
 {
+//    cout << "<link href=\"!/public_html/BaKaPlan/bootstrap/CSS/bootstrap.min.css\" rel=\"stylesheet\" media=\"screen\">" //
     cout << "<link rel=\"stylesheet\" type=\"text/css\" href=\"home.css\">" //"~/public_html/BaKaPlan/bootstrap/css/bootstrap-responsive.css\">" //"home.css\">" 
          << endl;
 }
