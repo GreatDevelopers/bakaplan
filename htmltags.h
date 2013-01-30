@@ -1,6 +1,6 @@
 #include "header.h"
 
-// Base class containong Basic Html Tags and methods
+/// Base class containong Basic Html Tags and methods
 class HTMLTags
 {
     protected:
@@ -8,17 +8,17 @@ class HTMLTags
     string ProjectName;
     int i, j, k;
     
-    // branch field names
+    /// branch field names
     string branch_name, total_subjects, subject_code, subject_name,
            total_branches;
     
-    // roll no field names
+    /// roll no field names
     string prefix, start_rollno, end_rollno, not_included;
     
-    // room field names
+    /// room field names
     string total_centres, centre_no, total_rooms, room_no, rows, cols;
     
-    // strategy option
+    /// strategy option
     string strategy;
     
     // Exam Details

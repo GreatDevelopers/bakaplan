@@ -137,7 +137,6 @@ void BranchDetails :: Body()
     BodyEnd();
 }
 
-
 void BranchDetails :: Main()
 {
     HTMLStart();    
