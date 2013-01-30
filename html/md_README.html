@@ -62,7 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -77,11 +77,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">BaKa Plan </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Web-Based Seating Plan using CGI </p>
+<div class="textblock"><p>This software creates seating plan for examinations. It provides four different strategies to create seat plan.</p>
+<h1>REQUIREMENTS:</h1>
+<p>1) GNU G++ Compiler</p>
+<p>2) Configure public_html/cgi-bin folder for executing files on browser.</p>
+<p>3) CGICC Library<br/>
+ Download 3rd last package from <a href="ftp://ftp.gnu.org/gnu/cgicc/">ftp://ftp.gnu.org/gnu/cgicc/</a><br/>
+</p>
+<p>Then run following commands in terminal</p>
+<p>1) $tar xzf cgicc-X.X.X.tar.gz</p>
+<p>2) $cd cgicc-X.X.X/</p>
+<p>3) $./configure &ndash;prefix=/usr</p>
+<p>NOTE: If you got permission error then use sudo with command.</p>
+<p>4) $make</p>
+<p>5) $make install</p>
+<h1>INPUT FORMAT:</h1>
+<p><a href="https://github.com/GreatDevelopers/bakaplan/blob/master/USER%20GUIDE">USER GUIDE</a></p>
+<h1>INSTALLATION:</h1>
+<p>Check <a href="https://github.com/GreatDevelopers/bakaplan/blob/master/INSTALLATION">INSTALLATION</a> steps for using this software.</p>
+<h1>AUTHORS:</h1>
+<p><b>Mentor and Manager</b></p>
+<p>Dr. Hardeep Singh Rai</p>
+<p>Website: <a href="http://gndec.ac.in/~hsrai">http://gndec.ac.in/~hsrai</a></p>
+<p><b>Developer</b></p>
+<p>Mandeep Kaur</p>
+<p>Website: <a href="http://mandeepsimak.wordpress.com">http://mandeepsimak.wordpress.com</a></p>
+<p>Email: <a href="#" onclick="location.href='mai'+'lto:'+'bai'+'th'+'nek'+'ap'+'lan'+'@g'+'mai'+'l.'+'com'; return false;">baith<span style="display: none;">.nosp@m.</span>neka<span style="display: none;">.nosp@m.</span>plan@<span style="display: none;">.nosp@m.</span>gmai<span style="display: none;">.nosp@m.</span>l.com</a> </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 25 2013 19:32:26 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 30 2013 17:56:49 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
