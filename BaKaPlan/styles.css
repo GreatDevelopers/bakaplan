@@ -1,0 +1,133 @@
+*
+{
+margin:0;padding:0;
+}
+
+img
+{
+max-width:100%;
+}
+
+a
+{
+text-decoration:none;
+color:#131313;
+}
+
+a:hover
+{
+text-decoration:underline;
+}
+
+#wrapper
+{
+max-width:1000px;
+margin:auto;
+}
+
+#nachdaBalak
+{
+max-width:25%;
+margin:auto;
+margin-top:10%;
+position:relative;
+}
+
+#nachdaBalak img
+{
+background:red;
+position:relative;
+animation-name:myfirst;
+animation-duration:5s;
+animation-timing-function:linear;
+animation-delay:2s;
+animation-iteration-count:infinite;
+animation-direction:alternate;
+animation-play-state:running;
+/* Firefox: */
+-moz-animation-name:myfirst;
+-moz-animation-duration:15s;
+-moz-animation-timing-function:linear;
+-moz-animation-delay:2s;
+-moz-animation-iteration-count:infinite;
+-moz-animation-direction:alternate;
+-moz-animation-play-state:running;
+/* Safari and Chrome: */
+-webkit-animation-name:myfirst;
+-webkit-animation-duration:15s;
+-webkit-animation-timing-function:linear;
+-webkit-animation-delay:2s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-direction:alternate;
+-webkit-animation-play-state:running;
+/* Opera: */
+-o-animation-name:myfirst;
+-o-animation-duration:15s;
+-o-animation-timing-function:linear;
+-o-animation-delay:2s;
+-o-animation-iteration-count:infinite;
+-o-animation-direction:alternate;
+-o-animation-play-state:running;
+}
+
+#banner
+{
+width:250px;
+margin:auto;
+background:#e2e2e2;
+border:1px dashed;
+border-radius:20px;
+}
+
+#banner h1
+{
+font-size:36px;
+color:#131313;
+font-family: 'Open Sans', sans-serif;
+padding:5px 5px 5px 5px;
+/*'Sacramento', cursive;*/
+}
+
+#banner h1 a
+{
+text-align:center;
+line-height:40px;
+padding:5px 5px 5px 5px;
+}
+
+@keyframes myfirst
+{
+0%   { left:0px; }
+25%  { left:100px; }
+50%  { left:-100px; }
+75%  {left:50px; }
+100% { left:-50px; }
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+0%   { left:0px; }
+25%  { left:100px; }
+50%  {left:-100px; }
+75%  { left:50px; }
+100% {left:-50px; }
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {left:0px; }
+25%  { left:100px; }
+50%  { left:-100px; }
+75%  { left:50px; }
+100% { left:-50px; }
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+0%   { left:0px; }
+25%  { left:100px; }
+50%  { left:-100px; }
+75%  { left:50px; }
+100% { left:-50px; }
+}
+   
