@@ -14,7 +14,7 @@ REQUIREMENTS:
 
 2) Configure public_html/cgi-bin folder for executing files on browser.<br>
     
-    **Steps to configure public_html**<br>
+    **Steps to configure public_html**
     
     $ mkdir public_html
     
@@ -29,7 +29,7 @@ REQUIREMENTS:
     Now open http://localhost/~username in browser.  
     Here username is your login name.
     
-    **Steps to configure cgi-bin in public_html**<br>
+    **Steps to configure cgi-bin in public_html**
     
     $ sudo a2enmod cgi
     
@@ -48,7 +48,7 @@ REQUIREMENTS:
     $ sudo vim sites-available/default
     
     Add following text in file:
-    <pre>
+    
     ScriptAlias /cgi-bin/ /home/*/public_html/cgi-bin/
     <Directory "/home/*/public_html/cgi-bin">
         AllowOverride None
@@ -57,7 +57,6 @@ REQUIREMENTS:
         Order allow,deny
         Allow from all
     </Directory>
-    </pre>
 
 3) CGICC Library<br>
 
