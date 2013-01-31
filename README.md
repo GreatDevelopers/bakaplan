@@ -15,17 +15,16 @@ REQUIREMENTS:
     
     Then run following commands in terminal
     
-    1) $ tar xzf cgicc-X.X.X.tar.gz 
+    $ tar xzf cgicc-X.X.X.tar.gz 
     
-    2) $ cd cgicc-X.X.X/ 
+    $ cd cgicc-X.X.X/ 
   
-    3) $ ./configure --prefix=/usr 
+    $ ./configure --prefix=/usr 
     
-    NOTE: If you got permission error then use sudo with command.
+    $ make
     
-    4) $ make
-    
-    5) $ make install
+    $ sudo make install
+<!--    NOTE: If you got permission error then use sudo with command.-->
 
 INPUT FORMAT:
 ----------------------------
@@ -43,7 +42,7 @@ Dr. Hardeep Singh Rai
 
 Website: http://gndec.ac.in/~hsrai
 
-<b>Developer</b>
+<b>[Developer](https://github.com/GreatDevelopers/bakaplan/wiki/Contributors)</b>
 
 Mandeep Kaur
 
