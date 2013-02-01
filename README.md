@@ -63,7 +63,7 @@ REQUIREMENTS:
     
 3) CGICC Library<br>
 
-    Download any package from http://ftp.gnu.org/gnu/cgicc/<br>
+    Download any latest package from http://ftp.gnu.org/gnu/cgicc/<br>
     
     Then run following commands in terminal
     
