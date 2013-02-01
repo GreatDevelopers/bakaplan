@@ -1,23 +1,21 @@
 Inatallation steps for using this software.
 ===========================================
 
-First check your public_html and public_html/cgi-bin is configured or not.
-If not then follow below link 
-http://satveerkaur.blogspot.in/2012/07/cgi-scripts-execution-using-user.html
-
 After this open terminal and run following commands
 
-1) $ cd public_html/cgi-bin
+ $ cd public_html/cgi-bin
 
-2) $ git clone https://github.com/GreatDevelopers/bakaplan.git
+ $ git clone https://github.com/GreatDevelopers/bakaplan.git
 
-3) $ cd bakaplan
+ $ cd bakaplan
 
-4) make install
+ $ make
 
 After all above steps open browser and open following link:
 
 http://localhost/~username/BaKaPlan
+
+Here username is your login username
 
 NOTE:    Be sure that you must have write permission in the directory
          (~/public_html/cgi-bin/bakaplan/ and ~/public_html/)
