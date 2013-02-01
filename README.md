@@ -16,6 +16,8 @@ REQUIREMENTS:
     
     **Steps to configure public_html**
     
+        $ cd ~
+        
         $ mkdir public_html
     
         $ cd /etc/apache2/mods-enabled
