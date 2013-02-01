@@ -97,8 +97,8 @@ void RollNoDetails :: BodyContent()
     
     cout << "</table>";
     
-    cout << "<br><input type=\"submit\" value=\"Next\">";
-    
+    cout << "<br>"//"<input type=\"submit\" value=\"Next\">";
+         << "<button id = \"next\" class=\"btn\" type=\"submit\">NEXT</button>";   
     cout << "</form>";
      
     cout << "</div>" << endl

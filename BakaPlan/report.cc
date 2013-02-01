@@ -26,7 +26,8 @@ void Report :: BodyContent()
          
          << "<form name=\"report\" action=\"../../../seatplan.html\" method=\"post\">"
          
-         << "<br><input type=\"submit\" value=\"Check File\">"
+         << "<br>"//"<input type=\"submit\" value=\"Check File\">"
+         << "<button id = \"next\" class=\"btn\" type=\"submit\">NEXT</button>"
          
          << "</form>"
          

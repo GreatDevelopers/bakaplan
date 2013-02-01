@@ -93,7 +93,8 @@ void RoomDetails :: BodyContent()
         cout << "<table>" << endl;
         cout << "<br><br>" << endl;
     }
-    cout << "<br><input type=\"submit\" value=\"Next\">";
+    cout << "<br>"//"<input type=\"submit\" value=\"Next\">";
+         << "<button id = \"next\" class=\"btn\" type=\"submit\">NEXT</button>";
     
     cout << "</form>";
     cout << "</pre>" << endl;    

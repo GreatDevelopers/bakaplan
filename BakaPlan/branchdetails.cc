@@ -29,7 +29,7 @@ void BranchDetails :: BodyContent()
                               "ED-10, IT-102", "IT-102", "IT-203", "CE-120",
                               "ME-140", "EE-109, 1234S, IT-203", "ME-101,ME-501,IT-101" };
 
-    cout << "<div id = \"body\">" << endl;
+    cout << "<div >" << endl;
          
     Header();
     
@@ -121,7 +121,7 @@ void BranchDetails :: BodyContent()
          << "<br><br>";
     
     cout << "<div class=\"btn-group\">";
-    cout << "<button class=\"btn\" type=\"submit\">NEXT</button>" //"<input type=\"submit\" value=\"NEXT\">"
+    cout << "<button id = \"next\" class=\"btn\" type=\"submit\">NEXT</button>" //"<input type=\"submit\" value=\"NEXT\">"
          << "</div>"
          << "</form>"
          
