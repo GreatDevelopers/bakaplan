@@ -82,11 +82,11 @@ REQUIREMENTS:
 
 INSTALLATION:
 ----------------------------
-Check [INSTALLATION](https://github.com/GreatDevelopers/bakaplan/blob/master/INSTALLATION) steps for using this software.
+Check [INSTALLATION](https://github.com/GreatDevelopers/bakaplan/blob/master/INSTALLATION.txt) steps for using this software.
 
 INPUT FORMAT:
 ----------------------------
-[USER GUIDE](https://github.com/GreatDevelopers/bakaplan/blob/master/USER%20GUIDE)
+[USER GUIDE](https://github.com/GreatDevelopers/bakaplan/blob/master/USER%20GUIDE.txt)
 
 AUTHORS:
 ----------------------------
