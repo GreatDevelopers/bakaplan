@@ -14,7 +14,7 @@ REQUIREMENTS:
 
 2) Configure public_html/cgi-bin folder for executing files on browser.<br>
     
-    **Steps to configure public_html** May 2013 
+    **Steps to configure public_html**
     
         $ mkdir public_html
     
