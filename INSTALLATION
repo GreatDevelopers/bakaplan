@@ -9,7 +9,7 @@ After this open terminal and run following commands
 
  $ cd bakaplan
 
- $ make
+ $ make install
 
 After all above steps open browser and open following link:
 
