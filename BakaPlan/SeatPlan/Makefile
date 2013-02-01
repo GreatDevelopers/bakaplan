@@ -150,4 +150,4 @@ strategy-run: $(INPUT) strategy
 #--------------------------------------------------------------------------
 	
 clean:
-	rm -f *.in *.o *.out *.txt subject-wise-rollno strategy report
+	rm -f *.in *.o *.out *.txt *.in subject-wise-rollno strategy report

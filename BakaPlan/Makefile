@@ -250,15 +250,22 @@ cp-BaKaPlan:
 	cp -r BaKaPlan/ ~/public_html/
 
 #--------------------------------------------------------------------------
+#        Give permissions to write in  ~/public_html and ~/*/cgi-bin
+#--------------------------------------------------------------------------
+
+permission: 
+	chmod -R 766 /home/*/public_html
+
+#--------------------------------------------------------------------------
 #                      First make after download
 #--------------------------------------------------------------------------
 
-install: all cp-BaKaPlan
+install: permission all cp-BaKaPlan
 
 #--------------------------------------------------------------------------
 #                  remove exe. files and o/p files
 #--------------------------------------------------------------------------
 
 clean:
-	rm *.html *.o && cd SeatPlan && make clean && cd .. && rm ~public_html/seatplan.html
+	rm *.html *.o *.txt && cd SeatPlan && make clean && cd .. && rm ~public_html/seatplan.html
 	
