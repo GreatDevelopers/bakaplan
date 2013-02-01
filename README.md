@@ -14,7 +14,7 @@ REQUIREMENTS:
 
 2) Configure public_html/cgi-bin folder for executing files on browser.<br>
     
-    **Steps to configure public_html**
+    **Steps to configure public_html** May 2013 
     
         $ mkdir public_html
     
@@ -26,7 +26,7 @@ REQUIREMENTS:
     
         $ sudo /etc/init.d/apache2 restart
     
-    Now open http://localhost/~username in browser.  
+    Now open http://localhost/~username in browser.
     Here username is your login name.
     
     **Steps to configure cgi-bin in public_html**
@@ -38,7 +38,7 @@ REQUIREMENTS:
         $ sudo a2enmod userdir
     
         $ sudo /etc/init.d/apache2 restart
-    
+     
         $ cd ~/public_html
     
         $ mkdir cgi-bin
@@ -94,7 +94,7 @@ Dr. Hardeep Singh Rai
 
 Website: http://gndec.ac.in/~hsrai
 
-<b>[Developer](https://github.com/GreatDevelopers/bakaplan/wiki/Contributors)</b>
+<b>[Developers](https://github.com/GreatDevelopers/bakaplan/wiki/Contributors)</b>
 
 Mandeep Kaur
 
