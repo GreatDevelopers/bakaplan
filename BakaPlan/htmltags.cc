@@ -59,6 +59,14 @@ void HTMLTags :: HTMLEnd()
 void HTMLTags :: HeadStart()
 {
     cout << "<head>" << endl;
+    
+    cout << "<link href='http://fonts.googleapis.com/css?family=Quicksand|Julius+Sans+One' rel='stylesheet' type='text/css'>";
+    
+    cout << "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js\"></script>"
+         << "<!-- jQuery for navigation -->	"
+         << "<script> "
+         << "$(function() {				var pull 	= $('#pull');				var menu 		= $('nav ul');				var menuHeight	= menu.height();			$(pull).on('click', function(e) {				e.preventDefault();			menu.slideToggle();			});			$(window).resize(function(){        		var w = $(window).width();        		if(w > 600 && menu.is(':hidden')) {        			menu.removeAttr('style');        	}    		});		}); </script>";
+    
 }
 
 void HTMLTags :: HeadEnd()
@@ -69,14 +77,24 @@ void HTMLTags :: HeadEnd()
 void HTMLTags :: BodyStart()
 {
     cout << "<body>" << endl;
+    cout << ""
+         << "<header>"
+         << "<nav class=\"clearfix fullwidth\">"
+	     << "<ul class=\"clearfix\">"
+		 << " <li><a href=\"#\">About</a></li>"
+		 << "<li><a href=\"https://github.com/GreatDevelopers/bakaplan#readme\">How to use?</a></li>"
+		 << "<li><a href=\"#\">Participate</a></li>"
+		 << "<li><a href=\"https://github.com/GreatDevelopers/bakaplan\">Fork me</a></li>"
+		 << "<li><a href=\"https://github.com/GreatDevelopers/bakaplan#authors\">Contact</a></li>"
+		
+		 << "	</ul>	<a href=\"#\" id=\"pull\">Menu</a></nav></header>";
 }
 
 void HTMLTags :: BodyEnd()
 {
+    cout << "</div>";
+//    cout << "<footer><div id=\"details\"> Brought to you by <a href=\"https://github.com/GreatDevelopers/bakaplan#authors\">GreatDevelopers </a> under <a href=\"https://github.com/GreatDevelopers/bakaplan/blob/master/LICENSE\"> GPL</a> </div> </footer>";
     cout << "</body>" << endl;
-    
-//    cout << "<script src=\"http://code.jquery.com/jquery-latest.js\"></script>"
-//         << "<script src=\"~public_html/BaKaPlan/bootstrap/js/bootstrap.min.js\"></script>";  
 }
 
 void HTMLTags :: Title(string title)
@@ -87,7 +105,7 @@ void HTMLTags :: Title(string title)
 
 void HTMLTags :: CSS()
 {
-    cout << "<link href=\"~/public_html/BaKaPlan/bootstrap/css/bootstrap.css\""
+    cout << "<link href=\"../../../BaKaPlan/styles.css\""
          << " rel=\"stylesheet\" media=\"screen\">" 
 //    cout << "<link rel=\"stylesheet\" type=\"text/css\" href=\"home.css\">" 
          << endl;
@@ -96,8 +114,9 @@ void HTMLTags :: CSS()
 
 void HTMLTags :: Header()
 {
-    cout << "<div id = \"header\" class=\"page-header\">" << endl
+    cout << "<div id = \"wrapper\">";
+    cout << "<div id = \"slogo\" class = \"logo\">" << endl
 //         << "<a class=\"brand\" href=\"#\"> Baka Plan<sup>Beta</sup> </a>"
-         << "<h1> Baka Plan<sup>Beta</sup> </h1>" << endl
+         << " Baka Plan<sup>Beta</sup>" << endl
          << "</div>" << endl;
 }

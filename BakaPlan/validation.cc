@@ -58,7 +58,8 @@ void Validation :: BodyContent()
         cout << "<br> <br>" 
              << "<form name=\"validation\" action=\"examdetails.html\" method=\"post\">" << endl 
              
-             << "<br><input type=\"submit\" value=\"Next\">";
+             << "<br>"//"<input type=\"submit\" value=\"Next\">";
+             << "<button id = \"next\" class=\"btn\" type=\"submit\">NEXT</button>";
         
         cout << "</form>";
     }

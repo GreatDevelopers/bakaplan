@@ -47,7 +47,7 @@ void ExamDetails :: BodyContent()
          
          << endl;         
         
-    cout << "<br> <br> <input type=\"submit\" value=\"NEXT\">"
+    cout << "<br> <br> <button id = \"next\" class=\"btn\" type=\"submit\">NEXT</button>"//<input type=\"submit\" value=\"NEXT\">"
          
          << "</form>"
          << "</pre>"

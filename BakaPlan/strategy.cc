@@ -56,7 +56,8 @@ void Strategy :: BodyContent()
         }
         cout << "</select>";
     
-    cout << "<br><br><input type=\"submit\" value=\"NEXT\">"
+    cout << "<br><br>"//"<input type=\"submit\" value=\"NEXT\">"
+         << "<button id = \"next\" class=\"btn\" type=\"submit\">NEXT</button>"
          
          << "</form>"
          
