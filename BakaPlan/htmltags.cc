@@ -83,8 +83,7 @@ void HTMLTags :: BodyStart()
 	     << "<ul class=\"clearfix\">"
 		 << " <li><a href=\"#\">About</a></li>"
 		 << "<li><a href=\"https://github.com/GreatDevelopers/bakaplan#readme\">How to use?</a></li>"
-		 << "<li><a href=\"#\">Participate</a></li>"
-		 << "<li><a href=\"https://github.com/GreatDevelopers/bakaplan\">Fork me</a></li>"
+		 << "<li><a href=\"https://github.com/GreatDevelopers/bakaplan/issues/new#\">Add Feature/Bug</a></li>"
 		 << "<li><a href=\"https://github.com/GreatDevelopers/bakaplan#authors\">Contact</a></li>"
 		
 		 << "	</ul>	<a href=\"#\" id=\"pull\">Menu</a></nav></header>";

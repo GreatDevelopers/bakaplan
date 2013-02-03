@@ -63,7 +63,7 @@ font-size:6em;
 
 #Frontlogo sup
 {
-font-size:0.4em;
+font-size:0.1em;
 }
 
 #slogo
@@ -100,7 +100,7 @@ nav li {
 }
 nav a {
 	display: inline-block;
-	width: 120px;
+	width: 150px;
 	text-align: center;
 	text-decoration: none;
 	}

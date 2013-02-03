@@ -57,7 +57,7 @@ void BranchDetails :: BodyContent()
     cout << "</select>"
          << "<br>"
          
-         << "<table >"
+         << "<table class=\"responsivetable\">"
          
          << "<tr>"
          
@@ -68,8 +68,8 @@ void BranchDetails :: BodyContent()
          
          << "<th>" << h_branch_name << "</th>"
          << "<th width = \"30\">" << h_total_subjects << "</th>"
-         << "<th>" << h_subject_code << "</th>"
          << "<th>" << h_subject_name << "</th>"
+         << "<th>" << h_subject_code << "</th>"
          
          << "</tr>";
 //         << "<br><br>"
@@ -126,6 +126,7 @@ void BranchDetails :: BodyContent()
          << "</form>"
          
 //         << "</pre>"
+
          
          << "</div>" << endl
          << "</div>" << endl;
