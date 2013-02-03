@@ -86,7 +86,8 @@ void HTMLTags :: BodyStart()
 		 << "<li><a href=\"https://github.com/GreatDevelopers/bakaplan/issues/new#\">Add Feature/Bug</a></li>"
 		 << "<li><a href=\"https://github.com/GreatDevelopers/bakaplan#authors\">Contact</a></li>"
 		
-		 << "	</ul>	<a href=\"#\" id=\"pull\">Menu</a></nav></header>";
+		 << "	</ul>	<a href=\"#\" id=\"pull\">Menu</a></nav></header>"
+		 << "<div id = \"data\">";
 }
 
 void HTMLTags :: BodyEnd()

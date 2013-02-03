@@ -55,9 +55,9 @@ void BranchDetails :: BodyContent()
     }
     
     cout << "</select>"
-         << "<br>"
+         << "<br><br>"
          
-         << "<table class=\"responsivetable\">"
+         << "<table id = \"content\" class=\"responsivetable\">"
          
          << "<tr>"
          
