@@ -2,6 +2,8 @@
 User Guidelines for using this application from console.
 =========================================================
 
+Follow this user guide after installing this application.
+
 Input Files
 ===========
 
