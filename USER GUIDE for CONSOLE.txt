@@ -1,0 +1,96 @@
+
+User Guidelines for using this application from console.
+=========================================================
+
+Input Files
+===========
+
+There are 5 input files.
+1) BranchDetails.in
+2) RollNoDetails.in
+3) RoomDetails.in
+4) ExamDetails.in
+5) Strategy.in
+
+Before execution you have to edit these files as input.
+
+Default input files are located in 
+~/public_html/cgi-bin/bakaplan/BakaPlan/SeatPlan/SeatPlan
+
+Format of input files
+=====================
+
+BranchDetails.in (For Branch Details)
+-------------------------------------
+
+2                                     (Total Branches)
+Branch Name 1
+1                                     (Total Subjects)
+Subject Name 1
+Subject Code 1
+Branch Name 2
+2
+Subject Name 1, Subject Name 2
+Subject Code 1, subject Code 2
+
+RollNoDetails.in
+----------------
+
+Prefix 1                              (Prefix if any)
+101-168                               (Start Roll no - Ending rollno)
+0                                     (Roll Nos not included)
+                                      (No prefix)
+201-208
+0                                     (if there is not any roll no)
+Prefix 3
+301-328
+303-309 315
+
+This file depends on branch details and subjects you entered with branches.
+In above example, There are 3 subjects so you have to enter roll no details
+3 times in this file.
+
+RoomDetails.in
+--------------
+
+2                                      (Total Centres)
+Centre Name 1                          (Center name )
+2                                      (Total Rooms)
+Room No 1                              (Room No)
+7 3                                    ( row column - seperate row and column with space)
+Room No 2                              (Room no)
+6 6
+Centre Name 2                          (Center name )
+1                                      (Total Rooms)
+Room No 1
+7 3
+
+Strategy.in
+-----------
+
+B                                      (A, B, C, D, or E any option)
+
+ExanDetails.in
+--------------
+
+Examination Name
+Date (12-12-12)
+Time (2:00pm - 5:00pm)
+Venue
+
+Write exam details in above sequence only.
+
+Executing program through terminal
+==================================
+
+Open terminal and run following commands.
+
+$ cd ~/public_html/cgi-bin/bakaplan/BakaPlan/SeatPlan
+
+$ make console
+
+This will compile all files and also create outfiles in SeatPlan folder
+(~/public_html/cgi-bin/bakaplan/BakaPlan/SeatPlan/SeatPlan)
+
+After doing above step, Output file(seatplan.html) is in 
+~/public_html/cgi-bin/bakaplan/BakaPlan/SeatPlan/SeatPlan path.
