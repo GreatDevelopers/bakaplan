@@ -16,8 +16,8 @@ void RoomDetails :: Head()
 void RoomDetails :: BodyContent()
 {
 
-    string row[5] = {"8", "8", "6", "6", "8"};
-    string col[5] = {"6", "6", "5", "6", "8"};
+    string row[9] = {"7", "6", "6", "6", "7", "7", "7", "7", "7"};
+    string col[9] = {"3", "6", "4", "6", "6", "6", "6", "4", "4"};
 
     cout << "<div id = \"body\" class = \"center\">" << endl;
          
@@ -50,7 +50,7 @@ void RoomDetails :: BodyContent()
              << "<input type=\"text\" name=\"" << centre_no << (i+1) << "\""
              << "value = \"Centre " << (i+1) << "\">"
              << "    Total Rooms " << "<select name=\"TotalRooms" << (i+1) << "\">";
-            for(k = 1; k <= 5; k++)
+            for(k = 1; k <= 10; k++)
             {
                 cout << "<option value=\""
                      << k << "\" ";
@@ -68,7 +68,7 @@ void RoomDetails :: BodyContent()
              << "<th> Rows </th>"
              << "<th> Cols </th>"
              << "<tr>";
-        for(j = 0; j < 5; j++)
+        for(j = 0; j < 10; j++)
         {
             cout << "<tr>";
             

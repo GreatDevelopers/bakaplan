@@ -28,6 +28,8 @@ void Strategy :: totalStudents()
 
 void Strategy :: totalGroupStudents(int strategy)
 {
+    if(strategy == 5)
+        strategy = 1;
     s = 0;
     for(i = 0; i < total_code; i++)
     {
@@ -132,6 +134,8 @@ void Strategy :: chooseStrategy()
         choice = 3;
     if(strategy_choice == "D")
         choice = 4;
+    if(strategy_choice == "E")
+        choice = 5;
         
     checkValidation(choice);
 }

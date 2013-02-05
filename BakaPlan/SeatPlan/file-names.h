@@ -13,6 +13,7 @@ const char Input_Rooms[FILE_SIZE]           =    "SeatPlan/RoomDetails.in";
 const char Input_Strategy[FILE_SIZE]        =    "SeatPlan/Strategy.in";
 const char Input_ExamDetails[FILE_SIZE]     =    "SeatPlan/ExamDetails.in";
 
+
 // Roll no Processing 
 const char Rollno_Expand_out[FILE_SIZE]     =    "SeatPlan/rollno_expand.out";
 const char Rollno_Arranged_out[FILE_SIZE]   =    "SeatPlan/rollno_arranged.out";
@@ -33,7 +34,7 @@ const char Validation_out[FILE_SIZE]        =    "SeatPlan/Validation.out";
 // Report Files
 
 const char SeatPlan_TextFile[FILE_SIZE]     =    "SeatPlan/SeatPlan.txt";
-const char SeatPlan_HTMLFile[FILE_SIZE]     =    "../../../seatplan.html";
+const char SeatPlan_HTMLFile[FILE_SIZE]     =    "SeatPlan/seatplan.html";//"../../../seatplan.html";
 const char SeatPlan_CSVFile[FILE_SIZE]      =    "SeatPlan/SeatPlan.csv";
 const char SeatPlan_PDFFile[FILE_SIZE]      =    "SeatPlan/SeatPlan.pdf";
 const char BranchReportTextFile[FILE_SIZE]  =    "SeatPlan/BranchReport.txt";

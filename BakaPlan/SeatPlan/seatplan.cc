@@ -40,6 +40,11 @@ void SeatPlan :: readSubjectWiseRollNo(string file)
 
 void SeatPlan :: setRollNo(int strategy)
 {
+    int stra;
+    if(strategy == 5)
+        stra = 1;
+    else
+        stra = strategy;
     s = 0;
     for(i = 0; i < strategy; i++)
     {
@@ -48,7 +53,7 @@ void SeatPlan :: setRollNo(int strategy)
     
     for(i = 0; i < total_code; i++)
     {
-        if(s == strategy)
+        if(s == stra)
             s = 0;
         
         start = seat_size[s];
@@ -67,9 +72,16 @@ void SeatPlan :: setRollNo(int strategy)
 
 void SeatPlan :: seatingPlan(int strategy)
 {
+    int from, to, next, stra;
+    
     setRollNo(strategy);
     
-    for(i = 0; i < strategy; i++)
+    if(strategy == 5)
+        stra = 1;
+    else
+        stra = strategy;
+    
+    for(i = 0; i < stra; i++)
     {
         size[i] = 0;
     }
@@ -88,22 +100,52 @@ void SeatPlan :: seatingPlan(int strategy)
                         s = 1;
                     if(strategy > 2)
                         s = 2;
+                    if(strategy == 5)
+                    {
+                        s = 0;
+                    }
+                        
                 }
                 else
                     s = 0;
-          
-                for(col = 0; col < rows[centre][room]; col++)
+                
+                if(strategy == 5)
                 {
-                    if(s == strategy)
-                        s = 0;
-                    seat[centre][room][col][row] = rollNo(s);
-                    s++;
+                    if((row % 2) != 0)
+                    {
+                        for(col = rows[centre][room]-1; col >= 0 ; col--)
+                        {
+                            if(s == stra)
+                                s = 0;
+                            seat[centre][room][col][row] = rollNo(s);
+                            s++;
+                        }
+                    }
+                    else
+                    {
+                        for(col = 0; col < rows[centre][room]; col++)
+                        {
+                            if(s == stra)
+                                s = 0;
+                            seat[centre][room][col][row] = rollNo(s);
+                            s++;
+                        }
+                    }
+                }
+                else
+                {          
+                    for(col = 0; col < rows[centre][room]; col++)
+                    {
+                        if(s == strategy)
+                            s = 0;
+                        seat[centre][room][col][row] = rollNo(s);
+                        s++;
+                    }
                 }
             }
         }
     }
 }
-
 
 string SeatPlan :: rollNo(int s)
 {
@@ -146,4 +188,3 @@ void SeatPlan :: showSeatPlan()
     }
     outfile.close();
 }
-

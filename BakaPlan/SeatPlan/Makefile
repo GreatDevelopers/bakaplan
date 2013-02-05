@@ -126,8 +126,8 @@ report-main.o: report-main.cpp $(REPORT_HEADER)
 report: $(REPORT)
 	$(CC) $(OFLAG) report $(REPORT)
 
-#report-run: $(INPUT) report
-#	./report
+report-run: $(INPUT) report
+	./report
 
 #--------------------------------------------------------------------------
 #                          Select strategy

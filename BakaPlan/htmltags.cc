@@ -60,7 +60,7 @@ void HTMLTags :: HeadStart()
 {
     cout << "<head>" << endl;
     
-    cout << "<link href='http://fonts.googleapis.com/css?family=Quicksand|Julius+Sans+One' rel='stylesheet' type='text/css'>";
+//    cout << "<link href='http://fonts.googleapis.com/css?family=Quicksand|Julius+Sans+One' rel='stylesheet' type='text/css'>";
     
     cout << "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js\"></script>"
          << "<!-- jQuery for navigation -->	"
