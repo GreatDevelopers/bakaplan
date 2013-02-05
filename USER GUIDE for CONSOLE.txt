@@ -70,7 +70,7 @@ Room No 1
 Strategy.in
 -----------
 
-B                                      (A, B, C, D, or E any option)
+E                                      (A, B, C, D, or E any option)
 
 ExanDetails.in
 --------------
