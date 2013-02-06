@@ -17,7 +17,7 @@ void RollNoDetails :: Head()
 void RollNoDetails :: BodyContent()
 {
 
-    string rnoprefix[20] = {"IT", "CSE", "ECE", "ME", 
+    string rnoprefix[20] = {"IT", "901", " ", "ME", 
                              " ", "EE", " ", 
                              "E E", "CSci", "MBA", "P1", "p2", "P3", "P4", "p5"
                              "p6", "p7", " ", "p9", "910"};
@@ -47,7 +47,7 @@ void RollNoDetails :: BodyContent()
          << "<table align = \"center\" cellpadding=\"5\" >"
          
          << "<tr>"
-         << "<th> Branch Name </th>"
+         << "<th> " << h_class_name << "</th>"
          << "<th> Subject Code </th>"
          << "<th> Prefix </th>"
          << "<th> Start Roll No. </th>"

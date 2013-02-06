@@ -17,7 +17,7 @@ void ReadBranchDetails :: readBranchDetails()
     
     for(i = 0; i < totalBranches; i++)
     {  
-        branchName[i] = readField(branch_name, i);
+        branchName[i] = readField(class_name, i);
         totalSubjects[i] = atoi(readField(total_subjects, i).c_str());
         subjectcode[i] = readField(subject_code, i);
         subjectname[i] = readField(subject_name, i);   

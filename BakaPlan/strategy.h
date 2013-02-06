@@ -15,6 +15,9 @@ class ReadRoomDetails : public HTMLTags
         // temp
         string temp;    
         
+        // Strategy Name
+        string strategyName[MINS_SIZE];
+        
     public:
         ReadRoomDetails(){}
         void readRoomDetails();

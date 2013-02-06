@@ -4,6 +4,11 @@
 Strategy :: Strategy()
 {
     ContentType();
+    strategyName[0] = "Cushy(Continual)";
+    strategyName[1] = "Flip Flop";
+    strategyName[2] = "Triplet";
+    strategyName[3] = "Quadlet";
+    strategyName[4] = "Serpentine";
 }
 
 void Strategy :: Head()
@@ -28,11 +33,17 @@ void Strategy :: BodyContent()
          
          << "<table align = \"center\" cellspacing = \"10\" cellpadding = \"10\">"
          
-         << "<tr> <th> A </th> <th> B </th> <th> C </th> <th> D </th> <th> E </th></tr>"
+         << "<tr > ";
+         
+    for(i = 0; i < 5; i++)
+        cout << "<th> " << strategyName[i] << " </th>";
+    
+    cout << "</tr>"
          
          << "<tr> "
          
-         << " <td> Subject Code 1 <br> Subject Code 1 <br> Subject Code 1 <br> Subject Code 1</td> "
+         << " <td>  Subject Code 1 <br> Subject Code 1 <br>"
+         << " Subject Code 1 <br> Subject Code 1</td> "
          
          << " <td> Subject Code 1 <br> Subject Code 2 <br> Subject Code 1 <br> Subject Code 2 </td> "
          
@@ -40,7 +51,7 @@ void Strategy :: BodyContent()
          
          << " <td> Subject Code 1 <br> Subject Code 2 <br> Subject Code 3 <br> Subject Code 4</td> "
          
-         << " <td> Select Strategy 5</td> "
+         << " <td> Select Strategy 5 </td> "
          
          << "</tr>"
          
@@ -48,13 +59,12 @@ void Strategy :: BodyContent()
          
          << "<br><br>";
         cout << "Select Option <select name=\"" << strategy << "\">"; 
-        for(i = 65; i < 70; i++)
+        for(i = 0; i < 5; i++)
         {
-            char a = i;
             cout << "<option value=\""
-                 << a << "\"";
+                 << i + 1 << "\"";
             cout << " > "
-                 << a << "</option>";
+                 << strategyName[i] << "</option>";
         }
         cout << "</select>";
     

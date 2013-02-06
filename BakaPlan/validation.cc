@@ -63,15 +63,16 @@ void Validation :: BodyContent()
         
         cout << "</form>";
     }
-   /* else
+/*    else
     {
         cout << "<br> <br>" 
              << "<form name=\"validation\" action=\"roomdetails.html\" method=\"post\">" << endl 
              
-             << "<br><input type=\"submit\" value=\"Back\">";
+             << "<br><button id = \"next\" class=\"btn\" type=\"submit\">BACK</button>";
         
         cout << "</form>";
-    }*/
+    }
+*/
          
     cout << "</div>" << endl
          << "</div>" << endl;
