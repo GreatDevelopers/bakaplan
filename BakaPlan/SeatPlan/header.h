@@ -19,4 +19,4 @@ using namespace std;
 
 // Constant for array size
 const int MIN_SIZE = 25;
-const int MAX_SIZE = 150;
+const int MAX_SIZE = 600;

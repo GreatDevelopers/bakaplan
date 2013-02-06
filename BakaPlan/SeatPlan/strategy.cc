@@ -108,15 +108,15 @@ void Strategy :: checkValidation(int strategy)
             << "\t Max Group Students = " << group_student_size[strategy-1] << endl;
     
     // Showing values while console
-//    cout << "\n\t Total Seats = " << total_seats << endl
-//         << "\t Total Students = " << total_students << endl
-//         << "\t Total Group Seats = " << total_group_seats << endl
-//         << "\t Max Group Students = " << group_student_size[strategy-1] << endl;
-//    
+    cout << "\n\t Total Seats = " << total_seats << endl
+         << "\t Total Students = " << total_students << endl
+         << "\t Total Group Seats = " << total_group_seats << endl
+         << "\t Max Group Students = " << group_student_size[strategy-1] << endl;
+    
     if(total_seats < total_students)
     {
         outfile << "\t Add More rooms!" << endl;
-//        cout << "\t Add More rooms!" << endl;
+        cout << "\t Add More rooms!" << endl;
         outfile.close();
     }
         
@@ -133,15 +133,15 @@ void Strategy :: chooseStrategy()
     infile >> strategy_choice;    
     infile.close();
     
-    if(strategy_choice == "1")//"Continual Strategy")
+    if(strategy_choice == "A")
         choice = 1;
-    if(strategy_choice == "2")//"Strategy 2")
+    if(strategy_choice == "B")
         choice = 2;
-    if(strategy_choice == "3")//"Strategy 3")
+    if(strategy_choice == "C")
         choice = 3;
-    if(strategy_choice == "4")//"Strategy 4")
+    if(strategy_choice == "D")
         choice = 4;
-    if(strategy_choice == "5")//"Serpentine Strategy")
+    if(strategy_choice == "E")
         choice = 5;
         
     checkValidation(choice);
