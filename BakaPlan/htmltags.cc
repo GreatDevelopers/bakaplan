@@ -3,14 +3,14 @@
 HTMLTags :: HTMLTags()
 {
     // branch field names
-    branch_name     =    "BranchName";
+    class_name     =    "ClassName";
     total_subjects  =    "TotalSubjects";
     subject_code    =    "SubjectCode";
     subject_name    =    "SubjectName";
     total_branches  =    "TotalBranches";
     
     // table header branch field names
-    h_branch_name     =    "Branch Name";
+    h_class_name     =    "Class Name";
     h_total_subjects  =    "Total Subjects";
     h_subject_code    =    "Subject Code";
     h_subject_name    =    "Subject Name";

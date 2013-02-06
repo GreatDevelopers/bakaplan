@@ -17,7 +17,7 @@ void BranchDetails :: BodyContent()
 {
     const int maxBranches = 10;
 
-    string branchName[maxBranches] = {"Info. Tech.", "CSE", "ECE", "Mech. Engg.", 
+    string className[maxBranches] = {"Info. Tech.", "10th", "ECE", "Mech. Engg.", 
                              "Production Engg.", "Electrical Engg.", "IT", 
                              "Electronics Engg.", "Comp. Sci. Engg.", "MBA"};
                                  
@@ -66,7 +66,7 @@ void BranchDetails :: BodyContent()
 //         << "<th>Subject Name</th>"
 //         << "<th>Subject Code</th>"
          
-         << "<th>" << h_branch_name << "</th>"
+         << "<th>" << h_class_name << "</th>"
          << "<th width = \"30\">" << h_total_subjects << "</th>"
          << "<th>" << h_subject_name << "</th>"
          << "<th>" << h_subject_code << "</th>"
@@ -77,8 +77,8 @@ void BranchDetails :: BodyContent()
     {     
         cout << "<tr>"
              << "<td>"
-             << "<input type=\"text\" name=\"" << branch_name << j+1 << "\""
-             << "value = \" "<< branchName[j] << "\" size = \"17\">"
+             << "<input type=\"text\" name=\"" << class_name << j+1 << "\""
+             << "value = \" "<< className[j] << "\" size = \"17\">"
              << "</td>"
              
              << "<td>"
@@ -127,7 +127,6 @@ void BranchDetails :: BodyContent()
          
 //         << "</pre>"
 
-         
          << "</div>" << endl
          << "</div>" << endl;
 }

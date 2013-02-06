@@ -34,7 +34,7 @@ const char Validation_out[FILE_SIZE]        =    "SeatPlan/Validation.out";
 // Report Files
 
 const char SeatPlan_TextFile[FILE_SIZE]     =    "SeatPlan/SeatPlan.txt";
-const char SeatPlan_HTMLFile[FILE_SIZE]     =    "SeatPlan/seatplan.html";//"../../../seatplan.html";
+const char SeatPlan_HTMLFile[FILE_SIZE]     =    "../../../seatplan.html";//"SeatPlan/seatplan.html";//
 const char SeatPlan_CSVFile[FILE_SIZE]      =    "SeatPlan/SeatPlan.csv";
 const char SeatPlan_PDFFile[FILE_SIZE]      =    "SeatPlan/SeatPlan.pdf";
 const char BranchReportTextFile[FILE_SIZE]  =    "SeatPlan/BranchReport.txt";
