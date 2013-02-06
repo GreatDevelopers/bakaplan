@@ -17,5 +17,5 @@
 
 using namespace std;
 
-const int MINS_SIZE = 50;
+const int MINS_SIZE = 30;
 const int MAXS_SIXE = 30;
