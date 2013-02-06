@@ -9,7 +9,7 @@ class HTMLTags
     int i, j, k;
     
     /// branch field names
-    string branch_name, total_subjects, subject_code, subject_name,
+    string class_name, total_subjects, subject_code, subject_name,
            total_branches;
     
     /// roll no field names
@@ -25,7 +25,7 @@ class HTMLTags
     string exam_name, exam_time, exam_date, exam_venue;
     
     // table header names
-    string h_branch_name, h_total_subjects, h_subject_code, h_subject_name,
+    string h_class_name, h_total_subjects, h_subject_code, h_subject_name,
            h_total_branches;
     
     ifstream infile;
