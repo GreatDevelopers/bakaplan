@@ -254,7 +254,7 @@ cp-BaKaPlan:
 #--------------------------------------------------------------------------
 
 permission: 
-	chmod -R 766 /home/*/public_html
+	chmod -R 777 /home/*/public_html
 
 #--------------------------------------------------------------------------
 #                      First make after download
