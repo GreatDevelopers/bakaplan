@@ -226,7 +226,7 @@ string RoomReport :: addPrefix(string roll)
         }
         total++;
     }
-    else if(rno >= 2001 && rno <= 2268)
+    else if(rno >= 2001 && rno <= 2298)
     {
         rollno = prefix[3];      // 3 index 
         total_students[3]++;
