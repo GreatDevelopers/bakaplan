@@ -4,7 +4,7 @@
 Strategy :: Strategy()
 {
     ContentType();
-    strategyName[0] = "Cushy(Continual)";
+    strategyName[0] = "Cushy";
     strategyName[1] = "Flip Flop";
     strategyName[2] = "Triplet";
     strategyName[3] = "Quadlet";
