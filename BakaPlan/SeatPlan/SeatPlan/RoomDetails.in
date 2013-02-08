@@ -1,21 +1,29 @@
 1
-LUC 81712
-9
-F-101 First Floor
-7 3
-F-102 First Floor
-6 6
-F-103 First Floor
+LUC 81711
+13
+S-201
+9 4
+S-202
+8 5
+S-203
+8 5
+S-204
+8 5
+S-206
+10 4
+S-207
 6 4
-F-104 First Floor
+S-208
+6 4
+F-102
 6 6
-F-105 First Floor
-7 6
-F-106 First Floor
-7 6
-F-107 First Floor
-7 6
-S-201 Top Floor
-7 4
-S-202 Top Floor
+F-104
+6 6
+F-105
+6 6
+F-106
+5 8
+F-107
+5 8
+F-101
 7 4

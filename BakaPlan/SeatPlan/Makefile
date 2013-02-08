@@ -43,7 +43,7 @@ all: subject-wise-rollno strategy report
 #                           Console Targets
 #--------------------------------------------------------------------------
 
-console: subject-wise-rollno-run strategy-run report-run
+console: subject-wise-rollno-run strategy-run report-run cp-html
 
 #--------------------------------------------------------------------------
 #                          Read Input Files
@@ -150,6 +150,13 @@ strategy: $(STRATEGY)
 
 strategy-run: $(INPUT) strategy
 	./strategy
+
+#--------------------------------------------------------------------------
+#                          cp seatplan.html to ~/public_html/
+#--------------------------------------------------------------------------	
+
+cp-html:
+	cd SeatPlan && cp seatplan.html ~/public_html/ && cd ..
 
 #--------------------------------------------------------------------------
 #                  remove exe. files and o/p files

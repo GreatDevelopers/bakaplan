@@ -73,14 +73,23 @@ void RoomReport :: writeSeatPlan(string file)
     outfile.open(file.c_str());
     outfile << "<html><head><title>BaKa Plan</title>"
             << "<style> @media print { div {page-break-before:always} } "
-            
-            << "td {font-size:120%}"
-            << "b {font-size:130%}"
-            << "th {font-size:130%}"
-            << "p {font-size:120&}"
-            
-            << "</style> </head>"
-            << "<body align = \"center\" > <pre>"
+//            
+            << "td {font-size:130%; font-weight:bold;}"
+//            << "b {font-size:150%}"
+//            << "th {font-size:150%}"
+//            << "p {font-size:130%;}"
+            << "h1 {font-size:300%; font-family: }"
+            << "body{font-family:\"Open Sans\";}"
+//            
+            << "</style> "
+//            << "<link href=\"BaKaPlan/bootstrap/css/bootstrap.min.css\""
+//            << " rel=\"stylesheet\" media=\"screen\">"
+            << "<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>"
+//            << "<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>"
+            << "<link href=\"BaKaPlan/output.css\""
+            << " rel=\"stylesheet\" media=\"screen print\">"
+            << "</head>"
+            << "<body align = \"center\" > "
             //<< "<br><br> " //<h2> Seating Plan </h2> <br>";//" <b> Total Centres: "
             
             << endl;
@@ -90,37 +99,44 @@ void RoomReport :: writeSeatPlan(string file)
         for(room = 0; room < total_rooms[centre]; room++)
         {
             total_students[0] = total_students[1] = total_students[2] = total_students[3] = total = 0;
-            
+            int rno;
             start_rno[0] = start_rno[1] = start_rno[2] = start_rno[3] = 35675;
             end_rno[0] = end_rno[1] = end_rno[2] = end_rno[3] = 0;
             
-            outfile << "<h1> " << exam_name << "</h1><br>";
-            outfile << "<table align = \"center\">"
-//                    << "<tr>"
-//                    << "<td>"
-//                    << "<h1> " << exam_name << " </h1></td></tr> "
-                    << "<tr>"
-                    << "<td>"
-                    << "<b>Date</b> : " << exam_date << "</td>"
+            outfile << "<h1 style = \" line-height:20%; font-family:arial; font-size: 170%;\"> " << exam_name  <<"</h1>"
+                    << "<h2 style=\"font-size: 120%;\"> " << exam_date << " | at " << exam_time << " | Venue : " << exam_venue
+                    << "</h2>";
                     
-                    << "<td>"
-                    << "<b>Time</b> : " << exam_time << "</td></tr>"
-                    << "<tr>"
-                    << "<td>"
-                    << "<b>Venue</b> : " << exam_venue << "</td></tr>"
-                    << "<tr>"
-                    << "<td>";
+            outfile << "<h2 style=\"line-height:20%;\" >Centre No. : " << centre_no[centre] << "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Room No. : " << room_no[centre][room] << "</h2>";
             
-            outfile << "<b><br> Centre Name</b> : " << centre_no[centre] << "</td>"
-                    << endl
+//            outfile << "<h1 style = \"font-size: 250%;\"> " << exam_name << "</h1><br>";
+//            outfile << "<table align = \"center\" class=\"table\" width = \"800px\" cellpadding = \"0\" style=\"line-height:-4px;\">"
+////                    << "<tr>"
+////                    << "<td>"
+////                    << "<h1> " << exam_name << " </h1></td></tr> "
+//                    << "<tr width = \"300\">"
+//                    << "<td>"
+//                    << "<h1 style = \"font-size: 150%\">Date : " << exam_date << "</b></td>"
+//    
+//                    << "<td>"
+//                    << "<h1 style = \"font-size: 150%\">Time : " << exam_time << "</b></td></tr>"
+//                    << "<tr width = \"150\" colspan=\"2\">"
+//                    << "<td>"
+//                    << "<h1 style = \"font-size: 150%\">Venue : " << exam_venue << "</b></td></tr>"
+//                    << "<tr width = \"300\">"
+//                    << "<td>";
+//            
+//            outfile << "<h1 style = \"font-size: 150%;\"> Centre Name : " << centre_no[centre] << "</b></td>"
+//                    << endl
+//                    
+//                    << "<td>";
+////                <<  "<b>     Total Rooms: </b>" << total_rooms[centre] 
+//            outfile << "<h1 style = \"font-size: 150%\">Room No : " << room_no[centre][room] << endl 
+//                    << "</b></td></tr>"
+//                    << "</table><br><br>"
                     
-                    << "<td>";
-//                <<  "<b>     Total Rooms: </b>" << total_rooms[centre] 
-            outfile << "<br><b>Room No</b> : " << room_no[centre][room] << endl 
-                    << "</td></tr>"
-                    << "</table><br><br>"
-                    << "<table align = \"center\" cellpadding = \"8\""
-                    << " cellspacing = \"1\" border = \"1\">";
+                outfile    << "<table align = \"center\" cellpadding = \"2\""
+                    << " cellspacing = \"1\" border = \"1\" width = \"800px\">";
             
             outfile << "<tr>";
                 j = 65 + cols[centre][room];
@@ -143,6 +159,7 @@ void RoomReport :: writeSeatPlan(string file)
                         << "align = \"center\" valign = \"center\">"
                         << row+1
                         << "</td>";
+                
                 for(col = 0; col < cols[centre][room]; col++)
                 {
                     outfile << "<td width = \"80\" height = \"30\" "
@@ -153,21 +170,21 @@ void RoomReport :: writeSeatPlan(string file)
                 }
                 outfile << "</tr>";
             }
-            outfile << "</table><br>";
+            outfile << "</table><p>";
             
             // students info
             for(int t = 0; t < 4; t++)
             {
                 if(total_students[t] != 0)
                     outfile << prefix[t] << "{ " << start_rno[t]  << " - "
-                            << end_rno[t] << " }"<< " = " << total_students[t] << endl;
+                            << end_rno[t] << " }"<< " = " << total_students[t] 
+                            << "<br>" << endl;
             }
             
-            outfile << "\n Total Students : " << total;
+            outfile << " Total Students : " << total;
             
-            outfile << "<br><p> Seating Plan generated by BaKaPlan(http://freecode.com/projects/bakaplan)<p>";
-            
-            //totalStudents(seat[centre][room][row][col]);
+            outfile << "<br> Seating Plan generated by "
+                    << "BaKaPlan (http://freecode.com/projects/bakaplan)</p>";
             
             outfile << "<div>  </div>";
         }
@@ -200,6 +217,8 @@ string RoomReport :: addPrefix(string roll)
         total_students[0]++;
         range(rno, 0);
         total++;
+//        even = " ";
+//        odd = " ";
     }
     else if(rno >= 1290 && rno <= 1457)
     {
@@ -217,12 +236,14 @@ string RoomReport :: addPrefix(string roll)
                 total_students[2]++;
                 range(rno, 2);
             }
+//            even = " (Even Roll No.)";
         }    
         else
         {
             rollno = prefix[0];      // 0 index
             total_students[0]++;
             range(rno, 0);
+//            odd = " (Odd Roll No.)";
         }
         total++;
     }
@@ -234,7 +255,11 @@ string RoomReport :: addPrefix(string roll)
         total++;
     }
     else
+    {
         rollno = " ";
+        even = " ";
+        odd = " ";
+    }
     
     return rollno;
 }

@@ -9,7 +9,7 @@ class RoomReport : public SeatPlan
             total_subject[MIN_SIZE];
             
         int total_students[MIN_SIZE], total, start_rno[MIN_SIZE], end_rno[MIN_SIZE];
-        string prefix[MIN_SIZE];
+        string prefix[MIN_SIZE] , even, odd;
     
     public:
         void readInputRollNo(string);
