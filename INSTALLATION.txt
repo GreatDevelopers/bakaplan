@@ -1,0 +1,22 @@
+Inatallation steps for using this software.
+===========================================
+
+After this open terminal and run following commands
+
+ $ cd public_html/cgi-bin
+
+ $ git clone https://github.com/GreatDevelopers/bakaplan.git
+
+ $ cd bakaplan
+
+ $ make install
+
+After all above steps open browser and open following link:
+
+http://localhost/~username/BaKaPlan
+
+Here username is your login username
+
+NOTE:    Be sure that you must have write permission in the directory
+         (~/public_html/cgi-bin/bakaplan/ and ~/public_html/)
+         where outputfile is to be generated.
