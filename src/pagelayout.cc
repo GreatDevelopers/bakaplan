@@ -17,5 +17,84 @@
  * ===================================================================
  */
 
-/// Include Header file
+
+/**-------------------------------------------------------------------
+ *  Include local header file
+ *------------------------------------------------------------------*/
 #include "pagelayout.h"
+
+/**-------------------------------------------------------------------
+ *  Function Definitions of PageLayout Class
+ *------------------------------------------------------------------*/
+
+
+/** 
+ * ===  FUNCTION =====================================================
+ *         Name:  PageLayout()
+ *  Description:  Constructor to set projectName
+ * ===================================================================
+ */
+
+PageLayout :: Pagelayout()
+{
+    projectName = "BaKaPlan";
+}
+
+/** 
+ * ===  FUNCTION =====================================================
+ *         Name:  Menu()
+ *  Description:  Add Menus on page(for navigation)
+ * ===================================================================
+ */
+
+void PageLayout :: Menu()
+{
+    cout << "<nav class=\"clearfix fullwidth\">"
+         << "<ul class=\"clearfix\">"
+         << " <li><a href=\"#\">About</a></li>"
+         << "<li><a href=\"https://github.com/GreatDevelopers"
+         << "/bakaplan#readme\">How to use?</a></li>"
+         << "<li><a href=\"https://github.com/GreatDevelopers"
+         << "/bakaplan/issues/new#\">Add Feature/Bug</a></li>"
+         << "<li><a href=\"https://github.com/GreatDevelopers"
+         << "/bakaplan#authors\">Contact</a></li>"
+         << "   </ul>   <a href=\"#\" id=\"pull\">Menu</a></nav>"
+         << endl;
+}
+
+/** 
+ * ===  FUNCTION =====================================================
+ *         Name:  Logo(string logoName)
+ *  Description:  Logo of project
+ * ===================================================================
+ */
+
+void PageLayout :: Logo(string logoName)
+{
+    cout << "<div id = \"slogo\" class = \"logo\">"
+         << logoName << " <sup>Beta</sup>" << endl
+         << "</div>" << endl;
+}
+
+/** 
+ * ===  FUNCTION =====================================================
+ *         Name:  Header()
+ *  Description:  Call Menu and Logo functions
+ * ===================================================================
+ */
+
+void PageLayout :: Header()
+{
+    cout << "<header>";
+    Menu();
+    cout << "</header>";
+//    Logo(projectName);
+}
+
+
+/** 
+ * ===  FUNCTION =====================================================
+ *         Name:  Footer()
+ *  Description:  Footer of pages
+ * ===================================================================
+ */
