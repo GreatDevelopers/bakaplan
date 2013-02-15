@@ -62,5 +62,43 @@ class HTMLTags
         void BodyStart();                   
         
         /** </BODY> */
-        void BodyEnd();                     
+        void BodyEnd();
+
+        /// Start Div Section
+        void DivStart(string id, string className);
+
+        /// End div section
+        void DivEnd();
+
+        /// Start Form
+        void FormStart(string name, string action, string method);
+
+        /// End Form
+        void FormEnd();
+
+        /// Start Table
+        void TableStart(string id, string className);
+
+        /// End Table
+        void TableEnd();
+
+        /// Input Field
+        void InputField(string type, string name, string value);
+
+        /// Select Field Start
+        void SelectFieldStart(string name);
+
+        /// End Select Field
+        void SelectFieldEnd();
+
+        /// Select Option Start
+        void SelectOptionStart(string value);
+
+        /// Selct Option End
+        void SelectOptionEnd();
+
+        /// Button 
+        void Button(string id, string type, string className, 
+                    string value);
+
 };

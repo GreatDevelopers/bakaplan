@@ -126,7 +126,7 @@ void HTMLTags :: Javascript(string src)
  *--------------------------------------------------------------------
  *       Class:  HTMLTags
  *      Method:  HTMLTags :: BodyStart()
- * Description:  <BODY>
+ * Description:  Display <BODY>
  *--------------------------------------------------------------------
  */
 
@@ -139,11 +139,165 @@ void HTMLTags :: BodyStart()
  *--------------------------------------------------------------------
  *       Class:  HTMLTags
  *      Method:  HTMLTags :: BodyEnd()
- * Description:  </BODY>
+ * Description:  Display </BODY>
  *--------------------------------------------------------------------
  */
 
 void HTMLTags :: BodyEnd()
 {
     cout << "</BODY>" << endl;
+}
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  HTMLTags
+ *      Method:  HTMLTags :: DivStart(string id, string className)
+ * Description:  Start Div Section with id and className(for CSS)
+ *--------------------------------------------------------------------
+ */
+
+void HTMLTags :: DivStart(string id, string className)
+{
+    cout << "<div id = \"" << id << "\" class = \"" << className
+         << " \">" << endl;
+}
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  HTMLTags
+ *      Method:  HTMLTags :: DivEnd()
+ * Description:  Close Div Section
+ *--------------------------------------------------------------------
+ */
+
+void HTMLTags :: DivEnd()
+{
+    cout << "</div>" << endl;
+}
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  HTMLTags
+ *      Method:  HTMLTags :: FormStart(string name, string action,
+ *               string method)
+ * Description:  Start Form with name, action and method(GET/POST)
+ *--------------------------------------------------------------------
+ */
+
+void HTMLTags :: FormStart(string name, string action, string method)
+{
+    cout << "<form name = \"" << name << "\" action = \"" << action
+         << "\" method = \"" << method << "\" >" << endl;
+}
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  HTMLTags
+ *      Method:  HTMLTags :: FormEnd()
+ * Description:  Close Form
+ *--------------------------------------------------------------------
+ */
+
+void HTMLTags :: FormEnd()
+{
+    cout << "</form>" << endl;
+}
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  HTMLTags
+ *      Method:  HTMLTags :: TableStart(string id, string className)
+ * Description:  Start Table with id and className(CSS) attributes
+ *--------------------------------------------------------------------
+ */
+
+void HTMLTags :: TableStart(string id, string className)
+{
+    cout << "<table id = \"" << id << "\" class=\"" << className
+         << "\">" << endl;
+}
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  HTMLTags
+ *      Method:  HTMLTags :: TableEnd()
+ * Description:  Close Table tag
+ *--------------------------------------------------------------------
+ */
+
+void HTMLTags :: TableEnd()
+{
+    cout << "</table>" << endl;
+}
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  HTMLTags
+ *      Method:  HTMLTags :: InputField(string type, string name, 
+ *               string value)
+ * Description:  Create Input fields like text field, submit
+ *               button, etc.
+ *--------------------------------------------------------------------
+ */
+
+void HTMLTags :: InputField(string type, string name, string value)
+{
+    cout << "<input type=\"" << type << "\" name=\"" << name << "\""
+         << "value = \" "<< value << "\" >" << endl;
+}
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  HTMLTags
+ *      Method:  HTMLTags :: SelectFieldStart(string name)
+ * Description:  Create Select Field
+ *--------------------------------------------------------------------
+ */
+
+void HTMLTags :: SelectFieldStart(string name)
+{
+    cout << "<select name=\"" << name << "\">";
+}
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  HTMLTags
+ *      Method:  HTMLTags :: SelectFieldEnd()
+ * Description:  Close select field
+ *--------------------------------------------------------------------
+ */
+
+void HTMLTags :: SelectFieldEnd()
+{
+    cout << "</select>" << endl;
+}
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  HTMLTags
+ *      Method:  HTMLTags :: SelectOptionStart(string value, 
+ *               string selected)
+ * Description:  Options for select 
+ *--------------------------------------------------------------------
+ */
+
+void HTMLTags :: SelectOptionStart(string value, string selected)
+{
+    cout << "<option value=\"" << value << "\" ";
+    if(selected == 'y' || selected == 'Y')
+        cout << "selected";
+    cout << " > ";// << value << "</option>";
+}
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  HTMLTags
+ *      Method:  HTMLTags :: SelectOptionEnd()
+ * Description:  Close select option
+ *--------------------------------------------------------------------
+ */
+
+void HTMLTags :: SelectOptionEnd()
+{
+    cout << "</option>";
 }
