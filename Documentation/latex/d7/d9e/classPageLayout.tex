@@ -61,9 +61,9 @@ Created:  Friday 15 February 2013 06:10:40  IST
 
 Author\-: Mandeep Kaur, \href{mailto:meghasimak@gmail.com}{\tt meghasimak@gmail.\-com} License\-: G\-N\-U General Public License Copyright\-: Copyright (c) 2013, Great Developers 
 
- 
+ \subsection*{For basic H\-T\-M\-L Tags }
 
- Class\-: \hyperlink{classPageLayout}{Page\-Layout} \-: public \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \subsection*{Description\-: For adding header and footer to page}
+Class\-: \hyperlink{classPageLayout}{Page\-Layout} \-: public \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \subsection*{Description\-: For adding header and footer to page}
 
 Definition at line 29 of file pagelayout.\-h.
 
@@ -170,7 +170,20 @@ Definition at line 79 of file htmltags.\-cc.
 {}
 \end{DoxyParamCaption}
 )}}\label{d7/d9e/classPageLayout_a7726061f0653245f644a05807fa92472_a7726061f0653245f644a05807fa92472}
-Header Section of Page \hypertarget{classHTMLTags_af2b01cc08884af52e0b291d07035062e_af2b01cc08884af52e0b291d07035062e}{\index{Page\-Layout@{Page\-Layout}!Head\-Start@{Head\-Start}}
+Header Section of Page
+
+=== F\-U\-N\-C\-T\-I\-O\-N ===================================================== Name\-: \hyperlink{classPageLayout_a7726061f0653245f644a05807fa92472_a7726061f0653245f644a05807fa92472}{Header()} \subsection*{Description\-: Call Menu and Logo functions}
+
+Definition at line 86 of file pagelayout.\-cc.
+
+
+\begin{DoxyCode}
+\{
+    \hyperlink{classPageLayout_a49af1dca286bbee9432192a7b3c00332_a49af1dca286bbee9432192a7b3c00332}{Menu}();
+    \hyperlink{classPageLayout_ae60235c6af48e3ebbc6343d02456da0c_ae60235c6af48e3ebbc6343d02456da0c}{Logo}(\hyperlink{classPageLayout_a8a3c1ddc422df2556fbc95d0cd575a05_a8a3c1ddc422df2556fbc95d0cd575a05}{projectName});
+\}
+\end{DoxyCode}
+\hypertarget{classHTMLTags_af2b01cc08884af52e0b291d07035062e_af2b01cc08884af52e0b291d07035062e}{\index{Page\-Layout@{Page\-Layout}!Head\-Start@{Head\-Start}}
 \index{Head\-Start@{Head\-Start}!PageLayout@{Page\-Layout}}
 \subsubsection[{Head\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void H\-T\-M\-L\-Tags\-::\-Head\-Start (
 \begin{DoxyParamCaption}
@@ -261,14 +274,50 @@ Definition at line 120 of file htmltags.\-cc.
 \item[{string}]{logo\-Name}
 \end{DoxyParamCaption}
 )}}\label{d7/d9e/classPageLayout_ae60235c6af48e3ebbc6343d02456da0c_ae60235c6af48e3ebbc6343d02456da0c}
-Logo on Page \hypertarget{classPageLayout_a49af1dca286bbee9432192a7b3c00332_a49af1dca286bbee9432192a7b3c00332}{\index{Page\-Layout@{Page\-Layout}!Menu@{Menu}}
+Logo on Page
+
+=== F\-U\-N\-C\-T\-I\-O\-N ===================================================== Name\-: \hyperlink{classPageLayout_ae60235c6af48e3ebbc6343d02456da0c_ae60235c6af48e3ebbc6343d02456da0c}{Logo(string logo\-Name)} \subsection*{Description\-: Logo of project}
+
+Definition at line 72 of file pagelayout.\-cc.
+
+
+\begin{DoxyCode}
+\{
+    cout << \textcolor{stringliteral}{"<div id = \(\backslash\)"slogo\(\backslash\)" class = \(\backslash\)"logo\(\backslash\)">"}
+         << \textcolor{stringliteral}{" Baka Plan<sup>Beta</sup>"} << endl
+         << \textcolor{stringliteral}{"</div>"} << endl;
+\}
+\end{DoxyCode}
+\hypertarget{classPageLayout_a49af1dca286bbee9432192a7b3c00332_a49af1dca286bbee9432192a7b3c00332}{\index{Page\-Layout@{Page\-Layout}!Menu@{Menu}}
 \index{Menu@{Menu}!PageLayout@{Page\-Layout}}
 \subsubsection[{Menu}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Menu (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}}\label{d7/d9e/classPageLayout_a49af1dca286bbee9432192a7b3c00332_a49af1dca286bbee9432192a7b3c00332}
-List/\-Menu Navigation() \hypertarget{classPageLayout_af085725aaa6c01595565797c9f205173_af085725aaa6c01595565797c9f205173}{\index{Page\-Layout@{Page\-Layout}!Page\-Layput@{Page\-Layput}}
+List/\-Menu Navigation()
+
+=== F\-U\-N\-C\-T\-I\-O\-N ===================================================== Name\-: \hyperlink{classPageLayout_a49af1dca286bbee9432192a7b3c00332_a49af1dca286bbee9432192a7b3c00332}{Menu()} \subsection*{Description\-: Add Menus on page(for navigation)}
+
+Definition at line 50 of file pagelayout.\-cc.
+
+
+\begin{DoxyCode}
+\{
+    cout << \textcolor{stringliteral}{"<nav class=\(\backslash\)"clearfix fullwidth\(\backslash\)">"}
+         << \textcolor{stringliteral}{"<ul class=\(\backslash\)"clearfix\(\backslash\)">"}
+         << \textcolor{stringliteral}{" <li><a href=\(\backslash\)"#\(\backslash\)">About</a></li>"}
+         << \textcolor{stringliteral}{"<li><a href=\(\backslash\)"https://github.com/GreatDevelopers"}
+         << \textcolor{stringliteral}{"/bakaplan#readme\(\backslash\)">How to use?</a></li>"}
+         << \textcolor{stringliteral}{"<li><a href=\(\backslash\)"https://github.com/GreatDevelopers"}
+         << \textcolor{stringliteral}{"/bakaplan/issues/new#\(\backslash\)">Add Feature/Bug</a></li>"}
+         << \textcolor{stringliteral}{"<li><a href=\(\backslash\)"https://github.com/GreatDevelopers"}
+         << \textcolor{stringliteral}{"/bakaplan#authors\(\backslash\)">Contact</a></li>"}
+         << \textcolor{stringliteral}{"   </ul>   <a href=\(\backslash\)"#\(\backslash\)" id=\(\backslash\)"pull\(\backslash\)">Menu</a></nav>"}
+         << endl;
+\}
+\end{DoxyCode}
+\hypertarget{classPageLayout_af085725aaa6c01595565797c9f205173_af085725aaa6c01595565797c9f205173}{\index{Page\-Layout@{Page\-Layout}!Page\-Layput@{Page\-Layput}}
 \index{Page\-Layput@{Page\-Layput}!PageLayout@{Page\-Layout}}
 \subsubsection[{Page\-Layput}]{\setlength{\rightskip}{0pt plus 5cm}Page\-Layout\-::\-Page\-Layput (
 \begin{DoxyParamCaption}
@@ -308,6 +357,7 @@ Definition at line 33 of file pagelayout.\-h.
 
 
 
-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-src/pagelayout.\-h\end{DoxyCompactItemize}
+src/pagelayout.\-h\item 
+src/pagelayout.\-cc\end{DoxyCompactItemize}
