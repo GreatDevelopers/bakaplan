@@ -1,0 +1,313 @@
+\hypertarget{classPageLayout}{\section{Page\-Layout Class Reference}
+\label{d7/d9e/classPageLayout}\index{Page\-Layout@{Page\-Layout}}
+}
+
+
+{\ttfamily \#include $<$pagelayout.\-h$>$}
+
+Inheritance diagram for Page\-Layout\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d7/d9e/classPageLayout}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPageLayout_af085725aaa6c01595565797c9f205173_af085725aaa6c01595565797c9f205173}{Page\-Layput} ()
+\item 
+void \hyperlink{classPageLayout_a7726061f0653245f644a05807fa92472_a7726061f0653245f644a05807fa92472}{Header} ()
+\item 
+void \hyperlink{classPageLayout_a68aa868a8868b12964f161838b5f814c_a68aa868a8868b12964f161838b5f814c}{Footer} ()
+\item 
+void \hyperlink{classPageLayout_a49af1dca286bbee9432192a7b3c00332_a49af1dca286bbee9432192a7b3c00332}{Menu} ()
+\item 
+void \hyperlink{classPageLayout_ae60235c6af48e3ebbc6343d02456da0c_ae60235c6af48e3ebbc6343d02456da0c}{Logo} (string logo\-Name)
+\item 
+void \hyperlink{classHTMLTags_a567551cd701d2836d4240b2917b5e13f_a567551cd701d2836d4240b2917b5e13f}{H\-T\-M\-L\-Start} ()
+\item 
+void \hyperlink{classHTMLTags_a6553c3d01ee194a1d157e6341333dee3_a6553c3d01ee194a1d157e6341333dee3}{H\-T\-M\-L\-End} ()
+\item 
+void \hyperlink{classHTMLTags_af2b01cc08884af52e0b291d07035062e_af2b01cc08884af52e0b291d07035062e}{Head\-Start} ()
+\item 
+void \hyperlink{classHTMLTags_afdc779e46fac16cc79e4f0e87f621254_afdc779e46fac16cc79e4f0e87f621254}{Head\-End} ()
+\item 
+void \hyperlink{classHTMLTags_a5128d6f1c6be5ac1689047fc9d0d159f_a5128d6f1c6be5ac1689047fc9d0d159f}{Title} (string page\-Title)
+\item 
+void \hyperlink{classHTMLTags_a4e9e18580cc7f2b82c82e4f81e39be50_a4e9e18580cc7f2b82c82e4f81e39be50}{C\-S\-S} (string href)
+\item 
+void \hyperlink{classHTMLTags_aea041d720f12a210615c95350774e6aa_aea041d720f12a210615c95350774e6aa}{Javascript} (string src)
+\item 
+void \hyperlink{classHTMLTags_af1fb7b90b9ebb83177da18aba1ef86a9_af1fb7b90b9ebb83177da18aba1ef86a9}{Body\-Start} ()
+\item 
+void \hyperlink{classHTMLTags_a7cae36bd3a0e6f35e89494e5cda64971_a7cae36bd3a0e6f35e89494e5cda64971}{Body\-End} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classPageLayout_a8a3c1ddc422df2556fbc95d0cd575a05_a8a3c1ddc422df2556fbc95d0cd575a05}{project\-Name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+=================================================================== \begin{DoxyVerb}  Filename:  pagelayout.h
+\end{DoxyVerb}
+
+
+Description\-: Add Header, Footer, Menus to webpage(output html pages. \hyperlink{classPageLayout}{Page\-Layout} Class for this purpose. \begin{DoxyVerb}Version:  0.6
+Created:  Friday 15 February 2013 06:10:40  IST
+\end{DoxyVerb}
+ Compiler\-: gcc
+
+Author\-: Mandeep Kaur, \href{mailto:meghasimak@gmail.com}{\tt meghasimak@gmail.\-com} License\-: G\-N\-U General Public License Copyright\-: Copyright (c) 2013, Great Developers 
+
+ 
+
+ Class\-: \hyperlink{classPageLayout}{Page\-Layout} \-: public \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \subsection*{Description\-: For adding header and footer to page}
+
+Definition at line 29 of file pagelayout.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classHTMLTags_a7cae36bd3a0e6f35e89494e5cda64971_a7cae36bd3a0e6f35e89494e5cda64971}{\index{Page\-Layout@{Page\-Layout}!Body\-End@{Body\-End}}
+\index{Body\-End@{Body\-End}!PageLayout@{Page\-Layout}}
+\subsubsection[{Body\-End}]{\setlength{\rightskip}{0pt plus 5cm}void H\-T\-M\-L\-Tags\-::\-Body\-End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{d4/d7c/classHTMLTags_a7cae36bd3a0e6f35e89494e5cda64971_a7cae36bd3a0e6f35e89494e5cda64971}
+$<$/\-B\-O\-D\-Y$>$
+
+
+
+ Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_a7cae36bd3a0e6f35e89494e5cda64971_a7cae36bd3a0e6f35e89494e5cda64971}{Body\-End()} \subsubsection*{Description\-: }
+
+Definition at line 146 of file htmltags.\-cc.
+
+
+\begin{DoxyCode}
+\{
+    cout << \textcolor{stringliteral}{"</BODY>"} << endl;
+\}
+\end{DoxyCode}
+\hypertarget{classHTMLTags_af1fb7b90b9ebb83177da18aba1ef86a9_af1fb7b90b9ebb83177da18aba1ef86a9}{\index{Page\-Layout@{Page\-Layout}!Body\-Start@{Body\-Start}}
+\index{Body\-Start@{Body\-Start}!PageLayout@{Page\-Layout}}
+\subsubsection[{Body\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void H\-T\-M\-L\-Tags\-::\-Body\-Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{d4/d7c/classHTMLTags_af1fb7b90b9ebb83177da18aba1ef86a9_af1fb7b90b9ebb83177da18aba1ef86a9}
+$<$\-B\-O\-D\-Y$>$
+
+
+
+ Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_af1fb7b90b9ebb83177da18aba1ef86a9_af1fb7b90b9ebb83177da18aba1ef86a9}{Body\-Start()} \subsubsection*{Description\-: }
+
+Definition at line 133 of file htmltags.\-cc.
+
+
+\begin{DoxyCode}
+\{
+    cout << \textcolor{stringliteral}{"<BODY>"} << endl;
+\}
+\end{DoxyCode}
+\hypertarget{classHTMLTags_a4e9e18580cc7f2b82c82e4f81e39be50_a4e9e18580cc7f2b82c82e4f81e39be50}{\index{Page\-Layout@{Page\-Layout}!C\-S\-S@{C\-S\-S}}
+\index{C\-S\-S@{C\-S\-S}!PageLayout@{Page\-Layout}}
+\subsubsection[{C\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}void H\-T\-M\-L\-Tags\-::\-C\-S\-S (
+\begin{DoxyParamCaption}
+\item[{string}]{href}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{d4/d7c/classHTMLTags_a4e9e18580cc7f2b82c82e4f81e39be50_a4e9e18580cc7f2b82c82e4f81e39be50}
+Add External C\-S\-S
+
+
+
+ Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_a4e9e18580cc7f2b82c82e4f81e39be50_a4e9e18580cc7f2b82c82e4f81e39be50}{C\-S\-S(string href)} \subsubsection*{Description\-: Add External C\-S\-S file}
+
+Definition at line 105 of file htmltags.\-cc.
+
+
+\begin{DoxyCode}
+\{
+    cout << \textcolor{stringliteral}{"<link href=\(\backslash\)""} << href << \textcolor{stringliteral}{"\(\backslash\)""} 
+         << \textcolor{stringliteral}{" rel=\(\backslash\)"stylesheet\(\backslash\)" media=\(\backslash\)"screen\(\backslash\)">"}
+         << endl;
+\}
+\end{DoxyCode}
+\hypertarget{classPageLayout_a68aa868a8868b12964f161838b5f814c_a68aa868a8868b12964f161838b5f814c}{\index{Page\-Layout@{Page\-Layout}!Footer@{Footer}}
+\index{Footer@{Footer}!PageLayout@{Page\-Layout}}
+\subsubsection[{Footer}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Footer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d7/d9e/classPageLayout_a68aa868a8868b12964f161838b5f814c_a68aa868a8868b12964f161838b5f814c}
+Footer Section of Page \hypertarget{classHTMLTags_afdc779e46fac16cc79e4f0e87f621254_afdc779e46fac16cc79e4f0e87f621254}{\index{Page\-Layout@{Page\-Layout}!Head\-End@{Head\-End}}
+\index{Head\-End@{Head\-End}!PageLayout@{Page\-Layout}}
+\subsubsection[{Head\-End}]{\setlength{\rightskip}{0pt plus 5cm}void H\-T\-M\-L\-Tags\-::\-Head\-End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{d4/d7c/classHTMLTags_afdc779e46fac16cc79e4f0e87f621254_afdc779e46fac16cc79e4f0e87f621254}
+$<$/\-H\-E\-A\-D$>$
+
+
+
+ Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_afdc779e46fac16cc79e4f0e87f621254_afdc779e46fac16cc79e4f0e87f621254}{Head\-End()} \subsubsection*{Description\-: }
+
+Definition at line 79 of file htmltags.\-cc.
+
+
+\begin{DoxyCode}
+\{
+    cout << \textcolor{stringliteral}{"</HEAD>"} << endl;
+\}
+\end{DoxyCode}
+\hypertarget{classPageLayout_a7726061f0653245f644a05807fa92472_a7726061f0653245f644a05807fa92472}{\index{Page\-Layout@{Page\-Layout}!Header@{Header}}
+\index{Header@{Header}!PageLayout@{Page\-Layout}}
+\subsubsection[{Header}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d7/d9e/classPageLayout_a7726061f0653245f644a05807fa92472_a7726061f0653245f644a05807fa92472}
+Header Section of Page \hypertarget{classHTMLTags_af2b01cc08884af52e0b291d07035062e_af2b01cc08884af52e0b291d07035062e}{\index{Page\-Layout@{Page\-Layout}!Head\-Start@{Head\-Start}}
+\index{Head\-Start@{Head\-Start}!PageLayout@{Page\-Layout}}
+\subsubsection[{Head\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void H\-T\-M\-L\-Tags\-::\-Head\-Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{d4/d7c/classHTMLTags_af2b01cc08884af52e0b291d07035062e_af2b01cc08884af52e0b291d07035062e}
+$<$\-H\-E\-A\-D$>$
+
+
+
+ Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_af2b01cc08884af52e0b291d07035062e_af2b01cc08884af52e0b291d07035062e}{Head\-Start()} \subsubsection*{Description\-: }
+
+Definition at line 66 of file htmltags.\-cc.
+
+
+\begin{DoxyCode}
+\{
+    cout << \textcolor{stringliteral}{"<HEAD>"} << endl;
+\}
+\end{DoxyCode}
+\hypertarget{classHTMLTags_a6553c3d01ee194a1d157e6341333dee3_a6553c3d01ee194a1d157e6341333dee3}{\index{Page\-Layout@{Page\-Layout}!H\-T\-M\-L\-End@{H\-T\-M\-L\-End}}
+\index{H\-T\-M\-L\-End@{H\-T\-M\-L\-End}!PageLayout@{Page\-Layout}}
+\subsubsection[{H\-T\-M\-L\-End}]{\setlength{\rightskip}{0pt plus 5cm}void H\-T\-M\-L\-Tags\-::\-H\-T\-M\-L\-End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{d4/d7c/classHTMLTags_a6553c3d01ee194a1d157e6341333dee3_a6553c3d01ee194a1d157e6341333dee3}
+$<$/\-H\-T\-M\-L$>$
+
+
+
+ Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_a6553c3d01ee194a1d157e6341333dee3_a6553c3d01ee194a1d157e6341333dee3}{H\-T\-M\-L\-End()} \subsubsection*{Description\-: }
+
+Definition at line 53 of file htmltags.\-cc.
+
+
+\begin{DoxyCode}
+\{
+    cout << \textcolor{stringliteral}{"</HTML>"} << endl;
+\}
+\end{DoxyCode}
+\hypertarget{classHTMLTags_a567551cd701d2836d4240b2917b5e13f_a567551cd701d2836d4240b2917b5e13f}{\index{Page\-Layout@{Page\-Layout}!H\-T\-M\-L\-Start@{H\-T\-M\-L\-Start}}
+\index{H\-T\-M\-L\-Start@{H\-T\-M\-L\-Start}!PageLayout@{Page\-Layout}}
+\subsubsection[{H\-T\-M\-L\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void H\-T\-M\-L\-Tags\-::\-H\-T\-M\-L\-Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{d4/d7c/classHTMLTags_a567551cd701d2836d4240b2917b5e13f_a567551cd701d2836d4240b2917b5e13f}
+$<$\-H\-T\-M\-L$>$
+
+
+
+ Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_a567551cd701d2836d4240b2917b5e13f_a567551cd701d2836d4240b2917b5e13f}{H\-T\-M\-L\-Start()} \subsubsection*{Description\-: }
+
+Definition at line 40 of file htmltags.\-cc.
+
+
+\begin{DoxyCode}
+\{
+    cout << \textcolor{stringliteral}{"<HTML>"} << endl;
+\}
+\end{DoxyCode}
+\hypertarget{classHTMLTags_aea041d720f12a210615c95350774e6aa_aea041d720f12a210615c95350774e6aa}{\index{Page\-Layout@{Page\-Layout}!Javascript@{Javascript}}
+\index{Javascript@{Javascript}!PageLayout@{Page\-Layout}}
+\subsubsection[{Javascript}]{\setlength{\rightskip}{0pt plus 5cm}void H\-T\-M\-L\-Tags\-::\-Javascript (
+\begin{DoxyParamCaption}
+\item[{string}]{src}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{d4/d7c/classHTMLTags_aea041d720f12a210615c95350774e6aa_aea041d720f12a210615c95350774e6aa}
+Add Javascript File
+
+
+
+ Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_aea041d720f12a210615c95350774e6aa_aea041d720f12a210615c95350774e6aa}{Javascript(string src)} \subsubsection*{Description\-: Add external Javascript file}
+
+Definition at line 120 of file htmltags.\-cc.
+
+
+\begin{DoxyCode}
+\{
+    cout << \textcolor{stringliteral}{"<script src=\(\backslash\)""} << src << \textcolor{stringliteral}{"\(\backslash\)"></script>"} << endl;
+\}
+\end{DoxyCode}
+\hypertarget{classPageLayout_ae60235c6af48e3ebbc6343d02456da0c_ae60235c6af48e3ebbc6343d02456da0c}{\index{Page\-Layout@{Page\-Layout}!Logo@{Logo}}
+\index{Logo@{Logo}!PageLayout@{Page\-Layout}}
+\subsubsection[{Logo}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Logo (
+\begin{DoxyParamCaption}
+\item[{string}]{logo\-Name}
+\end{DoxyParamCaption}
+)}}\label{d7/d9e/classPageLayout_ae60235c6af48e3ebbc6343d02456da0c_ae60235c6af48e3ebbc6343d02456da0c}
+Logo on Page \hypertarget{classPageLayout_a49af1dca286bbee9432192a7b3c00332_a49af1dca286bbee9432192a7b3c00332}{\index{Page\-Layout@{Page\-Layout}!Menu@{Menu}}
+\index{Menu@{Menu}!PageLayout@{Page\-Layout}}
+\subsubsection[{Menu}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d7/d9e/classPageLayout_a49af1dca286bbee9432192a7b3c00332_a49af1dca286bbee9432192a7b3c00332}
+List/\-Menu Navigation() \hypertarget{classPageLayout_af085725aaa6c01595565797c9f205173_af085725aaa6c01595565797c9f205173}{\index{Page\-Layout@{Page\-Layout}!Page\-Layput@{Page\-Layput}}
+\index{Page\-Layput@{Page\-Layput}!PageLayout@{Page\-Layout}}
+\subsubsection[{Page\-Layput}]{\setlength{\rightskip}{0pt plus 5cm}Page\-Layout\-::\-Page\-Layput (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d7/d9e/classPageLayout_af085725aaa6c01595565797c9f205173_af085725aaa6c01595565797c9f205173}
+Constructor \hypertarget{classHTMLTags_a5128d6f1c6be5ac1689047fc9d0d159f_a5128d6f1c6be5ac1689047fc9d0d159f}{\index{Page\-Layout@{Page\-Layout}!Title@{Title}}
+\index{Title@{Title}!PageLayout@{Page\-Layout}}
+\subsubsection[{Title}]{\setlength{\rightskip}{0pt plus 5cm}void H\-T\-M\-L\-Tags\-::\-Title (
+\begin{DoxyParamCaption}
+\item[{string}]{page\-Title}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{d4/d7c/classHTMLTags_a5128d6f1c6be5ac1689047fc9d0d159f_a5128d6f1c6be5ac1689047fc9d0d159f}
+$<$\-T\-I\-T\-L\-E$>$ $<$/\-T\-I\-T\-L\-E$>$
+
+
+
+ Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_a5128d6f1c6be5ac1689047fc9d0d159f_a5128d6f1c6be5ac1689047fc9d0d159f}{Title(string page\-Title)} \subsubsection*{Description\-: Display Page Tile}
+
+Definition at line 92 of file htmltags.\-cc.
+
+
+\begin{DoxyCode}
+\{
+    cout << \textcolor{stringliteral}{"<TITLE>"} << pageTitle << \textcolor{stringliteral}{"</TITLE>"} << endl;
+\}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classPageLayout_a8a3c1ddc422df2556fbc95d0cd575a05_a8a3c1ddc422df2556fbc95d0cd575a05}{\index{Page\-Layout@{Page\-Layout}!project\-Name@{project\-Name}}
+\index{project\-Name@{project\-Name}!PageLayout@{Page\-Layout}}
+\subsubsection[{project\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Page\-Layout\-::project\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{d7/d9e/classPageLayout_a8a3c1ddc422df2556fbc95d0cd575a05_a8a3c1ddc422df2556fbc95d0cd575a05}
+Project Name = Ba\-Ka\-Plan 
+
+Definition at line 33 of file pagelayout.\-h.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/pagelayout.\-h\end{DoxyCompactItemize}
