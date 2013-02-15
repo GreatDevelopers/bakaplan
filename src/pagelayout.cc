@@ -17,7 +17,6 @@
  * ===================================================================
  */
 
-
 /**-------------------------------------------------------------------
  *  Include local header file
  *------------------------------------------------------------------*/
@@ -27,24 +26,25 @@
  *  Function Definitions of PageLayout Class
  *------------------------------------------------------------------*/
 
-
-/** 
- * ===  FUNCTION =====================================================
- *         Name:  PageLayout()
- *  Description:  Constructor to set projectName
- * ===================================================================
+/**
+ *--------------------------------------------------------------------
+ *       Class:  PageLayout
+ *      Method:  PageLayout :: PageLayout()
+ * Description:  Constructor
+ *--------------------------------------------------------------------
  */
 
-PageLayout :: Pagelayout()
+PageLayout :: PageLayout()
 {
     projectName = "BaKaPlan";
 }
 
-/** 
- * ===  FUNCTION =====================================================
- *         Name:  Menu()
- *  Description:  Add Menus on page(for navigation)
- * ===================================================================
+/**
+ *--------------------------------------------------------------------
+ *       Class:  PageLayout
+ *      Method:  PageLayout :: Menu()
+ * Description:  Add Menu on pages(for navigation)
+ *--------------------------------------------------------------------
  */
 
 void PageLayout :: Menu()
@@ -62,11 +62,12 @@ void PageLayout :: Menu()
          << endl;
 }
 
-/** 
- * ===  FUNCTION =====================================================
- *         Name:  Logo(string logoName)
- *  Description:  Logo of project
- * ===================================================================
+/**
+ *--------------------------------------------------------------------
+ *       Class:  PageLayout
+ *      Method:  PageLayout :: Logo(string logoName)
+ * Description:  Logo to project
+ *--------------------------------------------------------------------
  */
 
 void PageLayout :: Logo(string logoName)
@@ -76,11 +77,12 @@ void PageLayout :: Logo(string logoName)
          << "</div>" << endl;
 }
 
-/** 
- * ===  FUNCTION =====================================================
- *         Name:  Header()
- *  Description:  Call Menu and Logo functions
- * ===================================================================
+/**
+ *--------------------------------------------------------------------
+ *       Class:  PageLayout
+ *      Method:  PageLayout :: Header()
+ * Description:  Call Menu Function
+ *--------------------------------------------------------------------
  */
 
 void PageLayout :: Header()
@@ -91,10 +93,15 @@ void PageLayout :: Header()
 //    Logo(projectName);
 }
 
-
-/** 
- * ===  FUNCTION =====================================================
- *         Name:  Footer()
- *  Description:  Footer of pages
- * ===================================================================
+/**
+ *--------------------------------------------------------------------
+ *       Class:  PageLayout
+ *      Method:  PageLayout :: Footer()
+ * Description:  Footer of pages
+ *--------------------------------------------------------------------
  */
+
+void PageLayout :: Footer()
+{
+    // Footer    
+}

@@ -33,7 +33,7 @@ HTMLTags :: HTMLTags()
  *--------------------------------------------------------------------
  *       Class:  HTMLTags
  *      Method:  HTMLTags :: HTMLStart()
- * Description:  <HTML>
+ * Description:  Display <HTML> Tag 
  *--------------------------------------------------------------------
  */
 
@@ -46,7 +46,7 @@ void HTMLTags :: HTMLStart()
  *--------------------------------------------------------------------
  *       Class:  HTMLTags
  *      Method:  HTMLTags :: HTMLEnd()
- * Description:  </HTML>
+ * Description:  Display </HTML>
  *--------------------------------------------------------------------
  */
 
@@ -59,7 +59,7 @@ void HTMLTags :: HTMLEnd()
  *--------------------------------------------------------------------
  *       Class:  HTMLTags
  *      Method:  HTMLTags :: HeadStart()
- * Description:  <HEAD>
+ * Description:  Display <HEAD>
  *--------------------------------------------------------------------
  */
 
@@ -72,7 +72,7 @@ void HTMLTags :: HeadStart()
  *--------------------------------------------------------------------
  *       Class:  HTMLTags
  *      Method:  HTMLTags :: HeadEnd()
- * Description:  </HEAD>
+ * Description:  Display </HEAD>
  *--------------------------------------------------------------------
  */
 
