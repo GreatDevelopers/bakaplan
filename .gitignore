@@ -1,1 +1,7 @@
 *.swp
+*.aux
+*.idx
+*.ilg
+*.ind
+*.log
+*.toc
