@@ -33,14 +33,24 @@ class HTMLTags
     protected:
 
     public:
-        HTMLTags();                         /** Constructor */
-        void HTMLStart();                   /** <HTML>  */
-        void HTMLEnd();                     /** </HTML> */
-        void HeadStart();                   /** <HEAD>  */
-        void HeadEnd();                     /** </HEAD> */
-        void Title(string pageTitle);       /** <TITLE> </TITLE>*/
-        void CSS(string href);              /** Add External CSS */
-        void Javascript(string src);        /** Add Javascript File */
-        void BodyStart();                   /** <BODY> */
-        void BodyEnd();                     /** </BODY> */
+        /** Constructor */
+        HTMLTags();                         
+        /** <HTML>  */ 
+        void HTMLStart();                   
+        /** </HTML> */
+        void HTMLEnd();                     
+        /** <HEAD>  */
+        void HeadStart();                   
+        /** </HEAD> */
+        void HeadEnd();                     
+        /** <TITLE> </TITLE>*/
+        void Title(string pageTitle);       
+        /** Add External CSS */
+        void CSS(string href);              
+        /** Add Javascript File */
+        void Javascript(string src);        
+        /** <BODY> */
+        void BodyStart();                   
+        /** </BODY> */
+        void BodyEnd();                     
 };
