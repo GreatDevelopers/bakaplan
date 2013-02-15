@@ -1,4 +1,4 @@
-/**
+/*
  * ===================================================================
  *
  *       Filename:  htmltags.h
@@ -17,7 +17,8 @@
  * ===================================================================
  */
 
- #include "header.h"                        /** Include Header file */
+/** Include Header file */
+#include "header.h"                        
 
 /**
  * ===================================================================
@@ -35,22 +36,31 @@ class HTMLTags
     public:
         /** Constructor */
         HTMLTags();                         
+
         /** <HTML>  */ 
         void HTMLStart();                   
+        
         /** </HTML> */
         void HTMLEnd();                     
+        
         /** <HEAD>  */
         void HeadStart();                   
+        
         /** </HEAD> */
         void HeadEnd();                     
+        
         /** <TITLE> </TITLE>*/
         void Title(string pageTitle);       
+        
         /** Add External CSS */
         void CSS(string href);              
+        
         /** Add Javascript File */
         void Javascript(string src);        
+        
         /** <BODY> */
         void BodyStart();                   
+        
         /** </BODY> */
         void BodyEnd();                     
 };

@@ -1,4 +1,4 @@
-/**
+/*
  * ===================================================================
  *
  *       Filename:  header.h
@@ -22,7 +22,7 @@
 
 using namespace std;
 
-\\\ Constant variables(Global)
+/// Constant variables(Global)
 
 const int MIN_SIZ = 30;
 const int MAX_SIZ = 50;
