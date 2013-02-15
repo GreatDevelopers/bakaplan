@@ -17,6 +17,7 @@
  * ===================================================================
  */
 
+ #include "header.h"                        /** Include Header file */
 
 /**
  * ===================================================================
@@ -32,14 +33,14 @@ class HTMLTags
     protected:
 
     public:
-        HTMLTags();                             /** Constructor */
-        void HTMLStart();                       /** <HTML>  */
-        void HTMLEnd();                         /** </HTML> */
-        void HeadStart();                       /** <HEAD>  */
-        void HeadEnd();                         /** </HEAD> */
-        void Title(string pageTitle);           /** <TITLE> </TITLE>*/
-        void CSS(string href);                  /** Add External CSS */
-        void Javascript(string src);            /** Add Javascript File */
-        void BodyStart();                       /** <BODY> */
-        void BodyEnd();                         /** </BODY> */
+        HTMLTags();                         /** Constructor */
+        void HTMLStart();                   /** <HTML>  */
+        void HTMLEnd();                     /** </HTML> */
+        void HeadStart();                   /** <HEAD>  */
+        void HeadEnd();                     /** </HEAD> */
+        void Title(string pageTitle);       /** <TITLE> </TITLE>*/
+        void CSS(string href);              /** Add External CSS */
+        void Javascript(string src);        /** Add Javascript File */
+        void BodyStart();                   /** <BODY> */
+        void BodyEnd();                     /** </BODY> */
 };
