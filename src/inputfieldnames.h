@@ -1,7 +1,7 @@
 /*
  * ===================================================================
  *
- *       Filename:  input-field-names.h
+ *       Filename:  inputfieldnames.h
  *
  *    Description:  Declaration of InputFieldNames Class ie used to
  *    store input field names.
@@ -16,5 +16,4 @@
  *
  * ===================================================================
  */
-
 
