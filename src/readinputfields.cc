@@ -16,4 +16,65 @@
  * ===================================================================
  */
 
+/**-------------------------------------------------------------------
+ *  Include Header file of ReadInputFields class declaration
+ *------------------------------------------------------------------*/
 
+#include "readinputfields.h"
+
+/**-------------------------------------------------------------------
+ *  Definition of member functions of ReadInputFields Class
+ *------------------------------------------------------------------*/
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  ReadInputFields
+ *      Method:  ReadInputFields :: ReadFieldValue(string fieldName)
+ * Description:  Read field's value and return it as string
+ *--------------------------------------------------------------------
+ */
+
+string ReadInputFields :: ReadFieldValue(string fieldName)
+{
+    fi = formData.getElement(fieldName);  
+
+    if( !fi->isEmpty() && fi != (*formData).end()) 
+    {  
+        fieldValue = **fi;  
+    }
+    else
+        fieldValue = " ";
+
+    return fieldValue;
+}
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  ReadInputFields
+ *      Method:  ReadInputFields :: ReadFieldValue(string fieldName, 
+ *               int fieldNo)
+ * Description:  Read field's value and return it as string
+ *--------------------------------------------------------------------
+ */
+
+string ReadInputFields :: ReadFieldValue(string fieldName, int fieldNo)
+{
+    std::stringstream no;
+    no << (fieldNo + 1);
+    fieldName = fieldName + no.str();
+    fieldValue = ReadInputFields(fieldName);
+    retun fieldValue;
+}
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  ReadInputFields
+ *      Method:  ReadInputFields :: StringToInt(string value)
+ * Description:  Converts string value to integer
+ *--------------------------------------------------------------------
+ */
+
+int ReadInputFields :: StringToInt(string value)
+{
+    retun atoi(value.c_str());
+}
