@@ -1,7 +1,7 @@
 /*
  * ===================================================================
  *
- *       Filename:  input-field-names.cc
+ *       Filename:  inputfieldnames.cc
  *
  *    Description:  Definition of InputFieldNames's member functions.
  *
@@ -16,4 +16,45 @@
  * ===================================================================
  */
 
+/**-------------------------------------------------------------------
+ *  Include header file that contains InputFieldNames Class's
+ *  Declaration
+ *------------------------------------------------------------------*/
 
+#include "inputfieldnames.cc"
+
+/**-------------------------------------------------------------------
+ *  Definition of member functions
+ *------------------------------------------------------------------*/
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  InputFieldNames
+ *      Method:  InputFieldNames :: InputFieldNames()
+ * Description:  Constructor calls SetFieldNames()
+ *--------------------------------------------------------------------
+ */
+
+InputFieldNames :: InputFieldNames()
+{
+    SetFieldNames();
+}
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  InputFieldNames
+ *      Method:  InputFieldNames :: SetFieldNames()
+ * Description:  Assign Values of field names in its respective
+ *               variables.
+ *--------------------------------------------------------------------
+ */
+
+void InputFieldNames :: SetFieldNames()
+{
+    /// Assign values of class details
+    className       =   "ClassName";
+    totalClasses    =   "TotalClasses";
+    totalSubjects   =   "TotalSubjects";
+    subjectCode     =   "SubjectCode";
+    subjectName     =   "SubjectName";
+}
