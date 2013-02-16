@@ -32,36 +32,42 @@ class HTMLTags
     private:
 
     protected:
+        /// HTML Tag Variables for <td>, </td>, <th>, etc
+        string startH1, endH1, startH3, endH3, startTD, endTD, startTH,
+               endTH, startTR, endTR, startB, endB;
 
     public:
-        /** Constructor */
-        HTMLTags();                         
+        /// Constructor 
+        HTMLTags();
 
-        /** <HTML>  */ 
+        /// Assingn Values to variables
+        void SetHTMLVariables();
+
+        /// Display <HTML>
         void HTMLStart();                   
         
-        /** </HTML> */
+        /// Display </HTML>
         void HTMLEnd();                     
         
-        /** <HEAD>  */
+        // Display <HEAD> 
         void HeadStart();                   
         
-        /** </HEAD> */
+        /// Display </HEAD>
         void HeadEnd();                     
         
-        /** <TITLE> </TITLE>*/
+        /// Display <TITLE> </TITLE>
         void Title(string pageTitle);       
         
-        /** Add External CSS */
+        /// Add External CSS 
         void CSS(string href);              
         
-        /** Add Javascript File */
+        /// Add Javascript File 
         void Javascript(string src);        
         
-        /** <BODY> */
+        ///Display <BODY> 
         void BodyStart();                   
         
-        /** </BODY> */
+        /// Display </BODY> 
         void BodyEnd();
 
         /// Start Div Section

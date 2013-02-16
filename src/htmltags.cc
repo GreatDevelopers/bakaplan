@@ -27,6 +27,32 @@
 HTMLTags :: HTMLTags()
 {
     cout << "Content-type:text/html\n\n" << endl;
+    SetHTMLVariables();
+}
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  HTMLTags
+ *      Method:  HTMLTags :: SetHTMLVariables()
+ * Description:  Set values of common HTML tags in respective
+ *               variables.
+ *--------------------------------------------------------------------
+ */
+
+void HTMLTags :: SetHTMLVariables()
+{
+    startH1     =       "<h1>";                 /* H1 tag */
+    endH1       =       "</h1>";                
+    startH3     =       "<h3>";                 /* H3 tag */
+    endH3       =       "</h3>";                
+    startTD     =       "<td>";                 /* TD(Table Data) */
+    endTD       =       "</td>";
+    startTH     =       "<th>";                 /* TH(Table Header) */
+    endTH       =       "</th>";
+    startTR     =       "<tr>";                 /* TR(Table Row) */
+    endTR       =       "</tr>";
+    startB      =       "<b>";                  /* Bold */
+    endB        =       "</b>";
 }
 
 /**
@@ -300,4 +326,21 @@ void HTMLTags :: SelectOptionStart(string value, string selected)
 void HTMLTags :: SelectOptionEnd()
 {
     cout << "</option>";
+}
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  HTMLTags
+ *      Method:  HTMLTags :: Button(string id, string type, 
+ *               string className, string value)
+ * Description:  Create button(next, submit, etc)
+ *--------------------------------------------------------------------
+ */
+
+void HTMLTags :: Button(string id, string type, string className, 
+                        string value)
+{
+    cout << "<button id = \"" << id << "\" type = \"" << type 
+         << "\" class=\"" << className << "\">" << value <<
+         << "</button>" << endl;
 }
