@@ -17,3 +17,33 @@
  * ===================================================================
  */
 
+/**-------------------------------------------------------------------
+ *  Include local header file that has global header files
+ *------------------------------------------------------------------*/
+
+#include "header.h"
+                                                
+/**
+ * ===================================================================
+ *        Class:  InputFieldNames
+ *  Description:  This class has variable names for all fields that
+ *                are used to take input from user.
+ * ===================================================================
+ */
+
+class InputFieldNames
+{
+    protected:
+        /// Field Names
+        
+        /// Class Details Value                 /* Field Name */
+        string className,                       /* ClassName */
+               totalClasses,                    /* TotalClasses */
+               totalSubjects,                   /* TotalSubjects */
+               subjectCode,                     /* SubjectCode */
+               subjectName;                     /* SubjectName */
+
+    public:
+        InputFieldNames();
+        void SetFieldNames();
+};
