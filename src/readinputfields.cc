@@ -1,7 +1,7 @@
 /*
  * ===================================================================
  *
- *       Filename:  read-input-fields.cc
+ *       Filename:  readinputfields.cc
  *
  *    Description:  Definition of ReadInputFields's member functions.
  *
@@ -37,7 +37,7 @@
 string ReadInputFields :: ReadFieldValue(string fieldName)
 {
     fi = formData.getElement(fieldName);  
-
+ 
     if( !fi->isEmpty() && fi != (*formData).end()) 
     {  
         fieldValue = **fi;  
