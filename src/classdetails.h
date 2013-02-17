@@ -18,4 +18,30 @@
  * ===================================================================
  */
 
+/**-------------------------------------------------------------------
+ *  Include Required Header Files
+ *------------------------------------------------------------------*/
 
+#include "header.h"
+#include "pagelayout.h"
+#include "inputfieldnames.h"
+#include "filenames.h"
+
+/**
+ * ===================================================================
+ *        Class:  ClassDetails
+ *  Description:  This class is used to get details of class from
+ *                user. Like class name, total classes, subject 
+ *                details etc.
+ * ===================================================================
+ */
+
+class ClassDetails : public PageLayout
+{
+    protected:
+
+    public:
+        /// Constructor
+        ClassDetails();
+        /// 
+};
