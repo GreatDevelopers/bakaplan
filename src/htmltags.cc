@@ -35,7 +35,7 @@ HTMLTags :: HTMLTags()
  *       Class:  HTMLTags
  *      Method:  HTMLTags :: SetHTMLVariables()
  * Description:  Set values of common HTML tags in respective
- *               variables.
+ * variables.
  *--------------------------------------------------------------------
  */
 
@@ -206,7 +206,7 @@ void HTMLTags :: DivEnd()
  *--------------------------------------------------------------------
  *       Class:  HTMLTags
  *      Method:  HTMLTags :: FormStart(string name, string action,
- *               string method)
+ * string method)
  * Description:  Start Form with name, action and method(GET/POST)
  *--------------------------------------------------------------------
  */
@@ -261,9 +261,9 @@ void HTMLTags :: TableEnd()
  *--------------------------------------------------------------------
  *       Class:  HTMLTags
  *      Method:  HTMLTags :: InputField(string type, string name, 
- *               string value)
+ * string value)
  * Description:  Create Input fields like text field, submit
- *               button, etc.
+ * button, etc.
  *--------------------------------------------------------------------
  */
 
@@ -303,7 +303,7 @@ void HTMLTags :: SelectFieldEnd()
  *--------------------------------------------------------------------
  *       Class:  HTMLTags
  *      Method:  HTMLTags :: SelectOptionStart(string value, 
- *               string selected)
+ * string selected)
  * Description:  Options for select 
  *--------------------------------------------------------------------
  */
@@ -333,7 +333,7 @@ void HTMLTags :: SelectOptionEnd()
  *--------------------------------------------------------------------
  *       Class:  HTMLTags
  *      Method:  HTMLTags :: Button(string id, string type, 
- *               string className, string value)
+ * string className, string value)
  * Description:  Create button(next, submit, etc)
  *--------------------------------------------------------------------
  */
