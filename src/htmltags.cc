@@ -53,6 +53,7 @@ void HTMLTags :: SetHTMLVariables()
     endTR       =       "</tr>";
     startB      =       "<b>";                  /* Bold */
     endB        =       "</b>";
+    brk         =       "</br>";                /* Break Tag */
 }
 
 /**
