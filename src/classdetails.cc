@@ -100,6 +100,10 @@ void ClassDetails :: TotalClasses()
 
     SelectFieldEnd();
 
+    cout << brk << brk;
+
+    Button("next", "submit", "btn", "NEXT");
+
     FormEnd();
     DivEnd();
 
