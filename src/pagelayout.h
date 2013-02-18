@@ -17,7 +17,11 @@
  * ===================================================================
  */
 
-#include "htmltags.h"                       /** For basic HTML Tags */
+/**-------------------------------------------------------------------
+ *  Include required header files
+ *------------------------------------------------------------------*/
+
+#include "htmltags.h"                       /* For basic HTML Tags */
 
 /**
  * ===================================================================
@@ -35,12 +39,19 @@ class PageLayout : public HTMLTags
     public:
         /** Constructor */
         PageLayput();
+
         /** Header Section of Page */
         void Header();                  
+
         /** Footer Section of Page */
         void Footer();                  
+
         /** List/Menu Navigation() */
         void Menu();                    
+
         /** Logo on Page */
-        void Logo(string logoName);     
+        void Logo(string logoName);    
+
+        /// Head Section of Page
+        void Head(string titleName);
 };
