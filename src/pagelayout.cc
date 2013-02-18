@@ -72,9 +72,9 @@ void PageLayout :: Menu()
 
 void PageLayout :: Logo(string logoName)
 {
-    cout << "<div id = \"slogo\" class = \"logo\">"
-         << logoName << " <sup>Beta</sup>" << endl
-         << "</div>" << endl;
+    DivStart("slogo", "logo");
+    cout << logoName << " <sup>Beta</sup>" << endl;
+    DivEnd();
 }
 
 /**
@@ -91,6 +91,23 @@ void PageLayout :: Header()
     Menu();
     cout << "</header>";
 //    Logo(projectName);
+}
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  PageLayout
+ *      Method:  PageLayout :: Head(string titleName)
+ * Description:  Head Section of page, titlaName pass to Title
+ * function.
+ *--------------------------------------------------------------------
+ */
+
+void PageLayout :: Head(string titleName)
+{
+    HeadStart();
+    Title(titleName);
+    CSS("");                      /* Include External CSS file path */
+    HeadEnd();
 }
 
 /**
