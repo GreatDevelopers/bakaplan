@@ -45,7 +45,7 @@ InputFieldNames :: InputFieldNames()
  *       Class:  InputFieldNames
  *      Method:  InputFieldNames :: SetFieldNames()
  * Description:  Assign Values of field names in its respective
- *               variables.
+ * variables.
  *--------------------------------------------------------------------
  */
 
