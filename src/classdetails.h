@@ -22,7 +22,6 @@
  *  Include Required Header Files
  *------------------------------------------------------------------*/
 
-#include "header.h"
 #include "pagelayout.h"
 #include "inputfieldnames.h"
 #include "filenames.h"
@@ -30,18 +29,32 @@
 /**
  * ===================================================================
  *        Class:  ClassDetails
- *  Description:  This class is used to get details of class from
- *                user. Like class name, total classes, subject 
- *                details etc.
+ *  Description:  This class is used to get details of class from 
+ *  user. Like class name, total classes, subject details etc.
  * ===================================================================
  */
 
 class ClassDetails : public PageLayout
 {
     protected:
+        int maxClasses; totalClasses;
+
+        InputFieldNames fieldName;
 
     public:
         /// Constructor
         ClassDetails();
-        /// 
+
+        /// Get total classes 
+        void TotalClasses();
+
+        /// Get class details like class name, subject name and
+        /// subject code
+        void ClassInfo();
+
+        /// Header of page
+        Header();
+
+        /// Footer of page
+        Footer();
 };
