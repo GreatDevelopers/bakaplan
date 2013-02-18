@@ -28,10 +28,10 @@
  *  Main Method
  *------------------------------------------------------------------*/
 
- int main(void)
- {
-     ClassDetails class;
-     class.TotalClasses();
+int main(void)
+{
+    ClassDetails class;
+    class.TotalClasses();
 
-     return 0;
- }
+    return 0;
+}
