@@ -63,7 +63,7 @@ string ReadInputFields :: ReadFieldValue(string fieldName, int fieldNo)
     no << (fieldNo + 1);
     fieldName = fieldName + no.str();
     fieldValue = ReadInputFields(fieldName);
-    retun fieldValue;
+    return fieldValue;
 }
 
 /**
@@ -76,5 +76,5 @@ string ReadInputFields :: ReadFieldValue(string fieldName, int fieldNo)
 
 int ReadInputFields :: StringToInt(string value)
 {
-    retun atoi(value.c_str());
+    return atoi(value.c_str());
 }
