@@ -34,7 +34,7 @@ class HTMLTags
     protected:
         /// HTML Tag Variables for <td>, </td>, <th>, etc
         string startH1, endH1, startH3, endH3, startTD, endTD, startTH,
-               endTH, startTR, endTR, startB, endB;
+               endTH, startTR, endTR, startB, endB, brk;
 
     public:
         /// Constructor 
@@ -64,7 +64,7 @@ class HTMLTags
         /// Add Javascript File 
         void Javascript(string src);        
         
-        ///Display <BODY> 
+        /// Display <BODY> 
         void BodyStart();                   
         
         /// Display </BODY> 
