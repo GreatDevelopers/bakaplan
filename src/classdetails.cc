@@ -50,13 +50,9 @@ ClassDetails :: ClassDetails()
 void ClassDetails :: Header()
 {
     HTMLStart();
-    HeadStart();
-    Title("Class Details");                     /* Class Deatails */
-    CSS(" ");                /* Include external CSS file address */
-    HeadEnd();
-
+    Head("Class Details");
     BodyStart();
-
+    PageLayout :: Header();
 }
 
 /**
