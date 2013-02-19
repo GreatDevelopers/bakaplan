@@ -100,7 +100,7 @@ class HTMLTags
         void SelectFieldEnd();
 
         /// Select Option Start
-        void SelectOptionStart(string value);
+        void SelectOptionStart(string value, string selected);
 
         /// Selct Option End
         void SelectOptionEnd();

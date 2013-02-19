@@ -16,6 +16,12 @@
  * ===================================================================
  */
 
+/**-------------------------------------------------------------------
+ *  Include htmltags.h header files
+ *------------------------------------------------------------------*/
+
+#include "htmltags.h"
+
 /**
  *--------------------------------------------------------------------
  *       Class:  HTMLTags
@@ -311,7 +317,7 @@ void HTMLTags :: SelectFieldEnd()
 void HTMLTags :: SelectOptionStart(string value, string selected)
 {
     cout << "<option value=\"" << value << "\" ";
-    if(selected == 'y' || selected == 'Y')
+    if(selected == "y" || selected == "Y")
         cout << "selected";
     cout << " > ";// << value << "</option>";
 }
@@ -342,6 +348,6 @@ void HTMLTags :: Button(string id, string type, string className,
                         string value)
 {
     cout << "<button id = \"" << id << "\" type = \"" << type 
-         << "\" class=\"" << className << "\">" << value <<
+         << "\" class=\"" << className << "\">" << value
          << "</button>" << endl;
 }
