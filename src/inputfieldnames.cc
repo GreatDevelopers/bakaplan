@@ -21,7 +21,7 @@
  *  Declaration
  *------------------------------------------------------------------*/
 
-#include "inputfieldnames.cc"
+#include "inputfieldnames.h"
 
 /**-------------------------------------------------------------------
  *  Definition of member functions

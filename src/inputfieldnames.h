@@ -33,10 +33,11 @@
 
 class InputFieldNames
 {
-    protected:
+    public:
         /// Field Names
         
         /// Class Details Value                 /* Field Name */
+
         string className,                       /* ClassName */
                totalClasses,                    /* TotalClasses */
                totalSubjects,                   /* TotalSubjects */
