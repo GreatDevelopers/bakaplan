@@ -5,3 +5,7 @@
 *.ind
 *.log
 *.toc
+
+*.o
+
+*.html
