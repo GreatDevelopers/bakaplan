@@ -86,14 +86,15 @@ void ClassDetails :: TotalClasses()
 
     cout << startH1 << " Select Total Classes " << endH1 << brk;
     
-    SelectFieldStart(fieldName::totalClasses);
+    SelectFieldStart(fieldName.totalClasses);
     
     for(i = 0; i < maxClasses; i++)
     {
-        if(i == 5)
-            SelectOptionStart(i, "y");
+        ss << i;
+        if(ss == "5")
+            SelectOptionStart(ss.str(), "y");
         else
-            SelectOptionStart(i, "n");
+            SelectOptionStart(ss.str(), "n");
         cout << i;
         SelectOptionEnd();
     }
