@@ -106,7 +106,8 @@ void PageLayout :: Head(string titleName)
 {
     HeadStart();
     Title(titleName);
-    CSS("");                      /* Include External CSS file path */
+    /*  Include External CSS file path */
+    CSS("../../../BaKaPlan/styles.css");
     HeadEnd();
 }
 
