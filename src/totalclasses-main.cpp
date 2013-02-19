@@ -23,15 +23,14 @@
 
 #include "classdetails.h"
 
-
 /**-------------------------------------------------------------------
  *  Main Method
  *------------------------------------------------------------------*/
 
 int main(void)
 {
-    ClassDetails class;
-    class.TotalClasses();
+    ClassDetails classdetails;
+    classdetails.TotalClasses();
 
     return 0;
 }
