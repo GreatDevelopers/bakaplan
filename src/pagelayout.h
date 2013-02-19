@@ -38,7 +38,7 @@ class PageLayout : public HTMLTags
 
     public:
         /** Constructor */
-        PageLayput();
+        PageLayout();
 
         /** Header Section of Page */
         void Header();                  
