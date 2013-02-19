@@ -36,9 +36,14 @@
 class ClassDetails : public PageLayout
 {
     protected:
-        int maxClasses; totalClasses;
+        int maxClasses,                /* max. classes for user i/p */
+            totalClasses;              /* storing total classes */
 
-        InputFieldNames fieldName;
+        InputFieldNames fieldName;     /* For accessing filenames */
+
+        int i, j, k;                   /* for loop variables */
+
+        stringstream ss;            /* for converting int to string */
 
     public:
         /// Constructor
@@ -52,8 +57,8 @@ class ClassDetails : public PageLayout
         void ClassInfo();
 
         /// Header of page
-        Header();
+        void Header();
 
         /// Footer of page
-        Footer();
+        void Footer();
 };
