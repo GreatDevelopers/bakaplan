@@ -51,8 +51,9 @@ void ClassDetails :: Header()
 {
     HTMLStart();
     Head("Class Details");
-    BodyStart();
     PageLayout :: Header();
+    BodyStart();
+    Logo("BaKaPlan");
 }
 
 /**
@@ -86,13 +87,15 @@ void ClassDetails :: TotalClasses()
 
     cout << startH1 << " Select Total Classes " << endH1 << brk;
     
+    cout << " Total Branches ";
     SelectFieldStart(fieldName.totalClasses);
     
-    for(i = 0; i < maxClasses; i++)
+    for(i = 1; i <= maxClasses; i++)
     {
+        stringstream ss;
         ss << i;
-        if(ss == "5")
-            SelectOptionStart(ss.str(), "y");
+        if(i == 5)
+            SelectOptionStart(ss.str(), "Y");
         else
             SelectOptionStart(ss.str(), "n");
         cout << i;
@@ -122,11 +125,14 @@ void ClassDetails :: TotalClasses()
 
 void ClassDetails :: ClassInfo()
 {
+    temp = readField.ReadFieldValue(fieldName.totalClasses); 
+    totalClasses = readField.StringToInt(temp);
+    
     Header();
 
     DivStart("classinfo", "");                  /* (id, classname) */
     FormStart("classinfo", "rollnodetails.html", "POST");
-
+    cout << startH1 << totalClasses << endH1;
     FormEnd();
     DivEnd();
 
