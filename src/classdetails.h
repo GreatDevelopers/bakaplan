@@ -24,6 +24,7 @@
 
 #include "pagelayout.h"
 #include "inputfieldnames.h"
+#include "readinputfields.h"
 
 /**
  * ===================================================================
@@ -40,10 +41,12 @@ class ClassDetails : public PageLayout
             totalClasses;              /* storing total classes */
 
         InputFieldNames fieldName;     /* For accessing filenames */
+        ReadInputFields readField;     /* for reading field name */
 
         int i, j, k;                   /* for loop variables */
 
-        stringstream ss;            /* for converting int to string */
+//        stringstream ss;            /* for converting int to string */
+        string temp;                /* Tempprary Variable */
 
     public:
         /// Constructor
