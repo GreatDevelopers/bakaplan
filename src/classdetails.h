@@ -39,6 +39,10 @@ class ClassDetails : public PageLayout
     protected:
         int maxClasses,                /* max. classes for user i/p */
             totalClasses;              /* storing total classes */
+        
+        string className[maxClasses],           
+               subjectCode[maxClasses],
+               subjectName[maxClasses];
 
         InputFieldNames fieldName;     /* For accessing filenames */
         ReadInputFields readField;     /* for reading field name */
