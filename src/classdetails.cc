@@ -55,6 +55,9 @@ ClassDetails :: ClassDetails()
                                 "IT-102", "IT-203", "CE-120",
                                 "ME-140", "EE-109, 1234S, IT-203", 
                                 "ME-101,ME-501,IT-101" };
+
+    tableHeading[4] = {"Class Name", "Total Subjects", "Subject Name",
+                       "Subject Code"};
 }
 
 /**
@@ -151,8 +154,26 @@ void ClassDetails :: ClassInfo()
     DivStart("classinfo", "");                  /* (id, classname) */
     FormStart("classinfo", "rollnodetails.html", "POST");
     
+    cout << startH1 << "Enter Branch Details" << endH1 << brk;
+    TableStart("classdetails", "");
+    
+    cout << startTR;
+    for(i = 0; i < 4; i++)
+    {
+        cout << startTH << tableHeading[i] << endTH;
+    }
+    cout << endTR;
 
+    for(i = 0; i < totalClasses; i++)
+    {
+        cout << startTR;
+        
+        // fields-------------------------------
 
+        cout << endTR;
+    }
+    
+    TableEnd();
     FormEnd();
     DivEnd();
 
