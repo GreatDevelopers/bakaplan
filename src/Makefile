@@ -56,6 +56,7 @@ CC_ROOMDETAILS			=	roomdetails.cc
 # ====================================================================
 
 M_TOTALCLASSES			=	totalclasses-main.cpp
+M_CLASSINFO				=	classinfo-main.cpp
 
 # ====================================================================
 #	Variables for object files
@@ -67,26 +68,29 @@ O_INPUTFIELDNAMES		=	inputfieldnames.o
 O_READINPUTFIELDS		=	readinputfields.o
 O_CLASSDETAILS			=	classdetails.o
 O_TOTALCLASSES_MAIN		=	totalclasses-main.o
+O_CLASSINFO_MAIN		=	classinfo-main.o
 
 # ====================================================================
 #	Linking Variables (L_EXE_FILENAME)
 # ====================================================================
 
-L_PAGELAYOUT			=	$(O_HTMLTAGS) $(O_PAGELAYOUT)
-L_CLASSDETAILS			=	$(L_PAGELAYOUT) $(O_INPUTFIELDNAMES) $(O_CLASSDETAILS)
-L_TOTALCLASSES			=	$(L_CLASSDETAILS) $(O_TOTALCLASSES_MAIN)
+L_PAGELAYOUT	=	$(O_HTMLTAGS) $(O_PAGELAYOUT)
+L_CLASSDETAILS	=	$(L_PAGELAYOUT) $(O_INPUTFIELDNAMES) $(O_CLASSDETAILS)
+L_TOTALCLASSES	=	$(O_READINPUTFIELDS) $(L_CLASSDETAILS) $(O_TOTALCLASSES_MAIN)
+L_CLASSINFO		=	$(O_READINPUTFIELDS) $(L_CLASSDETAILS) $(O_CLASSINFO_MAIN)		
 
 # ====================================================================
 # 	O/P file names(exe) (E_FILENAME)
 # ====================================================================
 
 E_TOTALCLASSES			=	totalclasses.html
+E_CLASSINFO				=	classinfo.html
 
 # ====================================================================
 #	Main target (1st target)
 # ====================================================================
 
-all: $(E_TOTALCLASSES)
+all: $(E_TOTALCLASSES) $(E_CLASSINFO)
 
 # ====================================================================
 #	targets for compiling .cc or .cpp files
@@ -101,18 +105,27 @@ $(O_PAGELAYOUT): $(CC_PAGELAYOUT) $(H_PAGELAYOUT)
 $(O_INPUTFIELDNAMES): $(CC_INPUTFIELDNAMES) $(H_INPUTFIELDNAMES)
 	$(CC) $(CFLAG) $(CC_INPUTFIELDNAMES)
 
+$(O_READINPUTFIELDS): $(CC_READINPUTFIELDS) $(H_READINPUTFIELDS)
+	$(CC) $(CFLAG) $(CC_READINPUTFIELDS) $(LCGICC)
+
 $(O_CLASSDETAILS): $(CC_CLASSDETAILS) $(H_CLASSDETAILS)
 	$(CC) $(CFLAG) $(CC_CLASSDETAILS)
 
 $(O_TOTALCLASSES_MAIN): $(M_TOTALCLASSES) $(H_CLASSDETAILS)
 	$(CC) $(CFLAG) $(M_TOTALCLASSES)
 
+$(O_CLASSINFO_MAIN): $(M_CLASSINFO) $(H_CLASSDETAILS)
+	$(CC) $(CFLAG) $(M_CLASSINFO)
+
 # ====================================================================
 # 	Targets of o/p files(exe)
 # ====================================================================
 
 $(E_TOTALCLASSES): $(L_TOTALCLASSES)
-	$(CC) $(OFLAG) $(E_TOTALCLASSES) $(L_TOTALCLASSES)
+	$(CC) $(OFLAG) $(E_TOTALCLASSES) $(L_TOTALCLASSES) $(LCGICC)
+
+$(E_CLASSINFO): $(L_CLASSINFO)
+	$(CC) $(OFLAG) $(E_CLASSINFO) $(L_CLASSINFO) $(LCGICC)
 
 # ====================================================================
 # 	Clean .o, .html files
