@@ -107,7 +107,30 @@ void PageLayout :: Head(string titleName)
     HeadStart();
     Title(titleName);
     /*  Include External CSS file path */
+    string js = "https://ajax.googleapis.com/ajax";
+    js += "/libs/jquery/1.7.2/jquery.min.js";
     CSS("../../../BaKaPlan/styles.css");
+   // Javascript(js);
+
+    cout << "<!-- jQuery for navigation -->  "
+         << "<script>"
+         << "$(function() {"
+         << "var pull    = $('#pull');"
+         << "var menu        = $('nav ul');"
+         << "var menuHeight  = menu.height();"
+         << "$(pull).on('click', function(e) {"
+         << "e.preventDefault();"
+         << "menu.slideToggle();"
+         << "});"
+         << "$(window).resize(function(){"
+         << "var w = $(window).width();"
+         << "if(w > 600 && menu.is(':hidden')) {"
+         << "menu.removeAttr('style');"
+         << "}"
+         << "});"
+         << "});"
+         << "</script>";
+
     HeadEnd();
 }
 
