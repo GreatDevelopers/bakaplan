@@ -62,7 +62,7 @@ string ReadInputFields :: ReadFieldValue(string fieldName, int fieldNo)
     std::stringstream no;
     no << (fieldNo + 1);
     fieldName = fieldName + no.str();
-    fieldValue = ReadInputFields(fieldName);
+    fieldValue = ReadFieldValue(fieldName);
     return fieldValue;
 }
 
