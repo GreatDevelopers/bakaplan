@@ -166,6 +166,7 @@ void HTMLTags :: Javascript(string src)
 void HTMLTags :: BodyStart()
 {
     cout << "<BODY>" << endl;
+    DivStart("wrapper", "");                    /* (id, classname) */
 }
 
 /**
@@ -178,6 +179,7 @@ void HTMLTags :: BodyStart()
 
 void HTMLTags :: BodyEnd()
 {
+    DivEnd();
     cout << "</BODY>" << endl;
 }
 
