@@ -36,7 +36,25 @@
 
 ClassDetails :: ClassDetails()
 {
-    maxClasses      =       15;
+    maxClasses      =   10;
+
+    className[maxBranches] = {"Info. Tech.", "10th", "ECE", 
+                              "Mech. Engg.", "Production Engg.", 
+                              "Electrical Engg.", "IT", 
+                              "Electronics Engg.", "Comp. Sci. Engg.", 
+                              "MBA"};
+    
+    subjectName[maxBranches] = {"DBMS, SAD", "Maths,Physics", 
+                                "OS, EVS", "Java, C++", "EVS", 
+                                "Chem.", "ED", "Maths", 
+                                "Maths,DBMS, Physics", 
+                                "Multimedia, Dot Net, ED"}
+    
+    subjectCode[maxBranches] = {"IT-101, IT-102", "ME-10,CE-252", 
+                                "EVS, ED-10", "ED-10, IT-102", 
+                                "IT-102", "IT-203", "CE-120",
+                                "ME-140", "EE-109, 1234S, IT-203", 
+                                "ME-101,ME-501,IT-101" };
 }
 
 /**
@@ -132,7 +150,9 @@ void ClassDetails :: ClassInfo()
 
     DivStart("classinfo", "");                  /* (id, classname) */
     FormStart("classinfo", "rollnodetails.html", "POST");
-    cout << startH1 << totalClasses << endH1;
+    
+
+
     FormEnd();
     DivEnd();
 
