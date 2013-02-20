@@ -42,7 +42,8 @@ class ClassDetails : public PageLayout
         
         string className[maxClasses],           
                subjectCode[maxClasses],
-               subjectName[maxClasses];
+               subjectName[maxClasses],
+               tableHeading[maxClasses];
 
         InputFieldNames fieldName;     /* For accessing filenames */
         ReadInputFields readField;     /* for reading field name */
