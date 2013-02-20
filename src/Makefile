@@ -29,46 +29,46 @@ LCGICC  =   -lcgicc     		# cgicc lib flag
 #   Variables for header files (H_HEADER_FILE_NAME)
 # ====================================================================
 
-H_CONSTANTS				=	constants.h
-H_FILENAMES				=	filenames.h
-H_HEADER				=   header.h
-H_CGICC                 =   cgicc.h
-H_HTMLTAGS              =   htmltags.h $(H_HEADER) $(H_FILENAMES) $(H_CONSTANTS)
-H_PAGELAYOUT            =   pagelayout.h $(H_HTMLTAGS)
-H_INPUTFIELDNAMES		=	inputfieldnames.h  $(H_HEADER)
-H_READINPUTDETAILS      =   readinputdetails.h $(H_HEADER) $(H_CGICC)
-H_CLASSDETAILS			=	classdetails.h $(H_PAGELAYOUT) $(H_INPUTFIELDNAMES)
+H_CONSTANTS			=	constants.h
+H_FILENAMES			=	filenames.h
+H_HEADER			=   header.h
+H_CGICC             =   cgicc.h
+H_HTMLTAGS          =   htmltags.h $(H_HEADER) $(H_FILENAMES) $(H_CONSTANTS)
+H_PAGELAYOUT        =   pagelayout.h $(H_HTMLTAGS)
+H_INPUTFIELDNAMES	=	inputfieldnames.h  $(H_HEADER)
+H_READINPUTFIELDS	=   readinputfields.h $(H_HEADER) $(H_CGICC)
+H_CLASSDETAILS		=	classdetails.h $(H_PAGELAYOUT) $(H_INPUTFIELDNAMES)
 
 # ====================================================================
 #	Variables for definition files (CC_FILENAME)
 # ====================================================================
 
-CC_HTMLTAGS				=	htmltags.cc
-CC_PAGELAYOUT			=	pagelayout.cc 
-CC_INPUTFIELDNAMES		=	inputfieldnames.cc 
-CC_READINPUTFIELDS		=	readinputfields.cc
-CC_CLASSDETAILS			=	classdetails.cc
-CC_ROLLNODETAILS		=	rollnodetails.cc
-CC_ROOMDETAILS			=	roomdetails.cc
+CC_HTMLTAGS			=	htmltags.cc
+CC_PAGELAYOUT		=	pagelayout.cc 
+CC_INPUTFIELDNAMES	=	inputfieldnames.cc 
+CC_READINPUTFIELDS	=	readinputfields.cc
+CC_CLASSDETAILS		=	classdetails.cc
+CC_ROLLNODETAILS	=	rollnodetails.cc
+CC_ROOMDETAILS		=	roomdetails.cc
 
 # ====================================================================
 #	Variables for main method files (M_FILENAME)
 # ====================================================================
 
-M_TOTALCLASSES			=	totalclasses-main.cpp
-M_CLASSINFO				=	classinfo-main.cpp
+M_TOTALCLASSES		=	totalclasses-main.cpp
+M_CLASSINFO			=	classinfo-main.cpp
 
 # ====================================================================
 #	Variables for object files
 # ====================================================================
 
-O_HTMLTAGS				=	htmltags.o
-O_PAGELAYOUT			=	pagelayout.o
-O_INPUTFIELDNAMES		=	inputfieldnames.o
-O_READINPUTFIELDS		=	readinputfields.o
-O_CLASSDETAILS			=	classdetails.o
-O_TOTALCLASSES_MAIN		=	totalclasses-main.o
-O_CLASSINFO_MAIN		=	classinfo-main.o
+O_HTMLTAGS			=	htmltags.o
+O_PAGELAYOUT		=	pagelayout.o
+O_INPUTFIELDNAMES	=	inputfieldnames.o
+O_READINPUTFIELDS	=	readinputfields.o
+O_CLASSDETAILS		=	classdetails.o
+O_TOTALCLASSES_MAIN	=	totalclasses-main.o
+O_CLASSINFO_MAIN	=	classinfo-main.o
 
 # ====================================================================
 #	Linking Variables (L_EXE_FILENAME)
@@ -83,8 +83,8 @@ L_CLASSINFO		=	$(O_READINPUTFIELDS) $(L_CLASSDETAILS) $(O_CLASSINFO_MAIN)
 # 	O/P file names(exe) (E_FILENAME)
 # ====================================================================
 
-E_TOTALCLASSES			=	totalclasses.html
-E_CLASSINFO				=	classinfo.html
+E_TOTALCLASSES	=	totalclasses.html
+E_CLASSINFO		=	classinfo.html
 
 # ====================================================================
 #	Main target (1st target)
