@@ -26,6 +26,12 @@
 #include "inputfieldnames.h"
 #include "readinputfields.h"
 
+/**-------------------------------------------------------------------
+ *  Constant varibles
+ *------------------------------------------------------------------*/
+
+const int maxClasses = 10;
+
 /**
  * ===================================================================
  *        Class:  ClassDetails
@@ -37,13 +43,36 @@
 class ClassDetails : public PageLayout
 {
     protected:
-        int maxClasses,                /* max. classes for user i/p */
-            totalClasses;              /* storing total classes */
+//        const int maxClasses = 15;     /* max. classes for user i/p */
+        int totalClasses;              /* storing total classes */
         
-        string className[maxClasses],           
+        /* string className[maxClasses],           
                subjectCode[maxClasses],
                subjectName[maxClasses],
-               tableHeading[maxClasses];
+               tableHeading[maxClasses];*/
+        
+        string className[maxClasses] = {"Info. Tech.", "10th", 
+                                        "ECE", "Mech. Engg.", 
+                                        "Production Engg.", 
+                                        "Electrical Engg.", "IT",               
+                                        "Electronics Engg.", 
+                                        "Comp. Sci. Engg.", "MBA"};                                 
+                                                                                    
+        string subjectName[maxClasses] = {"DBMS, SAD", "Maths,Physics",          
+                                          "OS, EVS", "Java, C++", "EVS",        
+                                          "Chem.", "ED", "Maths",               
+                                          "Maths,DBMS, Physics",                
+                                          "Multimedia, Dot Net, ED"};           
+                                                                                          
+        string subjectCode[maxClasses] = {"IT-101, IT-102", 
+                                          "ME-10,CE-252", "EVS, ED-10", 
+                                          "ED-10, IT-102", "IT-102", 
+                                          "IT-203", "CE-120", "ME-140", 
+                                          "EE-109, 1234S, IT-203",    
+                                          "ME-101,ME-501,IT-101" };             
+                                                                                                
+        string tableHeading[4] = {"Class Name", "Total Subjects", 
+                                  "Subject Name", "Subject Code"};
 
         InputFieldNames fieldName;     /* For accessing filenames */
         ReadInputFields readField;     /* for reading field name */
