@@ -54,23 +54,23 @@ class ClassDetails : public PageLayout
         string className[maxClasses] = {"Info. Tech.", "10th", 
                                         "ECE", "Mech. Engg.", 
                                         "Production Engg.", 
-                                        "Electrical Engg.", "IT",               
+                                        "Electrical Engg.", "IT",             
                                         "Electronics Engg.", 
-                                        "Comp. Sci. Engg.", "MBA"};                                 
-                                                                                    
-        string subjectName[maxClasses] = {"DBMS, SAD", "Maths,Physics",          
-                                          "OS, EVS", "Java, C++", "EVS",        
-                                          "Chem.", "ED", "Maths",               
-                                          "Maths,DBMS, Physics",                
-                                          "Multimedia, Dot Net, ED"};           
-                                                                                          
+                                        "Comp. Sci. Engg.", "MBA"};           
+
+        string subjectName[maxClasses] = {"DBMS, SAD", "Maths,Physics",
+                                          "OS, EVS", "Java, C++", "EVS",
+                                          "Chem.", "ED", "Maths",       
+                                          "Maths,DBMS, Physics",
+                                          "Multimedia, Dot Net, ED"};
+
         string subjectCode[maxClasses] = {"IT-101, IT-102", 
                                           "ME-10,CE-252", "EVS, ED-10", 
                                           "ED-10, IT-102", "IT-102", 
                                           "IT-203", "CE-120", "ME-140", 
                                           "EE-109, 1234S, IT-203",    
-                                          "ME-101,ME-501,IT-101" };             
-                                                                                                
+                                          "ME-101,ME-501,IT-101" };
+
         string tableHeading[4] = {"Class Name", "Total Subjects", 
                                   "Subject Name", "Subject Code"};
 
@@ -79,7 +79,7 @@ class ClassDetails : public PageLayout
 
         int i, j, k;                   /* for loop variables */
 
-//        stringstream ss;            /* for converting int to string */
+        stringstream ss;            /* for converting int to string */
         string temp;                /* Tempprary Variable */
 
     public:
