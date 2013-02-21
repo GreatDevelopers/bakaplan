@@ -275,9 +275,11 @@ void HTMLTags :: TableEnd()
  *--------------------------------------------------------------------
  */
 
-void HTMLTags :: InputField(string type, string name, string value)
+void HTMLTags :: InputField(string type, string name, int nameNo, 
+                            string value)
 {
-    cout << "<input type=\"" << type << "\" name=\"" << name << "\""
+    cout << "<input type=\"" << type << "\" name=\"" << name 
+         << nameNo << "\""
          << "value = \" "<< value << "\" >" << endl;
 }
 
