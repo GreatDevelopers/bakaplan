@@ -155,6 +155,8 @@ void ClassDetails :: ClassInfo()
     DivStart("classinfo", "");                  /* (id, classname) */
     FormStart("classinfo", "rollnodetails.html", "POST");
     
+    InputField("hidden", fieldName.totalClasses, totalClasses);
+
     cout << startH1 << "Enter Branch Details" << endH1 << brk;
     TableStart("classdetails", "");
     
@@ -207,7 +209,7 @@ void ClassDetails :: ClassInfo()
     
     TableEnd();
     
-    cout << brk << brk;                                                                         
+    cout << brk << brk;          
     Button("next", "submit", "btn", "NEXT");
 
     FormEnd();
