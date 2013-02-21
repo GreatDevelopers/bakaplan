@@ -91,7 +91,8 @@ class HTMLTags
         void TableEnd();
 
         /// Input Field
-        void InputField(string type, string name, string value);
+        void InputField(string type, string name, int nameNo, 
+                        string value);
 
         /// Select Field Start
         void SelectFieldStart(string name);
