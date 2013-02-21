@@ -36,21 +36,21 @@
 
 ClassDetails :: ClassDetails()
 {
-    maxClasses      =   10;
+    //maxClasses      =   10;
 
-    className[maxBranches] = {"Info. Tech.", "10th", "ECE", 
+/*     className[maxClasses] = {"Info. Tech.", "10th", "ECE", 
                               "Mech. Engg.", "Production Engg.", 
                               "Electrical Engg.", "IT", 
                               "Electronics Engg.", "Comp. Sci. Engg.", 
                               "MBA"};
     
-    subjectName[maxBranches] = {"DBMS, SAD", "Maths,Physics", 
+    subjectName[maxClasses] = {"DBMS, SAD", "Maths,Physics", 
                                 "OS, EVS", "Java, C++", "EVS", 
                                 "Chem.", "ED", "Maths", 
                                 "Maths,DBMS, Physics", 
-                                "Multimedia, Dot Net, ED"}
+                                "Multimedia, Dot Net, ED"};
     
-    subjectCode[maxBranches] = {"IT-101, IT-102", "ME-10,CE-252", 
+    subjectCode[maxClasses] = {"IT-101, IT-102", "ME-10,CE-252", 
                                 "EVS, ED-10", "ED-10, IT-102", 
                                 "IT-102", "IT-203", "CE-120",
                                 "ME-140", "EE-109, 1234S, IT-203", 
@@ -58,6 +58,7 @@ ClassDetails :: ClassDetails()
 
     tableHeading[4] = {"Class Name", "Total Subjects", "Subject Name",
                        "Subject Code"};
+*/
 }
 
 /**
@@ -168,12 +169,46 @@ void ClassDetails :: ClassInfo()
     {
         cout << startTR;
         
-        // fields-------------------------------
+        cout << startTD;
+        InputField("text", fieldName.className, (i+1), className[i]);
+        cout << endTD;
+        
+        cout << startTD;
+        SelectFieldStart(fieldName.totalSubjects);
+        for(j = 1; j <= 3; j++)
+        {
+            stringstream ss;
+            ss << j;
+            
+            if(i >= 0 && i <= 3 && j == 2)
+                SelectOptionStart(ss.str(), "y");  
+            if(i >= 4 && i <= 7 && j == 1)
+                SelectOptionStart(ss.str(), "y");  
+            if(i == 8 || i == 9 && j == 3)
+                SelectOptionStart(ss.str(), "y");  
+            
+            cout << j;
+            SelectOptionEnd();
+        }
+        SelectFieldEnd();
+        cout << endTD;
+        
+        cout << startTD;
+        InputField("text", fieldName.subjectName, (i+1), subjectName[i]);
+        cout << endTD;
+        
+        cout << startTD;
+        InputField("text", fieldName.subjectCode, (i+1), subjectCode[i]);
+        cout << endTD;
 
         cout << endTR;
     }
     
     TableEnd();
+    
+    cout << brk << brk;                                                                         
+    Button("next", "submit", "btn", "NEXT");
+
     FormEnd();
     DivEnd();
 
