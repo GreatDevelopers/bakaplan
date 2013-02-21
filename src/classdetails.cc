@@ -181,12 +181,13 @@ void ClassDetails :: ClassInfo()
             ss << j;
             
             if(i >= 0 && i <= 3 && j == 2)
-                SelectOptionStart(ss.str(), "y");  
-            if(i >= 4 && i <= 7 && j == 1)
-                SelectOptionStart(ss.str(), "y");  
-            if(i == 8 || i == 9 && j == 3)
-                SelectOptionStart(ss.str(), "y");  
-            
+                SelectOptionStart(ss.str(), "y");
+            else if(i >= 4 && i <= 7 && j == 1)
+                SelectOptionStart(ss.str(), "y");
+            else if(i == 8 || i == 9 && j == 3)
+                SelectOptionStart(ss.str(), "y");
+            else
+                SelectOptionStart(ss.str(), "n");
             cout << j;
             SelectOptionEnd();
         }
