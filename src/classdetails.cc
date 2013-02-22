@@ -114,7 +114,7 @@ void ClassDetails :: TotalClasses()
     
     for(i = 1; i <= maxClasses; i++)
     {
-        stringstream ss;
+        ss.clear(); ss.str("");
         ss << i;
         if(i == 5)
             SelectOptionStart(ss.str(), "Y");
@@ -155,7 +155,10 @@ void ClassDetails :: ClassInfo()
     DivStart("classinfo", "");                  /* (id, classname) */
     FormStart("classinfo", "rollnodetails.html", "POST");
     
-    InputField("hidden", fieldName.totalClasses, totalClasses);
+    ss.clear(); ss.str("");
+    ss << totalClasses;
+
+    InputField("hidden", fieldName.totalClasses, 0, ss.str());
 
     cout << startH1 << "Enter Branch Details" << endH1 << brk;
     TableStart("classdetails", "");
