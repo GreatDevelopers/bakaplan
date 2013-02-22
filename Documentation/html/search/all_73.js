@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['select',['Select',['../classMySQL.html#a95aaf59d01eb141bf2104cde6f4872a8',1,'MySQL::Select(string column, string tableName)'],['../classMySQL.html#a7d6ebbeebbf159103c3ade8eff8f3c86',1,'MySQL::Select(string column, string tableName, string whereClause)']]],
   ['selectfieldend',['SelectFieldEnd',['../classHTMLTags.html#adde967a90e03f4b5168b9bffd319980b',1,'HTMLTags']]],
   ['selectfieldstart',['SelectFieldStart',['../classHTMLTags.html#adb6e7ef0a1320dbf6d4acbe1ea3e418f',1,'HTMLTags']]],
   ['selectoptionend',['SelectOptionEnd',['../classHTMLTags.html#ae312980d20e3dea0469fdcb730fb975e',1,'HTMLTags']]],

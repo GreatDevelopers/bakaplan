@@ -1,0 +1,148 @@
+\hypertarget{classMySQL}{\section{My\-S\-Q\-L Class Reference}
+\label{classMySQL}\index{My\-S\-Q\-L@{My\-S\-Q\-L}}
+}
+
+
+{\ttfamily \#include $<$mysql.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMySQL_abc2ca1b4be66f7e588e00dab96d91d43}{My\-S\-Q\-L} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classMySQL}{My\-S\-Q\-L} Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classMySQL_a95aaf59d01eb141bf2104cde6f4872a8}{Select} (string column, string table\-Name)
+\begin{DoxyCompactList}\small\item\em Select \hyperlink{classMySQL}{My\-S\-Q\-L} command with 2 arguments. \end{DoxyCompactList}\item 
+void \hyperlink{classMySQL_a7d6ebbeebbf159103c3ade8eff8f3c86}{Select} (string column, string table\-Name, string where\-Clause)
+\begin{DoxyCompactList}\small\item\em Select command with 3 arguments. \end{DoxyCompactList}\item 
+\hyperlink{classMySQL_ace1ac1b227cc6f1370b6f50f79732386}{Insert} (int project\-I\-D, string project\-Name, string table\-Name)
+\begin{DoxyCompactList}\small\item\em Insert into Project\-Name. \end{DoxyCompactList}\item 
+\hyperlink{classMySQL_ab27885d0695900ade2b7a0d57375a9bf}{$\sim$\-My\-S\-Q\-L} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classMySQL}{My\-S\-Q\-L} Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+M\-Y\-S\-Q\-L $\ast$ \hyperlink{classMySQL_a56a2a9159f6d46d8b3bd648e1f08e2b1}{connect}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classMySQL}{My\-S\-Q\-L} connectivity Variables. \end{DoxyCompactList}\item 
+\hypertarget{classMySQL_abfe0a8f3fe7af0a582be5882f0afe69d}{M\-Y\-S\-Q\-L\-\_\-\-R\-E\-S $\ast$ {\bfseries res\-\_\-set}}\label{classMySQL_abfe0a8f3fe7af0a582be5882f0afe69d}
+
+\item 
+\hypertarget{classMySQL_a56c73e3942ca040f13164e957a41a340}{M\-Y\-S\-Q\-L\-\_\-\-R\-O\-W {\bfseries row}}\label{classMySQL_a56c73e3942ca040f13164e957a41a340}
+
+\item 
+int \hyperlink{classMySQL_ae461697dbdebb43334caa98e80bd5526}{i}
+\begin{DoxyCompactList}\small\item\em table names \end{DoxyCompactList}\item 
+\hypertarget{classMySQL_a565d31fcec8437c21f08e7ca008cb2b6}{int {\bfseries j}}\label{classMySQL_a565d31fcec8437c21f08e7ca008cb2b6}
+
+\item 
+\hypertarget{classMySQL_ae709a2ac6d1bd455c31077fe760f3cb7}{string {\bfseries query}}\label{classMySQL_ae709a2ac6d1bd455c31077fe760f3cb7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+ \subsubsection*{Include \hyperlink{mysql_8h_source}{mysql.\-h} and \hyperlink{database_8h_source}{database.\-h}}
+
+
+
+ Class\-: \hyperlink{classMySQL}{My\-S\-Q\-L} \subsection*{Description\-: \hyperlink{classMySQL}{My\-S\-Q\-L} class for database accessability}
+
+Definition at line 34 of file mysql.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMySQL_abc2ca1b4be66f7e588e00dab96d91d43}{\index{My\-S\-Q\-L@{My\-S\-Q\-L}!My\-S\-Q\-L@{My\-S\-Q\-L}}
+\index{My\-S\-Q\-L@{My\-S\-Q\-L}!MySQL@{My\-S\-Q\-L}}
+\subsubsection[{My\-S\-Q\-L}]{\setlength{\rightskip}{0pt plus 5cm}My\-S\-Q\-L\-::\-My\-S\-Q\-L (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMySQL_abc2ca1b4be66f7e588e00dab96d91d43}
+
+
+\hyperlink{classMySQL}{My\-S\-Q\-L} Constructor. 
+
+\hypertarget{classMySQL_ab27885d0695900ade2b7a0d57375a9bf}{\index{My\-S\-Q\-L@{My\-S\-Q\-L}!$\sim$\-My\-S\-Q\-L@{$\sim$\-My\-S\-Q\-L}}
+\index{$\sim$\-My\-S\-Q\-L@{$\sim$\-My\-S\-Q\-L}!MySQL@{My\-S\-Q\-L}}
+\subsubsection[{$\sim$\-My\-S\-Q\-L}]{\setlength{\rightskip}{0pt plus 5cm}My\-S\-Q\-L\-::$\sim$\-My\-S\-Q\-L (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMySQL_ab27885d0695900ade2b7a0d57375a9bf}
+
+
+\hyperlink{classMySQL}{My\-S\-Q\-L} Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMySQL_ace1ac1b227cc6f1370b6f50f79732386}{\index{My\-S\-Q\-L@{My\-S\-Q\-L}!Insert@{Insert}}
+\index{Insert@{Insert}!MySQL@{My\-S\-Q\-L}}
+\subsubsection[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}My\-S\-Q\-L\-::\-Insert (
+\begin{DoxyParamCaption}
+\item[{int}]{project\-I\-D, }
+\item[{string}]{project\-Name, }
+\item[{string}]{table\-Name}
+\end{DoxyParamCaption}
+)}}\label{classMySQL_ace1ac1b227cc6f1370b6f50f79732386}
+
+
+Insert into Project\-Name. 
+
+\hypertarget{classMySQL_a95aaf59d01eb141bf2104cde6f4872a8}{\index{My\-S\-Q\-L@{My\-S\-Q\-L}!Select@{Select}}
+\index{Select@{Select}!MySQL@{My\-S\-Q\-L}}
+\subsubsection[{Select}]{\setlength{\rightskip}{0pt plus 5cm}void My\-S\-Q\-L\-::\-Select (
+\begin{DoxyParamCaption}
+\item[{string}]{column, }
+\item[{string}]{table\-Name}
+\end{DoxyParamCaption}
+)}}\label{classMySQL_a95aaf59d01eb141bf2104cde6f4872a8}
+
+
+Select \hyperlink{classMySQL}{My\-S\-Q\-L} command with 2 arguments. 
+
+\hypertarget{classMySQL_a7d6ebbeebbf159103c3ade8eff8f3c86}{\index{My\-S\-Q\-L@{My\-S\-Q\-L}!Select@{Select}}
+\index{Select@{Select}!MySQL@{My\-S\-Q\-L}}
+\subsubsection[{Select}]{\setlength{\rightskip}{0pt plus 5cm}void My\-S\-Q\-L\-::\-Select (
+\begin{DoxyParamCaption}
+\item[{string}]{column, }
+\item[{string}]{table\-Name, }
+\item[{string}]{where\-Clause}
+\end{DoxyParamCaption}
+)}}\label{classMySQL_a7d6ebbeebbf159103c3ade8eff8f3c86}
+
+
+Select command with 3 arguments. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classMySQL_a56a2a9159f6d46d8b3bd648e1f08e2b1}{\index{My\-S\-Q\-L@{My\-S\-Q\-L}!connect@{connect}}
+\index{connect@{connect}!MySQL@{My\-S\-Q\-L}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}M\-Y\-S\-Q\-L$\ast$ My\-S\-Q\-L\-::connect\hspace{0.3cm}{\ttfamily [protected]}}}\label{classMySQL_a56a2a9159f6d46d8b3bd648e1f08e2b1}
+
+
+\hyperlink{classMySQL}{My\-S\-Q\-L} connectivity Variables. 
+
+
+
+Definition at line 38 of file mysql.\-h.
+
+\hypertarget{classMySQL_ae461697dbdebb43334caa98e80bd5526}{\index{My\-S\-Q\-L@{My\-S\-Q\-L}!i@{i}}
+\index{i@{i}!MySQL@{My\-S\-Q\-L}}
+\subsubsection[{i}]{\setlength{\rightskip}{0pt plus 5cm}int My\-S\-Q\-L\-::i\hspace{0.3cm}{\ttfamily [protected]}}}\label{classMySQL_ae461697dbdebb43334caa98e80bd5526}
+
+
+table names 
+
+
+
+Definition at line 44 of file mysql.\-h.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/mysql.\-h\end{DoxyCompactItemize}
