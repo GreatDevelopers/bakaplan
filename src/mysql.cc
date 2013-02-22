@@ -48,3 +48,18 @@ MySQL : MySQL()
         cout << "Connection Failed\n";
     }
 }
+
+
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  MySQL
+ *      Method:  MySQL :: ~MySQL()
+ * Description:  Destructor of MySQL class
+ *--------------------------------------------------------------------
+ */
+
+MySQL :: ~MySQL()
+{
+    mysql_close (connect);
+}
