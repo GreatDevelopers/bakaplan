@@ -45,9 +45,6 @@ class RollNoDetails : public PageLayout
         InputFieldNames fieldName;
         ReadInputFields readField;
 
-        ofstream outFile;
-        ifstream infile
-
     public:
         /// Constructor
         RollNoDetails();
