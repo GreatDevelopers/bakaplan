@@ -42,8 +42,14 @@ class InputFieldNames
                totalClasses,                    /* TotalClasses */
                totalSubjects,                   /* TotalSubjects */
                subjectCode,                     /* SubjectCode */
-               subjectName;                     /* SubjectName */
-
+               subjectName,                     /* SubjectName */
+        /// Roll No details fields
+                prefix,                         /* Prefix of rollno */
+                startRollNo,                    /* starting roll no */
+                endRollNo,                      /* ending rollno */
+                notIncluded;                    /* roll that are not 
+                                                    included in seating 
+                                                    plan */
     public:
         InputFieldNames();
         void SetFieldNames();

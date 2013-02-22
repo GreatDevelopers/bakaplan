@@ -57,4 +57,8 @@ void InputFieldNames :: SetFieldNames()
     totalSubjects   =   "TotalSubjects";
     subjectCode     =   "SubjectCode";
     subjectName     =   "SubjectName";
+    prefix          =   "Prefix";
+    startRollNo     =   "StartRollNo";
+    endRollNo       =   "EndRollNo";
+    notIncluded     =   "NotIncluded";
 }
