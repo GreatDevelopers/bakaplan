@@ -35,6 +35,9 @@ class PageLayout : public HTMLTags
     protected:
         /** Project Name = BaKaPlan */
         string projectName;             
+        
+        ifstream inFile;
+        ofstream outFile;
 
     public:
         /** Constructor */
