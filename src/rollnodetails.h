@@ -17,4 +17,42 @@
  * ===================================================================
  */
 
+/**-------------------------------------------------------------------
+ *  Include required header files
+ *------------------------------------------------------------------*/
 
+#include "pagelayout.h"
+#include "inputfieldnames.h"
+#include "readinputfields.h"
+
+/**
+ * ===================================================================
+ *        Class:  RollNoDetails
+ *  Description:  RollNoDetails class for 
+ * ===================================================================
+ */
+
+class RollNoDetails : public PageLayout
+{
+    protected:
+        /// for storing values of class details
+        string prefix[MIN_SIZE],
+               startRollNo[MIN_SIZE],
+               endRollNo[MIN_SIZE],
+               notIncluded[MIN_SIZE];
+        int totalClasses;
+
+        InputFieldNames fieldName;
+        ReadInputFields readField;
+
+        ofstream outFile;
+        ifstream infile
+
+    public:
+        /// Constructor
+        RollNoDetails();
+
+        /// Reading class details from previous page using cgicc
+        ReadClassDetails();
+        WriteClassDetails();
+};
