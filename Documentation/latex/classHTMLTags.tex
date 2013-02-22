@@ -48,13 +48,13 @@ void \hyperlink{classHTMLTags_a9d4bc37c7d615bc1d7f7c738dae48ad3}{Table\-Start} (
 \begin{DoxyCompactList}\small\item\em Start Table. \end{DoxyCompactList}\item 
 void \hyperlink{classHTMLTags_a0655d9f70a8c1a61c406280d8fb9df7a}{Table\-End} ()
 \begin{DoxyCompactList}\small\item\em End Table. \end{DoxyCompactList}\item 
-void \hyperlink{classHTMLTags_ab515d13346f63b00f7696374e682344e}{Input\-Field} (string type, string name, string value)
+void \hyperlink{classHTMLTags_a705aef36f0847c2a5f10a5df8e079ce8}{Input\-Field} (string type, string name, int name\-No, string value)
 \begin{DoxyCompactList}\small\item\em Input Field. \end{DoxyCompactList}\item 
 void \hyperlink{classHTMLTags_adb6e7ef0a1320dbf6d4acbe1ea3e418f}{Select\-Field\-Start} (string name)
 \begin{DoxyCompactList}\small\item\em Select Field Start. \end{DoxyCompactList}\item 
 void \hyperlink{classHTMLTags_adde967a90e03f4b5168b9bffd319980b}{Select\-Field\-End} ()
 \begin{DoxyCompactList}\small\item\em End Select Field. \end{DoxyCompactList}\item 
-void \hyperlink{classHTMLTags_a09f91c8601aed3aa2d0978123225afaa}{Select\-Option\-Start} (string value)
+void \hyperlink{classHTMLTags_a372570979ccc675e0ed752fe272e3cd6}{Select\-Option\-Start} (string value, string selected)
 \begin{DoxyCompactList}\small\item\em Select Option Start. \end{DoxyCompactList}\item 
 void \hyperlink{classHTMLTags_ae312980d20e3dea0469fdcb730fb975e}{Select\-Option\-End} ()
 \begin{DoxyCompactList}\small\item\em Selct Option End. \end{DoxyCompactList}\item 
@@ -112,7 +112,7 @@ string \hyperlink{classHTMLTags_ae987289d0dab2e3e234048615f930d0f}{start\-H1}
 
 Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \subsection*{Description\-: Declaration}
 
-Definition at line 30 of file htmltags.\-h.
+Definition at line 32 of file htmltags.\-h.
 
 
 
@@ -130,9 +130,13 @@ Constructor.
 
 
 
+ \subsubsection*{Include \hyperlink{htmltags_8h_source}{htmltags.\-h} header files}
+
+
+
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_a4f0bb4f538b87033b574ff05798eb60b}{H\-T\-M\-L\-Tags()} \subsubsection*{Description\-: Constructor}
 
-Definition at line 27 of file htmltags.\-cc.
+Definition at line 33 of file htmltags.\-cc.
 
 
 
@@ -152,7 +156,7 @@ Display $<$/\-B\-O\-D\-Y$>$
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_a7cae36bd3a0e6f35e89494e5cda64971}{Body\-End()} \subsubsection*{Description\-: Display }
 
-Definition at line 173 of file htmltags.\-cc.
+Definition at line 180 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_af1fb7b90b9ebb83177da18aba1ef86a9}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Body\-Start@{Body\-Start}}
 \index{Body\-Start@{Body\-Start}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -169,7 +173,7 @@ Display $<$\-B\-O\-D\-Y$>$
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_af1fb7b90b9ebb83177da18aba1ef86a9}{Body\-Start()} \subsubsection*{Description\-: Display }
 
-Definition at line 160 of file htmltags.\-cc.
+Definition at line 166 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_ab6dbb027d808e7b708a4ece7e911ceee}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Button@{Button}}
 \index{Button@{Button}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -189,7 +193,7 @@ Button.
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: Button(string id, string type, string class\-Name, string value) \subsubsection*{Description\-: Create button(next, submit, etc)}
 
-Definition at line 341 of file htmltags.\-cc.
+Definition at line 353 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_a4e9e18580cc7f2b82c82e4f81e39be50}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!C\-S\-S@{C\-S\-S}}
 \index{C\-S\-S@{C\-S\-S}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -206,7 +210,7 @@ Add External C\-S\-S.
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_a4e9e18580cc7f2b82c82e4f81e39be50}{C\-S\-S(string href)} \subsubsection*{Description\-: Add External C\-S\-S file}
 
-Definition at line 132 of file htmltags.\-cc.
+Definition at line 138 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_aa82b2d3d85b3afd29e5641dbe1ace439}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Div\-End@{Div\-End}}
 \index{Div\-End@{Div\-End}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -223,7 +227,7 @@ End div section.
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_aa82b2d3d85b3afd29e5641dbe1ace439}{Div\-End()} \subsubsection*{Description\-: Close Div Section}
 
-Definition at line 200 of file htmltags.\-cc.
+Definition at line 208 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_a897512b202cfd12729e8fa24e67ea4d6}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Div\-Start@{Div\-Start}}
 \index{Div\-Start@{Div\-Start}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -241,7 +245,7 @@ Start Div Section.
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_a897512b202cfd12729e8fa24e67ea4d6}{Div\-Start(string id, string class\-Name)} \subsubsection*{Description\-: Start Div Section with id and class\-Name(for C\-S\-S)}
 
-Definition at line 186 of file htmltags.\-cc.
+Definition at line 194 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_ab57baef28db9590ce59d0e2f403a210f}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Form\-End@{Form\-End}}
 \index{Form\-End@{Form\-End}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -258,7 +262,7 @@ End Form.
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_ab57baef28db9590ce59d0e2f403a210f}{Form\-End()} \subsubsection*{Description\-: Close Form}
 
-Definition at line 228 of file htmltags.\-cc.
+Definition at line 236 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_a1489ccf4629069eca5e550eeb8e8e887}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Form\-Start@{Form\-Start}}
 \index{Form\-Start@{Form\-Start}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -277,7 +281,7 @@ Start Form.
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: Form\-Start(string name, string action, string method) \subsubsection*{Description\-: Start Form with name, action and method(G\-E\-T/\-P\-O\-S\-T)}
 
-Definition at line 214 of file htmltags.\-cc.
+Definition at line 222 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_afdc779e46fac16cc79e4f0e87f621254}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Head\-End@{Head\-End}}
 \index{Head\-End@{Head\-End}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -294,7 +298,7 @@ Display $<$/\-H\-E\-A\-D$>$
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_afdc779e46fac16cc79e4f0e87f621254}{Head\-End()} \subsubsection*{Description\-: Display }
 
-Definition at line 106 of file htmltags.\-cc.
+Definition at line 112 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_af2b01cc08884af52e0b291d07035062e}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Head\-Start@{Head\-Start}}
 \index{Head\-Start@{Head\-Start}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -307,7 +311,7 @@ Definition at line 106 of file htmltags.\-cc.
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_af2b01cc08884af52e0b291d07035062e}{Head\-Start()} \subsubsection*{Description\-: Display }
 
-Definition at line 93 of file htmltags.\-cc.
+Definition at line 99 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_a6553c3d01ee194a1d157e6341333dee3}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!H\-T\-M\-L\-End@{H\-T\-M\-L\-End}}
 \index{H\-T\-M\-L\-End@{H\-T\-M\-L\-End}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -324,7 +328,7 @@ Display $<$/\-H\-T\-M\-L$>$
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_a6553c3d01ee194a1d157e6341333dee3}{H\-T\-M\-L\-End()} \subsubsection*{Description\-: Display }
 
-Definition at line 80 of file htmltags.\-cc.
+Definition at line 86 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_a567551cd701d2836d4240b2917b5e13f}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!H\-T\-M\-L\-Start@{H\-T\-M\-L\-Start}}
 \index{H\-T\-M\-L\-Start@{H\-T\-M\-L\-Start}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -341,17 +345,18 @@ Display $<$\-H\-T\-M\-L$>$
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_a567551cd701d2836d4240b2917b5e13f}{H\-T\-M\-L\-Start()} \subsubsection*{Description\-: Display  Tag }
 
-Definition at line 67 of file htmltags.\-cc.
+Definition at line 73 of file htmltags.\-cc.
 
-\hypertarget{classHTMLTags_ab515d13346f63b00f7696374e682344e}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Input\-Field@{Input\-Field}}
+\hypertarget{classHTMLTags_a705aef36f0847c2a5f10a5df8e079ce8}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Input\-Field@{Input\-Field}}
 \index{Input\-Field@{Input\-Field}!HTMLTags@{H\-T\-M\-L\-Tags}}
 \subsubsection[{Input\-Field}]{\setlength{\rightskip}{0pt plus 5cm}void H\-T\-M\-L\-Tags\-::\-Input\-Field (
 \begin{DoxyParamCaption}
 \item[{string}]{type, }
 \item[{string}]{name, }
+\item[{int}]{name\-No, }
 \item[{string}]{value}
 \end{DoxyParamCaption}
-)}}\label{classHTMLTags_ab515d13346f63b00f7696374e682344e}
+)}}\label{classHTMLTags_a705aef36f0847c2a5f10a5df8e079ce8}
 
 
 Input Field. 
@@ -360,7 +365,7 @@ Input Field.
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: Input\-Field(string type, string name, string value) Description\-: Create Input fields like text field, submit \subsubsection*{button, etc.}
 
-Definition at line 270 of file htmltags.\-cc.
+Definition at line 278 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_aea041d720f12a210615c95350774e6aa}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Javascript@{Javascript}}
 \index{Javascript@{Javascript}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -377,7 +382,7 @@ Add Javascript File.
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_aea041d720f12a210615c95350774e6aa}{Javascript(string src)} \subsubsection*{Description\-: Add external Javascript file}
 
-Definition at line 147 of file htmltags.\-cc.
+Definition at line 153 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_adde967a90e03f4b5168b9bffd319980b}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Select\-Field\-End@{Select\-Field\-End}}
 \index{Select\-Field\-End@{Select\-Field\-End}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -394,7 +399,7 @@ End Select Field.
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_adde967a90e03f4b5168b9bffd319980b}{Select\-Field\-End()} \subsubsection*{Description\-: Close select field}
 
-Definition at line 297 of file htmltags.\-cc.
+Definition at line 309 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_adb6e7ef0a1320dbf6d4acbe1ea3e418f}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Select\-Field\-Start@{Select\-Field\-Start}}
 \index{Select\-Field\-Start@{Select\-Field\-Start}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -411,7 +416,7 @@ Select Field Start.
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_adb6e7ef0a1320dbf6d4acbe1ea3e418f}{Select\-Field\-Start(string name)} \subsubsection*{Description\-: Create Select Field}
 
-Definition at line 284 of file htmltags.\-cc.
+Definition at line 296 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_ae312980d20e3dea0469fdcb730fb975e}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Select\-Option\-End@{Select\-Option\-End}}
 \index{Select\-Option\-End@{Select\-Option\-End}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -428,15 +433,16 @@ Selct Option End.
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_ae312980d20e3dea0469fdcb730fb975e}{Select\-Option\-End()} \subsubsection*{Description\-: Close select option}
 
-Definition at line 327 of file htmltags.\-cc.
+Definition at line 339 of file htmltags.\-cc.
 
-\hypertarget{classHTMLTags_a09f91c8601aed3aa2d0978123225afaa}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Select\-Option\-Start@{Select\-Option\-Start}}
+\hypertarget{classHTMLTags_a372570979ccc675e0ed752fe272e3cd6}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Select\-Option\-Start@{Select\-Option\-Start}}
 \index{Select\-Option\-Start@{Select\-Option\-Start}!HTMLTags@{H\-T\-M\-L\-Tags}}
 \subsubsection[{Select\-Option\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void H\-T\-M\-L\-Tags\-::\-Select\-Option\-Start (
 \begin{DoxyParamCaption}
-\item[{string}]{value}
+\item[{string}]{value, }
+\item[{string}]{selected}
 \end{DoxyParamCaption}
-)}}\label{classHTMLTags_a09f91c8601aed3aa2d0978123225afaa}
+)}}\label{classHTMLTags_a372570979ccc675e0ed752fe272e3cd6}
 
 
 Select Option Start. 
@@ -445,7 +451,7 @@ Select Option Start.
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: Select\-Option\-Start(string value, string selected) \subsubsection*{Description\-: Options for select }
 
-Definition at line 311 of file htmltags.\-cc.
+Definition at line 323 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_abe32ec84b6b2940afbc993be2db178e9}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Set\-H\-T\-M\-L\-Variables@{Set\-H\-T\-M\-L\-Variables}}
 \index{Set\-H\-T\-M\-L\-Variables@{Set\-H\-T\-M\-L\-Variables}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -462,7 +468,7 @@ Assingn Values to variables.
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_abe32ec84b6b2940afbc993be2db178e9}{Set\-H\-T\-M\-L\-Variables()} Description\-: Set values of common H\-T\-M\-L tags in respective \subsubsection*{variables.}
 
-Definition at line 42 of file htmltags.\-cc.
+Definition at line 48 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_a0655d9f70a8c1a61c406280d8fb9df7a}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Table\-End@{Table\-End}}
 \index{Table\-End@{Table\-End}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -479,7 +485,7 @@ End Table.
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_a0655d9f70a8c1a61c406280d8fb9df7a}{Table\-End()} \subsubsection*{Description\-: Close Table tag}
 
-Definition at line 255 of file htmltags.\-cc.
+Definition at line 263 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_a9d4bc37c7d615bc1d7f7c738dae48ad3}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Table\-Start@{Table\-Start}}
 \index{Table\-Start@{Table\-Start}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -497,7 +503,7 @@ Start Table.
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_a9d4bc37c7d615bc1d7f7c738dae48ad3}{Table\-Start(string id, string class\-Name)} \subsubsection*{Description\-: Start Table with id and class\-Name(\-C\-S\-S) attributes}
 
-Definition at line 241 of file htmltags.\-cc.
+Definition at line 249 of file htmltags.\-cc.
 
 \hypertarget{classHTMLTags_a5128d6f1c6be5ac1689047fc9d0d159f}{\index{H\-T\-M\-L\-Tags@{H\-T\-M\-L\-Tags}!Title@{Title}}
 \index{Title@{Title}!HTMLTags@{H\-T\-M\-L\-Tags}}
@@ -514,7 +520,7 @@ Display $<$\-T\-I\-T\-L\-E$>$ $<$/\-T\-I\-T\-L\-E$>$
 
  Class\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} Method\-: \hyperlink{classHTMLTags}{H\-T\-M\-L\-Tags} \-:\-: \hyperlink{classHTMLTags_a5128d6f1c6be5ac1689047fc9d0d159f}{Title(string page\-Title)} \subsubsection*{Description\-: Display Page Tile}
 
-Definition at line 119 of file htmltags.\-cc.
+Definition at line 125 of file htmltags.\-cc.
 
 
 
@@ -532,7 +538,7 @@ H\-T\-M\-L Tag Variables for
 
 
 
-Definition at line 36 of file htmltags.\-h.
+Definition at line 38 of file htmltags.\-h.
 
 
 
