@@ -20,6 +20,38 @@
  *  Include local header files
  *------------------------------------------------------------------*/
 
-#include "pagelayout.h"
-#include "inputfieldnames.h"
-#include "readfieldvalues.h"
+#include "filenames.h"                  /* I/O  File Names */
+#include "pagelayout.h"                 /* PageLayout Class */
+#include "inputfieldnames.h"            /* InputFieldNames Class */
+#include "readinputfields.h"            /* ReadInputFields Class */
+#include "constants.h"                  /* Constants for array size */
+
+/**
+ * ===================================================================
+ *        Class:  Details
+ *  Description:  Include common variables, functions that are used by
+ *  derived classes
+ * ===================================================================
+ */
+
+class Details : public PageLayout
+{
+    protected:
+        /* Common variables and objects */
+        
+        /** Objects of InputFieldNames and ReadFieldsValue class  */
+
+        InputFieldNames fieldName;
+        ReadInputFields readField;
+        
+        int i, j, k;                           /* Looping Variables */
+
+        stringstream ss;            /* for converting int to string */
+        string temp;                      /* for temporary strorage */
+
+    public:
+
+        Details();       
+        void Header(string titleName);
+        void Footer();
+};
