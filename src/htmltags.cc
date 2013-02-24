@@ -165,7 +165,7 @@ void HTMLTags :: Javascript(string src)
 
 void HTMLTags :: BodyStart()
 {
-    cout << "<BODY>" << endl;
+    cout << "<BODY align=\"center\">" << endl;
     DivStart("wrapper", "");                    /* (id, classname) */
 }
 

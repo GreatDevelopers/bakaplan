@@ -51,12 +51,16 @@ InputFieldNames :: InputFieldNames()
 
 void InputFieldNames :: SetFieldNames()
 {
-    /// Assign values of class details
+    /** Assign values of class details */
+
     className       =   "ClassName";
     totalClasses    =   "TotalClasses";
     totalSubjects   =   "TotalSubjects";
     subjectCode     =   "SubjectCode";
     subjectName     =   "SubjectName";
+    
+    /** variable for roll no fields */
+
     prefix          =   "Prefix";
     startRollNo     =   "StartRollNo";
     endRollNo       =   "EndRollNo";
