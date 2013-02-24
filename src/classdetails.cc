@@ -37,59 +37,47 @@
 ClassDetails :: ClassDetails()
 {
     //maxClasses      =   10;
-
-/*     className[maxClasses] = {"Info. Tech.", "10th", "ECE", 
-                              "Mech. Engg.", "Production Engg.", 
-                              "Electrical Engg.", "IT", 
-                              "Electronics Engg.", "Comp. Sci. Engg.", 
-                              "MBA"};
+    i = 0;
+    className[i]        =   "Info. Tech.";
+    className[i++]      =   "10th";
+    className[i++]      =   "ECE";
+    className[i++]      =   "Mech. Engg.";
+    className[i++]      =   "Production Engg.";
+    className[i++]      =   "Electrical Engg.";
+    className[i++]      =   "IT";
+    className[i++]      =   "Electronics Engg.";
+    className[i++]      =   "Comp. Sci. Engg.";
+    className[i++]      =   "MBA";
     
-    subjectName[maxClasses] = {"DBMS, SAD", "Maths,Physics", 
-                                "OS, EVS", "Java, C++", "EVS", 
-                                "Chem.", "ED", "Maths", 
-                                "Maths,DBMS, Physics", 
-                                "Multimedia, Dot Net, ED"};
+    i = 0;
+    subjectName[i]      =   "DBMS, SAD";
+    subjectName[i++]    =   "Maths,Physics";
+    subjectName[i++]    =   "OS, EVS";
+    subjectName[i++]    =   "Java, C++";
+    subjectName[i++]    =   "EVS";
+    subjectName[i++]    =   "Chem.";
+    subjectName[i++]    =   "ED";
+    subjectName[i++]    =   "Maths";
+    subjectName[i++]    =   "Maths,DBMS, Physics";
+    subjectName[i++]    =   "Multimedia, Dot Net, ED";
+
+    i = 0;
+    subjectCode[i]      =   "IT-101, IT-102";
+    subjectCode[i++]    =   "ME-10,CE-252";
+    subjectCode[i++]    =   "EVS, ED-10";
+    subjectCode[i++]    =   "ED-10, IT-102";
+    subjectCode[i++]    =   "IT-102";
+    subjectCode[i++]    =   "IT-203";
+    subjectCode[i++]    =   "CE-120";
+    subjectCode[i++]    =   "ME-140";
+    subjectCode[i++]    =   "EE-109, 1234S, IT-203";
+    subjectCode[i++]    =   "ME-101,ME-501,IT-101";
     
-    subjectCode[maxClasses] = {"IT-101, IT-102", "ME-10,CE-252", 
-                                "EVS, ED-10", "ED-10, IT-102", 
-                                "IT-102", "IT-203", "CE-120",
-                                "ME-140", "EE-109, 1234S, IT-203", 
-                                "ME-101,ME-501,IT-101" };
-
-    tableHeading[4] = {"Class Name", "Total Subjects", "Subject Name",
-                       "Subject Code"};
-*/
-}
-
-/**
- *--------------------------------------------------------------------
- *       Class:  ClassDetails
- *      Method:  ClassDetails :: Header()
- * Description:  Includes menu, logo, header of page
- *--------------------------------------------------------------------
- */
-
-void ClassDetails :: Header()
-{
-    HTMLStart();
-    Head("Class Details");
-    PageLayout :: Header();
-    BodyStart();
-    Logo("BaKaPlan");
-}
-
-/**
- *--------------------------------------------------------------------
- *       Class:  ClassDetails
- *      Method:  ClassDetails :: Footer()
- * Description:  Footer of page
- *--------------------------------------------------------------------
- */
-
-void ClassDetails :: Footer()
-{
-    BodyEnd();
-    HTMLEnd();
+    i = 0;
+    tableHeading[i]     =   "Class Name";
+    tableHeading[i++]   =   "Total Subjects";
+    tableHeading[i++]   =   "Subject Name";
+    tableHeading[i++]   =   "Subject Code";
 }
 
 /**
@@ -102,7 +90,7 @@ void ClassDetails :: Footer()
 
 void ClassDetails :: TotalClasses()
 {
-    Header();
+    Header("Total Classes");
     
     DivStart("totalclasses", "");               /* (id, classname) */
     FormStart("totalclasses", "classinfo.html", "POST");
@@ -114,7 +102,7 @@ void ClassDetails :: TotalClasses()
     
     for(i = 1; i <= maxClasses; i++)
     {
-        ss.clear(); ss.str("");
+        ss.clear(); ss.str("");        /* Empty stringstream object */
         ss << i;
         if(i == 5)
             SelectOptionStart(ss.str(), "Y");
@@ -150,7 +138,7 @@ void ClassDetails :: ClassInfo()
     temp = readField.ReadFieldValue(fieldName.totalClasses); 
     totalClasses = readField.StringToInt(temp);
     
-    Header();
+    Header("Class Details");
 
     DivStart("classinfo", "");                  /* (id, classname) */
     FormStart("classinfo", "rollnodetails.html", "POST");
@@ -189,7 +177,7 @@ void ClassDetails :: ClassInfo()
                 SelectOptionStart(ss.str(), "y");
             else if(i >= 4 && i <= 7 && j == 1)
                 SelectOptionStart(ss.str(), "y");
-            else if(i == 8 || i == 9 && j == 3)
+            else if((i == 8 || i == 9) && j == 3)
                 SelectOptionStart(ss.str(), "y");
             else
                 SelectOptionStart(ss.str(), "n");
