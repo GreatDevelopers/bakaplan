@@ -33,11 +33,12 @@ H_CONSTANTS			=	constants.h
 H_FILENAMES			=	filenames.h
 H_HEADER			=   header.h
 H_CGICC             =   cgicc.h
-H_HTMLTAGS          =   htmltags.h $(H_HEADER) $(H_FILENAMES) $(H_CONSTANTS)
+H_HTMLTAGS          =   htmltags.h $(H_HEADER)
 H_PAGELAYOUT        =   pagelayout.h $(H_HTMLTAGS)
-H_INPUTFIELDNAMES	=	inputfieldnames.h  $(H_HEADER)
+H_INPUTFIELDNAMES	=	inputfieldnames.h $(H_HEADER)
 H_READINPUTFIELDS	=   readinputfields.h $(H_HEADER) $(H_CGICC)
-H_CLASSDETAILS		=	classdetails.h $(H_PAGELAYOUT) $(H_INPUTFIELDNAMES)
+H_DETAILS           =   details.h $(H_PAGELAYOUT) $(H_INPUTFIELDNAMES) $(H_READINPUTFIELDS)
+H_CLASSDETAILS		=	classdetails.h $(H_DETAILS)
 
 # ====================================================================
 #	Variables for definition files (CC_FILENAME)
@@ -47,6 +48,7 @@ CC_HTMLTAGS			=	htmltags.cc
 CC_PAGELAYOUT		=	pagelayout.cc 
 CC_INPUTFIELDNAMES	=	inputfieldnames.cc 
 CC_READINPUTFIELDS	=	readinputfields.cc
+CC_DETAILS			=	details.cc
 CC_CLASSDETAILS		=	classdetails.cc
 CC_ROLLNODETAILS	=	rollnodetails.cc
 CC_ROOMDETAILS		=	roomdetails.cc
@@ -66,6 +68,7 @@ O_HTMLTAGS			=	htmltags.o
 O_PAGELAYOUT		=	pagelayout.o
 O_INPUTFIELDNAMES	=	inputfieldnames.o
 O_READINPUTFIELDS	=	readinputfields.o
+O_DETAILS			=	details.o
 O_CLASSDETAILS		=	classdetails.o
 O_TOTALCLASSES_MAIN	=	totalclasses-main.o
 O_CLASSINFO_MAIN	=	classinfo-main.o
@@ -75,9 +78,10 @@ O_CLASSINFO_MAIN	=	classinfo-main.o
 # ====================================================================
 
 L_PAGELAYOUT	=	$(O_HTMLTAGS) $(O_PAGELAYOUT)
-L_CLASSDETAILS	=	$(L_PAGELAYOUT) $(O_INPUTFIELDNAMES) $(O_CLASSDETAILS)
-L_TOTALCLASSES	=	$(O_READINPUTFIELDS) $(L_CLASSDETAILS) $(O_TOTALCLASSES_MAIN)
-L_CLASSINFO		=	$(O_READINPUTFIELDS) $(L_CLASSDETAILS) $(O_CLASSINFO_MAIN)		
+L_DETAILS		=	$(L_PAGELAYOUT) $(O_INPUTFIELDNAMES) $(O_READINPUTFIELDS) $(O_DETAILS)
+L_CLASSDETAILS	=	$(L_DETAILS) $(O_CLASSDETAILS)
+L_TOTALCLASSES	=	$(L_CLASSDETAILS) $(O_TOTALCLASSES_MAIN)
+L_CLASSINFO		=	$(L_CLASSDETAILS) $(O_CLASSINFO_MAIN)		
 
 # ====================================================================
 # 	O/P file names(exe) (E_FILENAME)
@@ -107,6 +111,9 @@ $(O_INPUTFIELDNAMES): $(CC_INPUTFIELDNAMES) $(H_INPUTFIELDNAMES)
 
 $(O_READINPUTFIELDS): $(CC_READINPUTFIELDS) $(H_READINPUTFIELDS)
 	$(CC) $(CFLAG) $(CC_READINPUTFIELDS) $(LCGICC)
+
+$(O_DETAILS): $(CC_DETAILS) $(H_DETAILS)
+	$(CC) $(CFLAG) $(CC_DETAILS)
 
 $(O_CLASSDETAILS): $(CC_CLASSDETAILS) $(H_CLASSDETAILS)
 	$(CC) $(CFLAG) $(CC_CLASSDETAILS)
