@@ -19,9 +19,16 @@
 # 	Variables
 # ====================================================================
 
-MAKE		=	cd src && make && cd ..
-CLEAN		=	cd src && make clean && cd ..
-MAKE_SRC	=	make_src
+MAKE			=	cd src && make && cd ..
+CLEAN			=	cd src && make clean && cd ..
+COPY_HOMEPAGE	=	cp -r BaKaPlan ~/public_html/
+COPY_DOC 		=	cp -r Documentation ~/public_html/BaKaPlan/
+COPY			=	$(COPY_HOMEPAGE) && $(COPY_DOC)
+
+# Target Names
+
+T_MAKE_SRC		=	make_src
+T_COPY			=	copy
 
 # ====================================================================
 #	Main target (1st target)
@@ -35,6 +42,9 @@ all: $(MAKE_SRC)
 
 $(MAKE_SRC): 
 	$(MAKE)
+
+$(T_COPY):
+	$(COPY)	
 
 # ====================================================================
 # 	Clean .o, .html files
