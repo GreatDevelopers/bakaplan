@@ -24,6 +24,7 @@ DEBUG	=	-g					# Debugging flag
 CFLAG   =   -c $(WALL) $(DEBUG) # Compilation flag
 OFLAG   =   $(DEBUG) -o         # O/p Flag
 LCGICC  =   -lcgicc     		# cgicc lib flag
+LMYSQL	=	-L/usr/include/mysql -lmysqlclient -I/usr/include/mysql
 
 # ====================================================================
 #   Variables for header files (H_HEADER_FILE_NAME)
@@ -33,6 +34,7 @@ H_CONSTANTS			=	constants.h
 H_FILENAMES			=	filenames.h
 H_HEADER			=   header.h
 H_CGICC             =   cgicc.h
+H_MYSQL				=	mysql.h $(H_HEADER)
 H_HTMLTAGS          =   htmltags.h $(H_HEADER)
 H_PAGELAYOUT        =   pagelayout.h $(H_HTMLTAGS)
 H_INPUTFIELDNAMES	=	inputfieldnames.h $(H_HEADER)
@@ -44,6 +46,7 @@ H_CLASSDETAILS		=	classdetails.h $(H_DETAILS)
 #	Variables for definition files (CC_FILENAME)
 # ====================================================================
 
+CC_MYSQL			=	mysql.cc
 CC_HTMLTAGS			=	htmltags.cc
 CC_PAGELAYOUT		=	pagelayout.cc 
 CC_INPUTFIELDNAMES	=	inputfieldnames.cc 
@@ -64,6 +67,7 @@ M_CLASSINFO			=	classinfo-main.cpp
 #	Variables for object files
 # ====================================================================
 
+O_MYSQL				=	mysql.o
 O_HTMLTAGS			=	htmltags.o
 O_PAGELAYOUT		=	pagelayout.o
 O_INPUTFIELDNAMES	=	inputfieldnames.o
@@ -99,6 +103,9 @@ all: $(E_TOTALCLASSES) $(E_CLASSINFO)
 # ====================================================================
 #	targets for compiling .cc or .cpp files
 # ====================================================================
+
+$(O_MYSQL):	$(CC_MYSQL) $(H_MYSQL)
+	$(CC) $(CFLAG) $(CC_MYSQL)
 
 $(O_HTMLTAGS): $(CC_HTMLTAGS) $(H_HTMLTAGS) 
 	$(CC) $(CFLAG) $(CC_HTMLTAGS)
