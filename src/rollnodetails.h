@@ -21,9 +21,7 @@
  *  Include required header files
  *------------------------------------------------------------------*/
 
-#include "pagelayout.h"
-#include "inputfieldnames.h"
-#include "readinputfields.h"
+#include "details.h"
 
 /**
  * ===================================================================
@@ -32,7 +30,7 @@
  * ===================================================================
  */
 
-class RollNoDetails : public PageLayout
+class RollNoDetails : public Details
 {
     protected:
         /// for storing values of class details
@@ -41,9 +39,6 @@ class RollNoDetails : public PageLayout
                endRollNo[MIN_SIZE],
                notIncluded[MIN_SIZE];
         int totalClasses;
-
-        InputFieldNames fieldName;
-        ReadInputFields readField;
 
     public:
         /// Constructor

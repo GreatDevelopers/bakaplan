@@ -77,5 +77,3 @@ void RollNoDetails :: WriteClassDetails()
 
     outFile.close();
 }
-
-void 
