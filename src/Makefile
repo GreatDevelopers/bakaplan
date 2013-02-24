@@ -41,6 +41,7 @@ H_INPUTFIELDNAMES	=	inputfieldnames.h $(H_HEADER)
 H_READINPUTFIELDS	=   readinputfields.h $(H_HEADER) $(H_CGICC)
 H_DETAILS           =   details.h $(H_PAGELAYOUT) $(H_INPUTFIELDNAMES) $(H_READINPUTFIELDS)
 H_CLASSDETAILS		=	classdetails.h $(H_DETAILS)
+H_ROLNODETAILS		=	rollnodetails.h $(H_DETAILS)
 
 # ====================================================================
 #	Variables for definition files (CC_FILENAME)
@@ -74,6 +75,10 @@ O_INPUTFIELDNAMES	=	inputfieldnames.o
 O_READINPUTFIELDS	=	readinputfields.o
 O_DETAILS			=	details.o
 O_CLASSDETAILS		=	classdetails.o
+O_ROLLNODETAILS		=	rollnodetails.o
+
+# Object files of main files
+
 O_TOTALCLASSES_MAIN	=	totalclasses-main.o
 O_CLASSINFO_MAIN	=	classinfo-main.o
 
@@ -82,8 +87,13 @@ O_CLASSINFO_MAIN	=	classinfo-main.o
 # ====================================================================
 
 L_PAGELAYOUT	=	$(O_HTMLTAGS) $(O_PAGELAYOUT)
-L_DETAILS		=	$(L_PAGELAYOUT) $(O_INPUTFIELDNAMES) $(O_READINPUTFIELDS) $(O_DETAILS)
+L_FIELDS		=	$(O_INPUTFIELDNAMES) $(O_READINPUTFIELDS)
+L_DETAILS		=	$(L_PAGELAYOUT) $(L_FIELDS) $(O_DETAILS)
 L_CLASSDETAILS	=	$(L_DETAILS) $(O_CLASSDETAILS)
+L_ROLLNODETAILS	=	$(L_DETAILS) $(O_ROLLNODETAILS)
+
+# Linking of main files
+
 L_TOTALCLASSES	=	$(L_CLASSDETAILS) $(O_TOTALCLASSES_MAIN)
 L_CLASSINFO		=	$(L_CLASSDETAILS) $(O_CLASSINFO_MAIN)		
 
