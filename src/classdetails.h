@@ -4,8 +4,8 @@
  *       Filename:  classdetails.h
  *
  *    Description:  Declaration of ClassDetails class to getting
- *    details like total classes, classname, subjects its code and
- *    name, etc.
+ *                  details like total classes, classname, subjects 
+ *                  its code and name, etc.
  *
  *        Version:  0.6
  *        Created:  Saturday 16 February 2013 11:14:34  IST
@@ -34,11 +34,12 @@ const int maxClasses = 10;
  * ===================================================================
  *        Class:  ClassDetails
  *  Description:  This class is used to get details of class from 
- *  user. Like class name, total classes, subject details etc.
+ *                user. Like class name, total classes, subject 
+ *                details etc.
  * ===================================================================
  */
 
-class ClassDetails : public Details
+class ClassDetails : public Detail
 {
     protected:
 //        const int maxClasses = 15;     /* max. classes for user i/p */

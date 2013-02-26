@@ -4,7 +4,7 @@
  *       Filename:  htmltags.h
  *
  *    Description:  This file includes basic HTML tags that included
- *    for all pages like <HTML>, <HEAD>, </HEAD>, etc.
+ *                  for all pages like <HTML>, <HEAD>, </HEAD>, etc.
  *
  *        Version:  0.6
  *        Created:  Friday 15 February 2013 05:08:42  IST

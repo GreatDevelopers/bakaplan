@@ -34,7 +34,7 @@
  * ===================================================================
  */
 
-class Details : public PageLayout
+class Detail : public PageLayout
 {
     protected:
         /* Common variables and objects */
@@ -51,7 +51,7 @@ class Details : public PageLayout
 
     public:
 
-        Details();       
+        Detail();       
         void Header(string titleName);
         void Footer();
 };

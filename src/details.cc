@@ -28,26 +28,26 @@
 
 /**
  *--------------------------------------------------------------------
- *       Class:  Details
- *      Method:  Details :: Details()
+ *       Class:  Detail
+ *      Method:  Detail :: Detail()
  * Description:  Constructor
  *--------------------------------------------------------------------
  */
 
-Details :: Details()
+Detail :: Detail()
 {
 
 }
 
 /**
  *--------------------------------------------------------------------
- *       Class:  Details
- *      Method:  Details :: Header(string titleName)
+ *       Class:  Detail
+ *      Method:  Detail :: Header(string titleName)
  * Description:  common header for all pages(start html, head, body)
  *--------------------------------------------------------------------
  */
 
-void Details :: Header(string titleName)
+void Detail :: Header(string titleName)
 {
     
     HTMLStart();
@@ -59,13 +59,13 @@ void Details :: Header(string titleName)
 
 /**
  *--------------------------------------------------------------------
- *       Class:  Details
- *      Method:  Details :: Footer()
+ *       Class:  Detail
+ *      Method:  Detail :: Footer()
  * Description:  Common for all pages(end body, html)
  *--------------------------------------------------------------------
  */
 
-void Details :: Footer()
+void Detail :: Footer()
 {
     BodyEnd();
     HTMLEnd();
