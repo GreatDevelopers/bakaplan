@@ -104,9 +104,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * ===================================================================</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/**-------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *  Incude header file which has ClassDetails&#39;s declaration</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;classdetails.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/**-------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  Defnition of member functions</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *--------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> *       Class:  ClassDetails</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *      Method:  ClassDetails :: ClassDetails()</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> * Description:  Constructor</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> *--------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="classClassDetails.html#af8fb7a92c63d62a03a60c47476f4523a">   37</a></span>&#160;<a class="code" href="classClassDetails.html#af8fb7a92c63d62a03a60c47476f4523a" title="Constructor.">ClassDetails :: ClassDetails</a>()</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">//maxClasses      =   10;</span></div>
@@ -152,7 +168,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    tableHeading[i++]   =   <span class="stringliteral">&quot;Subject Name&quot;</span>;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    tableHeading[i++]   =   <span class="stringliteral">&quot;Subject Code&quot;</span>;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"> *--------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"> *       Class:  ClassDetails</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment"> *      Method:  ClassDetails :: TotalClasses()</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"> * Description:  Get Total classes from user</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"> *--------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
 <div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="classClassDetails.html#a2a63d68979d3ac96d35e6534414799ef">   91</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classClassDetails.html#a2a63d68979d3ac96d35e6534414799ef" title="Get total classes.">ClassDetails :: TotalClasses</a>()</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="classPageLayout.html#a7726061f0653245f644a05807fa92472">Header</a>(<span class="stringliteral">&quot;Total Classes&quot;</span>);</div>
@@ -163,7 +187,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    cout &lt;&lt; <a class="code" href="classHTMLTags.html#ae987289d0dab2e3e234048615f930d0f" title="HTML Tag Variables for , , , etc.">startH1</a> &lt;&lt; <span class="stringliteral">&quot; Select Total Classes &quot;</span> &lt;&lt; endH1 &lt;&lt; brk;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    </div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot; Total Branches &quot;</span>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="classHTMLTags.html#adb6e7ef0a1320dbf6d4acbe1ea3e418f" title="Select Field Start.">SelectFieldStart</a>(<a class="code" href="classDetails.html#ae3bcb91c433e3c4b1a6c535670d23594">fieldName</a>.totalClasses);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="classHTMLTags.html#adb6e7ef0a1320dbf6d4acbe1ea3e418f" title="Select Field Start.">SelectFieldStart</a>(<a class="code" href="classDetail.html#a7da00e7f92734d799537ba843479a753">fieldName</a>.totalClasses);</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">for</span>(i = 1; i &lt;= maxClasses; i++)</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div>
@@ -186,12 +210,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="classHTMLTags.html#ab57baef28db9590ce59d0e2f403a210f" title="End Form.">FormEnd</a>();</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="classHTMLTags.html#aa82b2d3d85b3afd29e5641dbe1ace439" title="End div section.">DivEnd</a>();</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="classDetails.html#a1247e8124e16032be1aa8eca9fd2832a">Footer</a>();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="classDetail.html#a4744b0917a632c5a5ca5418b240be7b3">Footer</a>();</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment"> *--------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment"> *       Class:  ClassDetails</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment"> *      Method:  ClassDetails :: ClassInfo()</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment"> * Description:  Get class name, subject code and subject name from</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment"> * user.</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment"> *--------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
 <div class="line"><a name="l00136"></a><span class="lineno"><a class="code" href="classClassDetails.html#a7eed324cd736c68fe4b420de481e3b17">  136</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classClassDetails.html#a7eed324cd736c68fe4b420de481e3b17">ClassDetails :: ClassInfo</a>()</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    temp = readField.<a class="code" href="classReadInputFields.html#af35265a8e8b09cbc574bef000aab4c63" title="Public Member Functions.">ReadFieldValue</a>(<a class="code" href="classDetails.html#ae3bcb91c433e3c4b1a6c535670d23594">fieldName</a>.totalClasses); </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    temp = readField.<a class="code" href="classReadInputFields.html#af35265a8e8b09cbc574bef000aab4c63" title="Public Member Functions.">ReadFieldValue</a>(<a class="code" href="classDetail.html#a7da00e7f92734d799537ba843479a753">fieldName</a>.totalClasses); </div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    totalClasses = readField.<a class="code" href="classReadInputFields.html#ad159b3d281b3a5ce8b3384059e0e4d25" title="Convert String to Integer.">StringToInt</a>(temp);</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    </div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="classPageLayout.html#a7726061f0653245f644a05807fa92472">Header</a>(<span class="stringliteral">&quot;Class Details&quot;</span>);</div>
@@ -202,7 +235,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    ss.clear(); ss.str(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    ss &lt;&lt; totalClasses;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="classHTMLTags.html#a705aef36f0847c2a5f10a5df8e079ce8" title="Input Field.">InputField</a>(<span class="stringliteral">&quot;hidden&quot;</span>, <a class="code" href="classDetails.html#ae3bcb91c433e3c4b1a6c535670d23594">fieldName</a>.totalClasses, 0, ss.str());</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="classHTMLTags.html#a705aef36f0847c2a5f10a5df8e079ce8" title="Input Field.">InputField</a>(<span class="stringliteral">&quot;hidden&quot;</span>, <a class="code" href="classDetail.html#a7da00e7f92734d799537ba843479a753">fieldName</a>.totalClasses, 0, ss.str());</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    cout &lt;&lt; <a class="code" href="classHTMLTags.html#ae987289d0dab2e3e234048615f930d0f" title="HTML Tag Variables for , , , etc.">startH1</a> &lt;&lt; <span class="stringliteral">&quot;Enter Branch Details&quot;</span> &lt;&lt; endH1 &lt;&lt; brk;</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="classHTMLTags.html#a9d4bc37c7d615bc1d7f7c738dae48ad3" title="Start Table.">TableStart</a>(<span class="stringliteral">&quot;classdetails&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
@@ -219,11 +252,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        cout &lt;&lt; startTR;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        </div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        cout &lt;&lt; startTD;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <a class="code" href="classHTMLTags.html#a705aef36f0847c2a5f10a5df8e079ce8" title="Input Field.">InputField</a>(<span class="stringliteral">&quot;text&quot;</span>, <a class="code" href="classDetails.html#ae3bcb91c433e3c4b1a6c535670d23594">fieldName</a>.<a class="code" href="classInputFieldNames.html#a171ac43b7f0c5b5ab9fad8f3417dfb5c" title="Field Names.">className</a>, (i+1), className[i]);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <a class="code" href="classHTMLTags.html#a705aef36f0847c2a5f10a5df8e079ce8" title="Input Field.">InputField</a>(<span class="stringliteral">&quot;text&quot;</span>, <a class="code" href="classDetail.html#a7da00e7f92734d799537ba843479a753">fieldName</a>.<a class="code" href="classInputFieldNames.html#a171ac43b7f0c5b5ab9fad8f3417dfb5c" title="Field Names.">className</a>, (i+1), className[i]);</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        cout &lt;&lt; endTD;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        </div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        cout &lt;&lt; startTD;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <a class="code" href="classHTMLTags.html#adb6e7ef0a1320dbf6d4acbe1ea3e418f" title="Select Field Start.">SelectFieldStart</a>(<a class="code" href="classDetails.html#ae3bcb91c433e3c4b1a6c535670d23594">fieldName</a>.totalSubjects);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <a class="code" href="classHTMLTags.html#adb6e7ef0a1320dbf6d4acbe1ea3e418f" title="Select Field Start.">SelectFieldStart</a>(<a class="code" href="classDetail.html#a7da00e7f92734d799537ba843479a753">fieldName</a>.totalSubjects);</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">for</span>(j = 1; j &lt;= 3; j++)</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        {</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            stringstream ss;</div>
@@ -244,11 +277,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        cout &lt;&lt; endTD;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        </div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        cout &lt;&lt; startTD;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <a class="code" href="classHTMLTags.html#a705aef36f0847c2a5f10a5df8e079ce8" title="Input Field.">InputField</a>(<span class="stringliteral">&quot;text&quot;</span>, <a class="code" href="classDetails.html#ae3bcb91c433e3c4b1a6c535670d23594">fieldName</a>.subjectName, (i+1), subjectName[i]);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <a class="code" href="classHTMLTags.html#a705aef36f0847c2a5f10a5df8e079ce8" title="Input Field.">InputField</a>(<span class="stringliteral">&quot;text&quot;</span>, <a class="code" href="classDetail.html#a7da00e7f92734d799537ba843479a753">fieldName</a>.subjectName, (i+1), subjectName[i]);</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        cout &lt;&lt; endTD;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        </div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        cout &lt;&lt; startTD;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <a class="code" href="classHTMLTags.html#a705aef36f0847c2a5f10a5df8e079ce8" title="Input Field.">InputField</a>(<span class="stringliteral">&quot;text&quot;</span>, <a class="code" href="classDetails.html#ae3bcb91c433e3c4b1a6c535670d23594">fieldName</a>.subjectCode, (i+1), subjectCode[i]);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <a class="code" href="classHTMLTags.html#a705aef36f0847c2a5f10a5df8e079ce8" title="Input Field.">InputField</a>(<span class="stringliteral">&quot;text&quot;</span>, <a class="code" href="classDetail.html#a7da00e7f92734d799537ba843479a753">fieldName</a>.subjectCode, (i+1), subjectCode[i]);</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        cout &lt;&lt; endTD;</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        cout &lt;&lt; endTR;</div>
@@ -262,12 +295,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <a class="code" href="classHTMLTags.html#ab57baef28db9590ce59d0e2f403a210f" title="End Form.">FormEnd</a>();</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <a class="code" href="classHTMLTags.html#aa82b2d3d85b3afd29e5641dbe1ace439" title="End div section.">DivEnd</a>();</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <a class="code" href="classDetails.html#a1247e8124e16032be1aa8eca9fd2832a">Footer</a>();</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <a class="code" href="classDetail.html#a4744b0917a632c5a5ca5418b240be7b3">Footer</a>();</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 24 2013 16:31:44 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 26 2013 16:35:18 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
