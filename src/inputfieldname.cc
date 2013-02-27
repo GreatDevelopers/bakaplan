@@ -1,7 +1,7 @@
 /*
  * ===================================================================
  *
- *       Filename:  inputfieldnames.cc
+ *       Filename:  inputfieldname.cc
  *
  *    Description:  Definition of InputFieldName's member functions.
  *
@@ -21,7 +21,7 @@
  *  Declaration
  *------------------------------------------------------------------*/
 
-#include "inputfieldnames.h"
+#include "inputfieldname.h"
 
 /**-------------------------------------------------------------------
  *  Definition of member functions

@@ -1,7 +1,7 @@
 /*
  * ===================================================================
  *
- *       Filename:  classdetails.cc
+ *       Filename:  classdetail.cc
  *
  *    Description:  Definition of ClassDetail's member functions.
  *
@@ -20,7 +20,7 @@
  *  Incude header file which has ClassDetail's declaration
  *------------------------------------------------------------------*/
 
-#include "classdetails.h"
+#include "classdetail.h"
 
 /**-------------------------------------------------------------------
  *  Defnition of member functions
@@ -74,7 +74,7 @@ ClassDetail :: ClassDetail()
     subjectCode[i++]    =   "ME-101,ME-501,IT-101";
     
     i = 0;
-    tableHeading[i++]     =   "Class Name";
+    tableHeading[i++]   =   "Class Name";
     tableHeading[i++]   =   "Total Subjects";
     tableHeading[i++]   =   "Subject Name";
     tableHeading[i++]   =   "Subject Code";
@@ -100,7 +100,7 @@ void ClassDetail :: TotalClasses()
 
     cout << startH1 << " Select Total Classes " << endH1 << brk;
     
-    cout << " Total Branches ";
+    cout << " Total Classes ";
     SelectFieldStart(fieldName.totalClasses);
     
     for(i = 1; i <= maxClasses; i++)

@@ -21,7 +21,7 @@
  *  Include classdetails.h header file
  *------------------------------------------------------------------*/
 
-#include "classdetails.h"
+#include "classdetail.h"
 
 /**-------------------------------------------------------------------
  *  Main Method
@@ -29,8 +29,8 @@
 
 int main(void)
 {
-    ClassDetails classdetails;
-    classdetails.TotalClasses();
+    ClassDetail classdetail;
+    classdetail.TotalClasses();
 
     return 0;
 }
