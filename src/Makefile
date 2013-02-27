@@ -35,8 +35,8 @@ H_FILENAMES			=	filenames.h
 H_HEADER			=   header.h
 H_CGICC             =   cgicc.h
 H_MYSQL				=	mysql.h $(H_HEADER)
-H_HTMLTAGS          =   htmltags.h $(H_HEADER)
-H_PAGELAYOUT        =   pagelayout.h $(H_HTMLTAGS)
+H_PAGESTRUCTURE     =   pagestructure.h $(H_HEADER)
+H_PAGELAYOUT        =   pagelayout.h $(H_PAGESTUCTURE)
 H_INPUTFIELDNAMES	=	inputfieldnames.h $(H_HEADER)
 H_READINPUTFIELDS	=   readinputfields.h $(H_HEADER) $(H_CGICC)
 H_DETAILS           =   details.h $(H_PAGELAYOUT) $(H_INPUTFIELDNAMES) $(H_READINPUTFIELDS)
@@ -48,7 +48,7 @@ H_ROLNODETAILS		=	rollnodetails.h $(H_DETAILS)
 # ====================================================================
 
 CC_MYSQL			=	mysql.cc
-CC_HTMLTAGS			=	htmltags.cc
+CC_PAGESTRUCTURE	=	pagestructure.cc
 CC_PAGELAYOUT		=	pagelayout.cc 
 CC_INPUTFIELDNAMES	=	inputfieldnames.cc 
 CC_READINPUTFIELDS	=	readinputfields.cc
@@ -69,7 +69,7 @@ M_CLASSINFO			=	classinfo-main.cpp
 # ====================================================================
 
 O_MYSQL				=	mysql.o
-O_HTMLTAGS			=	htmltags.o
+O_PAGESTRUCTURE		=	pagestructure.o
 O_PAGELAYOUT		=	pagelayout.o
 O_INPUTFIELDNAMES	=	inputfieldnames.o
 O_READINPUTFIELDS	=	readinputfields.o
@@ -86,7 +86,7 @@ O_CLASSINFO_MAIN	=	classinfo-main.o
 #	Linking Variables (L_EXE_FILENAME)
 # ====================================================================
 
-L_PAGELAYOUT	=	$(O_HTMLTAGS) $(O_PAGELAYOUT)
+L_PAGELAYOUT	=	$(O_PAGESTRUCTURE) $(O_PAGELAYOUT)
 L_FIELDS		=	$(O_INPUTFIELDNAMES) $(O_READINPUTFIELDS)
 L_DETAILS		=	$(L_PAGELAYOUT) $(L_FIELDS) $(O_DETAILS)
 L_CLASSDETAILS	=	$(L_DETAILS) $(O_CLASSDETAILS)
@@ -117,8 +117,8 @@ all: $(E_TOTALCLASSES) $(E_CLASSINFO)
 $(O_MYSQL):	$(CC_MYSQL) $(H_MYSQL)
 	$(CC) $(CFLAG) $(CC_MYSQL)
 
-$(O_HTMLTAGS): $(CC_HTMLTAGS) $(H_HTMLTAGS) 
-	$(CC) $(CFLAG) $(CC_HTMLTAGS)
+$(O_PAGESTRUCTURE): $(CC_PAGSTRUCTURE) $(H_PAGESTRUCTURE) 
+	$(CC) $(CFLAG) $(CC_PAGESTRUCTURE)
 
 $(O_PAGELAYOUT): $(CC_PAGELAYOUT) $(H_PAGELAYOUT)
 	$(CC) $(CFLAG) $(CC_PAGELAYOUT)
