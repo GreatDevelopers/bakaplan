@@ -21,7 +21,7 @@
  *  Include classdetails.h header file for calling ClassInfo function  
  *------------------------------------------------------------------*/
 
-#include "classdetails.h"
+#include "classdetail.h"
                                                 
 /**-------------------------------------------------------------------
  *  Main method
