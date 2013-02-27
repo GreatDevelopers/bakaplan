@@ -38,7 +38,7 @@ ClassDetails :: ClassDetails()
 {
     //maxClasses      =   10;
     i = 0;
-    className[i]        =   "Info. Tech.";
+    className[i++]      =   "Info. Tech.";
     className[i++]      =   "10th";
     className[i++]      =   "ECE";
     className[i++]      =   "Mech. Engg.";
@@ -50,7 +50,7 @@ ClassDetails :: ClassDetails()
     className[i++]      =   "MBA";
     
     i = 0;
-    subjectName[i]      =   "DBMS, SAD";
+    subjectName[i++]    =   "DBMS, SAD";
     subjectName[i++]    =   "Maths,Physics";
     subjectName[i++]    =   "OS, EVS";
     subjectName[i++]    =   "Java, C++";
@@ -62,7 +62,7 @@ ClassDetails :: ClassDetails()
     subjectName[i++]    =   "Multimedia, Dot Net, ED";
 
     i = 0;
-    subjectCode[i]      =   "IT-101, IT-102";
+    subjectCode[i++]    =   "IT-101, IT-102";
     subjectCode[i++]    =   "ME-10,CE-252";
     subjectCode[i++]    =   "EVS, ED-10";
     subjectCode[i++]    =   "ED-10, IT-102";
@@ -74,7 +74,7 @@ ClassDetails :: ClassDetails()
     subjectCode[i++]    =   "ME-101,ME-501,IT-101";
     
     i = 0;
-    tableHeading[i]     =   "Class Name";
+    tableHeading[i++]     =   "Class Name";
     tableHeading[i++]   =   "Total Subjects";
     tableHeading[i++]   =   "Subject Name";
     tableHeading[i++]   =   "Subject Code";
