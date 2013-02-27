@@ -93,6 +93,9 @@ void ClassDetails :: TotalClasses()
     Header("Total Classes");
     
     DivStart("totalclasses", "");               /* (id, classname) */
+    
+    cout << brk;
+
     FormStart("totalclasses", "classinfo.html", "POST");
 
     cout << startH1 << " Select Total Classes " << endH1 << brk;
@@ -140,6 +143,9 @@ void ClassDetails :: ClassInfo()
     Header("Class Details");
 
     DivStart("classinfo", "");                  /* (id, classname) */
+
+    cout << brk;
+
     FormStart("classinfo", "rollnodetails.html", "POST");
     
     InputField("hidden", fieldName.totalClasses, 0, 
@@ -186,11 +192,13 @@ void ClassDetails :: ClassInfo()
         cout << endTD;
         */
         cout << startTD;
-        InputField("text", fieldName.subjectName, (i+1), subjectName[i]);
+        InputField("text", fieldName.subjectName, (i + 1), 
+                    subjectName[i]);
         cout << endTD;
         
         cout << startTD;
-        InputField("text", fieldName.subjectCode, (i+1), subjectCode[i]);
+        InputField("text", fieldName.subjectCode, (i + 1), 
+                    subjectCode[i]);
         cout << endTD;
 
         cout << endTR;
