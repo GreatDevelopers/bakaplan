@@ -22,7 +22,7 @@
  *  Include Required Header Files
  *------------------------------------------------------------------*/
 
-#include "detail.h"
+#include "inputdetail.h"
 
 /**-------------------------------------------------------------------
  *  Constant varibles
@@ -39,7 +39,7 @@ const int maxClasses = 10;
  * ===================================================================
  */
 
-class ClassDetail : public Detail
+class ClassDetail : public InputDetail
 {
     protected:
 //        const int maxClasses = 15;     /* max. classes for user i/p */

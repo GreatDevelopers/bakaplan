@@ -4,7 +4,7 @@
  *       Filename:  database.h
  *
  *    Description:  Database details like database name, username,
- *    password.
+ *                  password.
  *
  *        Version:  0.6
  *        Created:  Friday 22 February 2013 12:46:23  IST
@@ -18,7 +18,7 @@
  */
 
 /**-------------------------------------------------------------------
- *  define variables
+ *  define variables for DB Details
  *------------------------------------------------------------------*/
 
 #define SERVER "localhost"
@@ -33,6 +33,5 @@
 #define PROJECT_NAME "ProjectName"
 #define TOTAL_CLASSES "TotalClasses"        /* totalclasses table  */
 #define CLASS_DETAILS "ClassDetails"        /* class details: class 
-                                               name, total subjects,
-                                               subject name, subject 
-                                               code */
+                                               name, subject name, 
+                                               subject code */

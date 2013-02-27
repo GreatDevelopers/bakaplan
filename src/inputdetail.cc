@@ -1,9 +1,9 @@
 /*
  * ===================================================================
  *
- *       Filename:  detail.cc
+ *       Filename:  inputdetail.cc
  *
- *    Description:  Definition of member functions of Detail class
+ *    Description:  Definition of member functions of InputDetail class
  *
  *        Version:  0.6
  *        Created:  Sunday 24 February 2013 01:31:21  IST
@@ -20,7 +20,7 @@
  *  Include detail.h file
  *------------------------------------------------------------------*/
 
-#include "detail.h"
+#include "inputdetail.h"
 
 /**-------------------------------------------------------------------
  *  Definition of member functions
@@ -28,26 +28,26 @@
 
 /**
  *--------------------------------------------------------------------
- *       Class:  Detail
- *      Method:  Detail :: Detail()
+ *       Class:  InputDetail
+ *      Method:  InputDetail :: InputDetail()
  * Description:  Constructor
  *--------------------------------------------------------------------
  */
 
-Detail :: Detail()
+InputDetail :: InputDetail()
 {
 
 }
 
 /**
  *--------------------------------------------------------------------
- *       Class:  Detail
- *      Method:  Detail :: Header(string titleName)
+ *       Class:  InputDetail
+ *      Method:  InputDetail :: Header(string titleName)
  * Description:  common header for all pages(start html, head, body)
  *--------------------------------------------------------------------
  */
 
-void Detail :: Header(string titleName)
+void InputDetail :: Header(string titleName)
 {
     
     HTMLStart();
@@ -59,13 +59,13 @@ void Detail :: Header(string titleName)
 
 /**
  *--------------------------------------------------------------------
- *       Class:  Detail
- *      Method:  Detail :: Footer()
+ *       Class:  InputDetail
+ *      Method:  InputDetail :: Footer()
  * Description:  Common for all pages(end body, html)
  *--------------------------------------------------------------------
  */
 
-void Detail :: Footer()
+void InputDetail :: Footer()
 {
     BodyEnd();
     HTMLEnd();
@@ -73,13 +73,13 @@ void Detail :: Footer()
 
 /**
  *--------------------------------------------------------------------
- *       Class:  Detail
- *      Method:  Detail :: IntToString(int value)
+ *       Class:  InputDetail
+ *      Method:  InputDetail :: IntToString(int value)
  * Description:  Convert Int to String using stringstream object
  *--------------------------------------------------------------------
  */
 
-string Detail :: IntToString(int value)
+string InputDetail :: IntToString(int value)
 {
      ss.clear(); ss.str("");          /*  Empty stringstream object */
      ss << value;

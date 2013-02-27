@@ -29,13 +29,13 @@
 
 /**
  * ===================================================================
- *        Class:  Detail
+ *        Class:  InputDetail
  *  Description:  Include common variables, functions that are used by
  *                derived classes
  * ===================================================================
  */
 
-class Detail : public PageLayout
+class InputDetail : public PageLayout
 {
     protected:
         /* Common variables and objects */
@@ -52,7 +52,7 @@ class Detail : public PageLayout
 
     public:
 
-        Detail();       
+        InputDetail();       
         void Header(string titleName);
         void Footer();
         string IntToString(int value);
