@@ -102,12 +102,11 @@ void ClassDetails :: TotalClasses()
     
     for(i = 1; i <= maxClasses; i++)
     {
-        ss.clear(); ss.str("");        /* Empty stringstream object */
-        ss << i;
+        temp = IntToString(i);
         if(i == 5)
-            SelectOptionStart(ss.str(), "Y");
+            SelectOptionStart(temp, "Y");
         else
-            SelectOptionStart(ss.str(), "n");
+            SelectOptionStart(temp, "n");
         cout << i;
         SelectOptionEnd();
     }
@@ -143,10 +142,8 @@ void ClassDetails :: ClassInfo()
     DivStart("classinfo", "");                  /* (id, classname) */
     FormStart("classinfo", "rollnodetails.html", "POST");
     
-    ss.clear(); ss.str("");
-    ss << totalClasses;
-
-    InputField("hidden", fieldName.totalClasses, 0, ss.str());
+    InputField("hidden", fieldName.totalClasses, 0, 
+                IntToString(totalClasses));
 
     cout << startH1 << "Enter Branch Details" << endH1 << brk;
     TableStart("classdetails", "");
@@ -170,17 +167,16 @@ void ClassDetails :: ClassInfo()
         SelectFieldStart(fieldName.totalSubjects);
         for(j = 1; j <= 3; j++)
         {
-            stringstream ss;
-            ss << j;
-            
+            temp = IntToString(j);
+
             if(i >= 0 && i <= 3 && j == 2)
-                SelectOptionStart(ss.str(), "y");
+                SelectOptionStart(temp, "y");
             else if(i >= 4 && i <= 7 && j == 1)
-                SelectOptionStart(ss.str(), "y");
+                SelectOptionStart(temp, "y");
             else if((i == 8 || i == 9) && j == 3)
-                SelectOptionStart(ss.str(), "y");
+                SelectOptionStart(temp, "y");
             else
-                SelectOptionStart(ss.str(), "n");
+                SelectOptionStart(temp, "n");
             cout << j;
             SelectOptionEnd();
         }
