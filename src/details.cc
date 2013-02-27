@@ -3,7 +3,7 @@
  *
  *       Filename:  details.cc
  *
- *    Description:  Definition of member functions of Details class
+ *    Description:  Definition of member functions of Detail class
  *
  *        Version:  0.6
  *        Created:  Sunday 24 February 2013 01:31:21  IST
@@ -69,4 +69,19 @@ void Detail :: Footer()
 {
     BodyEnd();
     HTMLEnd();
+}
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  Detail
+ *      Method:  Detail :: IntToString(int value)
+ * Description:  Convert Int to String using stringstream object
+ *--------------------------------------------------------------------
+ */
+
+string Detail :: IntToString(int value)
+{
+     ss.clear(); ss.str("");          /*  Empty stringstream object */
+     ss << value;
+     return ss.str();
 }

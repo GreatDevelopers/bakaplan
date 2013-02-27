@@ -1,9 +1,10 @@
 /*
  * ===================================================================
  *
- *       Filename:  details.h
+ *       Filename:  detail.h
  *
- *    Description:  Base class for all common variable declaration
+ *    Description:  Base class for all common variable declaration and
+ *                  functions that are used by derived classes
  *
  *        Version:  0.6
  *        Created:  Friday 22 February 2013 11:34:29  IST
@@ -30,7 +31,7 @@
  * ===================================================================
  *        Class:  Details
  *  Description:  Include common variables, functions that are used by
- *  derived classes
+ *                derived classes
  * ===================================================================
  */
 
@@ -54,4 +55,5 @@ class Detail : public PageLayout
         Detail();       
         void Header(string titleName);
         void Footer();
+        string IntToString(int value);
 };
