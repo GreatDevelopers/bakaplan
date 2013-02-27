@@ -39,7 +39,7 @@ H_PAGESTRUCTURE     =   pagestructure.h $(H_HEADER)
 H_PAGELAYOUT        =   pagelayout.h $(H_PAGESTUCTURE)
 H_INPUTFIELDNAMES	=	inputfieldname.h $(H_HEADER)
 H_READINPUTFIELDS	=   readinputfield.h $(H_HEADER) $(H_CGICC)
-H_DETAILS           =   detail.h $(H_PAGELAYOUT) $(H_INPUTFIELDNAMES) $(H_READINPUTFIELDS)
+H_DETAILS           =   inputdetail.h $(H_PAGELAYOUT) $(H_INPUTFIELDNAMES) $(H_READINPUTFIELDS)
 H_CLASSDETAILS		=	classdetail.h $(H_DETAILS)
 H_ROLNODETAILS		=	rollnodetail.h $(H_DETAILS)
 
@@ -52,7 +52,7 @@ CC_PAGESTRUCTURE	=	pagestructure.cc
 CC_PAGELAYOUT		=	pagelayout.cc 
 CC_INPUTFIELDNAMES	=	inputfieldname.cc 
 CC_READINPUTFIELDS	=	readinputfield.cc
-CC_DETAILS			=	detail.cc
+CC_DETAILS			=	inputdetail.cc
 CC_CLASSDETAILS		=	classdetail.cc
 CC_ROLLNODETAILS	=	rollnodetail.cc
 CC_ROOMDETAILS		=	roomdetail.cc
@@ -73,7 +73,7 @@ O_PAGESTRUCTURE		=	pagestructure.o
 O_PAGELAYOUT		=	pagelayout.o
 O_INPUTFIELDNAMES	=	inputfieldname.o
 O_READINPUTFIELDS	=	readinputfield.o
-O_DETAILS			=	detail.o
+O_DETAILS			=	inputdetail.o
 O_CLASSDETAILS		=	classdetail.o
 O_ROLLNODETAILS		=	rollnodetail.o
 
