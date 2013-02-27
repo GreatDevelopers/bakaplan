@@ -30,18 +30,18 @@ LMYSQL	=	-L/usr/include/mysql -lmysqlclient -I/usr/include/mysql
 #   Variables for header files (H_HEADER_FILE_NAME)
 # ====================================================================
 
-H_CONSTANTS			=	constants.h
-H_FILENAMES			=	filenames.h
+H_CONSTANTS			=	constant.h
+H_FILENAMES			=	filename.h
 H_HEADER			=   header.h
 H_CGICC             =   cgicc.h
 H_MYSQL				=	mysql.h $(H_HEADER)
 H_PAGESTRUCTURE     =   pagestructure.h $(H_HEADER)
 H_PAGELAYOUT        =   pagelayout.h $(H_PAGESTUCTURE)
-H_INPUTFIELDNAMES	=	inputfieldnames.h $(H_HEADER)
-H_READINPUTFIELDS	=   readinputfields.h $(H_HEADER) $(H_CGICC)
-H_DETAILS           =   details.h $(H_PAGELAYOUT) $(H_INPUTFIELDNAMES) $(H_READINPUTFIELDS)
-H_CLASSDETAILS		=	classdetails.h $(H_DETAILS)
-H_ROLNODETAILS		=	rollnodetails.h $(H_DETAILS)
+H_INPUTFIELDNAMES	=	inputfieldname.h $(H_HEADER)
+H_READINPUTFIELDS	=   readinputfield.h $(H_HEADER) $(H_CGICC)
+H_DETAILS           =   detail.h $(H_PAGELAYOUT) $(H_INPUTFIELDNAMES) $(H_READINPUTFIELDS)
+H_CLASSDETAILS		=	classdetail.h $(H_DETAILS)
+H_ROLNODETAILS		=	rollnodetail.h $(H_DETAILS)
 
 # ====================================================================
 #	Variables for definition files (CC_FILENAME)
@@ -50,12 +50,12 @@ H_ROLNODETAILS		=	rollnodetails.h $(H_DETAILS)
 CC_MYSQL			=	mysql.cc
 CC_PAGESTRUCTURE	=	pagestructure.cc
 CC_PAGELAYOUT		=	pagelayout.cc 
-CC_INPUTFIELDNAMES	=	inputfieldnames.cc 
-CC_READINPUTFIELDS	=	readinputfields.cc
-CC_DETAILS			=	details.cc
-CC_CLASSDETAILS		=	classdetails.cc
-CC_ROLLNODETAILS	=	rollnodetails.cc
-CC_ROOMDETAILS		=	roomdetails.cc
+CC_INPUTFIELDNAMES	=	inputfieldname.cc 
+CC_READINPUTFIELDS	=	readinputfield.cc
+CC_DETAILS			=	detail.cc
+CC_CLASSDETAILS		=	classdetail.cc
+CC_ROLLNODETAILS	=	rollnodetail.cc
+CC_ROOMDETAILS		=	roomdetail.cc
 
 # ====================================================================
 #	Variables for main method files (M_FILENAME)
@@ -71,11 +71,11 @@ M_CLASSINFO			=	classinfo-main.cpp
 O_MYSQL				=	mysql.o
 O_PAGESTRUCTURE		=	pagestructure.o
 O_PAGELAYOUT		=	pagelayout.o
-O_INPUTFIELDNAMES	=	inputfieldnames.o
-O_READINPUTFIELDS	=	readinputfields.o
-O_DETAILS			=	details.o
-O_CLASSDETAILS		=	classdetails.o
-O_ROLLNODETAILS		=	rollnodetails.o
+O_INPUTFIELDNAMES	=	inputfieldname.o
+O_READINPUTFIELDS	=	readinputfield.o
+O_DETAILS			=	detail.o
+O_CLASSDETAILS		=	classdetail.o
+O_ROLLNODETAILS		=	rollnodetail.o
 
 # Object files of main files
 
