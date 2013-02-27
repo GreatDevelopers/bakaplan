@@ -1,10 +1,11 @@
 /*
  * ===================================================================
  *
- *       Filename:  htmltags.h
+ *       Filename:  pagestructure.h
  *
- *    Description:  This file includes basic HTML tags that included
- *                  for all pages like <HTML>, <HEAD>, </HEAD>, etc.
+ *    Description:  Definition of class PageStructureMaker. This file 
+ *                  includes basic HTML tags that included for all 
+ *                  pages like <HTML>, <HEAD>, </HEAD>, etc.
  *
  *        Version:  0.6
  *        Created:  Friday 15 February 2013 05:08:42  IST
@@ -22,90 +23,89 @@
 
 /**
  * ===================================================================
- *        Class:  HTMLTags
+ *        Class:  PageStructureMaker
  *  Description:  Declaration
  * ===================================================================
  */
 
-class HTMLTags
+class PageStructureMaker
 {
     private:
 
     protected:
-        /// HTML Tag Variables for <td>, </td>, <th>, etc
+        /** HTML Tag Variables for td, th, bold, etc */
         string startH1, endH1, startH3, endH3, startTD, endTD, startTH,
                endTH, startTR, endTR, startB, endB, brk;
 
     public:
-        /// Constructor 
-        HTMLTags();
+        /** Constructor */
+        PageStructureMaker();
 
-        /// Assingn Values to variables
+        /** Assingn Values to variables */
         void SetHTMLVariables();
 
-        /// Display <HTML>
+        /** Display <HTML> */
         void HTMLStart();                   
         
-        /// Display </HTML>
+        /** Display </HTML> */
         void HTMLEnd();                     
         
-        // Display <HEAD> 
+        /** Display <HEAD> */
         void HeadStart();                   
         
-        /// Display </HEAD>
+        /** Display </HEAD> */
         void HeadEnd();                     
         
-        /// Display <TITLE> </TITLE>
+        /** Display <TITLE> </TITLE> */
         void Title(string pageTitle);       
         
-        /// Add External CSS 
+        /** Add External CSS */
         void CSS(string href);              
         
-        /// Add Javascript File 
+        /** Add Javascript File */
         void Javascript(string src);        
         
-        /// Display <BODY> 
+        /** Display <BODY> */
         void BodyStart();                   
         
-        /// Display </BODY> 
+        /** Display </BODY> */
         void BodyEnd();
 
-        /// Start Div Section
+        /** Start Div Section */
         void DivStart(string id, string className);
 
-        /// End div section
+        /** End div section */
         void DivEnd();
 
-        /// Start Form
+        /** Start Form */
         void FormStart(string name, string action, string method);
 
-        /// End Form
+        /** End Form */
         void FormEnd();
 
-        /// Start Table
+        /** Start Table */
         void TableStart(string id, string className);
 
-        /// End Table
+        /** End Table */
         void TableEnd();
 
-        /// Input Field
+        /** Input Field */
         void InputField(string type, string name, int nameNo, 
                         string value);
 
-        /// Select Field Start
+        /** Select Field Start */
         void SelectFieldStart(string name);
 
-        /// End Select Field
+        /** End Select Field */
         void SelectFieldEnd();
 
-        /// Select Option Start
+        /** Select Option Start */
         void SelectOptionStart(string value, string selected);
 
-        /// Selct Option End
+        /** Selct Option End */
         void SelectOptionEnd();
 
-        /// Button 
+        /** Button */
         void Button(string id, string type, string className, 
                     string value);
-
 };
