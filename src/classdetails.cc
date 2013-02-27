@@ -128,7 +128,7 @@ void ClassDetails :: TotalClasses()
  *       Class:  ClassDetails
  *      Method:  ClassDetails :: ClassInfo()
  * Description:  Get class name, subject code and subject name from
- * user.
+ *               user.
  *--------------------------------------------------------------------
  */
 
@@ -150,8 +150,9 @@ void ClassDetails :: ClassInfo()
     
     cout << startTR;
     for(i = 0; i < 4; i++)
-    {
-        cout << startTH << tableHeading[i] << endTH;
+    {   
+        if(i != 1)
+            cout << startTH << tableHeading[i] << endTH;
     }
     cout << endTR;
 
@@ -163,6 +164,7 @@ void ClassDetails :: ClassInfo()
         InputField("text", fieldName.className, (i+1), className[i]);
         cout << endTD;
         
+        /* 
         cout << startTD;
         SelectFieldStart(fieldName.totalSubjects);
         for(j = 1; j <= 3; j++)
@@ -182,7 +184,7 @@ void ClassDetails :: ClassInfo()
         }
         SelectFieldEnd();
         cout << endTD;
-        
+        */
         cout << startTD;
         InputField("text", fieldName.subjectName, (i+1), subjectName[i]);
         cout << endTD;
