@@ -25,12 +25,12 @@
 /**
  *--------------------------------------------------------------------
  *       Class:  PageStructureMaker
- *      Method:  PageStructureMaker :: HTMLTags()
+ *      Method:  PageStructureMaker :: PageStructureMaker()
  * Description:  Constructor
  *--------------------------------------------------------------------
  */
 
-PageStructureMaker :: HTMLTags()
+PageStructureMaker :: PageStructureMaker()
 {
     cout << "Content-type:text/html\n\n" << endl;
     SetHTMLVariables();

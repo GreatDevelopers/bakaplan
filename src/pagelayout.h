@@ -4,7 +4,7 @@
  *       Filename:  pagelayout.h
  *
  *    Description:  Add Header, Footer, Menus to webpage(output html
- *    pages. PageLayout Class for this purpose.
+ *                  pages. PageLayout Class for this purpose.
  *
  *        Version:  0.6
  *        Created:  Friday 15 February 2013 06:10:40  IST
@@ -21,23 +21,22 @@
  *  Include required header files
  *------------------------------------------------------------------*/
 
-#include "htmltags.h"                       /* For basic HTML Tags */
+#include "pagestructure.h"                   /* For basic HTML Tags */
 
 /**
  * ===================================================================
- *        Class:  PageLayout : public HTMLTags
+ *        Class:  PageLayout : public PageStructureMaker
  *  Description:  For adding header and footer to page
  * ===================================================================
  */
 
-class PageLayout : public HTMLTags
+class PageLayout : public PageStructureMaker
 {
     protected:
-        /** Project Name = BaKaPlan */
-        string projectName;             
+        string projectName;              /* Project Name = BaKaPlan */
         
-        ifstream inFile;
-        ofstream outFile;
+        ifstream inFile;                        /* For Reading file */
+        ofstream outFile;                       /* For writing file */
 
     public:
         /** Constructor */
@@ -55,6 +54,6 @@ class PageLayout : public HTMLTags
         /** Logo on Page */
         void Logo(string logoName);    
 
-        /// Head Section of Page
+        /** Head Section of Page */
         void Head(string titleName);
 };
