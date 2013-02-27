@@ -3,7 +3,7 @@
  *
  *       Filename:  readinputfields.h
  *
- *    Description:  Declaration of ReadInputFields i.e. used to read
+ *    Description:  Declaration of ReadInputField i.e. used to read
  *    value of any field using cgicc library.
  *
  *        Version:  0.6
@@ -27,13 +27,13 @@
 
 /**
  * ===================================================================
- *        Class:  ReadInputFields
+ *        Class:  ReadInputField
  *  Description:  For reading values of fields like textbox, select,
  *                etc.
  * ===================================================================
  */
 
-class ReadInputFields
+class ReadInputField
 {
     protected:
         /// For storing value of field
@@ -45,7 +45,7 @@ class ReadInputFields
 
     public:
         /// Constructor
-        ReadInputFields(){}
+        ReadInputField(){}
 
         /// Public Member Functions
         

@@ -3,7 +3,7 @@
  *
  *       Filename:  inputfieldnames.h
  *
- *    Description:  Declaration of InputFieldNames Class ie used to
+ *    Description:  Declaration of InputFieldName Class ie used to
  *    store input field names.
  *
  *        Version:  0.6
@@ -25,13 +25,13 @@
                                                 
 /**
  * ===================================================================
- *        Class:  InputFieldNames
+ *        Class:  InputFieldName
  *  Description:  This class has variable names for all fields that
  *                are used to take input from user.
  * ===================================================================
  */
 
-class InputFieldNames
+class InputFieldName
 {
     public:
         /// Field Names
@@ -51,6 +51,6 @@ class InputFieldNames
                                                     included in seating 
                                                     plan */
     public:
-        InputFieldNames();
+        InputFieldName();
         void SetFieldNames();
 };

@@ -1,7 +1,7 @@
 /*
  * ===================================================================
  *
- *       Filename:  details.cc
+ *       Filename:  detail.cc
  *
  *    Description:  Definition of member functions of Detail class
  *
@@ -17,10 +17,10 @@
  */
 
 /**-------------------------------------------------------------------
- *  Include details.h file
+ *  Include detail.h file
  *------------------------------------------------------------------*/
 
-#include "details.h"
+#include "detail.h"
 
 /**-------------------------------------------------------------------
  *  Definition of member functions

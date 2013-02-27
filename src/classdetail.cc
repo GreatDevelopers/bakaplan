@@ -3,7 +3,7 @@
  *
  *       Filename:  classdetails.cc
  *
- *    Description:  Definition of ClassDetails's member functions.
+ *    Description:  Definition of ClassDetail's member functions.
  *
  *        Version:  0.6
  *        Created:  Saturday 16 February 2013 11:15:42  IST
@@ -17,7 +17,7 @@
  */
 
 /**-------------------------------------------------------------------
- *  Incude header file which has ClassDetails's declaration
+ *  Incude header file which has ClassDetail's declaration
  *------------------------------------------------------------------*/
 
 #include "classdetails.h"
@@ -28,13 +28,13 @@
 
 /**
  *--------------------------------------------------------------------
- *       Class:  ClassDetails
- *      Method:  ClassDetails :: ClassDetails()
+ *       Class:  ClassDetail
+ *      Method:  ClassDetail :: ClassDetail()
  * Description:  Constructor
  *--------------------------------------------------------------------
  */
 
-ClassDetails :: ClassDetails()
+ClassDetail :: ClassDetail()
 {
     //maxClasses      =   10;
     i = 0;
@@ -82,13 +82,13 @@ ClassDetails :: ClassDetails()
 
 /**
  *--------------------------------------------------------------------
- *       Class:  ClassDetails
- *      Method:  ClassDetails :: TotalClasses()
+ *       Class:  ClassDetail
+ *      Method:  ClassDetail :: TotalClasses()
  * Description:  Get Total classes from user
  *--------------------------------------------------------------------
  */
 
-void ClassDetails :: TotalClasses()
+void ClassDetail :: TotalClasses()
 {
     Header("Total Classes");
     
@@ -128,14 +128,14 @@ void ClassDetails :: TotalClasses()
 
 /**
  *--------------------------------------------------------------------
- *       Class:  ClassDetails
- *      Method:  ClassDetails :: ClassInfo()
+ *       Class:  ClassDetail
+ *      Method:  ClassDetail :: ClassInfo()
  * Description:  Get class name, subject code and subject name from
  *               user.
  *--------------------------------------------------------------------
  */
 
-void ClassDetails :: ClassInfo()
+void ClassDetail :: ClassInfo()
 {
     temp = readField.ReadFieldValue(fieldName.totalClasses); 
     totalClasses = readField.StringToInt(temp);

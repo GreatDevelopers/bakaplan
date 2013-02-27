@@ -3,7 +3,7 @@
  *
  *       Filename:  roomdetails.cc
  *
- *    Description:  Definition of member functions of RoomDetails
+ *    Description:  Definition of member functions of RoomDetail
  *    Class.
  *
  *        Version:  0.6

@@ -3,7 +3,7 @@
  *
  *       Filename:  readinputfields.cc
  *
- *    Description:  Definition of ReadInputFields's member functions.
+ *    Description:  Definition of ReadInputField's member functions.
  *
  *        Version:  0.6
  *        Created:  Saturday 16 February 2013 02:32:31  IST
@@ -17,24 +17,24 @@
  */
 
 /**-------------------------------------------------------------------
- *  Include Header file of ReadInputFields class declaration
+ *  Include Header file of ReadInputField class declaration
  *------------------------------------------------------------------*/
 
 #include "readinputfields.h"
 
 /**-------------------------------------------------------------------
- *  Definition of member functions of ReadInputFields Class
+ *  Definition of member functions of ReadInputField Class
  *------------------------------------------------------------------*/
 
 /**
  *--------------------------------------------------------------------
- *       Class:  ReadInputFields
- *      Method:  ReadInputFields :: ReadFieldValue(string fieldName)
+ *       Class:  ReadInputField
+ *      Method:  ReadInputField :: ReadFieldValue(string fieldName)
  * Description:  Read field's value and return it as string
  *--------------------------------------------------------------------
  */
 
-string ReadInputFields :: ReadFieldValue(string fieldName)
+string ReadInputField :: ReadFieldValue(string fieldName)
 {
     fi = formData.getElement(fieldName);  
  
@@ -50,14 +50,14 @@ string ReadInputFields :: ReadFieldValue(string fieldName)
 
 /**
  *--------------------------------------------------------------------
- *       Class:  ReadInputFields
- *      Method:  ReadInputFields :: ReadFieldValue(string fieldName, 
+ *       Class:  ReadInputField
+ *      Method:  ReadInputField :: ReadFieldValue(string fieldName, 
  *               int fieldNo)
  * Description:  Read field's value and return it as string
  *--------------------------------------------------------------------
  */
 
-string ReadInputFields :: ReadFieldValue(string fieldName, int fieldNo)
+string ReadInputField :: ReadFieldValue(string fieldName, int fieldNo)
 {
     std::stringstream no;
     no << (fieldNo + 1);
@@ -68,13 +68,13 @@ string ReadInputFields :: ReadFieldValue(string fieldName, int fieldNo)
 
 /**
  *--------------------------------------------------------------------
- *       Class:  ReadInputFields
- *      Method:  ReadInputFields :: StringToInt(string value)
+ *       Class:  ReadInputField
+ *      Method:  ReadInputField :: StringToInt(string value)
  * Description:  Converts string value to integer
  *--------------------------------------------------------------------
  */
 
-int ReadInputFields :: StringToInt(string value)
+int ReadInputField :: StringToInt(string value)
 {
     return atoi(value.c_str());
 }

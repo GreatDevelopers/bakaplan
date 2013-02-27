@@ -3,7 +3,7 @@
  *
  *       Filename:  roomdetails.h
  *
- *    Description:  Declaration of RoomDetails Class for getting
+ *    Description:  Declaration of RoomDetail Class for getting
  *    information about rooms, its rows and columns, also total
  *    centres and its names.
  *

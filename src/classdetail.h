@@ -1,9 +1,9 @@
 /*
  * ===================================================================
  *
- *       Filename:  classdetails.h
+ *       Filename:  classdetail.h
  *
- *    Description:  Declaration of ClassDetails class to getting
+ *    Description:  Declaration of ClassDetail class to getting
  *                  details like total classes, classname, subjects 
  *                  its code and name, etc.
  *
@@ -22,7 +22,7 @@
  *  Include Required Header Files
  *------------------------------------------------------------------*/
 
-#include "details.h"
+#include "detail.h"
 
 /**-------------------------------------------------------------------
  *  Constant varibles
@@ -32,14 +32,14 @@ const int maxClasses = 10;
 
 /**
  * ===================================================================
- *        Class:  ClassDetails
+ *        Class:  ClassDetail
  *  Description:  This class is used to get details of class from 
  *                user. Like class name, total classes, subject 
  *                details etc.
  * ===================================================================
  */
 
-class ClassDetails : public Detail
+class ClassDetail : public Detail
 {
     protected:
 //        const int maxClasses = 15;     /* max. classes for user i/p */
@@ -52,7 +52,7 @@ class ClassDetails : public Detail
 
     public:
         /// Constructor
-        ClassDetails();
+        ClassDetail();
 
         /// Get total classes 
         void TotalClasses();

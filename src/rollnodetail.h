@@ -3,7 +3,7 @@
  *
  *       Filename:  rollnodetails.h
  *
- *    Description:  Declaration of RollNoDetails class for getting
+ *    Description:  Declaration of RollNoDetail class for getting
  *    roll no details of classes.
  *
  *        Version:  0.6
@@ -25,12 +25,12 @@
 
 /**
  * ===================================================================
- *        Class:  RollNoDetails
- *  Description:  RollNoDetails class for 
+ *        Class:  RollNoDetail
+ *  Description:  RollNoDetail class for 
  * ===================================================================
  */
 
-class RollNoDetails : public Details
+class RollNoDetail : public Details
 {
     protected:
         /// for storing values of class details
@@ -42,7 +42,7 @@ class RollNoDetails : public Details
 
     public:
         /// Constructor
-        RollNoDetails();
+        RollNoDetail();
 
         /// Reading class details from previous page using cgicc
         ReadClassDetails();

@@ -29,7 +29,7 @@
 
 int main(void)
 {
-   ClassDetails classInfo;
+   ClassDetail classInfo;
    classInfo.ClassInfo();
 
    return 0;

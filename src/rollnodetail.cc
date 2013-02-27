@@ -3,7 +3,7 @@
  *
  *       Filename:  rollnodetails.cc
  *
- *    Description:  Definition of RollNoDetails's member functions.
+ *    Description:  Definition of RollNoDetail's member functions.
  *
  *        Version:  0.6
  *        Created:  Saturday 16 February 2013 11:17:41  IST
@@ -17,37 +17,37 @@
  */
 
 /**-------------------------------------------------------------------
- *  Include rollnodetails.h for RollNoDetails class declaration
+ *  Include rollnodetails.h for RollNoDetail class declaration
  *------------------------------------------------------------------*/
 
 #include "rollnodetils.h"
 
 /**-------------------------------------------------------------------
- *  Definition of functions RollNoDetails Class
+ *  Definition of functions RollNoDetail Class
  *------------------------------------------------------------------*/
 
 /**
  *--------------------------------------------------------------------
- *       Class:  RollNoDetails
- *      Method:  RollNoDetails :: RollNoDetails()
+ *       Class:  RollNoDetail
+ *      Method:  RollNoDetail :: RollNoDetail()
  * Description:  Constructor
  *--------------------------------------------------------------------
  */
 
-RollNoDetails :: RollNoDetails()
+RollNoDetail :: RollNoDetail()
 {
 
 }
 
 /**
  *--------------------------------------------------------------------
- *       Class:  RollNoDetails
- *      Method:  RollNoDetails :: ReadClassDetails()
+ *       Class:  RollNoDetail
+ *      Method:  RollNoDetail :: ReadClassDetails()
  * Description:  For reading class details from previous page
  *--------------------------------------------------------------------
  */
 
-void RollNoDetails :: ReadClassDetails()
+void RollNoDetail :: ReadClassDetails()
 {
    temp = readField.ReadFieldValue(fieldName.totalClasses);
    totalClasses = readField.StringToIn(temp);
@@ -63,7 +63,7 @@ void RollNoDetails :: ReadClassDetails()
    }
 }
 
-void RollNoDetails :: WriteClassDetails()
+void RollNoDetail :: WriteClassDetails()
 {
     outFile.open(CLASS_DETAILS_IN);
     
