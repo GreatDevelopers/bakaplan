@@ -3,11 +3,10 @@
  *
  *       Filename:  database.h
  *
- *    Description:  Database details like database name, username,
- *                  password.
+ *    Description:  Declaring Database class for using database.
  *
  *        Version:  0.6
- *        Created:  Friday 22 February 2013 12:46:23  IST
+ *        Created:  Friday 22 February 2013 12:48:40  IST
  *       Compiler:  gcc
  *
  *         Author:  Mandeep Kaur, meghasimak@gmail.com
@@ -18,20 +17,48 @@
  */
 
 /**-------------------------------------------------------------------
- *  define variables for DB Details
+ *  Include header.h and database.h
  *------------------------------------------------------------------*/
 
-#define SERVER "localhost"
-#define USER "bakaplan"
-#define PASSWORD "password"
-#define DATABASE "bakaplan"
+#include "header.h"
+#include "database-detail.h"
+#include <mysql.h>
 
-/**-------------------------------------------------------------------
- *  Table Names
- *------------------------------------------------------------------*/
+/**
+ * ===================================================================
+ *        Class:  Database
+ *  Description:  Database class for database accessability
+ * ===================================================================
+ */
 
-#define PROJECT_NAME "ProjectName"
-#define TOTAL_CLASSES "TotalClasses"        /* totalclasses table  */
-#define CLASS_DETAILS "ClassDetails"        /* class details: class 
-                                               name, subject name, 
-                                               subject code */
+class Database
+{
+    protected:
+        /** MySQL connectivity Variables */
+        MYSQL *connect;
+        MYSQL_RES *res_set;
+        MYSQL_ROW row;
+        
+        /** Table names tTablename */
+        string tLogin, tRegister, tProjectDetail;
+
+        int i, j;
+        string query;
+
+    public:
+        /** Database Constructor */
+        Database();
+
+        /** Select MySQL command with 2 arguments */
+        void Select(string column, string tableName);
+
+        /** Select command with 3 arguments */
+        void Select(string column, string tableName, 
+                    string whereClause);
+        
+        /** Insert into ProjectName */
+        void Insert(int projectID, string projectName, string tableName);
+
+        /** Database Destructor */
+        ~Database();
+};
