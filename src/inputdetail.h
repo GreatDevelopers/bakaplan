@@ -23,9 +23,10 @@
 
 #include "filename.h"                            /* I/O  File Names */
 #include "pagelayout.h"                         /* PageLayout Class */
-#include "inputfieldname.h"                /* InputFieldName Class */
-#include "readinputfield.h"                /* ReadInputField Class */
+#include "inputfieldname.h"                 /* InputFieldName Class */
+#include "readinputfield.h"                 /* ReadInputField Class */
 #include "constant.h"                   /* Constants for array size */
+#include "database.h"                  /* For database connectivity */
 
 /**
  * ===================================================================
