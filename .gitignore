@@ -6,6 +6,6 @@
 *.log
 *.toc
 
-*.o
+src/*.o
 
-*.html
+src/*.html
