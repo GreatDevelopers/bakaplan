@@ -1,0 +1,123 @@
+\hypertarget{classDatabase}{\section{Database Class Reference}
+\label{classDatabase}\index{Database@{Database}}
+}
+
+
+{\ttfamily \#include $<$database.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDatabase_a4703c80e6969d33565ea340f768fdadf}{Database} ()
+\item 
+void \hyperlink{classDatabase_aaa4186192d40229b61e2b910a4aa8fa0}{Select} (string column, string table\-Name)
+\item 
+void \hyperlink{classDatabase_a6cb8f64ba23bf85d3161e7c17771dd89}{Select} (string column, string table\-Name, string where\-Clause)
+\item 
+\hyperlink{classDatabase_a2cf59655e870fe29cd5b18c0c47444e9}{Insert} (int project\-I\-D, string project\-Name, string table\-Name)
+\item 
+\hyperlink{classDatabase_a84d399a2ad58d69daab9b05330e1316d}{$\sim$\-Database} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+M\-Y\-S\-Q\-L $\ast$ \hyperlink{classDatabase_aa232b806b05ef654cd5579bca5f1dbad}{connect}
+\item 
+\hypertarget{classDatabase_ad5921cd2f70d0c22895f2cc5542ab4d7}{M\-Y\-S\-Q\-L\-\_\-\-R\-E\-S $\ast$ {\bfseries res\-\_\-set}}\label{classDatabase_ad5921cd2f70d0c22895f2cc5542ab4d7}
+
+\item 
+\hypertarget{classDatabase_a71ad7ae59677936d2ca6666f9de9df40}{M\-Y\-S\-Q\-L\-\_\-\-R\-O\-W {\bfseries row}}\label{classDatabase_a71ad7ae59677936d2ca6666f9de9df40}
+
+\item 
+string \hyperlink{classDatabase_acd64ff0e98b28cd1c6928a1236634521}{t\-Login}
+\item 
+\hypertarget{classDatabase_aa8ec817b6216079c8e541ec80c8bd4fa}{string {\bfseries t\-Register}}\label{classDatabase_aa8ec817b6216079c8e541ec80c8bd4fa}
+
+\item 
+\hypertarget{classDatabase_a62dd3ad69a4a07e66b412e276049ea48}{string {\bfseries t\-Project\-Detail}}\label{classDatabase_a62dd3ad69a4a07e66b412e276049ea48}
+
+\item 
+\hypertarget{classDatabase_a1b3174ab4ae9b3cb80448d48817375be}{int {\bfseries i}}\label{classDatabase_a1b3174ab4ae9b3cb80448d48817375be}
+
+\item 
+\hypertarget{classDatabase_a5b4fd605238ca66878959f5f3ba647f2}{int {\bfseries j}}\label{classDatabase_a5b4fd605238ca66878959f5f3ba647f2}
+
+\item 
+\hypertarget{classDatabase_a851daa5b233ce54d75873631b7b2167a}{string {\bfseries query}}\label{classDatabase_a851daa5b233ce54d75873631b7b2167a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Include \hyperlink{header_8h_source}{header.\-h} and \hyperlink{database_8h_source}{database.\-h} ------------------------------------------------------------------ =================================================================== Class\-: \hyperlink{classDatabase}{Database} Description\-: \hyperlink{classDatabase}{Database} class for database accessability =================================================================== 
+
+Definition at line 33 of file database.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDatabase_a4703c80e6969d33565ea340f768fdadf}{\index{Database@{Database}!Database@{Database}}
+\index{Database@{Database}!Database@{Database}}
+\subsubsection[{Database}]{\setlength{\rightskip}{0pt plus 5cm}Database\-::\-Database (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a4703c80e6969d33565ea340f768fdadf}
+\hyperlink{classDatabase}{Database} Constructor \hypertarget{classDatabase_a84d399a2ad58d69daab9b05330e1316d}{\index{Database@{Database}!$\sim$\-Database@{$\sim$\-Database}}
+\index{$\sim$\-Database@{$\sim$\-Database}!Database@{Database}}
+\subsubsection[{$\sim$\-Database}]{\setlength{\rightskip}{0pt plus 5cm}Database\-::$\sim$\-Database (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a84d399a2ad58d69daab9b05330e1316d}
+\hyperlink{classDatabase}{Database} Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classDatabase_a2cf59655e870fe29cd5b18c0c47444e9}{\index{Database@{Database}!Insert@{Insert}}
+\index{Insert@{Insert}!Database@{Database}}
+\subsubsection[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}Database\-::\-Insert (
+\begin{DoxyParamCaption}
+\item[{int}]{project\-I\-D, }
+\item[{string}]{project\-Name, }
+\item[{string}]{table\-Name}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a2cf59655e870fe29cd5b18c0c47444e9}
+Insert into Project\-Name \hypertarget{classDatabase_aaa4186192d40229b61e2b910a4aa8fa0}{\index{Database@{Database}!Select@{Select}}
+\index{Select@{Select}!Database@{Database}}
+\subsubsection[{Select}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Select (
+\begin{DoxyParamCaption}
+\item[{string}]{column, }
+\item[{string}]{table\-Name}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_aaa4186192d40229b61e2b910a4aa8fa0}
+Select My\-S\-Q\-L command with 2 arguments \hypertarget{classDatabase_a6cb8f64ba23bf85d3161e7c17771dd89}{\index{Database@{Database}!Select@{Select}}
+\index{Select@{Select}!Database@{Database}}
+\subsubsection[{Select}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Select (
+\begin{DoxyParamCaption}
+\item[{string}]{column, }
+\item[{string}]{table\-Name, }
+\item[{string}]{where\-Clause}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a6cb8f64ba23bf85d3161e7c17771dd89}
+Select command with 3 arguments 
+
+\subsection{Member Data Documentation}
+\hypertarget{classDatabase_aa232b806b05ef654cd5579bca5f1dbad}{\index{Database@{Database}!connect@{connect}}
+\index{connect@{connect}!Database@{Database}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}M\-Y\-S\-Q\-L$\ast$ Database\-::connect\hspace{0.3cm}{\ttfamily [protected]}}}\label{classDatabase_aa232b806b05ef654cd5579bca5f1dbad}
+My\-S\-Q\-L connectivity Variables 
+
+Definition at line 37 of file database.\-h.
+
+\hypertarget{classDatabase_acd64ff0e98b28cd1c6928a1236634521}{\index{Database@{Database}!t\-Login@{t\-Login}}
+\index{t\-Login@{t\-Login}!Database@{Database}}
+\subsubsection[{t\-Login}]{\setlength{\rightskip}{0pt plus 5cm}string Database\-::t\-Login\hspace{0.3cm}{\ttfamily [protected]}}}\label{classDatabase_acd64ff0e98b28cd1c6928a1236634521}
+Table names t\-Tablename 
+
+Definition at line 42 of file database.\-h.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/database.\-h\end{DoxyCompactItemize}

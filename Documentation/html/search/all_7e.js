@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7emysql',['~MySQL',['../classMySQL.html#ab27885d0695900ade2b7a0d57375a9bf',1,'MySQL']]]
+  ['_7edatabase',['~Database',['../classDatabase.html#a84d399a2ad58d69daab9b05330e1316d',1,'Database']]]
 ];

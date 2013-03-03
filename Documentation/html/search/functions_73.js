@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['select',['Select',['../classMySQL.html#a95aaf59d01eb141bf2104cde6f4872a8',1,'MySQL::Select(string column, string tableName)'],['../classMySQL.html#a7d6ebbeebbf159103c3ade8eff8f3c86',1,'MySQL::Select(string column, string tableName, string whereClause)']]],
+  ['select',['Select',['../classDatabase.html#aaa4186192d40229b61e2b910a4aa8fa0',1,'Database::Select(string column, string tableName)'],['../classDatabase.html#a6cb8f64ba23bf85d3161e7c17771dd89',1,'Database::Select(string column, string tableName, string whereClause)']]],
   ['selectfieldend',['SelectFieldEnd',['../classPageStructureMaker.html#a81eb3cdbc840a4c8165cef87330ade09',1,'PageStructureMaker']]],
   ['selectfieldstart',['SelectFieldStart',['../classPageStructureMaker.html#ae8684bb66ca463e2f92e09c96137f9e3',1,'PageStructureMaker']]],
   ['selectoptionend',['SelectOptionEnd',['../classPageStructureMaker.html#a7682f479f7f1012d426ec9f9535def60',1,'PageStructureMaker']]],
