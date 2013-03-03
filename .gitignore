@@ -7,5 +7,5 @@
 *.toc
 
 src/*.o
-
+src/*.js
 src/*.html
