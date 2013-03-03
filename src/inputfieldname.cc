@@ -65,4 +65,9 @@ void InputFieldName :: SetFieldNames()
     startRollNo     =   "StartRollNo";
     endRollNo       =   "EndRollNo";
     notIncluded     =   "NotIncluded";
+
+    /** Login page fields */
+
+    emailID         =   "EmailID";
+    password        =   "password";
 }
