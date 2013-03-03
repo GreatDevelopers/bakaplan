@@ -50,6 +50,10 @@ class InputFieldName
                 notIncluded;                    /* roll that are not 
                                                     included in seating 
                                                     plan */
+        /** For login.html page */
+        string emailID,                         /* Email Field */
+               password;                        /* Password field */
+
     public:
         InputFieldName();
         void SetFieldNames();
