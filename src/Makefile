@@ -11,6 +11,7 @@
 #          Author:  Mandeep Kaur, meghasimak@gmail.com
 #         License:  GNU General Public License
 #       Copyright:  Copyright (c) 2013, Great Developers
+#                   https://github.com/GreatDevelopers 
 # 
 # ====================================================================
 
@@ -18,69 +19,82 @@
 #   Variables for compilation of c/c++ files
 # ====================================================================
 
-CC      =   g++       		  	# Compiler 
-WALL	=	-Wall				# Warning all flag
-DEBUG	=	-g					# Debugging flag
-CFLAG   =   -c $(WALL) $(DEBUG) # Compilation flag
-OFLAG   =   $(DEBUG) -o         # O/p Flag
-LCGICC  =   -lcgicc     		# cgicc lib flag
-LMYSQL	=	-L/usr/include/mysql -lmysqlclient -I/usr/include/mysql
+CC      =   g++                          # Compiler 
+WALL    =   -Wall                        # Warning all flag
+WERROR  =   -Werror                      # Convert warnings into error
+DEBUG   =   -g                           # Debugging flag
+CFLAG   =   -c $(WALL) $(WERROR) $(DEBUG)# Compilation flag
+OFLAG   =   $(DEBUG) -o                  # O/p Flag
+LCGICC  =   -lcgicc     		         # cgicc lib flag
+LMYSQL  =   -L/usr/include/mysql -lmysqlclient -I/usr/include/mysql
 
 # ====================================================================
 #   Variables for header files (H_HEADER_FILE_NAME)
 # ====================================================================
 
-H_CONSTANTS			=	constant.h
-H_FILENAMES			=	filename.h
-H_HEADER			=   header.h
+H_CONSTANTS         =   constant.h
+H_FILENAMES	        =   filename.h
+H_HEADER            =   header.h
 H_CGICC             =   cgicc.h
-H_MYSQL				=	mysql.h $(H_HEADER)
+H_DATABASE_DETAIL   =   database-detail.h
+H_DATABASE	        =   database.h $(H_HEADER) $(H_DATABASE_DETAIL)
+H_JAVASCRIPT        =   javascript.h
 H_PAGESTRUCTURE     =   pagestructure.h $(H_HEADER)
 H_PAGELAYOUT        =   pagelayout.h $(H_PAGESTUCTURE)
-H_INPUTFIELDNAMES	=	inputfieldname.h $(H_HEADER)
-H_READINPUTFIELDS	=   readinputfield.h $(H_HEADER) $(H_CGICC)
-H_DETAILS           =   inputdetail.h $(H_PAGELAYOUT) $(H_INPUTFIELDNAMES) $(H_READINPUTFIELDS)
-H_CLASSDETAILS		=	classdetail.h $(H_DETAILS)
-H_ROLNODETAILS		=	rollnodetail.h $(H_DETAILS)
+H_INPUTFIELDNAMES   =   inputfieldname.h $(H_HEADER)
+H_READINPUTFIELDS   =   readinputfield.h $(H_HEADER) $(H_CGICC)
+H_FIELD             =   $(H_INPUTFIELDNAMES) $(H_READINPUTFIELDS)
+H_DETAILS           =   inputdetail.h $(H_PAGELAYOUT) $(H_FIELD)
+H_LOGIN             =   login.h $(DETAILS)
+H_CLASSDETAILS      =   classdetail.h $(H_DETAILS)
+H_ROLNODETAILS      =   rollnodetail.h $(H_DETAILS)
 
 # ====================================================================
 #	Variables for definition files (CC_FILENAME)
 # ====================================================================
 
-CC_MYSQL			=	mysql.cc
-CC_PAGESTRUCTURE	=	pagestructure.cc
-CC_PAGELAYOUT		=	pagelayout.cc 
-CC_INPUTFIELDNAMES	=	inputfieldname.cc 
-CC_READINPUTFIELDS	=	readinputfield.cc
-CC_DETAILS			=	inputdetail.cc
-CC_CLASSDETAILS		=	classdetail.cc
-CC_ROLLNODETAILS	=	rollnodetail.cc
-CC_ROOMDETAILS		=	roomdetail.cc
+CC_JAVASCRIPT       =   javascript.cc
+CC_DATABASE         =   database.cc
+CC_PAGESTRUCTURE    =   pagestructure.cc
+CC_PAGELAYOUT       =   pagelayout.cc 
+CC_INPUTFIELDNAMES  =   inputfieldname.cc 
+CC_READINPUTFIELDS  =   readinputfield.cc
+CC_DETAILS          =   inputdetail.cc
+CC_LOGIN            =   login.cc
+CC_CLASSDETAILS	    =   classdetail.cc
+CC_ROLLNODETAILS    =   rollnodetail.cc
+CC_ROOMDETAILS      =   roomdetail.cc
 
 # ====================================================================
 #	Variables for main method files (M_FILENAME)
 # ====================================================================
 
-M_TOTALCLASSES		=	totalclasses-main.cpp
-M_CLASSINFO			=	classinfo-main.cpp
+M_JAVASCRIPT        =   javascript-main.cpp
+M_TOTALCLASSES      =   totalclasses-main.cpp
+M_CLASSINFO         =   classinfo-main.cpp
+M_LOGIN             =   login-main.cpp
 
 # ====================================================================
 #	Variables for object files
 # ====================================================================
 
-O_MYSQL				=	mysql.o
-O_PAGESTRUCTURE		=	pagestructure.o
-O_PAGELAYOUT		=	pagelayout.o
-O_INPUTFIELDNAMES	=	inputfieldname.o
-O_READINPUTFIELDS	=	readinputfield.o
-O_DETAILS			=	inputdetail.o
-O_CLASSDETAILS		=	classdetail.o
-O_ROLLNODETAILS		=	rollnodetail.o
+O_JAVASCRIPT        =   javascript.o
+O_DATABASE          =   database.o
+O_PAGESTRUCTURE     =   pagestructure.o
+O_PAGELAYOUT        =   pagelayout.o
+O_INPUTFIELDNAMES   =   inputfieldname.o
+O_READINPUTFIELDS   =   readinputfield.o
+O_DETAILS           =   inputdetail.o
+O_LOGIN             =   login.o
+O_CLASSDETAILS      =   classdetail.o
+O_ROLLNODETAILS     =   rollnodetail.o
 
 # Object files of main files
 
-O_TOTALCLASSES_MAIN	=	totalclasses-main.o
-O_CLASSINFO_MAIN	=	classinfo-main.o
+O_JAVASCRIPT_MAIN   =   javascript-main.o
+O_TOTALCLASSES_MAIN =   totalclasses-main.o
+O_LOGIN_MAIN        =   login-main.o
+O_CLASSINFO_MAIN    =   classinfo-main.o
 
 # ====================================================================
 #	Linking Variables (L_EXE_FILENAME)
@@ -89,13 +103,16 @@ O_CLASSINFO_MAIN	=	classinfo-main.o
 L_PAGELAYOUT	=	$(O_PAGESTRUCTURE) $(O_PAGELAYOUT)
 L_FIELDS		=	$(O_INPUTFIELDNAMES) $(O_READINPUTFIELDS)
 L_DETAILS		=	$(L_PAGELAYOUT) $(L_FIELDS) $(O_DETAILS)
+L_LOGIN         =   $(L_DETAILS) $(O_LOGIN)
 L_CLASSDETAILS	=	$(L_DETAILS) $(O_CLASSDETAILS)
 L_ROLLNODETAILS	=	$(L_DETAILS) $(O_ROLLNODETAILS)
 
 # Linking of main files
 
 L_TOTALCLASSES	=	$(L_CLASSDETAILS) $(O_TOTALCLASSES_MAIN)
-L_CLASSINFO		=	$(L_CLASSDETAILS) $(O_CLASSINFO_MAIN)		
+L_CLASSINFO		=	$(L_CLASSDETAILS) $(O_CLASSINFO_MAIN)
+L_LOGINPAGE     =   $(L_LOGIN) $(O_LOGIN_MAIN)
+L_JAVASCRIPT    =   $(O_JAVASCRIPT) $(O_JAVASCRIPT_MAIN)
 
 # ====================================================================
 # 	O/P file names(exe) (E_FILENAME)
@@ -103,21 +120,26 @@ L_CLASSINFO		=	$(L_CLASSDETAILS) $(O_CLASSINFO_MAIN)
 
 E_TOTALCLASSES	=	totalclasses.html
 E_CLASSINFO		=	classinfo.html
+E_LOGIN         =   login.html
+E_JAVASCRIPT    =   javascript.js
 
 # ====================================================================
 #	Main target (1st target)
 # ====================================================================
 
-all: $(E_TOTALCLASSES) $(E_CLASSINFO)
+all: $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO)
 
 # ====================================================================
 #	targets for compiling .cc or .cpp files
 # ====================================================================
 
-$(O_MYSQL):	$(CC_MYSQL) $(H_MYSQL)
-	$(CC) $(CFLAG) $(CC_MYSQL)
+$(O_JAVASCRIPT): $(CC_JAVASCRIPT) $(H_JAVASCRIPT)
+	$(CC) $(CFLAG) $(CC_JAVASCRIPT)
 
-$(O_PAGESTRUCTURE): $(CC_PAGSTRUCTURE) $(H_PAGESTRUCTURE) 
+$(O_DATABASE):	$(CC_DATABASE) $(H_DATABASE)
+	$(CC) $(CFLAG) $(CC_DATABASE) $(LMYSQL)
+
+$(O_PAGESTRUCTURE): $(CC_PAGESTRUCTURE) $(H_PAGESTRUCTURE) 
 	$(CC) $(CFLAG) $(CC_PAGESTRUCTURE)
 
 $(O_PAGELAYOUT): $(CC_PAGELAYOUT) $(H_PAGELAYOUT)
@@ -130,26 +152,43 @@ $(O_READINPUTFIELDS): $(CC_READINPUTFIELDS) $(H_READINPUTFIELDS)
 	$(CC) $(CFLAG) $(CC_READINPUTFIELDS) $(LCGICC)
 
 $(O_DETAILS): $(CC_DETAILS) $(H_DETAILS)
-	$(CC) $(CFLAG) $(CC_DETAILS)
+	$(CC) $(CFLAG) $(CC_DETAILS) $(LMYSQL)
+
+$(O_LOGIN): $(CC_LOGIN) $(H_LOGIN)
+	$(CC) $(CFLAG) $(CC_LOGIN) $(LMYSQL)
 
 $(O_CLASSDETAILS): $(CC_CLASSDETAILS) $(H_CLASSDETAILS)
-	$(CC) $(CFLAG) $(CC_CLASSDETAILS)
+	$(CC) $(CFLAG) $(CC_CLASSDETAILS) $(LMYSQL)
+
+# Compiling Mian files
+
+$(O_JAVASCRIPT_MAIN): $(M_JAVASCRIPT) $(H_JAVASCRIPT)
+	$(CC) $(CFLAG) $(M_JAVASCRIPT)
+
+$(O_LOGIN_MAIN): $(M_LOGIN) $(H_LOGIN)
+	$(CC) $(CFLAG) $(M_LOGIN) $(LMYSQL)
 
 $(O_TOTALCLASSES_MAIN): $(M_TOTALCLASSES) $(H_CLASSDETAILS)
-	$(CC) $(CFLAG) $(M_TOTALCLASSES)
+	$(CC) $(CFLAG) $(M_TOTALCLASSES) $(LMYSQL)
 
 $(O_CLASSINFO_MAIN): $(M_CLASSINFO) $(H_CLASSDETAILS)
-	$(CC) $(CFLAG) $(M_CLASSINFO)
+	$(CC) $(CFLAG) $(M_CLASSINFO) $(LMYSQL)
 
 # ====================================================================
 # 	Targets of o/p files(exe)
 # ====================================================================
 
+$(E_JAVASCRIPT): $(L_JAVASCRIPT)
+	$(CC) $(OFLAG) $(E_JAVASCRIPT) $(L_JAVASCRIPT)
+
+$(E_LOGIN): $(L_LOGINPAGE)
+	$(CC) $(OFLAG) $(E_LOGIN) $(L_LOGINPAGE) $(LCGICC)
+
 $(E_TOTALCLASSES): $(L_TOTALCLASSES)
-	$(CC) $(OFLAG) $(E_TOTALCLASSES) $(L_TOTALCLASSES) $(LCGICC)
+	$(CC) $(OFLAG) $(E_TOTALCLASSES) $(L_TOTALCLASSES) $(LCGICC) $(LMYSQL)
 
 $(E_CLASSINFO): $(L_CLASSINFO)
-	$(CC) $(OFLAG) $(E_CLASSINFO) $(L_CLASSINFO) $(LCGICC)
+	$(CC) $(OFLAG) $(E_CLASSINFO) $(L_CLASSINFO) $(LCGICC) $(LMYSQL)
 
 # ====================================================================
 # 	Clean .o, .html files
