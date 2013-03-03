@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['bodyend',['BodyEnd',['../classHTMLTags.html#a7cae36bd3a0e6f35e89494e5cda64971',1,'HTMLTags']]],
-  ['bodystart',['BodyStart',['../classHTMLTags.html#af1fb7b90b9ebb83177da18aba1ef86a9',1,'HTMLTags']]],
-  ['button',['Button',['../classHTMLTags.html#ab6dbb027d808e7b708a4ece7e911ceee',1,'HTMLTags']]]
+  ['bodyend',['BodyEnd',['../classPageStructureMaker.html#ac91e234e2d54dedd9d7e556fabf21d2b',1,'PageStructureMaker']]],
+  ['bodystart',['BodyStart',['../classPageStructureMaker.html#ab7a645675166f34fac99f1ed8feb7c27',1,'PageStructureMaker']]],
+  ['button',['Button',['../classPageStructureMaker.html#a419feca1cfdb50e1be757eb1c2707a73',1,'PageStructureMaker']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['readinputfields',['ReadInputFields',['../classReadInputFields.html',1,'']]],
-  ['rollnodetails',['RollNoDetails',['../classRollNoDetails.html',1,'']]]
+  ['readinputfield',['ReadInputField',['../classReadInputField.html',1,'']]],
+  ['rollnodetail',['RollNoDetail',['../classRollNoDetail.html',1,'']]]
 ];

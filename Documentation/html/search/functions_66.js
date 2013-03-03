@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['footer',['Footer',['../classDetail.html#a4744b0917a632c5a5ca5418b240be7b3',1,'Detail::Footer()'],['../classPageLayout.html#a68aa868a8868b12964f161838b5f814c',1,'PageLayout::Footer()']]],
-  ['formend',['FormEnd',['../classHTMLTags.html#ab57baef28db9590ce59d0e2f403a210f',1,'HTMLTags']]],
-  ['formstart',['FormStart',['../classHTMLTags.html#a1489ccf4629069eca5e550eeb8e8e887',1,'HTMLTags']]]
+  ['footer',['Footer',['../classInputDetail.html#acbc05b1bc6a371cf0a52222cc95e467d',1,'InputDetail::Footer()'],['../classPageLayout.html#a68aa868a8868b12964f161838b5f814c',1,'PageLayout::Footer()']]],
+  ['formend',['FormEnd',['../classPageStructureMaker.html#a65d97f23bb543f3db5201b2009f7f65a',1,'PageStructureMaker']]],
+  ['formstart',['FormStart',['../classPageStructureMaker.html#a3f25d5b844a2251883acb80d8fabb77d',1,'PageStructureMaker']]]
 ];

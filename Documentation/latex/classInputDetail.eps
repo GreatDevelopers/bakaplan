@@ -173,9 +173,9 @@
 
 boxfont setfont
 1 boundaspect scale
+(InputDetail) cw
 (PageLayout) cw
 (PageStructureMaker) cw
-(InputDetail) cw
 (ClassDetail) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
@@ -188,21 +188,21 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
+ (InputDetail) 0.000000 1.000000 box
  (PageLayout) 0.000000 2.000000 box
  (PageStructureMaker) 0.000000 3.000000 box
- (InputDetail) 0.000000 1.000000 box
  (ClassDetail) 0.000000 0.000000 box
 
 % ----- relations -----
 
 solid
+0 0.000000 1.000000 out
+solid
+1 0.000000 2.000000 in
+solid
 0 0.000000 2.000000 out
 solid
 1 0.000000 3.000000 in
-solid
-1 0.000000 1.250000 out
-solid
-0 0.000000 1.750000 in
 solid
 1 0.000000 0.250000 out
 solid

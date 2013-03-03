@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['inputfieldnames',['InputFieldNames',['../classInputFieldNames.html',1,'']]]
+  ['inputdetail',['InputDetail',['../classInputDetail.html',1,'']]],
+  ['inputfieldname',['InputFieldName',['../classInputFieldName.html',1,'']]]
 ];

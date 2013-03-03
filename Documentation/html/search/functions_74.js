@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['tableend',['TableEnd',['../classHTMLTags.html#a0655d9f70a8c1a61c406280d8fb9df7a',1,'HTMLTags']]],
-  ['tablestart',['TableStart',['../classHTMLTags.html#a9d4bc37c7d615bc1d7f7c738dae48ad3',1,'HTMLTags']]],
-  ['title',['Title',['../classHTMLTags.html#a5128d6f1c6be5ac1689047fc9d0d159f',1,'HTMLTags']]],
-  ['totalclasses',['TotalClasses',['../classClassDetails.html#a2a63d68979d3ac96d35e6534414799ef',1,'ClassDetails']]]
+  ['tableend',['TableEnd',['../classPageStructureMaker.html#a7f8fefbe7a825c1b7761fc8a0f1bb8e4',1,'PageStructureMaker']]],
+  ['tablestart',['TableStart',['../classPageStructureMaker.html#a04e68e69005f3933e0f496c3db474daf',1,'PageStructureMaker']]],
+  ['title',['Title',['../classPageStructureMaker.html#a81e902ddc0c0287df1ba0f614a3774d6',1,'PageStructureMaker']]],
+  ['totalclasses',['TotalClasses',['../classClassDetail.html#a7f2913b5735282db82ab3ff363b14ce4',1,'ClassDetail']]]
 ];

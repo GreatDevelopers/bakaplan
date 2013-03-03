@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['javascript',['Javascript',['../classHTMLTags.html#aea041d720f12a210615c95350774e6aa',1,'HTMLTags']]]
+  ['javascript',['Javascript',['../classPageStructureMaker.html#ac221d1169f4dbcef6adb00938919193d',1,'PageStructureMaker']]]
 ];

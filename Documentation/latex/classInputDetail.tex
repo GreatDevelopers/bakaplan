@@ -1,24 +1,28 @@
-\hypertarget{classPageLayout}{\section{Page\-Layout Class Reference}
-\label{classPageLayout}\index{Page\-Layout@{Page\-Layout}}
+\hypertarget{classInputDetail}{\section{Input\-Detail Class Reference}
+\label{classInputDetail}\index{Input\-Detail@{Input\-Detail}}
 }
 
 
-{\ttfamily \#include $<$pagelayout.\-h$>$}
+{\ttfamily \#include $<$inputdetail.\-h$>$}
 
-Inheritance diagram for Page\-Layout\-:\begin{figure}[H]
+Inheritance diagram for Input\-Detail\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=4.000000cm]{classPageLayout}
+\includegraphics[height=4.000000cm]{classInputDetail}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classPageLayout_ab3f470f006f9820610d9aaebe5b8427b}{Page\-Layout} ()
+\hyperlink{classInputDetail_ab53655b14d922eb32b5d5d06c702e497}{Input\-Detail} ()
+\item 
+void \hyperlink{classInputDetail_ae55dcc0e15b85d302a09046b145330bb}{Header} (string title\-Name)
+\item 
+void \hyperlink{classInputDetail_acbc05b1bc6a371cf0a52222cc95e467d}{Footer} ()
+\item 
+string \hyperlink{classInputDetail_ad0a78d7c864bcccf7813a526d59573be}{Int\-To\-String} (int value)
 \item 
 void \hyperlink{classPageLayout_a7726061f0653245f644a05807fa92472}{Header} ()
-\item 
-void \hyperlink{classPageLayout_a68aa868a8868b12964f161838b5f814c}{Footer} ()
 \item 
 void \hyperlink{classPageLayout_a49af1dca286bbee9432192a7b3c00332}{Menu} ()
 \item 
@@ -73,6 +77,26 @@ void \hyperlink{classPageStructureMaker_a419feca1cfdb50e1be757eb1c2707a73}{Butto
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
+\hyperlink{classInputFieldName}{Input\-Field\-Name} \hyperlink{classInputDetail_ac6f85380c5152c406d483726382c4798}{field\-Name}
+\item 
+\hypertarget{classInputDetail_ac0cc70b017ef94fb55acb46fc44f0df5}{\hyperlink{classReadInputField}{Read\-Input\-Field} {\bfseries read\-Field}}\label{classInputDetail_ac0cc70b017ef94fb55acb46fc44f0df5}
+
+\item 
+\hypertarget{classInputDetail_a2e9226db1b744de4bf406398f48cf962}{int {\bfseries i}}\label{classInputDetail_a2e9226db1b744de4bf406398f48cf962}
+
+\item 
+\hypertarget{classInputDetail_af124a26cb4e4f86d0d9eb68200ee500b}{int {\bfseries j}}\label{classInputDetail_af124a26cb4e4f86d0d9eb68200ee500b}
+
+\item 
+\hypertarget{classInputDetail_a1bb6b8bff3d5fc6d5c998e4c451035bc}{int {\bfseries k}}\label{classInputDetail_a1bb6b8bff3d5fc6d5c998e4c451035bc}
+
+\item 
+\hypertarget{classInputDetail_a5284736b5fd3db0251cfeab7c581c0bd}{stringstream {\bfseries ss}}\label{classInputDetail_a5284736b5fd3db0251cfeab7c581c0bd}
+
+\item 
+\hypertarget{classInputDetail_abacd5d7ee7ebd7e9f36bbf3fefd13a5d}{string {\bfseries temp}}\label{classInputDetail_abacd5d7ee7ebd7e9f36bbf3fefd13a5d}
+
+\item 
 \hypertarget{classPageLayout_a8a3c1ddc422df2556fbc95d0cd575a05}{string {\bfseries project\-Name}}\label{classPageLayout_a8a3c1ddc422df2556fbc95d0cd575a05}
 
 \item 
@@ -123,31 +147,29 @@ string \hyperlink{classPageStructureMaker_af41d4e21b808f5f8dc2c727f775b6fb2}{sta
 
 
 \subsection{Detailed Description}
--\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Include required header files ------------------------------------------------------------------ =================================================================== Class\-: \hyperlink{classPageLayout}{Page\-Layout} \-: public \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} Description\-: For adding header and footer to page =================================================================== 
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Include local header files ------------------------------------------------------------------ =================================================================== Class\-: \hyperlink{classInputDetail}{Input\-Detail} Description\-: Include common variables, functions that are used by derived classes =================================================================== 
 
-Definition at line 33 of file pagelayout.\-h.
+Definition at line 38 of file inputdetail.\-h.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classPageLayout_ab3f470f006f9820610d9aaebe5b8427b}{\index{Page\-Layout@{Page\-Layout}!Page\-Layout@{Page\-Layout}}
-\index{Page\-Layout@{Page\-Layout}!PageLayout@{Page\-Layout}}
-\subsubsection[{Page\-Layout}]{\setlength{\rightskip}{0pt plus 5cm}Page\-Layout\-::\-Page\-Layout (
+\hypertarget{classInputDetail_ab53655b14d922eb32b5d5d06c702e497}{\index{Input\-Detail@{Input\-Detail}!Input\-Detail@{Input\-Detail}}
+\index{Input\-Detail@{Input\-Detail}!InputDetail@{Input\-Detail}}
+\subsubsection[{Input\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}Input\-Detail\-::\-Input\-Detail (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classPageLayout_ab3f470f006f9820610d9aaebe5b8427b}
-Constructor
+)}}\label{classInputDetail_ab53655b14d922eb32b5d5d06c702e497}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Include detail.\-h file ------------------------------------------------------------------ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Definition of member functions ------------------------------------------------------------------ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classInputDetail}{Input\-Detail} Method\-: \hyperlink{classInputDetail}{Input\-Detail} \-:\-: \hyperlink{classInputDetail_ab53655b14d922eb32b5d5d06c702e497}{Input\-Detail()} Description\-: Constructor -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
--\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Include local header file ------------------------------------------------------------------ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Function Definitions of \hyperlink{classPageLayout}{Page\-Layout} Class ------------------------------------------------------------------ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageLayout}{Page\-Layout} Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_ab3f470f006f9820610d9aaebe5b8427b}{Page\-Layout()} Description\-: Constructor -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
-
-Definition at line 37 of file pagelayout.\-cc.
+Definition at line 37 of file inputdetail.\-cc.
 
 
 
 \subsection{Member Function Documentation}
-\hypertarget{classPageStructureMaker_ac91e234e2d54dedd9d7e556fabf21d2b}{\index{Page\-Layout@{Page\-Layout}!Body\-End@{Body\-End}}
-\index{Body\-End@{Body\-End}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_ac91e234e2d54dedd9d7e556fabf21d2b}{\index{Input\-Detail@{Input\-Detail}!Body\-End@{Body\-End}}
+\index{Body\-End@{Body\-End}!InputDetail@{Input\-Detail}}
 \subsubsection[{Body\-End}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Body\-End (
 \begin{DoxyParamCaption}
 {}
@@ -159,8 +181,8 @@ Display $<$/\-B\-O\-D\-Y$>$
 
 Definition at line 180 of file pagestructure.\-cc.
 
-\hypertarget{classPageStructureMaker_ab7a645675166f34fac99f1ed8feb7c27}{\index{Page\-Layout@{Page\-Layout}!Body\-Start@{Body\-Start}}
-\index{Body\-Start@{Body\-Start}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_ab7a645675166f34fac99f1ed8feb7c27}{\index{Input\-Detail@{Input\-Detail}!Body\-Start@{Body\-Start}}
+\index{Body\-Start@{Body\-Start}!InputDetail@{Input\-Detail}}
 \subsubsection[{Body\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Body\-Start (
 \begin{DoxyParamCaption}
 {}
@@ -172,8 +194,8 @@ Display $<$\-B\-O\-D\-Y$>$
 
 Definition at line 166 of file pagestructure.\-cc.
 
-\hypertarget{classPageStructureMaker_a419feca1cfdb50e1be757eb1c2707a73}{\index{Page\-Layout@{Page\-Layout}!Button@{Button}}
-\index{Button@{Button}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_a419feca1cfdb50e1be757eb1c2707a73}{\index{Input\-Detail@{Input\-Detail}!Button@{Button}}
+\index{Button@{Button}!InputDetail@{Input\-Detail}}
 \subsubsection[{Button}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Button (
 \begin{DoxyParamCaption}
 \item[{string}]{id, }
@@ -188,8 +210,8 @@ Button
 
 Definition at line 356 of file pagestructure.\-cc.
 
-\hypertarget{classPageStructureMaker_aacdb11817f8ab246bc59c552e04e862d}{\index{Page\-Layout@{Page\-Layout}!C\-S\-S@{C\-S\-S}}
-\index{C\-S\-S@{C\-S\-S}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_aacdb11817f8ab246bc59c552e04e862d}{\index{Input\-Detail@{Input\-Detail}!C\-S\-S@{C\-S\-S}}
+\index{C\-S\-S@{C\-S\-S}!InputDetail@{Input\-Detail}}
 \subsubsection[{C\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-C\-S\-S (
 \begin{DoxyParamCaption}
 \item[{string}]{href}
@@ -201,8 +223,8 @@ Add External C\-S\-S
 
 Definition at line 138 of file pagestructure.\-cc.
 
-\hypertarget{classPageStructureMaker_a2913e76bf188ed777dcd33003ef6207d}{\index{Page\-Layout@{Page\-Layout}!Div\-End@{Div\-End}}
-\index{Div\-End@{Div\-End}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_a2913e76bf188ed777dcd33003ef6207d}{\index{Input\-Detail@{Input\-Detail}!Div\-End@{Div\-End}}
+\index{Div\-End@{Div\-End}!InputDetail@{Input\-Detail}}
 \subsubsection[{Div\-End}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Div\-End (
 \begin{DoxyParamCaption}
 {}
@@ -214,8 +236,8 @@ End div section
 
 Definition at line 209 of file pagestructure.\-cc.
 
-\hypertarget{classPageStructureMaker_a927f92889555dd316c129f706be86a5c}{\index{Page\-Layout@{Page\-Layout}!Div\-Start@{Div\-Start}}
-\index{Div\-Start@{Div\-Start}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_a927f92889555dd316c129f706be86a5c}{\index{Input\-Detail@{Input\-Detail}!Div\-Start@{Div\-Start}}
+\index{Div\-Start@{Div\-Start}!InputDetail@{Input\-Detail}}
 \subsubsection[{Div\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Div\-Start (
 \begin{DoxyParamCaption}
 \item[{string}]{id, }
@@ -228,25 +250,23 @@ Start Div Section
 
 Definition at line 195 of file pagestructure.\-cc.
 
-\hypertarget{classPageLayout_a68aa868a8868b12964f161838b5f814c}{\index{Page\-Layout@{Page\-Layout}!Footer@{Footer}}
-\index{Footer@{Footer}!PageLayout@{Page\-Layout}}
-\subsubsection[{Footer}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Footer (
+\hypertarget{classInputDetail_acbc05b1bc6a371cf0a52222cc95e467d}{\index{Input\-Detail@{Input\-Detail}!Footer@{Footer}}
+\index{Footer@{Footer}!InputDetail@{Input\-Detail}}
+\subsubsection[{Footer}]{\setlength{\rightskip}{0pt plus 5cm}void Input\-Detail\-::\-Footer (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classPageLayout_a68aa868a8868b12964f161838b5f814c}
-Footer Section of Page
+)}}\label{classInputDetail_acbc05b1bc6a371cf0a52222cc95e467d}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classInputDetail}{Input\-Detail} Method\-: \hyperlink{classInputDetail}{Input\-Detail} \-:\-: \hyperlink{classInputDetail_acbc05b1bc6a371cf0a52222cc95e467d}{Footer()} Description\-: Common for all pages(end body, html) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
--\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageLayout}{Page\-Layout} Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_a68aa868a8868b12964f161838b5f814c}{Footer()} Description\-: Footer of pages -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
-
-Reimplemented in \hyperlink{classInputDetail_acbc05b1bc6a371cf0a52222cc95e467d}{Input\-Detail}.
+Reimplemented from \hyperlink{classPageLayout_a68aa868a8868b12964f161838b5f814c}{Page\-Layout}.
 
 
 
-Definition at line 145 of file pagelayout.\-cc.
+Definition at line 68 of file inputdetail.\-cc.
 
-\hypertarget{classPageStructureMaker_a65d97f23bb543f3db5201b2009f7f65a}{\index{Page\-Layout@{Page\-Layout}!Form\-End@{Form\-End}}
-\index{Form\-End@{Form\-End}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_a65d97f23bb543f3db5201b2009f7f65a}{\index{Input\-Detail@{Input\-Detail}!Form\-End@{Form\-End}}
+\index{Form\-End@{Form\-End}!InputDetail@{Input\-Detail}}
 \subsubsection[{Form\-End}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Form\-End (
 \begin{DoxyParamCaption}
 {}
@@ -258,8 +278,8 @@ End Form
 
 Definition at line 238 of file pagestructure.\-cc.
 
-\hypertarget{classPageStructureMaker_a3f25d5b844a2251883acb80d8fabb77d}{\index{Page\-Layout@{Page\-Layout}!Form\-Start@{Form\-Start}}
-\index{Form\-Start@{Form\-Start}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_a3f25d5b844a2251883acb80d8fabb77d}{\index{Input\-Detail@{Input\-Detail}!Form\-Start@{Form\-Start}}
+\index{Form\-Start@{Form\-Start}!InputDetail@{Input\-Detail}}
 \subsubsection[{Form\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Form\-Start (
 \begin{DoxyParamCaption}
 \item[{string}]{name, }
@@ -273,21 +293,21 @@ Start Form
 
 Definition at line 223 of file pagestructure.\-cc.
 
-\hypertarget{classPageLayout_ae50907d56f0ba7a85f7ccfdeafa45bcc}{\index{Page\-Layout@{Page\-Layout}!Head@{Head}}
-\index{Head@{Head}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageLayout_ae50907d56f0ba7a85f7ccfdeafa45bcc}{\index{Input\-Detail@{Input\-Detail}!Head@{Head}}
+\index{Head@{Head}!InputDetail@{Input\-Detail}}
 \subsubsection[{Head}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Head (
 \begin{DoxyParamCaption}
 \item[{string}]{title\-Name}
 \end{DoxyParamCaption}
-)}}\label{classPageLayout_ae50907d56f0ba7a85f7ccfdeafa45bcc}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_ae50907d56f0ba7a85f7ccfdeafa45bcc}
 Head Section of Page
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageLayout}{Page\-Layout} Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_ae50907d56f0ba7a85f7ccfdeafa45bcc}{Head(string title\-Name)} Description\-: Head Section of page, titla\-Name pass to Title function. -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
 Definition at line 105 of file pagelayout.\-cc.
 
-\hypertarget{classPageStructureMaker_ad64115d592b0989b422a93f85278186e}{\index{Page\-Layout@{Page\-Layout}!Head\-End@{Head\-End}}
-\index{Head\-End@{Head\-End}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_ad64115d592b0989b422a93f85278186e}{\index{Input\-Detail@{Input\-Detail}!Head\-End@{Head\-End}}
+\index{Head\-End@{Head\-End}!InputDetail@{Input\-Detail}}
 \subsubsection[{Head\-End}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Head\-End (
 \begin{DoxyParamCaption}
 {}
@@ -299,21 +319,32 @@ Display $<$/\-H\-E\-A\-D$>$
 
 Definition at line 112 of file pagestructure.\-cc.
 
-\hypertarget{classPageLayout_a7726061f0653245f644a05807fa92472}{\index{Page\-Layout@{Page\-Layout}!Header@{Header}}
-\index{Header@{Header}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageLayout_a7726061f0653245f644a05807fa92472}{\index{Input\-Detail@{Input\-Detail}!Header@{Header}}
+\index{Header@{Header}!InputDetail@{Input\-Detail}}
 \subsubsection[{Header}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Header (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classPageLayout_a7726061f0653245f644a05807fa92472}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_a7726061f0653245f644a05807fa92472}
 Header Section of Page
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageLayout}{Page\-Layout} Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_a7726061f0653245f644a05807fa92472}{Header()} Description\-: Call Menu Function -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
 Definition at line 88 of file pagelayout.\-cc.
 
-\hypertarget{classPageStructureMaker_a14312134cb108f91f2e6d9cbd6916e97}{\index{Page\-Layout@{Page\-Layout}!Head\-Start@{Head\-Start}}
-\index{Head\-Start@{Head\-Start}!PageLayout@{Page\-Layout}}
+\hypertarget{classInputDetail_ae55dcc0e15b85d302a09046b145330bb}{\index{Input\-Detail@{Input\-Detail}!Header@{Header}}
+\index{Header@{Header}!InputDetail@{Input\-Detail}}
+\subsubsection[{Header}]{\setlength{\rightskip}{0pt plus 5cm}void Input\-Detail\-::\-Header (
+\begin{DoxyParamCaption}
+\item[{string}]{title\-Name}
+\end{DoxyParamCaption}
+)}}\label{classInputDetail_ae55dcc0e15b85d302a09046b145330bb}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classInputDetail}{Input\-Detail} Method\-: \hyperlink{classInputDetail}{Input\-Detail} \-:\-: \hyperlink{classInputDetail_ae55dcc0e15b85d302a09046b145330bb}{Header(string title\-Name)} Description\-: common header for all pages(start html, head, body) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 50 of file inputdetail.\-cc.
+
+\hypertarget{classPageStructureMaker_a14312134cb108f91f2e6d9cbd6916e97}{\index{Input\-Detail@{Input\-Detail}!Head\-Start@{Head\-Start}}
+\index{Head\-Start@{Head\-Start}!InputDetail@{Input\-Detail}}
 \subsubsection[{Head\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Head\-Start (
 \begin{DoxyParamCaption}
 {}
@@ -325,8 +356,8 @@ Display $<$\-H\-E\-A\-D$>$
 
 Definition at line 99 of file pagestructure.\-cc.
 
-\hypertarget{classPageStructureMaker_a63b877af1c2c8de8332e3f7eb4c2c2b0}{\index{Page\-Layout@{Page\-Layout}!H\-T\-M\-L\-End@{H\-T\-M\-L\-End}}
-\index{H\-T\-M\-L\-End@{H\-T\-M\-L\-End}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_a63b877af1c2c8de8332e3f7eb4c2c2b0}{\index{Input\-Detail@{Input\-Detail}!H\-T\-M\-L\-End@{H\-T\-M\-L\-End}}
+\index{H\-T\-M\-L\-End@{H\-T\-M\-L\-End}!InputDetail@{Input\-Detail}}
 \subsubsection[{H\-T\-M\-L\-End}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-H\-T\-M\-L\-End (
 \begin{DoxyParamCaption}
 {}
@@ -338,8 +369,8 @@ Display $<$/\-H\-T\-M\-L$>$
 
 Definition at line 86 of file pagestructure.\-cc.
 
-\hypertarget{classPageStructureMaker_ad25d6abc983253567e2370882fc1b407}{\index{Page\-Layout@{Page\-Layout}!H\-T\-M\-L\-Start@{H\-T\-M\-L\-Start}}
-\index{H\-T\-M\-L\-Start@{H\-T\-M\-L\-Start}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_ad25d6abc983253567e2370882fc1b407}{\index{Input\-Detail@{Input\-Detail}!H\-T\-M\-L\-Start@{H\-T\-M\-L\-Start}}
+\index{H\-T\-M\-L\-Start@{H\-T\-M\-L\-Start}!InputDetail@{Input\-Detail}}
 \subsubsection[{H\-T\-M\-L\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-H\-T\-M\-L\-Start (
 \begin{DoxyParamCaption}
 {}
@@ -351,8 +382,8 @@ Display $<$\-H\-T\-M\-L$>$
 
 Definition at line 73 of file pagestructure.\-cc.
 
-\hypertarget{classPageStructureMaker_a3547027801e298307527f1e934787b13}{\index{Page\-Layout@{Page\-Layout}!Input\-Field@{Input\-Field}}
-\index{Input\-Field@{Input\-Field}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_a3547027801e298307527f1e934787b13}{\index{Input\-Detail@{Input\-Detail}!Input\-Field@{Input\-Field}}
+\index{Input\-Field@{Input\-Field}!InputDetail@{Input\-Detail}}
 \subsubsection[{Input\-Field}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Input\-Field (
 \begin{DoxyParamCaption}
 \item[{string}]{type, }
@@ -367,8 +398,19 @@ Input Field
 
 Definition at line 281 of file pagestructure.\-cc.
 
-\hypertarget{classPageStructureMaker_ac221d1169f4dbcef6adb00938919193d}{\index{Page\-Layout@{Page\-Layout}!Javascript@{Javascript}}
-\index{Javascript@{Javascript}!PageLayout@{Page\-Layout}}
+\hypertarget{classInputDetail_ad0a78d7c864bcccf7813a526d59573be}{\index{Input\-Detail@{Input\-Detail}!Int\-To\-String@{Int\-To\-String}}
+\index{Int\-To\-String@{Int\-To\-String}!InputDetail@{Input\-Detail}}
+\subsubsection[{Int\-To\-String}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::\-Int\-To\-String (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}\label{classInputDetail_ad0a78d7c864bcccf7813a526d59573be}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classInputDetail}{Input\-Detail} Method\-: \hyperlink{classInputDetail}{Input\-Detail} \-:\-: \hyperlink{classInputDetail_ad0a78d7c864bcccf7813a526d59573be}{Int\-To\-String(int value)} Description\-: Convert Int to String using stringstream object -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 82 of file inputdetail.\-cc.
+
+\hypertarget{classPageStructureMaker_ac221d1169f4dbcef6adb00938919193d}{\index{Input\-Detail@{Input\-Detail}!Javascript@{Javascript}}
+\index{Javascript@{Javascript}!InputDetail@{Input\-Detail}}
 \subsubsection[{Javascript}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Javascript (
 \begin{DoxyParamCaption}
 \item[{string}]{src}
@@ -380,34 +422,34 @@ Add Javascript File
 
 Definition at line 153 of file pagestructure.\-cc.
 
-\hypertarget{classPageLayout_ae60235c6af48e3ebbc6343d02456da0c}{\index{Page\-Layout@{Page\-Layout}!Logo@{Logo}}
-\index{Logo@{Logo}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageLayout_ae60235c6af48e3ebbc6343d02456da0c}{\index{Input\-Detail@{Input\-Detail}!Logo@{Logo}}
+\index{Logo@{Logo}!InputDetail@{Input\-Detail}}
 \subsubsection[{Logo}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Logo (
 \begin{DoxyParamCaption}
 \item[{string}]{logo\-Name}
 \end{DoxyParamCaption}
-)}}\label{classPageLayout_ae60235c6af48e3ebbc6343d02456da0c}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_ae60235c6af48e3ebbc6343d02456da0c}
 Logo on Page
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageLayout}{Page\-Layout} Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_ae60235c6af48e3ebbc6343d02456da0c}{Logo(string logo\-Name)} Description\-: Logo to project -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
 Definition at line 73 of file pagelayout.\-cc.
 
-\hypertarget{classPageLayout_a49af1dca286bbee9432192a7b3c00332}{\index{Page\-Layout@{Page\-Layout}!Menu@{Menu}}
-\index{Menu@{Menu}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageLayout_a49af1dca286bbee9432192a7b3c00332}{\index{Input\-Detail@{Input\-Detail}!Menu@{Menu}}
+\index{Menu@{Menu}!InputDetail@{Input\-Detail}}
 \subsubsection[{Menu}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Menu (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classPageLayout_a49af1dca286bbee9432192a7b3c00332}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_a49af1dca286bbee9432192a7b3c00332}
 List/\-Menu Navigation()
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageLayout}{Page\-Layout} Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_a49af1dca286bbee9432192a7b3c00332}{Menu()} Description\-: Add Menu on pages(for navigation) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
 Definition at line 50 of file pagelayout.\-cc.
 
-\hypertarget{classPageStructureMaker_a81eb3cdbc840a4c8165cef87330ade09}{\index{Page\-Layout@{Page\-Layout}!Select\-Field\-End@{Select\-Field\-End}}
-\index{Select\-Field\-End@{Select\-Field\-End}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_a81eb3cdbc840a4c8165cef87330ade09}{\index{Input\-Detail@{Input\-Detail}!Select\-Field\-End@{Select\-Field\-End}}
+\index{Select\-Field\-End@{Select\-Field\-End}!InputDetail@{Input\-Detail}}
 \subsubsection[{Select\-Field\-End}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Select\-Field\-End (
 \begin{DoxyParamCaption}
 {}
@@ -419,8 +461,8 @@ End Select Field
 
 Definition at line 312 of file pagestructure.\-cc.
 
-\hypertarget{classPageStructureMaker_ae8684bb66ca463e2f92e09c96137f9e3}{\index{Page\-Layout@{Page\-Layout}!Select\-Field\-Start@{Select\-Field\-Start}}
-\index{Select\-Field\-Start@{Select\-Field\-Start}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_ae8684bb66ca463e2f92e09c96137f9e3}{\index{Input\-Detail@{Input\-Detail}!Select\-Field\-Start@{Select\-Field\-Start}}
+\index{Select\-Field\-Start@{Select\-Field\-Start}!InputDetail@{Input\-Detail}}
 \subsubsection[{Select\-Field\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Select\-Field\-Start (
 \begin{DoxyParamCaption}
 \item[{string}]{name}
@@ -432,8 +474,8 @@ Select Field Start
 
 Definition at line 299 of file pagestructure.\-cc.
 
-\hypertarget{classPageStructureMaker_a7682f479f7f1012d426ec9f9535def60}{\index{Page\-Layout@{Page\-Layout}!Select\-Option\-End@{Select\-Option\-End}}
-\index{Select\-Option\-End@{Select\-Option\-End}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_a7682f479f7f1012d426ec9f9535def60}{\index{Input\-Detail@{Input\-Detail}!Select\-Option\-End@{Select\-Option\-End}}
+\index{Select\-Option\-End@{Select\-Option\-End}!InputDetail@{Input\-Detail}}
 \subsubsection[{Select\-Option\-End}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Select\-Option\-End (
 \begin{DoxyParamCaption}
 {}
@@ -445,8 +487,8 @@ Selct Option End
 
 Definition at line 342 of file pagestructure.\-cc.
 
-\hypertarget{classPageStructureMaker_a77856078e74dab25329132ea07466f92}{\index{Page\-Layout@{Page\-Layout}!Select\-Option\-Start@{Select\-Option\-Start}}
-\index{Select\-Option\-Start@{Select\-Option\-Start}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_a77856078e74dab25329132ea07466f92}{\index{Input\-Detail@{Input\-Detail}!Select\-Option\-Start@{Select\-Option\-Start}}
+\index{Select\-Option\-Start@{Select\-Option\-Start}!InputDetail@{Input\-Detail}}
 \subsubsection[{Select\-Option\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Select\-Option\-Start (
 \begin{DoxyParamCaption}
 \item[{string}]{value, }
@@ -459,8 +501,8 @@ Select Option Start
 
 Definition at line 326 of file pagestructure.\-cc.
 
-\hypertarget{classPageStructureMaker_aaf78d67380c400cc0057c6519276f721}{\index{Page\-Layout@{Page\-Layout}!Set\-H\-T\-M\-L\-Variables@{Set\-H\-T\-M\-L\-Variables}}
-\index{Set\-H\-T\-M\-L\-Variables@{Set\-H\-T\-M\-L\-Variables}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_aaf78d67380c400cc0057c6519276f721}{\index{Input\-Detail@{Input\-Detail}!Set\-H\-T\-M\-L\-Variables@{Set\-H\-T\-M\-L\-Variables}}
+\index{Set\-H\-T\-M\-L\-Variables@{Set\-H\-T\-M\-L\-Variables}!InputDetail@{Input\-Detail}}
 \subsubsection[{Set\-H\-T\-M\-L\-Variables}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Set\-H\-T\-M\-L\-Variables (
 \begin{DoxyParamCaption}
 {}
@@ -472,8 +514,8 @@ Assingn Values to variables
 
 Definition at line 48 of file pagestructure.\-cc.
 
-\hypertarget{classPageStructureMaker_a7f8fefbe7a825c1b7761fc8a0f1bb8e4}{\index{Page\-Layout@{Page\-Layout}!Table\-End@{Table\-End}}
-\index{Table\-End@{Table\-End}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_a7f8fefbe7a825c1b7761fc8a0f1bb8e4}{\index{Input\-Detail@{Input\-Detail}!Table\-End@{Table\-End}}
+\index{Table\-End@{Table\-End}!InputDetail@{Input\-Detail}}
 \subsubsection[{Table\-End}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Table\-End (
 \begin{DoxyParamCaption}
 {}
@@ -485,8 +527,8 @@ End Table
 
 Definition at line 266 of file pagestructure.\-cc.
 
-\hypertarget{classPageStructureMaker_a04e68e69005f3933e0f496c3db474daf}{\index{Page\-Layout@{Page\-Layout}!Table\-Start@{Table\-Start}}
-\index{Table\-Start@{Table\-Start}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_a04e68e69005f3933e0f496c3db474daf}{\index{Input\-Detail@{Input\-Detail}!Table\-Start@{Table\-Start}}
+\index{Table\-Start@{Table\-Start}!InputDetail@{Input\-Detail}}
 \subsubsection[{Table\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Table\-Start (
 \begin{DoxyParamCaption}
 \item[{string}]{id, }
@@ -499,8 +541,8 @@ Start Table
 
 Definition at line 252 of file pagestructure.\-cc.
 
-\hypertarget{classPageStructureMaker_a81e902ddc0c0287df1ba0f614a3774d6}{\index{Page\-Layout@{Page\-Layout}!Title@{Title}}
-\index{Title@{Title}!PageLayout@{Page\-Layout}}
+\hypertarget{classPageStructureMaker_a81e902ddc0c0287df1ba0f614a3774d6}{\index{Input\-Detail@{Input\-Detail}!Title@{Title}}
+\index{Title@{Title}!InputDetail@{Input\-Detail}}
 \subsubsection[{Title}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Title (
 \begin{DoxyParamCaption}
 \item[{string}]{page\-Title}
@@ -515,8 +557,15 @@ Definition at line 125 of file pagestructure.\-cc.
 
 
 \subsection{Member Data Documentation}
-\hypertarget{classPageStructureMaker_af41d4e21b808f5f8dc2c727f775b6fb2}{\index{Page\-Layout@{Page\-Layout}!start\-H1@{start\-H1}}
-\index{start\-H1@{start\-H1}!PageLayout@{Page\-Layout}}
+\hypertarget{classInputDetail_ac6f85380c5152c406d483726382c4798}{\index{Input\-Detail@{Input\-Detail}!field\-Name@{field\-Name}}
+\index{field\-Name@{field\-Name}!InputDetail@{Input\-Detail}}
+\subsubsection[{field\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Input\-Field\-Name} Input\-Detail\-::field\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_ac6f85380c5152c406d483726382c4798}
+Objects of \hyperlink{classInputFieldName}{Input\-Field\-Name} and Read\-Fields\-Value class 
+
+Definition at line 45 of file inputdetail.\-h.
+
+\hypertarget{classPageStructureMaker_af41d4e21b808f5f8dc2c727f775b6fb2}{\index{Input\-Detail@{Input\-Detail}!start\-H1@{start\-H1}}
+\index{start\-H1@{start\-H1}!InputDetail@{Input\-Detail}}
 \subsubsection[{start\-H1}]{\setlength{\rightskip}{0pt plus 5cm}string Page\-Structure\-Maker\-::start\-H1\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classPageStructureMaker_af41d4e21b808f5f8dc2c727f775b6fb2}
 H\-T\-M\-L Tag Variables for td, th, bold, etc 
 
@@ -526,5 +575,5 @@ Definition at line 37 of file pagestructure.\-h.
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-src/pagelayout.\-h\item 
-src/pagelayout.\-cc\end{DoxyCompactItemize}
+src/inputdetail.\-h\item 
+src/inputdetail.\-cc\end{DoxyCompactItemize}

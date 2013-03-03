@@ -125,7 +125,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="classPageLayout.html#ab3f470f006f9820610d9aaebe5b8427b">   37</a></span>&#160;<a class="code" href="classPageLayout.html#ab3f470f006f9820610d9aaebe5b8427b">PageLayout :: PageLayout</a>()</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classPageLayout.html#a8a3c1ddc422df2556fbc95d0cd575a05">projectName</a> = <span class="stringliteral">&quot;BaKaPlan&quot;</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    projectName = <span class="stringliteral">&quot;BaKaPlan&quot;</span>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">/**</span></div>
@@ -161,9 +161,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="classPageLayout.html#ae60235c6af48e3ebbc6343d02456da0c">   73</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPageLayout.html#ae60235c6af48e3ebbc6343d02456da0c">PageLayout :: Logo</a>(<span class="keywordtype">string</span> logoName)</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="classHTMLTags.html#a897512b202cfd12729e8fa24e67ea4d6" title="Start Div Section.">DivStart</a>(<span class="stringliteral">&quot;slogo&quot;</span>, <span class="stringliteral">&quot;logo&quot;</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="classPageStructureMaker.html#a927f92889555dd316c129f706be86a5c">DivStart</a>(<span class="stringliteral">&quot;slogo&quot;</span>, <span class="stringliteral">&quot;logo&quot;</span>);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    cout &lt;&lt; logoName &lt;&lt; <span class="stringliteral">&quot; &lt;sup&gt;Beta&lt;/sup&gt;&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classHTMLTags.html#aa82b2d3d85b3afd29e5641dbe1ace439" title="End div section.">DivEnd</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classPageStructureMaker.html#a2913e76bf188ed777dcd33003ef6207d">DivEnd</a>();</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">/**</span></div>
@@ -191,14 +191,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment"> *--------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="classPageLayout.html#ae50907d56f0ba7a85f7ccfdeafa45bcc">  105</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPageLayout.html#ae50907d56f0ba7a85f7ccfdeafa45bcc" title="Head Section of Page.">PageLayout :: Head</a>(<span class="keywordtype">string</span> titleName)</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="classPageLayout.html#ae50907d56f0ba7a85f7ccfdeafa45bcc">  105</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPageLayout.html#ae50907d56f0ba7a85f7ccfdeafa45bcc">PageLayout :: Head</a>(<span class="keywordtype">string</span> titleName)</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="classHTMLTags.html#af2b01cc08884af52e0b291d07035062e">HeadStart</a>();</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="classHTMLTags.html#a5128d6f1c6be5ac1689047fc9d0d159f" title="Display &lt;TITLE&gt; &lt;/TITLE&gt;">Title</a>(titleName);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="classPageStructureMaker.html#a14312134cb108f91f2e6d9cbd6916e97">HeadStart</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="classPageStructureMaker.html#a81e902ddc0c0287df1ba0f614a3774d6">Title</a>(titleName);</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">/*  Include External CSS file path */</span></div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">string</span> js = <span class="stringliteral">&quot;https://ajax.googleapis.com/ajax&quot;</span>;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    js += <span class="stringliteral">&quot;/libs/jquery/1.7.2/jquery.min.js&quot;</span>;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="classHTMLTags.html#a4e9e18580cc7f2b82c82e4f81e39be50" title="Add External CSS.">CSS</a>(<span class="stringliteral">&quot;../../../BaKaPlan/styles.css&quot;</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="classPageStructureMaker.html#aacdb11817f8ab246bc59c552e04e862d">CSS</a>(<span class="stringliteral">&quot;../../../BaKaPlan/styles.css&quot;</span>);</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;   <span class="comment">// Javascript(js);</span></div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;&lt;!-- jQuery for navigation --&gt;  &quot;</span></div>
@@ -220,7 +220,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;         &lt;&lt; <span class="stringliteral">&quot;});&quot;</span></div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;         &lt;&lt; <span class="stringliteral">&quot;&lt;/script&gt;&quot;</span>;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="classHTMLTags.html#afdc779e46fac16cc79e4f0e87f621254" title="Display &lt;/HEAD&gt;">HeadEnd</a>();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="classPageStructureMaker.html#ad64115d592b0989b422a93f85278186e">HeadEnd</a>();</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">/**</span></div>
@@ -238,7 +238,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 26 2013 16:35:18 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 3 2013 00:16:41 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

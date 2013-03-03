@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['prefix',['prefix',['../classInputFieldNames.html#a6b73b0278aac9c72ce168717674261c7',1,'InputFieldNames::prefix()'],['../classRollNoDetails.html#a2126e353865b8e215513fe17785ef230',1,'RollNoDetails::prefix()']]],
-  ['projectname',['projectName',['../classPageLayout.html#a8a3c1ddc422df2556fbc95d0cd575a05',1,'PageLayout']]]
+  ['prefix',['prefix',['../classInputFieldName.html#a161d155f8faca2c5dea1bbd607b17553',1,'InputFieldName::prefix()'],['../classRollNoDetail.html#af6210eb33a46b384c832560c9f1ebf07',1,'RollNoDetail::prefix()']]]
 ];

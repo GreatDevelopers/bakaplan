@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['starth1',['startH1',['../classHTMLTags.html#ae987289d0dab2e3e234048615f930d0f',1,'HTMLTags']]]
+  ['starth1',['startH1',['../classPageStructureMaker.html#af41d4e21b808f5f8dc2c727f775b6fb2',1,'PageStructureMaker']]]
 ];
