@@ -220,7 +220,8 @@ void PageStructureMaker :: DivEnd()
  *--------------------------------------------------------------------
  */
 
-void PageStructureMaker :: FormStart(string name, string action, string method)
+void PageStructureMaker :: FormStart(string name, string action, 
+                           string method)
 {
     cout << "<form name = \"" << name << "\" action = \"" << action
          << "\" method = \"" << method << "\" >" << endl;
@@ -284,7 +285,10 @@ void PageStructureMaker :: InputField(string type, string name,
     cout << "<input type=\"" << type << "\" name=\"" << name;
     if( nameNo != 0)
         cout << nameNo;
-    cout << "\"" << "value = \" "<< value << "\" >" << endl;
+    cout << "\"" << " value = \"" << value << "\" "
+         << " onfocus = \"OnFocus(this.value, this.name, " << value 
+         << ")\""
+         << ">" << endl;
 }
 
 /**
