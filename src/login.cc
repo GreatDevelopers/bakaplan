@@ -38,6 +38,19 @@ Login :: Login()
 /**
  *--------------------------------------------------------------------\n
  *       Class:  Login \n
+ *      Method:  Login :: SelectLoginDetail() \n
+ * Description:  For reading email id's and passwords from user table \n
+ *--------------------------------------------------------------------
+ */
+
+void Login :: SelectLoginDetail()
+{
+
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Login \n
  *      Method:  Login :: LoginPage() \n
  * Description:  Form for user login \n
  *--------------------------------------------------------------------

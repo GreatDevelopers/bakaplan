@@ -30,13 +30,23 @@
  * ===================================================================
  */
 
-class Login : public InputDetail
+class Login : public InputDetail, Database
 {
     protected:
+        /** For stroting email and password of users */
+        string emailID[MIN_SIZE],              /* Email ID - unique */
+               password;                                /* Password */
 
     public:
         /** Constructor */
         Login();
 
+        /** Creating login page */
         void LoginPage();
+
+        /** For selecting emial and password fron user table */
+        void SelectLoginDetail();
+
+        /** Destructor */
+        ~Login(){}
 };
