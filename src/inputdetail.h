@@ -45,6 +45,7 @@ class InputDetail : public PageLayout
 
         InputFieldName fieldName;
         ReadInputField readField;
+        Database database;
         
         int i, j, k;                           /* Looping Variables */
 
