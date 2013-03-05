@@ -66,7 +66,7 @@ void PageStructureMaker :: SetHTMLVariables()
  *--------------------------------------------------------------------
  *       Class:  PageStructureMaker
  *      Method:  PageStructureMaker :: HTMLStart()
- * Description:  Display <HTML> Tag 
+ * Description:  Display \<HTML\> Tag 
  *--------------------------------------------------------------------
  */
 
@@ -79,7 +79,7 @@ void PageStructureMaker :: HTMLStart()
  *--------------------------------------------------------------------
  *       Class:  PageStructureMaker
  *      Method:  PageStructureMaker :: HTMLEnd()
- * Description:  Display </HTML>
+ * Description:  Display \</HTML\>
  *--------------------------------------------------------------------
  */
 
@@ -92,7 +92,7 @@ void PageStructureMaker :: HTMLEnd()
  *--------------------------------------------------------------------
  *       Class:  PageStructureMaker
  *      Method:  PageStructureMaker :: HeadStart()
- * Description:  Display <HEAD>
+ * Description:  Display \<HEAD\>
  *--------------------------------------------------------------------
  */
 
@@ -105,7 +105,7 @@ void PageStructureMaker :: HeadStart()
  *--------------------------------------------------------------------
  *       Class:  PageStructureMaker
  *      Method:  PageStructureMaker :: HeadEnd()
- * Description:  Display </HEAD>
+ * Description:  Display \</HEAD\>
  *--------------------------------------------------------------------
  */
 
@@ -159,7 +159,7 @@ void PageStructureMaker :: Javascript(string src)
  *--------------------------------------------------------------------
  *       Class:  PageStructureMaker
  *      Method:  PageStructureMaker :: BodyStart()
- * Description:  Display <BODY>
+ * Description:  Display \<BODY\>
  *--------------------------------------------------------------------
  */
 
@@ -173,7 +173,7 @@ void PageStructureMaker :: BodyStart()
  *--------------------------------------------------------------------
  *       Class:  PageStructureMaker
  *      Method:  PageStructureMaker :: BodyEnd()
- * Description:  Display </BODY>
+ * Description:  Display \</BODY\>
  *--------------------------------------------------------------------
  */
 
@@ -269,6 +269,45 @@ void PageStructureMaker :: TableEnd()
 }
 
 /**
+ *--------------------------------------------------------------------\n
+ *       Class:  PageStructureMaker \n
+ *      Method:  PageStructureMaker :: ListStart(string listType) \n
+ * Description:  Start any list like ul, ol, etc. \n
+ *--------------------------------------------------------------------
+ */
+
+void PageStructureMaker :: ListStart(string listType)
+{
+    cout << "<" << listType << ">";
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  PageStructureMaker \n
+ *      Method:  PageStructureMaker :: ListEnd(string listType) \n
+ * Description:  Close List Tag \n
+ *--------------------------------------------------------------------
+ */
+
+void PageStructureMaker :: ListEnd(string listType)
+{
+    cout << "</" << listType << ">";
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  PageStructureMaker \n
+ *      Method:  PageStructureMaker :: ListItem(string listItem) \n
+ * Description:  List Item  \n
+ *--------------------------------------------------------------------
+ */
+
+void PageStructureMaker :: ListItem(string listItem)
+{
+    cout << "<li>" << listItem << "</li>";
+}
+
+/**
  *--------------------------------------------------------------------
  *       Class:  PageStructureMaker
  *      Method:  PageStructureMaker :: InputField(string type, 
@@ -286,8 +325,8 @@ void PageStructureMaker :: InputField(string type, string name,
     if( nameNo != 0)
         cout << nameNo;
     cout << "\"" << " value = \"" << value << "\" "
-         << " onfocus = \"OnFocus(this.value, this.name, " << value 
-         << ")\""
+         << " onfocus = \"OnFocus(this.value, this.name, \"" << value 
+         << "\")\""
          << ">" << endl;
 }
 

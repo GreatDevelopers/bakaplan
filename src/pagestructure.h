@@ -34,8 +34,13 @@ class PageStructureMaker
 
     protected:
         /** HTML Tag Variables for td, th, bold, etc */
-        string startH1, endH1, startH3, endH3, startTD, endTD, startTH,
-               endTH, startTR, endTR, startB, endB, brk;
+        string startH1, endH1, 
+               startH3, endH3, 
+               startTD, endTD, 
+               startTH, endTH, 
+               startTR, endTR, 
+               startB, endB, 
+               brk;
 
     public:
         /** Constructor */
@@ -88,6 +93,15 @@ class PageStructureMaker
 
         /** End Table */
         void TableEnd();
+
+        /** Start List */
+        void ListStart(string listType);
+
+        /** End List */
+        void ListEnd(string listType);
+
+        /** List Item */
+        void ListItem(string listItem);
 
         /** Input Field */
         void InputField(string type, string name, int nameNo, 
