@@ -53,6 +53,25 @@ Database : Database()
 }
 
 /**
+ *--------------------------------------------------------------------\n
+ *       Class:  Database \n
+ *      Method:  Database :: Query(string qry) \n
+ * Description:  Executing MySQL Query and returns string value \n
+ *--------------------------------------------------------------------
+ */
+
+void Database :: Query(string qry)
+{
+    mysql_query (connect, qry.c_str());
+    res_set = mysql_store_result(connect);
+    numrows = mysql_num_rows(res_set);
+    while (((row=mysql_fetch_row(res_set)) !=NULL))
+    {
+        return row[0];
+    }
+}
+
+/**
  *--------------------------------------------------------------------
  *       Class:  Database
  *      Method:  Database :: ~Database()

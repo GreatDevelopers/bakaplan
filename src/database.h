@@ -38,6 +38,9 @@ class Database
         MYSQL *connect;
         MYSQL_RES *res_set;
         MYSQL_ROW row;
+
+        /** unsigned int variable  */
+        unsigned int numrows;
         
         /** Table names tTablename */
         string tLogin, tRegister, tProjectDetail;
@@ -48,16 +51,9 @@ class Database
     public:
         /** Database Constructor */
         Database();
-
-        /** Select MySQL command with 2 arguments */
-        void Select(string column, string tableName);
-
-        /** Select command with 3 arguments */
-        void Select(string column, string tableName, 
-                    string whereClause);
         
-        /** Insert into ProjectName */
-        void Insert(int projectID, string projectName, string tableName);
+        /** For executing MySQL query */
+        string Query(string qry);            /* Retrun string value */
 
         /** Database Destructor */
         ~Database();
