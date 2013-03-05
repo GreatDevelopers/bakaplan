@@ -48,7 +48,8 @@ void JavaScript :: OnFocusEvent()
 {
     cout << "function OnFocus(value, name, text) "
          << "{"
-         << "   if ( value != \"\" && value == text )"
+         << "   var val = document.getElementByName(name);"
+         << "   if ( val.value.length)// != \"\" && value == text )"
          << "   {"
          << "       document.getElementByName(name).innerHTML = \"\";"
          << "       alert(\"if\");"
