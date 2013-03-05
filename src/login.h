@@ -22,6 +22,7 @@
  *------------------------------------------------------------------*/
 
 #include "inputdetail.h"
+//#include "database.h"
 
 /**
  * ===================================================================
@@ -30,12 +31,12 @@
  * ===================================================================
  */
 
-class Login : public InputDetail, Database
+class Login : public InputDetail
 {
     protected:
         /** For stroting email and password of users */
-        string emailID[MIN_SIZE],              /* Email ID - unique */
-               password;                                /* Password */
+
+        vector<string> emailID;                    /**< email ID */
 
     public:
         /** Constructor */
@@ -48,5 +49,5 @@ class Login : public InputDetail, Database
         void SelectLoginDetail();
 
         /** Destructor */
-        ~Login(){}
+        //~Login(){}
 };

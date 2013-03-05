@@ -45,7 +45,9 @@ Login :: Login()
 
 void Login :: SelectLoginDetail()
 {
-
+    emailID.push_back(database.SelectQuery("EmailID", "User"));
+    for(i = 0; i < emailID.size(); i++)
+        cout << "email: " << emailID[i];
 }
 
 /**
@@ -61,6 +63,8 @@ void Login :: LoginPage()
     Header("Login");
 
     DivStart("login", "");
+    
+    SelectLoginDetail();
 
     cout << brk;
 
