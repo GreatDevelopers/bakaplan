@@ -53,7 +53,8 @@ class Database
         Database();
         
         /** For executing MySQL query */
-        string Query(string qry);            /* Retrun string value */
+        void SelectQuery(string column, string table, 
+                         vector<double> result);
 
         /** Database Destructor */
         ~Database();

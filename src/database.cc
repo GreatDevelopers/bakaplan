@@ -30,7 +30,7 @@
  *--------------------------------------------------------------------
  */
 
-Database : Database()
+Database :: Database()
 {
     connect = mysql_init(NULL);
     if ( !connect )
@@ -38,15 +38,9 @@ Database : Database()
         cout << "MySQL Initialization Failed";
     }   
 
-    connect = mysql_real_connect(connect, SERVER, USER, PASSWORD, 
-                                 DATABASE, 0, NULL, 0);
+    connect = mysql_real_connect(connect, SERVER, USER, PASSWORD, DATABASE, 0, NULL, 0);
     
-    if ( connect )
-    {
-        //cout << "Connection Succeeded\n";
-    }
-    
-    else
+    if ( connect == NULL )
     {
         cout << "Connection Failed\n";
     }
@@ -55,19 +49,35 @@ Database : Database()
 /**
  *--------------------------------------------------------------------\n
  *       Class:  Database \n
- *      Method:  Database :: Query(string qry) \n
- * Description:  Executing MySQL Query and returns string value \n
+ *      Method:  Database :: SelectQuery(string column, string table) \n
+ * Description:  Executing MySQL Select Query and returns string value \n
  *--------------------------------------------------------------------
  */
 
-void Database :: Query(string qry)
+string Database :: SelectQuery(string column, string table)
 {
-    mysql_query (connect, qry.c_str());
-    res_set = mysql_store_result(connect);
-    numrows = mysql_num_rows(res_set);
-    while (((row=mysql_fetch_row(res_set)) !=NULL))
+    query  = "Select ";
+    query += column;
+    query += " from ";
+    query += table;
+    query += ";";
+    //cout << "Query" << query;
+ 
+    if (mysql_query (connect, query.c_str())==0)//query.c_str());
     {
-        return row[0];
+        res_set = mysql_store_result(connect);
+
+//    numrows = mysql_num_rows(res_set);
+
+        while (((row = mysql_fetch_row(res_set)) != NULL))
+        {
+            //cout << row[1];
+            return row[0];
+        }
+    }
+    else
+    {
+        return "0";
     }
 }
 
