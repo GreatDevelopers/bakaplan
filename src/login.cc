@@ -45,7 +45,8 @@ Login :: Login()
 
 void Login :: SelectLoginDetail()
 {
-    emailID.push_back(database.SelectQuery("EmailID", "User"));
+    database.SelectQuery("EmailID", "User", emailID);
+
     for(i = 0; i < emailID.size(); i++)
         cout << "email: " << emailID[i];
 }

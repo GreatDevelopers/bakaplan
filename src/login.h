@@ -36,7 +36,7 @@ class Login : public InputDetail
     protected:
         /** For stroting email and password of users */
 
-        vector<string> emailID;                    /**< email ID */
+        vector<string> emailID;    /**< email ID as vector variable */
 
     public:
         /** Constructor */
