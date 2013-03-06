@@ -39,15 +39,22 @@ Login :: Login()
  *--------------------------------------------------------------------\n
  *       Class:  Login \n
  *      Method:  Login :: SelectLoginDetail() \n
- * Description:  For reading email id's and passwords from user table \n
+ * Description:  For reading email id's and passwords from User table \n
  *--------------------------------------------------------------------
  */
 
 void Login :: SelectLoginDetail()
 {
     database.SelectQuery("EmailID", "User", emailID);
+    //cout << emailID.size();
+    vector<string>::iterator v = emailID.begin();
+    while( v != emailID.end()) 
+    {
+        cout << "Email ID: " << *v << brk;
+        v++;
+    }
 
-    for(i = 0; i < emailID.size(); i++)
+     for(i = 0; i < emailID.size(); i++)
         cout << "email: " << emailID[i];
 }
 
