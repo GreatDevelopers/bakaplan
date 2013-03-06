@@ -47,14 +47,16 @@ void Login :: SelectLoginDetail()
 {
     database.SelectQuery("EmailID", "User", emailID);
     //cout << emailID.size();
+    /*  
     vector<string>::iterator v = emailID.begin();
     while( v != emailID.end()) 
     {
         cout << "Email ID: " << *v << brk;
         v++;
-    }
+    }*/
 
-     for(i = 0; i < emailID.size(); i++)
+    // for(i = 0; i < emailID.size(); i++)
+    for(unsigned i = 0; i < emailID.size(); i++)
         cout << "email: " << emailID[i];
 }
 
