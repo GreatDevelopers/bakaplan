@@ -33,12 +33,14 @@
 Database :: Database()
 {
     connect = mysql_init(NULL);
+
     if ( !connect )
     {
         cout << "MySQL Initialization Failed";
     }   
 
-    connect = mysql_real_connect(connect, SERVER, USER, PASSWORD, DATABASE, 0, NULL, 0);
+    connect = mysql_real_connect(connect, SERVER, USER, PASSWORD, 
+                                 DATABASE, 0, NULL, 0);
     
     if ( connect == NULL )
     {
@@ -54,31 +56,28 @@ Database :: Database()
  *--------------------------------------------------------------------
  */
 
-string Database :: SelectQuery(string column, string table)
+void Database :: SelectQuery(string column, string table, 
+                             vector<string> & result)
 {
     query  = "Select ";
     query += column;
     query += " from ";
     query += table;
     query += ";";
-    //cout << "Query" << query;
  
-    if (mysql_query (connect, query.c_str())==0)//query.c_str());
+    if ( mysql_query( connect, query.c_str() ) == 0 )//query.c_str());
     {
-        res_set = mysql_store_result(connect);
+        res_set = mysql_store_result( connect );
 
 //    numrows = mysql_num_rows(res_set);
 
-        while (((row = mysql_fetch_row(res_set)) != NULL))
+        while ( ( ( row = mysql_fetch_row( res_set ) ) != NULL ) )
         {
-            //cout << row[1];
-            return row[0];
+            result.push_back( row[0] );
         }
-    }
-    else
-    {
-        return "0";
-    }
+     }
+     else
+        cout << "";
 }
 
 /**

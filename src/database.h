@@ -54,7 +54,7 @@ class Database
         
         /** For executing MySQL query */
         void SelectQuery(string column, string table, 
-                         vector<double> result);
+                         vector<string> & result);
 
         /** Database Destructor */
         ~Database();
