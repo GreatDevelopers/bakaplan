@@ -19,10 +19,10 @@
  */
 
 /**-------------------------------------------------------------------
- *  Include Required header files
+ *  Include login.h header files
  *------------------------------------------------------------------*/
 
-#include "inputdetail.h"
+#include "login.h"
 
 /**
  * ===================================================================
@@ -32,7 +32,7 @@
  * ===================================================================
  */
 
-class ProjectDetail
+class ProjectDetail : public Login
 {
     protected:
         
@@ -41,6 +41,12 @@ class ProjectDetail
         /** ProjectDetail Consructor */
         ProjectDetail();
 
-        void ProjectDetailPage(); 
+        /** Display Page for project details */
+        void ProjectDetailPage();
 
+        /** Checking user login details valid or not */
+        void AuthorizeUser();
+
+        /** Destructor  */
+        ~ProjectDetail(){}
 };
