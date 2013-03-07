@@ -69,5 +69,9 @@ void InputFieldName :: SetFieldNames()
     /** Login page fields */
 
     emailID         =   "EmailID";
-    password        =   "password";
+    password        =   "Password";
+
+    /** Project Detail */
+
+    projectName     =    "ProjectName";
 }

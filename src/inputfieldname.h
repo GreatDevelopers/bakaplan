@@ -36,23 +36,26 @@ class InputFieldName
     public:
         /// Field Names
         
-        /// Class Details Value                 /* Field Name */
+        /// Class Details Value                 /**< Field Name */
 
-        string className,                       /* ClassName */
-               totalClasses,                    /* TotalClasses */
-               totalSubjects,                   /* TotalSubjects */
-               subjectCode,                     /* SubjectCode */
-               subjectName,                     /* SubjectName */
+        string className,                       /**< ClassName */
+               totalClasses,                    /**< TotalClasses */
+               totalSubjects,                   /**< TotalSubjects */
+               subjectCode,                     /**< SubjectCode */
+               subjectName,                     /**< SubjectName */
         /// Roll No details fields
-                prefix,                         /* Prefix of rollno */
-                startRollNo,                    /* starting roll no */
-                endRollNo,                      /* ending rollno */
-                notIncluded;                    /* roll that are not 
+                prefix,                         /**< Prefix of rollno */
+                startRollNo,                    /**< starting roll no */
+                endRollNo,                      /**< ending rollno */
+                notIncluded,                    /**< roll that are not 
                                                     included in seating 
                                                     plan */
+        // For project details
+                projectName;                    /**< Project Name */
+
         /** For login.html page */
-        string emailID,                         /* Email Field */
-               password;                        /* Password field */
+        string emailID,                         /**< Email Field */
+               password;                        /**< Password field */
 
     public:
         InputFieldName();
