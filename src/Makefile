@@ -46,6 +46,7 @@ H_READINPUTFIELDS   =   readinputfield.h $(H_HEADER) $(H_CGICC)
 H_FIELD             =   $(H_INPUTFIELDNAMES) $(H_READINPUTFIELDS)
 H_DETAILS           =   inputdetail.h $(H_PAGELAYOUT) $(H_FIELD)
 H_LOGIN             =   login.h $(H_DETAILS)
+H_PROJECTDETAIL     =   projectdetail.h $(H_LOGIN)
 H_CLASSDETAILS      =   classdetail.h $(H_DETAILS)
 H_ROLNODETAILS      =   rollnodetail.h $(H_DETAILS)
 
@@ -61,6 +62,7 @@ CC_INPUTFIELDNAMES  =   inputfieldname.cc
 CC_READINPUTFIELDS  =   readinputfield.cc
 CC_DETAILS          =   inputdetail.cc
 CC_LOGIN            =   login.cc
+CC_PROJECTDETAIL    =   projectdetail.cc
 CC_CLASSDETAILS	    =   classdetail.cc
 CC_ROLLNODETAILS    =   rollnodetail.cc
 CC_ROOMDETAILS      =   roomdetail.cc
@@ -73,6 +75,7 @@ M_JAVASCRIPT        =   javascript-main.cpp
 M_TOTALCLASSES      =   totalclasses-main.cpp
 M_CLASSINFO         =   classinfo-main.cpp
 M_LOGIN             =   login-main.cpp
+M_PROJECTDETAIL     =   projectdetail-main.cpp
 
 # ====================================================================
 #	Variables for object files
@@ -86,6 +89,7 @@ O_INPUTFIELDNAMES   =   inputfieldname.o
 O_READINPUTFIELDS   =   readinputfield.o
 O_DETAILS           =   inputdetail.o
 O_LOGIN             =   login.o
+O_PROJECTDETAIL		=	projectdetail.o
 O_CLASSDETAILS      =   classdetail.o
 O_ROLLNODETAILS     =   rollnodetail.o
 
@@ -94,6 +98,7 @@ O_ROLLNODETAILS     =   rollnodetail.o
 O_JAVASCRIPT_MAIN   =   javascript-main.o
 O_TOTALCLASSES_MAIN =   totalclasses-main.o
 O_LOGIN_MAIN        =   login-main.o
+O_PROJECTDETAIL_MAIN=   projectdetail-main.cpp
 O_CLASSINFO_MAIN    =   classinfo-main.o
 
 # ====================================================================
@@ -104,6 +109,7 @@ L_PAGELAYOUT	=	$(O_PAGESTRUCTURE) $(O_PAGELAYOUT)
 L_FIELDS		=	$(O_INPUTFIELDNAMES) $(O_READINPUTFIELDS)
 L_DETAILS		=	$(L_PAGELAYOUT) $(L_FIELDS) $(O_DATABASE) $(O_DETAILS)
 L_LOGIN         =   $(L_DETAILS) $(O_LOGIN)
+L_PROJECTDETAIL =   $(L_LOGIN) $(O_PROJECTDETAIL)
 L_CLASSDETAILS	=	$(L_DETAILS) $(O_CLASSDETAILS)
 L_ROLLNODETAILS	=	$(L_DETAILS) $(O_ROLLNODETAILS)
 
@@ -113,6 +119,7 @@ L_TOTALCLASSES	=	$(L_CLASSDETAILS) $(O_TOTALCLASSES_MAIN)
 L_CLASSINFO		=	$(L_CLASSDETAILS) $(O_CLASSINFO_MAIN)
 L_LOGINPAGE     =   $(L_LOGIN) $(O_LOGIN_MAIN)
 L_JAVASCRIPT    =   $(O_JAVASCRIPT) $(O_JAVASCRIPT_MAIN)
+L_PROJECTDETAIL_M = $(L_PROJECTDETAIL) $(O_PROJECTDETAIL_MAIN)
 
 # ====================================================================
 # 	O/P file names(exe) (E_FILENAME)
@@ -122,12 +129,13 @@ E_TOTALCLASSES	=	totalclasses.html
 E_CLASSINFO		=	classinfo.html
 E_LOGIN         =   login.html
 E_JAVASCRIPT    =   javascript.js
+E_PROJECTDETAIL =   projectdetail.html
 
 # ====================================================================
 #	Main target (1st target)
 # ====================================================================
 
-all: $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO)
+all: $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO) $(E_PROJECTDETAIL)
 
 # ====================================================================
 #	targets for compiling .cc or .cpp files
@@ -157,6 +165,9 @@ $(O_DETAILS): $(CC_DETAILS) $(H_DETAILS)
 $(O_LOGIN): $(CC_LOGIN) $(H_LOGIN)
 	$(CC) $(CFLAG) $(CC_LOGIN) $(LMYSQL)
 
+$(O_PROJECTDETAIL): $(CC_PROJECTDETAIL) $(H_PROJECTDETAIL)
+	$(CC) $(CFLAG) $(CC_PROJECTDETAIL) $(LMYSQL) $(LCGICC)
+
 $(O_CLASSDETAILS): $(CC_CLASSDETAILS) $(H_CLASSDETAILS)
 	$(CC) $(CFLAG) $(CC_CLASSDETAILS) $(LMYSQL)
 
@@ -166,7 +177,10 @@ $(O_JAVASCRIPT_MAIN): $(M_JAVASCRIPT) $(H_JAVASCRIPT)
 	$(CC) $(CFLAG) $(M_JAVASCRIPT)
 
 $(O_LOGIN_MAIN): $(M_LOGIN) $(H_LOGIN)
-	$(CC) $(CFLAG) $(M_LOGIN) $(LMYSQL)
+	$(CC) $(CFLAG) $(M_LOGIN) $(LMYSQL) 
+
+$(O_PROJECTDETAIL_MAIN): $(M_PROJECTDETAIL) $(H_PROJECTDETAIL)
+	$(CC) $(CFLAG) $(M_PROJECTDETAIL) $(LMYSQL) $(LCGICC)
 
 $(O_TOTALCLASSES_MAIN): $(M_TOTALCLASSES) $(H_CLASSDETAILS)
 	$(CC) $(CFLAG) $(M_TOTALCLASSES) $(LMYSQL)
@@ -183,6 +197,10 @@ $(E_JAVASCRIPT): $(L_JAVASCRIPT)
 
 $(E_LOGIN): $(L_LOGINPAGE)
 	$(CC) $(OFLAG) $(E_LOGIN) $(L_LOGINPAGE) $(LCGICC) $(LMYSQL)
+
+$(E_PROJECTDETAIL): $(L_PROJECTDETAIL_M)
+	$(CC) $(OFLAG) $(E_PROJECTDETAIL) $(L_PROJECTDETAIL_M) $(LCGICC) \
+	$(LMYSQL)
 
 $(E_TOTALCLASSES): $(L_TOTALCLASSES)
 	$(CC) $(OFLAG) $(E_TOTALCLASSES) $(L_TOTALCLASSES) $(LCGICC) \
