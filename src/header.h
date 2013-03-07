@@ -26,6 +26,7 @@
 #include <sstream>
 #include <cstdlib>
 #include <vector>
+#include <algorithm>
 
 /**-------------------------------------------------------------------
  *  using namespace std
