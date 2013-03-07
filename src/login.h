@@ -22,7 +22,6 @@
  *------------------------------------------------------------------*/
 
 #include "inputdetail.h"
-//#include "database.h"
 
 /**
  * ===================================================================
@@ -34,9 +33,13 @@
 class Login : public InputDetail
 {
     protected:
-        /** For stroting email and password of users */
+        /** For storting email and password of users */
 
-        vector<string> emailID;    /**< email ID as vector variable */
+        vector<string> emailID,             /**< Email ID as vector */
+                       password;   /**< password as vector variable */
+
+        string userEmailID,  /**< For reading emailID in text field */
+               userPassword; /**< For reading password in text field*/
 
     public:
         /** Constructor */
@@ -45,9 +48,12 @@ class Login : public InputDetail
         /** Creating login page */
         void LoginPage();
 
+        /** Read Login Detail */
+        void ReadLoginDetail();
+
         /** For selecting emial and password fron user table */
         void SelectLoginDetail();
 
         /** Destructor */
-        //~Login(){}
+        ~Login(){}
 };

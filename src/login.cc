@@ -42,12 +42,13 @@ Login :: Login()
  * Description:  For reading email id's and passwords from User table \n
  *--------------------------------------------------------------------
  */
-
+ 
 void Login :: SelectLoginDetail()
 {
     database.SelectQuery("EmailID", "User", emailID);
-    //cout << emailID.size();
-    /*  
+    database.SelectQuery("Password", "User", password);
+
+/*      
     vector<string>::iterator v = emailID.begin();
     while( v != emailID.end()) 
     {
@@ -55,9 +56,25 @@ void Login :: SelectLoginDetail()
         v++;
     }*/
 
-    // for(i = 0; i < emailID.size(); i++)
     for(unsigned i = 0; i < emailID.size(); i++)
-        cout << "email: " << emailID[i];
+    {
+        cout << "Email: " << emailID[i] << brk
+             << "Password: " << password[i] << brk;
+    }
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Login \n
+ *      Method:  Login :: ReadLoginDetail() \n
+ * Description:  Reading login detail from text fileds given by user \n
+ *--------------------------------------------------------------------
+ */
+
+void Login :: ReadLoginDetail()
+{
+    userEmailID  = readField.ReadFieldValue(fieldName.emailID);
+    userPassword = readField.ReadFieldValue(fieldName.password);
 }
 
 /**
