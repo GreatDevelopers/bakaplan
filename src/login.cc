@@ -90,8 +90,6 @@ void Login :: LoginPage()
     Header("Login");
 
     DivStart("login", "");
-    
-    SelectLoginDetail();
 
     cout << brk;
 
@@ -100,16 +98,43 @@ void Login :: LoginPage()
     cout << startH1 << "Login" << endH1 << brk;
 
     cout << " Email ID ";
-    InputField("email", fieldName.emailID, 0, "email@abc.com");
+    InputField("email", fieldName.emailID, "email@abc.com");
     cout << brk << brk;
     cout << " Password ";
-    InputField("password", fieldName.password, 0, "123456");
+    InputField("password", fieldName.password, "123456");
     
     cout << brk << brk;
     
-    Button("next", "submit", "btn", "NEXT");
+    Button("next", "submit", "btn", "Login");
+
+    cout << brk << brk << startB;
+    Anchor("register.html", "Register Here");
+    cout << endB;
 
     FormEnd();
+    DivEnd();
+
+    Footer();
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Login \n
+ *      Method:  Login :: Register() \n
+ * Description:  Register new user \n
+ *--------------------------------------------------------------------
+ */
+
+void Login :: Register()
+{
+    Header("Register");
+    
+    DivStart("register", "");
+    
+    FormStart("register", "user.html", "POST");
+
+    FormEnd();
+
     DivEnd();
 
     Footer();
