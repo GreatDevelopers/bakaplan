@@ -51,6 +51,9 @@ class Login : public InputDetail
         /** Read Login Detail */
         void ReadLoginDetail();
 
+        /** Register user page  */
+        void Register();
+
         /** For selecting emial and password fron user table */
         void SelectLoginDetail();
 
