@@ -32,7 +32,7 @@
 
 Login :: Login()
 {
-
+    // constructor
 }
 
 /**
@@ -56,11 +56,11 @@ void Login :: SelectLoginDetail()
         v++;
     }*/
 
-    for(unsigned i = 0; i < emailID.size(); i++)
+   /*  for(unsigned i = 0; i < emailID.size(); i++)
     {
         cout << "Email: " << emailID[i] << brk
              << "Password: " << password[i] << brk;
-    }
+    }*/
 }
 
 /**
