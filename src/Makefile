@@ -76,6 +76,8 @@ M_TOTALCLASSES      =   totalclasses-main.cpp
 M_CLASSINFO         =   classinfo-main.cpp
 M_LOGIN             =   login-main.cpp
 M_PROJECTDETAIL     =   projectdetail-main.cpp
+M_REGISTER          =   register-main.cpp
+M_NEWUSER           =   newuser-main.cpp
 
 # ====================================================================
 #	Variables for object files
@@ -98,8 +100,10 @@ O_ROLLNODETAILS     =   rollnodetail.o
 O_JAVASCRIPT_MAIN   =   javascript-main.o
 O_TOTALCLASSES_MAIN =   totalclasses-main.o
 O_LOGIN_MAIN        =   login-main.o
-O_PROJECTDETAIL_MAIN=   projectdetail-main.cpp
+O_PROJECTDETAIL_MAIN=   projectdetail-main.o
 O_CLASSINFO_MAIN    =   classinfo-main.o
+O_REGISTER_MAIN     =   register-main.o
+O_NEWUSER_MAIN      =   newuser-main.o
 
 # ====================================================================
 #	Linking Variables (L_EXE_FILENAME)
@@ -120,6 +124,8 @@ L_CLASSINFO		=	$(L_CLASSDETAILS) $(O_CLASSINFO_MAIN)
 L_LOGINPAGE     =   $(L_LOGIN) $(O_LOGIN_MAIN)
 L_JAVASCRIPT    =   $(O_JAVASCRIPT) $(O_JAVASCRIPT_MAIN)
 L_PROJECTDETAIL_M = $(L_PROJECTDETAIL) $(O_PROJECTDETAIL_MAIN)
+L_REGISTER      =   $(L_LOGIN) $(O_REGISTER_MAIN)
+L_NEWUSER       =   $(L_LOGIN) $(O_NEWUSER_MAIN)
 
 # ====================================================================
 # 	O/P file names(exe) (E_FILENAME)
@@ -130,12 +136,14 @@ E_CLASSINFO		=	classinfo.html
 E_LOGIN         =   login.html
 E_JAVASCRIPT    =   javascript.js
 E_PROJECTDETAIL =   projectdetail.html
+E_REGISTER      =   register.html
+E_NEWUSER       =   newuser.html
 
 # ====================================================================
 #	Main target (1st target)
 # ====================================================================
 
-all: $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO) $(E_PROJECTDETAIL)
+all: $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO) $(E_PROJECTDETAIL) $(E_REGISTER) $(E_NEWUSER)
 
 # ====================================================================
 #	targets for compiling .cc or .cpp files
@@ -179,6 +187,12 @@ $(O_JAVASCRIPT_MAIN): $(M_JAVASCRIPT) $(H_JAVASCRIPT)
 $(O_LOGIN_MAIN): $(M_LOGIN) $(H_LOGIN)
 	$(CC) $(CFLAG) $(M_LOGIN) $(LMYSQL) 
 
+$(O_REGISTER_MAIN): $(M_REGISTER) $(H_LOGIN)
+	$(CC) $(CFLAG) $(M_REGISTER) $(LMYSQL)
+
+$(O_NEWUSER_MAIN): $(M_NEWUSER) $(H_LOGIN)
+	$(CC) $(CFLAG) $(M_NEWUSER) $(LMYSQL)
+
 $(O_PROJECTDETAIL_MAIN): $(M_PROJECTDETAIL) $(H_PROJECTDETAIL)
 	$(CC) $(CFLAG) $(M_PROJECTDETAIL) $(LMYSQL) $(LCGICC)
 
@@ -197,6 +211,12 @@ $(E_JAVASCRIPT): $(L_JAVASCRIPT)
 
 $(E_LOGIN): $(L_LOGINPAGE)
 	$(CC) $(OFLAG) $(E_LOGIN) $(L_LOGINPAGE) $(LCGICC) $(LMYSQL)
+
+$(E_REGISTER): $(L_REGISTER)
+	$(CC) $(OFLAG) $(E_REGISTER) $(L_REGISTER) $(LCGICC) $(LMYSQL)
+
+$(E_NEWUSER): $(L_NEWUSER)
+	$(CC) $(OFLAG) $(E_NEWUSER) $(L_NEWUSER) $(LCGICC) $(LMYSQL)
 
 $(E_PROJECTDETAIL): $(L_PROJECTDETAIL_M)
 	$(CC) $(OFLAG) $(E_PROJECTDETAIL) $(L_PROJECTDETAIL_M) $(LCGICC) \
