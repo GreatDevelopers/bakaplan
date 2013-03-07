@@ -120,22 +120,60 @@ void Login :: LoginPage()
 /**
  *--------------------------------------------------------------------\n
  *       Class:  Login \n
- *      Method:  Login :: Register() \n
+ *      Method:  Login :: RegisterPage() \n
  * Description:  Register new user \n
  *--------------------------------------------------------------------
  */
 
-void Login :: Register()
+void Login :: RegisterPage()
 {
     Header("Register");
     
     DivStart("register", "");
+    cout << brk;
+    FormStart("register", "newuser.html", "POST");
     
-    FormStart("register", "user.html", "POST");
+    cout << startH1 << " Register New User " << endH1 <<  brk;
+    
+    cout << " Email ID ";
+    InputField("text", fieldName.emailID, "abc@123.com");
+    
+    cout << brk << brk
+         << " Password ";
+    InputField("password", fieldName.password, "123456");
+
+    cout << brk << brk;
+
+    Button("register", "submit", "btn", "Register");
 
     FormEnd();
 
     DivEnd();
 
     Footer();
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Login \n
+ *      Method:  Login :: AddNewUser() \n
+ * Description:  Adding new user into database and if user already
+ *               exists then move back to register page for unique 
+ *               email id \n
+ *--------------------------------------------------------------------
+ */
+
+void Login :: AddNewUser()
+{
+    SelectLoginDetail();
+    ReadLoginDetail();
+
+    if ( find(emailID.begin(), emailID.end(), userEmailID)
+         != emailID.end() )
+    {
+//        database.InsertIntoUser( userEmailID, userPassword );
+        RegisterPage();
+    }
+    else
+        LoginPage();
 }

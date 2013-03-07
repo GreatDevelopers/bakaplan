@@ -52,7 +52,10 @@ class Login : public InputDetail
         void ReadLoginDetail();
 
         /** Register user page  */
-        void Register();
+        void RegisterPage();
+
+        /** Add new user in database */
+        void AddNewUser();
 
         /** For selecting emial and password fron user table */
         void SelectLoginDetail();
