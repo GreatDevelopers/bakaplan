@@ -52,8 +52,10 @@ void ProjectDetail :: AuthorizeUser()
     SelectLoginDetail();
     ReadLoginDetail();
     /** Matching user details with values in database */
-    if (find(emailID.begin(), emailID.end(), userEmailID) 
-        != emailID.end())               /**< If login details valid */
+    if ( ( find(emailID.begin(), emailID.end(), userEmailID) 
+         != emailID.end() ) && 
+         ( find(password.begin(), password.end(), userPassword ) 
+         != password.end() ) )          /**< If login details valid */
     {
         ProjectDetailPage();            
     }
@@ -82,7 +84,7 @@ void ProjectDetail :: ProjectDetailPage()
     cout << startH1 << "Project Detail" << endH1 << brk;
 
     cout << " Project Name ";
-    InputField("text", fieldName.projectName, 0, "Project Name");
+    InputField("text", fieldName.projectName, "Project Name");
 
     cout << brk << brk;
 
