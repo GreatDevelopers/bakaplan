@@ -151,7 +151,7 @@ void ClassDetail :: ClassInfo()
     InputField("hidden", fieldName.totalClasses, 0, 
                 IntToString(totalClasses));
 
-    cout << startH1 << "Enter Branch Details" << endH1 << brk;
+    cout << startH1 << "Enter Class Details" << endH1 << brk;
     TableStart("classdetails", "");
     
     cout << startTR;
