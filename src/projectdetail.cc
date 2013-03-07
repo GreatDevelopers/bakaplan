@@ -36,7 +36,7 @@
 
 ProjectDetail :: ProjectDetail()
 {
-
+    // Constructor
 }
 
 /**
@@ -49,5 +49,60 @@ ProjectDetail :: ProjectDetail()
 
 void ProjectDetail :: AuthorizeUser()
 {
+    SelectLoginDetail();
+    ReadLoginDetail();
+    /** Matching user details with values in database */
+    if (find(emailID.begin(), emailID.end(), userEmailID) 
+        != emailID.end())               /**< If login details valid */
+    {
+        ProjectDetailPage();            
+    }
+    else                              /**< If login details invalid */
+        LoginPage();
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  ProjectDetail \n
+ *      Method:  ProjectDetail :: ProjectDetailPage() \n
+ * Description:  Diplaying page for project details \n
+ *--------------------------------------------------------------------
+ */
+
+void ProjectDetail :: ProjectDetailPage()
+{
+    Header("Project Detail");
+
+    DivStart("projectdetail", "");
     
+    cout << brk;
+
+    FormStart("projectdetail", "totalclasses.html", "POST");
+    
+    cout << startH1 << "Project Detail" << endH1 << brk;
+
+    cout << " Project Name ";
+    InputField("text", fieldName.projectName, 0, "Project Name");
+
+    cout << brk << brk;
+
+    Button("next", "submit", "btn", "NEXT");
+
+    FormEnd();
+    DivEnd();
+
+    Footer();
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  ProjectDetail \n
+ *      Method:  ProjectDetail :: ~ProjectDetail() \n
+ * Description:  Destuctor \n
+ *--------------------------------------------------------------------
+ */
+
+ProjectDetail :: ~ProjectDetail()
+{
+    // Destructor
 }
