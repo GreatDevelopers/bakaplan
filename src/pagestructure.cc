@@ -308,6 +308,19 @@ void PageStructureMaker :: ListItem(string listItem)
 }
 
 /**
+ *--------------------------------------------------------------------\n
+ *       Class:  PageStructureMaker \n
+ *      Method:  PageStructureMaker :: Anchor(string href) \n
+ * Description:  Anchor Tag \n
+ *--------------------------------------------------------------------
+ */
+
+void PageStructureMaker :: Anchor(string href, string target)
+{
+    cout << "<a href = \"" << href << "\">" << target << "</a>";
+}
+
+/**
  *--------------------------------------------------------------------
  *       Class:  PageStructureMaker
  *      Method:  PageStructureMaker :: InputField(string type, 
@@ -320,12 +333,37 @@ void PageStructureMaker :: ListItem(string listItem)
 void PageStructureMaker :: InputField(string type, string name, 
                             int nameNo, string value)
 {
-
+    stringstream ss;
+    //ss.str(name);
+    ss << nameNo;
+    name += ss.str();
+    
+    InputField(type, name, value);
+    /*  
     cout << "<input type=\"" << type << "\" name=\"" << name;
     if( nameNo != 0)
         cout << nameNo;
     cout << "\"" << " value = \"" << value << "\" "
          << " onfocus = \"OnFocus(this.value, this.name, \"" << value 
+         << "\")\""
+         << ">" << endl;*/
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  PageStructureMaker \n
+ *      Method:  PageStructureMaker :: InputField(string type, 
+ *               string name, string value) \n
+ * Description:  For creating input field with 3 arguments \n
+ *--------------------------------------------------------------------
+ */
+
+void PageStructureMaker :: InputField(string type, string name, 
+                                      string value)
+{
+    cout << "<input type=\"" << type << "\" name=\"" << name;
+    cout << "\"" << " value = \"" << value << "\" " 
+         << " onfocus = \"OnFocus(this.value, this.name, \"" << value
          << "\")\""
          << ">" << endl;
 }

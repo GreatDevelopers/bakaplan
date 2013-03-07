@@ -103,9 +103,15 @@ class PageStructureMaker
         /** List Item */
         void ListItem(string listItem);
 
-        /** Input Field */
+        /** Anchor Tag */
+        void Anchor(string href, string target);
+
+        /** Input Field with 4 arguments */
         void InputField(string type, string name, int nameNo, 
                         string value);
+
+        /** Input field with 3 arguments */
+        void InputField(string type, string name, string value);
 
         /** Select Field Start */
         void SelectFieldStart(string name);
