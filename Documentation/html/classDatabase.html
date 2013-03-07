@@ -96,9 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4703c80e6969d33565ea340f768fdadf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a4703c80e6969d33565ea340f768fdadf">Database</a> ()</td></tr>
-<tr class="memitem:aaa4186192d40229b61e2b910a4aa8fa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#aaa4186192d40229b61e2b910a4aa8fa0">Select</a> (string column, string tableName)</td></tr>
-<tr class="memitem:a6cb8f64ba23bf85d3161e7c17771dd89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a6cb8f64ba23bf85d3161e7c17771dd89">Select</a> (string column, string tableName, string whereClause)</td></tr>
-<tr class="memitem:a2cf59655e870fe29cd5b18c0c47444e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a2cf59655e870fe29cd5b18c0c47444e9">Insert</a> (int projectID, string projectName, string tableName)</td></tr>
+<tr class="memitem:aec3d0f84e49a58a59f254c90193c1303"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#aec3d0f84e49a58a59f254c90193c1303">SelectQuery</a> (string column, string table, vector&lt; string &gt; &amp;result)</td></tr>
 <tr class="memitem:a84d399a2ad58d69daab9b05330e1316d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a84d399a2ad58d69daab9b05330e1316d">~Database</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
@@ -108,6 +106,7 @@ Protected Attributes</h2></td></tr>
 MYSQL_RES *&#160;</td><td class="memItemRight" valign="bottom"><b>res_set</b></td></tr>
 <tr class="memitem:a71ad7ae59677936d2ca6666f9de9df40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71ad7ae59677936d2ca6666f9de9df40"></a>
 MYSQL_ROW&#160;</td><td class="memItemRight" valign="bottom"><b>row</b></td></tr>
+<tr class="memitem:a02965883689dd1d8007c86cebf6df89e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a02965883689dd1d8007c86cebf6df89e">numrows</a></td></tr>
 <tr class="memitem:acd64ff0e98b28cd1c6928a1236634521"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#acd64ff0e98b28cd1c6928a1236634521">tLogin</a></td></tr>
 <tr class="memitem:aa8ec817b6216079c8e541ec80c8bd4fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8ec817b6216079c8e541ec80c8bd4fa"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>tRegister</b></td></tr>
@@ -123,7 +122,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>------------------------------------------------------------------- Include <a class="el" href="header_8h_source.html">header.h</a> and <a class="el" href="database_8h_source.html">database.h</a> &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; =================================================================== Class: <a class="el" href="classDatabase.html">Database</a> Description: <a class="el" href="classDatabase.html">Database</a> class for database accessability =================================================================== </p>
 
-<p>Definition at line <a class="el" href="database_8h_source.html#l00033">33</a> of file <a class="el" href="database_8h_source.html">database.h</a>.</p>
+<p>Definition at line <a class="el" href="database_8h_source.html#l00034">34</a> of file <a class="el" href="database_8h_source.html">database.h</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a4703c80e6969d33565ea340f768fdadf"></a>
 <div class="memitem">
@@ -137,7 +136,10 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="el" href="classDatabase.html">Database</a> Constructor </p>
+<p><a class="el" href="classDatabase.html">Database</a> Constructor</p>
+<p>------------------------------------------------------------------- Include <a class="el" href="database_8h_source.html">database.h</a> file local header file(declaration of class) &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; -------------------------------------------------------------------- Class: <a class="el" href="classDatabase.html">Database</a> Method: <a class="el" href="classDatabase.html">Database</a> :: <a class="el" href="classDatabase.html#a4703c80e6969d33565ea340f768fdadf">Database()</a> Description: Constructor to initialize database conectivity -------------------------------------------------------------------- </p>
+
+<p>Definition at line <a class="el" href="database_8cc_source.html#l00033">33</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
 
 </div>
 </div>
@@ -153,50 +155,20 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="el" href="classDatabase.html">Database</a> Destructor </p>
+<p><a class="el" href="classDatabase.html">Database</a> Destructor</p>
+<p>-------------------------------------------------------------------- Class: <a class="el" href="classDatabase.html">Database</a> Method: <a class="el" href="classDatabase.html">Database</a> :: <a class="el" href="classDatabase.html#a84d399a2ad58d69daab9b05330e1316d">~Database()</a> Description: Destructor for closing database connectivity -------------------------------------------------------------------- </p>
+
+<p>Definition at line <a class="el" href="database_8cc_source.html#l00091">91</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
 
 </div>
 </div>
 <h2>Member Function Documentation</h2>
-<a class="anchor" id="a2cf59655e870fe29cd5b18c0c47444e9"></a>
+<a class="anchor" id="aec3d0f84e49a58a59f254c90193c1303"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Database::Insert </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>projectID</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>projectName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>tableName</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Insert into ProjectName </p>
-
-</div>
-</div>
-<a class="anchor" id="aaa4186192d40229b61e2b910a4aa8fa0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Database::Select </td>
+          <td class="memname">void Database::SelectQuery </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>column</em>, </td>
@@ -205,7 +177,13 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>tableName</em>&#160;</td>
+          <td class="paramname"><em>table</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -214,40 +192,14 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Select MySQL command with 2 arguments </p>
+<p>For executing MySQL query</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;<br/>
+ Class: <a class="el" href="classDatabase.html">Database</a> <br/>
+ Method: <a class="el" href="classDatabase.html">Database</a> :: SelectQuery(string column, string table) <br/>
+ Description: Executing MySQL Select Query and returns string value <br/>
+ -------------------------------------------------------------------- </p>
 
-</div>
-</div>
-<a class="anchor" id="a6cb8f64ba23bf85d3161e7c17771dd89"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Database::Select </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>column</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>tableName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>whereClause</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Select command with 3 arguments </p>
+<p>Definition at line <a class="el" href="database_8cc_source.html#l00059">59</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
 
 </div>
 </div>
@@ -271,7 +223,30 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
 </div><div class="memdoc">
 <p>MySQL connectivity Variables </p>
 
-<p>Definition at line <a class="el" href="database_8h_source.html#l00037">37</a> of file <a class="el" href="database_8h_source.html">database.h</a>.</p>
+<p>Definition at line <a class="el" href="database_8h_source.html#l00038">38</a> of file <a class="el" href="database_8h_source.html">database.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a02965883689dd1d8007c86cebf6df89e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Database::numrows</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>unsigned int variable </p>
+
+<p>Definition at line <a class="el" href="database_8h_source.html#l00043">43</a> of file <a class="el" href="database_8h_source.html">database.h</a>.</p>
 
 </div>
 </div>
@@ -294,17 +269,18 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
 </div><div class="memdoc">
 <p>Table names tTablename </p>
 
-<p>Definition at line <a class="el" href="database_8h_source.html#l00042">42</a> of file <a class="el" href="database_8h_source.html">database.h</a>.</p>
+<p>Definition at line <a class="el" href="database_8h_source.html#l00046">46</a> of file <a class="el" href="database_8h_source.html">database.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="database_8h_source.html">database.h</a></li>
+<li>src/<a class="el" href="database_8cc_source.html">database.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 3 2013 14:59:13 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 7 2013 20:39:25 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

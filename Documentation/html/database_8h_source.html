@@ -111,49 +111,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;header.h&quot;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;database-detail.h&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * ===================================================================</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *        Class:  Database</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  Description:  Database class for database accessability</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> * ===================================================================</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="classDatabase.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDatabase.html">Database</a></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">        /** MySQL connectivity Variables */</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="classDatabase.html#aa232b806b05ef654cd5579bca5f1dbad">   37</a></span>&#160;        MYSQL *<a class="code" href="classDatabase.html#aa232b806b05ef654cd5579bca5f1dbad">connect</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        MYSQL_RES *res_set;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        MYSQL_ROW row;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment"></span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">        /** Table names tTablename */</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="classDatabase.html#acd64ff0e98b28cd1c6928a1236634521">   42</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classDatabase.html#acd64ff0e98b28cd1c6928a1236634521">tLogin</a>, tRegister, tProjectDetail;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">int</span> i, j;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">string</span> query;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">public</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">        /** Database Constructor */</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="classDatabase.html#a4703c80e6969d33565ea340f768fdadf">Database</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">        /** Select MySQL command with 2 arguments */</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#aaa4186192d40229b61e2b910a4aa8fa0">Select</a>(<span class="keywordtype">string</span> column, <span class="keywordtype">string</span> tableName);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">        /** Select command with 3 arguments */</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#aaa4186192d40229b61e2b910a4aa8fa0">Select</a>(<span class="keywordtype">string</span> column, <span class="keywordtype">string</span> tableName, </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    <span class="keywordtype">string</span> whereClause);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment"></span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">        /** Insert into ProjectName */</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="classDatabase.html#a2cf59655e870fe29cd5b18c0c47444e9">Insert</a>(<span class="keywordtype">int</span> projectID, <span class="keywordtype">string</span> projectName, <span class="keywordtype">string</span> tableName);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">        /** Database Destructor */</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="classDatabase.html#a84d399a2ad58d69daab9b05330e1316d">~Database</a>();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;mysql.h&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * ===================================================================</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *        Class:  Database</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *  Description:  Database class for database accessability</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> * ===================================================================</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="classDatabase.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDatabase.html">Database</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">protected</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">        /** MySQL connectivity Variables */</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="classDatabase.html#aa232b806b05ef654cd5579bca5f1dbad">   38</a></span>&#160;        MYSQL *<a class="code" href="classDatabase.html#aa232b806b05ef654cd5579bca5f1dbad">connect</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        MYSQL_RES *res_set;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        MYSQL_ROW row;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">        /** unsigned int variable  */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="classDatabase.html#a02965883689dd1d8007c86cebf6df89e">   43</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classDatabase.html#a02965883689dd1d8007c86cebf6df89e">numrows</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">        /** Table names tTablename */</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="classDatabase.html#acd64ff0e98b28cd1c6928a1236634521">   46</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classDatabase.html#acd64ff0e98b28cd1c6928a1236634521">tLogin</a>, tRegister, tProjectDetail;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">string</span> query;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">public</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">        /** Database Constructor */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classDatabase.html#a4703c80e6969d33565ea340f768fdadf">Database</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">        /** For executing MySQL query */</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#aec3d0f84e49a58a59f254c90193c1303">SelectQuery</a>(<span class="keywordtype">string</span> column, <span class="keywordtype">string</span> table, </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                         vector&lt;string&gt; &amp; result);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">        /** Database Destructor */</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="classDatabase.html#a84d399a2ad58d69daab9b05330e1316d">~Database</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 3 2013 14:59:13 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 7 2013 20:39:23 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

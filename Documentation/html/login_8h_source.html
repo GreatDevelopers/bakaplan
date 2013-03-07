@@ -119,20 +119,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> * ===================================================================</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="classLogin.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLogin.html">Login</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="classLogin.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLogin.html">Login</a> : <span class="keyword">public</span> <a class="code" href="classInputDetail.html">InputDetail</a></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">public</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">        /** Constructor */</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="classLogin.html#a4847f3e07e43b540d3339392346f87ff">Login</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">protected</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">        /** For storting email and password of users */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="classLogin.html#ac097ff5d4f32b36b3f57e8e75fcf18a7">   38</a></span>&#160;        vector&lt;string&gt; <a class="code" href="classLogin.html#a3470a140651dd1afafe29f4dde99905d">emailID</a>,             <span class="comment">/**&lt; Email ID as vector */</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                       <a class="code" href="classLogin.html#ac097ff5d4f32b36b3f57e8e75fcf18a7">password</a>;   <span class="comment">/**&lt; password as vector variable */</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogin.html#afdbfed3107b8dbe58d324f30fa58b57b">LoginPage</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="classLogin.html#a9731be126468f535f161f045c95687c6">   41</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classLogin.html#aa83b4706e0f0f0afc65f210ee8e4839a">userEmailID</a>,  <span class="comment">/**&lt; For reading emailID in text field */</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;               <a class="code" href="classLogin.html#a9731be126468f535f161f045c95687c6">userPassword</a>; <span class="comment">/**&lt; For reading password in text field*/</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">public</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">        /** Constructor */</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="classLogin.html#a4847f3e07e43b540d3339392346f87ff">Login</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">        /** Creating login page */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogin.html#afdbfed3107b8dbe58d324f30fa58b57b">LoginPage</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">        /** Read Login Detail */</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogin.html#ab5bc65de431f277f15a3b423ad915808">ReadLoginDetail</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">        /** Register user page  */</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogin.html#ab1dd7b372930530b7129122a6117711f">Register</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">        /** For selecting emial and password fron user table */</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLogin.html#ad127628ca09987d733477f90b828ad1e">SelectLoginDetail</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">        /** Destructor */</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="classLogin.html#a659bc7233ec12c79b9fa523c1734fbbc">   61</a></span>&#160;        <a class="code" href="classLogin.html#a659bc7233ec12c79b9fa523c1734fbbc">~Login</a>(){}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 3 2013 14:59:13 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 7 2013 20:39:23 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

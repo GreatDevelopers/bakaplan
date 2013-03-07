@@ -10,11 +10,7 @@
 \item 
 \hyperlink{classDatabase_a4703c80e6969d33565ea340f768fdadf}{Database} ()
 \item 
-void \hyperlink{classDatabase_aaa4186192d40229b61e2b910a4aa8fa0}{Select} (string column, string table\-Name)
-\item 
-void \hyperlink{classDatabase_a6cb8f64ba23bf85d3161e7c17771dd89}{Select} (string column, string table\-Name, string where\-Clause)
-\item 
-\hyperlink{classDatabase_a2cf59655e870fe29cd5b18c0c47444e9}{Insert} (int project\-I\-D, string project\-Name, string table\-Name)
+void \hyperlink{classDatabase_aec3d0f84e49a58a59f254c90193c1303}{Select\-Query} (string column, string table, vector$<$ string $>$ \&result)
 \item 
 \hyperlink{classDatabase_a84d399a2ad58d69daab9b05330e1316d}{$\sim$\-Database} ()
 \end{DoxyCompactItemize}
@@ -28,6 +24,8 @@ M\-Y\-S\-Q\-L $\ast$ \hyperlink{classDatabase_aa232b806b05ef654cd5579bca5f1dbad}
 \item 
 \hypertarget{classDatabase_a71ad7ae59677936d2ca6666f9de9df40}{M\-Y\-S\-Q\-L\-\_\-\-R\-O\-W {\bfseries row}}\label{classDatabase_a71ad7ae59677936d2ca6666f9de9df40}
 
+\item 
+unsigned int \hyperlink{classDatabase_a02965883689dd1d8007c86cebf6df89e}{numrows}
 \item 
 string \hyperlink{classDatabase_acd64ff0e98b28cd1c6928a1236634521}{t\-Login}
 \item 
@@ -51,7 +49,7 @@ string \hyperlink{classDatabase_acd64ff0e98b28cd1c6928a1236634521}{t\-Login}
 \subsection{Detailed Description}
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Include \hyperlink{header_8h_source}{header.\-h} and \hyperlink{database_8h_source}{database.\-h} ------------------------------------------------------------------ =================================================================== Class\-: \hyperlink{classDatabase}{Database} Description\-: \hyperlink{classDatabase}{Database} class for database accessability =================================================================== 
 
-Definition at line 33 of file database.\-h.
+Definition at line 34 of file database.\-h.
 
 
 
@@ -63,43 +61,48 @@ Definition at line 33 of file database.\-h.
 {}
 \end{DoxyParamCaption}
 )}}\label{classDatabase_a4703c80e6969d33565ea340f768fdadf}
-\hyperlink{classDatabase}{Database} Constructor \hypertarget{classDatabase_a84d399a2ad58d69daab9b05330e1316d}{\index{Database@{Database}!$\sim$\-Database@{$\sim$\-Database}}
+\hyperlink{classDatabase}{Database} Constructor
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Include \hyperlink{database_8h_source}{database.\-h} file local header file(declaration of class) ------------------------------------------------------------------ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classDatabase}{Database} Method\-: \hyperlink{classDatabase}{Database} \-:\-: \hyperlink{classDatabase_a4703c80e6969d33565ea340f768fdadf}{Database()} Description\-: Constructor to initialize database conectivity -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 33 of file database.\-cc.
+
+\hypertarget{classDatabase_a84d399a2ad58d69daab9b05330e1316d}{\index{Database@{Database}!$\sim$\-Database@{$\sim$\-Database}}
 \index{$\sim$\-Database@{$\sim$\-Database}!Database@{Database}}
 \subsubsection[{$\sim$\-Database}]{\setlength{\rightskip}{0pt plus 5cm}Database\-::$\sim$\-Database (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}}\label{classDatabase_a84d399a2ad58d69daab9b05330e1316d}
-\hyperlink{classDatabase}{Database} Destructor 
+\hyperlink{classDatabase}{Database} Destructor
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classDatabase}{Database} Method\-: \hyperlink{classDatabase}{Database} \-:\-: \hyperlink{classDatabase_a84d399a2ad58d69daab9b05330e1316d}{$\sim$\-Database()} Description\-: Destructor for closing database connectivity -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 91 of file database.\-cc.
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{classDatabase_a2cf59655e870fe29cd5b18c0c47444e9}{\index{Database@{Database}!Insert@{Insert}}
-\index{Insert@{Insert}!Database@{Database}}
-\subsubsection[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}Database\-::\-Insert (
-\begin{DoxyParamCaption}
-\item[{int}]{project\-I\-D, }
-\item[{string}]{project\-Name, }
-\item[{string}]{table\-Name}
-\end{DoxyParamCaption}
-)}}\label{classDatabase_a2cf59655e870fe29cd5b18c0c47444e9}
-Insert into Project\-Name \hypertarget{classDatabase_aaa4186192d40229b61e2b910a4aa8fa0}{\index{Database@{Database}!Select@{Select}}
-\index{Select@{Select}!Database@{Database}}
-\subsubsection[{Select}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Select (
+\hypertarget{classDatabase_aec3d0f84e49a58a59f254c90193c1303}{\index{Database@{Database}!Select\-Query@{Select\-Query}}
+\index{Select\-Query@{Select\-Query}!Database@{Database}}
+\subsubsection[{Select\-Query}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Select\-Query (
 \begin{DoxyParamCaption}
 \item[{string}]{column, }
-\item[{string}]{table\-Name}
+\item[{string}]{table, }
+\item[{vector$<$ string $>$ \&}]{result}
 \end{DoxyParamCaption}
-)}}\label{classDatabase_aaa4186192d40229b61e2b910a4aa8fa0}
-Select My\-S\-Q\-L command with 2 arguments \hypertarget{classDatabase_a6cb8f64ba23bf85d3161e7c17771dd89}{\index{Database@{Database}!Select@{Select}}
-\index{Select@{Select}!Database@{Database}}
-\subsubsection[{Select}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Select (
-\begin{DoxyParamCaption}
-\item[{string}]{column, }
-\item[{string}]{table\-Name, }
-\item[{string}]{where\-Clause}
-\end{DoxyParamCaption}
-)}}\label{classDatabase_a6cb8f64ba23bf85d3161e7c17771dd89}
-Select command with 3 arguments 
+)}}\label{classDatabase_aec3d0f84e49a58a59f254c90193c1303}
+For executing My\-S\-Q\-L query
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classDatabase}{Database} \par
+ Method\-: \hyperlink{classDatabase}{Database} \-:\-: Select\-Query(string column, string table) \par
+ Description\-: Executing My\-S\-Q\-L Select Query and returns string value \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 59 of file database.\-cc.
+
+
 
 \subsection{Member Data Documentation}
 \hypertarget{classDatabase_aa232b806b05ef654cd5579bca5f1dbad}{\index{Database@{Database}!connect@{connect}}
@@ -107,17 +110,25 @@ Select command with 3 arguments
 \subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}M\-Y\-S\-Q\-L$\ast$ Database\-::connect\hspace{0.3cm}{\ttfamily [protected]}}}\label{classDatabase_aa232b806b05ef654cd5579bca5f1dbad}
 My\-S\-Q\-L connectivity Variables 
 
-Definition at line 37 of file database.\-h.
+Definition at line 38 of file database.\-h.
+
+\hypertarget{classDatabase_a02965883689dd1d8007c86cebf6df89e}{\index{Database@{Database}!numrows@{numrows}}
+\index{numrows@{numrows}!Database@{Database}}
+\subsubsection[{numrows}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Database\-::numrows\hspace{0.3cm}{\ttfamily [protected]}}}\label{classDatabase_a02965883689dd1d8007c86cebf6df89e}
+unsigned int variable 
+
+Definition at line 43 of file database.\-h.
 
 \hypertarget{classDatabase_acd64ff0e98b28cd1c6928a1236634521}{\index{Database@{Database}!t\-Login@{t\-Login}}
 \index{t\-Login@{t\-Login}!Database@{Database}}
 \subsubsection[{t\-Login}]{\setlength{\rightskip}{0pt plus 5cm}string Database\-::t\-Login\hspace{0.3cm}{\ttfamily [protected]}}}\label{classDatabase_acd64ff0e98b28cd1c6928a1236634521}
 Table names t\-Tablename 
 
-Definition at line 42 of file database.\-h.
+Definition at line 46 of file database.\-h.
 
 
 
-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-src/database.\-h\end{DoxyCompactItemize}
+src/database.\-h\item 
+src/database.\-cc\end{DoxyCompactItemize}

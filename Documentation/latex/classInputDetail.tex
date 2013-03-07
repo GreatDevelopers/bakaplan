@@ -8,7 +8,7 @@
 Inheritance diagram for Input\-Detail\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=4.000000cm]{classInputDetail}
+\includegraphics[height=5.000000cm]{classInputDetail}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -62,7 +62,17 @@ void \hyperlink{classPageStructureMaker_a04e68e69005f3933e0f496c3db474daf}{Table
 \item 
 void \hyperlink{classPageStructureMaker_a7f8fefbe7a825c1b7761fc8a0f1bb8e4}{Table\-End} ()
 \item 
+void \hyperlink{classPageStructureMaker_ac24ce26202757aaa30402155daf8a3d0}{List\-Start} (string list\-Type)
+\item 
+void \hyperlink{classPageStructureMaker_a8578b1555ad2fc92a9efc7dbf7d1fe87}{List\-End} (string list\-Type)
+\item 
+void \hyperlink{classPageStructureMaker_adf4116e526026edc3c8a3bcf96a7e929}{List\-Item} (string list\-Item)
+\item 
+void \hyperlink{classPageStructureMaker_a8c0fae5b599182863066de56ae0cea42}{Anchor} (string href, string target)
+\item 
 void \hyperlink{classPageStructureMaker_a3547027801e298307527f1e934787b13}{Input\-Field} (string type, string name, int name\-No, string value)
+\item 
+void \hyperlink{classPageStructureMaker_a928ea6f84a8f7833c128034068a4b9a7}{Input\-Field} (string type, string name, string value)
 \item 
 void \hyperlink{classPageStructureMaker_ae8684bb66ca463e2f92e09c96137f9e3}{Select\-Field\-Start} (string name)
 \item 
@@ -80,6 +90,9 @@ void \hyperlink{classPageStructureMaker_a419feca1cfdb50e1be757eb1c2707a73}{Butto
 \hyperlink{classInputFieldName}{Input\-Field\-Name} \hyperlink{classInputDetail_ac6f85380c5152c406d483726382c4798}{field\-Name}
 \item 
 \hypertarget{classInputDetail_ac0cc70b017ef94fb55acb46fc44f0df5}{\hyperlink{classReadInputField}{Read\-Input\-Field} {\bfseries read\-Field}}\label{classInputDetail_ac0cc70b017ef94fb55acb46fc44f0df5}
+
+\item 
+\hypertarget{classInputDetail_a479cd6c13833bd5de6e5630078c961b6}{\hyperlink{classDatabase}{Database} {\bfseries database}}\label{classInputDetail_a479cd6c13833bd5de6e5630078c961b6}
 
 \item 
 \hypertarget{classInputDetail_a2e9226db1b744de4bf406398f48cf962}{int {\bfseries i}}\label{classInputDetail_a2e9226db1b744de4bf406398f48cf962}
@@ -168,6 +181,24 @@ Definition at line 37 of file inputdetail.\-cc.
 
 
 \subsection{Member Function Documentation}
+\hypertarget{classPageStructureMaker_a8c0fae5b599182863066de56ae0cea42}{\index{Input\-Detail@{Input\-Detail}!Anchor@{Anchor}}
+\index{Anchor@{Anchor}!InputDetail@{Input\-Detail}}
+\subsubsection[{Anchor}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Anchor (
+\begin{DoxyParamCaption}
+\item[{string}]{href, }
+\item[{string}]{target}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageStructureMaker_a8c0fae5b599182863066de56ae0cea42}
+Anchor Tag
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \par
+ Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: Anchor(string href) \par
+ Description\-: Anchor Tag \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 318 of file pagestructure.\-cc.
+
 \hypertarget{classPageStructureMaker_ac91e234e2d54dedd9d7e556fabf21d2b}{\index{Input\-Detail@{Input\-Detail}!Body\-End@{Body\-End}}
 \index{Body\-End@{Body\-End}!InputDetail@{Input\-Detail}}
 \subsubsection[{Body\-End}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Body\-End (
@@ -190,7 +221,7 @@ Definition at line 180 of file pagestructure.\-cc.
 )\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageStructureMaker_ab7a645675166f34fac99f1ed8feb7c27}
 Display $<$\-B\-O\-D\-Y$>$
 
--\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: \hyperlink{classPageStructureMaker_ab7a645675166f34fac99f1ed8feb7c27}{Body\-Start()} Description\-: Display $<$\-B\-O\-D\-Y$>$ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: \hyperlink{classPageStructureMaker_ab7a645675166f34fac99f1ed8feb7c27}{Body\-Start()} Description\-: Display $<$B\-O\-D\-Y$>$ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
 Definition at line 166 of file pagestructure.\-cc.
 
@@ -208,7 +239,7 @@ Button
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: Button(string id, string type, string class\-Name, string value) Description\-: Create button(next, submit, etc) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 356 of file pagestructure.\-cc.
+Definition at line 436 of file pagestructure.\-cc.
 
 \hypertarget{classPageStructureMaker_aacdb11817f8ab246bc59c552e04e862d}{\index{Input\-Detail@{Input\-Detail}!C\-S\-S@{C\-S\-S}}
 \index{C\-S\-S@{C\-S\-S}!InputDetail@{Input\-Detail}}
@@ -352,7 +383,7 @@ Definition at line 50 of file inputdetail.\-cc.
 )\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageStructureMaker_a14312134cb108f91f2e6d9cbd6916e97}
 Display $<$\-H\-E\-A\-D$>$
 
--\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: \hyperlink{classPageStructureMaker_a14312134cb108f91f2e6d9cbd6916e97}{Head\-Start()} Description\-: Display $<$\-H\-E\-A\-D$>$ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: \hyperlink{classPageStructureMaker_a14312134cb108f91f2e6d9cbd6916e97}{Head\-Start()} Description\-: Display $<$H\-E\-A\-D$>$ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
 Definition at line 99 of file pagestructure.\-cc.
 
@@ -378,7 +409,7 @@ Definition at line 86 of file pagestructure.\-cc.
 )\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageStructureMaker_ad25d6abc983253567e2370882fc1b407}
 Display $<$\-H\-T\-M\-L$>$
 
--\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: \hyperlink{classPageStructureMaker_ad25d6abc983253567e2370882fc1b407}{H\-T\-M\-L\-Start()} Description\-: Display $<$\-H\-T\-M\-L$>$ Tag -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: \hyperlink{classPageStructureMaker_ad25d6abc983253567e2370882fc1b407}{H\-T\-M\-L\-Start()} Description\-: Display $<$H\-T\-M\-L$>$ Tag -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
 Definition at line 73 of file pagestructure.\-cc.
 
@@ -392,11 +423,30 @@ Definition at line 73 of file pagestructure.\-cc.
 \item[{string}]{value}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageStructureMaker_a3547027801e298307527f1e934787b13}
-Input Field
+Input Field with 4 arguments
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: Input\-Field(string type, string name, string value) Description\-: Create Input fields like text field, submit button, etc. -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 281 of file pagestructure.\-cc.
+Definition at line 333 of file pagestructure.\-cc.
+
+\hypertarget{classPageStructureMaker_a928ea6f84a8f7833c128034068a4b9a7}{\index{Input\-Detail@{Input\-Detail}!Input\-Field@{Input\-Field}}
+\index{Input\-Field@{Input\-Field}!InputDetail@{Input\-Detail}}
+\subsubsection[{Input\-Field}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Input\-Field (
+\begin{DoxyParamCaption}
+\item[{string}]{type, }
+\item[{string}]{name, }
+\item[{string}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageStructureMaker_a928ea6f84a8f7833c128034068a4b9a7}
+Input field with 3 arguments
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \par
+ Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: Input\-Field(string type, string name, string value) \par
+ Description\-: For creating input field with 3 arguments \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 361 of file pagestructure.\-cc.
 
 \hypertarget{classInputDetail_ad0a78d7c864bcccf7813a526d59573be}{\index{Input\-Detail@{Input\-Detail}!Int\-To\-String@{Int\-To\-String}}
 \index{Int\-To\-String@{Int\-To\-String}!InputDetail@{Input\-Detail}}
@@ -421,6 +471,57 @@ Add Javascript File
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: \hyperlink{classPageStructureMaker_ac221d1169f4dbcef6adb00938919193d}{Javascript(string src)} Description\-: Add external Javascript file -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
 Definition at line 153 of file pagestructure.\-cc.
+
+\hypertarget{classPageStructureMaker_a8578b1555ad2fc92a9efc7dbf7d1fe87}{\index{Input\-Detail@{Input\-Detail}!List\-End@{List\-End}}
+\index{List\-End@{List\-End}!InputDetail@{Input\-Detail}}
+\subsubsection[{List\-End}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-List\-End (
+\begin{DoxyParamCaption}
+\item[{string}]{list\-Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageStructureMaker_a8578b1555ad2fc92a9efc7dbf7d1fe87}
+End List
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \par
+ Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: \hyperlink{classPageStructureMaker_a8578b1555ad2fc92a9efc7dbf7d1fe87}{List\-End(string list\-Type)} \par
+ Description\-: Close List Tag \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 292 of file pagestructure.\-cc.
+
+\hypertarget{classPageStructureMaker_adf4116e526026edc3c8a3bcf96a7e929}{\index{Input\-Detail@{Input\-Detail}!List\-Item@{List\-Item}}
+\index{List\-Item@{List\-Item}!InputDetail@{Input\-Detail}}
+\subsubsection[{List\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-List\-Item (
+\begin{DoxyParamCaption}
+\item[{string}]{list\-Item}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageStructureMaker_adf4116e526026edc3c8a3bcf96a7e929}
+List Item
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \par
+ Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: \hyperlink{classPageStructureMaker_adf4116e526026edc3c8a3bcf96a7e929}{List\-Item(string list\-Item)} \par
+ Description\-: List Item \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 305 of file pagestructure.\-cc.
+
+\hypertarget{classPageStructureMaker_ac24ce26202757aaa30402155daf8a3d0}{\index{Input\-Detail@{Input\-Detail}!List\-Start@{List\-Start}}
+\index{List\-Start@{List\-Start}!InputDetail@{Input\-Detail}}
+\subsubsection[{List\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-List\-Start (
+\begin{DoxyParamCaption}
+\item[{string}]{list\-Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageStructureMaker_ac24ce26202757aaa30402155daf8a3d0}
+Start List
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \par
+ Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: \hyperlink{classPageStructureMaker_ac24ce26202757aaa30402155daf8a3d0}{List\-Start(string list\-Type)} \par
+ Description\-: Start any list like ul, ol, etc. \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 279 of file pagestructure.\-cc.
 
 \hypertarget{classPageLayout_ae60235c6af48e3ebbc6343d02456da0c}{\index{Input\-Detail@{Input\-Detail}!Logo@{Logo}}
 \index{Logo@{Logo}!InputDetail@{Input\-Detail}}
@@ -459,7 +560,7 @@ End Select Field
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: \hyperlink{classPageStructureMaker_a81eb3cdbc840a4c8165cef87330ade09}{Select\-Field\-End()} Description\-: Close select field -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 312 of file pagestructure.\-cc.
+Definition at line 392 of file pagestructure.\-cc.
 
 \hypertarget{classPageStructureMaker_ae8684bb66ca463e2f92e09c96137f9e3}{\index{Input\-Detail@{Input\-Detail}!Select\-Field\-Start@{Select\-Field\-Start}}
 \index{Select\-Field\-Start@{Select\-Field\-Start}!InputDetail@{Input\-Detail}}
@@ -472,7 +573,7 @@ Select Field Start
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: \hyperlink{classPageStructureMaker_ae8684bb66ca463e2f92e09c96137f9e3}{Select\-Field\-Start(string name)} Description\-: Create Select Field -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 299 of file pagestructure.\-cc.
+Definition at line 379 of file pagestructure.\-cc.
 
 \hypertarget{classPageStructureMaker_a7682f479f7f1012d426ec9f9535def60}{\index{Input\-Detail@{Input\-Detail}!Select\-Option\-End@{Select\-Option\-End}}
 \index{Select\-Option\-End@{Select\-Option\-End}!InputDetail@{Input\-Detail}}
@@ -485,7 +586,7 @@ Selct Option End
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: \hyperlink{classPageStructureMaker_a7682f479f7f1012d426ec9f9535def60}{Select\-Option\-End()} Description\-: Close select option -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 342 of file pagestructure.\-cc.
+Definition at line 422 of file pagestructure.\-cc.
 
 \hypertarget{classPageStructureMaker_a77856078e74dab25329132ea07466f92}{\index{Input\-Detail@{Input\-Detail}!Select\-Option\-Start@{Select\-Option\-Start}}
 \index{Select\-Option\-Start@{Select\-Option\-Start}!InputDetail@{Input\-Detail}}
@@ -499,7 +600,7 @@ Select Option Start
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: Select\-Option\-Start(string value, string selected) Description\-: Options for select -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 326 of file pagestructure.\-cc.
+Definition at line 406 of file pagestructure.\-cc.
 
 \hypertarget{classPageStructureMaker_aaf78d67380c400cc0057c6519276f721}{\index{Input\-Detail@{Input\-Detail}!Set\-H\-T\-M\-L\-Variables@{Set\-H\-T\-M\-L\-Variables}}
 \index{Set\-H\-T\-M\-L\-Variables@{Set\-H\-T\-M\-L\-Variables}!InputDetail@{Input\-Detail}}
