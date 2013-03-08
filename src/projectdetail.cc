@@ -60,7 +60,10 @@ void ProjectDetail :: AuthorizeUser()
         ProjectDetailPage();            
     }
     else                              /**< If login details invalid */
+    {
+        cout << "<br>Incorrect Email ID or Password!<br>";
         LoginPage();
+    }
 }
 
 /**
