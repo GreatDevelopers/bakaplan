@@ -39,7 +39,8 @@ class Login : public InputDetail
                        password;   /**< password as vector variable */
 
         string userEmailID,  /**< For reading emailID in text field */
-               userPassword; /**< For reading password in text field*/
+               userPassword, /**< For reading password in text field*/
+               retypePassword;            /**< For reading password */
 
     public:
         /** Constructor */

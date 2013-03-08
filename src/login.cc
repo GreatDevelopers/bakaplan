@@ -141,6 +141,10 @@ void Login :: RegisterPage()
     cout << brk << brk
          << " Password ";
     InputField("password", fieldName.password, "123456");
+    
+    cout << brk << brk
+         << " Re-type Password ";
+    InputField("password", fieldName.retypePassword, "123456");
 
     cout << brk << brk;
 
@@ -166,14 +170,28 @@ void Login :: RegisterPage()
 void Login :: AddNewUser()
 {
     SelectLoginDetail();
+    
+    retypePassword = readField.ReadFieldValue(fieldName.retypePassword);
+
     ReadLoginDetail();
 
     if ( find(emailID.begin(), emailID.end(), userEmailID)
          != emailID.end() )
     {
-//        database.InsertIntoUser( userEmailID, userPassword );
+        cout << "<br>User already exists. Try another email ID</br>";
         RegisterPage();
     }
     else
-        LoginPage();
+    {
+        if(strcmp(retypePassword.c_str(), userPassword.c_str()))
+        {
+            cout << "</br>Password doesn't match</br>";
+            RegisterPage();
+        }
+        else
+        {
+            database.InsertIntoUser( userEmailID, userPassword );
+            LoginPage();
+        }
+    }
 }
