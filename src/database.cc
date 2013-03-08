@@ -65,11 +65,9 @@ void Database :: SelectQuery(string column, string table,
     query += table;
     query += ";";
  
-    if ( mysql_query( connect, query.c_str() ) == 0 )//query.c_str());
+    if ( mysql_query( connect, query.c_str() ) == 0 )
     {
         res_set = mysql_store_result( connect );
-
-//    numrows = mysql_num_rows(res_set);
 
         while ( ( ( row = mysql_fetch_row( res_set ) ) != NULL ) )
         {
@@ -78,6 +76,32 @@ void Database :: SelectQuery(string column, string table,
      }
      else
         cout << "";
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Database \n
+ *      Method:  Database :: InsertIntoUser(string userEmailID, 
+ *                                          string userPassword) \n
+ * Description:  Inserting new user details into database \n
+ *--------------------------------------------------------------------
+ */
+
+void Database :: InsertIntoUser(string userEmailID, 
+                                string userPassword)
+{
+    query  = "Insert into User(EmailID, Password) values ";
+    query += "(\"";
+    query +=  userEmailID;
+    query += "\", \"";
+    query += userPassword; 
+    query += "\");";
+
+    if ( mysql_query( connect, query.c_str() ) == 0)
+        cout << "";
+    else
+        cout << "</br>Not insterted</br>";
+
 }
 
 /**

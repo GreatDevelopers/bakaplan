@@ -56,6 +56,9 @@ class Database
         void SelectQuery(string column, string table, 
                          vector<string> & result);
 
+        /** For inserting new user in database */
+        void InsertIntoUser(string userEmailID, string userPassword);
+
         /** Database Destructor */
         ~Database();
 };
