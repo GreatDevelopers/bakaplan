@@ -44,20 +44,21 @@ class InputFieldName
                subjectCode,                     /**< SubjectCode */
                subjectName,                     /**< SubjectName */
         /// Roll No details fields
-                prefix,                         /**< Prefix of rollno */
-                startRollNo,                    /**< starting roll no */
-                endRollNo,                      /**< ending rollno */
-                notIncluded,                    /**< roll that are not 
-                                                    included in seating 
-                                                    plan */
+                prefix,                       /**< Prefix of rollno */
+                startRollNo,                  /**< starting roll no */
+                endRollNo,                    /**< ending rollno */
+                notIncluded,                  /**< roll that are not 
+                                                   included in seating 
+                                                   plan */
         // For project details
-                projectName;                    /**< Project Name */
+                projectName;                   /**< Project Name */
 
         /** For login.html page */
-        string emailID,                         /**< Email Field */
-               password;                        /**< Password field */
+        string emailID,                        /**< Email Field */
+               password,                       /**< Password field */
+               retypePassword;                 /**< Retype Password */
 
     public:
-        InputFieldName();
-        void SetFieldNames();
+        InputFieldName();                     /**< Constructor */
+        void SetFieldNames();                 /**< Set Field Values */
 };
