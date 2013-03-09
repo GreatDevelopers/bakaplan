@@ -59,6 +59,16 @@ class Database
         /** For inserting new user in database */
         void InsertIntoUser(string userEmailID, string userPassword);
 
+        /** Insert query with one argument */
+        void InsertQuery(string query);
+
+        /** Insert Query for adding value in one column */
+        void InsertQuery(string column, string value, string table);
+
+        /** Insert into table with where clause */
+        void InsertQuery(string column, string value, string table,
+                         string whereClause);
+
         /** Database Destructor */
         ~Database();
 };
