@@ -22,6 +22,7 @@
  *------------------------------------------------------------------*/
 
 #include "inputdetail.h"
+#include "md5.h"
 
 /**
  * ===================================================================
@@ -42,18 +43,20 @@ class Login : public InputDetail
                userPassword, /**< For reading password in text field*/
                retypePassword;            /**< For reading password */
 
+        string msg;           /**< Msg string to show error message */
+
     public:
         /** Constructor */
         Login();
 
         /** Creating login page */
-        void LoginPage();
+        void LoginPage(string msg = "");
 
         /** Read Login Detail */
         void ReadLoginDetail();
 
         /** Register user page  */
-        void RegisterPage();
+        void RegisterPage(string msg = "");
 
         /** Add new user in database */
         void AddNewUser();

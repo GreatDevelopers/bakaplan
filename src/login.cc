@@ -85,7 +85,7 @@ void Login :: ReadLoginDetail()
  *--------------------------------------------------------------------
  */
 
-void Login :: LoginPage()
+void Login :: LoginPage(string msg)
 {
     Header("Login");
 
@@ -96,6 +96,13 @@ void Login :: LoginPage()
     FormStart("login", "projectdetail.html", "POST");
 
     cout << startH1 << "Login" << endH1 << brk;
+    
+    if(msg != "")
+    {   
+        DivStart("msg", "error");
+        cout <<  msg << brk << brk;
+        DivEnd();
+    }
 
     cout << " Email ID ";
     InputField("email", fieldName.emailID, "email@abc.com");
@@ -125,7 +132,7 @@ void Login :: LoginPage()
  *--------------------------------------------------------------------
  */
 
-void Login :: RegisterPage()
+void Login :: RegisterPage(string msg)
 {
     Header("Register");
     
@@ -134,6 +141,13 @@ void Login :: RegisterPage()
     FormStart("register", "newuser.html", "POST");
     
     cout << startH1 << " Register New User " << endH1 <<  brk;
+
+    if(msg != "")                                                     
+    {
+        DivStart("msg", "error");
+        cout << msg << brk << brk;
+        DivEnd();
+    }
     
     cout << " Email ID ";
     InputField("text", fieldName.emailID, "abc@123.com");
@@ -178,18 +192,19 @@ void Login :: AddNewUser()
     if ( find(emailID.begin(), emailID.end(), userEmailID)
          != emailID.end() )
     {
-        cout << "<br>User already exists. Try another email ID</br>";
-        RegisterPage();
+        msg = "User already exists. Try another email ID";
+        RegisterPage( msg );
     }
     else
     {
         if(strcmp(retypePassword.c_str(), userPassword.c_str()))
         {
-            cout << "</br>Password doesn't match</br>";
-            RegisterPage();
+            msg = "Password doesn't match";
+            RegisterPage( msg );
         }
         else
         {
+            userPassword = md5(userPassword);
             database.InsertIntoUser( userEmailID, userPassword );
             LoginPage();
         }
