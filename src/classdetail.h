@@ -42,22 +42,24 @@ const int maxClasses = 10;
 class ClassDetail : public InputDetail
 {
     protected:
-//        const int maxClasses = 15;     /* max. classes for user i/p */
-        int totalClasses;              /* storing total classes */
+        int totalClasses;              /**< storing total classes */
         
-        string className[maxClasses],           
+        string className[maxClasses],
                subjectCode[maxClasses],
                subjectName[maxClasses],
                tableHeading[maxClasses];
 
     public:
-        /// Constructor
+        /** Constructor */
         ClassDetail();
 
-        /// Get total classes 
+        /** Get total classes */
         void TotalClasses();
 
-        /// Get class details like class name, subject name and
-        /// subject code
+        /** Get class details like class name, subject name and
+            subject code */
         void ClassInfo();
+
+        /** Destructor */
+        ~ClassDetail();
 };
