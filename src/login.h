@@ -43,7 +43,8 @@ class Login : public InputDetail
                userPassword, /**< For reading password in text field*/
                retypePassword;            /**< For reading password */
 
-        string msg;           /**< Msg string to show error message */
+        string msg,           /**< Msg string to show error message */
+               date;                            /**< Currennt Date */
 
     public:
         /** Constructor */

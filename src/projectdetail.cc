@@ -61,13 +61,26 @@ void ProjectDetail :: AuthorizeUser()
          != password.end() ) )          /**< If login details valid */
     {
         sessionID  = md5(userEmailID);
-        sessionID += md5(userPassword);
+        
+        /* For current date */
 
-        ProjectDetailPage();            
+        time_t t = time(0);   // get time now
+        
+        struct tm * now = localtime( & t );
+        
+        cout << (now->tm_year + 1900) << '-' 
+             << (now->tm_mon + 1) << '-'
+             <<  now->tm_mday
+             << endl;
+        
+        sessionID += md5(date);
+        cout << "<br>" << date << "<br>";
+        ProjectDetailPage();
     }
     else                              /**< If login details invalid */
     {
         msg = "Incorrect Email ID or Password!";
+        
         LoginPage( msg );
     }
 }
