@@ -32,6 +32,7 @@ LMYSQL  =   -L/usr/include/mysql -lmysqlclient -I/usr/include/mysql
 #   Variables for header files (H_HEADER_FILE_NAME)
 # ====================================================================
 
+H_MD5               =   md5.h
 H_CONSTANTS         =   constant.h
 H_FILENAMES	        =   filename.h
 H_HEADER            =   header.h
@@ -54,6 +55,7 @@ H_ROLNODETAILS      =   rollnodetail.h $(H_DETAILS)
 #	Variables for definition files (CC_FILENAME)
 # ====================================================================
 
+CC_MD5              =   md5.cc
 CC_JAVASCRIPT       =   javascript.cc
 CC_DATABASE         =   database.cc
 CC_PAGESTRUCTURE    =   pagestructure.cc
@@ -83,6 +85,7 @@ M_NEWUSER           =   newuser-main.cpp
 #	Variables for object files
 # ====================================================================
 
+O_MD5               =   md5.o
 O_JAVASCRIPT        =   javascript.o
 O_DATABASE          =   database.o
 O_PAGESTRUCTURE     =   pagestructure.o
@@ -112,7 +115,7 @@ O_NEWUSER_MAIN      =   newuser-main.o
 L_PAGELAYOUT	=	$(O_PAGESTRUCTURE) $(O_PAGELAYOUT)
 L_FIELDS		=	$(O_INPUTFIELDNAMES) $(O_READINPUTFIELDS)
 L_DETAILS		=	$(L_PAGELAYOUT) $(L_FIELDS) $(O_DATABASE) $(O_DETAILS)
-L_LOGIN         =   $(L_DETAILS) $(O_LOGIN)
+L_LOGIN         =   $(L_DETAILS) $(O_LOGIN) $(O_MD5)
 L_PROJECTDETAIL =   $(L_LOGIN) $(O_PROJECTDETAIL)
 L_CLASSDETAILS	=	$(L_DETAILS) $(O_CLASSDETAILS)
 L_ROLLNODETAILS	=	$(L_DETAILS) $(O_ROLLNODETAILS)
@@ -148,6 +151,9 @@ all: $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO) $(E_PROJECTDETA
 # ====================================================================
 #	targets for compiling .cc or .cpp files
 # ====================================================================
+
+$(O_MD5): $(CC_MD5) $(H_MD5)
+	$(CC) $(CFLAG) $(CC_MD5)
 
 $(O_JAVASCRIPT): $(CC_JAVASCRIPT) $(H_JAVASCRIPT)
 	$(CC) $(CFLAG) $(CC_JAVASCRIPT)
