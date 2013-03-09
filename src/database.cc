@@ -81,6 +81,22 @@ void Database :: SelectQuery(string column, string table,
 /**
  *--------------------------------------------------------------------\n
  *       Class:  Database \n
+ *      Method:  Database :: InsertQuery(string query) \n
+ * Description:  Insrting value in database \n
+ *--------------------------------------------------------------------
+ */
+
+void Database :: InsertQuery(string query)
+{
+    if ( mysql_query( connect, query.c_str() ) == 0)
+        cout << "";
+    else
+        cout << "</br>Not insterted</br>";
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Database \n
  *      Method:  Database :: InsertIntoUser(string userEmailID, 
  *                                          string userPassword) \n
  * Description:  Inserting new user details into database \n
@@ -97,11 +113,55 @@ void Database :: InsertIntoUser(string userEmailID,
     query += userPassword; 
     query += "\");";
 
-    if ( mysql_query( connect, query.c_str() ) == 0)
-        cout << "";
-    else
-        cout << "</br>Not insterted</br>";
+    InsertQuery(query);
 
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Database \n
+ *      Method:  Database :: InsertQuery(string column, string value, 
+ *                           string table) \n
+ * Description:  For inserting values in database \n
+ *--------------------------------------------------------------------
+ */
+
+void Database :: InsertQuery(string column, string value, 
+                             string table)
+{
+    query  = "insert into ";
+    query += table;
+    query += "(";
+    query += column;
+    query += ") values ( \"";
+    query += value;
+    query += "\");";
+
+    InsertQuery(query);
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Database \n
+ *      Method:  Database :: InsertQuery(string column, string value, 
+ *                           string table, string whereClause) \n
+ * Description:  For creating insert query \n
+ *--------------------------------------------------------------------
+ */
+
+void Database :: InsertQuery(string column, string value, 
+                             string table, string whereClause)
+{
+    query  = "insert into ";
+    query += table;
+    query += "(";
+    query += column;
+    query += ") values ( \"";
+    query += value;
+    query += "\") ";
+    query += whereClause;
+
+    InsertQuery(query);
 }
 
 /**
