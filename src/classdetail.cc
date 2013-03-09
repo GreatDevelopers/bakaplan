@@ -214,3 +214,16 @@ void ClassDetail :: ClassInfo()
 
     Footer();
 }
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  ClassDetail \n
+ *      Method:  ClassDetail :: ~ClassDetail() \n
+ * Description:  Destructor \n
+ *--------------------------------------------------------------------
+ */
+
+ClassDetail :: ~ClassDetail()
+{
+    // Desrtuctor
+}
