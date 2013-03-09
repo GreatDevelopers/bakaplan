@@ -47,9 +47,6 @@ class ProjectDetail : public Login
         /** Checking user login details valid or not */
         void AuthorizeUser();
 
-        /** Back to login.html page if user details invalid */
-        void BackToLoginPage();
-
         /** Destructor */
         ~ProjectDetail();
 };

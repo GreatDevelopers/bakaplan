@@ -51,18 +51,24 @@ void ProjectDetail :: AuthorizeUser()
 {
     SelectLoginDetail();
     ReadLoginDetail();
+    
+    userPassword = md5(userPassword);
+    
     /** Matching user details with values in database */
     if ( ( find(emailID.begin(), emailID.end(), userEmailID) 
          != emailID.end() ) && 
          ( find(password.begin(), password.end(), userPassword ) 
          != password.end() ) )          /**< If login details valid */
     {
+        sessionID  = md5(userEmailID);
+        sessionID += md5(userPassword);
+
         ProjectDetailPage();            
     }
     else                              /**< If login details invalid */
     {
-        cout << "<br>Incorrect Email ID or Password!<br>";
-        LoginPage();
+        msg = "Incorrect Email ID or Password!";
+        LoginPage( msg );
     }
 }
 
@@ -80,6 +86,8 @@ void ProjectDetail :: ProjectDetailPage()
 
     DivStart("projectdetail", "");
     
+    InputField("hidden", fieldName.emailID, userEmailID);
+
     cout << brk;
 
     FormStart("projectdetail", "totalclasses.html", "POST");
