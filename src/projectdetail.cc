@@ -68,13 +68,14 @@ void ProjectDetail :: AuthorizeUser()
         
         struct tm * now = localtime( & t );
         
-        cout << (now->tm_year + 1900) << '-' 
-             << (now->tm_mon + 1) << '-'
-             <<  now->tm_mday
-             << endl;
+        currentDate  = IntToString(now->tm_year + 1900);
+        currentDate += IntToString(now->tm_mon + 1);
+        currentDate += IntToString(now->tm_mday);
         
-        sessionID += md5(date);
-        cout << "<br>" << date << "<br>";
+        sessionID += md5(currentDate);
+        database.InsertIntoSession(userEmailID, sessionID);
+       // cout << "<br>" << currentDate << "<br>";
+
         ProjectDetailPage();
     }
     else                              /**< If login details invalid */
@@ -99,7 +100,9 @@ void ProjectDetail :: ProjectDetailPage()
 
     DivStart("projectdetail", "");
     
-    InputField("hidden", fieldName.emailID, userEmailID);
+    //InputField("hidden", fieldName.emailID, userEmailID);
+
+    LogOutLink();
 
     cout << brk;
 

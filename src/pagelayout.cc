@@ -137,6 +137,34 @@ void PageLayout :: Head(string titleName)
 }
 
 /**
+ *--------------------------------------------------------------------\n
+ *       Class:  PageLayout \n
+ *      Method:  PageLayout :: SetCookies(string sessionID) \n
+ * Description:  Setting session ID in cookies \n
+ *--------------------------------------------------------------------
+ */
+
+void PageLayout :: SetCookies(string sessionID)
+{
+    cout << "Set-Cookie:SessionID=" << sessionID << ";\r\n";
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  PageLayout \n
+ *      Method:  PageLayout :: LogOutLink() \n
+ * Description:  logout link \n
+ *--------------------------------------------------------------------
+ */
+
+void PageLayout :: LogOutLink()
+{
+    cout << brk;
+    Anchor("logout.html", "Logout");
+    cout << brk;
+}
+
+/**
  *--------------------------------------------------------------------
  *       Class:  PageLayout
  *      Method:  PageLayout :: Footer()

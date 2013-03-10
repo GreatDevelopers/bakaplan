@@ -210,3 +210,16 @@ void Login :: AddNewUser()
         }
     }
 }
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Login \n
+ *      Method:  Login :: AlreadyLoggedIn() \n
+ * Description:  Check if user already logged in not allow to log in \n
+ *--------------------------------------------------------------------
+ */
+
+void Login :: AlreadyLoggedIn()
+{
+
+}

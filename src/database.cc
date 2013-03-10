@@ -97,29 +97,6 @@ void Database :: InsertQuery(string query)
 /**
  *--------------------------------------------------------------------\n
  *       Class:  Database \n
- *      Method:  Database :: InsertIntoUser(string userEmailID, 
- *                                          string userPassword) \n
- * Description:  Inserting new user details into database \n
- *--------------------------------------------------------------------
- */
-
-void Database :: InsertIntoUser(string userEmailID, 
-                                string userPassword)
-{
-    query  = "Insert into User(EmailID, Password) values ";
-    query += "(\"";
-    query +=  userEmailID;
-    query += "\", \"";
-    query += userPassword; 
-    query += "\");";
-
-    InsertQuery(query);
-
-}
-
-/**
- *--------------------------------------------------------------------\n
- *       Class:  Database \n
  *      Method:  Database :: InsertQuery(string column, string value, 
  *                           string table) \n
  * Description:  For inserting values in database \n
@@ -143,23 +120,42 @@ void Database :: InsertQuery(string column, string value,
 /**
  *--------------------------------------------------------------------\n
  *       Class:  Database \n
- *      Method:  Database :: InsertQuery(string column, string value, 
- *                           string table, string whereClause) \n
- * Description:  For creating insert query \n
+ *      Method:  Database :: InsertIntoUser(string userEmailID, 
+ *                                          string userPassword) \n
+ * Description:  Inserting new user details into database \n
  *--------------------------------------------------------------------
  */
 
-void Database :: InsertQuery(string column, string value, 
-                             string table, string whereClause)
+void Database :: InsertIntoUser(string userEmailID, 
+                                string userPassword)
 {
-    query  = "insert into ";
-    query += table;
-    query += "(";
-    query += column;
-    query += ") values ( \"";
-    query += value;
-    query += "\") ";
-    query += whereClause;
+    query  = "Insert into User(EmailID, Password) values ";
+    query += "(\"";
+    query +=  userEmailID;
+    query += "\", \"";
+    query += userPassword; 
+    query += "\");";
+
+    InsertQuery(query);
+
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Database \n
+ *      Method:  Database :: InsertIntoSession(string emailID, 
+ *               string sessionID) \n
+ * Description:  Inserting Session information in database \n
+ *--------------------------------------------------------------------
+ */
+
+void Database :: InsertIntoSession(string emailID, string sessionID)
+{
+    query  = "insert into Session(EmailID, SessionID) values (\"";
+    query += emailID;
+    query += "\", \"";
+    query += sessionID;
+    query += "\");";
 
     InsertQuery(query);
 }

@@ -44,7 +44,7 @@ class Login : public InputDetail
                retypePassword;            /**< For reading password */
 
         string msg,           /**< Msg string to show error message */
-               date;                            /**< Currennt Date */
+               currentDate;                      /**< Currennt Date */
 
     public:
         /** Constructor */
@@ -64,6 +64,9 @@ class Login : public InputDetail
 
         /** For selecting emial and password fron user table */
         void SelectLoginDetail();
+
+        /** Check user If already logged in */
+        void AlreadyLoggedIn();
 
         /** Destructor */
         ~Login(){}

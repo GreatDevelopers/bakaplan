@@ -57,4 +57,10 @@ class PageLayout : public PageStructureMaker
 
         /** Head Section of Page */
         void Head(string titleName);
+
+        /** For Cookies after login */
+        void SetCookies(string sessionID);
+
+        /** Logout link  */
+        void LogOutLink();
 };

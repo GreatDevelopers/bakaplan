@@ -152,6 +152,8 @@ all: $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO) $(E_PROJECTDETA
 #	targets for compiling .cc or .cpp files
 # ====================================================================
 
+target: 
+
 $(O_MD5): $(CC_MD5) $(H_MD5)
 	$(CC) $(CFLAG) $(CC_MD5)
 

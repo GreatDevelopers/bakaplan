@@ -65,9 +65,8 @@ class Database
         /** Insert Query for adding value in one column */
         void InsertQuery(string column, string value, string table);
 
-        /** Insert into table with where clause */
-        void InsertQuery(string column, string value, string table,
-                         string whereClause);
+        /** Insert into Session table */
+        void InsertIntoSession(string emailID, string sessionID);
 
         /** Database Destructor */
         ~Database();
