@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 07, 2013 at 01:43 PM
+-- Generation Time: Mar 11, 2013 at 10:27 AM
 -- Server version: 5.5.28
 -- PHP Version: 5.4.6-1ubuntu1.1
 
@@ -43,12 +43,35 @@ CREATE TABLE IF NOT EXISTS `ClassDetails` (
 --
 
 CREATE TABLE IF NOT EXISTS `ProjectName` (
-  `SNo` int(100) NOT NULL AUTO_INCREMENT,
-  `ProjectID` int(255) NOT NULL,
+  `ProjectID` int(255) NOT NULL AUTO_INCREMENT,
+  `EmailID` varchar(50) NOT NULL,
   `ProjectName` varchar(30) NOT NULL,
-  PRIMARY KEY (`ProjectID`),
-  UNIQUE KEY `SNo` (`SNo`)
+  PRIMARY KEY (`ProjectID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Session`
+--
+
+CREATE TABLE IF NOT EXISTS `Session` (
+  `SNo` int(25) NOT NULL AUTO_INCREMENT,
+  `EmailID` varchar(150) NOT NULL,
+  `SessionID` varchar(250) NOT NULL,
+  PRIMARY KEY (`SNo`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+
+--
+-- Dumping data for table `Session`
+--
+
+INSERT INTO `Session` (`SNo`, `EmailID`, `SessionID`) VALUES
+(9, 'mandeep@gmail.com', '4a27346e94ed9f8d9dc3c3d42cbfcd3fee9bf5b556828372c09399e766712873'),
+(10, 'mandeep@gmail.com', '4a27346e94ed9f8d9dc3c3d42cbfcd3fffb51880e37fbac1c20289a86c250fe6'),
+(11, 'mandeep@gmail.com', '4a27346e94ed9f8d9dc3c3d42cbfcd3fffb51880e37fbac1c20289a86c250fe6'),
+(12, 'mandeep@gmail.com', '4a27346e94ed9f8d9dc3c3d42cbfcd3fffb51880e37fbac1c20289a86c250fe6'),
+(13, 'mandeep@gmail.com', '4a27346e94ed9f8d9dc3c3d42cbfcd3fffb51880e37fbac1c20289a86c250fe6');
 
 -- --------------------------------------------------------
 
@@ -57,12 +80,10 @@ CREATE TABLE IF NOT EXISTS `ProjectName` (
 --
 
 CREATE TABLE IF NOT EXISTS `TotalClasses` (
-  `SNo` int(100) NOT NULL AUTO_INCREMENT,
   `ProjectID` int(255) NOT NULL,
   `TotalClasses` int(30) NOT NULL,
-  PRIMARY KEY (`SNo`),
-  UNIQUE KEY `SNo` (`SNo`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  PRIMARY KEY (`ProjectID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -71,19 +92,20 @@ CREATE TABLE IF NOT EXISTS `TotalClasses` (
 --
 
 CREATE TABLE IF NOT EXISTS `User` (
-  `SNo` int(50) NOT NULL,
+  `SNo` int(50) NOT NULL AUTO_INCREMENT,
   `EmailID` varchar(30) NOT NULL,
-  `Password` varchar(8) NOT NULL,
-  PRIMARY KEY (`EmailID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `Password` varchar(250) NOT NULL,
+  PRIMARY KEY (`EmailID`),
+  KEY `SNo` (`SNo`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `User`
 --
 
 INSERT INTO `User` (`SNo`, `EmailID`, `Password`) VALUES
-(2, 'mandy@gmail.com', '123456'),
-(1, 'meghasimak@gmail.com', 'password');
+(8, 'abc@123.com', 'e10adc3949ba59abbe56e057f20f883e'),
+(7, 'mandeep@gmail.com', '202cb962ac59075b964b07152d234b70');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
