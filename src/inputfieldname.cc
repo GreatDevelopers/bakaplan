@@ -51,7 +51,7 @@ InputFieldName :: InputFieldName()
 
 void InputFieldName :: SetFieldNames()
 {
-    /** Assign values of class details */
+    /* Assign values of class details */
 
     className       =   "ClassName";
     totalClasses    =   "TotalClasses";
@@ -59,20 +59,33 @@ void InputFieldName :: SetFieldNames()
     subjectCode     =   "SubjectCode";
     subjectName     =   "SubjectName";
     
-    /** variable for roll no fields */
+    /* variable for roll no fields */
 
     prefix          =   "Prefix";
     startRollNo     =   "StartRollNo";
     endRollNo       =   "EndRollNo";
     notIncluded     =   "NotIncluded";
 
-    /** Login page fields */
+    /* Login page fields */
 
     emailID         =   "EmailID";
     password        =   "Password";
     retypePassword  =   "RetypePassword";
 
-    /** Project Detail */
+    /* Project Detail */
 
-    projectName     =    "ProjectName";
+    projectName     =   "ProjectName";
+
+    /* Room Detail Variables */
+
+    totalCentres    =   "TotalCentres";
+    totalRooms      =   "TotalRooms";
+    centreName      =   "CentreName";
+    roomNo          =   "RoomNo";
+    rows            =   "Rows";
+    columns         =   "Columns";
+
+    /* Strategy field */
+
+    strategyChoice  =   "StrategyChoice";
 }

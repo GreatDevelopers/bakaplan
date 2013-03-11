@@ -34,29 +34,41 @@
 class InputFieldName
 {
     public:
-        /// Field Names
+        // Field Names
         
-        /// Class Details Value                 /**< Field Name */
+        // Class Details Value                        /* Field Name */
 
-        string className,                       /**< ClassName */
-               totalClasses,                    /**< TotalClasses */
-               totalSubjects,                   /**< TotalSubjects */
-               subjectCode,                     /**< SubjectCode */
-               subjectName,                     /**< SubjectName */
-        /// Roll No details fields
+        string className,                            /**< ClassName */
+               totalClasses,                      /**< TotalClasses */
+               totalSubjects,                    /**< TotalSubjects */
+               subjectCode,                        /**< SubjectCode */
+               subjectName,                        /**< SubjectName */
+        // Roll No details fields
                 prefix,                       /**< Prefix of rollno */
                 startRollNo,                  /**< starting roll no */
-                endRollNo,                    /**< ending rollno */
-                notIncluded,                  /**< roll that are not 
+                endRollNo,                       /**< ending rollno */
+                notIncluded,                    /**< roll that are not 
                                                    included in seating 
                                                    plan */
         // For project details
-                projectName;                   /**< Project Name */
+                projectName;                      /**< Project Name */
 
-        /** For login.html page */
-        string emailID,                        /**< Email Field */
-               password,                       /**< Password field */
-               retypePassword;                 /**< Retype Password */
+        /* For login.html page */
+        string emailID,                            /**< Email Field */
+               password,                        /**< Password field */
+               retypePassword,                 /**< Retype Password */
+
+        /* Room detail fields  */
+               totalCentres,                     /**< Total centres */
+               totalRooms,      /**< Total Rooms w.r.t centers name */
+               centreName,                         /**< Center Name */
+               roomNo,           /**< Room Nos w.r.t to centre name */
+               rows,                              /**< Rows of room */
+               columns,                        /**< Columns in room */
+
+        /* Strategy Field */
+               strategyChoice; /**< Strategy option selected by user*/
+               
 
     public:
         InputFieldName();                     /**< Constructor */
