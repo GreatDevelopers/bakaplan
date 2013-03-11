@@ -31,7 +31,7 @@
 int main(void)
 {
     Login logout;
-    logout.Logout();
+    logout.LogoutPage();
 
     return 0;
 }

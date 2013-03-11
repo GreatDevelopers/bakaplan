@@ -87,6 +87,7 @@ void Login :: ReadLoginDetail()
 
 void Login :: LoginPage(string msg)
 {
+    ContextType();
     Header("Login");
 
     DivStart("login", "");
@@ -134,6 +135,7 @@ void Login :: LoginPage(string msg)
 
 void Login :: RegisterPage(string msg)
 {
+    ContextType();
     Header("Register");
     
     DivStart("register", "");
@@ -209,6 +211,20 @@ void Login :: AddNewUser()
             LoginPage();
         }
     }
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Login \n
+ *      Method:  Login :: LogoutPage() \n
+ * Description:  Logout Page \n
+ *--------------------------------------------------------------------
+ */
+
+void Login :: LogoutPage()
+{
+    UnSetCookies();
+    LoginPage();
 }
 
 /**

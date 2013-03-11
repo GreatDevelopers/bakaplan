@@ -68,6 +68,9 @@ class Login : public InputDetail
         /** Check user If already logged in */
         void AlreadyLoggedIn();
 
+        /** Logout Page */
+        void LogoutPage();
+
         /** Destructor */
         ~Login(){}
 };
