@@ -80,6 +80,7 @@ M_LOGIN             =   login-main.cpp
 M_PROJECTDETAIL     =   projectdetail-main.cpp
 M_REGISTER          =   register-main.cpp
 M_NEWUSER           =   newuser-main.cpp
+M_LOGOUT            =   logout-main.cpp
 
 # ====================================================================
 #	Variables for object files
@@ -107,6 +108,7 @@ O_PROJECTDETAIL_MAIN=   projectdetail-main.o
 O_CLASSINFO_MAIN    =   classinfo-main.o
 O_REGISTER_MAIN     =   register-main.o
 O_NEWUSER_MAIN      =   newuser-main.o
+O_LOGOUT_MAIN       =   logout-main.o
 
 # ====================================================================
 #	Linking Variables (L_EXE_FILENAME)
@@ -129,6 +131,7 @@ L_JAVASCRIPT    =   $(O_JAVASCRIPT) $(O_JAVASCRIPT_MAIN)
 L_PROJECTDETAIL_M = $(L_PROJECTDETAIL) $(O_PROJECTDETAIL_MAIN)
 L_REGISTER      =   $(L_LOGIN) $(O_REGISTER_MAIN)
 L_NEWUSER       =   $(L_LOGIN) $(O_NEWUSER_MAIN)
+L_LOGOUT        =   $(L_LOGIN) $(O_LOGOUT_MAIN)
 
 # ====================================================================
 # 	O/P file names(exe) (E_FILENAME)
@@ -141,12 +144,13 @@ E_JAVASCRIPT    =   javascript.js
 E_PROJECTDETAIL =   projectdetail.html
 E_REGISTER      =   register.html
 E_NEWUSER       =   newuser.html
+E_LOGOUT        =   logout.html
 
 # ====================================================================
 #	Main target (1st target)
 # ====================================================================
 
-all: $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO) $(E_PROJECTDETAIL) $(E_REGISTER) $(E_NEWUSER)
+all: $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO) $(E_PROJECTDETAIL) $(E_REGISTER) $(E_NEWUSER) $(E_LOGOUT)
 
 # ====================================================================
 #	targets for compiling .cc or .cpp files
@@ -201,6 +205,9 @@ $(O_REGISTER_MAIN): $(M_REGISTER) $(H_LOGIN)
 $(O_NEWUSER_MAIN): $(M_NEWUSER) $(H_LOGIN)
 	$(CC) $(CFLAG) $(M_NEWUSER) $(LMYSQL)
 
+$(O_LOGOUT_MAIN): $(M_LOGOUT) $(H_LOGIN)
+	$(CC) $(CFLAG) $(M_LOGOUT) $(LMYSQL)
+
 $(O_PROJECTDETAIL_MAIN): $(M_PROJECTDETAIL) $(H_PROJECTDETAIL)
 	$(CC) $(CFLAG) $(M_PROJECTDETAIL) $(LMYSQL) $(LCGICC)
 
@@ -225,6 +232,9 @@ $(E_REGISTER): $(L_REGISTER)
 
 $(E_NEWUSER): $(L_NEWUSER)
 	$(CC) $(OFLAG) $(E_NEWUSER) $(L_NEWUSER) $(LCGICC) $(LMYSQL)
+
+$(E_LOGOUT): $(L_LOGOUT)
+	$(CC) $(OFLAG) $(E_LOGOUT) $(L_LOGOUT) $(LCGICC) $(LMYSQL)
 
 $(E_PROJECTDETAIL): $(L_PROJECTDETAIL_M)
 	$(CC) $(OFLAG) $(E_PROJECTDETAIL) $(L_PROJECTDETAIL_M) $(LCGICC) \
