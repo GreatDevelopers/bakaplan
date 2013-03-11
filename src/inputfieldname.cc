@@ -88,4 +88,11 @@ void InputFieldName :: SetFieldNames()
     /* Strategy field */
 
     strategyChoice  =   "StrategyChoice";
+
+    /* Examination field's value */
+
+    examName        =   "ExamName";
+    examDate        =   "ExamDate";
+    examTime        =   "ExamTime";
+    examVenue       =   "ExamVenue";
 }

@@ -67,7 +67,13 @@ class InputFieldName
                columns,                        /**< Columns in room */
 
         /* Strategy Field */
-               strategyChoice; /**< Strategy option selected by user*/
+               strategyChoice, /**< Strategy option selected by user*/
+
+        /* For Examination Details */
+               examName,                      /**< Examination Name */
+               examDate,                      /**< Examination Date */
+               examTime,                      /**< Examination Time */
+               examTime;                     /**< Examination Venue */
                
 
     public:
