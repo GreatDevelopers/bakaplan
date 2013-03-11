@@ -56,31 +56,40 @@ void ProjectDetail :: AuthorizeUser()
     
     /** Matching user details with values in database */
     if ( ( find(emailID.begin(), emailID.end(), userEmailID) 
-         != emailID.end() ) && 
-         ( find(password.begin(), password.end(), userPassword ) 
-         != password.end() ) )          /**< If login details valid */
+         != emailID.end() ) )                /**< If Email ID valid */
     {
-        sessionID  = md5(userEmailID);
-        
-        /* For current date */
+        int index = find(emailID.begin(), emailID.end(), userEmailID) 
+                    - emailID.begin();
 
-        time_t t = time(0);   // get time now
+        if(userPassword == password[index])/**< If Password Correct */
+        {
+            sessionID  = md5(userEmailID);
         
-        struct tm * now = localtime( & t );
-        
-        currentDate  = IntToString(now->tm_year + 1900);
-        currentDate += IntToString(now->tm_mon + 1);
-        currentDate += IntToString(now->tm_mday);
-        
-        sessionID += md5(currentDate);
-        database.InsertIntoSession(userEmailID, sessionID);
-       // cout << "<br>" << currentDate << "<br>";
+            /* For current date */
 
-        ProjectDetailPage();
+            time_t t = time(0);   // get time now
+        
+            struct tm * now = localtime( & t );
+        
+            currentDate  = IntToString(now->tm_year + 1900);
+            currentDate += IntToString(now->tm_mon + 1);
+            currentDate += IntToString(now->tm_mday);
+        
+            sessionID += md5(currentDate);
+            //SetCookies(userEmailID, sessionID);
+    //        database.InsertIntoSession(userEmailID, sessionID);
+
+            ProjectDetailPage();
+        }
+        else                             /**< If Password Incorrect */
+        {
+            msg = "Incorrect Password!";
+            LoginPage(msg);
+        }
     }
-    else                              /**< If login details invalid */
+    else                                   /**< If Email ID invalid */
     {
-        msg = "Incorrect Email ID or Password!";
+        msg = "Incorrect Email ID!";
         
         LoginPage( msg );
     }
@@ -96,11 +105,13 @@ void ProjectDetail :: AuthorizeUser()
 
 void ProjectDetail :: ProjectDetailPage()
 {
+//    SetCookies(userEmailID, sessionID);
+    ContextType();
     Header("Project Detail");
 
     DivStart("projectdetail", "");
     
-    //InputField("hidden", fieldName.emailID, userEmailID);
+    InputField("hidden", fieldName.emailID, userEmailID);
 
     LogOutLink();
 
