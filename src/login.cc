@@ -85,7 +85,7 @@ void Login :: ReadLoginDetail()
  *--------------------------------------------------------------------
  */
 
-void Login :: LoginPage(string msg)
+void Login :: LoginPage(string msg, string emailID, string password)
 {
     ContextType();
     Header("Login");
@@ -106,10 +106,10 @@ void Login :: LoginPage(string msg)
     }
 
     cout << " Email ID ";
-    InputField("email", fieldName.emailID, "email@abc.com");
+    InputField("email", fieldName.emailID, emailID);
     cout << brk << brk;
     cout << " Password ";
-    InputField("password", fieldName.password, "123456");
+    InputField("password", fieldName.password, password);
     
     cout << brk << brk;
     
@@ -133,7 +133,7 @@ void Login :: LoginPage(string msg)
  *--------------------------------------------------------------------
  */
 
-void Login :: RegisterPage(string msg)
+void Login :: RegisterPage(string msg, string emailID, string password)
 {
     ContextType();
     Header("Register");
@@ -152,15 +152,15 @@ void Login :: RegisterPage(string msg)
     }
     
     cout << " Email ID ";
-    InputField("text", fieldName.emailID, "abc@123.com");
+    InputField("text", fieldName.emailID, emailID);
     
     cout << brk << brk
          << " Password ";
-    InputField("password", fieldName.password, "123456");
+    InputField("password", fieldName.password, password);
     
     cout << brk << brk
          << " Re-type Password ";
-    InputField("password", fieldName.retypePassword, "123456");
+    InputField("password", fieldName.retypePassword, password);
 
     cout << brk << brk;
 
@@ -195,14 +195,14 @@ void Login :: AddNewUser()
          != emailID.end() )
     {
         msg = "User already exists. Try another email ID";
-        RegisterPage( msg );
+        RegisterPage( msg, userEmailID );
     }
     else
     {
-        if(strcmp(retypePassword.c_str(), userPassword.c_str()))
+        if( retypePassword == userPassword )
         {
             msg = "Password doesn't match";
-            RegisterPage( msg );
+            RegisterPage( msg, userEmailID );
         }
         else
         {

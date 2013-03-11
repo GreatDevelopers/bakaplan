@@ -51,13 +51,16 @@ class Login : public InputDetail
         Login();
 
         /** Creating login page */
-        void LoginPage(string msg = "");
+        void LoginPage(string msg = "", string emailID = "xz@abc.com",
+                        string password = "123456");
 
         /** Read Login Detail */
         void ReadLoginDetail();
 
         /** Register user page  */
-        void RegisterPage(string msg = "");
+        void RegisterPage(string msg = "", 
+                          string emailID = "xz@abc.com",
+                          string password = "123456");
 
         /** Add new user in database */
         void AddNewUser();

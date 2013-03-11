@@ -52,7 +52,7 @@ void ProjectDetail :: AuthorizeUser()
     SelectLoginDetail();
     ReadLoginDetail();
     
-    userPassword = md5(userPassword);
+   // string pass = md5(userPassword);
     
     /** Matching user details with values in database */
     if ( ( find(emailID.begin(), emailID.end(), userEmailID) 
@@ -61,7 +61,8 @@ void ProjectDetail :: AuthorizeUser()
         int index = find(emailID.begin(), emailID.end(), userEmailID) 
                     - emailID.begin();
 
-        if(userPassword == password[index])/**< If Password Correct */
+        if( md5(userPassword) == password[index] )   /**< If Password 
+            Correct */
         {
             sessionID  = md5(userEmailID);
         
@@ -84,14 +85,14 @@ void ProjectDetail :: AuthorizeUser()
         else                             /**< If Password Incorrect */
         {
             msg = "Incorrect Password!";
-            LoginPage(msg);
+            LoginPage( msg, userEmailID, userPassword );
         }
     }
     else                                   /**< If Email ID invalid */
     {
         msg = "Incorrect Email ID!";
         
-        LoginPage( msg );
+        LoginPage( msg, userEmailID, userPassword );
     }
 }
 
