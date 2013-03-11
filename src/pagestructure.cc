@@ -32,7 +32,7 @@
 
 PageStructureMaker :: PageStructureMaker()
 {
-    cout << "Content-type:text/html\n\n" << endl;
+//    cout << "Content-type:text/html\n\n" << endl;
     SetHTMLVariables();
 }
 
