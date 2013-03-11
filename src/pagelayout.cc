@@ -4,7 +4,8 @@
  *       Filename:  pagelayout.cc
  *
  *    Description:  Definition of member functions of PageLayout
- *    class. This includes header, footer section of html pages.
+ *                  class. This includes header, footer section of 
+ *                  html pages.
  *
  *        Version:  0.6
  *        Created:  Friday 15 February 2013 07:05:50  IST
@@ -144,9 +145,21 @@ void PageLayout :: Head(string titleName)
  *--------------------------------------------------------------------
  */
 
-void PageLayout :: SetCookies(string sessionID)
+void PageLayout :: SetCookies(string userEmailID, string sessionID)
 {
+    cout << "Set-Cookie:EmailID=" << userEmailID << ";\r\n";
     cout << "Set-Cookie:SessionID=" << sessionID << ";\r\n";
+}
+
+void PageLayout :: UnSetCookies()
+{
+    cout << "Set-Cookie:EmailID=\"\";\r\n";
+    cout << "Set-Cookie:SessionID=\"\";\r\n";
+}
+
+void PageLayout :: ContextType()
+{
+    cout << "Content-type:text/html\n\n";
 }
 
 /**
