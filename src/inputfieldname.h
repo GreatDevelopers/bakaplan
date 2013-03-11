@@ -73,7 +73,7 @@ class InputFieldName
                examName,                      /**< Examination Name */
                examDate,                      /**< Examination Date */
                examTime,                      /**< Examination Time */
-               examTime;                     /**< Examination Venue */
+               examVenue;                    /**< Examination Venue */
                
 
     public:
