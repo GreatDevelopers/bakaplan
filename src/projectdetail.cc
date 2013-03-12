@@ -78,7 +78,7 @@ void ProjectDetail :: AuthorizeUser()
         
             sessionID += md5(currentDate);
             //SetCookies(userEmailID, sessionID);
-    //        database.InsertIntoSession(userEmailID, sessionID);
+            database.InsertIntoSession(userEmailID, sessionID);
 
             ProjectDetailPage();
         }
@@ -111,15 +111,14 @@ void ProjectDetail :: ProjectDetailPage()
     Header("Project Detail");
 
     DivStart("projectdetail", "");
-    
-    InputField("hidden", fieldName.emailID, userEmailID);
 
     LogOutLink();
 
     cout << brk;
 
     FormStart("projectdetail", "totalclasses.html", "POST");
-    
+    InputField("hidden", fieldName.emailID, userEmailID);
+
     cout << startH1 << "Project Detail" << endH1 << brk;
 
     cout << " Project Name ";
