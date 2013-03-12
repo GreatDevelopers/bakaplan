@@ -90,6 +90,8 @@ ClassDetail :: ClassDetail()
 
 void ClassDetail :: TotalClasses()
 {
+    ContextType();
+
     Header("Total Classes");
     
     DivStart("totalclasses", "");               /* (id, classname) */
@@ -140,6 +142,7 @@ void ClassDetail :: ClassInfo()
     temp = readField.ReadFieldValue(fieldName.totalClasses); 
     totalClasses = readField.StringToInt(temp);
     
+    ContextType();
     Header("Class Details");
 
     DivStart("classinfo", "");                  /* (id, classname) */
