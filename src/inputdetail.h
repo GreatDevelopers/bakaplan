@@ -51,6 +51,13 @@ class InputDetail : public PageLayout
 
         stringstream ss;            /* for converting int to string */
         string temp;                      /* for temporary strorage */
+        // For project detail
+        string projectID,                           /**< Project ID */
+               emailID,                               /**< Email id */
+               projectName;                       /**< Project Name */
+
+        // For class detail
+
 
     public:
 
