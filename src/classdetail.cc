@@ -81,6 +81,22 @@ ClassDetail :: ClassDetail()
 }
 
 /**
+ *--------------------------------------------------------------------\n
+ *       Class:  ClassDetail \n
+ *      Method:  ClassDetail :: ProjectDetail() :: ProjectDetail() \n
+ * Description:  Reading project detail and store it into database \n
+ *--------------------------------------------------------------------
+ */
+
+void ClassDetail :: ProjectDetail()
+{
+    projectName = readField.ReadFieldValue(fieldName.projectName);
+    emailID     = readField.ReadFieldValue(fieldName.emailID);
+
+    database.InsertIntoProjectName(emailID, projectName, projectID);
+}
+
+/**
  *--------------------------------------------------------------------
  *       Class:  ClassDetail
  *      Method:  ClassDetail :: TotalClasses()
@@ -88,8 +104,9 @@ ClassDetail :: ClassDetail()
  *--------------------------------------------------------------------
  */
 
-void ClassDetail :: TotalClasses()
+void ClassDetail :: TotalClassesPage()
 {
+    ProjectDetail();
     ContextType();
 
     Header("Total Classes");
@@ -137,7 +154,7 @@ void ClassDetail :: TotalClasses()
  *--------------------------------------------------------------------
  */
 
-void ClassDetail :: ClassInfo()
+void ClassDetail :: ClassInfoPage()
 {
     temp = readField.ReadFieldValue(fieldName.totalClasses); 
     totalClasses = readField.StringToInt(temp);
