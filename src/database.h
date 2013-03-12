@@ -56,6 +56,12 @@ class Database
         void SelectQuery(string column, string table, 
                          vector<string> & result);
 
+        /** Seclect Column */
+        void SelectColumn(string query, vector<string> & result);
+
+        /** select project id from user  */
+        void SelectProjectID(string & projectID);
+
         /** For inserting new user in database */
         void InsertIntoUser(string userEmailID, string userPassword);
 
@@ -67,6 +73,14 @@ class Database
 
         /** Insert into Session table */
         void InsertIntoSession(string emailID, string sessionID);
+
+        /** Insert Project detail into ProjectName table */
+        void InsertIntoProjectName(string emailID, 
+                                   string projectName,
+                                   string projectID);
+
+        /** Select last project Id of project name */
+        void SelectQuery(string projectID);
 
         /** Database Destructor */
         ~Database();

@@ -64,7 +64,30 @@ void Database :: SelectQuery(string column, string table,
     query += " from ";
     query += table;
     query += ";";
- 
+    
+    SelectColumn(query, result);
+}
+
+void Database :: SelectProjectID(string & projectID)
+{
+    query  = "Select ProjectID from ProjectName ORDER BY ProjectID ";
+    query += "DESC LIMIT=1;";
+    
+    vector<string> ID;
+    SelectColumn(query, ID);
+    projectID = ID[0];
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Database \n
+ *      Method:  Database :: SelectColumn \n
+ * Description:  Select column from table \n
+ *--------------------------------------------------------------------
+ */
+void Database :: SelectColumn(string query, vector<string> & result)
+{
+
     if ( mysql_query( connect, query.c_str() ) == 0 )
     {
         res_set = mysql_store_result( connect );
@@ -155,6 +178,28 @@ void Database :: InsertIntoSession(string emailID, string sessionID)
     query += emailID;
     query += "\", \"";
     query += sessionID;
+    query += "\");";
+
+    InsertQuery(query);
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Database \n
+ *      Method:  Database :: InsertIntoProjectName() \n
+ * Description:  Insert project name into ProjectName table \n
+ *--------------------------------------------------------------------
+ */
+
+void Database :: InsertIntoProjectName(string emailID, 
+                                       string projectName, 
+                                       string projectID)
+{
+    query  = "Insert into ProjectName(EmailID, ProjectName) values ";
+    query += "(\"";
+    query += emailID;
+    query += "\", \"";
+    query += projectName;
     query += "\");";
 
     InsertQuery(query);
