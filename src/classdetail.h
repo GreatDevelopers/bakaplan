@@ -53,12 +53,15 @@ class ClassDetail : public InputDetail
         /** Constructor */
         ClassDetail();
 
+        /** Read Project Detail and store them into database */
+        void ProjectDetail();
+
         /** Get total classes */
-        void TotalClasses();
+        void TotalClassesPage();
 
         /** Get class details like class name, subject name and
             subject code */
-        void ClassInfo();
+        void ClassInfoPage();
 
         /** Destructor */
         ~ClassDetail();
