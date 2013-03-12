@@ -30,7 +30,7 @@
 int main(void)
 {
     ClassDetail classdetail;
-    classdetail.TotalClasses();
+    classdetail.TotalClassesPage();
 
     return 0;
 }
