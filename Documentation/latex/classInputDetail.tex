@@ -30,6 +30,14 @@ void \hyperlink{classPageLayout_ae60235c6af48e3ebbc6343d02456da0c}{Logo} (string
 \item 
 void \hyperlink{classPageLayout_ae50907d56f0ba7a85f7ccfdeafa45bcc}{Head} (string title\-Name)
 \item 
+void \hyperlink{classPageLayout_a449b4dde24cf3dc10299dc3c7bfc0e9c}{Set\-Cookies} (string \hyperlink{classInputDetail_ad3f1db4fddbe0d4efbf1d5bc74d52257}{email\-I\-D}, string \hyperlink{classPageLayout_ab796c4a12a3f9c089881085e508e2a1c}{session\-I\-D})
+\item 
+void \hyperlink{classPageLayout_a279763d617259e21afbf7bc8d65a3c57}{Un\-Set\-Cookies} ()
+\item 
+void \hyperlink{classPageLayout_a9884173383d3e9b91e5b4ba6a619caa9}{Context\-Type} ()
+\item 
+void \hyperlink{classPageLayout_a060621cba0434c5d60dff14b2ee1584b}{Log\-Out\-Link} ()
+\item 
 void \hyperlink{classPageStructureMaker_aaf78d67380c400cc0057c6519276f721}{Set\-H\-T\-M\-L\-Variables} ()
 \item 
 void \hyperlink{classPageStructureMaker_ad25d6abc983253567e2370882fc1b407}{H\-T\-M\-L\-Start} ()
@@ -110,14 +118,19 @@ void \hyperlink{classPageStructureMaker_a419feca1cfdb50e1be757eb1c2707a73}{Butto
 \hypertarget{classInputDetail_abacd5d7ee7ebd7e9f36bbf3fefd13a5d}{string {\bfseries temp}}\label{classInputDetail_abacd5d7ee7ebd7e9f36bbf3fefd13a5d}
 
 \item 
-\hypertarget{classPageLayout_a8a3c1ddc422df2556fbc95d0cd575a05}{string {\bfseries project\-Name}}\label{classPageLayout_a8a3c1ddc422df2556fbc95d0cd575a05}
-
+string \hyperlink{classInputDetail_a08069ee622c626c038b821ddcc7427b4}{project\-I\-D}
+\item 
+string \hyperlink{classInputDetail_ad3f1db4fddbe0d4efbf1d5bc74d52257}{email\-I\-D}
+\item 
+string \hyperlink{classInputDetail_aaaf51475a2a4ddbe34e38c96bdb45bad}{project\-Name}
 \item 
 \hypertarget{classPageLayout_a9abec89a54a6f0dac84114919d2ad117}{ifstream {\bfseries in\-File}}\label{classPageLayout_a9abec89a54a6f0dac84114919d2ad117}
 
 \item 
 \hypertarget{classPageLayout_ad52913274f786e82e1e09f5df4bf5347}{ofstream {\bfseries out\-File}}\label{classPageLayout_ad52913274f786e82e1e09f5df4bf5347}
 
+\item 
+string \hyperlink{classPageLayout_ab796c4a12a3f9c089881085e508e2a1c}{session\-I\-D}
 \item 
 string \hyperlink{classPageStructureMaker_af41d4e21b808f5f8dc2c727f775b6fb2}{start\-H1}
 \item 
@@ -241,6 +254,17 @@ Button
 
 Definition at line 436 of file pagestructure.\-cc.
 
+\hypertarget{classPageLayout_a9884173383d3e9b91e5b4ba6a619caa9}{\index{Input\-Detail@{Input\-Detail}!Context\-Type@{Context\-Type}}
+\index{Context\-Type@{Context\-Type}!InputDetail@{Input\-Detail}}
+\subsubsection[{Context\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Context\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_a9884173383d3e9b91e5b4ba6a619caa9}
+Context-\/\-Type header 
+
+Definition at line 160 of file pagelayout.\-cc.
+
 \hypertarget{classPageStructureMaker_aacdb11817f8ab246bc59c552e04e862d}{\index{Input\-Detail@{Input\-Detail}!C\-S\-S@{C\-S\-S}}
 \index{C\-S\-S@{C\-S\-S}!InputDetail@{Input\-Detail}}
 \subsubsection[{C\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-C\-S\-S (
@@ -335,7 +359,7 @@ Head Section of Page
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageLayout}{Page\-Layout} Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_ae50907d56f0ba7a85f7ccfdeafa45bcc}{Head(string title\-Name)} Description\-: Head Section of page, titla\-Name pass to Title function. -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 105 of file pagelayout.\-cc.
+Definition at line 106 of file pagelayout.\-cc.
 
 \hypertarget{classPageStructureMaker_ad64115d592b0989b422a93f85278186e}{\index{Input\-Detail@{Input\-Detail}!Head\-End@{Head\-End}}
 \index{Head\-End@{Head\-End}!InputDetail@{Input\-Detail}}
@@ -361,7 +385,7 @@ Header Section of Page
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageLayout}{Page\-Layout} Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_a7726061f0653245f644a05807fa92472}{Header()} Description\-: Call Menu Function -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 88 of file pagelayout.\-cc.
+Definition at line 89 of file pagelayout.\-cc.
 
 \hypertarget{classInputDetail_ae55dcc0e15b85d302a09046b145330bb}{\index{Input\-Detail@{Input\-Detail}!Header@{Header}}
 \index{Header@{Header}!InputDetail@{Input\-Detail}}
@@ -534,7 +558,24 @@ Logo on Page
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageLayout}{Page\-Layout} Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_ae60235c6af48e3ebbc6343d02456da0c}{Logo(string logo\-Name)} Description\-: Logo to project -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 73 of file pagelayout.\-cc.
+Definition at line 74 of file pagelayout.\-cc.
+
+\hypertarget{classPageLayout_a060621cba0434c5d60dff14b2ee1584b}{\index{Input\-Detail@{Input\-Detail}!Log\-Out\-Link@{Log\-Out\-Link}}
+\index{Log\-Out\-Link@{Log\-Out\-Link}!InputDetail@{Input\-Detail}}
+\subsubsection[{Log\-Out\-Link}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Log\-Out\-Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_a060621cba0434c5d60dff14b2ee1584b}
+Logout link
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classPageLayout}{Page\-Layout} \par
+ Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_a060621cba0434c5d60dff14b2ee1584b}{Log\-Out\-Link()} \par
+ Description\-: logout link \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 173 of file pagelayout.\-cc.
 
 \hypertarget{classPageLayout_a49af1dca286bbee9432192a7b3c00332}{\index{Input\-Detail@{Input\-Detail}!Menu@{Menu}}
 \index{Menu@{Menu}!InputDetail@{Input\-Detail}}
@@ -547,7 +588,7 @@ List/\-Menu Navigation()
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageLayout}{Page\-Layout} Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_a49af1dca286bbee9432192a7b3c00332}{Menu()} Description\-: Add Menu on pages(for navigation) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 50 of file pagelayout.\-cc.
+Definition at line 51 of file pagelayout.\-cc.
 
 \hypertarget{classPageStructureMaker_a81eb3cdbc840a4c8165cef87330ade09}{\index{Input\-Detail@{Input\-Detail}!Select\-Field\-End@{Select\-Field\-End}}
 \index{Select\-Field\-End@{Select\-Field\-End}!InputDetail@{Input\-Detail}}
@@ -602,6 +643,24 @@ Select Option Start
 
 Definition at line 406 of file pagestructure.\-cc.
 
+\hypertarget{classPageLayout_a449b4dde24cf3dc10299dc3c7bfc0e9c}{\index{Input\-Detail@{Input\-Detail}!Set\-Cookies@{Set\-Cookies}}
+\index{Set\-Cookies@{Set\-Cookies}!InputDetail@{Input\-Detail}}
+\subsubsection[{Set\-Cookies}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Set\-Cookies (
+\begin{DoxyParamCaption}
+\item[{string}]{user\-Email\-I\-D, }
+\item[{string}]{session\-I\-D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_a449b4dde24cf3dc10299dc3c7bfc0e9c}
+For Cookies after login
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classPageLayout}{Page\-Layout} \par
+ Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: Set\-Cookies(string session\-I\-D) \par
+ Description\-: Setting session I\-D in cookies \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 148 of file pagelayout.\-cc.
+
 \hypertarget{classPageStructureMaker_aaf78d67380c400cc0057c6519276f721}{\index{Input\-Detail@{Input\-Detail}!Set\-H\-T\-M\-L\-Variables@{Set\-H\-T\-M\-L\-Variables}}
 \index{Set\-H\-T\-M\-L\-Variables@{Set\-H\-T\-M\-L\-Variables}!InputDetail@{Input\-Detail}}
 \subsubsection[{Set\-H\-T\-M\-L\-Variables}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Set\-H\-T\-M\-L\-Variables (
@@ -655,15 +714,54 @@ Display $<$\-T\-I\-T\-L\-E$>$ $<$/\-T\-I\-T\-L\-E$>$
 
 Definition at line 125 of file pagestructure.\-cc.
 
+\hypertarget{classPageLayout_a279763d617259e21afbf7bc8d65a3c57}{\index{Input\-Detail@{Input\-Detail}!Un\-Set\-Cookies@{Un\-Set\-Cookies}}
+\index{Un\-Set\-Cookies@{Un\-Set\-Cookies}!InputDetail@{Input\-Detail}}
+\subsubsection[{Un\-Set\-Cookies}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Un\-Set\-Cookies (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_a279763d617259e21afbf7bc8d65a3c57}
+Unset cookies 
+
+Definition at line 154 of file pagelayout.\-cc.
+
 
 
 \subsection{Member Data Documentation}
+\hypertarget{classInputDetail_ad3f1db4fddbe0d4efbf1d5bc74d52257}{\index{Input\-Detail@{Input\-Detail}!email\-I\-D@{email\-I\-D}}
+\index{email\-I\-D@{email\-I\-D}!InputDetail@{Input\-Detail}}
+\subsubsection[{email\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::email\-I\-D\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_ad3f1db4fddbe0d4efbf1d5bc74d52257}
+Email id 
+
+Definition at line 55 of file inputdetail.\-h.
+
 \hypertarget{classInputDetail_ac6f85380c5152c406d483726382c4798}{\index{Input\-Detail@{Input\-Detail}!field\-Name@{field\-Name}}
 \index{field\-Name@{field\-Name}!InputDetail@{Input\-Detail}}
 \subsubsection[{field\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Input\-Field\-Name} Input\-Detail\-::field\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_ac6f85380c5152c406d483726382c4798}
 Objects of \hyperlink{classInputFieldName}{Input\-Field\-Name} and Read\-Fields\-Value class 
 
 Definition at line 46 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a08069ee622c626c038b821ddcc7427b4}{\index{Input\-Detail@{Input\-Detail}!project\-I\-D@{project\-I\-D}}
+\index{project\-I\-D@{project\-I\-D}!InputDetail@{Input\-Detail}}
+\subsubsection[{project\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::project\-I\-D\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a08069ee622c626c038b821ddcc7427b4}
+Project I\-D 
+
+Definition at line 55 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_aaaf51475a2a4ddbe34e38c96bdb45bad}{\index{Input\-Detail@{Input\-Detail}!project\-Name@{project\-Name}}
+\index{project\-Name@{project\-Name}!InputDetail@{Input\-Detail}}
+\subsubsection[{project\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::project\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_aaaf51475a2a4ddbe34e38c96bdb45bad}
+Project Name 
+
+Definition at line 55 of file inputdetail.\-h.
+
+\hypertarget{classPageLayout_ab796c4a12a3f9c089881085e508e2a1c}{\index{Input\-Detail@{Input\-Detail}!session\-I\-D@{session\-I\-D}}
+\index{session\-I\-D@{session\-I\-D}!InputDetail@{Input\-Detail}}
+\subsubsection[{session\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}string Page\-Layout\-::session\-I\-D\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classPageLayout_ab796c4a12a3f9c089881085e508e2a1c}
+Session I\-D 
+
+Definition at line 40 of file pagelayout.\-h.
 
 \hypertarget{classPageStructureMaker_af41d4e21b808f5f8dc2c727f775b6fb2}{\index{Input\-Detail@{Input\-Detail}!start\-H1@{start\-H1}}
 \index{start\-H1@{start\-H1}!InputDetail@{Input\-Detail}}

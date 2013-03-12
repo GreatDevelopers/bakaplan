@@ -20,17 +20,21 @@ void \hyperlink{classProjectDetail_ade1395ab7aed2603464d81c3c352e716}{Project\-D
 \item 
 void \hyperlink{classProjectDetail_ab78c9e2a0cd5079c427638a5a3971c28}{Authorize\-User} ()
 \item 
-void \hyperlink{classProjectDetail_a68e0154f5106058eddfef8a6b39ebbc7}{Back\-To\-Login\-Page} ()
-\item 
 \hyperlink{classProjectDetail_ab4719d14d9efb8811916f5d691099c8f}{$\sim$\-Project\-Detail} ()
 \item 
-void \hyperlink{classLogin_afdbfed3107b8dbe58d324f30fa58b57b}{Login\-Page} ()
+void \hyperlink{classLogin_a412b7d07f8646ef52485390c90424f5d}{Login\-Page} (string \hyperlink{classLogin_a82a917399c1459896447984f576230bb}{msg}=\char`\"{}\char`\"{}, string \hyperlink{classLogin_a3470a140651dd1afafe29f4dde99905d}{email\-I\-D}=\char`\"{}xz@abc.\-com\char`\"{}, string \hyperlink{classLogin_ac097ff5d4f32b36b3f57e8e75fcf18a7}{password}=\char`\"{}123456\char`\"{})
 \item 
 void \hyperlink{classLogin_ab5bc65de431f277f15a3b423ad915808}{Read\-Login\-Detail} ()
 \item 
-void \hyperlink{classLogin_ab1dd7b372930530b7129122a6117711f}{Register} ()
+void \hyperlink{classLogin_a5c055a577da7141de9e7c65bce8d5786}{Register\-Page} (string \hyperlink{classLogin_a82a917399c1459896447984f576230bb}{msg}=\char`\"{}\char`\"{}, string \hyperlink{classLogin_a3470a140651dd1afafe29f4dde99905d}{email\-I\-D}=\char`\"{}xz@abc.\-com\char`\"{}, string \hyperlink{classLogin_ac097ff5d4f32b36b3f57e8e75fcf18a7}{password}=\char`\"{}123456\char`\"{})
+\item 
+void \hyperlink{classLogin_a5a2697ca2ece17b8b4cdef12b3962b95}{Add\-New\-User} ()
 \item 
 void \hyperlink{classLogin_ad127628ca09987d733477f90b828ad1e}{Select\-Login\-Detail} ()
+\item 
+void \hyperlink{classLogin_a9f4c18645f1ab1eb291f5d9f141853f4}{Already\-Logged\-In} ()
+\item 
+void \hyperlink{classLogin_a153d72df8d3333317e60219e8f6b8257}{Logout\-Page} ()
 \item 
 void \hyperlink{classInputDetail_ae55dcc0e15b85d302a09046b145330bb}{Header} (string title\-Name)
 \item 
@@ -45,6 +49,14 @@ void \hyperlink{classPageLayout_a49af1dca286bbee9432192a7b3c00332}{Menu} ()
 void \hyperlink{classPageLayout_ae60235c6af48e3ebbc6343d02456da0c}{Logo} (string logo\-Name)
 \item 
 void \hyperlink{classPageLayout_ae50907d56f0ba7a85f7ccfdeafa45bcc}{Head} (string title\-Name)
+\item 
+void \hyperlink{classPageLayout_a449b4dde24cf3dc10299dc3c7bfc0e9c}{Set\-Cookies} (string \hyperlink{classLogin_a3470a140651dd1afafe29f4dde99905d}{email\-I\-D}, string \hyperlink{classPageLayout_ab796c4a12a3f9c089881085e508e2a1c}{session\-I\-D})
+\item 
+void \hyperlink{classPageLayout_a279763d617259e21afbf7bc8d65a3c57}{Un\-Set\-Cookies} ()
+\item 
+void \hyperlink{classPageLayout_a9884173383d3e9b91e5b4ba6a619caa9}{Context\-Type} ()
+\item 
+void \hyperlink{classPageLayout_a060621cba0434c5d60dff14b2ee1584b}{Log\-Out\-Link} ()
 \item 
 void \hyperlink{classPageStructureMaker_aaf78d67380c400cc0057c6519276f721}{Set\-H\-T\-M\-L\-Variables} ()
 \item 
@@ -111,6 +123,12 @@ string \hyperlink{classLogin_aa83b4706e0f0f0afc65f210ee8e4839a}{user\-Email\-I\-
 \item 
 string \hyperlink{classLogin_a9731be126468f535f161f045c95687c6}{user\-Password}
 \item 
+string \hyperlink{classLogin_ade36f8943aafce470ef4b8353c79b2c6}{retype\-Password}
+\item 
+string \hyperlink{classLogin_a82a917399c1459896447984f576230bb}{msg}
+\item 
+string \hyperlink{classLogin_aac5f21425f8c63a2f40be84079c475a4}{current\-Date}
+\item 
 \hyperlink{classInputFieldName}{Input\-Field\-Name} \hyperlink{classInputDetail_ac6f85380c5152c406d483726382c4798}{field\-Name}
 \item 
 \hypertarget{classInputDetail_ac0cc70b017ef94fb55acb46fc44f0df5}{\hyperlink{classReadInputField}{Read\-Input\-Field} {\bfseries read\-Field}}\label{classInputDetail_ac0cc70b017ef94fb55acb46fc44f0df5}
@@ -134,14 +152,17 @@ string \hyperlink{classLogin_a9731be126468f535f161f045c95687c6}{user\-Password}
 \hypertarget{classInputDetail_abacd5d7ee7ebd7e9f36bbf3fefd13a5d}{string {\bfseries temp}}\label{classInputDetail_abacd5d7ee7ebd7e9f36bbf3fefd13a5d}
 
 \item 
-\hypertarget{classPageLayout_a8a3c1ddc422df2556fbc95d0cd575a05}{string {\bfseries project\-Name}}\label{classPageLayout_a8a3c1ddc422df2556fbc95d0cd575a05}
-
+string \hyperlink{classInputDetail_a08069ee622c626c038b821ddcc7427b4}{project\-I\-D}
+\item 
+string \hyperlink{classInputDetail_aaaf51475a2a4ddbe34e38c96bdb45bad}{project\-Name}
 \item 
 \hypertarget{classPageLayout_a9abec89a54a6f0dac84114919d2ad117}{ifstream {\bfseries in\-File}}\label{classPageLayout_a9abec89a54a6f0dac84114919d2ad117}
 
 \item 
 \hypertarget{classPageLayout_ad52913274f786e82e1e09f5df4bf5347}{ofstream {\bfseries out\-File}}\label{classPageLayout_ad52913274f786e82e1e09f5df4bf5347}
 
+\item 
+string \hyperlink{classPageLayout_ab796c4a12a3f9c089881085e508e2a1c}{session\-I\-D}
 \item 
 string \hyperlink{classPageStructureMaker_af41d4e21b808f5f8dc2c727f775b6fb2}{start\-H1}
 \item 
@@ -225,11 +246,45 @@ Destructor
  Description\-: Destuctor \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 105 of file projectdetail.\-cc.
+Definition at line 145 of file projectdetail.\-cc.
 
 
 
 \subsection{Member Function Documentation}
+\hypertarget{classLogin_a5a2697ca2ece17b8b4cdef12b3962b95}{\index{Project\-Detail@{Project\-Detail}!Add\-New\-User@{Add\-New\-User}}
+\index{Add\-New\-User@{Add\-New\-User}!ProjectDetail@{Project\-Detail}}
+\subsubsection[{Add\-New\-User}]{\setlength{\rightskip}{0pt plus 5cm}void Login\-::\-Add\-New\-User (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classLogin_a5a2697ca2ece17b8b4cdef12b3962b95}
+Add new user in database
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classLogin}{Login} \par
+ Method\-: \hyperlink{classLogin}{Login} \-:\-: \hyperlink{classLogin_a5a2697ca2ece17b8b4cdef12b3962b95}{Add\-New\-User()} \par
+ Description\-: Adding new user into database and if user already exists then move back to register page for unique email id \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 186 of file login.\-cc.
+
+\hypertarget{classLogin_a9f4c18645f1ab1eb291f5d9f141853f4}{\index{Project\-Detail@{Project\-Detail}!Already\-Logged\-In@{Already\-Logged\-In}}
+\index{Already\-Logged\-In@{Already\-Logged\-In}!ProjectDetail@{Project\-Detail}}
+\subsubsection[{Already\-Logged\-In}]{\setlength{\rightskip}{0pt plus 5cm}void Login\-::\-Already\-Logged\-In (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classLogin_a9f4c18645f1ab1eb291f5d9f141853f4}
+Check user If already logged in
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classLogin}{Login} \par
+ Method\-: \hyperlink{classLogin}{Login} \-:\-: \hyperlink{classLogin_a9f4c18645f1ab1eb291f5d9f141853f4}{Already\-Logged\-In()} \par
+ Description\-: Check if user already logged in not allow to log in \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 238 of file login.\-cc.
+
 \hypertarget{classPageStructureMaker_a8c0fae5b599182863066de56ae0cea42}{\index{Project\-Detail@{Project\-Detail}!Anchor@{Anchor}}
 \index{Anchor@{Anchor}!ProjectDetail@{Project\-Detail}}
 \subsubsection[{Anchor}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Anchor (
@@ -263,20 +318,17 @@ Checking user login details valid or not
  Description\-: Checking user login details valid or invalid \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Matching user details with values in database
 
-$<$ If login details valid
+$<$ If Email I\-D valid
 
-$<$ If login details invalid 
+$<$ If Password Correct
+
+$<$ If Password Incorrect
+
+$<$ If Email I\-D invalid 
 
 Definition at line 50 of file projectdetail.\-cc.
 
-\hypertarget{classProjectDetail_a68e0154f5106058eddfef8a6b39ebbc7}{\index{Project\-Detail@{Project\-Detail}!Back\-To\-Login\-Page@{Back\-To\-Login\-Page}}
-\index{Back\-To\-Login\-Page@{Back\-To\-Login\-Page}!ProjectDetail@{Project\-Detail}}
-\subsubsection[{Back\-To\-Login\-Page}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-Detail\-::\-Back\-To\-Login\-Page (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{classProjectDetail_a68e0154f5106058eddfef8a6b39ebbc7}
-Back to login.\-html page if user details invalid \hypertarget{classPageStructureMaker_ac91e234e2d54dedd9d7e556fabf21d2b}{\index{Project\-Detail@{Project\-Detail}!Body\-End@{Body\-End}}
+\hypertarget{classPageStructureMaker_ac91e234e2d54dedd9d7e556fabf21d2b}{\index{Project\-Detail@{Project\-Detail}!Body\-End@{Body\-End}}
 \index{Body\-End@{Body\-End}!ProjectDetail@{Project\-Detail}}
 \subsubsection[{Body\-End}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Body\-End (
 \begin{DoxyParamCaption}
@@ -317,6 +369,17 @@ Button
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: Button(string id, string type, string class\-Name, string value) Description\-: Create button(next, submit, etc) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
 Definition at line 436 of file pagestructure.\-cc.
+
+\hypertarget{classPageLayout_a9884173383d3e9b91e5b4ba6a619caa9}{\index{Project\-Detail@{Project\-Detail}!Context\-Type@{Context\-Type}}
+\index{Context\-Type@{Context\-Type}!ProjectDetail@{Project\-Detail}}
+\subsubsection[{Context\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Context\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_a9884173383d3e9b91e5b4ba6a619caa9}
+Context-\/\-Type header 
+
+Definition at line 160 of file pagelayout.\-cc.
 
 \hypertarget{classPageStructureMaker_aacdb11817f8ab246bc59c552e04e862d}{\index{Project\-Detail@{Project\-Detail}!C\-S\-S@{C\-S\-S}}
 \index{C\-S\-S@{C\-S\-S}!ProjectDetail@{Project\-Detail}}
@@ -412,7 +475,7 @@ Head Section of Page
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageLayout}{Page\-Layout} Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_ae50907d56f0ba7a85f7ccfdeafa45bcc}{Head(string title\-Name)} Description\-: Head Section of page, titla\-Name pass to Title function. -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 105 of file pagelayout.\-cc.
+Definition at line 106 of file pagelayout.\-cc.
 
 \hypertarget{classPageStructureMaker_ad64115d592b0989b422a93f85278186e}{\index{Project\-Detail@{Project\-Detail}!Head\-End@{Head\-End}}
 \index{Head\-End@{Head\-End}!ProjectDetail@{Project\-Detail}}
@@ -438,7 +501,7 @@ Header Section of Page
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageLayout}{Page\-Layout} Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_a7726061f0653245f644a05807fa92472}{Header()} Description\-: Call Menu Function -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 88 of file pagelayout.\-cc.
+Definition at line 89 of file pagelayout.\-cc.
 
 \hypertarget{classInputDetail_ae55dcc0e15b85d302a09046b145330bb}{\index{Project\-Detail@{Project\-Detail}!Header@{Header}}
 \index{Header@{Header}!ProjectDetail@{Project\-Detail}}
@@ -600,18 +663,20 @@ Start List
 
 Definition at line 279 of file pagestructure.\-cc.
 
-\hypertarget{classLogin_afdbfed3107b8dbe58d324f30fa58b57b}{\index{Project\-Detail@{Project\-Detail}!Login\-Page@{Login\-Page}}
+\hypertarget{classLogin_a412b7d07f8646ef52485390c90424f5d}{\index{Project\-Detail@{Project\-Detail}!Login\-Page@{Login\-Page}}
 \index{Login\-Page@{Login\-Page}!ProjectDetail@{Project\-Detail}}
 \subsubsection[{Login\-Page}]{\setlength{\rightskip}{0pt plus 5cm}void Login\-::\-Login\-Page (
 \begin{DoxyParamCaption}
-{}
+\item[{string}]{msg = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{string}]{email\-I\-D = {\ttfamily \char`\"{}xz@abc.com\char`\"{}}, }
+\item[{string}]{password = {\ttfamily \char`\"{}123456\char`\"{}}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classLogin_afdbfed3107b8dbe58d324f30fa58b57b}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classLogin_a412b7d07f8646ef52485390c90424f5d}
 Creating login page
 
 --------------------------------------------------------------------\par
  Class\-: \hyperlink{classLogin}{Login} \par
- Method\-: \hyperlink{classLogin}{Login} \-:\-: \hyperlink{classLogin_afdbfed3107b8dbe58d324f30fa58b57b}{Login\-Page()} \par
+ Method\-: \hyperlink{classLogin}{Login} \-:\-: \hyperlink{classLogin_a412b7d07f8646ef52485390c90424f5d}{Login\-Page()} \par
  Description\-: Form for user login \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
@@ -628,7 +693,41 @@ Logo on Page
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageLayout}{Page\-Layout} Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_ae60235c6af48e3ebbc6343d02456da0c}{Logo(string logo\-Name)} Description\-: Logo to project -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 73 of file pagelayout.\-cc.
+Definition at line 74 of file pagelayout.\-cc.
+
+\hypertarget{classPageLayout_a060621cba0434c5d60dff14b2ee1584b}{\index{Project\-Detail@{Project\-Detail}!Log\-Out\-Link@{Log\-Out\-Link}}
+\index{Log\-Out\-Link@{Log\-Out\-Link}!ProjectDetail@{Project\-Detail}}
+\subsubsection[{Log\-Out\-Link}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Log\-Out\-Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_a060621cba0434c5d60dff14b2ee1584b}
+Logout link
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classPageLayout}{Page\-Layout} \par
+ Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_a060621cba0434c5d60dff14b2ee1584b}{Log\-Out\-Link()} \par
+ Description\-: logout link \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 173 of file pagelayout.\-cc.
+
+\hypertarget{classLogin_a153d72df8d3333317e60219e8f6b8257}{\index{Project\-Detail@{Project\-Detail}!Logout\-Page@{Logout\-Page}}
+\index{Logout\-Page@{Logout\-Page}!ProjectDetail@{Project\-Detail}}
+\subsubsection[{Logout\-Page}]{\setlength{\rightskip}{0pt plus 5cm}void Login\-::\-Logout\-Page (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classLogin_a153d72df8d3333317e60219e8f6b8257}
+Logout Page
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classLogin}{Login} \par
+ Method\-: \hyperlink{classLogin}{Login} \-:\-: \hyperlink{classLogin_a153d72df8d3333317e60219e8f6b8257}{Logout\-Page()} \par
+ Description\-: Logout Page \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 224 of file login.\-cc.
 
 \hypertarget{classPageLayout_a49af1dca286bbee9432192a7b3c00332}{\index{Project\-Detail@{Project\-Detail}!Menu@{Menu}}
 \index{Menu@{Menu}!ProjectDetail@{Project\-Detail}}
@@ -641,7 +740,7 @@ List/\-Menu Navigation()
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageLayout}{Page\-Layout} Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_a49af1dca286bbee9432192a7b3c00332}{Menu()} Description\-: Add Menu on pages(for navigation) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 50 of file pagelayout.\-cc.
+Definition at line 51 of file pagelayout.\-cc.
 
 \hypertarget{classProjectDetail_ade1395ab7aed2603464d81c3c352e716}{\index{Project\-Detail@{Project\-Detail}!Project\-Detail\-Page@{Project\-Detail\-Page}}
 \index{Project\-Detail\-Page@{Project\-Detail\-Page}!ProjectDetail@{Project\-Detail}}
@@ -658,7 +757,7 @@ Display Page for project details
  Description\-: Diplaying page for project details \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 72 of file projectdetail.\-cc.
+Definition at line 107 of file projectdetail.\-cc.
 
 \hypertarget{classLogin_ab5bc65de431f277f15a3b423ad915808}{\index{Project\-Detail@{Project\-Detail}!Read\-Login\-Detail@{Read\-Login\-Detail}}
 \index{Read\-Login\-Detail@{Read\-Login\-Detail}!ProjectDetail@{Project\-Detail}}
@@ -677,22 +776,24 @@ Read \hyperlink{classLogin}{Login} Detail
 
 Definition at line 74 of file login.\-cc.
 
-\hypertarget{classLogin_ab1dd7b372930530b7129122a6117711f}{\index{Project\-Detail@{Project\-Detail}!Register@{Register}}
-\index{Register@{Register}!ProjectDetail@{Project\-Detail}}
-\subsubsection[{Register}]{\setlength{\rightskip}{0pt plus 5cm}void Login\-::\-Register (
+\hypertarget{classLogin_a5c055a577da7141de9e7c65bce8d5786}{\index{Project\-Detail@{Project\-Detail}!Register\-Page@{Register\-Page}}
+\index{Register\-Page@{Register\-Page}!ProjectDetail@{Project\-Detail}}
+\subsubsection[{Register\-Page}]{\setlength{\rightskip}{0pt plus 5cm}void Login\-::\-Register\-Page (
 \begin{DoxyParamCaption}
-{}
+\item[{string}]{msg = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{string}]{email\-I\-D = {\ttfamily \char`\"{}xz@abc.com\char`\"{}}, }
+\item[{string}]{password = {\ttfamily \char`\"{}123456\char`\"{}}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classLogin_ab1dd7b372930530b7129122a6117711f}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classLogin_a5c055a577da7141de9e7c65bce8d5786}
 Register user page
 
 --------------------------------------------------------------------\par
  Class\-: \hyperlink{classLogin}{Login} \par
- Method\-: \hyperlink{classLogin}{Login} \-:\-: \hyperlink{classLogin_ab1dd7b372930530b7129122a6117711f}{Register()} \par
+ Method\-: \hyperlink{classLogin}{Login} \-:\-: \hyperlink{classLogin_a5c055a577da7141de9e7c65bce8d5786}{Register\-Page()} \par
  Description\-: Register new user \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 128 of file login.\-cc.
+Definition at line 136 of file login.\-cc.
 
 \hypertarget{classPageStructureMaker_a81eb3cdbc840a4c8165cef87330ade09}{\index{Project\-Detail@{Project\-Detail}!Select\-Field\-End@{Select\-Field\-End}}
 \index{Select\-Field\-End@{Select\-Field\-End}!ProjectDetail@{Project\-Detail}}
@@ -764,6 +865,24 @@ Select Option Start
 
 Definition at line 406 of file pagestructure.\-cc.
 
+\hypertarget{classPageLayout_a449b4dde24cf3dc10299dc3c7bfc0e9c}{\index{Project\-Detail@{Project\-Detail}!Set\-Cookies@{Set\-Cookies}}
+\index{Set\-Cookies@{Set\-Cookies}!ProjectDetail@{Project\-Detail}}
+\subsubsection[{Set\-Cookies}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Set\-Cookies (
+\begin{DoxyParamCaption}
+\item[{string}]{user\-Email\-I\-D, }
+\item[{string}]{session\-I\-D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_a449b4dde24cf3dc10299dc3c7bfc0e9c}
+For Cookies after login
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classPageLayout}{Page\-Layout} \par
+ Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: Set\-Cookies(string session\-I\-D) \par
+ Description\-: Setting session I\-D in cookies \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 148 of file pagelayout.\-cc.
+
 \hypertarget{classPageStructureMaker_aaf78d67380c400cc0057c6519276f721}{\index{Project\-Detail@{Project\-Detail}!Set\-H\-T\-M\-L\-Variables@{Set\-H\-T\-M\-L\-Variables}}
 \index{Set\-H\-T\-M\-L\-Variables@{Set\-H\-T\-M\-L\-Variables}!ProjectDetail@{Project\-Detail}}
 \subsubsection[{Set\-H\-T\-M\-L\-Variables}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Set\-H\-T\-M\-L\-Variables (
@@ -817,15 +936,33 @@ Display $<$\-T\-I\-T\-L\-E$>$ $<$/\-T\-I\-T\-L\-E$>$
 
 Definition at line 125 of file pagestructure.\-cc.
 
+\hypertarget{classPageLayout_a279763d617259e21afbf7bc8d65a3c57}{\index{Project\-Detail@{Project\-Detail}!Un\-Set\-Cookies@{Un\-Set\-Cookies}}
+\index{Un\-Set\-Cookies@{Un\-Set\-Cookies}!ProjectDetail@{Project\-Detail}}
+\subsubsection[{Un\-Set\-Cookies}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Un\-Set\-Cookies (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_a279763d617259e21afbf7bc8d65a3c57}
+Unset cookies 
+
+Definition at line 154 of file pagelayout.\-cc.
+
 
 
 \subsection{Member Data Documentation}
+\hypertarget{classLogin_aac5f21425f8c63a2f40be84079c475a4}{\index{Project\-Detail@{Project\-Detail}!current\-Date@{current\-Date}}
+\index{current\-Date@{current\-Date}!ProjectDetail@{Project\-Detail}}
+\subsubsection[{current\-Date}]{\setlength{\rightskip}{0pt plus 5cm}string Login\-::current\-Date\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classLogin_aac5f21425f8c63a2f40be84079c475a4}
+Currennt Date 
+
+Definition at line 46 of file login.\-h.
+
 \hypertarget{classLogin_a3470a140651dd1afafe29f4dde99905d}{\index{Project\-Detail@{Project\-Detail}!email\-I\-D@{email\-I\-D}}
 \index{email\-I\-D@{email\-I\-D}!ProjectDetail@{Project\-Detail}}
 \subsubsection[{email\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Login\-::email\-I\-D\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classLogin_a3470a140651dd1afafe29f4dde99905d}
 For storting email and password of users Email I\-D as vector 
 
-Definition at line 38 of file login.\-h.
+Definition at line 39 of file login.\-h.
 
 \hypertarget{classInputDetail_ac6f85380c5152c406d483726382c4798}{\index{Project\-Detail@{Project\-Detail}!field\-Name@{field\-Name}}
 \index{field\-Name@{field\-Name}!ProjectDetail@{Project\-Detail}}
@@ -834,12 +971,47 @@ Objects of \hyperlink{classInputFieldName}{Input\-Field\-Name} and Read\-Fields\
 
 Definition at line 46 of file inputdetail.\-h.
 
+\hypertarget{classLogin_a82a917399c1459896447984f576230bb}{\index{Project\-Detail@{Project\-Detail}!msg@{msg}}
+\index{msg@{msg}!ProjectDetail@{Project\-Detail}}
+\subsubsection[{msg}]{\setlength{\rightskip}{0pt plus 5cm}string Login\-::msg\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classLogin_a82a917399c1459896447984f576230bb}
+Msg string to show error message 
+
+Definition at line 46 of file login.\-h.
+
 \hypertarget{classLogin_ac097ff5d4f32b36b3f57e8e75fcf18a7}{\index{Project\-Detail@{Project\-Detail}!password@{password}}
 \index{password@{password}!ProjectDetail@{Project\-Detail}}
 \subsubsection[{password}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Login\-::password\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classLogin_ac097ff5d4f32b36b3f57e8e75fcf18a7}
 password as vector variable 
 
-Definition at line 38 of file login.\-h.
+Definition at line 39 of file login.\-h.
+
+\hypertarget{classInputDetail_a08069ee622c626c038b821ddcc7427b4}{\index{Project\-Detail@{Project\-Detail}!project\-I\-D@{project\-I\-D}}
+\index{project\-I\-D@{project\-I\-D}!ProjectDetail@{Project\-Detail}}
+\subsubsection[{project\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::project\-I\-D\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classInputDetail_a08069ee622c626c038b821ddcc7427b4}
+Project I\-D 
+
+Definition at line 55 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_aaaf51475a2a4ddbe34e38c96bdb45bad}{\index{Project\-Detail@{Project\-Detail}!project\-Name@{project\-Name}}
+\index{project\-Name@{project\-Name}!ProjectDetail@{Project\-Detail}}
+\subsubsection[{project\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::project\-Name\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classInputDetail_aaaf51475a2a4ddbe34e38c96bdb45bad}
+Project Name 
+
+Definition at line 55 of file inputdetail.\-h.
+
+\hypertarget{classLogin_ade36f8943aafce470ef4b8353c79b2c6}{\index{Project\-Detail@{Project\-Detail}!retype\-Password@{retype\-Password}}
+\index{retype\-Password@{retype\-Password}!ProjectDetail@{Project\-Detail}}
+\subsubsection[{retype\-Password}]{\setlength{\rightskip}{0pt plus 5cm}string Login\-::retype\-Password\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classLogin_ade36f8943aafce470ef4b8353c79b2c6}
+For reading password 
+
+Definition at line 42 of file login.\-h.
+
+\hypertarget{classPageLayout_ab796c4a12a3f9c089881085e508e2a1c}{\index{Project\-Detail@{Project\-Detail}!session\-I\-D@{session\-I\-D}}
+\index{session\-I\-D@{session\-I\-D}!ProjectDetail@{Project\-Detail}}
+\subsubsection[{session\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}string Page\-Layout\-::session\-I\-D\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classPageLayout_ab796c4a12a3f9c089881085e508e2a1c}
+Session I\-D 
+
+Definition at line 40 of file pagelayout.\-h.
 
 \hypertarget{classPageStructureMaker_af41d4e21b808f5f8dc2c727f775b6fb2}{\index{Project\-Detail@{Project\-Detail}!start\-H1@{start\-H1}}
 \index{start\-H1@{start\-H1}!ProjectDetail@{Project\-Detail}}
@@ -853,14 +1025,14 @@ Definition at line 37 of file pagestructure.\-h.
 \subsubsection[{user\-Email\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}string Login\-::user\-Email\-I\-D\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classLogin_aa83b4706e0f0f0afc65f210ee8e4839a}
 For reading email\-I\-D in text field 
 
-Definition at line 41 of file login.\-h.
+Definition at line 42 of file login.\-h.
 
 \hypertarget{classLogin_a9731be126468f535f161f045c95687c6}{\index{Project\-Detail@{Project\-Detail}!user\-Password@{user\-Password}}
 \index{user\-Password@{user\-Password}!ProjectDetail@{Project\-Detail}}
 \subsubsection[{user\-Password}]{\setlength{\rightskip}{0pt plus 5cm}string Login\-::user\-Password\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classLogin_a9731be126468f535f161f045c95687c6}
 For reading password in text field 
 
-Definition at line 41 of file login.\-h.
+Definition at line 42 of file login.\-h.
 
 
 

@@ -97,6 +97,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4703c80e6969d33565ea340f768fdadf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a4703c80e6969d33565ea340f768fdadf">Database</a> ()</td></tr>
 <tr class="memitem:aec3d0f84e49a58a59f254c90193c1303"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#aec3d0f84e49a58a59f254c90193c1303">SelectQuery</a> (string column, string table, vector&lt; string &gt; &amp;result)</td></tr>
+<tr class="memitem:a6fb9e249cb97830af86c00804bb209a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a6fb9e249cb97830af86c00804bb209a2">SelectColumn</a> (string query, vector&lt; string &gt; &amp;result)</td></tr>
+<tr class="memitem:a20f7ccadac8f3b67d4344f7da4594eda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a20f7ccadac8f3b67d4344f7da4594eda">SelectProjectID</a> (string &amp;projectID)</td></tr>
+<tr class="memitem:a62ef4b0467047a68718dcc41a1851684"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a62ef4b0467047a68718dcc41a1851684">InsertIntoUser</a> (string userEmailID, string userPassword)</td></tr>
+<tr class="memitem:a63d8c1af7507b1dcdc81a411f9a0b4b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a63d8c1af7507b1dcdc81a411f9a0b4b4">InsertQuery</a> (string query)</td></tr>
+<tr class="memitem:a513326ea43b2455177731fbc92c4bf4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a513326ea43b2455177731fbc92c4bf4f">InsertQuery</a> (string column, string value, string table)</td></tr>
+<tr class="memitem:a8d7a5fe5f7b24d41ed165bc2fa565337"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a8d7a5fe5f7b24d41ed165bc2fa565337">InsertIntoSession</a> (string emailID, string sessionID)</td></tr>
+<tr class="memitem:a1f9b19ec52568cd279e3a4408771b5bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a1f9b19ec52568cd279e3a4408771b5bb">InsertIntoProjectName</a> (string emailID, string projectName, string projectID)</td></tr>
+<tr class="memitem:ad9d81a21631f250d487d1f9e6956f3df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#ad9d81a21631f250d487d1f9e6956f3df">SelectQuery</a> (string projectID)</td></tr>
 <tr class="memitem:a84d399a2ad58d69daab9b05330e1316d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a84d399a2ad58d69daab9b05330e1316d">~Database</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
@@ -158,11 +166,236 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
 <p><a class="el" href="classDatabase.html">Database</a> Destructor</p>
 <p>-------------------------------------------------------------------- Class: <a class="el" href="classDatabase.html">Database</a> Method: <a class="el" href="classDatabase.html">Database</a> :: <a class="el" href="classDatabase.html#a84d399a2ad58d69daab9b05330e1316d">~Database()</a> Description: Destructor for closing database connectivity -------------------------------------------------------------------- </p>
 
-<p>Definition at line <a class="el" href="database_8cc_source.html#l00091">91</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
+<p>Definition at line <a class="el" href="database_8cc_source.html#l00216">216</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
 
 </div>
 </div>
 <h2>Member Function Documentation</h2>
+<a class="anchor" id="a1f9b19ec52568cd279e3a4408771b5bb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Database::InsertIntoProjectName </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>emailID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>projectName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>projectID</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Insert Project detail into ProjectName table</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;<br/>
+ Class: <a class="el" href="classDatabase.html">Database</a> <br/>
+ Method: <a class="el" href="classDatabase.html">Database</a> :: <a class="el" href="classDatabase.html#a1f9b19ec52568cd279e3a4408771b5bb">InsertIntoProjectName()</a> <br/>
+ Description: Insert project name into ProjectName table <br/>
+ -------------------------------------------------------------------- </p>
+
+<p>Definition at line <a class="el" href="database_8cc_source.html#l00194">194</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d7a5fe5f7b24d41ed165bc2fa565337"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Database::InsertIntoSession </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>emailID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sessionID</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Insert into Session table</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;<br/>
+ Class: <a class="el" href="classDatabase.html">Database</a> <br/>
+ Method: <a class="el" href="classDatabase.html">Database</a> :: InsertIntoSession(string emailID, string sessionID) <br/>
+ Description: Inserting Session information in database <br/>
+ -------------------------------------------------------------------- </p>
+
+<p>Definition at line <a class="el" href="database_8cc_source.html#l00175">175</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a62ef4b0467047a68718dcc41a1851684"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Database::InsertIntoUser </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>userEmailID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>userPassword</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For inserting new user in database</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;<br/>
+ Class: <a class="el" href="classDatabase.html">Database</a> <br/>
+ Method: <a class="el" href="classDatabase.html">Database</a> :: InsertIntoUser(string userEmailID, string userPassword) <br/>
+ Description: Inserting new user details into database <br/>
+ -------------------------------------------------------------------- </p>
+
+<p>Definition at line <a class="el" href="database_8cc_source.html#l00152">152</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a63d8c1af7507b1dcdc81a411f9a0b4b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Database::InsertQuery </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>query</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Insert query with one argument</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;<br/>
+ Class: <a class="el" href="classDatabase.html">Database</a> <br/>
+ Method: <a class="el" href="classDatabase.html">Database</a> :: <a class="el" href="classDatabase.html#a63d8c1af7507b1dcdc81a411f9a0b4b4">InsertQuery(string query)</a> <br/>
+ Description: Insrting value in database <br/>
+ -------------------------------------------------------------------- </p>
+
+<p>Definition at line <a class="el" href="database_8cc_source.html#l00112">112</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a513326ea43b2455177731fbc92c4bf4f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Database::InsertQuery </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>column</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>table</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Insert Query for adding value in one column</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;<br/>
+ Class: <a class="el" href="classDatabase.html">Database</a> <br/>
+ Method: <a class="el" href="classDatabase.html">Database</a> :: InsertQuery(string column, string value, string table) <br/>
+ Description: For inserting values in database <br/>
+ -------------------------------------------------------------------- </p>
+
+<p>Definition at line <a class="el" href="database_8cc_source.html#l00129">129</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6fb9e249cb97830af86c00804bb209a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Database::SelectColumn </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Seclect Column</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;<br/>
+ Class: <a class="el" href="classDatabase.html">Database</a> <br/>
+ Method: <a class="el" href="classDatabase.html">Database</a> :: SelectColumn <br/>
+ Description: Select column from table <br/>
+ -------------------------------------------------------------------- </p>
+
+<p>Definition at line <a class="el" href="database_8cc_source.html#l00088">88</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a20f7ccadac8f3b67d4344f7da4594eda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Database::SelectProjectID </td>
+          <td>(</td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>projectID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>select project id from user </p>
+
+<p>Definition at line <a class="el" href="database_8cc_source.html#l00071">71</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aec3d0f84e49a58a59f254c90193c1303"></a>
 <div class="memitem">
 <div class="memproto">
@@ -200,6 +433,23 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
  -------------------------------------------------------------------- </p>
 
 <p>Definition at line <a class="el" href="database_8cc_source.html#l00059">59</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad9d81a21631f250d487d1f9e6956f3df"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Database::SelectQuery </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>projectID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Select last project Id of project name </p>
 
 </div>
 </div>
@@ -280,7 +530,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 7 2013 20:39:25 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 12 2013 17:47:32 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

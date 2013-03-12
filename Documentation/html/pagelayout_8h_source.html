@@ -126,30 +126,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        ifstream inFile;                        <span class="comment">/* For Reading file */</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        ofstream outFile;                       <span class="comment">/* For writing file */</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">public</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">        /** Constructor */</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="classPageLayout.html#ab3f470f006f9820610d9aaebe5b8427b">PageLayout</a>();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">        /** Header Section of Page */</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageLayout.html#a7726061f0653245f644a05807fa92472">Header</a>();                  </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">        /** Footer Section of Page */</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageLayout.html#a68aa868a8868b12964f161838b5f814c">Footer</a>();                  </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">        /** List/Menu Navigation() */</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageLayout.html#a49af1dca286bbee9432192a7b3c00332">Menu</a>();                    </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">        /** Logo on Page */</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageLayout.html#ae60235c6af48e3ebbc6343d02456da0c">Logo</a>(<span class="keywordtype">string</span> logoName);    </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">        /** Head Section of Page */</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageLayout.html#ae50907d56f0ba7a85f7ccfdeafa45bcc">Head</a>(<span class="keywordtype">string</span> titleName);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="classPageLayout.html#ab796c4a12a3f9c089881085e508e2a1c">   40</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classPageLayout.html#ab796c4a12a3f9c089881085e508e2a1c">sessionID</a>;                       <span class="comment">/**&lt; Session ID */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">public</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">        /** Constructor */</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="classPageLayout.html#ab3f470f006f9820610d9aaebe5b8427b">PageLayout</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">        /** Header Section of Page */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageLayout.html#a7726061f0653245f644a05807fa92472">Header</a>();                  </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">        /** Footer Section of Page */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageLayout.html#a68aa868a8868b12964f161838b5f814c">Footer</a>();                  </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">        /** List/Menu Navigation() */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageLayout.html#a49af1dca286bbee9432192a7b3c00332">Menu</a>();                    </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">        /** Logo on Page */</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageLayout.html#ae60235c6af48e3ebbc6343d02456da0c">Logo</a>(<span class="keywordtype">string</span> logoName);    </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">        /** Head Section of Page */</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageLayout.html#ae50907d56f0ba7a85f7ccfdeafa45bcc">Head</a>(<span class="keywordtype">string</span> titleName);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">        /** For Cookies after login */</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageLayout.html#a449b4dde24cf3dc10299dc3c7bfc0e9c">SetCookies</a>(<span class="keywordtype">string</span> emailID, <span class="keywordtype">string</span> <a class="code" href="classPageLayout.html#ab796c4a12a3f9c089881085e508e2a1c">sessionID</a>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">        /** Unset cookies  */</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageLayout.html#a279763d617259e21afbf7bc8d65a3c57">UnSetCookies</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">        /** Context-Type header  */</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageLayout.html#a9884173383d3e9b91e5b4ba6a619caa9">ContextType</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">        /** Logout link  */</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageLayout.html#a060621cba0434c5d60dff14b2ee1584b">LogOutLink</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 7 2013 20:39:23 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 12 2013 17:47:31 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

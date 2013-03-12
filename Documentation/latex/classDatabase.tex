@@ -12,6 +12,22 @@
 \item 
 void \hyperlink{classDatabase_aec3d0f84e49a58a59f254c90193c1303}{Select\-Query} (string column, string table, vector$<$ string $>$ \&result)
 \item 
+void \hyperlink{classDatabase_a6fb9e249cb97830af86c00804bb209a2}{Select\-Column} (string query, vector$<$ string $>$ \&result)
+\item 
+void \hyperlink{classDatabase_a20f7ccadac8f3b67d4344f7da4594eda}{Select\-Project\-I\-D} (string \&project\-I\-D)
+\item 
+void \hyperlink{classDatabase_a62ef4b0467047a68718dcc41a1851684}{Insert\-Into\-User} (string user\-Email\-I\-D, string user\-Password)
+\item 
+void \hyperlink{classDatabase_a63d8c1af7507b1dcdc81a411f9a0b4b4}{Insert\-Query} (string query)
+\item 
+void \hyperlink{classDatabase_a513326ea43b2455177731fbc92c4bf4f}{Insert\-Query} (string column, string value, string table)
+\item 
+void \hyperlink{classDatabase_a8d7a5fe5f7b24d41ed165bc2fa565337}{Insert\-Into\-Session} (string email\-I\-D, string session\-I\-D)
+\item 
+void \hyperlink{classDatabase_a1f9b19ec52568cd279e3a4408771b5bb}{Insert\-Into\-Project\-Name} (string email\-I\-D, string project\-Name, string project\-I\-D)
+\item 
+void \hyperlink{classDatabase_ad9d81a21631f250d487d1f9e6956f3df}{Select\-Query} (string project\-I\-D)
+\item 
 \hyperlink{classDatabase_a84d399a2ad58d69daab9b05330e1316d}{$\sim$\-Database} ()
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
@@ -78,11 +94,131 @@ Definition at line 33 of file database.\-cc.
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classDatabase}{Database} Method\-: \hyperlink{classDatabase}{Database} \-:\-: \hyperlink{classDatabase_a84d399a2ad58d69daab9b05330e1316d}{$\sim$\-Database()} Description\-: Destructor for closing database connectivity -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 91 of file database.\-cc.
+Definition at line 216 of file database.\-cc.
 
 
 
 \subsection{Member Function Documentation}
+\hypertarget{classDatabase_a1f9b19ec52568cd279e3a4408771b5bb}{\index{Database@{Database}!Insert\-Into\-Project\-Name@{Insert\-Into\-Project\-Name}}
+\index{Insert\-Into\-Project\-Name@{Insert\-Into\-Project\-Name}!Database@{Database}}
+\subsubsection[{Insert\-Into\-Project\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Insert\-Into\-Project\-Name (
+\begin{DoxyParamCaption}
+\item[{string}]{email\-I\-D, }
+\item[{string}]{project\-Name, }
+\item[{string}]{project\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a1f9b19ec52568cd279e3a4408771b5bb}
+Insert Project detail into Project\-Name table
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classDatabase}{Database} \par
+ Method\-: \hyperlink{classDatabase}{Database} \-:\-: \hyperlink{classDatabase_a1f9b19ec52568cd279e3a4408771b5bb}{Insert\-Into\-Project\-Name()} \par
+ Description\-: Insert project name into Project\-Name table \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 194 of file database.\-cc.
+
+\hypertarget{classDatabase_a8d7a5fe5f7b24d41ed165bc2fa565337}{\index{Database@{Database}!Insert\-Into\-Session@{Insert\-Into\-Session}}
+\index{Insert\-Into\-Session@{Insert\-Into\-Session}!Database@{Database}}
+\subsubsection[{Insert\-Into\-Session}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Insert\-Into\-Session (
+\begin{DoxyParamCaption}
+\item[{string}]{email\-I\-D, }
+\item[{string}]{session\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a8d7a5fe5f7b24d41ed165bc2fa565337}
+Insert into Session table
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classDatabase}{Database} \par
+ Method\-: \hyperlink{classDatabase}{Database} \-:\-: Insert\-Into\-Session(string email\-I\-D, string session\-I\-D) \par
+ Description\-: Inserting Session information in database \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 175 of file database.\-cc.
+
+\hypertarget{classDatabase_a62ef4b0467047a68718dcc41a1851684}{\index{Database@{Database}!Insert\-Into\-User@{Insert\-Into\-User}}
+\index{Insert\-Into\-User@{Insert\-Into\-User}!Database@{Database}}
+\subsubsection[{Insert\-Into\-User}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Insert\-Into\-User (
+\begin{DoxyParamCaption}
+\item[{string}]{user\-Email\-I\-D, }
+\item[{string}]{user\-Password}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a62ef4b0467047a68718dcc41a1851684}
+For inserting new user in database
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classDatabase}{Database} \par
+ Method\-: \hyperlink{classDatabase}{Database} \-:\-: Insert\-Into\-User(string user\-Email\-I\-D, string user\-Password) \par
+ Description\-: Inserting new user details into database \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 152 of file database.\-cc.
+
+\hypertarget{classDatabase_a63d8c1af7507b1dcdc81a411f9a0b4b4}{\index{Database@{Database}!Insert\-Query@{Insert\-Query}}
+\index{Insert\-Query@{Insert\-Query}!Database@{Database}}
+\subsubsection[{Insert\-Query}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Insert\-Query (
+\begin{DoxyParamCaption}
+\item[{string}]{query}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a63d8c1af7507b1dcdc81a411f9a0b4b4}
+Insert query with one argument
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classDatabase}{Database} \par
+ Method\-: \hyperlink{classDatabase}{Database} \-:\-: \hyperlink{classDatabase_a63d8c1af7507b1dcdc81a411f9a0b4b4}{Insert\-Query(string query)} \par
+ Description\-: Insrting value in database \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 112 of file database.\-cc.
+
+\hypertarget{classDatabase_a513326ea43b2455177731fbc92c4bf4f}{\index{Database@{Database}!Insert\-Query@{Insert\-Query}}
+\index{Insert\-Query@{Insert\-Query}!Database@{Database}}
+\subsubsection[{Insert\-Query}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Insert\-Query (
+\begin{DoxyParamCaption}
+\item[{string}]{column, }
+\item[{string}]{value, }
+\item[{string}]{table}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a513326ea43b2455177731fbc92c4bf4f}
+Insert Query for adding value in one column
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classDatabase}{Database} \par
+ Method\-: \hyperlink{classDatabase}{Database} \-:\-: Insert\-Query(string column, string value, string table) \par
+ Description\-: For inserting values in database \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 129 of file database.\-cc.
+
+\hypertarget{classDatabase_a6fb9e249cb97830af86c00804bb209a2}{\index{Database@{Database}!Select\-Column@{Select\-Column}}
+\index{Select\-Column@{Select\-Column}!Database@{Database}}
+\subsubsection[{Select\-Column}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Select\-Column (
+\begin{DoxyParamCaption}
+\item[{string}]{query, }
+\item[{vector$<$ string $>$ \&}]{result}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a6fb9e249cb97830af86c00804bb209a2}
+Seclect Column
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classDatabase}{Database} \par
+ Method\-: \hyperlink{classDatabase}{Database} \-:\-: Select\-Column \par
+ Description\-: Select column from table \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 88 of file database.\-cc.
+
+\hypertarget{classDatabase_a20f7ccadac8f3b67d4344f7da4594eda}{\index{Database@{Database}!Select\-Project\-I\-D@{Select\-Project\-I\-D}}
+\index{Select\-Project\-I\-D@{Select\-Project\-I\-D}!Database@{Database}}
+\subsubsection[{Select\-Project\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Select\-Project\-I\-D (
+\begin{DoxyParamCaption}
+\item[{string \&}]{project\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a20f7ccadac8f3b67d4344f7da4594eda}
+select project id from user 
+
+Definition at line 71 of file database.\-cc.
+
 \hypertarget{classDatabase_aec3d0f84e49a58a59f254c90193c1303}{\index{Database@{Database}!Select\-Query@{Select\-Query}}
 \index{Select\-Query@{Select\-Query}!Database@{Database}}
 \subsubsection[{Select\-Query}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Select\-Query (
@@ -102,7 +238,14 @@ For executing My\-S\-Q\-L query
 
 Definition at line 59 of file database.\-cc.
 
-
+\hypertarget{classDatabase_ad9d81a21631f250d487d1f9e6956f3df}{\index{Database@{Database}!Select\-Query@{Select\-Query}}
+\index{Select\-Query@{Select\-Query}!Database@{Database}}
+\subsubsection[{Select\-Query}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Select\-Query (
+\begin{DoxyParamCaption}
+\item[{string}]{project\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_ad9d81a21631f250d487d1f9e6956f3df}
+Select last project Id of project name 
 
 \subsection{Member Data Documentation}
 \hypertarget{classDatabase_aa232b806b05ef654cd5579bca5f1dbad}{\index{Database@{Database}!connect@{connect}}

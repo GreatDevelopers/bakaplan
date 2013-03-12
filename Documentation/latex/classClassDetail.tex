@@ -15,10 +15,14 @@ Inheritance diagram for Class\-Detail\-:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classClassDetail_a70975c4ff964e21958e31f2020cdc643}{Class\-Detail} ()
-\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
-void \hyperlink{classClassDetail_a7f2913b5735282db82ab3ff363b14ce4}{Total\-Classes} ()
-\begin{DoxyCompactList}\small\item\em Get total classes. \end{DoxyCompactList}\item 
-void \hyperlink{classClassDetail_a2a2e7942037c2d8e50ad0a60777435c0}{Class\-Info} ()
+\item 
+void \hyperlink{classClassDetail_a71de8308b8c43fed23a959fe39096ce4}{Project\-Detail} ()
+\item 
+void \hyperlink{classClassDetail_a68ba42aa7102ab0394366dd836c87790}{Total\-Classes\-Page} ()
+\item 
+void \hyperlink{classClassDetail_a509620b067879d20c329d1bb33d509d7}{Class\-Info\-Page} ()
+\item 
+\hyperlink{classClassDetail_a2aeaf33b0a277a897aad308cffde211a}{$\sim$\-Class\-Detail} ()
 \item 
 void \hyperlink{classInputDetail_ae55dcc0e15b85d302a09046b145330bb}{Header} (string title\-Name)
 \item 
@@ -33,6 +37,14 @@ void \hyperlink{classPageLayout_a49af1dca286bbee9432192a7b3c00332}{Menu} ()
 void \hyperlink{classPageLayout_ae60235c6af48e3ebbc6343d02456da0c}{Logo} (string logo\-Name)
 \item 
 void \hyperlink{classPageLayout_ae50907d56f0ba7a85f7ccfdeafa45bcc}{Head} (string title\-Name)
+\item 
+void \hyperlink{classPageLayout_a449b4dde24cf3dc10299dc3c7bfc0e9c}{Set\-Cookies} (string \hyperlink{classInputDetail_ad3f1db4fddbe0d4efbf1d5bc74d52257}{email\-I\-D}, string \hyperlink{classPageLayout_ab796c4a12a3f9c089881085e508e2a1c}{session\-I\-D})
+\item 
+void \hyperlink{classPageLayout_a279763d617259e21afbf7bc8d65a3c57}{Un\-Set\-Cookies} ()
+\item 
+void \hyperlink{classPageLayout_a9884173383d3e9b91e5b4ba6a619caa9}{Context\-Type} ()
+\item 
+void \hyperlink{classPageLayout_a060621cba0434c5d60dff14b2ee1584b}{Log\-Out\-Link} ()
 \item 
 void \hyperlink{classPageStructureMaker_aaf78d67380c400cc0057c6519276f721}{Set\-H\-T\-M\-L\-Variables} ()
 \item 
@@ -91,8 +103,7 @@ void \hyperlink{classPageStructureMaker_a419feca1cfdb50e1be757eb1c2707a73}{Butto
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classClassDetail_a4c3d277d14ead4f704afcbd754b1ebf0}{int {\bfseries total\-Classes}}\label{classClassDetail_a4c3d277d14ead4f704afcbd754b1ebf0}
-
+int \hyperlink{classClassDetail_a4c3d277d14ead4f704afcbd754b1ebf0}{total\-Classes}
 \item 
 \hypertarget{classClassDetail_adc76a1aeb9a8f117220a782852c7ecc4}{string {\bfseries class\-Name} \mbox{[}max\-Classes\mbox{]}}\label{classClassDetail_adc76a1aeb9a8f117220a782852c7ecc4}
 
@@ -129,14 +140,19 @@ void \hyperlink{classPageStructureMaker_a419feca1cfdb50e1be757eb1c2707a73}{Butto
 \hypertarget{classInputDetail_abacd5d7ee7ebd7e9f36bbf3fefd13a5d}{string {\bfseries temp}}\label{classInputDetail_abacd5d7ee7ebd7e9f36bbf3fefd13a5d}
 
 \item 
-\hypertarget{classPageLayout_a8a3c1ddc422df2556fbc95d0cd575a05}{string {\bfseries project\-Name}}\label{classPageLayout_a8a3c1ddc422df2556fbc95d0cd575a05}
-
+string \hyperlink{classInputDetail_a08069ee622c626c038b821ddcc7427b4}{project\-I\-D}
+\item 
+string \hyperlink{classInputDetail_ad3f1db4fddbe0d4efbf1d5bc74d52257}{email\-I\-D}
+\item 
+string \hyperlink{classInputDetail_aaaf51475a2a4ddbe34e38c96bdb45bad}{project\-Name}
 \item 
 \hypertarget{classPageLayout_a9abec89a54a6f0dac84114919d2ad117}{ifstream {\bfseries in\-File}}\label{classPageLayout_a9abec89a54a6f0dac84114919d2ad117}
 
 \item 
 \hypertarget{classPageLayout_ad52913274f786e82e1e09f5df4bf5347}{ofstream {\bfseries out\-File}}\label{classPageLayout_ad52913274f786e82e1e09f5df4bf5347}
 
+\item 
+string \hyperlink{classPageLayout_ab796c4a12a3f9c089881085e508e2a1c}{session\-I\-D}
 \item 
 string \hyperlink{classPageStructureMaker_af41d4e21b808f5f8dc2c727f775b6fb2}{start\-H1}
 \item 
@@ -193,13 +209,28 @@ Definition at line 42 of file classdetail.\-h.
 {}
 \end{DoxyParamCaption}
 )}}\label{classClassDetail_a70975c4ff964e21958e31f2020cdc643}
-
-
-Constructor. 
+Constructor
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Incude header file which has \hyperlink{classClassDetail}{Class\-Detail}'s declaration ------------------------------------------------------------------ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Defnition of member functions ------------------------------------------------------------------ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classClassDetail}{Class\-Detail} Method\-: \hyperlink{classClassDetail}{Class\-Detail} \-:\-: \hyperlink{classClassDetail_a70975c4ff964e21958e31f2020cdc643}{Class\-Detail()} Description\-: Constructor -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
 Definition at line 37 of file classdetail.\-cc.
+
+\hypertarget{classClassDetail_a2aeaf33b0a277a897aad308cffde211a}{\index{Class\-Detail@{Class\-Detail}!$\sim$\-Class\-Detail@{$\sim$\-Class\-Detail}}
+\index{$\sim$\-Class\-Detail@{$\sim$\-Class\-Detail}!ClassDetail@{Class\-Detail}}
+\subsubsection[{$\sim$\-Class\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}Class\-Detail\-::$\sim$\-Class\-Detail (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classClassDetail_a2aeaf33b0a277a897aad308cffde211a}
+Destructor
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classClassDetail}{Class\-Detail} \par
+ Method\-: \hyperlink{classClassDetail}{Class\-Detail} \-:\-: \hyperlink{classClassDetail_a2aeaf33b0a277a897aad308cffde211a}{$\sim$\-Class\-Detail()} \par
+ Description\-: Destructor \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 246 of file classdetail.\-cc.
 
 
 
@@ -264,18 +295,29 @@ Button
 
 Definition at line 436 of file pagestructure.\-cc.
 
-\hypertarget{classClassDetail_a2a2e7942037c2d8e50ad0a60777435c0}{\index{Class\-Detail@{Class\-Detail}!Class\-Info@{Class\-Info}}
-\index{Class\-Info@{Class\-Info}!ClassDetail@{Class\-Detail}}
-\subsubsection[{Class\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void Class\-Detail\-::\-Class\-Info (
+\hypertarget{classClassDetail_a509620b067879d20c329d1bb33d509d7}{\index{Class\-Detail@{Class\-Detail}!Class\-Info\-Page@{Class\-Info\-Page}}
+\index{Class\-Info\-Page@{Class\-Info\-Page}!ClassDetail@{Class\-Detail}}
+\subsubsection[{Class\-Info\-Page}]{\setlength{\rightskip}{0pt plus 5cm}void Class\-Detail\-::\-Class\-Info\-Page (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classClassDetail_a2a2e7942037c2d8e50ad0a60777435c0}
+)}}\label{classClassDetail_a509620b067879d20c329d1bb33d509d7}
 Get class details like class name, subject name and subject code
 
--\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classClassDetail}{Class\-Detail} Method\-: \hyperlink{classClassDetail}{Class\-Detail} \-:\-: \hyperlink{classClassDetail_a2a2e7942037c2d8e50ad0a60777435c0}{Class\-Info()} Description\-: Get class name, subject code and subject name from user. -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classClassDetail}{Class\-Detail} Method\-: \hyperlink{classClassDetail}{Class\-Detail} \-:\-: Class\-Info() Description\-: Get class name, subject code and subject name from user. -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 138 of file classdetail.\-cc.
+Definition at line 157 of file classdetail.\-cc.
+
+\hypertarget{classPageLayout_a9884173383d3e9b91e5b4ba6a619caa9}{\index{Class\-Detail@{Class\-Detail}!Context\-Type@{Context\-Type}}
+\index{Context\-Type@{Context\-Type}!ClassDetail@{Class\-Detail}}
+\subsubsection[{Context\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Context\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_a9884173383d3e9b91e5b4ba6a619caa9}
+Context-\/\-Type header 
+
+Definition at line 160 of file pagelayout.\-cc.
 
 \hypertarget{classPageStructureMaker_aacdb11817f8ab246bc59c552e04e862d}{\index{Class\-Detail@{Class\-Detail}!C\-S\-S@{C\-S\-S}}
 \index{C\-S\-S@{C\-S\-S}!ClassDetail@{Class\-Detail}}
@@ -371,7 +413,7 @@ Head Section of Page
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageLayout}{Page\-Layout} Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_ae50907d56f0ba7a85f7ccfdeafa45bcc}{Head(string title\-Name)} Description\-: Head Section of page, titla\-Name pass to Title function. -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 105 of file pagelayout.\-cc.
+Definition at line 106 of file pagelayout.\-cc.
 
 \hypertarget{classPageStructureMaker_ad64115d592b0989b422a93f85278186e}{\index{Class\-Detail@{Class\-Detail}!Head\-End@{Head\-End}}
 \index{Head\-End@{Head\-End}!ClassDetail@{Class\-Detail}}
@@ -397,7 +439,7 @@ Header Section of Page
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageLayout}{Page\-Layout} Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_a7726061f0653245f644a05807fa92472}{Header()} Description\-: Call Menu Function -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 88 of file pagelayout.\-cc.
+Definition at line 89 of file pagelayout.\-cc.
 
 \hypertarget{classInputDetail_ae55dcc0e15b85d302a09046b145330bb}{\index{Class\-Detail@{Class\-Detail}!Header@{Header}}
 \index{Header@{Header}!ClassDetail@{Class\-Detail}}
@@ -570,7 +612,24 @@ Logo on Page
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageLayout}{Page\-Layout} Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_ae60235c6af48e3ebbc6343d02456da0c}{Logo(string logo\-Name)} Description\-: Logo to project -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 73 of file pagelayout.\-cc.
+Definition at line 74 of file pagelayout.\-cc.
+
+\hypertarget{classPageLayout_a060621cba0434c5d60dff14b2ee1584b}{\index{Class\-Detail@{Class\-Detail}!Log\-Out\-Link@{Log\-Out\-Link}}
+\index{Log\-Out\-Link@{Log\-Out\-Link}!ClassDetail@{Class\-Detail}}
+\subsubsection[{Log\-Out\-Link}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Log\-Out\-Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_a060621cba0434c5d60dff14b2ee1584b}
+Logout link
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classPageLayout}{Page\-Layout} \par
+ Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_a060621cba0434c5d60dff14b2ee1584b}{Log\-Out\-Link()} \par
+ Description\-: logout link \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 173 of file pagelayout.\-cc.
 
 \hypertarget{classPageLayout_a49af1dca286bbee9432192a7b3c00332}{\index{Class\-Detail@{Class\-Detail}!Menu@{Menu}}
 \index{Menu@{Menu}!ClassDetail@{Class\-Detail}}
@@ -583,7 +642,24 @@ List/\-Menu Navigation()
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageLayout}{Page\-Layout} Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_a49af1dca286bbee9432192a7b3c00332}{Menu()} Description\-: Add Menu on pages(for navigation) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 50 of file pagelayout.\-cc.
+Definition at line 51 of file pagelayout.\-cc.
+
+\hypertarget{classClassDetail_a71de8308b8c43fed23a959fe39096ce4}{\index{Class\-Detail@{Class\-Detail}!Project\-Detail@{Project\-Detail}}
+\index{Project\-Detail@{Project\-Detail}!ClassDetail@{Class\-Detail}}
+\subsubsection[{Project\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}void Class\-Detail\-::\-Project\-Detail (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classClassDetail_a71de8308b8c43fed23a959fe39096ce4}
+Read Project Detail and store them into database
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classClassDetail}{Class\-Detail} \par
+ Method\-: \hyperlink{classClassDetail}{Class\-Detail} \-:\-: \hyperlink{classClassDetail_a71de8308b8c43fed23a959fe39096ce4}{Project\-Detail()} \-:\-: \hyperlink{classClassDetail_a71de8308b8c43fed23a959fe39096ce4}{Project\-Detail()} \par
+ Description\-: Reading project detail and store it into database \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 91 of file classdetail.\-cc.
 
 \hypertarget{classPageStructureMaker_a81eb3cdbc840a4c8165cef87330ade09}{\index{Class\-Detail@{Class\-Detail}!Select\-Field\-End@{Select\-Field\-End}}
 \index{Select\-Field\-End@{Select\-Field\-End}!ClassDetail@{Class\-Detail}}
@@ -638,6 +714,24 @@ Select Option Start
 
 Definition at line 406 of file pagestructure.\-cc.
 
+\hypertarget{classPageLayout_a449b4dde24cf3dc10299dc3c7bfc0e9c}{\index{Class\-Detail@{Class\-Detail}!Set\-Cookies@{Set\-Cookies}}
+\index{Set\-Cookies@{Set\-Cookies}!ClassDetail@{Class\-Detail}}
+\subsubsection[{Set\-Cookies}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Set\-Cookies (
+\begin{DoxyParamCaption}
+\item[{string}]{user\-Email\-I\-D, }
+\item[{string}]{session\-I\-D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_a449b4dde24cf3dc10299dc3c7bfc0e9c}
+For Cookies after login
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classPageLayout}{Page\-Layout} \par
+ Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: Set\-Cookies(string session\-I\-D) \par
+ Description\-: Setting session I\-D in cookies \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 148 of file pagelayout.\-cc.
+
 \hypertarget{classPageStructureMaker_aaf78d67380c400cc0057c6519276f721}{\index{Class\-Detail@{Class\-Detail}!Set\-H\-T\-M\-L\-Variables@{Set\-H\-T\-M\-L\-Variables}}
 \index{Set\-H\-T\-M\-L\-Variables@{Set\-H\-T\-M\-L\-Variables}!ClassDetail@{Class\-Detail}}
 \subsubsection[{Set\-H\-T\-M\-L\-Variables}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Set\-H\-T\-M\-L\-Variables (
@@ -691,24 +785,40 @@ Display $<$\-T\-I\-T\-L\-E$>$ $<$/\-T\-I\-T\-L\-E$>$
 
 Definition at line 125 of file pagestructure.\-cc.
 
-\hypertarget{classClassDetail_a7f2913b5735282db82ab3ff363b14ce4}{\index{Class\-Detail@{Class\-Detail}!Total\-Classes@{Total\-Classes}}
-\index{Total\-Classes@{Total\-Classes}!ClassDetail@{Class\-Detail}}
-\subsubsection[{Total\-Classes}]{\setlength{\rightskip}{0pt plus 5cm}void Class\-Detail\-::\-Total\-Classes (
+\hypertarget{classClassDetail_a68ba42aa7102ab0394366dd836c87790}{\index{Class\-Detail@{Class\-Detail}!Total\-Classes\-Page@{Total\-Classes\-Page}}
+\index{Total\-Classes\-Page@{Total\-Classes\-Page}!ClassDetail@{Class\-Detail}}
+\subsubsection[{Total\-Classes\-Page}]{\setlength{\rightskip}{0pt plus 5cm}void Class\-Detail\-::\-Total\-Classes\-Page (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classClassDetail_a7f2913b5735282db82ab3ff363b14ce4}
+)}}\label{classClassDetail_a68ba42aa7102ab0394366dd836c87790}
+Get total classes
 
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classClassDetail}{Class\-Detail} Method\-: \hyperlink{classClassDetail}{Class\-Detail} \-:\-: Total\-Classes() Description\-: Get Total classes from user -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Get total classes. 
+Definition at line 107 of file classdetail.\-cc.
 
--\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classClassDetail}{Class\-Detail} Method\-: \hyperlink{classClassDetail}{Class\-Detail} \-:\-: \hyperlink{classClassDetail_a7f2913b5735282db82ab3ff363b14ce4}{Total\-Classes()} Description\-: Get Total classes from user -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+\hypertarget{classPageLayout_a279763d617259e21afbf7bc8d65a3c57}{\index{Class\-Detail@{Class\-Detail}!Un\-Set\-Cookies@{Un\-Set\-Cookies}}
+\index{Un\-Set\-Cookies@{Un\-Set\-Cookies}!ClassDetail@{Class\-Detail}}
+\subsubsection[{Un\-Set\-Cookies}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Un\-Set\-Cookies (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_a279763d617259e21afbf7bc8d65a3c57}
+Unset cookies 
 
-Definition at line 91 of file classdetail.\-cc.
+Definition at line 154 of file pagelayout.\-cc.
 
 
 
 \subsection{Member Data Documentation}
+\hypertarget{classInputDetail_ad3f1db4fddbe0d4efbf1d5bc74d52257}{\index{Class\-Detail@{Class\-Detail}!email\-I\-D@{email\-I\-D}}
+\index{email\-I\-D@{email\-I\-D}!ClassDetail@{Class\-Detail}}
+\subsubsection[{email\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::email\-I\-D\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classInputDetail_ad3f1db4fddbe0d4efbf1d5bc74d52257}
+Email id 
+
+Definition at line 55 of file inputdetail.\-h.
+
 \hypertarget{classInputDetail_ac6f85380c5152c406d483726382c4798}{\index{Class\-Detail@{Class\-Detail}!field\-Name@{field\-Name}}
 \index{field\-Name@{field\-Name}!ClassDetail@{Class\-Detail}}
 \subsubsection[{field\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Input\-Field\-Name} Input\-Detail\-::field\-Name\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classInputDetail_ac6f85380c5152c406d483726382c4798}
@@ -716,12 +826,40 @@ Objects of \hyperlink{classInputFieldName}{Input\-Field\-Name} and Read\-Fields\
 
 Definition at line 46 of file inputdetail.\-h.
 
+\hypertarget{classInputDetail_a08069ee622c626c038b821ddcc7427b4}{\index{Class\-Detail@{Class\-Detail}!project\-I\-D@{project\-I\-D}}
+\index{project\-I\-D@{project\-I\-D}!ClassDetail@{Class\-Detail}}
+\subsubsection[{project\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::project\-I\-D\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classInputDetail_a08069ee622c626c038b821ddcc7427b4}
+Project I\-D 
+
+Definition at line 55 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_aaaf51475a2a4ddbe34e38c96bdb45bad}{\index{Class\-Detail@{Class\-Detail}!project\-Name@{project\-Name}}
+\index{project\-Name@{project\-Name}!ClassDetail@{Class\-Detail}}
+\subsubsection[{project\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::project\-Name\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classInputDetail_aaaf51475a2a4ddbe34e38c96bdb45bad}
+Project Name 
+
+Definition at line 55 of file inputdetail.\-h.
+
+\hypertarget{classPageLayout_ab796c4a12a3f9c089881085e508e2a1c}{\index{Class\-Detail@{Class\-Detail}!session\-I\-D@{session\-I\-D}}
+\index{session\-I\-D@{session\-I\-D}!ClassDetail@{Class\-Detail}}
+\subsubsection[{session\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}string Page\-Layout\-::session\-I\-D\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classPageLayout_ab796c4a12a3f9c089881085e508e2a1c}
+Session I\-D 
+
+Definition at line 40 of file pagelayout.\-h.
+
 \hypertarget{classPageStructureMaker_af41d4e21b808f5f8dc2c727f775b6fb2}{\index{Class\-Detail@{Class\-Detail}!start\-H1@{start\-H1}}
 \index{start\-H1@{start\-H1}!ClassDetail@{Class\-Detail}}
 \subsubsection[{start\-H1}]{\setlength{\rightskip}{0pt plus 5cm}string Page\-Structure\-Maker\-::start\-H1\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classPageStructureMaker_af41d4e21b808f5f8dc2c727f775b6fb2}
 H\-T\-M\-L Tag Variables for td, th, bold, etc 
 
 Definition at line 37 of file pagestructure.\-h.
+
+\hypertarget{classClassDetail_a4c3d277d14ead4f704afcbd754b1ebf0}{\index{Class\-Detail@{Class\-Detail}!total\-Classes@{total\-Classes}}
+\index{total\-Classes@{total\-Classes}!ClassDetail@{Class\-Detail}}
+\subsubsection[{total\-Classes}]{\setlength{\rightskip}{0pt plus 5cm}int Class\-Detail\-::total\-Classes\hspace{0.3cm}{\ttfamily [protected]}}}\label{classClassDetail_a4c3d277d14ead4f704afcbd754b1ebf0}
+storing total classes 
+
+Definition at line 45 of file classdetail.\-h.
 
 
 
