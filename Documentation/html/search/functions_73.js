@@ -11,5 +11,5 @@ var searchData=
   ['setcookies',['SetCookies',['../classPageLayout.html#a449b4dde24cf3dc10299dc3c7bfc0e9c',1,'PageLayout']]],
   ['setfieldnames',['SetFieldNames',['../classInputFieldName.html#a5232eb098c6354207a97264cbc14a3fa',1,'InputFieldName']]],
   ['sethtmlvariables',['SetHTMLVariables',['../classPageStructureMaker.html#aaf78d67380c400cc0057c6519276f721',1,'PageStructureMaker']]],
-  ['stringtoint',['StringToInt',['../classReadInputField.html#a567466724dfe4f76bd599bde7c565f47',1,'ReadInputField']]]
+  ['stringtoint',['StringToInt',['../classInputDetail.html#aaf532dd61f0aee82b116fef2da8e821f',1,'InputDetail']]]
 ];

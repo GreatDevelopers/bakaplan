@@ -44,6 +44,8 @@ void \hyperlink{classInputDetail_acbc05b1bc6a371cf0a52222cc95e467d}{Footer} ()
 \item 
 string \hyperlink{classInputDetail_ad0a78d7c864bcccf7813a526d59573be}{Int\-To\-String} (int value)
 \item 
+int \hyperlink{classInputDetail_aaf532dd61f0aee82b116fef2da8e821f}{String\-To\-Int} (string value)
+\begin{DoxyCompactList}\small\item\em Convert String to Integer. \end{DoxyCompactList}\item 
 void \hyperlink{classPageLayout_a49af1dca286bbee9432192a7b3c00332}{Menu} ()
 \item 
 void \hyperlink{classPageLayout_ae60235c6af48e3ebbc6343d02456da0c}{Logo} (string logo\-Name)
@@ -52,11 +54,9 @@ void \hyperlink{classPageLayout_ae50907d56f0ba7a85f7ccfdeafa45bcc}{Head} (string
 \item 
 void \hyperlink{classPageLayout_a449b4dde24cf3dc10299dc3c7bfc0e9c}{Set\-Cookies} (string \hyperlink{classLogin_a3470a140651dd1afafe29f4dde99905d}{email\-I\-D}, string \hyperlink{classPageLayout_ab796c4a12a3f9c089881085e508e2a1c}{session\-I\-D})
 \item 
-void \hyperlink{classPageLayout_a279763d617259e21afbf7bc8d65a3c57}{Un\-Set\-Cookies} ()
-\item 
 void \hyperlink{classPageLayout_a9884173383d3e9b91e5b4ba6a619caa9}{Context\-Type} ()
 \item 
-void \hyperlink{classPageLayout_a060621cba0434c5d60dff14b2ee1584b}{Log\-Out\-Link} ()
+void \hyperlink{classPageLayout_abe2cfa43480c1b48125b3d618cab7831}{Logout\-Link} ()
 \item 
 void \hyperlink{classPageStructureMaker_aaf78d67380c400cc0057c6519276f721}{Set\-H\-T\-M\-L\-Variables} ()
 \item 
@@ -246,7 +246,7 @@ Destructor
  Description\-: Destuctor \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 145 of file projectdetail.\-cc.
+Definition at line 147 of file projectdetail.\-cc.
 
 
 
@@ -377,9 +377,15 @@ Definition at line 436 of file pagestructure.\-cc.
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_a9884173383d3e9b91e5b4ba6a619caa9}
-Context-\/\-Type header 
+Context-\/\-Type header
 
-Definition at line 160 of file pagelayout.\-cc.
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classPageLayout}{Page\-Layout} \par
+ Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: Context\-Type \par
+ Description\-: Setting content-\/type header \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 162 of file pagelayout.\-cc.
 
 \hypertarget{classPageStructureMaker_aacdb11817f8ab246bc59c552e04e862d}{\index{Project\-Detail@{Project\-Detail}!C\-S\-S@{C\-S\-S}}
 \index{C\-S\-S@{C\-S\-S}!ProjectDetail@{Project\-Detail}}
@@ -695,22 +701,22 @@ Logo on Page
 
 Definition at line 74 of file pagelayout.\-cc.
 
-\hypertarget{classPageLayout_a060621cba0434c5d60dff14b2ee1584b}{\index{Project\-Detail@{Project\-Detail}!Log\-Out\-Link@{Log\-Out\-Link}}
-\index{Log\-Out\-Link@{Log\-Out\-Link}!ProjectDetail@{Project\-Detail}}
-\subsubsection[{Log\-Out\-Link}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Log\-Out\-Link (
+\hypertarget{classPageLayout_abe2cfa43480c1b48125b3d618cab7831}{\index{Project\-Detail@{Project\-Detail}!Logout\-Link@{Logout\-Link}}
+\index{Logout\-Link@{Logout\-Link}!ProjectDetail@{Project\-Detail}}
+\subsubsection[{Logout\-Link}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Logout\-Link (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_a060621cba0434c5d60dff14b2ee1584b}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_abe2cfa43480c1b48125b3d618cab7831}
 Logout link
 
 --------------------------------------------------------------------\par
  Class\-: \hyperlink{classPageLayout}{Page\-Layout} \par
- Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: \hyperlink{classPageLayout_a060621cba0434c5d60dff14b2ee1584b}{Log\-Out\-Link()} \par
+ Method\-: \hyperlink{classPageLayout}{Page\-Layout} \-:\-: Log\-Out\-Link() \par
  Description\-: logout link \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 173 of file pagelayout.\-cc.
+Definition at line 175 of file pagelayout.\-cc.
 
 \hypertarget{classLogin_a153d72df8d3333317e60219e8f6b8257}{\index{Project\-Detail@{Project\-Detail}!Logout\-Page@{Logout\-Page}}
 \index{Logout\-Page@{Logout\-Page}!ProjectDetail@{Project\-Detail}}
@@ -757,7 +763,7 @@ Display Page for project details
  Description\-: Diplaying page for project details \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 107 of file projectdetail.\-cc.
+Definition at line 109 of file projectdetail.\-cc.
 
 \hypertarget{classLogin_ab5bc65de431f277f15a3b423ad915808}{\index{Project\-Detail@{Project\-Detail}!Read\-Login\-Detail@{Read\-Login\-Detail}}
 \index{Read\-Login\-Detail@{Read\-Login\-Detail}!ProjectDetail@{Project\-Detail}}
@@ -896,6 +902,21 @@ Assingn Values to variables
 
 Definition at line 48 of file pagestructure.\-cc.
 
+\hypertarget{classInputDetail_aaf532dd61f0aee82b116fef2da8e821f}{\index{Project\-Detail@{Project\-Detail}!String\-To\-Int@{String\-To\-Int}}
+\index{String\-To\-Int@{String\-To\-Int}!ProjectDetail@{Project\-Detail}}
+\subsubsection[{String\-To\-Int}]{\setlength{\rightskip}{0pt plus 5cm}int Input\-Detail\-::\-String\-To\-Int (
+\begin{DoxyParamCaption}
+\item[{string}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classInputDetail_aaf532dd61f0aee82b116fef2da8e821f}
+
+
+Convert String to Integer. 
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classReadInputField}{Read\-Input\-Field} Method\-: \hyperlink{classReadInputField}{Read\-Input\-Field} \-:\-: \hyperlink{classInputDetail_aaf532dd61f0aee82b116fef2da8e821f}{String\-To\-Int(string value)} Description\-: Converts string value to integer -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 97 of file inputdetail.\-cc.
+
 \hypertarget{classPageStructureMaker_a7f8fefbe7a825c1b7761fc8a0f1bb8e4}{\index{Project\-Detail@{Project\-Detail}!Table\-End@{Table\-End}}
 \index{Table\-End@{Table\-End}!ProjectDetail@{Project\-Detail}}
 \subsubsection[{Table\-End}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Structure\-Maker\-::\-Table\-End (
@@ -935,17 +956,6 @@ Display $<$\-T\-I\-T\-L\-E$>$ $<$/\-T\-I\-T\-L\-E$>$
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} Method\-: \hyperlink{classPageStructureMaker}{Page\-Structure\-Maker} \-:\-: \hyperlink{classPageStructureMaker_a81e902ddc0c0287df1ba0f614a3774d6}{Title(string page\-Title)} Description\-: Display Page Tile -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
 Definition at line 125 of file pagestructure.\-cc.
-
-\hypertarget{classPageLayout_a279763d617259e21afbf7bc8d65a3c57}{\index{Project\-Detail@{Project\-Detail}!Un\-Set\-Cookies@{Un\-Set\-Cookies}}
-\index{Un\-Set\-Cookies@{Un\-Set\-Cookies}!ProjectDetail@{Project\-Detail}}
-\subsubsection[{Un\-Set\-Cookies}]{\setlength{\rightskip}{0pt plus 5cm}void Page\-Layout\-::\-Un\-Set\-Cookies (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classPageLayout_a279763d617259e21afbf7bc8d65a3c57}
-Unset cookies 
-
-Definition at line 154 of file pagelayout.\-cc.
 
 
 
