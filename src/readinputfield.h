@@ -36,27 +36,29 @@
 class ReadInputField
 {
     protected:
-        /// For storing value of field
+        // For storing value of field
         string fieldValue;
 
-        /// Variables used in reading input fields
-        Cgicc formData;                         /* Read Form Data */
-        form_iterator fi;                       /* Form Iterator */
+        // Variables used in reading input fields
+        Cgicc formData;                         /**< Read Form Data */
+        form_iterator fi;                       /**< Form Iterator */
+
+        //Cgicc cgi; 
+        //const_cookie_iterator cci;
 
     public:
-        /// Constructor
+        /** Constructor */
         ReadInputField(){}
 
-        /// Public Member Functions
+        /* Public Member Functions */
         
-        /// Read Field's Value with one argument fieldName
+        /** Read Field's Value with one argument fieldName */
         string ReadFieldValue(string fieldName);
 
-        /// Read Field's value with two arguments fieldName and field
-        /// no.)
+        /** Read Field's value with two arguments fieldName and field
+         no.) */
         string ReadFieldValue(string fieldName, int fieldNo);
 
-        /// Convert String to Integer
-        int StringToInt(string value);
-
+        /** Read cookies */
+       // string ReadCookie(string cookieName);
 };

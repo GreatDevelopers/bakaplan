@@ -151,11 +151,13 @@ void PageLayout :: SetCookies(string userEmailID, string sessionID)
     cout << "Set-Cookie:SessionID=" << sessionID << ";\r\n";
 }
 
-void PageLayout :: UnSetCookies()
-{
-    cout << "Set-Cookie:EmailID=\"\";\r\n";
-    cout << "Set-Cookie:SessionID=\"\";\r\n";
-}
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  PageLayout \n
+ *      Method:  PageLayout :: ContextType \n
+ * Description:  Setting content-type header \n
+ *--------------------------------------------------------------------
+ */
 
 void PageLayout :: ContextType()
 {
@@ -170,7 +172,7 @@ void PageLayout :: ContextType()
  *--------------------------------------------------------------------
  */
 
-void PageLayout :: LogOutLink()
+void PageLayout :: LogoutLink()
 {
     cout << brk;
     Anchor("logout.html", "Logout");

@@ -78,7 +78,9 @@ void ProjectDetail :: AuthorizeUser()
         
             sessionID += md5(currentDate);
             //SetCookies(userEmailID, sessionID);
-            database.InsertIntoSession(userEmailID, sessionID);
+            //database.InsertIntoSession(userEmailID, sessionID);
+            
+            SetCookies(userEmailID, sessionID);
 
             ProjectDetailPage();
         }
@@ -106,13 +108,13 @@ void ProjectDetail :: AuthorizeUser()
 
 void ProjectDetail :: ProjectDetailPage()
 {
-//    SetCookies(userEmailID, sessionID);
     ContextType();
+
     Header("Project Detail");
 
     DivStart("projectdetail", "");
 
-    LogOutLink();
+    LogoutLink();
 
     cout << brk;
 

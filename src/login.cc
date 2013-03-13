@@ -223,7 +223,7 @@ void Login :: AddNewUser()
 
 void Login :: LogoutPage()
 {
-    UnSetCookies();
+    SetCookies("", "");
     LoginPage();
 }
 

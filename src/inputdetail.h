@@ -65,4 +65,7 @@ class InputDetail : public PageLayout
         void Header(string titleName);
         void Footer();
         string IntToString(int value);
+        
+        /// Convert String to Integer
+        int StringToInt(string value);
 };

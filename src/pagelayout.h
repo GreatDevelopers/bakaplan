@@ -61,12 +61,9 @@ class PageLayout : public PageStructureMaker
         /** For Cookies after login */
         void SetCookies(string emailID, string sessionID);
 
-        /** Unset cookies  */
-        void UnSetCookies();
-        
         /** Context-Type header  */
         void ContextType();
 
         /** Logout link  */
-        void LogOutLink();
+        void LogoutLink();
 };

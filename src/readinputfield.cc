@@ -67,14 +67,27 @@ string ReadInputField :: ReadFieldValue(string fieldName, int fieldNo)
 }
 
 /**
- *--------------------------------------------------------------------
- *       Class:  ReadInputField
- *      Method:  ReadInputField :: StringToInt(string value)
- * Description:  Converts string value to integer
+ *--------------------------------------------------------------------\n
+ *       Class:  ReadInputField \n
+ *      Method:  ReadInputField :: ReadCookie(string cookieName) \n
+ * Description:  Read cookies - email id and session id \n
  *--------------------------------------------------------------------
  */
-
-int ReadInputField :: StringToInt(string value)
+/* 
+string ReadInputField :: ReadCookie(string cookieName)
 {
-    return atoi(value.c_str());
-}
+    // get environment variables                                       
+    const CgiEnvironment& env = cgi.getEnvironment();                  
+                                                                           
+    for( cci = env.getCookieList().begin();                            
+         cci != env.getCookieList().end();                             
+         ++cci )                                                       
+    {                                                                  
+        if(cci->getName() == cookieName)
+        {                     
+            fieldValue =  cci->getValue();
+        }                                                              
+    }
+    return fieldValue;
+        
+}*/

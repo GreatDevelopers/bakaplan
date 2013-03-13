@@ -85,3 +85,16 @@ string InputDetail :: IntToString(int value)
      ss << value;
      return ss.str();
 }
+
+/**
+ *--------------------------------------------------------------------
+ *       Class:  ReadInputField
+ *      Method:  ReadInputField :: StringToInt(string value)
+ * Description:  Converts string value to integer
+ *--------------------------------------------------------------------
+ */
+
+int InputDetail :: StringToInt(string value)
+{
+    return atoi(value.c_str());
+}

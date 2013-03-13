@@ -9,3 +9,4 @@
 src/*.o
 src/*.js
 src/*.html
+src/getcookie
