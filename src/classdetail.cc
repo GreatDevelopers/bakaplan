@@ -93,9 +93,8 @@ void ClassDetail :: ProjectDetail()
     projectName = readField.ReadFieldValue(fieldName.projectName);
     emailID     = readField.ReadFieldValue(fieldName.emailID);
 
-    database.InsertIntoProjectName(emailID, projectName, projectID);
-
-    
+    database.InsertProjectName(emailID, projectName);
+    database.SelectProjectID(projectID);
 }
 
 /**
@@ -111,7 +110,8 @@ void ClassDetail :: TotalClassesPage()
 
     ProjectDetail();
     ContextType();
-
+    
+    //cout << "project ID" << projectID << endl;
     Header("Total Classes");
     
     DivStart("totalclasses", "");               /* (id, classname) */
@@ -123,6 +123,8 @@ void ClassDetail :: TotalClassesPage()
     //cout << readField.ReadCookie("SessionID");
 
     FormStart("totalclasses", "classinfo.html", "POST");
+    
+    InputField("hidden", fieldName.projectID, projectID);
 
     cout << startH1 << " Select Total Classes " << endH1 << brk;
     
@@ -177,8 +179,8 @@ void ClassDetail :: ClassInfoPage()
 
     FormStart("classinfo", "rollnodetails.html", "POST");
 
-    InputField("hidden", fieldName.totalClasses, 0, 
-                IntToString(totalClasses));
+    InputField("hidden", fieldName.totalClasses,
+               IntToString(totalClasses));
 
     cout << startH1 << "Enter Class Details" << endH1 << brk;
     TableStart("classdetails", "");

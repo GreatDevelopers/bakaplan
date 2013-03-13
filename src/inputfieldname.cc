@@ -75,6 +75,7 @@ void InputFieldName :: SetFieldNames()
     /* Project Detail */
 
     projectName     =   "ProjectName";
+    projectID       =   "ProjectID";
 
     /* Room Detail Variables */
 

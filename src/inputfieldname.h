@@ -51,7 +51,8 @@ class InputFieldName
                                                    included in seating 
                                                    plan */
         // For project details
-                projectName;                      /**< Project Name */
+                projectName,                      /**< Project Name */
+                projectID;                          /**< Project ID */
 
         /* For login.html page */
         string emailID,                            /**< Email Field */

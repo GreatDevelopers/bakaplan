@@ -71,7 +71,7 @@ void Database :: SelectQuery(string column, string table,
 void Database :: SelectProjectID(string & projectID)
 {
     query  = "Select ProjectID from ProjectName ORDER BY ProjectID ";
-    query += "DESC LIMIT=1;";
+    query += "DESC LIMIT 1;";
     
     vector<string> ID;
     SelectColumn(query, ID);
@@ -149,8 +149,7 @@ void Database :: InsertQuery(string column, string value,
  *--------------------------------------------------------------------
  */
 
-void Database :: InsertIntoUser(string userEmailID, 
-                                string userPassword)
+void Database :: InsertUser(string userEmailID, string userPassword)
 {
     query  = "Insert into User(EmailID, Password) values ";
     query += "(\"";
@@ -172,7 +171,7 @@ void Database :: InsertIntoUser(string userEmailID,
  *--------------------------------------------------------------------
  */
 
-void Database :: InsertIntoSession(string emailID, string sessionID)
+void Database :: InsertSession(string emailID, string sessionID)
 {
     query  = "insert into Session(EmailID, SessionID) values (\"";
     query += emailID;
@@ -191,9 +190,7 @@ void Database :: InsertIntoSession(string emailID, string sessionID)
  *--------------------------------------------------------------------
  */
 
-void Database :: InsertIntoProjectName(string emailID, 
-                                       string projectName, 
-                                       string projectID)
+void Database :: InsertProjectName(string emailID, string projectName)
 {
     query  = "Insert into ProjectName(EmailID, ProjectName) values ";
     query += "(\"";
@@ -201,6 +198,82 @@ void Database :: InsertIntoProjectName(string emailID,
     query += "\", \"";
     query += projectName;
     query += "\");";
+
+    InsertQuery(query);
+}
+
+void Database :: InsertTotalClasses(string projectID, 
+                                    string totalClasses)
+{
+    query  = "Insert into TotalClasses(ProjectID, TotalClasses) ";
+    query += "values (";
+    query += projectID;
+    query += ", ";
+    query += totalClasses;
+    query += ")";
+
+    InsertQuery(query);
+}
+
+void Database :: InsertClassDetail(string projectID, string className,
+                                   string subjectName, 
+                                   string subjectCode)
+{
+    query  = "Insert into ClassDetails(ProjectID, ClassName, ";
+    query += "SubjectName, SubjectCode) values (";
+    query += projectID;
+    query += ", '";
+    query += className + "' ,'" + subjectName + "' ,'" + subjectCode;
+    query += "');";
+
+    InsertQuery(query);
+
+}
+
+void Database :: InsertTotalCentres(string projectID, 
+                                    string totalCentre)
+{
+    query  = "insert into TotalCentres(ProjectID, TotalCentres) ";
+    query += "values (";
+    query += projectID;
+    query += ", ";
+    query += totalCentre;
+    query += ");";
+
+    InsertQuery(query);
+}
+
+void Database :: InsertRoomDetail(string projectID, string centreName,
+                                  string roomNo, string rows,
+                                  string columns)
+{
+    query  = "insert into RoomDetail(ProjectID, CentreName, RoomNo,"; 
+    query += "Rows, Columns) values (";
+    query += projectID;
+    query += ", '";
+    query += centreName;
+    query += "', '";
+    query += roomNo;
+    query += ", ";
+    query += rows;
+    query += ", ";
+    query += columns;
+    query += ");";
+
+    InsertQuery(query);
+}
+
+void Database :: InsertTotalRooms(string projectID, string centreName,
+                                  string totalRooms)
+{
+    query  = "insert into TotalRooms(ProjectID, CentreName, ";
+    query += "TotalRooms) values(";
+    query += projectID;
+    query += ", '";
+    query += centreName;
+    query += "', ";
+    query += totalRooms;
+    query += ");";
 
     InsertQuery(query);
 }

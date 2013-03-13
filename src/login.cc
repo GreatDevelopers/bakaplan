@@ -207,7 +207,7 @@ void Login :: AddNewUser()
         else
         {
             userPassword = md5(userPassword);
-            database.InsertIntoUser( userEmailID, userPassword );
+            database.InsertUser( userEmailID, userPassword );
             LoginPage();
         }
     }
