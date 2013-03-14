@@ -144,24 +144,63 @@ void RollNoDetail :: RollNoDetailPage()
 {
     //ReadClassDetail();
     ContextType();
-    Header("Total Classes");
+    Header("Roll No Detail");
     
     DivStart("totalclasses", "");               /* (id, classname) */
     ReadClassDetail();
     LogoutLink();
     
-    
+    cout << brk;
 
-    for (i = 0; i < totalClasses; i++)
+    FormStart("rollno", "totalcentre.html", "POST");
+
+    InputField("hidden", fieldName.projectID, projectID);
+
+    cout << startH1 << " Roll No. Detail " << endH1 << brk;
+    
+    TableStart("rollno", "");
+    
+    cout << startTR;
+    for( i = 0; i < 6; i++)
     {
-        cout << "Class Name: " << className[i] << brk;
-         for (j = 0; j < totalSubjects[i]; j++)
+        cout << startTH << tableHeading[i] << endTH;
+    }
+    cout << endTR;
+
+    for(i = 0; i < totalClasses; i++)
+    {        
+        for(j = 0; j < totalSubjects[i]; j++)
         {
-            cout << "subejct Name : " << subjectName[i][j] << brk
-                 << "subject code : " << subjectCode[i][j] << brk;
+            cout << startTR;
+            cout << startTD << className[i] << endTD
+                 << startTD << subjectCode[i][j] << endTD;
+            
+            cout << startTD;
+            InputField("text", fieldName.prefix, (i+1), "");
+            cout << endTD;
+
+            cout << startTD;
+            InputField("text", fieldName.startRollNo, (i+1), "");
+            cout << endTD;
+            
+            cout << startTD;
+            InputField("text", fieldName.endRollNo, (i+1), "");
+            cout << endTD; 
+
+            cout << startTD;
+            InputField("text", fieldName.notIncluded, (i+1), "");
+            cout << endTD;
+            cout << endTR;
         }
     }
+    
+    TableEnd();
 
+    cout << brk << brk;
+
+    Button("next", "submit", "btn", "NEXT");
+
+    FormEnd();
     DivEnd();
 
     Footer();
