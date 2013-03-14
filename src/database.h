@@ -56,6 +56,10 @@ class Database
         void SelectQuery(string column, string table, 
                          vector<string> & result);
 
+        /** Select query with where clause */
+        void SelectQuery(string column, string table, string & result,
+                         string where);
+
         /** Seclect Column */
         void SelectColumn(string query, vector<string> & result);
 
@@ -83,6 +87,7 @@ class Database
 
         /** Insert into ClassDetail */
         void InsertClassDetail(string projectID, string className,
+                               string totalSubjects,
                                string subjectName, string subjectCode);
 
         /** Insert into totalcentres */

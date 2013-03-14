@@ -68,6 +68,30 @@ void Database :: SelectQuery(string column, string table,
     SelectColumn(query, result);
 }
 
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Database \n
+ *      Method:  Database :: SelectQuery(column, table, result, where) \n
+ * Description:  Select column value with where clause \n
+ *--------------------------------------------------------------------
+ */
+
+void Database :: SelectQuery(string column, string table, 
+                             string & result, string where)
+{
+    query  = "Select ";
+    query += column;
+    query += " from ";
+    query += table;
+    query += " where ";
+    query += where;
+    query += ";";
+    
+    vector<string> ID;
+    SelectColumn(query, ID);
+    result = ID[0];
+}
+
 void Database :: SelectProjectID(string & projectID)
 {
     query  = "Select ProjectID from ProjectName ORDER BY ProjectID ";
@@ -202,6 +226,14 @@ void Database :: InsertProjectName(string emailID, string projectName)
     InsertQuery(query);
 }
 
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Database \n
+ *      Method:  Database :: InsertTotalClasses(projectID, 
+ *                                              totalClasses) \n
+ * Description:  Inserting total classes into table with project ID \n
+ *--------------------------------------------------------------------
+ */
 void Database :: InsertTotalClasses(string projectID, 
                                     string totalClasses)
 {
@@ -215,20 +247,37 @@ void Database :: InsertTotalClasses(string projectID,
     InsertQuery(query);
 }
 
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Database \n
+ *      Method:  Database :: InsertClassDetail(projectID, className, 
+ *                                           subjectName, subjectCode) \n
+ * Description:  Inserting class detail into table \n
+ *--------------------------------------------------------------------
+ */
 void Database :: InsertClassDetail(string projectID, string className,
+                                   string totalSubjects, 
                                    string subjectName, 
                                    string subjectCode)
 {
     query  = "Insert into ClassDetails(ProjectID, ClassName, ";
     query += "SubjectName, SubjectCode) values (";
-    query += projectID;
-    query += ", '";
-    query += className + "' ,'" + subjectName + "' ,'" + subjectCode;
+    query += projectID + ", '";
+    query += className + "' ,'" + totalSubjects + "', '";
+    query += subjectName + "' ,'" + subjectCode;
     query += "');";
 
     InsertQuery(query);
 
 }
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Database \n
+ *      Method:  Database :: InserttotalCentres(projectID,totalcentre) \n
+ * Description:  Inserting into table total centrres \n
+ *--------------------------------------------------------------------
+ */
 
 void Database :: InsertTotalCentres(string projectID, 
                                     string totalCentre)
@@ -243,6 +292,14 @@ void Database :: InsertTotalCentres(string projectID,
     InsertQuery(query);
 }
 
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Database \n
+ *      Method:  Database :: InsertRoomDetail(projectID, centreName, 
+ *                                            roomNo, rows, columns) \n
+ * Description:  Inserting room detail into table \n
+ *--------------------------------------------------------------------
+ */
 void Database :: InsertRoomDetail(string projectID, string centreName,
                                   string roomNo, string rows,
                                   string columns)
@@ -263,6 +320,14 @@ void Database :: InsertRoomDetail(string projectID, string centreName,
     InsertQuery(query);
 }
 
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Database \n
+ *      Method:  Database :: InsertTotalRooms(projectID, centreName, 
+ *                                            totalrooms) \n
+ * Description:  Inserting into total rooms \n
+ *--------------------------------------------------------------------
+ */
 void Database :: InsertTotalRooms(string projectID, string centreName,
                                   string totalRooms)
 {
@@ -274,6 +339,53 @@ void Database :: InsertTotalRooms(string projectID, string centreName,
     query += "', ";
     query += totalRooms;
     query += ");";
+
+    InsertQuery(query);
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Database \n
+ *      Method:  Database :: InsertTotalRooms(projectID, examName, 
+ *                                            examDate, examTime, 
+ *                                            examVenue) \n
+ * Description:  store data into exam detail \n
+ *--------------------------------------------------------------------
+ */
+void Database :: InsertExamDetail(string projectID, string examName, 
+                                  string examDate, string examTime,
+                                  string examVenue)
+{
+    query  = "insert into ExamDetail(ProjectID, ExamName, ExamDate, ";
+    query += "ExamVenue) values (";
+    query += projectID;
+    query += ", '";
+    query += examName;
+    query += "', '";
+    query += examDate;
+    query += "', '";
+    query += examTime;
+    query += "', '";
+    query += examVenue;
+    query += "');";
+
+    InsertQuery(query);
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Database \n
+ *      Method:  Database :: InsertTotalRooms(projectID, strategy) \n
+ * Description:  Strategy value into table \n
+ *--------------------------------------------------------------------
+ */
+void Database :: InsertStrategy(string projectID, string strategy)
+{
+    query  = "insert into Strategy(ProjectID, Strategy) values(";
+    query += projectID;
+    query += ", '";
+    query += strategy;
+    query += "');";
 
     InsertQuery(query);
 }
