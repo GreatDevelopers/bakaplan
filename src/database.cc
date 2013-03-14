@@ -261,11 +261,11 @@ void Database :: InsertClassDetail(string projectID, string className,
                                    string subjectCode)
 {
     query  = "Insert into ClassDetails(ProjectID, ClassName, ";
-    query += "SubjectName, SubjectCode) values (";
-    query += projectID + ", '";
-    query += className + "' ,'" + totalSubjects + "', '";
-    query += subjectName + "' ,'" + subjectCode;
-    query += "');";
+    query += "TotalSubjects, SubjectName, SubjectCode) values (";
+    query += projectID + ", \"";
+    query += className + "\" ,\"" + totalSubjects + "\", \"";
+    query += subjectName + "\" ,\"" + subjectCode;
+    query += "\");";
 
     InsertQuery(query);
 
