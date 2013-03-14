@@ -10,16 +10,20 @@
 \item 
 \hyperlink{classRollNoDetail_a35022484630c725f33e0d9f70ee678d7}{Roll\-No\-Detail} ()
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
-\hyperlink{classRollNoDetail_a941f09a9307b97c7d3655e68815954c3}{Read\-Class\-Details} ()
+void \hyperlink{classRollNoDetail_a941f09a9307b97c7d3655e68815954c3}{Read\-Class\-Details} ()
 \begin{DoxyCompactList}\small\item\em Reading class details from previous page using cgicc. \end{DoxyCompactList}\item 
-\hypertarget{classRollNoDetail_adeb8b51063f8e325c36472b8ab98557a}{{\bfseries Write\-Class\-Details} ()}\label{classRollNoDetail_adeb8b51063f8e325c36472b8ab98557a}
+\hypertarget{classRollNoDetail_adeb8b51063f8e325c36472b8ab98557a}{void {\bfseries Write\-Class\-Details} ()}\label{classRollNoDetail_adeb8b51063f8e325c36472b8ab98557a}
 
+\item 
+void \hyperlink{classRollNoDetail_ad4be41f8530ff63875abf393ba418cf8}{Split\-Subject} ()
+\item 
+void \hyperlink{classRollNoDetail_a04a2acda591876589e1a4852aef8e9ef}{Roll\-No\-Detail\-Page} ()
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 string \hyperlink{classRollNoDetail_af6210eb33a46b384c832560c9f1ebf07}{prefix} \mbox{[}M\-I\-N\-\_\-\-S\-I\-Z\-E\mbox{]}
-\begin{DoxyCompactList}\small\item\em for storing values of class details \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em for storing values of roll detail \end{DoxyCompactList}\item 
 \hypertarget{classRollNoDetail_ad093a47700148161f6bb299699ed8ff1}{string {\bfseries start\-Roll\-No} \mbox{[}M\-I\-N\-\_\-\-S\-I\-Z\-E\mbox{]}}\label{classRollNoDetail_ad093a47700148161f6bb299699ed8ff1}
 
 \item 
@@ -29,7 +33,28 @@ string \hyperlink{classRollNoDetail_af6210eb33a46b384c832560c9f1ebf07}{prefix} \
 \hypertarget{classRollNoDetail_aad7c0a0f7d5e854737a5fecfb4b745ca}{string {\bfseries not\-Included} \mbox{[}M\-I\-N\-\_\-\-S\-I\-Z\-E\mbox{]}}\label{classRollNoDetail_aad7c0a0f7d5e854737a5fecfb4b745ca}
 
 \item 
+\hypertarget{classRollNoDetail_aae069ca2353fe637315bdeed03a79f41}{string {\bfseries table\-Heading} \mbox{[}M\-I\-N\-\_\-\-S\-I\-Z\-E\mbox{]}}\label{classRollNoDetail_aae069ca2353fe637315bdeed03a79f41}
+
+\item 
 \hypertarget{classRollNoDetail_ad904c7f4cf276df50d76651b5c4255c7}{int {\bfseries total\-Classes}}\label{classRollNoDetail_ad904c7f4cf276df50d76651b5c4255c7}
+
+\item 
+\hypertarget{classRollNoDetail_ad878491f4833cdc1a09619f8054cdc69}{int {\bfseries total\-Branches}}\label{classRollNoDetail_ad878491f4833cdc1a09619f8054cdc69}
+
+\item 
+\hypertarget{classRollNoDetail_a6576733c537190705ed7dd52a030bda0}{int {\bfseries total\-Subjects} \mbox{[}M\-I\-N\-S\-\_\-\-S\-I\-Z\-E\mbox{]}}\label{classRollNoDetail_a6576733c537190705ed7dd52a030bda0}
+
+\item 
+\hypertarget{classRollNoDetail_a22983fab33abb636b6c9ec2fad0a1681}{string {\bfseries class\-Name} \mbox{[}M\-I\-N\-\_\-\-S\-I\-Z\-E\mbox{]}}\label{classRollNoDetail_a22983fab33abb636b6c9ec2fad0a1681}
+
+\item 
+\hypertarget{classRollNoDetail_a77a5aadab4be659c429ea536de329d26}{string {\bfseries subject\-Name} \mbox{[}M\-I\-N\-\_\-\-S\-I\-Z\-E\mbox{]}\mbox{[}M\-I\-N\-\_\-\-S\-I\-Z\-E\mbox{]}}\label{classRollNoDetail_a77a5aadab4be659c429ea536de329d26}
+
+\item 
+\hypertarget{classRollNoDetail_a3f3c6831f5d9054b66830977dcf4144f}{string {\bfseries subject\-Code} \mbox{[}M\-I\-N\-\_\-\-S\-I\-Z\-E\mbox{]}\mbox{[}M\-I\-N\-\_\-\-S\-I\-Z\-E\mbox{]}}\label{classRollNoDetail_a3f3c6831f5d9054b66830977dcf4144f}
+
+\item 
+\hypertarget{classRollNoDetail_a24c0db5899b54eefee25a64766cf0c11}{string {\bfseries sub\-Code} \mbox{[}M\-I\-N\-\_\-\-S\-I\-Z\-E\mbox{]}}\label{classRollNoDetail_a24c0db5899b54eefee25a64766cf0c11}
 
 \end{DoxyCompactItemize}
 
@@ -75,7 +100,21 @@ Reading class details from previous page using cgicc.
 
 Definition at line 50 of file rollnodetail.\-cc.
 
-
+\hypertarget{classRollNoDetail_a04a2acda591876589e1a4852aef8e9ef}{\index{Roll\-No\-Detail@{Roll\-No\-Detail}!Roll\-No\-Detail\-Page@{Roll\-No\-Detail\-Page}}
+\index{Roll\-No\-Detail\-Page@{Roll\-No\-Detail\-Page}!RollNoDetail@{Roll\-No\-Detail}}
+\subsubsection[{Roll\-No\-Detail\-Page}]{\setlength{\rightskip}{0pt plus 5cm}void Roll\-No\-Detail\-::\-Roll\-No\-Detail\-Page (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classRollNoDetail_a04a2acda591876589e1a4852aef8e9ef}
+Roll\-No\-Detail\-Page for getting rollnos \hypertarget{classRollNoDetail_ad4be41f8530ff63875abf393ba418cf8}{\index{Roll\-No\-Detail@{Roll\-No\-Detail}!Split\-Subject@{Split\-Subject}}
+\index{Split\-Subject@{Split\-Subject}!RollNoDetail@{Roll\-No\-Detail}}
+\subsubsection[{Split\-Subject}]{\setlength{\rightskip}{0pt plus 5cm}void Roll\-No\-Detail\-::\-Split\-Subject (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classRollNoDetail_ad4be41f8530ff63875abf393ba418cf8}
+spliting subject name and subject codes 
 
 \subsection{Member Data Documentation}
 \hypertarget{classRollNoDetail_af6210eb33a46b384c832560c9f1ebf07}{\index{Roll\-No\-Detail@{Roll\-No\-Detail}!prefix@{prefix}}
@@ -83,7 +122,7 @@ Definition at line 50 of file rollnodetail.\-cc.
 \subsubsection[{prefix}]{\setlength{\rightskip}{0pt plus 5cm}string Roll\-No\-Detail\-::prefix\mbox{[}M\-I\-N\-\_\-\-S\-I\-Z\-E\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}}\label{classRollNoDetail_af6210eb33a46b384c832560c9f1ebf07}
 
 
-for storing values of class details 
+for storing values of roll detail 
 
 
 

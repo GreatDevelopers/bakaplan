@@ -145,39 +145,69 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#aec3d0f84e49a58a59f254c90193c1303">SelectQuery</a>(<span class="keywordtype">string</span> column, <span class="keywordtype">string</span> table, </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                         vector&lt;string&gt; &amp; result);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">        /** Seclect Column */</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#a6fb9e249cb97830af86c00804bb209a2">SelectColumn</a>(<span class="keywordtype">string</span> query, vector&lt;string&gt; &amp; result);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">        /** select project id from user  */</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#a20f7ccadac8f3b67d4344f7da4594eda">SelectProjectID</a>(<span class="keywordtype">string</span> &amp; projectID);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">        /** For inserting new user in database */</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#a62ef4b0467047a68718dcc41a1851684">InsertIntoUser</a>(<span class="keywordtype">string</span> userEmailID, <span class="keywordtype">string</span> userPassword);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">        /** Insert query with one argument */</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#a63d8c1af7507b1dcdc81a411f9a0b4b4">InsertQuery</a>(<span class="keywordtype">string</span> query);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">        /** Insert Query for adding value in one column */</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#a63d8c1af7507b1dcdc81a411f9a0b4b4">InsertQuery</a>(<span class="keywordtype">string</span> column, <span class="keywordtype">string</span> value, <span class="keywordtype">string</span> table);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">        /** Insert into Session table */</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#a8d7a5fe5f7b24d41ed165bc2fa565337">InsertIntoSession</a>(<span class="keywordtype">string</span> emailID, <span class="keywordtype">string</span> sessionID);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">        /** Insert Project detail into ProjectName table */</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#a1f9b19ec52568cd279e3a4408771b5bb">InsertIntoProjectName</a>(<span class="keywordtype">string</span> emailID, </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                                   <span class="keywordtype">string</span> projectName,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                                   <span class="keywordtype">string</span> projectID);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">        /** Select last project Id of project name */</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#aec3d0f84e49a58a59f254c90193c1303">SelectQuery</a>(<span class="keywordtype">string</span> projectID);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">        /** Database Destructor */</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="classDatabase.html#a84d399a2ad58d69daab9b05330e1316d">~Database</a>();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">        /** Select query with where clause */</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#aec3d0f84e49a58a59f254c90193c1303">SelectQuery</a>(<span class="keywordtype">string</span> column, <span class="keywordtype">string</span> table, <span class="keywordtype">string</span> &amp; result,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                         <span class="keywordtype">string</span> where);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">        /** Seclect Column */</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#a6fb9e249cb97830af86c00804bb209a2">SelectColumn</a>(<span class="keywordtype">string</span> query, vector&lt;string&gt; &amp; result);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">        /** select project id from ProjectName table  */</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#a20f7ccadac8f3b67d4344f7da4594eda">SelectProjectID</a>(<span class="keywordtype">string</span> &amp; projectID);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">        /** For inserting new user in database */</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#a7070d93bf44c5f90504944f54607b9b0">InsertUser</a>(<span class="keywordtype">string</span> userEmailID, <span class="keywordtype">string</span> userPassword);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">        /** Insert query with one argument */</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#a63d8c1af7507b1dcdc81a411f9a0b4b4">InsertQuery</a>(<span class="keywordtype">string</span> query);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">        /** Insert Query for adding value in one column */</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#a63d8c1af7507b1dcdc81a411f9a0b4b4">InsertQuery</a>(<span class="keywordtype">string</span> column, <span class="keywordtype">string</span> value, <span class="keywordtype">string</span> table);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">        /** Insert into Session table */</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#a478f862bd338a92b13c2899bb4e28843">InsertSession</a>(<span class="keywordtype">string</span> emailID, <span class="keywordtype">string</span> sessionID);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">        /** Insert Project detail into ProjectName table */</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#aae19d9dac16779519f94cc68e29cb57d">InsertProjectName</a>(<span class="keywordtype">string</span> emailID, <span class="keywordtype">string</span> projectName);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">        /** Insert Into TotalClasses */</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#ad6af2dc859cda41dcbdad9cd51f5c38b">InsertTotalClasses</a>(<span class="keywordtype">string</span> projectID, </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                <span class="keywordtype">string</span> totalClasses);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">        /** Insert into ClassDetail */</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#ad0052cd5a48f5ba3233395096ba6e422">InsertClassDetail</a>(<span class="keywordtype">string</span> projectID, <span class="keywordtype">string</span> className,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                               <span class="keywordtype">string</span> subjectName, <span class="keywordtype">string</span> subjectCode);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">        /** Insert into totalcentres */</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#a8e52c1b853b6f1d96cf7053f0268838d">InsertTotalCentres</a>(<span class="keywordtype">string</span> projectID, <span class="keywordtype">string</span> totalCentre);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">        /** Insert into roomDetail table */</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#a8b248d14e1cb2fc4ba2c9da313f385cb">InsertRoomDetail</a>(<span class="keywordtype">string</span> projectID, <span class="keywordtype">string</span> centreName,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                              <span class="keywordtype">string</span> roomNo, <span class="keywordtype">string</span> rows, </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                              <span class="keywordtype">string</span> columns);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">        /** Insert Into TotalRooms */</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#a6cd1b1181fb636aff93ba43f0fcd2764">InsertTotalRooms</a>(<span class="keywordtype">string</span> projectID, <span class="keywordtype">string</span> centreName, </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                              <span class="keywordtype">string</span> totalrooms);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">        /** Insert into exam detail */</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#a0a1ec932aafeef96637d5ee68ac7898b">InsertExamDetail</a>(<span class="keywordtype">string</span> projectID, <span class="keywordtype">string</span> examName, </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                              <span class="keywordtype">string</span> examDate, <span class="keywordtype">string</span> examTime,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                              <span class="keywordtype">string</span> examVenue);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">        /** Insert into strategy */</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDatabase.html#a6015ae56eb561f579e573be709ef434c">InsertStrategy</a>(<span class="keywordtype">string</span> projectID, <span class="keywordtype">string</span> strategy);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">        /** Select last project Id of project name */</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="comment">//void SelectQuery(string projectID);</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">        /** Database Destructor */</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <a class="code" href="classDatabase.html#a84d399a2ad58d69daab9b05330e1316d">~Database</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 13 2013 11:20:52 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 14 2013 10:33:30 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

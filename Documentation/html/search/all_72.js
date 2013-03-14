@@ -7,6 +7,7 @@ var searchData=
   ['registerpage',['RegisterPage',['../classLogin.html#a5c055a577da7141de9e7c65bce8d5786',1,'Login']]],
   ['retypepassword',['retypePassword',['../classInputFieldName.html#acd50095ae8540a735bcd5787b904b06c',1,'InputFieldName::retypePassword()'],['../classLogin.html#ade36f8943aafce470ef4b8353c79b2c6',1,'Login::retypePassword()']]],
   ['rollnodetail',['RollNoDetail',['../classRollNoDetail.html',1,'RollNoDetail'],['../classRollNoDetail.html#a35022484630c725f33e0d9f70ee678d7',1,'RollNoDetail::RollNoDetail()']]],
+  ['rollnodetailpage',['RollNoDetailPage',['../classRollNoDetail.html#a04a2acda591876589e1a4852aef8e9ef',1,'RollNoDetail']]],
   ['roomno',['roomNo',['../classInputFieldName.html#abb6b245e03e76aa29d7ef8733298e72f',1,'InputFieldName']]],
   ['rows',['rows',['../classInputFieldName.html#a1b5a819437f52b4bb6b0ea59f542f9a9',1,'InputFieldName']]]
 ];
