@@ -36,7 +36,12 @@
 
 RollNoDetail :: RollNoDetail()
 {
-
+    tableHeading[0] = "Class Name";
+    tableHeading[1] = "Subject Code";
+    tableHeading[2] = "Prefix";
+    tableHeading[3] = "Start Roll No";
+    tableHeading[4] = "End Roll No";
+    tableHeading[5] = "Not Included";
 }
 
 /**
@@ -57,37 +62,20 @@ void RollNoDetail :: ReadClassDetail()
     database.SelectQuery("TotalClasses", "TotalClasses", temp, where); 
     
     totalClasses = StringToInt(temp);
-      string fn = fieldName.className;
-    int f = 1;
-    fn += IntToString(f);
-    className[0] = readField.ReadFieldValue(fn);
-    className[2] = readField.ReadFieldValue(fieldName.className, 
-                                               (f + 1));
-    subName[0] = readField.ReadFieldValue("SubjectName1");
-    subCode[0] = readField.ReadFieldValue("SubjectCode1");
 
-   /* 
     for(i = 0; i < totalClasses; i++)
     {
-        temp  = fieldName.className;
-        temp += IntToString((i+1));
-
-        className[i] = readField.ReadFieldValue(temp);
-      
-        temp  = fieldName.subjectName;
-        temp += IntToString((i+1));  
+        j = i + 1;
         
-        subName[i] = readField.ReadFieldValue(temp);
+        className[i] = readField.ReadFieldValue(fieldName.className, 
+                                                j);
+
+        subName[i] = readField.ReadFieldValue(fieldName.subjectName, 
+                                              j);
       
-        temp  = fieldName.subjectCode;
-        temp += IntToString((i+1)); 
-
-        subCode[i] = readField.ReadFieldValue(temp);
-
-//        database.InsertClassDetail(projectID, className[i], 
-  //                                 subName[i], subCode[i]);
+        subCode[i] = readField.ReadFieldValue(fieldName.subjectCode, 
+                                              j);
     }
-    //className[0] = readField.ReadFieldValue("ClassName1");
     
     SplitSubject();
 
@@ -96,9 +84,7 @@ void RollNoDetail :: ReadClassDetail()
         database.InsertClassDetail(projectID, className[i], 
                                    IntToString(totalSubjects[i]), 
                                    subName[i], subCode[i]);
-    }*/
-
-    SplitSubject();
+    }
     
 }
 
@@ -112,18 +98,17 @@ void RollNoDetail :: ReadClassDetail()
 
 void RollNoDetail :: SplitSubject()
 {
-    totalClasses = 1;
+    //totalClasses = 1;
     for(i = 0; i < totalClasses; i++)
     {
         int size = subName[i].size() + 1;
-        char largchar[size]; // = roll[i].c_str();//"1-10 12 34 15 20 25-30";
+        char largchar[size];
         j = 0; 
         strcpy(largchar, subName[i].c_str());
         char* chars_array = strtok(largchar, ",");
         while(chars_array)
         {
-            //if(j < totalSubjects[i])
-                subjectName[i][j] =  chars_array;//atoi (chars_array));//n++;
+            subjectName[i][j] =  chars_array;
             chars_array = strtok(NULL, ",");
             j++;
             totalSubjects[i] = j;
@@ -133,14 +118,14 @@ void RollNoDetail :: SplitSubject()
     for(i = 0; i < totalClasses; i++)
     {
         int size = subCode[i].size() + 1;
-        char largchar[size]; // = roll[i].c_str();//"1-10 12 34 15 20 25-30";
+        char largchar[size];
         j = 0; 
         strcpy(largchar, subCode[i].c_str());
         char* chars_array = strtok(largchar, ",");
         while(chars_array)
         {
-            if(j < totalSubjects[i])
-                subjectCode[i][j] =  chars_array;//atoi (chars_array));//n++;
+            if(j <= totalSubjects[i])
+                subjectCode[i][j] =  chars_array;
             chars_array = strtok(NULL, ",");
             j++;
         }
@@ -164,14 +149,10 @@ void RollNoDetail :: RollNoDetailPage()
     DivStart("totalclasses", "");               /* (id, classname) */
     ReadClassDetail();
     LogoutLink();
+    
+    
 
-/*  
-    cout << brk << projectID << brk << className[0] 
-         << brk << totalClasses << brk
-         << className[2];*/
-totalClasses = 1;
-//totalSubjects[i] = 1;
-     for (i = 0; i < totalClasses; i++)
+    for (i = 0; i < totalClasses; i++)
     {
         cout << "Class Name: " << className[i] << brk;
          for (j = 0; j < totalSubjects[i]; j++)
