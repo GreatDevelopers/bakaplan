@@ -21,7 +21,7 @@
  *  Include required header files
  *------------------------------------------------------------------*/
 
-#include "details.h"
+#include "inputdetail.h"
 
 /**
  * ===================================================================
@@ -30,21 +30,40 @@
  * ===================================================================
  */
 
-class RollNoDetail : public Details
+class RollNoDetail : public InputDetail
 {
     protected:
-        /// for storing values of class details
+        /// for storing values of roll detail
         string prefix[MIN_SIZE],
                startRollNo[MIN_SIZE],
                endRollNo[MIN_SIZE],
-               notIncluded[MIN_SIZE];
+               notIncluded[MIN_SIZE],
+               tableHeading[MIN_SIZE];
         int totalClasses;
+
+        // For class detail
+        
+        int totalBranches, totalSubjects[MIN_SIZE];
+        
+        string className[MIN_SIZE],
+               subjectName[MIN_SIZE][MIN_SIZE],
+               subjectCode[MIN_SIZE][MIN_SIZE];
+        //  for splitSujects 
+        string subCode[MIN_SIZE],
+               subName[MIN_SIZE];
 
     public:
         /// Constructor
         RollNoDetail();
 
         /// Reading class details from previous page using cgicc
-        ReadClassDetails();
-        WriteClassDetails();
+        void ReadClassDetail();
+        void WriteClassDetail();
+
+        /** spliting subject name and subject codes */
+        void SplitSubject();
+        
+        /** RollNoDetailPage for getting rollnos */
+        void RollNoDetailPage();
+
 };
