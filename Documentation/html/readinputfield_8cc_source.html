@@ -149,7 +149,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00060"></a><span class="lineno"><a class="code" href="classReadInputField.html#accf7ceba77721a35968c69268e4e559e">   60</a></span>&#160;<span class="keywordtype">string</span> <a class="code" href="classReadInputField.html#a7f6e49b47412649644cc644927ccc682">ReadInputField :: ReadFieldValue</a>(<span class="keywordtype">string</span> fieldName, <span class="keywordtype">int</span> fieldNo)</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    std::stringstream no;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    no &lt;&lt; (fieldNo + 1);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    no &lt;&lt; fieldNo;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    fieldName = fieldName + no.str();</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    fieldValue = <a class="code" href="classReadInputField.html#a7f6e49b47412649644cc644927ccc682">ReadFieldValue</a>(fieldName);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> fieldValue;</div>
@@ -183,7 +183,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 14 2013 10:33:30 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 14 2013 23:57:16 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

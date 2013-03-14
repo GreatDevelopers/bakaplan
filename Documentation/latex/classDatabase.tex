@@ -30,7 +30,7 @@ void \hyperlink{classDatabase_aae19d9dac16779519f94cc68e29cb57d}{Insert\-Project
 \item 
 void \hyperlink{classDatabase_ad6af2dc859cda41dcbdad9cd51f5c38b}{Insert\-Total\-Classes} (string project\-I\-D, string total\-Classes)
 \item 
-void \hyperlink{classDatabase_ad0052cd5a48f5ba3233395096ba6e422}{Insert\-Class\-Detail} (string project\-I\-D, string class\-Name, string subject\-Name, string subject\-Code)
+void \hyperlink{classDatabase_a45deae7ea496fccefb9bccd75ea5578a}{Insert\-Class\-Detail} (string project\-I\-D, string class\-Name, string total\-Subjects, string subject\-Name, string subject\-Code)
 \item 
 void \hyperlink{classDatabase_a8e52c1b853b6f1d96cf7053f0268838d}{Insert\-Total\-Centres} (string project\-I\-D, string total\-Centre)
 \item 
@@ -108,21 +108,22 @@ Select last project Id of project name \hyperlink{classDatabase}{Database} Destr
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classDatabase}{Database} Method\-: \hyperlink{classDatabase}{Database} \-:\-: \hyperlink{classDatabase_a84d399a2ad58d69daab9b05330e1316d}{$\sim$\-Database()} Description\-: Destructor for closing database connectivity -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 400 of file database.\-cc.
+Definition at line 401 of file database.\-cc.
 
 
 
 \subsection{Member Function Documentation}
-\hypertarget{classDatabase_ad0052cd5a48f5ba3233395096ba6e422}{\index{Database@{Database}!Insert\-Class\-Detail@{Insert\-Class\-Detail}}
+\hypertarget{classDatabase_a45deae7ea496fccefb9bccd75ea5578a}{\index{Database@{Database}!Insert\-Class\-Detail@{Insert\-Class\-Detail}}
 \index{Insert\-Class\-Detail@{Insert\-Class\-Detail}!Database@{Database}}
 \subsubsection[{Insert\-Class\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Insert\-Class\-Detail (
 \begin{DoxyParamCaption}
 \item[{string}]{project\-I\-D, }
 \item[{string}]{class\-Name, }
+\item[{string}]{total\-Subjects, }
 \item[{string}]{subject\-Name, }
 \item[{string}]{subject\-Code}
 \end{DoxyParamCaption}
-)}}\label{classDatabase_ad0052cd5a48f5ba3233395096ba6e422}
+)}}\label{classDatabase_a45deae7ea496fccefb9bccd75ea5578a}
 Insert into \hyperlink{classClassDetail}{Class\-Detail}
 
 --------------------------------------------------------------------\par
@@ -152,7 +153,7 @@ Insert into exam detail
  Description\-: store data into exam detail \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 354 of file database.\-cc.
+Definition at line 355 of file database.\-cc.
 
 \hypertarget{classDatabase_aae19d9dac16779519f94cc68e29cb57d}{\index{Database@{Database}!Insert\-Project\-Name@{Insert\-Project\-Name}}
 \index{Insert\-Project\-Name@{Insert\-Project\-Name}!Database@{Database}}
@@ -227,7 +228,7 @@ Insert into room\-Detail table
  Description\-: Inserting room detail into table \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 302 of file database.\-cc.
+Definition at line 303 of file database.\-cc.
 
 \hypertarget{classDatabase_a478f862bd338a92b13c2899bb4e28843}{\index{Database@{Database}!Insert\-Session@{Insert\-Session}}
 \index{Insert\-Session@{Insert\-Session}!Database@{Database}}
@@ -263,7 +264,7 @@ Insert into strategy
  Description\-: Strategy value into table \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 381 of file database.\-cc.
+Definition at line 382 of file database.\-cc.
 
 \hypertarget{classDatabase_a8e52c1b853b6f1d96cf7053f0268838d}{\index{Database@{Database}!Insert\-Total\-Centres@{Insert\-Total\-Centres}}
 \index{Insert\-Total\-Centres@{Insert\-Total\-Centres}!Database@{Database}}
@@ -281,7 +282,7 @@ Insert into totalcentres
  Description\-: Inserting into table total centrres \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 281 of file database.\-cc.
+Definition at line 282 of file database.\-cc.
 
 \hypertarget{classDatabase_ad6af2dc859cda41dcbdad9cd51f5c38b}{\index{Database@{Database}!Insert\-Total\-Classes@{Insert\-Total\-Classes}}
 \index{Insert\-Total\-Classes@{Insert\-Total\-Classes}!Database@{Database}}
@@ -318,7 +319,7 @@ Insert Into Total\-Rooms
  Description\-: Inserting into total rooms \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 330 of file database.\-cc.
+Definition at line 331 of file database.\-cc.
 
 \hypertarget{classDatabase_a7070d93bf44c5f90504944f54607b9b0}{\index{Database@{Database}!Insert\-User@{Insert\-User}}
 \index{Insert\-User@{Insert\-User}!Database@{Database}}
