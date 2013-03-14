@@ -98,6 +98,23 @@ void ClassDetail :: ProjectDetail()
 }
 
 /**
+ *--------------------------------------------------------------------\n
+ *       Class:  ClassDetail \n
+ *      Method:  ClassDetail :: TotalClasses() \n
+ * Description:  Inserting totalClasses value ito database \n
+ *--------------------------------------------------------------------
+ */
+
+void ClassDetail :: TotalClasses()
+{
+    projectID = readField.ReadFieldValue(fieldName.projectID);
+    temp = readField.ReadFieldValue(fieldName.totalClasses); 
+    totalClasses = StringToInt(temp);
+    
+    database.InsertTotalClasses(projectID, IntToString(totalClasses));
+}
+
+/**
  *--------------------------------------------------------------------
  *       Class:  ClassDetail
  *      Method:  ClassDetail :: TotalClasses()
@@ -165,8 +182,10 @@ void ClassDetail :: TotalClassesPage()
 
 void ClassDetail :: ClassInfoPage()
 {
-    temp = readField.ReadFieldValue(fieldName.totalClasses); 
-    totalClasses = StringToInt(temp);
+    //temp = readField.ReadFieldValue(fieldName.totalClasses); 
+    //totalClasses = StringToInt(temp);
+
+    TotalClasses();
     
     ContextType();
     Header("Class Details");
@@ -177,10 +196,12 @@ void ClassDetail :: ClassInfoPage()
 
     cout << brk;
 
-    FormStart("classinfo", "rollnodetails.html", "POST");
+    FormStart("classinfo", "rollnodetail.html", "POST");
 
     InputField("hidden", fieldName.totalClasses,
-               IntToString(totalClasses));
+               IntToString(totalClasses)); 
+    InputField("hidden", fieldName.projectID, projectID);
+
 
     cout << startH1 << "Enter Class Details" << endH1 << brk;
     TableStart("classdetails", "");

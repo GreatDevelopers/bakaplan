@@ -56,6 +56,9 @@ class ClassDetail : public InputDetail
         /** Read Project Detail and store them into database */
         void ProjectDetail();
 
+        /** read total classes and store it into database */
+        void TotalClasses();
+
         /** Get total classes */
         void TotalClassesPage();
 
