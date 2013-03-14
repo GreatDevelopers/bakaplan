@@ -222,27 +222,6 @@ void ClassDetail :: ClassInfoPage()
         InputField("text", fieldName.className, (i+1), className[i]);
         cout << endTD;
         
-        /* 
-        cout << startTD;
-        SelectFieldStart(fieldName.totalSubjects);
-        for(j = 1; j <= 3; j++)
-        {
-            temp = IntToString(j);
-
-            if(i >= 0 && i <= 3 && j == 2)
-                SelectOptionStart(temp, "y");
-            else if(i >= 4 && i <= 7 && j == 1)
-                SelectOptionStart(temp, "y");
-            else if((i == 8 || i == 9) && j == 3)
-                SelectOptionStart(temp, "y");
-            else
-                SelectOptionStart(temp, "n");
-            cout << j;
-            SelectOptionEnd();
-        }
-        SelectFieldEnd();
-        cout << endTD;
-        */
         cout << startTD;
         InputField("text", fieldName.subjectName, (i + 1), 
                     subjectName[i]);
