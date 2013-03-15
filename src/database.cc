@@ -105,6 +105,23 @@ void Database :: SelectProjectID(string & projectID)
 /**
  *--------------------------------------------------------------------\n
  *       Class:  Database \n
+ *      Method:  Database :: SelectSum(column, table, result) \n
+ * Description:  Select sum of totalSubjects from ClassDetail table \n
+ *--------------------------------------------------------------------
+ */
+
+void Database :: SelectSum(string column, string table, 
+                           string projectID, string & result)
+{
+    query  = "Select sum(" + column + ") as sum from " + table;
+    query += " where ProjectID = " + projectID + ";";
+    vector<string> res;
+    SelectColumn(query, res);
+    result = res[0];
+}
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Database \n
  *      Method:  Database :: SelectColumn \n
  * Description:  Select column from table \n
  *--------------------------------------------------------------------
@@ -269,6 +286,29 @@ void Database :: InsertClassDetail(string projectID, string className,
 
     InsertQuery(query);
 
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  Database \n
+ *      Method:  Database :: InsertRollNoDetail() \n
+ * Description:  Insert roll no details into database \n
+ *--------------------------------------------------------------------
+ */
+
+void Database :: InsertRollNoDetail(string projectID, string className, 
+                                string subjectCode, string prefix,
+                                string startRollNo, string endRollNo,
+                                string notIncluded)
+{
+    query  = "Insert into RollNoDetail(ProjectID, ClassName, ";
+    query += "SubjectCode, Prefix, StartRollNo, EndRollno, ";
+    query += "NotIncluded) values (" + projectID + ",'" +
+             className + "', '" + subjectCode + "', '" +
+             prefix + "', " + startRollNo + ", " + endRollNo +
+             ", '" + notIncluded + "');";
+    
+    InsertQuery(query);
 }
 
 /**

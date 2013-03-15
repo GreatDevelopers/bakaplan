@@ -63,6 +63,10 @@ class Database
         /** Seclect Column */
         void SelectColumn(string query, vector<string> & result);
 
+        /** Select sum of column */
+        void SelectSum(string column, string table, string projectID, 
+                       string & result);
+
         /** select project id from ProjectName table  */
         void SelectProjectID(string & projectID);
 
@@ -97,6 +101,12 @@ class Database
         void InsertRoomDetail(string projectID, string centreName,
                               string roomNo, string rows, 
                               string columns);
+
+        /** Insert rollno details into RollNoDtail table */
+        void InsertRollNoDetail(string projectID, string className, 
+                                string subjectCode, string prefix,
+                                string startRollNo, string endRollNo,
+                                string notIncluded);
 
         /** Insert Into TotalRooms */
         void InsertTotalRooms(string projectID, string centreName, 
