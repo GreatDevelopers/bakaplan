@@ -172,8 +172,21 @@ void RollNoDetail :: RollNoDetailPage()
         for(j = 0; j < totalSubjects[i]; j++)
         {
             cout << startTR;
-            cout << startTD << className[i] << endTD
-                 << startTD << subjectCode[i][j] << endTD;
+            cout << startTD;
+
+            temp  = fieldName.className;
+            temp += IntToString((i+1));
+            Label("", temp, className[i]);
+            
+            cout << endTD;
+                 
+            cout << startTD;
+            
+            temp  = fieldName.subjectCode;
+            temp += IntToString((i + 1));
+            Label("", temp, subjectCode[i][j]);
+            
+            cout << endTD;
             
             cout << startTD;
             InputField("text", fieldName.prefix, (i+1), "");
