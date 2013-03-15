@@ -321,6 +321,41 @@ void PageStructureMaker :: Anchor(string href, string target)
 }
 
 /**
+ *--------------------------------------------------------------------\n
+ *       Class:  PageStructureMaker \n
+ *      Method:  PageStructureMaker :: Label(string forValue, 
+ *                                           string value) \n
+ * Description:  For adding label in html page \n
+ *--------------------------------------------------------------------
+ */
+
+void PageStructureMaker :: Label(string forValue, string fieldName,
+                                 string value)
+{
+    cout << "<label for=\"" << forValue << "\" name=\"" 
+         << fieldName << "\" >" << value << "</label>";
+}
+
+/**
+ *--------------------------------------------------------------------\n
+ *       Class:  PageStructureMaker \n
+ *      Method:  PageStructureMaker :: InputField(string type, 
+ *               string name, string value) \n
+ * Description:  For creating input field with 3 arguments \n
+ *--------------------------------------------------------------------
+ */
+
+void PageStructureMaker :: InputField(string type, string name, 
+                                      string value)
+{
+    cout << "<input type=\"" << type << "\" name=\"" << name;
+    cout << "\"" << " value = \"" << value << "\" " 
+         << " onfocus = \"OnFocus(this.value, this.name, \"" << value
+         << "\")\""
+         << ">" << endl;
+}
+
+/**
  *--------------------------------------------------------------------
  *       Class:  PageStructureMaker
  *      Method:  PageStructureMaker :: InputField(string type, 
@@ -347,25 +382,6 @@ void PageStructureMaker :: InputField(string type, string name,
          << " onfocus = \"OnFocus(this.value, this.name, \"" << value 
          << "\")\""
          << ">" << endl;*/
-}
-
-/**
- *--------------------------------------------------------------------\n
- *       Class:  PageStructureMaker \n
- *      Method:  PageStructureMaker :: InputField(string type, 
- *               string name, string value) \n
- * Description:  For creating input field with 3 arguments \n
- *--------------------------------------------------------------------
- */
-
-void PageStructureMaker :: InputField(string type, string name, 
-                                      string value)
-{
-    cout << "<input type=\"" << type << "\" name=\"" << name;
-    cout << "\"" << " value = \"" << value << "\" " 
-         << " onfocus = \"OnFocus(this.value, this.name, \"" << value
-         << "\")\""
-         << ">" << endl;
 }
 
 /**
