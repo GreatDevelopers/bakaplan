@@ -106,12 +106,15 @@ class PageStructureMaker
         /** Anchor Tag */
         void Anchor(string href, string target);
 
+        /** Input field with 3 arguments */
+        void InputField(string type, string name, string value);
+
         /** Input Field with 4 arguments */
         void InputField(string type, string name, int nameNo, 
                         string value);
-
-        /** Input field with 3 arguments */
-        void InputField(string type, string name, string value);
+        
+        /** Label tag */
+        void Label(string forField, string fieldName, string value);
 
         /** Select Field Start */
         void SelectFieldStart(string name);
