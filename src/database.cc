@@ -142,6 +142,22 @@ void Database :: SelectColumn(string query, vector<string> & result)
         cout << "";
 }
 
+
+/**
+ *      \class  Database
+ *      \fn     Database :: Select(string & result)
+ *      \brief  check select query is executed or not
+ *      \param  result 
+ */
+
+void Database :: Select(string & result)
+{
+    if ( mysql_query( connect, query.c_str() ) == 0 )
+        result = "T";    
+    else
+        result = "F";
+}
+
 /**
  *--------------------------------------------------------------------\n
  *       Class:  Database \n
@@ -156,6 +172,14 @@ void Database :: InsertQuery(string query)
         cout << "";
     else
         cout << "</br>Not insterted</br>";
+}
+
+void Database :: DeleteQuery(string query)
+{
+    if ( mysql_query( connect, query.c_str() ) == 0)
+        cout << "";
+    else
+        cout << "</br>Not deleted</br>";
 }
 
 /**
@@ -303,10 +327,10 @@ void Database :: InsertRollNoDetail(string projectID, string className,
 {
     query  = "Insert into RollNoDetail(ProjectID, ClassName, ";
     query += "SubjectCode, Prefix, StartRollNo, EndRollno, ";
-    query += "NotIncluded) values (" + projectID + ",'" +
-             className + "', '" + subjectCode + "', '" +
-             prefix + "', " + startRollNo + ", " + endRollNo +
-             ", '" + notIncluded + "');";
+    query += "NotIncluded) values (" + projectID + ",\"" +
+             className + "\", \"" + subjectCode + "\", \"" +
+             prefix + "\", " + startRollNo + ", " + endRollNo +
+             ", \"" + notIncluded + "\");";
     
     InsertQuery(query);
 }

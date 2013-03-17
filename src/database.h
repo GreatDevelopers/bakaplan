@@ -63,6 +63,9 @@ class Database
         /** Seclect Column */
         void SelectColumn(string query, vector<string> & result);
 
+        /** Select query for project id */
+        void Select(string & result);
+
         /** Select sum of column */
         void SelectSum(string column, string table, string projectID, 
                        string & result);
@@ -75,6 +78,8 @@ class Database
 
         /** Insert query with one argument */
         void InsertQuery(string query);
+
+        void DeleteQuery(string query);
 
         /** Insert Query for adding value in one column */
         void InsertQuery(string column, string value, string table);
