@@ -51,7 +51,7 @@ void PageStructureMaker :: SetHTMLVariables()
     endH1       =       "</h1>";                
     startH3     =       "<h3>";                 /* H3 tag */
     endH3       =       "</h3>";                
-    startTD     =       "<td>";                 /* TD(Table Data) */
+    startTD     =       "<td align = \"center\">";/* TD(Table Data) */
     endTD       =       "</td>";
     startTH     =       "<th>";                 /* TH(Table Header) */
     endTH       =       "</th>";
@@ -252,7 +252,7 @@ void PageStructureMaker :: FormEnd()
 void PageStructureMaker :: TableStart(string id, string className)
 {
     cout << "<table id = \"" << id << "\" class=\"" << className
-         << "\">" << endl;
+         << "\" align = \"center\">" << endl;
 }
 
 /**
