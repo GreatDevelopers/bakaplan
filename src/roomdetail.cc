@@ -238,7 +238,9 @@ void RoomDetail :: CentreDetailPage()
     {
         cout << startTR;
         cout << startTD;
-        InputField("text", fieldName.centreName, (i+1), "");
+        temp  = "C";
+        temp += IntToString((i+1));
+        InputField("text", fieldName.centreName, (i+1), temp);
         cout << endTD;
         
         cout << startTD;
@@ -325,15 +327,17 @@ void RoomDetail :: RoomDetailPage()
             cout << endTD;
 
             cout << startTD;
-            InputField("text", fieldName.roomNo, k, "");
+            temp  = "R";
+            temp += IntToString(k);
+            InputField("text", fieldName.roomNo, k, temp);
             cout << endTD;
 
             cout << startTD;
-            InputField("text", fieldName.rows, k, "");
+            InputField("text", fieldName.rows, k, "6");
             cout << endTD;
 
             cout << startTD;
-            InputField("text", fieldName.columns, k, "");
+            InputField("text", fieldName.columns, k, "8");
             cout << endTD;
 
             cout << endTR;
@@ -350,8 +354,6 @@ void RoomDetail :: RoomDetailPage()
     DivEnd();
 
     Footer();
-
-
 }
 
 RoomDetail :: ~RoomDetail()
