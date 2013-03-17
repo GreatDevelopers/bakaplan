@@ -126,6 +126,8 @@ void RollNoDetail :: ReadClassDetail()
 {
 
     projectID = readField.ReadFieldValue(fieldName.projectID);
+
+    emailID = readField.ReadFieldValue(fieldName.emailID);
     
     string where = "ProjectID = ";
     where += projectID;
@@ -236,6 +238,7 @@ void RollNoDetail :: RollNoDetailPage()
     FormStart("rollno", "totalcentre.html", "POST");
 
     InputField("hidden", fieldName.projectID, projectID);
+    InputField("hidden", fieldName.emailID, emailID);
 
     cout << startH1 << " Roll No. Detail " << endH1 << brk;
     

@@ -224,6 +224,11 @@ void Login :: AddNewUser()
 void Login :: LogoutPage()
 {
     SetCookies("", "");
+    //string s = readField.ReadCookie("SessionID");
+/*    userEmailID = readField.ReadFieldValue(fieldName.emailID);
+    temp  = "delete from Session where EmailID = \"" + userEmailID;
+    temp += "\";";
+    database.DeleteQuery(temp);*/
     LoginPage();
 }
 

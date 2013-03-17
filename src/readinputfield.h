@@ -43,8 +43,8 @@ class ReadInputField
         Cgicc formData;                         /**< Read Form Data */
         form_iterator fi;                       /**< Form Iterator */
 
-        //Cgicc cgi; 
-        //const_cookie_iterator cci;
+        /*Cgicc cgi; 
+        const_cookie_iterator cci;*/
 
     public:
         /** Constructor */
@@ -60,5 +60,5 @@ class ReadInputField
         string ReadFieldValue(string fieldName, int fieldNo);
 
         /** Read cookies */
-       // string ReadCookie(string cookieName);
+        //string ReadCookie(string cookieName);
 };

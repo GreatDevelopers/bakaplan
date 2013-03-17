@@ -48,6 +48,7 @@ RoomDetail :: RoomDetail()
 void RoomDetail :: ReadRollNoDetail()
 {
     projectID = readField.ReadFieldValue(fieldName.projectID);
+    emailID = readField.ReadFieldValue(fieldName.emailID);
 
     database.SelectSum("TotalSubjects", "ClassDetails", 
                        projectID, temp);
@@ -99,6 +100,8 @@ void RoomDetail :: ReadTotalCentre()
 
     projectID = readField.ReadFieldValue(fieldName.projectID);
 
+    emailID = readField.ReadFieldValue(fieldName.emailID);
+
     database.InsertTotalCentres(projectID, IntToString(totalCentre));
 
 }
@@ -114,6 +117,8 @@ void RoomDetail :: ReadTotalCentre()
 void RoomDetail :: ReadCentreDetail()
 {
     projectID = readField.ReadFieldValue(fieldName.projectID);
+
+    emailID = readField.ReadFieldValue(fieldName.projectID);
     
     totalCentre = StringToInt(readField.ReadFieldValue(
                               fieldName.totalCentres));
@@ -161,6 +166,7 @@ void RoomDetail :: TotalCentrePage()
     FormStart("totalcemtre", "centredetail.html", "POST");
     
     InputField("hidden", fieldName.projectID, projectID);
+    InputField("hidden", fieldName.emailID, emailID);
 
     cout << startH1 << " Select Total Centres " << endH1 << brk;
     
@@ -220,7 +226,7 @@ void RoomDetail :: CentreDetailPage()
     InputField("hidden", fieldName.projectID, projectID);
     InputField("hidden", fieldName.totalCentres, 
                IntToString(totalCentre));
-
+    InputField("hidden", fieldName.emailID, emailID);
     cout << startH1 << " Centre Detail " << endH1 << brk;
     
     TableStart("centredetail", "");
@@ -297,6 +303,7 @@ void RoomDetail :: RoomDetailPage()
     FormStart("roomdetail", "strategy.html", "POST");
     
     InputField("hidden", fieldName.projectID, projectID);
+    InputField("hidden", fieldName.emailID, emailID);
 
     cout << startH1 << " Room Detail " << endH1 << brk;
     

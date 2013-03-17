@@ -77,8 +77,8 @@ void ProjectDetail :: AuthorizeUser()
             currentDate += IntToString(now->tm_mday);
         
             sessionID += md5(currentDate);
-            //SetCookies(userEmailID, sessionID);
-            //database.InsertIntoSession(userEmailID, sessionID);
+           
+            database.InsertSession(userEmailID, sessionID);
             
             SetCookies(userEmailID, sessionID);
 

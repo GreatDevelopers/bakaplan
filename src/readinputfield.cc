@@ -73,19 +73,22 @@ string ReadInputField :: ReadFieldValue(string fieldName, int fieldNo)
  * Description:  Read cookies - email id and session id \n
  *--------------------------------------------------------------------
  */
-/* 
+ /*
 string ReadInputField :: ReadCookie(string cookieName)
 {
     // get environment variables                                       
     const CgiEnvironment& env = cgi.getEnvironment();                  
-                                                                           
+    
+    string cookie = cookieName;
+
     for( cci = env.getCookieList().begin();                            
          cci != env.getCookieList().end();                             
          ++cci )                                                       
     {                                                                  
-        if(cci->getName() == cookieName)
+        if(cci->getName() == cookie)
         {                     
             fieldValue =  cci->getValue();
+            return fieldValue;
         }                                                              
     }
     return fieldValue;
