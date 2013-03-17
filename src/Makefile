@@ -85,6 +85,7 @@ M_LOGOUT            =   logout-main.cpp
 M_ROLLNO            =   rollnodetail-main.cpp
 M_TOTALCENTRE       =   totalcentre-main.cpp
 M_CENTREDETAIL      =   centredetail-main.cpp
+M_ROOMDETAIL        =   roomdetail-main.cpp
 
 # ====================================================================
 #	Variables for object files
@@ -117,6 +118,7 @@ O_LOGOUT_MAIN       =   logout-main.o
 O_ROLLNO_MAIN       =   rollnodetail-main.o
 O_TOTALCENTRE_MAIN  =   totalcentre-main.o
 O_CENTREDETAIL_MAIN =   centredetail-main.o
+O_ROOMDETAIL_MAIN   =   roomdetail-main.o
 
 # ====================================================================
 #	Linking Variables (L_EXE_FILENAME)
@@ -144,6 +146,7 @@ L_LOGOUT        =   $(L_LOGIN) $(O_LOGOUT_MAIN)
 L_ROLLNO        =   $(L_ROLLNODETAIL) $(O_ROLLNO_MAIN)
 L_TOTALCENTRE   =   $(L_ROOMDETAIL) $(O_TOTALCENTRE_MAIN)
 L_CENTREDETAIL  =   $(L_ROOMDETAIL) $(O_CENTREDETAIL_MAIN)
+L_ROOM          =   $(L_ROOMDETAIL) $(O_ROOMDETAIL_MAIN)
 
 # ====================================================================
 # 	O/P file names(exe) (E_FILENAME)
@@ -160,12 +163,13 @@ E_LOGOUT        =   logout.html
 E_ROLLNO        =   rollnodetail.html
 E_TOTALCENTRE   =   totalcentre.html
 E_CENTREDETAIL  =   centredetail.html
+E_ROOM          =   roomdetail.html
 
 # ====================================================================
 #	Main target (1st target)
 # ====================================================================
 
-all: $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO) $(E_PROJECTDETAIL) $(E_REGISTER) $(E_NEWUSER) $(E_LOGOUT) $(E_ROLLNO) $(E_TOTALCENTRE) $(E_CENTREDETAIL)
+all: $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO) $(E_PROJECTDETAIL) $(E_REGISTER) $(E_NEWUSER) $(E_LOGOUT) $(E_ROLLNO) $(E_TOTALCENTRE) $(E_CENTREDETAIL) $(E_ROOM)
 
 # ====================================================================
 #	targets for compiling .cc or .cpp files
@@ -239,11 +243,14 @@ $(O_CLASSINFO_MAIN): $(M_CLASSINFO) $(H_CLASSDETAILS)
 $(O_ROLLNO_MAIN): $(M_ROLLNO) $(H_ROLLNODETAIL)
 	$(CC) $(CFLAG) $(M_ROLLNO) $(LMYSQL)
 
-$(O_TOTALCENTRE_MAIN): $(M_TOTALCENTRE) $(H_ROLLNODETAIL)
+$(O_TOTALCENTRE_MAIN): $(M_TOTALCENTRE) $(H_ROOMDETAIL)
 	$(CC) $(CFLAG) $(M_TOTALCENTRE) $(LMYSQL)
 
-$(O_CENTREDETAIL_MAIN): $(M_CENTREDETAIL) $(H_ROLLNODETAIL)
+$(O_CENTREDETAIL_MAIN): $(M_CENTREDETAIL) $(H_ROOMDETAIL)
 	$(CC) $(CFLAG) $(M_CENTREDETAIL) $(LMYSQL)
+
+$(O_ROOMDETAIL_MAIN): $(M_ROOMDETAIL) $(H_ROOMDETAIL)
+	$(CC) $(CFLAG) $(M_ROOMDETAIL) $(LMYSQL)
 
 # ====================================================================
 # 	Targets of o/p files(exe)
@@ -284,6 +291,10 @@ $(E_TOTALCENTRE): $(L_TOTALCENTRE)
 
 $(E_CENTREDETAIL): $(L_CENTREDETAIL)
 	$(CC) $(OFLAG) $(E_CENTREDETAIL) $(L_CENTREDETAIL) $(LCGICC) \
+	$(LMYSQL)
+
+$(E_ROOM): $(L_ROOM)
+	$(CC) $(OFLAG) $(E_ROOM) $(L_ROOM) $(LCGICC) \
 	$(LMYSQL)
 
 # ====================================================================
