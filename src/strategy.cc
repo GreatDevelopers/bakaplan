@@ -50,6 +50,23 @@ void Strategy :: ReadRoomDetail()
     totalRooms = StringToInt(temp);
 
     cout << totalRooms;
+    
+    for(i = 0; i < totalRooms; i++)
+    {
+        j = i + 1;
+        centreName[i] = readField.ReadFieldValue(fieldName.centreName,
+                                                 j);
+        
+        roomNo[i] = readField.ReadFieldValue(fieldName.roomNo, j);
+
+        rows[i] = readField.ReadFieldValue(fieldName.rows, j);
+
+        columns[i] = readField.ReadFieldValue(fieldName.columns, j);
+
+        database.InsertRoomDetail(projectID, centreName[i], roomNo[i], 
+                                  rows[i], columns[i]);
+    }
+
 }
 
 /**
@@ -67,7 +84,19 @@ void Strategy :: StrategyPage()
     
     DivStart("strategy", "");
     
+    LogoutLink();
+    
+    cout << brk;
+
+    FormStart("strategy", "validation.html", "POST");
+ 
     ReadRoomDetail();
+    
+    
+    
+    FormEnd();
+
+    
 
     DivEnd();
 
