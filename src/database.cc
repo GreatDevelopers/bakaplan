@@ -371,11 +371,11 @@ void Database :: InsertRoomDetail(string projectID, string centreName,
     query  = "insert into RoomDetail(ProjectID, CentreName, RoomNo,"; 
     query += "Rows, Columns) values (";
     query += projectID;
-    query += ", '";
+    query += ", \"";
     query += centreName;
-    query += "', '";
+    query += "\", \"";
     query += roomNo;
-    query += ", ";
+    query += "\", ";
     query += rows;
     query += ", ";
     query += columns;
