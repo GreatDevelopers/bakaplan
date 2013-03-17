@@ -48,7 +48,8 @@ class RoomDetail : public InputDetail
          // for reading totalcentres
 
          int totalCentre, totalRoom, maxCentres;
-         string rows[MIN_SIZE], columns[MIN_SIZE];
+         string rows[MIN_SIZE], columns[MIN_SIZE], 
+                centreName[MIN_SIZE];
 
     public:
         /** RoomDetail Constructor */
@@ -69,8 +70,8 @@ class RoomDetail : public InputDetail
         /** Total centre page */
         void TotalCentrePage();
 
-        /** Total room detail */
-        void TotalRoomPage();
+        /** Centre Detail detail */
+        void CentreDetailPage();
 
         /** Room detail */
         void RoomDetailPage();

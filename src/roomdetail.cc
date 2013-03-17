@@ -93,7 +93,9 @@ void RoomDetail :: ReadRollNoDetail()
 
 void RoomDetail :: ReadTotalCentre()
 {
+    temp = readField.ReadFieldValue(fieldName.totalCentres);
 
+    totalCentre = StringToInt(temp);
 }
 
 /**
@@ -146,7 +148,7 @@ void RoomDetail :: TotalCentrePage()
 
     ReadRollNoDetail();
 
-    FormStart("totalcemtre", "totalroom.html", "POST");
+    FormStart("totalcemtre", "centredetail.html", "POST");
     
     InputField("hidden", fieldName.projectID, projectID);
 
@@ -184,12 +186,76 @@ void RoomDetail :: TotalCentrePage()
 /**
  *--------------------------------------------------------------------\n
  *       Class:  RoomDetail \n
- *      Method:  RoomDetail :: TotalRoomPage() \n
+ *      Method:  RoomDetail :: CentreDetailPage() \n
  * Description:  Page for getting total  \n
  *--------------------------------------------------------------------
  */
-void RoomDetail :: TotalRoomPage()
+void RoomDetail :: CentreDetailPage()
 {
+    maxCentres = 5;
+    ContextType();
+
+    Header("Centre Detail");
+    
+    DivStart("totalroom", "");               /* (id, classname) */
+
+    LogoutLink();
+
+    ReadTotalCentre();
+    
+    cout << brk;
+
+    FormStart("totalroom", "roomdetail.html", "POST");
+    
+    InputField("hidden", fieldName.projectID, projectID);
+    InputField("hidden", fieldName.totalCentres, 
+               IntToString(totalCentre));
+
+    cout << startH1 << " Centre Detail " << endH1 << brk;
+    
+    TableStart("centredetail", "");
+   
+    cout << startTH << "Centre Name" << endTH
+         << startTH << "Total Rooms" << endTH;
+   
+    for(i = 0; i < totalCentre; i++)
+    {
+        cout << startTR;
+        cout << startTD;
+        InputField("text", fieldName.centreName, (i+1), "");
+        cout << endTD;
+        
+        cout << startTD;
+        temp = fieldName.totalRooms;
+        temp += IntToString((i+1));
+        SelectFieldStart(temp);
+        
+        for(j = 1; j <= maxCentres; j++)
+        {
+            temp = IntToString(j);
+            if(j == 3)
+                SelectOptionStart(temp, "Y");
+            else
+                SelectOptionStart(temp, "n");
+            cout << j;
+            SelectOptionEnd();
+        }
+
+        SelectFieldEnd();
+        cout << endTD;
+        cout << endTR;
+
+    }
+    TableEnd();
+
+    cout << brk << brk;
+
+    Button("next", "submit", "btn", "NEXT");
+
+    FormEnd();
+    DivEnd();
+
+    Footer();
 
 }
 
