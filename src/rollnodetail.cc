@@ -78,14 +78,25 @@ void RollNoDetail :: ReadClassDetail()
     }
     
     SplitSubject();
+           
+    /*        temp  = "Select ProjectID from ClassDetails ";
+        temp += "where ProjectID = " + projectID + ";";
+        string t;
+        database.Select(t);
+          if(temp == "T")
+          { //projectID = "3";
+            temp  = "Delete from ClassDetails where ProjectID = ";
+            temp += projectID + ";";
 
+            database.DeleteQuery(temp);
+        }
+     */
     for(i = 0; i < totalClasses; i++)
     {
         database.InsertClassDetail(projectID, className[i], 
                                    IntToString(totalSubjects[i]), 
                                    subName[i], subCode[i]);
     }
-    
 }
 
 /**
@@ -166,44 +177,41 @@ void RollNoDetail :: RollNoDetailPage()
         cout << startTH << tableHeading[i] << endTH;
     }
     cout << endTR;
-
+    k = 1;
     for(i = 0; i < totalClasses; i++)
     {        
         for(j = 0; j < totalSubjects[i]; j++)
         {
             cout << startTR;
-            cout << startTD;
-
-            temp  = fieldName.className;
-            temp += IntToString((i+1));
-            Label("", temp, className[i]);
+            cout << startTD << className[i];
+            InputField("hidden", fieldName.className, (k), 
+                       className[i]);
             
             cout << endTD;
                  
-            cout << startTD;
-            
-            temp  = fieldName.subjectCode;
-            temp += IntToString((i + 1));
-            Label("", temp, subjectCode[i][j]);
-            
+            cout << startTD << subjectCode[i][j];
+            InputField("hidden", fieldName.subjectCode, (k), 
+                       subjectCode[i][j]);
+
             cout << endTD;
             
             cout << startTD;
-            InputField("text", fieldName.prefix, (i+1), "");
+            InputField("text", fieldName.prefix, (k), "");
             cout << endTD;
 
             cout << startTD;
-            InputField("text", fieldName.startRollNo, (i+1), "");
+            InputField("text", fieldName.startRollNo, (k), "");
             cout << endTD;
             
             cout << startTD;
-            InputField("text", fieldName.endRollNo, (i+1), "");
+            InputField("text", fieldName.endRollNo, (k), "");
             cout << endTD; 
 
             cout << startTD;
-            InputField("text", fieldName.notIncluded, (i+1), "");
+            InputField("text", fieldName.notIncluded, (k), "");
             cout << endTD;
             cout << endTR;
+            k++;
         }
     }
     
