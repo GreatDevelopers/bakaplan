@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 12, 2013 at 01:53 PM
+-- Generation Time: Mar 17, 2013 at 01:52 PM
 -- Server version: 5.5.28
 -- PHP Version: 5.4.6-1ubuntu1.1
 
@@ -30,9 +30,67 @@ CREATE TABLE IF NOT EXISTS `ClassDetails` (
   `SNo` int(100) NOT NULL AUTO_INCREMENT,
   `ProjectID` int(100) NOT NULL,
   `ClassName` varchar(50) NOT NULL,
+  `TotalSubjects` int(50) NOT NULL,
   `SubjectName` varchar(100) NOT NULL,
   `SubjectCode` varchar(100) NOT NULL,
   UNIQUE KEY `SNo` (`SNo`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=44 ;
+
+--
+-- Dumping data for table `ClassDetails`
+--
+
+INSERT INTO `ClassDetails` (`SNo`, `ProjectID`, `ClassName`, `TotalSubjects`, `SubjectName`, `SubjectCode`) VALUES
+(9, 1, 'Info. Tech.', 2, 'DBMS, SAD', 'IT-101, IT-102'),
+(10, 1, '10th', 2, 'Maths,Physics', 'ME-10,CE-252'),
+(11, 3, 'Info. Tech.', 2, 'DBMS, SAD', 'IT-101, IT-102'),
+(12, 3, '10th', 2, 'Maths,Physics', 'ME-10,CE-252'),
+(13, 3, 'ECE', 2, 'OS, EVS', 'EVS, ED-10'),
+(14, 3, 'Info. Tech.', 2, 'DBMS, SAD', 'IT-101, IT-102'),
+(15, 3, '10th', 2, 'Maths,Physics', 'ME-10,CE-252'),
+(16, 3, 'ECE', 2, 'OS, EVS', 'EVS, ED-10'),
+(17, 3, 'Info. Tech.', 2, 'DBMS, SAD', 'IT-101, IT-102'),
+(18, 3, '10th', 2, 'Maths,Physics', 'ME-10,CE-252'),
+(19, 3, 'ECE', 2, 'OS, EVS', 'EVS, ED-10'),
+(20, 3, 'Info. Tech.', 2, 'DBMS, SAD', 'IT-101, IT-102'),
+(21, 3, '10th', 2, 'Maths,Physics', 'ME-10,CE-252'),
+(22, 3, 'ECE', 2, 'OS, EVS', 'EVS, ED-10'),
+(23, 3, 'Info. Tech.', 2, 'DBMS, SAD', 'IT-101, IT-102'),
+(24, 3, '10th', 2, 'Maths,Physics', 'ME-10,CE-252'),
+(25, 3, 'ECE', 2, 'OS, EVS', 'EVS, ED-10'),
+(26, 3, 'Info. Tech.', 2, 'DBMS, SAD', 'IT-101, IT-102'),
+(27, 3, '10th', 2, 'Maths,Physics', 'ME-10,CE-252'),
+(28, 3, 'ECE', 2, 'OS, EVS', 'EVS, ED-10'),
+(29, 3, 'Info. Tech.', 2, 'DBMS, SAD', 'IT-101, IT-102'),
+(30, 3, '10th', 2, 'Maths,Physics', 'ME-10,CE-252'),
+(31, 3, 'ECE', 2, 'OS, EVS', 'EVS, ED-10'),
+(32, 4, 'Info. Tech.', 2, 'DBMS, SAD', 'IT-101, IT-102'),
+(33, 4, '10th', 2, 'Maths,Physics', 'ME-10,CE-252'),
+(34, 6, 'Info. Tech.', 2, 'DBMS, SAD', 'IT-101, IT-102'),
+(35, 6, '10th', 2, 'Maths,Physics', 'ME-10,CE-252'),
+(36, 6, 'ECE', 2, 'OS, EVS', 'EVS, ED-10'),
+(37, 6, 'Mech. Engg.', 2, 'Java, C++', 'ED-10, IT-102'),
+(38, 6, 'Production Engg.', 1, 'EVS', 'IT-102'),
+(39, 7, 'Info. Tech.', 2, 'DBMS, SAD', 'IT-101, IT-102'),
+(40, 7, '10th', 2, 'Maths,Physics', 'ME-10,CE-252'),
+(41, 7, 'ECE', 2, 'OS, EVS', 'EVS, ED-10'),
+(42, 7, 'Mech. Engg.', 2, 'Java, C++', 'ED-10, IT-102'),
+(43, 7, 'Production Engg.', 1, 'EVS', 'IT-102');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ExamDetail`
+--
+
+CREATE TABLE IF NOT EXISTS `ExamDetail` (
+  `SNo` int(100) NOT NULL AUTO_INCREMENT,
+  `ProjectID` int(100) NOT NULL,
+  `ExamName` varchar(100) NOT NULL,
+  `ExamDate` varchar(100) NOT NULL,
+  `ExamTime` varchar(100) NOT NULL,
+  `ExamVenue` varchar(100) NOT NULL,
+  KEY `SNo` (`SNo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -42,18 +100,58 @@ CREATE TABLE IF NOT EXISTS `ClassDetails` (
 --
 
 CREATE TABLE IF NOT EXISTS `ProjectName` (
-  `ProjectID` int(255) NOT NULL AUTO_INCREMENT,
+  `ProjectID` int(100) NOT NULL AUTO_INCREMENT,
   `EmailID` varchar(50) NOT NULL,
   `ProjectName` varchar(30) NOT NULL,
   PRIMARY KEY (`ProjectID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1002 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `ProjectName`
 --
 
 INSERT INTO `ProjectName` (`ProjectID`, `EmailID`, `ProjectName`) VALUES
-(1001, 'mandy@gmail.com', 'Exam');
+(1, 'mandy@gmail.com', 'first project'),
+(2, 'mandy@gmail.com', 'first project'),
+(3, 'mandy@gmail.com', 'Project 1'),
+(4, 'mandy@gmail.com', 'Project Name'),
+(5, 'mandy@gmail.com', 'Project Name'),
+(6, 'mandy@gmail.com', 'Project Name'),
+(7, 'mandy@gmail.com', 'Project Name');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `RollNoDetail`
+--
+
+CREATE TABLE IF NOT EXISTS `RollNoDetail` (
+  `ProjectID` int(100) NOT NULL,
+  `ClassName` varchar(50) NOT NULL,
+  `SubjectCode` varchar(30) NOT NULL,
+  `Prefix` varchar(30) NOT NULL,
+  `StartRollNo` int(50) NOT NULL,
+  `EndRollNo` int(50) NOT NULL,
+  `NotIncluded` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `RollNoDetail`
+--
+
+INSERT INTO `RollNoDetail` (`ProjectID`, `ClassName`, `SubjectCode`, `Prefix`, `StartRollNo`, `EndRollNo`, `NotIncluded`) VALUES
+(4, 'Info. Tech.', 'IT-101', 'dcdec', 101, 120, '111 120'),
+(4, 'Info. Tech.', ' IT-102', '901', 101, 111, '121'),
+(4, '10th', 'ME-10', '11', 111, 112, '1'),
+(4, '10th', 'CE-252', '11', 123, 134, '122'),
+(4, 'Info. Tech.', 'IT-101', 'dcdec', 101, 120, '111 120'),
+(4, 'Info. Tech.', ' IT-102', '901', 101, 111, '121'),
+(4, '10th', 'ME-10', '11', 111, 112, '1'),
+(4, '10th', 'CE-252', '11', 123, 134, '122'),
+(6, 'Info. Tech.', 'IT-101', 'IT', 101, 121, '111 120'),
+(6, 'Info. Tech.', 'IT-101', 'IT', 101, 121, '111 120'),
+(6, 'Info. Tech.', 'IT-101', 'IT', 101, 121, '111 120'),
+(6, 'Info. Tech.', 'IT-101', 'IT', 101, 121, '111 120');
 
 -- --------------------------------------------------------
 
@@ -82,44 +180,7 @@ CREATE TABLE IF NOT EXISTS `Session` (
   `EmailID` varchar(150) NOT NULL,
   `SessionID` varchar(250) NOT NULL,
   PRIMARY KEY (`SNo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=40 ;
-
---
--- Dumping data for table `Session`
---
-
-INSERT INTO `Session` (`SNo`, `EmailID`, `SessionID`) VALUES
-(9, 'mandeep@gmail.com', '4a27346e94ed9f8d9dc3c3d42cbfcd3fee9bf5b556828372c09399e766712873'),
-(10, 'mandeep@gmail.com', '4a27346e94ed9f8d9dc3c3d42cbfcd3fffb51880e37fbac1c20289a86c250fe6'),
-(11, 'mandeep@gmail.com', '4a27346e94ed9f8d9dc3c3d42cbfcd3fffb51880e37fbac1c20289a86c250fe6'),
-(12, 'mandeep@gmail.com', '4a27346e94ed9f8d9dc3c3d42cbfcd3fffb51880e37fbac1c20289a86c250fe6'),
-(13, 'mandeep@gmail.com', '4a27346e94ed9f8d9dc3c3d42cbfcd3fffb51880e37fbac1c20289a86c250fe6'),
-(14, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1ffb51880e37fbac1c20289a86c250fe6'),
-(15, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1ffb51880e37fbac1c20289a86c250fe6'),
-(16, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1ffb51880e37fbac1c20289a86c250fe6'),
-(17, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1ffb51880e37fbac1c20289a86c250fe6'),
-(18, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1ffb51880e37fbac1c20289a86c250fe6'),
-(19, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1ffb51880e37fbac1c20289a86c250fe6'),
-(20, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1ffb51880e37fbac1c20289a86c250fe6'),
-(21, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1ffb51880e37fbac1c20289a86c250fe6'),
-(22, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1ffb51880e37fbac1c20289a86c250fe6'),
-(23, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1ffb51880e37fbac1c20289a86c250fe6'),
-(24, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1ffb51880e37fbac1c20289a86c250fe6'),
-(25, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1ffb51880e37fbac1c20289a86c250fe6'),
-(26, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1ffb51880e37fbac1c20289a86c250fe6'),
-(27, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1ffb51880e37fbac1c20289a86c250fe6'),
-(28, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1ffb51880e37fbac1c20289a86c250fe6'),
-(29, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1bc900dbd983d731e9eaea7a59a4411f9'),
-(30, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1bc900dbd983d731e9eaea7a59a4411f9'),
-(31, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1bc900dbd983d731e9eaea7a59a4411f9'),
-(32, 'mandy@gmail.com', 'e785153308eca0740040a5c6e9cfe6d1bc900dbd983d731e9eaea7a59a4411f9'),
-(33, 'mandeep@gmail.com', '4a27346e94ed9f8d9dc3c3d42cbfcd3fbc900dbd983d731e9eaea7a59a4411f9'),
-(34, 'mandeep@gmail.com', '4a27346e94ed9f8d9dc3c3d42cbfcd3fbc900dbd983d731e9eaea7a59a4411f9'),
-(35, 'mandeep@gmail.com', '4a27346e94ed9f8d9dc3c3d42cbfcd3fbc900dbd983d731e9eaea7a59a4411f9'),
-(36, 'mandeep@gmail.com', '4a27346e94ed9f8d9dc3c3d42cbfcd3fbc900dbd983d731e9eaea7a59a4411f9'),
-(37, 'mandeep@gmail.com', '4a27346e94ed9f8d9dc3c3d42cbfcd3fbc900dbd983d731e9eaea7a59a4411f9'),
-(38, 'mandeep@gmail.com', '4a27346e94ed9f8d9dc3c3d42cbfcd3fbc900dbd983d731e9eaea7a59a4411f9'),
-(39, 'mandeep@gmail.com', '4a27346e94ed9f8d9dc3c3d42cbfcd3fbc900dbd983d731e9eaea7a59a4411f9');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -131,7 +192,7 @@ CREATE TABLE IF NOT EXISTS `Strategy` (
   `SNo` int(100) NOT NULL AUTO_INCREMENT,
   `ProjectID` int(100) NOT NULL,
   `StrategyName` varchar(100) NOT NULL,
-  PRIMARY KEY (`SNo`),
+  PRIMARY KEY (`ProjectID`),
   UNIQUE KEY `SNo` (`SNo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -159,6 +220,19 @@ CREATE TABLE IF NOT EXISTS `TotalClasses` (
   `TotalClasses` int(30) NOT NULL,
   PRIMARY KEY (`ProjectID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `TotalClasses`
+--
+
+INSERT INTO `TotalClasses` (`ProjectID`, `TotalClasses`) VALUES
+(1, 2),
+(2, 3),
+(3, 3),
+(4, 2),
+(5, 3),
+(6, 5),
+(7, 5);
 
 -- --------------------------------------------------------
 
