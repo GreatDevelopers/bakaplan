@@ -61,6 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -195,10 +196,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot; Email ID &quot;</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="classPageStructureMaker.html#a3547027801e298307527f1e934787b13">InputField</a>(<span class="stringliteral">&quot;email&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a05541618feaaebe7a3f74b0bf8fa74b9">emailID</a>, emailID);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="classPageStructureMaker.html#a928ea6f84a8f7833c128034068a4b9a7">InputField</a>(<span class="stringliteral">&quot;email&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a05541618feaaebe7a3f74b0bf8fa74b9">emailID</a>, emailID);</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    cout &lt;&lt; brk &lt;&lt; brk;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot; Password &quot;</span>;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="classPageStructureMaker.html#a3547027801e298307527f1e934787b13">InputField</a>(<span class="stringliteral">&quot;password&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a318f819ef4663d7e5f40d91180093cb9">password</a>, password);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="classPageStructureMaker.html#a928ea6f84a8f7833c128034068a4b9a7">InputField</a>(<span class="stringliteral">&quot;password&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a318f819ef4663d7e5f40d91180093cb9">password</a>, password);</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    </div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    cout &lt;&lt; brk &lt;&lt; brk;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    </div>
@@ -241,15 +242,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    </div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot; Email ID &quot;</span>;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="classPageStructureMaker.html#a3547027801e298307527f1e934787b13">InputField</a>(<span class="stringliteral">&quot;text&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a05541618feaaebe7a3f74b0bf8fa74b9">emailID</a>, emailID);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="classPageStructureMaker.html#a928ea6f84a8f7833c128034068a4b9a7">InputField</a>(<span class="stringliteral">&quot;text&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a05541618feaaebe7a3f74b0bf8fa74b9">emailID</a>, emailID);</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    </div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    cout &lt;&lt; brk &lt;&lt; brk</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;         &lt;&lt; <span class="stringliteral">&quot; Password &quot;</span>;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="classPageStructureMaker.html#a3547027801e298307527f1e934787b13">InputField</a>(<span class="stringliteral">&quot;password&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a318f819ef4663d7e5f40d91180093cb9">password</a>, password);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="classPageStructureMaker.html#a928ea6f84a8f7833c128034068a4b9a7">InputField</a>(<span class="stringliteral">&quot;password&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a318f819ef4663d7e5f40d91180093cb9">password</a>, password);</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    </div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    cout &lt;&lt; brk &lt;&lt; brk</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;         &lt;&lt; <span class="stringliteral">&quot; Re-type Password &quot;</span>;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="classPageStructureMaker.html#a3547027801e298307527f1e934787b13">InputField</a>(<span class="stringliteral">&quot;password&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#acd50095ae8540a735bcd5787b904b06c">retypePassword</a>, password);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="classPageStructureMaker.html#a928ea6f84a8f7833c128034068a4b9a7">InputField</a>(<span class="stringliteral">&quot;password&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#acd50095ae8540a735bcd5787b904b06c">retypePassword</a>, password);</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    cout &lt;&lt; brk &lt;&lt; brk;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
@@ -331,7 +332,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 14 2013 23:57:16 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 17 2013 13:46:43 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

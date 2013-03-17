@@ -16,11 +16,18 @@ void \hyperlink{classDatabase_a958467134aa40db133cdf6d46ab52c86}{Select\-Query} 
 \item 
 void \hyperlink{classDatabase_a6fb9e249cb97830af86c00804bb209a2}{Select\-Column} (string query, vector$<$ string $>$ \&result)
 \item 
+void \hyperlink{classDatabase_abdca011c353c6760fc1ad31871ad88bf}{Select} (string \&result)
+\begin{DoxyCompactList}\small\item\em check select query is executed or not \end{DoxyCompactList}\item 
+void \hyperlink{classDatabase_af237df2de117cf94e23d288ad3345ca0}{Select\-Sum} (string column, string table, string project\-I\-D, string \&result)
+\item 
 void \hyperlink{classDatabase_a20f7ccadac8f3b67d4344f7da4594eda}{Select\-Project\-I\-D} (string \&project\-I\-D)
 \item 
 void \hyperlink{classDatabase_a7070d93bf44c5f90504944f54607b9b0}{Insert\-User} (string user\-Email\-I\-D, string user\-Password)
 \item 
 void \hyperlink{classDatabase_a63d8c1af7507b1dcdc81a411f9a0b4b4}{Insert\-Query} (string query)
+\item 
+\hypertarget{classDatabase_a1208df2b3a68342b506e952bb2b01b6f}{void {\bfseries Delete\-Query} (string query)}\label{classDatabase_a1208df2b3a68342b506e952bb2b01b6f}
+
 \item 
 void \hyperlink{classDatabase_a513326ea43b2455177731fbc92c4bf4f}{Insert\-Query} (string column, string value, string table)
 \item 
@@ -35,6 +42,8 @@ void \hyperlink{classDatabase_a45deae7ea496fccefb9bccd75ea5578a}{Insert\-Class\-
 void \hyperlink{classDatabase_a8e52c1b853b6f1d96cf7053f0268838d}{Insert\-Total\-Centres} (string project\-I\-D, string total\-Centre)
 \item 
 void \hyperlink{classDatabase_a8b248d14e1cb2fc4ba2c9da313f385cb}{Insert\-Room\-Detail} (string project\-I\-D, string centre\-Name, string room\-No, string rows, string columns)
+\item 
+void \hyperlink{classDatabase_aa33ead23a5fff6e369c739cac4e911a4}{Insert\-Roll\-No\-Detail} (string project\-I\-D, string class\-Name, string subject\-Code, string prefix, string start\-Roll\-No, string end\-Roll\-No, string not\-Included)
 \item 
 void \hyperlink{classDatabase_a6cd1b1181fb636aff93ba43f0fcd2764}{Insert\-Total\-Rooms} (string project\-I\-D, string centre\-Name, string totalrooms)
 \item 
@@ -108,7 +117,7 @@ Select last project Id of project name \hyperlink{classDatabase}{Database} Destr
 
 -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Class\-: \hyperlink{classDatabase}{Database} Method\-: \hyperlink{classDatabase}{Database} \-:\-: \hyperlink{classDatabase_a84d399a2ad58d69daab9b05330e1316d}{$\sim$\-Database()} Description\-: Destructor for closing database connectivity -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 401 of file database.\-cc.
+Definition at line 465 of file database.\-cc.
 
 
 
@@ -132,7 +141,7 @@ Insert into \hyperlink{classClassDetail}{Class\-Detail}
  Description\-: Inserting class detail into table \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 258 of file database.\-cc.
+Definition at line 299 of file database.\-cc.
 
 \hypertarget{classDatabase_a0a1ec932aafeef96637d5ee68ac7898b}{\index{Database@{Database}!Insert\-Exam\-Detail@{Insert\-Exam\-Detail}}
 \index{Insert\-Exam\-Detail@{Insert\-Exam\-Detail}!Database@{Database}}
@@ -153,7 +162,7 @@ Insert into exam detail
  Description\-: store data into exam detail \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 355 of file database.\-cc.
+Definition at line 419 of file database.\-cc.
 
 \hypertarget{classDatabase_aae19d9dac16779519f94cc68e29cb57d}{\index{Database@{Database}!Insert\-Project\-Name@{Insert\-Project\-Name}}
 \index{Insert\-Project\-Name@{Insert\-Project\-Name}!Database@{Database}}
@@ -171,7 +180,7 @@ Insert Project detail into Project\-Name table
  Description\-: Insert project name into Project\-Name table \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 217 of file database.\-cc.
+Definition at line 258 of file database.\-cc.
 
 \hypertarget{classDatabase_a63d8c1af7507b1dcdc81a411f9a0b4b4}{\index{Database@{Database}!Insert\-Query@{Insert\-Query}}
 \index{Insert\-Query@{Insert\-Query}!Database@{Database}}
@@ -188,7 +197,7 @@ Insert query with one argument
  Description\-: Insrting value in database \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 136 of file database.\-cc.
+Definition at line 169 of file database.\-cc.
 
 \hypertarget{classDatabase_a513326ea43b2455177731fbc92c4bf4f}{\index{Database@{Database}!Insert\-Query@{Insert\-Query}}
 \index{Insert\-Query@{Insert\-Query}!Database@{Database}}
@@ -207,7 +216,30 @@ Insert Query for adding value in one column
  Description\-: For inserting values in database \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 153 of file database.\-cc.
+Definition at line 194 of file database.\-cc.
+
+\hypertarget{classDatabase_aa33ead23a5fff6e369c739cac4e911a4}{\index{Database@{Database}!Insert\-Roll\-No\-Detail@{Insert\-Roll\-No\-Detail}}
+\index{Insert\-Roll\-No\-Detail@{Insert\-Roll\-No\-Detail}!Database@{Database}}
+\subsubsection[{Insert\-Roll\-No\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Insert\-Roll\-No\-Detail (
+\begin{DoxyParamCaption}
+\item[{string}]{project\-I\-D, }
+\item[{string}]{class\-Name, }
+\item[{string}]{subject\-Code, }
+\item[{string}]{prefix, }
+\item[{string}]{start\-Roll\-No, }
+\item[{string}]{end\-Roll\-No, }
+\item[{string}]{not\-Included}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_aa33ead23a5fff6e369c739cac4e911a4}
+Insert rollno details into Roll\-No\-Dtail table
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classDatabase}{Database} \par
+ Method\-: \hyperlink{classDatabase}{Database} \-:\-: \hyperlink{classDatabase_aa33ead23a5fff6e369c739cac4e911a4}{Insert\-Roll\-No\-Detail()} \par
+ Description\-: Insert roll no details into database \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 323 of file database.\-cc.
 
 \hypertarget{classDatabase_a8b248d14e1cb2fc4ba2c9da313f385cb}{\index{Database@{Database}!Insert\-Room\-Detail@{Insert\-Room\-Detail}}
 \index{Insert\-Room\-Detail@{Insert\-Room\-Detail}!Database@{Database}}
@@ -228,7 +260,7 @@ Insert into room\-Detail table
  Description\-: Inserting room detail into table \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 303 of file database.\-cc.
+Definition at line 367 of file database.\-cc.
 
 \hypertarget{classDatabase_a478f862bd338a92b13c2899bb4e28843}{\index{Database@{Database}!Insert\-Session@{Insert\-Session}}
 \index{Insert\-Session@{Insert\-Session}!Database@{Database}}
@@ -246,7 +278,7 @@ Insert into Session table
  Description\-: Inserting Session information in database \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 198 of file database.\-cc.
+Definition at line 239 of file database.\-cc.
 
 \hypertarget{classDatabase_a6015ae56eb561f579e573be709ef434c}{\index{Database@{Database}!Insert\-Strategy@{Insert\-Strategy}}
 \index{Insert\-Strategy@{Insert\-Strategy}!Database@{Database}}
@@ -264,7 +296,7 @@ Insert into strategy
  Description\-: Strategy value into table \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 382 of file database.\-cc.
+Definition at line 446 of file database.\-cc.
 
 \hypertarget{classDatabase_a8e52c1b853b6f1d96cf7053f0268838d}{\index{Database@{Database}!Insert\-Total\-Centres@{Insert\-Total\-Centres}}
 \index{Insert\-Total\-Centres@{Insert\-Total\-Centres}!Database@{Database}}
@@ -282,7 +314,7 @@ Insert into totalcentres
  Description\-: Inserting into table total centrres \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 282 of file database.\-cc.
+Definition at line 346 of file database.\-cc.
 
 \hypertarget{classDatabase_ad6af2dc859cda41dcbdad9cd51f5c38b}{\index{Database@{Database}!Insert\-Total\-Classes@{Insert\-Total\-Classes}}
 \index{Insert\-Total\-Classes@{Insert\-Total\-Classes}!Database@{Database}}
@@ -300,7 +332,7 @@ Insert Into Total\-Classes
  Description\-: Inserting total classes into table with project I\-D \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 237 of file database.\-cc.
+Definition at line 278 of file database.\-cc.
 
 \hypertarget{classDatabase_a6cd1b1181fb636aff93ba43f0fcd2764}{\index{Database@{Database}!Insert\-Total\-Rooms@{Insert\-Total\-Rooms}}
 \index{Insert\-Total\-Rooms@{Insert\-Total\-Rooms}!Database@{Database}}
@@ -319,7 +351,7 @@ Insert Into Total\-Rooms
  Description\-: Inserting into total rooms \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 331 of file database.\-cc.
+Definition at line 395 of file database.\-cc.
 
 \hypertarget{classDatabase_a7070d93bf44c5f90504944f54607b9b0}{\index{Database@{Database}!Insert\-User@{Insert\-User}}
 \index{Insert\-User@{Insert\-User}!Database@{Database}}
@@ -337,7 +369,29 @@ For inserting new user in database
  Description\-: Inserting new user details into database \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 176 of file database.\-cc.
+Definition at line 217 of file database.\-cc.
+
+\hypertarget{classDatabase_abdca011c353c6760fc1ad31871ad88bf}{\index{Database@{Database}!Select@{Select}}
+\index{Select@{Select}!Database@{Database}}
+\subsubsection[{Select}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Select (
+\begin{DoxyParamCaption}
+\item[{string \&}]{result}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_abdca011c353c6760fc1ad31871ad88bf}
+
+
+check select query is executed or not 
+
+Select query for project id
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 153 of file database.\-cc.
 
 \hypertarget{classDatabase_a6fb9e249cb97830af86c00804bb209a2}{\index{Database@{Database}!Select\-Column@{Select\-Column}}
 \index{Select\-Column@{Select\-Column}!Database@{Database}}
@@ -355,7 +409,7 @@ Seclect Column
  Description\-: Select column from table \par
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
-Definition at line 112 of file database.\-cc.
+Definition at line 129 of file database.\-cc.
 
 \hypertarget{classDatabase_a20f7ccadac8f3b67d4344f7da4594eda}{\index{Database@{Database}!Select\-Project\-I\-D@{Select\-Project\-I\-D}}
 \index{Select\-Project\-I\-D@{Select\-Project\-I\-D}!Database@{Database}}
@@ -406,6 +460,26 @@ Select query with where clause
  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
 
 Definition at line 79 of file database.\-cc.
+
+\hypertarget{classDatabase_af237df2de117cf94e23d288ad3345ca0}{\index{Database@{Database}!Select\-Sum@{Select\-Sum}}
+\index{Select\-Sum@{Select\-Sum}!Database@{Database}}
+\subsubsection[{Select\-Sum}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Select\-Sum (
+\begin{DoxyParamCaption}
+\item[{string}]{column, }
+\item[{string}]{table, }
+\item[{string}]{project\-I\-D, }
+\item[{string \&}]{result}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_af237df2de117cf94e23d288ad3345ca0}
+Select sum of column
+
+--------------------------------------------------------------------\par
+ Class\-: \hyperlink{classDatabase}{Database} \par
+ Method\-: \hyperlink{classDatabase}{Database} \-:\-: Select\-Sum(column, table, result) \par
+ Description\-: Select sum of total\-Subjects from \hyperlink{classClassDetail}{Class\-Detail} table \par
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 113 of file database.\-cc.
 
 
 

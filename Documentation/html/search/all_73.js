@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['select',['Select',['../classDatabase.html#abdca011c353c6760fc1ad31871ad88bf',1,'Database']]],
   ['selectcolumn',['SelectColumn',['../classDatabase.html#a6fb9e249cb97830af86c00804bb209a2',1,'Database']]],
   ['selectfieldend',['SelectFieldEnd',['../classPageStructureMaker.html#a81eb3cdbc840a4c8165cef87330ade09',1,'PageStructureMaker']]],
   ['selectfieldstart',['SelectFieldStart',['../classPageStructureMaker.html#ae8684bb66ca463e2f92e09c96137f9e3',1,'PageStructureMaker']]],
@@ -8,6 +9,7 @@ var searchData=
   ['selectoptionstart',['SelectOptionStart',['../classPageStructureMaker.html#a77856078e74dab25329132ea07466f92',1,'PageStructureMaker']]],
   ['selectprojectid',['SelectProjectID',['../classDatabase.html#a20f7ccadac8f3b67d4344f7da4594eda',1,'Database']]],
   ['selectquery',['SelectQuery',['../classDatabase.html#aec3d0f84e49a58a59f254c90193c1303',1,'Database::SelectQuery(string column, string table, vector&lt; string &gt; &amp;result)'],['../classDatabase.html#a958467134aa40db133cdf6d46ab52c86',1,'Database::SelectQuery(string column, string table, string &amp;result, string where)']]],
+  ['selectsum',['SelectSum',['../classDatabase.html#af237df2de117cf94e23d288ad3345ca0',1,'Database']]],
   ['sessionid',['sessionID',['../classPageLayout.html#ab796c4a12a3f9c089881085e508e2a1c',1,'PageLayout']]],
   ['setcookies',['SetCookies',['../classPageLayout.html#a449b4dde24cf3dc10299dc3c7bfc0e9c',1,'PageLayout']]],
   ['setfieldnames',['SetFieldNames',['../classInputFieldName.html#a5232eb098c6354207a97264cbc14a3fa',1,'InputFieldName']]],

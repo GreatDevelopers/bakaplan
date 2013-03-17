@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -98,11 +98,12 @@ Inheritance diagram for PageLayout:</div>
  <div class="center">
   <img src="classPageLayout.png" usemap="#PageLayout_map" alt=""/>
   <map id="PageLayout_map" name="PageLayout_map">
-<area href="classPageStructureMaker.html" alt="PageStructureMaker" shape="rect" coords="139,0,268,24"/>
-<area href="classInputDetail.html" alt="InputDetail" shape="rect" coords="139,112,268,136"/>
+<area href="classPageStructureMaker.html" alt="PageStructureMaker" shape="rect" coords="208,0,337,24"/>
+<area href="classInputDetail.html" alt="InputDetail" shape="rect" coords="208,112,337,136"/>
 <area href="classClassDetail.html" alt="ClassDetail" shape="rect" coords="0,168,129,192"/>
 <area href="classLogin.html" alt="Login" shape="rect" coords="139,168,268,192"/>
 <area href="classRollNoDetail.html" alt="RollNoDetail" shape="rect" coords="278,168,407,192"/>
+<area href="classRoomDetail.html" alt="RoomDetail" shape="rect" coords="417,168,546,192"/>
 <area href="classProjectDetail.html" alt="ProjectDetail" shape="rect" coords="139,224,268,248"/>
 </map>
  </div></div>
@@ -138,8 +139,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8578b1555ad2fc92a9efc7dbf7d1fe87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPageStructureMaker.html#a8578b1555ad2fc92a9efc7dbf7d1fe87">ListEnd</a> (string listType)</td></tr>
 <tr class="memitem:adf4116e526026edc3c8a3bcf96a7e929"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPageStructureMaker.html#adf4116e526026edc3c8a3bcf96a7e929">ListItem</a> (string listItem)</td></tr>
 <tr class="memitem:a8c0fae5b599182863066de56ae0cea42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPageStructureMaker.html#a8c0fae5b599182863066de56ae0cea42">Anchor</a> (string href, string target)</td></tr>
-<tr class="memitem:a3547027801e298307527f1e934787b13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPageStructureMaker.html#a3547027801e298307527f1e934787b13">InputField</a> (string type, string name, int nameNo, string value)</td></tr>
 <tr class="memitem:a928ea6f84a8f7833c128034068a4b9a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPageStructureMaker.html#a928ea6f84a8f7833c128034068a4b9a7">InputField</a> (string type, string name, string value)</td></tr>
+<tr class="memitem:a3547027801e298307527f1e934787b13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPageStructureMaker.html#a3547027801e298307527f1e934787b13">InputField</a> (string type, string name, int nameNo, string value)</td></tr>
+<tr class="memitem:ae49979cb49bf320cbdf244bce07fbf9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPageStructureMaker.html#ae49979cb49bf320cbdf244bce07fbf9e">Label</a> (string forField, string fieldName, string value)</td></tr>
 <tr class="memitem:ae8684bb66ca463e2f92e09c96137f9e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPageStructureMaker.html#ae8684bb66ca463e2f92e09c96137f9e3">SelectFieldStart</a> (string name)</td></tr>
 <tr class="memitem:a81eb3cdbc840a4c8165cef87330ade09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPageStructureMaker.html#a81eb3cdbc840a4c8165cef87330ade09">SelectFieldEnd</a> ()</td></tr>
 <tr class="memitem:a77856078e74dab25329132ea07466f92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPageStructureMaker.html#a77856078e74dab25329132ea07466f92">SelectOptionStart</a> (string value, string selected)</td></tr>
@@ -348,7 +350,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>brk</b></td></tr>
 <p>Button</p>
 <p>-------------------------------------------------------------------- Class: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> Method: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> :: Button(string id, string type, string className, string value) Description: Create button(next, submit, etc) -------------------------------------------------------------------- </p>
 
-<p>Definition at line <a class="el" href="pagestructure_8cc_source.html#l00436">436</a> of file <a class="el" href="pagestructure_8cc_source.html">pagestructure.cc</a>.</p>
+<p>Definition at line <a class="el" href="pagestructure_8cc_source.html#l00452">452</a> of file <a class="el" href="pagestructure_8cc_source.html">pagestructure.cc</a>.</p>
 
 </div>
 </div>
@@ -707,6 +709,54 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>brk</b></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a928ea6f84a8f7833c128034068a4b9a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PageStructureMaker::InputField </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Input field with 3 arguments</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;<br/>
+ Class: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> <br/>
+ Method: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> :: InputField(string type, string name, string value) <br/>
+ Description: For creating input field with 3 arguments <br/>
+ -------------------------------------------------------------------- </p>
+
+<p>Definition at line <a class="el" href="pagestructure_8cc_source.html#l00348">348</a> of file <a class="el" href="pagestructure_8cc_source.html">pagestructure.cc</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3547027801e298307527f1e934787b13"></a>
 <div class="memitem">
 <div class="memproto">
@@ -753,55 +803,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>brk</b></td></tr>
 <p>Input Field with 4 arguments</p>
 <p>-------------------------------------------------------------------- Class: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> Method: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> :: InputField(string type, string name, string value) Description: Create Input fields like text field, submit button, etc. -------------------------------------------------------------------- </p>
 
-<p>Definition at line <a class="el" href="pagestructure_8cc_source.html#l00333">333</a> of file <a class="el" href="pagestructure_8cc_source.html">pagestructure.cc</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a928ea6f84a8f7833c128034068a4b9a7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PageStructureMaker::InputField </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Input field with 3 arguments</p>
-<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;<br/>
- Class: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> <br/>
- Method: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> :: InputField(string type, string name, string value) <br/>
- Description: For creating input field with 3 arguments <br/>
- -------------------------------------------------------------------- </p>
-
-<p>Definition at line <a class="el" href="pagestructure_8cc_source.html#l00361">361</a> of file <a class="el" href="pagestructure_8cc_source.html">pagestructure.cc</a>.</p>
+<p>Definition at line <a class="el" href="pagestructure_8cc_source.html#l00368">368</a> of file <a class="el" href="pagestructure_8cc_source.html">pagestructure.cc</a>.</p>
 
 </div>
 </div>
@@ -830,6 +832,54 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>brk</b></td></tr>
 <p>-------------------------------------------------------------------- Class: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> Method: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> :: <a class="el" href="classPageStructureMaker.html#ac221d1169f4dbcef6adb00938919193d">Javascript(string src)</a> Description: Add external Javascript file -------------------------------------------------------------------- </p>
 
 <p>Definition at line <a class="el" href="pagestructure_8cc_source.html#l00153">153</a> of file <a class="el" href="pagestructure_8cc_source.html">pagestructure.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae49979cb49bf320cbdf244bce07fbf9e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PageStructureMaker::Label </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>forValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>fieldName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Label tag</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;<br/>
+ Class: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> <br/>
+ Method: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> :: Label(string forValue, string value) <br/>
+ Description: For adding label in html page <br/>
+ -------------------------------------------------------------------- </p>
+
+<p>Definition at line <a class="el" href="pagestructure_8cc_source.html#l00332">332</a> of file <a class="el" href="pagestructure_8cc_source.html">pagestructure.cc</a>.</p>
 
 </div>
 </div>
@@ -1014,7 +1064,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>brk</b></td></tr>
 <p>End Select Field</p>
 <p>-------------------------------------------------------------------- Class: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> Method: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> :: <a class="el" href="classPageStructureMaker.html#a81eb3cdbc840a4c8165cef87330ade09">SelectFieldEnd()</a> Description: Close select field -------------------------------------------------------------------- </p>
 
-<p>Definition at line <a class="el" href="pagestructure_8cc_source.html#l00392">392</a> of file <a class="el" href="pagestructure_8cc_source.html">pagestructure.cc</a>.</p>
+<p>Definition at line <a class="el" href="pagestructure_8cc_source.html#l00408">408</a> of file <a class="el" href="pagestructure_8cc_source.html">pagestructure.cc</a>.</p>
 
 </div>
 </div>
@@ -1042,7 +1092,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>brk</b></td></tr>
 <p>Select Field Start</p>
 <p>-------------------------------------------------------------------- Class: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> Method: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> :: <a class="el" href="classPageStructureMaker.html#ae8684bb66ca463e2f92e09c96137f9e3">SelectFieldStart(string name)</a> Description: Create Select Field -------------------------------------------------------------------- </p>
 
-<p>Definition at line <a class="el" href="pagestructure_8cc_source.html#l00379">379</a> of file <a class="el" href="pagestructure_8cc_source.html">pagestructure.cc</a>.</p>
+<p>Definition at line <a class="el" href="pagestructure_8cc_source.html#l00395">395</a> of file <a class="el" href="pagestructure_8cc_source.html">pagestructure.cc</a>.</p>
 
 </div>
 </div>
@@ -1069,7 +1119,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>brk</b></td></tr>
 <p>Selct Option End</p>
 <p>-------------------------------------------------------------------- Class: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> Method: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> :: <a class="el" href="classPageStructureMaker.html#a7682f479f7f1012d426ec9f9535def60">SelectOptionEnd()</a> Description: Close select option -------------------------------------------------------------------- </p>
 
-<p>Definition at line <a class="el" href="pagestructure_8cc_source.html#l00422">422</a> of file <a class="el" href="pagestructure_8cc_source.html">pagestructure.cc</a>.</p>
+<p>Definition at line <a class="el" href="pagestructure_8cc_source.html#l00438">438</a> of file <a class="el" href="pagestructure_8cc_source.html">pagestructure.cc</a>.</p>
 
 </div>
 </div>
@@ -1107,7 +1157,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>brk</b></td></tr>
 <p>Select Option Start</p>
 <p>-------------------------------------------------------------------- Class: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> Method: <a class="el" href="classPageStructureMaker.html">PageStructureMaker</a> :: SelectOptionStart(string value, string selected) Description: Options for select -------------------------------------------------------------------- </p>
 
-<p>Definition at line <a class="el" href="pagestructure_8cc_source.html#l00406">406</a> of file <a class="el" href="pagestructure_8cc_source.html">pagestructure.cc</a>.</p>
+<p>Definition at line <a class="el" href="pagestructure_8cc_source.html#l00422">422</a> of file <a class="el" href="pagestructure_8cc_source.html">pagestructure.cc</a>.</p>
 
 </div>
 </div>
@@ -1319,7 +1369,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>brk</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 14 2013 23:57:18 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 17 2013 13:46:46 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

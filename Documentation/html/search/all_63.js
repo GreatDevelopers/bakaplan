@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['centredetail_2dmain_2ecpp',['centredetail-main.cpp',['../centredetail-main_8cpp.html',1,'']]],
+  ['centredetailpage',['CentreDetailPage',['../classRoomDetail.html#aa5a287ce8a15bdcba4d1350c93362482',1,'RoomDetail']]],
   ['centrename',['centreName',['../classInputFieldName.html#a19c67f2d38cde97f856d4ca3639f4fc7',1,'InputFieldName']]],
   ['classdetail',['ClassDetail',['../classClassDetail.html',1,'ClassDetail'],['../classClassDetail.html#a70975c4ff964e21958e31f2020cdc643',1,'ClassDetail::ClassDetail()']]],
   ['classinfopage',['ClassInfoPage',['../classClassDetail.html#a509620b067879d20c329d1bb33d509d7',1,'ClassDetail']]],
