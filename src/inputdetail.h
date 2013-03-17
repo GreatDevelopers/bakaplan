@@ -60,7 +60,7 @@ class InputDetail : public PageLayout
 
 
     public:
-
+        Database data;
         InputDetail();       
         void Header(string titleName);
         void Footer();

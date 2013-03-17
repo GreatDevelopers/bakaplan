@@ -112,7 +112,6 @@ void ClassDetail :: TotalClasses()
     totalClasses = StringToInt(temp);
     
     database.InsertTotalClasses(projectID, IntToString(totalClasses));
-    emailID = readField.ReadFieldValue(fieldName.emailID);
 }
 
 /**
@@ -143,7 +142,6 @@ void ClassDetail :: TotalClassesPage()
     FormStart("totalclasses", "classinfo.html", "POST");
     
     InputField("hidden", fieldName.projectID, projectID);
-    InputField("hidden", fieldName.emailID, emailID);
     cout << startH1 << " Select Total Classes " << endH1 << brk;
     
     cout << " Total Classes ";
@@ -202,7 +200,6 @@ void ClassDetail :: ClassInfoPage()
     InputField("hidden", fieldName.totalClasses,
                IntToString(totalClasses)); 
     InputField("hidden", fieldName.projectID, projectID);
-    InputField("hidden", fieldName.emailID, emailID);
 
     cout << startH1 << "Enter Class Details" << endH1 << brk;
     TableStart("classdetails", "");

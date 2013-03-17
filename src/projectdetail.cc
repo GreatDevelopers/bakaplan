@@ -119,7 +119,6 @@ void ProjectDetail :: ProjectDetailPage()
     cout << brk;
 
     FormStart("projectdetail", "totalclasses.html", "POST");
-    InputField("hidden", fieldName.emailID, userEmailID);
 
     cout << startH1 << "Project Detail" << endH1 << brk;
 
