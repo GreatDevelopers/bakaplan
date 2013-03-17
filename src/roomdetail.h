@@ -64,9 +64,6 @@ class RoomDetail : public InputDetail
         /** Reading centre details */
         void ReadCentreDetail();
 
-        /** Read room detail */
-        void ReadRoomDetail();
-
         /** Total centre page */
         void TotalCentrePage();
 

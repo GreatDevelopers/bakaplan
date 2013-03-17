@@ -98,6 +98,9 @@ void RoomDetail :: ReadTotalCentre()
     totalCentre = StringToInt(temp);
 
     projectID = readField.ReadFieldValue(fieldName.projectID);
+
+    database.InsertTotalCentres(projectID, IntToString(totalCentre));
+
 }
 
 /**
@@ -122,21 +125,12 @@ void RoomDetail :: ReadCentreDetail()
         
         totalRoom[i] = StringToInt(readField.ReadFieldValue(
                             fieldName.totalRooms, j));
-        
+
+        database.InsertTotalRooms(projectID, centreName[i], 
+                                IntToString(totalRoom[i]));
     }
 
-}
 
-/**
- *--------------------------------------------------------------------\n
- *       Class:  RoomDetail \n
- *      Method:  RoomDetail :: ReadRoomDetail() \n
- * Description:  Read room details like rows, columns of room \n
- *--------------------------------------------------------------------
- */
-
-void RoomDetail :: ReadRoomDetail()
-{
 
 }
 
