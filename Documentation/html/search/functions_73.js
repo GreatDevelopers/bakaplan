@@ -14,5 +14,7 @@ var searchData=
   ['setfieldnames',['SetFieldNames',['../classInputFieldName.html#a5232eb098c6354207a97264cbc14a3fa',1,'InputFieldName']]],
   ['sethtmlvariables',['SetHTMLVariables',['../classPageStructureMaker.html#aaf78d67380c400cc0057c6519276f721',1,'PageStructureMaker']]],
   ['splitsubject',['SplitSubject',['../classRollNoDetail.html#ad4be41f8530ff63875abf393ba418cf8',1,'RollNoDetail']]],
+  ['strategy',['Strategy',['../classStrategy.html#a2021a15bbc4f0d13f7b92f8933db2235',1,'Strategy']]],
+  ['strategypage',['StrategyPage',['../classStrategy.html#ac3f851b75390a71e3a4c6dfd9b15dafb',1,'Strategy']]],
   ['stringtoint',['StringToInt',['../classInputDetail.html#aaf532dd61f0aee82b116fef2da8e821f',1,'InputDetail']]]
 ];

@@ -17,7 +17,11 @@ var searchData=
   ['splitsubject',['SplitSubject',['../classRollNoDetail.html#ad4be41f8530ff63875abf393ba418cf8',1,'RollNoDetail']]],
   ['starth1',['startH1',['../classPageStructureMaker.html#af41d4e21b808f5f8dc2c727f775b6fb2',1,'PageStructureMaker']]],
   ['startrollno',['startRollNo',['../classInputFieldName.html#a24baf5c915b4ee0fb8678e03adec043a',1,'InputFieldName']]],
+  ['strategy',['Strategy',['../classStrategy.html',1,'Strategy'],['../classStrategy.html#a2021a15bbc4f0d13f7b92f8933db2235',1,'Strategy::Strategy()']]],
+  ['strategy_2ecc',['strategy.cc',['../strategy_8cc.html',1,'']]],
+  ['strategy_2eh',['strategy.h',['../strategy_8h.html',1,'']]],
   ['strategychoice',['strategyChoice',['../classInputFieldName.html#a9a6b827d404cb279cc0ed836c069e4a9',1,'InputFieldName']]],
+  ['strategypage',['StrategyPage',['../classStrategy.html#ac3f851b75390a71e3a4c6dfd9b15dafb',1,'Strategy']]],
   ['stringtoint',['StringToInt',['../classInputDetail.html#aaf532dd61f0aee82b116fef2da8e821f',1,'InputDetail']]],
   ['subjectcode',['subjectCode',['../classInputFieldName.html#af1cc6871c33344c365e6e25ea482bd48',1,'InputFieldName']]],
   ['subjectname',['subjectName',['../classInputFieldName.html#a0614731b959afef6bb00f9fc957e7521',1,'InputFieldName']]]

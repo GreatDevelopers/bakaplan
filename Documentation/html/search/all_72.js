@@ -6,7 +6,7 @@ var searchData=
   ['readinputfield',['ReadInputField',['../classReadInputField.html',1,'ReadInputField'],['../classReadInputField.html#aae743343381035c28a3a0111fc353c7f',1,'ReadInputField::ReadInputField()']]],
   ['readlogindetail',['ReadLoginDetail',['../classLogin.html#ab5bc65de431f277f15a3b423ad915808',1,'Login']]],
   ['readrollnodetail',['ReadRollNoDetail',['../classRoomDetail.html#ac4c74e89ed980321c191f82aa6387901',1,'RoomDetail']]],
-  ['readroomdetail',['ReadRoomDetail',['../classRoomDetail.html#a083f5b6a45a9b5af660e06a5a107669a',1,'RoomDetail']]],
+  ['readroomdetail',['ReadRoomDetail',['../classStrategy.html#aeee82ea6d847063f98d178362b7354e9',1,'Strategy']]],
   ['readtotalcentre',['ReadTotalCentre',['../classRoomDetail.html#acbd3110cf47d810a680946274e6fdb15',1,'RoomDetail']]],
   ['registerpage',['RegisterPage',['../classLogin.html#a5c055a577da7141de9e7c65bce8d5786',1,'Login']]],
   ['retypepassword',['retypePassword',['../classInputFieldName.html#acd50095ae8540a735bcd5787b904b06c',1,'InputFieldName::retypePassword()'],['../classLogin.html#ade36f8943aafce470ef4b8353c79b2c6',1,'Login::retypePassword()']]],
