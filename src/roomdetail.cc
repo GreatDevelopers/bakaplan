@@ -53,37 +53,32 @@ void RoomDetail :: ReadRollNoDetail()
                        projectID, temp);
 
     totalCentre = StringToInt(temp);
-
-    cout << totalCentre << brk  << projectID;
-    j = 1;
-    cout << readField.ReadFieldValue(fieldName.prefix, j);
-
-    cout << readField.ReadFieldValue("ClassName1");//fieldName.className, j);
-
- //   cout << className[0];
-
-
+  
     for( i = 0; i < totalCentre; i++)
     {
         j = i + 1;
-
-   /*      className[i] = readField.ReadFieldValue(fieldName.className, 
-                                                j);
+       
+        className[i] = readField.ReadFieldValue(
+                                              fieldName.className, j);
 
         subjectCode[i] = readField.ReadFieldValue(
                                             fieldName.subjectCode, j);
 
         prefix[i] = readField.ReadFieldValue(fieldName.prefix, j);
-        startRollNo[i] = readField.ReadFieldValue(fieldName.startRollNo, j);
+
+        startRollNo[i] = readField.ReadFieldValue(
+                                            fieldName.startRollNo, j);
 
         endRollNo[i] = readField.ReadFieldValue(fieldName.endRollNo, 
                                                 j);
-        notIncluded[i] = readField.ReadFieldValue(fieldName.notIncluded, j);*/
-/* 
+
+        notIncluded[i] = readField.ReadFieldValue(
+                                            fieldName.notIncluded, j);
+  
         database.InsertRollNoDetail(projectID, className[i], 
                                     subjectCode[i], prefix[i], 
                                     startRollNo[i], endRollNo[i],
-                                    notIncluded[i]);*/
+                                    notIncluded[i]);
 
     }
 }
@@ -131,7 +126,7 @@ void RoomDetail :: ReadRoomDetail()
  *--------------------------------------------------------------------\n
  *       Class:  RoomDetail \n
  *      Method:  RoomDetail :: TotalCentrePage() \n
- * Description:  Page for taking i/p from user \n
+ * Description:  Page for taking i/p from user \nme
  *--------------------------------------------------------------------
  */
 
