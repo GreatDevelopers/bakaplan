@@ -96,18 +96,34 @@ void RoomDetail :: ReadTotalCentre()
     temp = readField.ReadFieldValue(fieldName.totalCentres);
 
     totalCentre = StringToInt(temp);
+
+    projectID = readField.ReadFieldValue(fieldName.projectID);
 }
 
 /**
  *--------------------------------------------------------------------\n
  *       Class:  RoomDetail \n
- *      Method:  RoomDetail :: ReadTotalRoom() \n
+ *      Method:  RoomDetail :: ReadCentreDetail() \n
  * Description:  Read total rooms in each cetre \n
  *--------------------------------------------------------------------
  */
 
-void RoomDetail :: ReadTotalRoom()
+void RoomDetail :: ReadCentreDetail()
 {
+    projectID = readField.ReadFieldValue(fieldName.projectID);
+    
+    totalCentre = StringToInt(readField.ReadFieldValue(
+                              fieldName.totalCentres));
+    
+    for(i = 0; i < totalCentre; i++)
+    {
+        j = i + 1;
+        centreName[i] = readField.ReadFieldValue(fieldName.centreName, j);
+        
+        totalRoom[i] = StringToInt(readField.ReadFieldValue(
+                            fieldName.totalRooms, j));
+        
+    }
 
 }
 
@@ -269,6 +285,72 @@ void RoomDetail :: CentreDetailPage()
 
 void RoomDetail :: RoomDetailPage()
 {
+    maxCentres = 5;
+    ContextType();
+
+    Header("Room Detail");
+    
+    DivStart("roomdetail", "");               /* (id, classname) */
+
+    LogoutLink();
+
+    ReadCentreDetail();
+    
+    cout << brk;
+
+    FormStart("roomdetail", "strategy.html", "POST");
+    
+    InputField("hidden", fieldName.projectID, projectID);
+
+    cout << startH1 << " Room Detail " << endH1 << brk;
+    
+    TableStart("roomdetail", "");
+   
+    cout << startTH << " Centre Name " << endTH
+         << startTH << " Room No. " << endTH
+         << startTH << " Rows " << endTH
+         << startTH << " Columns " << endTH;
+    k = 1;
+
+    for(i = 0; i < totalCentre; i++)
+    {
+        for( j = 0; j < totalRoom[i]; j++)
+        {
+            cout << startTR;
+            
+            cout << startTD;
+            cout << centreName[i];
+            InputField("hidden", fieldName.centreName, k, 
+                        centreName[i]);
+            cout << endTD;
+
+            cout << startTD;
+            InputField("text", fieldName.roomNo, k, "");
+            cout << endTD;
+
+            cout << startTD;
+            InputField("text", fieldName.rows, k, "");
+            cout << endTD;
+
+            cout << startTD;
+            InputField("text", fieldName.columns, k, "");
+            cout << endTD;
+
+            cout << endTR;
+            k++;
+        }
+    }
+    TableEnd();
+
+    cout << brk << brk;
+
+    Button("next", "submit", "btn", "NEXT");
+
+    FormEnd();
+    DivEnd();
+
+    Footer();
+
 
 }
 

@@ -47,7 +47,7 @@ class RoomDetail : public InputDetail
                notIncluded[MIN_SIZE];
          // for reading totalcentres
 
-         int totalCentre, totalRoom, maxCentres;
+         int totalCentre, totalRoom[MIN_SIZE], maxCentres;
          string rows[MIN_SIZE], columns[MIN_SIZE], 
                 centreName[MIN_SIZE];
 
@@ -61,8 +61,8 @@ class RoomDetail : public InputDetail
         /** Reading total centres */
         void ReadTotalCentre();
 
-        /** Reading total rooms */
-        void ReadTotalRoom();
+        /** Reading centre details */
+        void ReadCentreDetail();
 
         /** Read room detail */
         void ReadRoomDetail();
