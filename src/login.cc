@@ -199,7 +199,7 @@ void Login :: AddNewUser()
     }
     else
     {
-        if( retypePassword == userPassword )
+        if( retypePassword != userPassword )
         {
             msg = "Password doesn't match";
             RegisterPage( msg, userEmailID );
