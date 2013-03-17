@@ -36,12 +36,82 @@
 
 RollNoDetail :: RollNoDetail()
 {
-    tableHeading[0] = "Class Name";
-    tableHeading[1] = "Subject Code";
-    tableHeading[2] = "Prefix";
-    tableHeading[3] = "Start Roll No";
-    tableHeading[4] = "End Roll No";
-    tableHeading[5] = "Not Included";
+    i = 0;
+    tableHeading[i++] = "Class Name";
+    tableHeading[i++] = "Subject Code";
+    tableHeading[i++] = "Prefix";
+    tableHeading[i++] = "Start Roll No";
+    tableHeading[i++] = "End Roll No";
+    tableHeading[i++] = "Not Included";
+    
+    i = 0;
+    prefix[i++] = "IT";
+    prefix[i++] = "CSE";
+    prefix[i++] = "101";
+    prefix[i++] = "2001";
+    prefix[i++] = "E 11";
+    prefix[i++] = "MBA";
+    prefix[i++] = "Mtech";
+    prefix[i++] = "A";
+    prefix[i++] = "B";
+    prefix[i++] = "D1";
+    prefix[i++] = "P1";
+    prefix[i++] = "P2";
+    prefix[i++] = "P3";
+    prefix[i++] = "P4";
+    prefix[i++] = "P5";
+
+    i = 0;
+    startRollNo[i++] = "101";
+    startRollNo[i++] = "201";
+    startRollNo[i++] = "301";
+    startRollNo[i++] = "401";
+    startRollNo[i++] = "501";
+    startRollNo[i++] = "601";
+    startRollNo[i++] = "701";
+    startRollNo[i++] = "801";
+    startRollNo[i++] = "901";
+    startRollNo[i++] = "1001";
+    startRollNo[i++] = "1201";
+    startRollNo[i++] = "1301";
+    startRollNo[i++] = "1401";
+    startRollNo[i++] = "1501";
+    startRollNo[i++] = "1101";
+    
+    i = 0;
+    endRollNo[i++] = "110";
+    endRollNo[i++] = "210";
+    endRollNo[i++] = "310";
+    endRollNo[i++] = "410";
+    endRollNo[i++] = "510";
+    endRollNo[i++] = "610";
+    endRollNo[i++] = "710";
+    endRollNo[i++] = "810";
+    endRollNo[i++] = "910";
+    endRollNo[i++] = "1010";
+    endRollNo[i++] = "1110";
+    endRollNo[i++] = "1210";
+    endRollNo[i++] = "1310";
+    endRollNo[i++] = "1410";
+    endRollNo[i++] = "1510";
+
+    i = 0;
+    notIncluded[i++] = "105";
+    notIncluded[i++] = "206";
+    notIncluded[i++] = "305, 307";
+    notIncluded[i++] = "405";
+    notIncluded[i++] = "505";
+    notIncluded[i++] = "605";
+    notIncluded[i++] = "";
+    notIncluded[i++] = "802-805";
+    notIncluded[i++] = "905";
+    notIncluded[i++] = "1005";
+    notIncluded[i++] = "1105";
+    notIncluded[i++] = "1205";
+    notIncluded[i++] = "0";
+    notIncluded[i++] = "1405";
+    notIncluded[i++] = "1505";
+
 }
 
 /**
@@ -196,19 +266,21 @@ void RollNoDetail :: RollNoDetailPage()
             cout << endTD;
             
             cout << startTD;
-            InputField("text", fieldName.prefix, (k), "");
+            InputField("text", fieldName.prefix, (k), prefix[k-1]);
             cout << endTD;
 
             cout << startTD;
-            InputField("text", fieldName.startRollNo, (k), "");
+            InputField("text", fieldName.startRollNo, k, 
+                        startRollNo[k-1]);
             cout << endTD;
             
             cout << startTD;
-            InputField("text", fieldName.endRollNo, (k), "");
+            InputField("text", fieldName.endRollNo, k, endRollNo[k-1]);
             cout << endTD; 
 
             cout << startTD;
-            InputField("text", fieldName.notIncluded, (k), "");
+            InputField("text", fieldName.notIncluded, k, 
+                        notIncluded[k-1]);
             cout << endTD;
             cout << endTR;
             k++;
