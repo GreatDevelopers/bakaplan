@@ -86,6 +86,7 @@ M_ROLLNO            =   rollnodetail-main.cpp
 M_TOTALCENTRE       =   totalcentre-main.cpp
 M_CENTREDETAIL      =   centredetail-main.cpp
 M_ROOMDETAIL        =   roomdetail-main.cpp
+M_GETCOOKIE         =   getcookies.cpp
 
 # ====================================================================
 #	Variables for object files
@@ -119,6 +120,7 @@ O_ROLLNO_MAIN       =   rollnodetail-main.o
 O_TOTALCENTRE_MAIN  =   totalcentre-main.o
 O_CENTREDETAIL_MAIN =   centredetail-main.o
 O_ROOMDETAIL_MAIN   =   roomdetail-main.o
+O_GETCOOKIE_MAIN    =   getcookies.o
 
 # ====================================================================
 #	Linking Variables (L_EXE_FILENAME)
@@ -147,6 +149,7 @@ L_ROLLNO        =   $(L_ROLLNODETAIL) $(O_ROLLNO_MAIN)
 L_TOTALCENTRE   =   $(L_ROOMDETAIL) $(O_TOTALCENTRE_MAIN)
 L_CENTREDETAIL  =   $(L_ROOMDETAIL) $(O_CENTREDETAIL_MAIN)
 L_ROOM          =   $(L_ROOMDETAIL) $(O_ROOMDETAIL_MAIN)
+L_GETCOOKIE     =   $(L_LOGIN) $(O_GETCOOKIE_MAIN)
 
 # ====================================================================
 # 	O/P file names(exe) (E_FILENAME)
@@ -164,12 +167,13 @@ E_ROLLNO        =   rollnodetail.html
 E_TOTALCENTRE   =   totalcentre.html
 E_CENTREDETAIL  =   centredetail.html
 E_ROOM          =   roomdetail.html
+E_GETCOOKIE     =   getcookie.html
 
 # ====================================================================
 #	Main target (1st target)
 # ====================================================================
 
-all: $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO) $(E_PROJECTDETAIL) $(E_REGISTER) $(E_NEWUSER) $(E_LOGOUT) $(E_ROLLNO) $(E_TOTALCENTRE) $(E_CENTREDETAIL) $(E_ROOM)
+all: $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO) $(E_PROJECTDETAIL) $(E_REGISTER) $(E_NEWUSER) $(E_ROLLNO) $(E_TOTALCENTRE) $(E_CENTREDETAIL) $(E_ROOM) $(E_GETCOOKIE) $(E_LOGOUT)
 
 # ====================================================================
 #	targets for compiling .cc or .cpp files
@@ -252,6 +256,9 @@ $(O_CENTREDETAIL_MAIN): $(M_CENTREDETAIL) $(H_ROOMDETAIL)
 $(O_ROOMDETAIL_MAIN): $(M_ROOMDETAIL) $(H_ROOMDETAIL)
 	$(CC) $(CFLAG) $(M_ROOMDETAIL) $(LMYSQL)
 
+$(O_GETCOOKIE_MAIN): $(M_GETCOOKIE) $(H_LOGIN)
+	$(CC) $(CFLAG) $(M_GETCOOKIE) $(LMYSQL)
+
 # ====================================================================
 # 	Targets of o/p files(exe)
 # ====================================================================
@@ -268,8 +275,8 @@ $(E_REGISTER): $(L_REGISTER)
 $(E_NEWUSER): $(L_NEWUSER)
 	$(CC) $(OFLAG) $(E_NEWUSER) $(L_NEWUSER) $(LCGICC) $(LMYSQL)
 
-$(E_LOGOUT): $(L_LOGOUT)
-	$(CC) $(OFLAG) $(E_LOGOUT) $(L_LOGOUT) $(LCGICC) $(LMYSQL)
+$(E_LOGOUT): $(L_GETCOOKIE)
+	$(CC) $(OFLAG) $(E_LOGOUT) $(L_GETCOOKIE) $(LCGICC) $(LMYSQL)
 
 $(E_PROJECTDETAIL): $(L_PROJECTDETAIL_M)
 	$(CC) $(OFLAG) $(E_PROJECTDETAIL) $(L_PROJECTDETAIL_M) $(LCGICC) \
@@ -296,6 +303,9 @@ $(E_CENTREDETAIL): $(L_CENTREDETAIL)
 $(E_ROOM): $(L_ROOM)
 	$(CC) $(OFLAG) $(E_ROOM) $(L_ROOM) $(LCGICC) \
 	$(LMYSQL)
+
+$(E_GETCOOKIE): $(L_GETCOOKIE)
+	$(CC) $(OFLAG) $(E_GETCOOKIE) $(L_GETCOOKIE) $(LCGICC) $(LMYSQL)
 
 # ====================================================================
 # 	Clean .o, .html files
