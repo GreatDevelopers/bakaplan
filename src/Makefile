@@ -51,6 +51,7 @@ H_PROJECTDETAIL     =   projectdetail.h $(H_LOGIN)
 H_CLASSDETAILS      =   classdetail.h $(H_DETAILS)
 H_ROLNODETAIL       =   rollnodetail.h $(H_DETAILS)
 H_ROOMDETAIL        =   roomdetail.h $(H_DETAILS)
+H_STRATEGY          =   strategy.h $(H_DETAILS)
 
 # ====================================================================
 #	Variables for definition files (CC_FILENAME)
@@ -69,6 +70,7 @@ CC_PROJECTDETAIL    =   projectdetail.cc
 CC_CLASSDETAILS	    =   classdetail.cc
 CC_ROLLNODETAIL     =   rollnodetail.cc
 CC_ROOMDETAIL       =   roomdetail.cc
+CC_STRATEGY         =   strategy.cc
 
 # ====================================================================
 #	Variables for main method files (M_FILENAME)
@@ -87,6 +89,7 @@ M_TOTALCENTRE       =   totalcentre-main.cpp
 M_CENTREDETAIL      =   centredetail-main.cpp
 M_ROOMDETAIL        =   roomdetail-main.cpp
 M_GETCOOKIE         =   getcookies.cpp
+M_STRATEGY          =   strategy-main.cpp
 
 # ====================================================================
 #	Variables for object files
@@ -105,6 +108,7 @@ O_PROJECTDETAIL		=	projectdetail.o
 O_CLASSDETAILS      =   classdetail.o
 O_ROLLNODETAIL      =   rollnodetail.o
 O_ROOMDETAIL        =   roomdetail.o
+O_STRATEGY          =   strategy.o
 
 # Object files of main files
 
@@ -121,6 +125,7 @@ O_TOTALCENTRE_MAIN  =   totalcentre-main.o
 O_CENTREDETAIL_MAIN =   centredetail-main.o
 O_ROOMDETAIL_MAIN   =   roomdetail-main.o
 O_GETCOOKIE_MAIN    =   getcookies.o
+O_STRATEGY_MAIN     =   strategy-main.o
 
 # ====================================================================
 #	Linking Variables (L_EXE_FILENAME)
@@ -134,6 +139,7 @@ L_PROJECTDETAIL =   $(L_LOGIN) $(O_PROJECTDETAIL)
 L_CLASSDETAILS	=	$(L_DETAILS) $(O_CLASSDETAILS)
 L_ROLLNODETAIL	=	$(L_DETAILS) $(O_ROLLNODETAIL)
 L_ROOMDETAIL    =   $(L_DETAILS) $(O_ROOMDETAIL)
+L_STRATEGY      =   $(L_DETAILS) $(O_STRATEGY)
 
 # Linking of main files
 
@@ -150,6 +156,7 @@ L_TOTALCENTRE   =   $(L_ROOMDETAIL) $(O_TOTALCENTRE_MAIN)
 L_CENTREDETAIL  =   $(L_ROOMDETAIL) $(O_CENTREDETAIL_MAIN)
 L_ROOM          =   $(L_ROOMDETAIL) $(O_ROOMDETAIL_MAIN)
 L_GETCOOKIE     =   $(L_LOGIN) $(O_GETCOOKIE_MAIN)
+L_STRATEGY_M    =   $(L_STRATEGY) $(O_STRATEGY_MAIN)
 
 # ====================================================================
 # 	O/P file names(exe) (E_FILENAME)
@@ -168,12 +175,13 @@ E_TOTALCENTRE   =   totalcentre.html
 E_CENTREDETAIL  =   centredetail.html
 E_ROOM          =   roomdetail.html
 E_GETCOOKIE     =   getcookie.html
+E_STRATEGY      =   strategy.html
 
 # ====================================================================
 #	Main target (1st target)
 # ====================================================================
 
-all: $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO) $(E_PROJECTDETAIL) $(E_REGISTER) $(E_NEWUSER) $(E_ROLLNO) $(E_TOTALCENTRE) $(E_CENTREDETAIL) $(E_ROOM) $(E_GETCOOKIE) $(E_LOGOUT)
+all: $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO) $(E_PROJECTDETAIL) $(E_REGISTER) $(E_NEWUSER) $(E_ROLLNO) $(E_TOTALCENTRE) $(E_CENTREDETAIL) $(E_ROOM) $(E_GETCOOKIE) $(E_LOGOUT) $(E_STRATEGY)
 
 # ====================================================================
 #	targets for compiling .cc or .cpp files
@@ -218,6 +226,9 @@ $(O_ROLLNODETAIL): $(CC_ROLLNODETAIL) $(H_ROLLNODETAIL)
 $(O_ROOMDETAIL): $(CC_ROOMDETAIL) $(H_ROOMDETAIL)
 	$(CC) $(CFLAG) $(CC_ROOMDETAIL) $(LMYSQL)
 
+$(O_STRATEGY): $(CC_STRATEGY) $(H_STRATEGY)
+	$(CC) $(CFLAG) $(CC_STRATEGY) $(LMYSQL)
+
 # Compiling Mian files
 
 $(O_JAVASCRIPT_MAIN): $(M_JAVASCRIPT) $(H_JAVASCRIPT)
@@ -258,6 +269,9 @@ $(O_ROOMDETAIL_MAIN): $(M_ROOMDETAIL) $(H_ROOMDETAIL)
 
 $(O_GETCOOKIE_MAIN): $(M_GETCOOKIE) $(H_LOGIN)
 	$(CC) $(CFLAG) $(M_GETCOOKIE) $(LMYSQL)
+
+$(O_STRATEGY_MAIN): $(M_STRATEGY) $(H_STRATEGY)
+	$(CC) $(CFLAG) $(M_STRATEGY) $(LMYSQL)
 
 # ====================================================================
 # 	Targets of o/p files(exe)
@@ -306,6 +320,9 @@ $(E_ROOM): $(L_ROOM)
 
 $(E_GETCOOKIE): $(L_GETCOOKIE)
 	$(CC) $(OFLAG) $(E_GETCOOKIE) $(L_GETCOOKIE) $(LCGICC) $(LMYSQL)
+
+$(E_STRATEGY): $(L_STRATEGY_M)
+	$(CC) $(OFLAG) $(E_STRATEGY) $(L_STRATEGY_M) $(LCGICC) $(LMYSQL)
 
 # ====================================================================
 # 	Clean .o, .html files
