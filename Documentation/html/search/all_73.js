@@ -18,6 +18,7 @@ var searchData=
   ['starth1',['startH1',['../classPageStructureMaker.html#af41d4e21b808f5f8dc2c727f775b6fb2',1,'PageStructureMaker']]],
   ['startrollno',['startRollNo',['../classInputFieldName.html#a24baf5c915b4ee0fb8678e03adec043a',1,'InputFieldName']]],
   ['strategy',['Strategy',['../classStrategy.html',1,'Strategy'],['../classStrategy.html#a2021a15bbc4f0d13f7b92f8933db2235',1,'Strategy::Strategy()']]],
+  ['strategy_2dmain_2ecpp',['strategy-main.cpp',['../strategy-main_8cpp.html',1,'']]],
   ['strategy_2ecc',['strategy.cc',['../strategy_8cc.html',1,'']]],
   ['strategy_2eh',['strategy.h',['../strategy_8h.html',1,'']]],
   ['strategychoice',['strategyChoice',['../classInputFieldName.html#a9a6b827d404cb279cc0ed836c069e4a9',1,'InputFieldName']]],
