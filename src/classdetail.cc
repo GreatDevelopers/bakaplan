@@ -125,7 +125,6 @@ void ClassDetail :: TotalClasses()
 void ClassDetail :: TotalClassesPage()
 {
 
-    ProjectDetail();
     ContextType();
     
     //cout << "project ID" << projectID << endl;
@@ -135,6 +134,8 @@ void ClassDetail :: TotalClassesPage()
 
     LogoutLink();
     
+    ProjectDetail();
+
     cout << brk;
 
     //cout << readField.ReadCookie("SessionID");
