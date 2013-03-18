@@ -34,7 +34,8 @@ class Strategy : public InputDetail
         string centreName[MIN_SIZE],
                roomNo[MIN_SIZE],
                rows[MIN_SIZE],
-               columns[MIN_SIZE];
+               columns[MIN_SIZE],
+               strategyName[MIN_SIZE];
 
         int totalRooms;
 

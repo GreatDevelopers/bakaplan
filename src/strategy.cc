@@ -31,6 +31,12 @@
 Strategy :: Strategy()
 {
     // constructor
+    i = 0;
+    strategyName[i++] = "Cushy";
+    strategyName[i++] = "Flip-Flop";
+    strategyName[i++] = "Triplet";
+    strategyName[i++] = "Quadlet";
+    strategyName[i++] = "Serpentine";
 }
 
 /**
@@ -49,8 +55,6 @@ void Strategy :: ReadRoomDetail()
 
     totalRooms = StringToInt(temp);
 
-    cout << totalRooms;
-    
     for(i = 0; i < totalRooms; i++)
     {
         j = i + 1;
@@ -92,14 +96,71 @@ void Strategy :: StrategyPage()
  
     ReadRoomDetail();
     
+    InputField("hidden", fieldName.projectID, projectID);
+
+    cout << startH1 << " Strategy " << endH1 << brk;
+
+    cout << "Strategy : "<< startB << strategyName[0] << endB 
+         << brk << brk;
+
+    TableStart("strategy", "");
     
-    
+    for(i = 1; i <= 4; i++)
+    {
+        cout << startTH << "&nbsp Row " << i << "&nbsp " << endTH;
+    }
+
+//         << startTH << strategyName[2] << endTH;
+    cout << startTR 
+         << startTD << " A " << endTD
+         << startTD << " A " << endTD
+         << startTD << " A " << endTD
+         << startTD << " B " << endTD
+         << endTR
+         << startTR 
+         << startTD << " A " << endTD
+         << startTD << " A " << endTD
+         << startTD << " A " << endTD
+         << startTD << " B " << endTD
+         << endTR
+         << startTR 
+         << startTD << " A " << endTD
+         << startTD << " A " << endTD
+         << startTD << " B " << endTD
+         << startTD << " B " << endTD
+         << endTR
+         << startTR 
+         << startTD << " A " << endTD
+         << startTD << " A " << endTD
+         << startTD << " B " << endTD
+         << startTD << " B " << endTD
+         << endTR;
+
+    TableEnd();
+
+    cout << brk << " Select Strategy ";
+
+    SelectFieldStart(temp);
+        
+    for(j = 0; j < 1; j++)
+    {
+        temp = IntToString(j);
+        if(j == 3)
+            SelectOptionStart(temp, "Y");
+        else
+            SelectOptionStart(temp, "n");
+        cout << strategyName[j];
+        SelectOptionEnd();
+    }
+
+    SelectFieldEnd();
+
+    cout << brk << brk;
+
+    Button("next", "submit", "btn", "NEXT");
+
     FormEnd();
-
-    
-
     DivEnd();
-
     Footer();
 }
 
