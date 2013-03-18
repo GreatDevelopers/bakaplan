@@ -24,12 +24,14 @@ CLEAN			=	cd src && make clean && cd ..
 COPY_HOMEPAGE	=	cp -r BaKaPlan ~/public_html/
 COPY_DOC 		=	cp -r Documentation ~/public_html/BaKaPlan/
 COPY			=	$(COPY_HOMEPAGE) && $(COPY_DOC)
+INSTALL         =   $(COPY)
 
 # Target Names
 
 T_MAKE_SRC		=	make_src
 T_COPY			=	copy
 T_CLEAN			=	clean
+T_INSTALL       =   install
 
 # ====================================================================
 #	Main target (1st target)
@@ -40,6 +42,9 @@ all: $(T_MAKE_SRC)
 # ====================================================================
 # 	Targets
 # ====================================================================
+
+$(T_INSTALL):
+	$(INSTALL) && $(MAKE)
 
 $(T_MAKE_SRC): 
 	$(MAKE)
