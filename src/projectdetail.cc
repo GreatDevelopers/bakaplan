@@ -124,7 +124,7 @@ void ProjectDetail :: ProjectDetailPage()
 
     cout << " Project Name ";
     InputField("text", fieldName.projectName, "Project Name");
-
+    InputField("hidden", fieldName.emailID, userEmailID);
     cout << brk << brk;
 
     Button("next", "submit", "btn", "NEXT");
