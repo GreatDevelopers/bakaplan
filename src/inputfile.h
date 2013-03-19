@@ -32,19 +32,41 @@ class InputFile
 
         InputDetail input;
         ofstream outfile;
+
         string pID,                      /**< starting of file name */
                fileName,            /**< file name for opening file */
                inputFileName[MIN_SIZE];             /**< File names */
+
         int i, j, k;                         /**< looping variables */
 
-    public:
+        int totalClasses, totalCentres, totalRooms;
+        vector<int> totalSubjects;
 
+        vector<string> temp,                /**< Temporary variable */
+                       className,                  /**< Class Names */
+                       subjectCode,               /**< Subejct Code */
+                       subjectName;               /**< subject Name */
+
+    public:
+        /** Constructor*/
         InputFile();
+
+        /** For creating input files */
         void Input(string projectID);
+
+        /** create RollNo detail file */
         void RollNoDetail(string projectID);
+
+        /** create Class detail file */
         void ClassDetail(string projectID);
+
+        /** create roomdetail I/P file */
         void RoomDetail(string projectID);
+
+        /** create strategy file */
         void Strategy(string projectID);
+
+        /** Destructor */
         ~InputFile();
 };
 

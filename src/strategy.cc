@@ -54,7 +54,8 @@ void Strategy :: ReadRoomDetail()
     database.SelectSum("TotalRooms", "TotalRooms", projectID, temp);
 
     totalRooms = StringToInt(temp);
-
+    cout << totalRooms;
+   
     for(i = 0; i < totalRooms; i++)
     {
         j = i + 1;
@@ -95,7 +96,8 @@ void Strategy :: StrategyPage()
     FormStart("strategy", "validation.html", "POST");
  
     ReadRoomDetail();
-    
+   // InputFile inputFile;
+    //inputFile.ClassDetail(projectID);
     InputField("hidden", fieldName.projectID, projectID);
 
     cout << startH1 << " Strategy " << endH1 << brk;

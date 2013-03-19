@@ -58,6 +58,8 @@ class RollNoDetail : public InputDetail
 
         /// Reading class details from previous page using cgicc
         void ReadClassDetail();
+
+        /** For creating input file class detail */
         void WriteClassDetail();
 
         /** spliting subject name and subject codes */

@@ -56,8 +56,7 @@ class InputDetail : public PageLayout
                emailID,                               /**< Email id */
                projectName;                       /**< Project Name */
 
-        // For class detail
-
+        string fileName;            /**< file name for opening file */
 
     public:
         Database data;

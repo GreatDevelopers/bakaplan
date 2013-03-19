@@ -18,8 +18,8 @@
  *  Include inputdetail.h file for basic variables and functions
  */
 
-//#include "inputdetail.h"
-#include "inputfile.h"
+#include "inputdetail.h"
+//#include "inputfile.h"
 
 /**
  *      \class  Strategy
@@ -39,7 +39,7 @@ class Strategy : public InputDetail
 
         int totalRooms;
         
-        InputFile inputfile();
+//        InputFile inputFile;
 
     public:
         /** Constructor */

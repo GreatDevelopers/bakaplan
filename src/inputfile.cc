@@ -44,7 +44,10 @@ InputFile :: InputFile()
 
 void InputFile :: ClassDetail(string projectID)
 {
-
+    input.data.SelectWhereProjectID("TotalClasses", "TotalClasses",
+                                    projectID, temp);
+    totalClasses = input.StringToInt(temp[0]);
+    cout << totalClasses;
 }
 
 /**

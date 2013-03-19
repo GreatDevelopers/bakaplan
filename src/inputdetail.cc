@@ -36,7 +36,7 @@
 
 InputDetail :: InputDetail()
 {
-
+    // constructor
 }
 
 /**

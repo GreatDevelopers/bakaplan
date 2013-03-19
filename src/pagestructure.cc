@@ -350,8 +350,8 @@ void PageStructureMaker :: InputField(string type, string name,
 {
     cout << "<input type=\"" << type << "\" name=\"" << name;
     cout << "\"" << " value = \"" << value << "\" " 
-         << " onfocus = \"OnFocus(this.value, this.name, \"" << value
-         << "\")\""
+         //<< " onfocus = \"OnFocus(this.value, this.name, \"" << value
+         //<< "\")\""
          << ">" << endl;
 }
 

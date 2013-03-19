@@ -167,6 +167,35 @@ void RollNoDetail :: ReadClassDetail()
                                    IntToString(totalSubjects[i]), 
                                    subName[i], subCode[i]);
     }
+
+    WriteClassDetail();
+}
+
+/**
+ *      \class  RollNoDetail
+ *      \fn     RollNoDetail :: WriteClassDetail()
+ *      \brief  For creating I/P file of class details
+ */
+
+void RollNoDetail :: WriteClassDetail()
+{
+    fileName  = FOLDER;
+    fileName += PID + projectID + CLASS_DETAILS_IN;
+    outFile.open(fileName.c_str());
+
+    outFile << totalClasses << endl;
+
+    for(i = 0; i < totalClasses; i++)
+    {
+        
+        outFile << className[i] << endl
+                << totalSubjects[i] << endl
+                << subName[i] << endl
+                << subCode[i] << endl;
+
+    }
+
+    outFile.close();
 }
 
 /**

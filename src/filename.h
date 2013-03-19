@@ -21,21 +21,22 @@
  *  Constant Names of I/p and O/P files
  *------------------------------------------------------------------*/
 
-const int FILES_SIZE = 35;
+const int FILE_SIZE = 35;
 
 /**-------------------------------------------------------------------
  *  Input File Names
  *------------------------------------------------------------------*/
-
-const char CLASS_DETAILS_IN[FILES_SIZE]    =   "class-details.in";
-const char TOTAL_FIELDS[FILES_SIZE]        =   "total-fields.txt";
-const char ROLLNO_DETAILS_IN[FILES_SIZE]   =   "rollno-details.in";
-const char ROOM_DETAILS_IN[FILES_SIZE]     =   "room-details.in";
-const char STRATEGY_IN[FILES_SIZE]         =   "strategy.in";     
-const char EXAM_DETAILS_IN[FILES_SIZE]     =   "exam-details.in";
+const char FOLDER[FILE_SIZE] =   "input/";
+const char PID[FILE_SIZE]   =   "PID";        /**< Project ID */
+const char CLASS_DETAILS_IN[FILE_SIZE]    =   "-class-details.in";
+const char TOTAL_FIELDS[FILE_SIZE]        =   "-total-fields.txt";
+const char ROLLNO_DETAILS_IN[FILE_SIZE]   =   "-rollno-details.in";
+const char ROOM_DETAILS_IN[FILE_SIZE]     =   "-room-details.in";
+const char STRATEGY_IN[FILE_SIZE]         =   "-strategy.in";     
+const char EXAM_DETAILS_IN[FILE_SIZE]     =   "-exam-details.in";
 
 /**-------------------------------------------------------------------
  *  Output File Names
  *------------------------------------------------------------------*/
 
-const char VALIDATION_OUT[FILES_SIZE]      =   "validation.out";
+const char VALIDATION_OUT[FILE_SIZE]      =   "-validation.out";

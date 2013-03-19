@@ -27,6 +27,7 @@
 
 int main(void)
 {
+    //InputFile inputFile;
     Strategy strategy;
     strategy.StrategyPage();
 
