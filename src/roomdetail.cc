@@ -52,9 +52,9 @@ void RoomDetail :: ReadRollNoDetail()
     database.SelectSum("TotalSubjects", "ClassDetails", 
                        projectID, temp);
 
-    totalCentre = StringToInt(temp);
+    totalRollNo = StringToInt(temp);
   
-    for( i = 0; i < totalCentre; i++)
+    for( i = 0; i < totalRollNo; i++)
     {
         j = i + 1;
        
@@ -81,8 +81,33 @@ void RoomDetail :: ReadRollNoDetail()
                                     notIncluded[i]);
 
     }
+    
+    WriteRollNoDetail();
 }
-        
+
+/**
+ *      \class  RoomDetail
+ *      \fn     RoomDetail :: WriteRollNoDetail()
+ *      \brief  Creating I/P file roll no detail
+ */
+
+void RoomDetail :: WriteRollNoDetail()
+{
+    fileName  = FOLDER;
+    fileName += PID + projectID + ROLLNO_DETAILS_IN;
+
+    outFile.open(fileName.c_str());
+
+    for(i = 0; i < totalRollNo; i++)
+    {
+        outFile << prefix[i] << endl
+                << startRollNo[i] << "-" << endRollNo[i] << endl
+                << notIncluded[i] << endl;
+    }
+
+    outFile.close();
+}
+      
 /**
  *--------------------------------------------------------------------\n
  *       Class:  RoomDetail \n

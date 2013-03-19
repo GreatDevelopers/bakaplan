@@ -57,6 +57,9 @@ class RoomDetail : public InputDetail
         
         /** Reading RollNo detail */
         void ReadRollNoDetail();
+
+        /** Write Roll no detail in I/P file */
+        void WriteRollNoDetail();
         
         /** Reading total centres */
         void ReadTotalCentre();
