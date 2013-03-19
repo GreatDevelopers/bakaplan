@@ -72,6 +72,71 @@ void Strategy :: ReadRoomDetail()
                                   rows[i], columns[i]);
     }
 
+    WriteRoomDetail();
+
+}
+
+/**
+ *      \class  Strategy
+ *      \fn     Strategy :: WriteRoomDetail()
+ *      \brief  Writing I/P filr for room detail
+ */
+
+void Strategy :: WriteRoomDetail()
+{
+    fileName  = FOLDER;
+    fileName += PID + projectID + ROOM_DETAILS_IN;
+
+    temp  = "Select TotalCentres from TotalCentres where ";
+    temp += "ProjectID = " + projectID + ";";
+
+    database.SelectColumn(temp, vecTemp);
+
+    int totalCentre = StringToInt(vecTemp[0]);
+
+    string centreNames[totalCentre];
+    int totalRoom[totalCentre];
+
+    temp  = "Select TotalRooms from TotalRooms where ";
+    temp += "ProjectID = " + projectID + ";";
+    vector<string> vec;
+    database.SelectColumn(temp, vec);
+
+    for(unsigned int s = 0; s < vec.size(); s++)
+    {
+        totalRoom[s] = StringToInt(vec[s]);
+    }
+
+    temp  = "Select CentreName from TotalRooms where ";
+    temp += "ProjectID = " + projectID + ";";
+
+    database.SelectColumn(temp, vecTemp);
+
+    outFile.open(fileName.c_str());
+
+    for(unsigned int s = 0; s < vecTemp.size()-1; s++)
+    {
+        centreNames[s] = vecTemp[s+1];
+    }
+    
+    outFile << totalCentre << endl;
+
+    for(i = 0; i < totalCentre; i++)
+    {
+        outFile << centreNames[i] << endl
+                << totalRoom[i] << endl;
+        for(j = 0; j < totalRooms; j++)
+        {
+            if( centreName[j] == centreNames[i])
+            {
+                outFile << roomNo[j] << endl
+                        << rows[j] << " " << columns[j] 
+                        << endl;
+            }
+        }
+    }
+
+    outFile.close();
 }
 
 /**

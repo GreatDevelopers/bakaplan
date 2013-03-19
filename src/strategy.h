@@ -48,6 +48,9 @@ class Strategy : public InputDetail
         /** Reading room details and storing them into database */
         void ReadRoomDetail();
 
+        /** Writing room detail into file as I/p File  */
+        void WriteRoomDetail();
+
         /** strategy page */
         void StrategyPage();
     

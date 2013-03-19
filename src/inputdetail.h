@@ -58,6 +58,8 @@ class InputDetail : public PageLayout
 
         string fileName;            /**< file name for opening file */
 
+        vector<string> vecTemp;    /**< string Vector temporary use */
+
     public:
         Database data;
         InputDetail();       
