@@ -51,7 +51,6 @@ H_PROJECTDETAIL     =   projectdetail.h $(H_LOGIN)
 H_CLASSDETAILS      =   classdetail.h $(H_DETAILS)
 H_ROLNODETAIL       =   rollnodetail.h $(H_DETAILS)
 H_ROOMDETAIL        =   roomdetail.h $(H_DETAILS)
-H_INPUTFILE         =   inputfile.h $(H_DETAILS)
 H_STRATEGY          =   strategy.h $(H_DETAILS) #$(H_INPUTFILE)
 
 # ====================================================================
@@ -72,7 +71,6 @@ CC_CLASSDETAILS	    =   classdetail.cc
 CC_ROLLNODETAIL     =   rollnodetail.cc
 CC_ROOMDETAIL       =   roomdetail.cc
 CC_STRATEGY         =   strategy.cc
-CC_INPUTFILE        =   inputfile.cc
 
 # ====================================================================
 #	Variables for main method files (M_FILENAME)
@@ -111,7 +109,6 @@ O_CLASSDETAILS      =   classdetail.o
 O_ROLLNODETAIL      =   rollnodetail.o
 O_ROOMDETAIL        =   roomdetail.o
 O_STRATEGY          =   strategy.o
-O_INPUTFILE         =   inputfile.o
 
 # Object files of main files
 
@@ -142,8 +139,7 @@ L_PROJECTDETAIL =   $(L_LOGIN) $(O_PROJECTDETAIL)
 L_CLASSDETAILS	=	$(L_DETAILS) $(O_CLASSDETAILS)
 L_ROLLNODETAIL	=	$(L_DETAILS) $(O_ROLLNODETAIL)
 L_ROOMDETAIL    =   $(L_DETAILS) $(O_ROOMDETAIL)
-L_INPUTFILE     =   $(L_DETAILS) $(O_INPUTFILE)
-L_STRATEGY      =   $(L_DETAILS) $(O_STRATEGY) #$(O_INPUTFILE)
+L_STRATEGY      =   $(L_DETAILS) $(O_STRATEGY)
 
 # Linking of main files
 
@@ -232,9 +228,6 @@ $(O_ROOMDETAIL): $(CC_ROOMDETAIL) $(H_ROOMDETAIL)
 
 $(O_STRATEGY): $(CC_STRATEGY) $(H_STRATEGY)
 	$(CC) $(CFLAG) $(CC_STRATEGY) $(LMYSQL)
-
-$(O_INPUTFILE): $(CC_INPURFILE) $(H_INPUTFILE)
-	$(CC) $(CFLAG) $(CC_INPUTFILE) $(LMYSQL)
 
 # Compiling Mian files
 
