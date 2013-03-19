@@ -189,9 +189,12 @@ void RollNoDetail :: WriteClassDetail()
     {
         
         outFile << className[i] << endl
-                << totalSubjects[i] << endl
-                << subName[i] << endl
-                << subCode[i] << endl;
+                << totalSubjects[i] << endl;
+        for(j = 0; j < totalSubjects[i]; j++)
+        {
+            outFile << subjectName[i][j] << endl
+                    << subjectCode[i][j] << endl;
+        }
 
     }
 
