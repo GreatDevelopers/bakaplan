@@ -11,3 +11,4 @@ src/*.js
 src/*.html
 src/getcookie
 src/SeatPlan
+*.in
