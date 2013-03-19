@@ -45,14 +45,14 @@ H_PAGELAYOUT        =   pagelayout.h $(H_PAGESTUCTURE)
 H_INPUTFIELDNAMES   =   inputfieldname.h $(H_HEADER)
 H_READINPUTFIELDS   =   readinputfield.h $(H_HEADER) $(H_CGICC)
 H_FIELD             =   $(H_INPUTFIELDNAMES) $(H_READINPUTFIELDS)
-H_DETAILS           =   inputdetail.h $(H_PAGELAYOUT) $(H_FIELD)
+H_DETAILS           =   inputdetail.h $(H_PAGELAYOUT) $(H_FIELD) $(H_FILENAMES)
 H_LOGIN             =   login.h $(H_DETAILS)
 H_PROJECTDETAIL     =   projectdetail.h $(H_LOGIN)
 H_CLASSDETAILS      =   classdetail.h $(H_DETAILS)
 H_ROLNODETAIL       =   rollnodetail.h $(H_DETAILS)
 H_ROOMDETAIL        =   roomdetail.h $(H_DETAILS)
 H_INPUTFILE         =   inputfile.h $(H_DETAILS)
-H_STRATEGY          =   strategy.h $(H_INPUTFILE)
+H_STRATEGY          =   strategy.h $(H_DETAILS) #$(H_INPUTFILE)
 
 # ====================================================================
 #	Variables for definition files (CC_FILENAME)
@@ -143,7 +143,7 @@ L_CLASSDETAILS	=	$(L_DETAILS) $(O_CLASSDETAILS)
 L_ROLLNODETAIL	=	$(L_DETAILS) $(O_ROLLNODETAIL)
 L_ROOMDETAIL    =   $(L_DETAILS) $(O_ROOMDETAIL)
 L_INPUTFILE     =   $(L_DETAILS) $(O_INPUTFILE)
-L_STRATEGY      =   $(L_INPUTFILE) $(O_STRATEGY)
+L_STRATEGY      =   $(L_DETAILS) $(O_STRATEGY) #$(O_INPUTFILE)
 
 # Linking of main files
 
