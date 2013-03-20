@@ -21,5 +21,10 @@
  *  declare and define constant values
  *------------------------------------------------------------------*/
 
-const int MIN_SIZE = 50;
-const int MAX_SIZE = 70;
+#ifndef CONSTANT_H
+#define CONSTANT_H
+
+const int MIN_SIZE = 25;
+const int MAX_SIZE = 150;
+
+#endif
