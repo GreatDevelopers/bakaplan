@@ -93,7 +93,24 @@ void RoomDetail :: ReadRollNoDetail()
 
 void RoomDetail :: WriteRollNoDetail()
 {
-    fileName  = FOLDER;
+    for(i = 0; i < totalRollNo; i++)
+    {
+        int size = notIncluded[i].size() + 1;
+        char largchar[size];
+        string s = "";
+        j = 0; 
+        strcpy(largchar, notIncluded[i].c_str());
+        char* chars_array = strtok(largchar, " ");
+        while(chars_array)
+        {
+            s += chars_array;
+            chars_array = strtok(NULL, " ");
+         
+         }
+         notIncluded[i] = s;
+    }
+
+    fileName  = INPUT_FOLDER;
     fileName += PID + projectID + ROLLNO_DETAILS_IN;
 
     outFile.open(fileName.c_str());
