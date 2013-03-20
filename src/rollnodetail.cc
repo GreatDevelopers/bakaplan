@@ -60,6 +60,7 @@ RollNoDetail :: RollNoDetail()
     prefix[i++] = "P3";
     prefix[i++] = "P4";
     prefix[i++] = "P5";
+    prefix[i++] = "P6";
 
     i = 0;
     startRollNo[i++] = "101";
@@ -72,11 +73,12 @@ RollNoDetail :: RollNoDetail()
     startRollNo[i++] = "801";
     startRollNo[i++] = "901";
     startRollNo[i++] = "1001";
+    startRollNo[i++] = "1101";
     startRollNo[i++] = "1201";
     startRollNo[i++] = "1301";
     startRollNo[i++] = "1401";
     startRollNo[i++] = "1501";
-    startRollNo[i++] = "1101";
+    startRollNo[i++] = "1601";
     
     i = 0;
     endRollNo[i++] = "110";
@@ -94,6 +96,7 @@ RollNoDetail :: RollNoDetail()
     endRollNo[i++] = "1310";
     endRollNo[i++] = "1410";
     endRollNo[i++] = "1510";
+    endRollNo[i++] = "1610"
 
     i = 0;
     notIncluded[i++] = "105";
