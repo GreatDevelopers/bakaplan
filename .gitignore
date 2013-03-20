@@ -11,4 +11,5 @@ src/*.js
 src/*.html
 src/getcookie
 src/SeatPlan
+src/backend/*.o
 *.in
