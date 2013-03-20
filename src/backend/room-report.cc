@@ -148,10 +148,24 @@ void RoomReport :: writeSeatPlan(string file)
     outfile.close();
 }
 
-void RoomReport :: Main()
+void RoomReport :: Main(string pID)
 {
-    readInputRollNo(Input_Rollno_out);
-    readSeatPlan(SeatPlan_out);
-    readExamDetails(Input_ExamDetails);
-    writeSeatPlan(SeatPlan_HTMLFile);
+    projectID = pID;
+
+    fileName  = OUTPUT_FOLDER;
+    fileName += PID + projectID + INPUT_ROLLNO_OUT;
+
+    readInputRollNo(fileName);
+
+    fileName  = OUTPUT_FOLDER;
+    fileName += PID + projectID + SEATPLAN_OUT;
+
+    readSeatPlan(fileName);
+
+    fileName  = INPUT_FOLDER;
+    fileName += PID + projectID + EXAM_DETAIL_IN;
+
+    readExamDetails(fileName);
+
+    writeSeatPlan(SEATPLAN_HTML_FILE);
 }

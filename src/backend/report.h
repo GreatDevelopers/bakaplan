@@ -9,15 +9,19 @@ class RoomReport : public SeatPlan
             total_subject[MIN_SIZE];
     
     public:
+        RoomReport(){}
         void readInputRollNo(string);
         void readSeatPlan(string);
         void readExamDetails(string);
         void writeSeatPlan(string);
-        void Main();
+        void Main(string);
+        ~RoomReport(){}
 };
 
 class BranchReport : public RoomReport
 {
     public:
+        BranchReport(){}
         void Main();
+        ~BranchReport(){}
 };
