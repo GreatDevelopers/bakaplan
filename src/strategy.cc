@@ -20,6 +20,7 @@
  *  Include strategy.h 
  */
 #include "strategy.h"
+#include "backend/subject-wise-rollno.h"
 
 /**
  *      \class  Strategy
@@ -54,7 +55,6 @@ void Strategy :: ReadRoomDetail()
     database.SelectSum("TotalRooms", "TotalRooms", projectID, temp);
 
     totalRooms = StringToInt(temp);
-    cout << totalRooms;
    
     for(i = 0; i < totalRooms; i++)
     {
@@ -84,7 +84,7 @@ void Strategy :: ReadRoomDetail()
 
 void Strategy :: WriteRoomDetail()
 {
-    fileName  = FOLDER;
+    fileName  = INPUT_FOLDER;
     fileName += PID + projectID + ROOM_DETAILS_IN;
 
     temp  = "Select TotalCentres from TotalCentres where ";
@@ -161,8 +161,10 @@ void Strategy :: StrategyPage()
     FormStart("strategy", "validation.html", "POST");
  
     ReadRoomDetail();
-   // InputFile inputFile;
-    //inputFile.ClassDetail(projectID);
+    string pID = projectID;
+    SubjectWiseRollNo rollNo;
+    rollNo.Main(pID);
+    
     InputField("hidden", fieldName.projectID, projectID);
 
     cout << startH1 << " Strategy " << endH1 << brk;
@@ -207,14 +209,14 @@ void Strategy :: StrategyPage()
 
     cout << brk << " Select Strategy ";
 
-    SelectFieldStart(temp);
+    SelectFieldStart(fieldName.strategyChoice);
         
-    for(j = 0; j < 1; j++)
+    for(j = 0; j < 5; j++)
     {
-        temp = IntToString(j);
-        if(j == 3)
-            SelectOptionStart(temp, "Y");
-        else
+        temp = IntToString((j + 1));
+/*        if(j == 3)
+           SelectOptionStart(temp, "Y");
+        else*/
             SelectOptionStart(temp, "n");
         cout << strategyName[j];
         SelectOptionEnd();

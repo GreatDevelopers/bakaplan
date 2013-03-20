@@ -18,7 +18,7 @@
  *  Include strategy.h header file 
  */
 #include "strategy.h"
-
+//#include "backend/subject-wise-rollno.h"
 
 /**
  *  Main method for creating object and calling StrategyPage()
@@ -27,7 +27,7 @@
 
 int main(void)
 {
-    //InputFile inputFile;
+    
     Strategy strategy;
     strategy.StrategyPage();
 
