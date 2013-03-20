@@ -58,7 +58,11 @@ H_CLASSDETAILS      =   classdetail.h $(H_DETAILS)
 H_ROLNODETAIL       =   rollnodetail.h $(H_DETAILS)
 H_ROOMDETAIL        =   roomdetail.h $(H_DETAILS)
 H_SUBJECT_RNO       =   backend/subject-wise-rollno.h
-H_STRATEGY          =   strategy.h $(H_DETAILS) $(H_SUBJECT_RNO) 
+H_ARRANGE_RNO       =   backend/arrange-rollno.h
+H_READ_INPUT        =   backend/read-input.h
+H_EXPAND_RNO        =   backend/expand-rollno.h
+H_SUBEJECT          =   $(H_READ_INPUT) $(H_ARRANGE_RNO) $(H_EXPAND_RNO) $(H_SUBJECT_RNO)
+H_STRATEGY          =   strategy.h $(H_DETAILS) $(H_SUBJECT) 
 H_VALIDATION        =   validation.h $(H_DETAILS)
 
 # ====================================================================
@@ -124,6 +128,8 @@ O_SUBJECT_RNO       =   backend/subject-wise-rollno.o
 O_ARRANGE_RNO       =   backend/arrange-rollno.o
 O_EXPAND_RNO        =   backend/expand-rollno.o
 O_READ_INPUT        =   backend/read-input.o
+O_STRATEGY_BACKEND  =   backend/strategy.o
+O_SEATPLAN          =   backend/seatplan.o $(O_STRATEGY_BACKEND)
 
 # Object files of main files
 
@@ -157,7 +163,7 @@ L_ROLLNODETAIL	=	$(L_DETAILS) $(O_ROLLNODETAIL)
 L_ROOMDETAIL    =   $(L_DETAILS) $(O_ROOMDETAIL)
 L_SUBJECT       =   $(O_READ_INPUT) $(O_EXPAND_RNO) $(O_ARRANGE_RNO) $(O_SUBJECT_RNO)
 L_STRATEGY      =   $(L_DETAILS) $(O_STRATEGY) $(L_SUBJECT)
-L_VALIDATION    =   $(L_DETAILS) $(O_VALIDATION)
+L_VALIDATION    =   $(L_DETAILS) $(O_VALIDATION) $(O_SEATPLAN)
 
 # Linking of main files
 
