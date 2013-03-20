@@ -96,7 +96,7 @@ RollNoDetail :: RollNoDetail()
     endRollNo[i++] = "1310";
     endRollNo[i++] = "1410";
     endRollNo[i++] = "1510";
-    endRollNo[i++] = "1610"
+    endRollNo[i++] = "1610";
 
     i = 0;
     notIncluded[i++] = "105";
