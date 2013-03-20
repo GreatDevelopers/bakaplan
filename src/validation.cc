@@ -57,6 +57,8 @@ void Validation :: WriteStrategyDetail()
 {
     fileName  = INPUT_FOLDER;
     fileName += PID + projectID + STRATEGY_IN;
+    
+    strategy.Main(projectID);
 
     outFile.open(fileName.c_str());
 

@@ -18,6 +18,7 @@
  *  Include inputdetail.h file 
  */
 #include "inputdetail.h"
+#include "backend/strategy.h"
 
 /**
  *      \class  Validation
@@ -30,6 +31,7 @@ class Validation : public InputDetail
     protected:
 
         string strategyChoice;
+        Strategy strategy;
 
     public:
 
