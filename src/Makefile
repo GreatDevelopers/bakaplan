@@ -64,6 +64,7 @@ H_EXPAND_RNO        =   backend/expand-rollno.h
 H_SUBEJECT          =   $(H_READ_INPUT) $(H_ARRANGE_RNO) $(H_EXPAND_RNO) $(H_SUBJECT_RNO)
 H_STRATEGY          =   strategy.h $(H_DETAILS) $(H_SUBJECT) 
 H_VALIDATION        =   validation.h $(H_DETAILS)
+H_EXAMDETAIL        =   examdetail.h $(H_DETAILS)
 
 # ====================================================================
 #	Variables for definition files (CC_FILENAME)
@@ -84,6 +85,7 @@ CC_ROLLNODETAIL     =   rollnodetail.cc
 CC_ROOMDETAIL       =   roomdetail.cc
 CC_STRATEGY         =   strategy.cc
 CC_VALIDATION       =   validation.cc
+CC_EXAMDETAIL       =   examdetail.cc
 
 # ====================================================================
 #	Variables for main method files (M_FILENAME)
@@ -104,6 +106,7 @@ M_ROOMDETAIL        =   roomdetail-main.cpp
 M_GETCOOKIE         =   getcookies.cpp
 M_STRATEGY          =   strategy-main.cpp
 M_VALIDATION        =   validation-main.cpp
+M_EXAMDETAIL        =   examdetail-main.cpp
 
 # ====================================================================
 #	Variables for object files
@@ -130,6 +133,7 @@ O_EXPAND_RNO        =   backend/expand-rollno.o
 O_READ_INPUT        =   backend/read-input.o
 O_STRATEGY_BACKEND  =   backend/strategy.o
 O_SEATPLAN          =   backend/seatplan.o $(O_STRATEGY_BACKEND)
+O_EXAMDETAIL        =   examdetail.o
 
 # Object files of main files
 
@@ -148,6 +152,7 @@ O_ROOMDETAIL_MAIN   =   roomdetail-main.o
 O_GETCOOKIE_MAIN    =   getcookies.o
 O_STRATEGY_MAIN     =   strategy-main.o
 O_VALIDATION_MAIN   =   validation-main.o
+O_EXAMDETAIL_MAIN   =   examdetail-main.o
 
 # ====================================================================
 #	Linking Variables (L_EXE_FILENAME)
@@ -164,6 +169,7 @@ L_ROOMDETAIL    =   $(L_DETAILS) $(O_ROOMDETAIL)
 L_SUBJECT       =   $(O_READ_INPUT) $(O_EXPAND_RNO) $(O_ARRANGE_RNO) $(O_SUBJECT_RNO)
 L_STRATEGY      =   $(L_DETAILS) $(O_STRATEGY) $(L_SUBJECT)
 L_VALIDATION    =   $(L_DETAILS) $(O_VALIDATION) $(O_SEATPLAN)
+L_EXAMDETAIL    =   $(L_DETAILS) $(O_EXAMDETAIL) 
 
 # Linking of main files
 
@@ -182,6 +188,7 @@ L_ROOM          =   $(L_ROOMDETAIL) $(O_ROOMDETAIL_MAIN)
 L_GETCOOKIE     =   $(L_LOGIN) $(O_GETCOOKIE_MAIN)
 L_STRATEGY_M    =   $(L_STRATEGY) $(O_STRATEGY_MAIN)
 L_VALID         =   $(L_VALIDATION) $(O_VALIDATION_MAIN)
+L_EXAM          =   $(L_EXAMDETAIL) $(O_EXAMDETAIL_MAIN)
 
 # ====================================================================
 # 	O/P file names(exe) (E_FILENAME)
@@ -202,12 +209,13 @@ E_ROOM          =   roomdetail.html
 E_GETCOOKIE     =   getcookie.html
 E_STRATEGY      =   strategy.html
 E_VALIDATION    =   validation.html
+E_EXAMDETAIL    =   examdetail.html
 
 # ====================================================================
 #	Main target (1st target)
 # ====================================================================
 
-all: back $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO) $(E_PROJECTDETAIL) $(E_REGISTER) $(E_NEWUSER) $(E_ROLLNO) $(E_TOTALCENTRE) $(E_CENTREDETAIL) $(E_ROOM) $(E_GETCOOKIE) $(E_LOGOUT) $(E_STRATEGY) $(E_VALIDATION)
+all: back $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO) $(E_PROJECTDETAIL) $(E_REGISTER) $(E_NEWUSER) $(E_ROLLNO) $(E_TOTALCENTRE) $(E_CENTREDETAIL) $(E_ROOM) $(E_GETCOOKIE) $(E_LOGOUT) $(E_STRATEGY) $(E_VALIDATION) $(E_EXAMDETAIL)
 
 # ====================================================================
 #   Target for compiling files in backend folder
@@ -265,6 +273,9 @@ $(O_STRATEGY): $(CC_STRATEGY) $(H_STRATEGY)
 $(O_VALIDATION): $(CC_VALIDATION) $(H_VALIDATION)
 	$(CC) $(CFLAG) $(CC_VALIDATION) $(LMYSQL)
 
+$(O_EXAMDETAIL): $(CC_EXAMDETAIL) $(H_EXAMDETAIL)
+	$(CC) $(CFLAG) $(CC_EXAMDETAIL) $(LMYSQL)
+
 # Compiling Mian files
 
 $(O_JAVASCRIPT_MAIN): $(M_JAVASCRIPT) $(H_JAVASCRIPT)
@@ -311,6 +322,9 @@ $(O_STRATEGY_MAIN): $(M_STRATEGY) $(H_STRATEGY)
 
 $(O_VALIDATION_MAIN): $(M_VALIDATION) $(H_VALIDATION)
 	$(CC) $(CFLAG) $(M_VALIDATION) $(LMYSQL)
+
+$(O_EXAMDETAIL_MAIN): $(M_EXAMDETAIL) $(H_EXAMDETAIL)
+	$(CC) $(CFLAG) $(M_EXAMDETAIL) $(LMYSQL)
 
 # ====================================================================
 # 	Targets of o/p files(exe)
@@ -366,6 +380,9 @@ $(E_STRATEGY): $(L_STRATEGY_M)
 
 $(E_VALIDATION): $(L_VALID)
 	$(CC) $(OFLAG) $(E_VALIDATION) $(L_VALID) $(LCGICC) $(LMYSQL)
+
+$(E_EXAMDETAIL): $(L_EXAM)
+	$(CC) $(OFLAG) $(E_EXAMDETAIL) $(L_EXAM) $(LCGICC) $(LMYSQL)
 
 # ====================================================================
 # 	Clean .o, .html files
