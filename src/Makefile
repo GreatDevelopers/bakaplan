@@ -29,12 +29,18 @@ LCGICC  =   -lcgicc     		         # cgicc lib flag
 LMYSQL  =   -L/usr/include/mysql -lmysqlclient -I/usr/include/mysql
 
 # ====================================================================
+#   Variables for running make file in backend folder
+# ====================================================================
+
+BACKEND = cd backend && make && cd ..
+
+# ====================================================================
 #   Variables for header files (H_HEADER_FILE_NAME)
 # ====================================================================
 
 H_MD5               =   md5.h
 H_CONSTANTS         =   constant.h
-H_FILENAMES	        =   filename.h
+H_FILENAMES	        =   filename.h $(H_CONSTANTS)
 H_HEADER            =   header.h
 H_CGICC             =   cgicc.h
 H_DATABASE_DETAIL   =   database-detail.h
@@ -51,7 +57,9 @@ H_PROJECTDETAIL     =   projectdetail.h $(H_LOGIN)
 H_CLASSDETAILS      =   classdetail.h $(H_DETAILS)
 H_ROLNODETAIL       =   rollnodetail.h $(H_DETAILS)
 H_ROOMDETAIL        =   roomdetail.h $(H_DETAILS)
-H_STRATEGY          =   strategy.h $(H_DETAILS) #$(H_INPUTFILE)
+H_SUBJECT_RNO       =   backend/subject-wise-rollno.h
+H_STRATEGY          =   strategy.h $(H_DETAILS) $(H_SUBJECT_RNO) 
+H_VALIDATION        =   validation.h $(H_DETAILS)
 
 # ====================================================================
 #	Variables for definition files (CC_FILENAME)
@@ -71,6 +79,7 @@ CC_CLASSDETAILS	    =   classdetail.cc
 CC_ROLLNODETAIL     =   rollnodetail.cc
 CC_ROOMDETAIL       =   roomdetail.cc
 CC_STRATEGY         =   strategy.cc
+CC_VALIDATION       =   validation.cc
 
 # ====================================================================
 #	Variables for main method files (M_FILENAME)
@@ -90,6 +99,7 @@ M_CENTREDETAIL      =   centredetail-main.cpp
 M_ROOMDETAIL        =   roomdetail-main.cpp
 M_GETCOOKIE         =   getcookies.cpp
 M_STRATEGY          =   strategy-main.cpp
+M_VALIDATION        =   validation-main.cpp
 
 # ====================================================================
 #	Variables for object files
@@ -109,6 +119,11 @@ O_CLASSDETAILS      =   classdetail.o
 O_ROLLNODETAIL      =   rollnodetail.o
 O_ROOMDETAIL        =   roomdetail.o
 O_STRATEGY          =   strategy.o
+O_VALIDATION        =   validation.o
+O_SUBJECT_RNO       =   backend/subject-wise-rollno.o
+O_ARRANGE_RNO       =   backend/arrange-rollno.o
+O_EXPAND_RNO        =   backend/expand-rollno.o
+O_READ_INPUT        =   backend/read-input.o
 
 # Object files of main files
 
@@ -126,6 +141,7 @@ O_CENTREDETAIL_MAIN =   centredetail-main.o
 O_ROOMDETAIL_MAIN   =   roomdetail-main.o
 O_GETCOOKIE_MAIN    =   getcookies.o
 O_STRATEGY_MAIN     =   strategy-main.o
+O_VALIDATION_MAIN   =   validation-main.o
 
 # ====================================================================
 #	Linking Variables (L_EXE_FILENAME)
@@ -139,7 +155,9 @@ L_PROJECTDETAIL =   $(L_LOGIN) $(O_PROJECTDETAIL)
 L_CLASSDETAILS	=	$(L_DETAILS) $(O_CLASSDETAILS)
 L_ROLLNODETAIL	=	$(L_DETAILS) $(O_ROLLNODETAIL)
 L_ROOMDETAIL    =   $(L_DETAILS) $(O_ROOMDETAIL)
-L_STRATEGY      =   $(L_DETAILS) $(O_STRATEGY)
+L_SUBJECT       =   $(O_READ_INPUT) $(O_EXPAND_RNO) $(O_ARRANGE_RNO) $(O_SUBJECT_RNO)
+L_STRATEGY      =   $(L_DETAILS) $(O_STRATEGY) $(L_SUBJECT)
+L_VALIDATION    =   $(L_DETAILS) $(O_VALIDATION)
 
 # Linking of main files
 
@@ -157,6 +175,7 @@ L_CENTREDETAIL  =   $(L_ROOMDETAIL) $(O_CENTREDETAIL_MAIN)
 L_ROOM          =   $(L_ROOMDETAIL) $(O_ROOMDETAIL_MAIN)
 L_GETCOOKIE     =   $(L_LOGIN) $(O_GETCOOKIE_MAIN)
 L_STRATEGY_M    =   $(L_STRATEGY) $(O_STRATEGY_MAIN)
+L_VALID         =   $(L_VALIDATION) $(O_VALIDATION_MAIN)
 
 # ====================================================================
 # 	O/P file names(exe) (E_FILENAME)
@@ -176,12 +195,20 @@ E_CENTREDETAIL  =   centredetail.html
 E_ROOM          =   roomdetail.html
 E_GETCOOKIE     =   getcookie.html
 E_STRATEGY      =   strategy.html
+E_VALIDATION    =   validation.html
 
 # ====================================================================
 #	Main target (1st target)
 # ====================================================================
 
-all: $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO) $(E_PROJECTDETAIL) $(E_REGISTER) $(E_NEWUSER) $(E_ROLLNO) $(E_TOTALCENTRE) $(E_CENTREDETAIL) $(E_ROOM) $(E_GETCOOKIE) $(E_LOGOUT) $(E_STRATEGY)
+all: back $(E_JAVASCRIPT) $(E_LOGIN) $(E_TOTALCLASSES) $(E_CLASSINFO) $(E_PROJECTDETAIL) $(E_REGISTER) $(E_NEWUSER) $(E_ROLLNO) $(E_TOTALCENTRE) $(E_CENTREDETAIL) $(E_ROOM) $(E_GETCOOKIE) $(E_LOGOUT) $(E_STRATEGY) $(E_VALIDATION)
+
+# ====================================================================
+#   Target for compiling files in backend folder
+# ====================================================================
+
+back:
+	$(BACKEND)
 
 # ====================================================================
 #	targets for compiling .cc or .cpp files
@@ -229,6 +256,9 @@ $(O_ROOMDETAIL): $(CC_ROOMDETAIL) $(H_ROOMDETAIL)
 $(O_STRATEGY): $(CC_STRATEGY) $(H_STRATEGY)
 	$(CC) $(CFLAG) $(CC_STRATEGY) $(LMYSQL)
 
+$(O_VALIDATION): $(CC_VALIDATION) $(H_VALIDATION)
+	$(CC) $(CFLAG) $(CC_VALIDATION) $(LMYSQL)
+
 # Compiling Mian files
 
 $(O_JAVASCRIPT_MAIN): $(M_JAVASCRIPT) $(H_JAVASCRIPT)
@@ -269,9 +299,12 @@ $(O_ROOMDETAIL_MAIN): $(M_ROOMDETAIL) $(H_ROOMDETAIL)
 
 $(O_GETCOOKIE_MAIN): $(M_GETCOOKIE) $(H_LOGIN)
 	$(CC) $(CFLAG) $(M_GETCOOKIE) $(LMYSQL)
-
+	
 $(O_STRATEGY_MAIN): $(M_STRATEGY) $(H_STRATEGY)
-	$(CC) $(CFLAG) $(M_STRATEGY) $(LMYSQL)
+	$(CC) $(CFLAG) $(M_STRATEGY) $(LMYSQL) # --main-stacksize=8488608
+
+$(O_VALIDATION_MAIN): $(M_VALIDATION) $(H_VALIDATION)
+	$(CC) $(CFLAG) $(M_VALIDATION) $(LMYSQL)
 
 # ====================================================================
 # 	Targets of o/p files(exe)
@@ -323,6 +356,9 @@ $(E_GETCOOKIE): $(L_GETCOOKIE)
 
 $(E_STRATEGY): $(L_STRATEGY_M)
 	$(CC) $(OFLAG) $(E_STRATEGY) $(L_STRATEGY_M) $(LCGICC) $(LMYSQL)
+
+$(E_VALIDATION): $(L_VALID)
+	$(CC) $(OFLAG) $(E_VALIDATION) $(L_VALID) $(LCGICC) $(LMYSQL)
 
 # ====================================================================
 # 	Clean .o, .html files
