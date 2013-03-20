@@ -445,11 +445,11 @@ void Database :: InsertExamDetail(string projectID, string examName,
  */
 void Database :: InsertStrategy(string projectID, string strategy)
 {
-    query  = "insert into Strategy(ProjectID, Strategy) values(";
+    query  = "insert into Strategy(ProjectID, StrategyName) values(";
     query += projectID;
-    query += ", '";
+    query += ", \"";
     query += strategy;
-    query += "');";
+    query += "\");";
 
     InsertQuery(query);
 }
