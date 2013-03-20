@@ -179,7 +179,7 @@ void RollNoDetail :: ReadClassDetail()
 
 void RollNoDetail :: WriteClassDetail()
 {
-    fileName  = FOLDER;
+    fileName  = INPUT_FOLDER;
     fileName += PID + projectID + CLASS_DETAILS_IN;
     outFile.open(fileName.c_str());
 
