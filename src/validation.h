@@ -30,7 +30,7 @@ class Validation : public InputDetail
 {
     protected:
 
-        string strategyChoice;
+        string strategyChoice, next;
         Strategy strategy;
 
     public:
@@ -43,6 +43,10 @@ class Validation : public InputDetail
 
     /** Write startegy detail */
     void WriteStrategyDetail();
+
+    /** Reading information from file for checking strategy is valid
+     * or not */
+    void ReadValidation();
 
     /** Validation Page */
     void ValidationPage();

@@ -67,6 +67,34 @@ void Validation :: WriteStrategyDetail()
 
 /**
  *      \class  Validation
+ *      \fn     Validation :: ReadValidation()
+ *      \brief  Reading info. from validation file for checing
+ *              strategy is valid or not
+ */
+
+void Validation :: ReadValidation()
+{
+    fileName  = OUTPUT_FOLDER;
+    fileName += PID + projectID + VALIDATION_OUT;
+
+    inFile.open(fileName.c_str());
+    
+    while(inFile.good())
+    {
+        getline(inFile, temp);
+        if(temp == "Y")
+            next = "Y";
+        else
+        {
+            cout << temp << brk;
+        }
+    }
+
+    inFile.close();
+}
+
+/**
+ *      \class  Validation
  *      \fn     Validation :: ValidationPage()
  *      \brief  For creatinf html page for showing validation details
  */
@@ -88,14 +116,18 @@ void Validation :: ValidationPage()
 
     strategy.Main(projectID);
 
-    FormStart("validation", "report.html", "POST");
+    cout << startH1 << " Validation " << endH1 << brk;
+
+    ReadValidation();
+
+    FormStart("validation", "examdetail.html", "POST");
     
     InputField("hidden", fieldName.projectID, projectID);
-    cout << startH1 << " Validation " << endH1 << brk;
 
     cout << brk << brk;
 
-    Button("next", "submit", "btn", "NEXT");
+    if( next == "Y")
+        Button("next", "submit", "btn", "NEXT");
 
     FormEnd();
     DivEnd();
