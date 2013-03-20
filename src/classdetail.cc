@@ -128,9 +128,9 @@ void ClassDetail :: TotalClassesPage()
     ContextType();
     
     //cout << "project ID" << projectID << endl;
-    Header("Total Classes");
+    Header("Validation");
     
-    DivStart("totalclasses", "");               /* (id, classname) */
+    DivStart("validation", "");               /* (id, classname) */
 
     LogoutLink();
     
@@ -138,16 +138,14 @@ void ClassDetail :: TotalClassesPage()
 
     cout << brk;
 
-    //cout << readField.ReadCookie("SessionID");
-
     FormStart("totalclasses", "classinfo.html", "POST");
     
     InputField("hidden", fieldName.projectID, projectID);
     cout << startH1 << " Select Total Classes " << endH1 << brk;
-    
+                
     cout << " Total Classes ";
     SelectFieldStart(fieldName.totalClasses);
-    
+                            
     for(i = 1; i <= maxClasses; i++)
     {
         temp = IntToString(i);
@@ -157,9 +155,8 @@ void ClassDetail :: TotalClassesPage()
             SelectOptionStart(temp, "n");
         cout << i;
         SelectOptionEnd();
-    }
-
-    SelectFieldEnd();
+     }
+     SelectFieldEnd();
 
     cout << brk << brk;
 
