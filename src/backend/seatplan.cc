@@ -164,7 +164,7 @@ string SeatPlan :: rollNo(int s)
 void SeatPlan :: showSeatPlan()
 {
     outfile.close();
-  fileName  = "../";
+  fileName  = "";//"../";
     fileName += OUTPUT_FOLDER;
     fileName += PID + projectID + SEATPLAN_OUT;
 
