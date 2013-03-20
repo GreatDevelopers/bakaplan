@@ -52,6 +52,8 @@ void ExamDetail :: ExamDetailPage()
     cout << startH1 << " Exam Detail " << endH1 << brk;
 
     FormStart("examdetail", "report.html", "POST");
+
+    projectID = readField.ReadFieldValue(fieldName.projectID);
     
     InputField("hidden", fieldName.projectID, projectID);
     
