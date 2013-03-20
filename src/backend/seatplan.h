@@ -47,5 +47,6 @@ class SeatPlan
         string rollNo(int);
         void seatingPlan(int);
         void createFile();  
-        void showSeatPlan();     
+        void showSeatPlan();    
+        ~SeatPlan(){}
 };

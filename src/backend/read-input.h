@@ -38,4 +38,5 @@ class ReadInput
       void readBranchDetails(string); // Subject code Details
       void showDetails();  // for checking purpose
       void Main(string);
+      ~ReadInput(){}
 };

@@ -16,4 +16,5 @@ class SubjectWiseRollNo : public ArrangeRollNo
       void removeRedundantSubCode();
       void showSubjectWiseRollNo();
       void Main(string projectID);
+      ~SubjectWiseRollNo(){}
 };

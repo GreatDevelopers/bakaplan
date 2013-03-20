@@ -19,4 +19,5 @@ class Strategy : public SeatPlan
         void totalGroupStudents(int);
         void groupCondition(int);
         void Main(string);
+        ~Strategy(){}
 };

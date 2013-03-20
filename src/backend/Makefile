@@ -1,5 +1,5 @@
 CC      =    g++
-CFLAG   =    -c -g # Compilation and debugging Flag 
+CFLAG   =    -c -Wl,--stack,8388608 -g # Compilation and debugging Flag 
 OFLAG   =    -o  # O/p Flag
 
 #--------------------------------------------------------------------------

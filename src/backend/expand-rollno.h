@@ -3,8 +3,8 @@
 class ExapandRollNo : public ReadInput
 {
    protected:
-      int roll_no[MIN_SIZE][MAX_SIZE][MAX_SIZE], roll_size[MIN_SIZE][MIN_SIZE], 
-      not_roll_no[MIN_SIZE][MAX_SIZE][MAX_SIZE], not_roll_size[MIN_SIZE][MIN_SIZE];
+      int roll_no[MIN_SIZE][MIN_SIZE][MAX_SIZE], roll_size[MIN_SIZE][MIN_SIZE], 
+      not_roll_no[MIN_SIZE][MIN_SIZE][MAX_SIZE], not_roll_size[MIN_SIZE][MIN_SIZE];
       
    public:
       void expandInput();
@@ -16,4 +16,5 @@ class ExapandRollNo : public ReadInput
       void removeZero();
       void showExpandRollNo();
       void Main(string);
+      //~ExpandRollNo(){}
 };

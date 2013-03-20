@@ -18,4 +18,5 @@ class ArrangeRollNo : public ExapandRollNo
       void addPrefixWithRollNo();
       void showArrangedRollNo();
       void Main(string projectID);
+      ~ArrangeRollNo(){}
 };
