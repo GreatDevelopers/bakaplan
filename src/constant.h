@@ -25,6 +25,6 @@
 #define CONSTANT_H
 
 const int MIN_SIZE = 25;
-const int MAX_SIZE = 170;
+const int MAX_SIZE = 550;
 
 #endif
