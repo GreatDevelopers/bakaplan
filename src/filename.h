@@ -44,7 +44,7 @@ const char TOTAL_FIELDS[FILE_SIZE]        =   "-total-fields.txt";
 const char ROLLNO_DETAILS_IN[FILE_SIZE]   =   "-rollno-details.in";
 const char ROOM_DETAILS_IN[FILE_SIZE]     =   "-room-details.in";
 const char STRATEGY_IN[FILE_SIZE]         =   "-strategy.in";     
-const char EXAM_DETAILS_IN[FILE_SIZE]     =   "-exam-details.in";
+const char EXAM_DETAIL_IN[FILE_SIZE]     =   "-exam-details.in";
 
 /**-------------------------------------------------------------------
  *  Output File Names
@@ -77,5 +77,11 @@ const char SUBJECTWISE_ROLLNO_OUT[FILE_SIZE] = "-subject-rollno.out";
 
 const char STRATEGY_RESULT[FILE_SIZE]   =   "-strategy-result.out";
 const char SEATPLAN_OUT[FILE_SIZE]      =   "-seatplan.out";
+
+/**
+ *  file name for creating html file of seat plan 
+ */
+
+const char SEATPLAN_HTML_FILE[FILE_SIZE] = "../../../seatplan.html";
 
 #endif
