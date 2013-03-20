@@ -57,8 +57,6 @@ void Validation :: WriteStrategyDetail()
 {
     fileName  = INPUT_FOLDER;
     fileName += PID + projectID + STRATEGY_IN;
-    
-    strategy.Main(projectID);
 
     outFile.open(fileName.c_str());
 
@@ -87,6 +85,8 @@ void Validation :: ValidationPage()
     
     ReadStrategyDetail();
     //cout << readField.ReadCookie("SessionID");
+
+    strategy.Main(projectID);
 
     FormStart("validation", "report.html", "POST");
     
