@@ -23,7 +23,7 @@ CC      =   g++                          # Compiler
 WALL    =   -Wall                        # Warning all flag
 WERROR  =   -Werror                      # Convert warnings into error
 DEBUG   =   -g                           # Debugging flag
-CFLAG   =   -c $(WALL) $(WERROR) $(DEBUG)# Compilation flag
+CFLAG   =   -c -Wl,--stack,8388608 $(WALL) $(WERROR) $(DEBUG)# Compilation flag
 OFLAG   =   $(DEBUG) -o                  # O/p Flag
 LCGICC  =   -lcgicc     		         # cgicc lib flag
 LMYSQL  =   -L/usr/include/mysql -lmysqlclient -I/usr/include/mysql
@@ -307,7 +307,7 @@ $(O_GETCOOKIE_MAIN): $(M_GETCOOKIE) $(H_LOGIN)
 	$(CC) $(CFLAG) $(M_GETCOOKIE) $(LMYSQL)
 	
 $(O_STRATEGY_MAIN): $(M_STRATEGY) $(H_STRATEGY)
-	$(CC) $(CFLAG) $(M_STRATEGY) $(LMYSQL) # --main-stacksize=8488608
+	$(CC) $(CFLAG) -Wl,--stack,8488608 $(M_STRATEGY) $(LMYSQL) # --main-stacksize=8488608
 
 $(O_VALIDATION_MAIN): $(M_VALIDATION) $(H_VALIDATION)
 	$(CC) $(CFLAG) $(M_VALIDATION) $(LMYSQL)
@@ -361,7 +361,8 @@ $(E_GETCOOKIE): $(L_GETCOOKIE)
 	$(CC) $(OFLAG) $(E_GETCOOKIE) $(L_GETCOOKIE) $(LCGICC) $(LMYSQL)
 
 $(E_STRATEGY): $(L_STRATEGY_M)
-	$(CC) $(OFLAG) $(E_STRATEGY) $(L_STRATEGY_M) $(LCGICC) $(LMYSQL)
+	$(CC) $(OFLAG) $(E_STRATEGY) $(L_STRATEGY_M) \
+	$(LCGICC) $(LMYSQL)
 
 $(E_VALIDATION): $(L_VALID)
 	$(CC) $(OFLAG) $(E_VALIDATION) $(L_VALID) $(LCGICC) $(LMYSQL)
