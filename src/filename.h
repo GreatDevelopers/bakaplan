@@ -21,12 +21,23 @@
  *  Constant Names of I/p and O/P files
  *------------------------------------------------------------------*/
 
+#ifndef FILENAME_H
+#define FILENAME_H
+
 const int FILE_SIZE = 35;
+
+/**
+ *  Folder name for I/O files
+ */
+
+const char INPUT_FOLDER[FILE_SIZE]  =   "input/";
+const char OUTPUT_FOLDER[FILE_SIZE] =   "output/";
+
 
 /**-------------------------------------------------------------------
  *  Input File Names
  *------------------------------------------------------------------*/
-const char FOLDER[FILE_SIZE] =   "input/";
+
 const char PID[FILE_SIZE]   =   "PID";        /**< Project ID */
 const char CLASS_DETAILS_IN[FILE_SIZE]    =   "-class-details.in";
 const char TOTAL_FIELDS[FILE_SIZE]        =   "-total-fields.txt";
@@ -40,3 +51,31 @@ const char EXAM_DETAILS_IN[FILE_SIZE]     =   "-exam-details.in";
  *------------------------------------------------------------------*/
 
 const char VALIDATION_OUT[FILE_SIZE]      =   "-validation.out";
+
+/**
+ *  Roll No. exapnading and arranging 
+ */
+
+const char RNO_EXPAND_OUT[FILE_SIZE]     =  "-rollno-expand.out";
+const char RNO_ARRANGED_OUT[FILE_SIZE]   =  "-rollno-arranged.out";
+
+/**
+ *  Re-Arranged I/P file 
+ */
+
+const char INPUT_ROLLNO_OUT[FILE_SIZE]  =   "-input-rollno.out";
+
+/**
+ *  Subject Wise roll Nos. 
+ */
+
+const char SUBJECTWISE_ROLLNO_OUT[FILE_SIZE] = "-subject-rollno.out";
+
+/**
+ *  Files used for strategy programs 
+ */
+
+const char STRATEGY_RESULT[FILE_SIZE]   =   "-strategy-result.out";
+const char SEATPLAN_OUT[FILE_SIZE]      =   "-seatplan.out";
+
+#endif
