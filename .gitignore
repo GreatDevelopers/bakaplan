@@ -13,3 +13,8 @@ src/getcookie
 src/SeatPlan
 src/backend/*.o
 *.in
+
+bakaplan/src/*.o
+bakaplan/src/main
+bakaplan/src/main.cpp
+
