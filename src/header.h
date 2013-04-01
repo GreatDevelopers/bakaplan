@@ -7,7 +7,7 @@
  *
  *        Version:  0.6
  *        Created:  Friday 15 February 2013 04:53:17  IST
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Mandeep Kaur, meghasimak@gmail.com
  *        License:  GNU General Public License
@@ -28,6 +28,10 @@
 #include <vector>
 #include <algorithm>
 #include <ctime>
+
+// for using multi-dimentional array
+#include "boost/multi_array.hpp"
+#include <cassert>
 
 /**-------------------------------------------------------------------
  *  using namespace std

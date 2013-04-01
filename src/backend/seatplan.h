@@ -13,8 +13,9 @@ class SeatPlan
         int seat_size[MIN_SIZE];
         
         // Room Variables
-        int total_centres, total_rooms[MIN_SIZE], rows[MIN_SIZE][MIN_SIZE], 
-            cols[MIN_SIZE][MIN_SIZE];
+        int total_centres, total_rooms[MIN_SIZE], 
+            rows[MIN_SIZE][MIN_SIZE], cols[MIN_SIZE][MIN_SIZE];
+
         string room_no[MIN_SIZE][MIN_SIZE], centre_no[MIN_SIZE];
         
         // subject wise roll no 
