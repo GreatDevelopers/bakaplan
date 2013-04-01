@@ -16,5 +16,4 @@ src/backend/*.o
 
 bakaplan/src/*.o
 bakaplan/src/main
-bakaplan/src/main.cpp
 
