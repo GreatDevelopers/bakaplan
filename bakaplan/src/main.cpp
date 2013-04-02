@@ -14,13 +14,13 @@
  */
 
 //#include "readinput.cc"
-#include "header/arrangerollno.h"
+#include "header/datesheet.h"
 
 int main(void)
 {
-    ArrangeRollNo rNo;
-    rNo.ReadClassDetail("1");
-    rNo.ReadDateSheet("1");
+    DateSheet rNo;
+//    rNo.ReadClassDetail("1");
+//    rNo.ReadDateSheet("1");
 //    rNo.expandRNo.ExpandRollNos("1");
     rNo.Main("1");
 
