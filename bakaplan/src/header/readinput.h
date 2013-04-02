@@ -37,7 +37,10 @@ class ReadInput
                    notIncluded, /**< Rollno ie not for seating plan */
 
                    className,          /**< Branch/trade/class Name */
-                   date;                  /**< Date for examination */
+                   date,                  /**< Date for examination */
+                   strategyOption;       /**< Strategy option selected 
+                                                            by user */
+
 
         STRING_2DVEC subjectCode,                 /**< Subject Code */
                      subjectName,                 /**< Subject Name */
@@ -63,9 +66,8 @@ class ReadInput
         ofstream outFile;           /**< for writing data into file */
 
         string fileName,                         /**< I/O file name */
-               temp,                         /**< For temporary use */
-               strategyOption;/**< Strategy option selected by user */
-
+               temp;                         /**< For temporary use */
+              
         int i, j, k, l, m, n;                      /**< for looping */
 
         string projectID;         /**< Project id of user's project */

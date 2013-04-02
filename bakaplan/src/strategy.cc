@@ -28,6 +28,16 @@
 Strategy :: Strategy()
 {
     // constructor
+    totalStrategy = 5;
+    strategyName.resize(totalStrategy);
+
+    for(i = 0; i < totalStrategy; i++)
+    {
+        stringstream ss;
+        ss << (i+1);
+        strategyName[i] = ss.str();
+    }
+
     totalSeats = totalStudents = totalGroupSeats = 0;
 }
 
@@ -178,7 +188,16 @@ void Strategy :: CheckValidation(int strategy)
 void Strategy :: ChooseStrategy()
 {
     int choice;
-   
+    
+    for(i = 0; i < totalDays; i++)
+    {
+        if(strategyOption[i] == strategyName[i])
+        {
+            choice = (i + 1);
+            CheckValidation(choice);
+        }
+    }
+    /* 
     if(strategyOption == "1")//"Continual Strategy")
         choice = 1;
     if(strategyOption == "2")//"Strategy 2")
@@ -191,6 +210,7 @@ void Strategy :: ChooseStrategy()
         choice = 5;
         
     CheckValidation(choice);
+    */
 }
 
 /**

@@ -29,6 +29,8 @@
 class Strategy : public SeatPlan
 {
     protected:
+        STRING_VEC strategyName;
+        int totalStrategy;
 /*         
         string rollno[MIN_SIZE][MIN_SIZE][MAX_SIZE], 
                branch_name[MIN_SIZE],

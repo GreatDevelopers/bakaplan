@@ -323,8 +323,14 @@ void ReadInput :: ReadStrategy(string projectID)
     temp = FileName(STRATEGY, projectID, 1);
 
     inFile.open(temp.c_str());
-
-    getline(inFile, strategyOption, '\n');
+    int t;
+    inFile >> t;
+    
+    strategyOption.resize(t);
+    getline(inFile, temp, '\n');
+    
+    for(i = 0; i < t; i++)
+        getline(inFile, strategyOption[i], '\n');
 
     inFile.close();
 }

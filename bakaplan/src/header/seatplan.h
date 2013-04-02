@@ -30,7 +30,8 @@ class SeatPlan : public ReadInput
         
         int totalSeats,
             totalStudents,
-            totalGroupSeats;
+            totalGroupSeats,
+            day;
 
         INT_VEC iTemp, 
                 indexValue, 
