@@ -48,6 +48,7 @@ using namespace std;
 typedef vector<string> STRING_VEC;
 typedef vector<vector<string> > STRING_2DVEC;
 typedef vector<vector<vector<string> > > STRING_3DVEC;
+typedef vector<vector<vector<vector<string> > > > STRING_4DVEC;
 typedef vector<vector<vector<int> > > INT_3DVEC;
 typedef vector<vector<int> > INT_2DVEC;
 typedef vector<int> INT_VEC;

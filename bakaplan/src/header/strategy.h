@@ -29,10 +29,24 @@
 class Strategy : public SeatPlan
 {
     protected:
-        
+/*         
+        string rollno[MIN_SIZE][MIN_SIZE][MAX_SIZE], 
+               branch_name[MIN_SIZE],
+               subject_name[MIN_SIZE][MIN_SIZE], 
+               subject_code[MIN_SIZE][MIN_SIZE];
+        int total_rollno[MIN_SIZE][MIN_SIZE], total_branches, 
+            total_subject[MIN_SIZE];
+ */
     public:
         /** Constructor */
         Strategy();
+
+        void ChooseStrategy();
+        void TotalSeats(int);
+        void TotalStudents();
+        void CheckValidation(int strategy);
+        void TotalGroupStudents(int);
+        void GroupCondition(int);
 
         void Main(string pID);
 
