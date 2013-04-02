@@ -92,6 +92,95 @@ void ReadInput :: ReadRollNoDetail(string projectID)
 
 /**
  *      \class  ReadInput
+ *      \fn     ReadInput :: ReadClassDetail(string fileName)
+ *      \brief  Reading class details
+ *      \param  fileName I/P filename for class detail
+ */
+
+void ReadInput :: ReadClassDetail(string projectID)
+{
+    temp = FileName(CLASS_DETAIL, projectID, 1);
+
+    inFile.open(temp.c_str());
+
+    inFile >> totalClasses;
+    
+    className.resize(totalClasses);
+    totalSubjects.resize(totalClasses);
+    subjectCode.resize(totalClasses);
+    subjectName.resize(totalClasses);
+    
+    getline(inFile, temp, '\n');    // For stroring emtpy space
+    for(i = 0; i < totalClasses; i++)
+    {
+        getline(inFile, className[i], '\n');
+        inFile >> totalSubjects[i];
+//        cout << totalSubjects[i] << endl;
+        for(j = 0; j < totalSubjects[i]; j++)
+        {
+            subjectCode[i].resize(totalSubjects[i]);
+            subjectName[i].resize(totalSubjects[i]);
+        }
+        getline(inFile, temp, '\n');
+        for(j = 0; j < totalSubjects[i]; j++)
+        {
+            getline(inFile, subjectCode[i][j], '\n');
+            getline(inFile, subjectName[i][j], '\n');
+  //          cout << subjectCode[i][j] << " " 
+    //             << subjectName[i][j] << " ";
+        }
+//        cout << endl;
+    }
+
+    inFile.close();
+}
+
+/**
+ *      \class  ReadInput
+ *      \fn     ReadInput :: ReadDateSheet(string fileName)
+ *      \brief  Reading datesheet
+ *      \param  fileName Name of I/P file
+ */
+
+void ReadInput :: ReadDateSheet(string projectID)
+{
+    temp = FileName(DATESHEET, projectID, 1);
+
+    inFile.open(temp.c_str());
+    
+    inFile >> totalDays;
+//    cout << totalDays;
+ 
+    date.resize(totalDays);
+    totalExams.resize(totalDays);
+    examCode.resize(totalDays);
+     
+    getline(inFile, temp, '\n');
+    for(i = 0; i < totalDays; i++)
+    {
+        getline(inFile, date[i], '\n');
+        inFile >> totalExams[i];
+
+        getline(inFile, temp, '\n');
+        for(j = 0; j < totalExams[i]; j++)
+        {
+            examCode[i].resize(totalExams[i]);
+        }
+        
+        for(j = 0; j < totalExams[i]; j++)
+        {
+            getline(inFile, examCode[i][j], '\n');
+//            cout << examCode[i][j] << " " ;
+        }
+    }
+
+    inFile.close();
+   
+}
+
+
+/**
+ *      \class  ReadInput
  *      \fn     ReadInput :: ~ReadInput()
  *      \brief  Destructor
  */

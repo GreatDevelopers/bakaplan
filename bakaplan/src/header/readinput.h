@@ -30,9 +30,20 @@ class ReadInput
 
         STRING_VEC prefix,                    /**< Prefix of rollno */
                    rollNo,                        /**< rollno range */
-                   notIncluded; /**< Rollno ie not for seating plan */
+                   notIncluded, /**< Rollno ie not for seating plan */
 
-        int totalClasses;        /**< Total classes/branches/trades */
+                   className,          /**< Branch/trade/class Name */
+                   date;                  /**< Date for examination */
+
+        STRING_2DVEC subjectCode,               /**< Subject Code */
+                     subjectName,               /**< Subject Name */
+                     examCode;   /**< Examination code/subject code */
+
+        int totalClasses,        /**< Total classes/branches/trades */
+            totalDays;                /**< No. of days in datesheet */
+
+        INT_VEC totalSubjects,         /**< Total subejcts of class */
+                totalExams;               /**< Total exams on 1 day */
 
         ifstream inFile;            /**< For reading data from file */
         ofstream outFile;           /**< for writing data into file */
@@ -51,10 +62,13 @@ class ReadInput
         string FileName(string file, string projectID, int fileType);
 
         /** Reading Roll No details from I/P file */
-        void ReadRollNoDetail(string fileName);
+        void ReadRollNoDetail(string projectID);
 
         /** Reading Class details from I/P file */
-        void ReadClassDetail(string fileName);
+        void ReadClassDetail(string projectID);
 
+        /** Reading Datesheet */
+        void ReadDateSheet(string projectID);
+        
         ~ReadInput();                           /**< Desrtuctor */
 };
