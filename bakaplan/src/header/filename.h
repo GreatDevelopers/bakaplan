@@ -22,7 +22,7 @@ const char OUT[FILE_SIZE]     =   ".out";
 
 const char CLASS_DETAIL[FILE_SIZE]   = "class-detail-";
 const char ROLLNO_DETAIL[FILE_SIZE]  = "rollno-detail-";
-const char DATESHEET[FILE_SIZE]      = "datasheet-";
+const char DATESHEET[FILE_SIZE]      = "datesheet-";
 const char EXAM_DETAIL[FILE_SIZE]    = "exam-detail-";
 const char ROOM_DETAIL[FILE_SIZE]    = "room-detail-";
 
