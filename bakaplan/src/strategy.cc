@@ -30,79 +30,76 @@ Strategy :: Strategy()
     // constructor
     totalStrategy = 5;
     strategyName.resize(totalStrategy);
-
-    for(i = 0; i < totalStrategy; i++)
-    {
-        stringstream ss;
-        ss << (i+1);
-        strategyName[i] = ss.str();
-    }
+    i = 0;
+    strategyName[i++] = "1";
+    strategyName[i++] = "2";
+    strategyName[i++] = "3";
+    strategyName[i++] = "4";
+    strategyName[i++] = "5";
 
     totalSeats = totalStudents = totalGroupSeats = 0;
 }
 
-void Strategy :: TotalSeats(int strategy)
+void Strategy :: TotalSeats(int strategy, int i)
 {
     roomSize.resize(totalDays);
-    for(i = 0; i < totalDays; i++)
-    {
-        roomSize[i].resize(totalCentres[i]);
-        for(j = 0; j < totalCentres[i]; j++)
-        {   
-            roomSize[i][j].resize(totalRooms[i][j]);
-        }
+    roomSize[i].resize(totalCentres[i]);
+ 
+    for(j = 0; j < totalCentres[i]; j++)
+    {   
+        roomSize[i][j].resize(totalRooms[i][j]);
     }
-
-    for(i = 0; i < totalDays; i++)
+    for(j = 0; j < totalCentres[i]; j++)
     {
-        for(j = 0; j < totalCentres[i]; j++)
+        for(k = 0; k < totalRooms[i][j]; k++)
         {
-            for(k = 0; k < totalRooms[i][j]; k++)
-            {
-                roomSize[i][j][k] = rows[i][j][k] * cols[i][j][k];
-                totalSeats += roomSize[i][j][k];
-                totalGroupSeats += roomSize[i][j][k] / strategy;
-            }
+            roomSize[i][j][k] = rows[i][j][k] * cols[i][j][k];
+            totalSeats = totalSeats + roomSize[i][j][k];
+            totalGroupSeats += roomSize[i][j][k] / strategy;
         }
     }
 }
-/* 
-void Strategy :: totalStudents()
-{
-    for(i = 0; i < total_code; i++)
+ 
+void Strategy :: TotalStudents(int i)
+{ 
+    for(j = 0; j < totalExams[i]; j++)
     {
-        total_students += sub_totalrno[i];
+        totalStudents += dateSheetRNoSize[i][j];
     }
 }
 
-void Strategy :: totalGroupStudents(int strategy)
+void Strategy :: TotalGroupStudents(int strategy, int i)
 {
+    iTemp.resize(totalExams[i]);
+    indexValue.resize(totalExams[i]);
+
     if(strategy == 5)
         strategy = 1;
     s = 0;
-    for(i = 0; i < total_code; i++)
+    for(j = 0; j < totalExams[i]; j++)
     {
-        temp[i] = sub_totalrno[i];
-        index_value[i] = 0;
-    }
-//    cout << "total code " << total_code << endl;
-    
-    for(i = 0; i < strategy; i++)
-    {
-        group_student_size[i] = 0;
+        iTemp[j] = dateSheetRNoSize[i][j];
+        indexValue[j] = 0;
     }
     
-    sort(temp, temp + total_code);
-    
-    for(i = 0; i < total_code; i++)
+    groupStudentSize.resize(strategy);
+
+    for(j = 0; j < strategy; j++)
     {
-        for(j = 0; j < total_code; j++)
+        groupStudentSize[j] = 0;
+    }
+    
+    sort(iTemp.begin(), iTemp.end());
+    
+    for(j = 0; j < totalExams[i]; j++)
+    {
+        for(k = 0; k < totalExams[i]; k++)
         {
-            if(temp[j] == sub_totalrno[i])
+            if(iTemp[k] == dateSheetRNoSize[i][j])
             {
-                if(index_value[j] == 0)
+                if(indexValue[k] == 0)
                 {
-                    index_value[j] = i;
+                    indexValue[k] = j;
                     break;
                 }
                 
@@ -110,73 +107,68 @@ void Strategy :: totalGroupStudents(int strategy)
         }
     }
     
-    for(i = 0; i < total_code; i++)
+    for(j = 0; j < totalExams[i]; j++)
     {
         if(s == strategy)
             s = 0;
-        group_student_size[s] += sub_totalrno[index_value[i]];
+        groupStudentSize[s] += dateSheetRNoSize[i][indexValue[j]];
         s++;
                
     }
-    sort(group_student_size, group_student_size + strategy);
+    sort(groupStudentSize.begin(), groupStudentSize.end());
 }
 
-void Strategy :: groupCondition(int strategy)
-{
-    if(group_student_size[strategy-1] > total_group_seats)
+void Strategy :: GroupCondition(int strategy, int i)
+{ 
+    if(groupStudentSize[strategy-1] > totalGroupSeats)
     {
-        int extra = (group_student_size[strategy-1] - total_group_seats);
+        int extra = (groupStudentSize[strategy-1] - totalGroupSeats);
+        
         extra = extra * strategy;
-        outfile << "\t condition invalid" << endl
+        
+        outFile << "\t condition invalid" << endl
                 << "\t Add " << extra << " more seats." << endl;
         
-        outfile.close();    
+        outFile.close();    
     }
     else
     {
-        outfile << "Y" << endl;
-        outfile << "\t condition is valid" << endl;
-        outfile.close();
-        seatingPlan(strategy);
-        showSeatPlan();
+        outFile << "Y" << endl;
+        outFile << "\t condition is valid" << endl;
+        outFile.close();
+        SeatingPlan(strategy);
+        WriteSeatPlan(projectID);
 //        Report :: Main();
     }
 }
-*/
-void Strategy :: CheckValidation(int strategy)
-{/*
+
+void Strategy :: CheckValidation(int strategy, int i)
+{
     temp = FileName(VALIDATION, projectID, 0);
 
-    outfile.open(temp.c_str());
+    outFile.open(temp.c_str(), ios::app);
     
-    TotalSeats(strategy);
-    TotalStudents();
-    TotalGroupStudents(strategy);
+    TotalSeats(strategy, i);
+    TotalStudents(i);
+    TotalGroupStudents(strategy, i);
     
-    outfile << "\n\t Total Seats = " << total_seats << endl
-            << "\t Total Students = " << total_students << endl
-            << "\t Total Group Seats = " << total_group_seats << endl
-            << "\t Max Group Students = " << group_student_size[strategy-1] 
+    outFile << " Date " << date[i] << endl
+            << " Total Exams " << totalExams[i] << endl
+            << " Selected Strategy " << strategy << endl;
+    outFile << "\n\t Total Seats = " << totalSeats << endl
+            << "\t Total Students = " << totalStudents << endl
+            << "\t Total Group Seats = " << totalGroupSeats << endl
+            << "\t Max Group Students = " << groupStudentSize[strategy-1] 
             << endl;
     
-    // Showing values while console
-//    cout << "\n\t Total Seats = " << total_seats << endl
-//         << "\t Total Students = " << total_students << endl
-//         << "\t Total Group Seats = " << total_group_seats << endl
-//         << "\t Max Group Students = " << group_student_size[strategy-1] << endl;
-//    
-    if(total_seats < total_students)
+    if(totalSeats < totalStudents)
     {
-        outfile << "\t Add More rooms!" << endl;
-//        cout << "\t Add More rooms!" << endl;
-        outfile.close();
+        outFile << "\t Add More rooms!" << endl;
+        outFile.close();
     }
-        
     else
-        groupCondition(strategy);
-        
-    //outfile.close();
-    */
+        GroupCondition(strategy, i);
+    
 }  
 
 /**
@@ -188,29 +180,23 @@ void Strategy :: CheckValidation(int strategy)
 void Strategy :: ChooseStrategy()
 {
     int choice;
+
+    temp = FileName(VALIDATION, projectID, 0);
+    outFile.open(temp.c_str());
+    outFile.close();
     
     for(i = 0; i < totalDays; i++)
     {
-        if(strategyOption[i] == strategyName[i])
+        totalSeats = totalStudents = totalGroupSeats = 0;
+        for(int str = 0; str < totalStrategy; str++)
         {
-            choice = (i + 1);
-            CheckValidation(choice);
+            if(strategyOption[i] == strategyName[str])
+            {
+                choice = (str + 1);
+                CheckValidation(choice, i);
+            }
         }
     }
-    /* 
-    if(strategyOption == "1")//"Continual Strategy")
-        choice = 1;
-    if(strategyOption == "2")//"Strategy 2")
-        choice = 2;
-    if(strategyOption == "3")//"Strategy 3")
-        choice = 3;
-    if(strategyOption == "4")//"Strategy 4")
-        choice = 4;
-    if(strategyOption == "5")//"Serpentine Strategy")
-        choice = 5;
-        
-    CheckValidation(choice);
-    */
 }
 
 /**

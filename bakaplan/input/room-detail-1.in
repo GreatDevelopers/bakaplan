@@ -1,7 +1,7 @@
 3
 2
 centre 1
-4
+8
 room 1
 8 6
 room 2
@@ -10,6 +10,14 @@ room 3
 8 6
 room 4
 8 6
+room 5
+8 8
+room 6
+8 8
+room 7
+8 8
+room 8
+8 8
 centre 2
 3
 room 1
@@ -20,7 +28,7 @@ room 3
 8 6
 2
 centre 1
-4
+8
 room 1
 8 6
 room 2
@@ -29,17 +37,35 @@ room 3
 8 6
 room 4
 8 6
+room 5
+8 8
+room 6
+8 8
+room 7
+8 8
+room 8
+8 8
 centre 2
-3
+8
 room 1
 8 6
 room 2
 8 6
 room 3
 8 6
+room 4
+8 8
+room 5
+8 8
+room 6
+8 8
+r 7
+8 8
+R 8
+8 8
 2
 centre 1
-4
+9
 room 1
 8 6
 room 2
@@ -48,11 +74,25 @@ room 3
 8 6
 room 4
 8 6
+r 5
+8 8
+r 6
+8 8
+r7 
+8 8
+r8
+8 8
+r 9
+8 8
 centre 2
-3
+5
 room 1
 8 6
 room 2
 8 6
 room 3
 8 6
+r 4
+8 8
+r 5
+8 8

@@ -29,26 +29,19 @@
 class Strategy : public SeatPlan
 {
     protected:
-        STRING_VEC strategyName;
-        int totalStrategy;
-/*         
-        string rollno[MIN_SIZE][MIN_SIZE][MAX_SIZE], 
-               branch_name[MIN_SIZE],
-               subject_name[MIN_SIZE][MIN_SIZE], 
-               subject_code[MIN_SIZE][MIN_SIZE];
-        int total_rollno[MIN_SIZE][MIN_SIZE], total_branches, 
-            total_subject[MIN_SIZE];
- */
+        STRING_VEC strategyName;              /**< Name of Strategy */
+        int totalStrategy;                    /**< Total Strategies */
+    
     public:
         /** Constructor */
         Strategy();
 
         void ChooseStrategy();
-        void TotalSeats(int);
-        void TotalStudents();
-        void CheckValidation(int strategy);
-        void TotalGroupStudents(int);
-        void GroupCondition(int);
+        void TotalSeats(int strategy, int i);
+        void TotalStudents(int i);
+        void CheckValidation(int strategy, int i);
+        void TotalGroupStudents(int strategy, int i);
+        void GroupCondition(int strategy, int i);
 
         void Main(string pID);
 

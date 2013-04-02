@@ -183,7 +183,7 @@ void ReadInput :: ReadRoomDetail(string projectID)
 
                 inFile >> rows[i][j][k] >> cols[i][j][k];
 
-//                getline(inFile, temp, '\n');
+                getline(inFile, temp, '\n');
             }
         }
     }
