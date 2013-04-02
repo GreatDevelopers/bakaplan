@@ -39,11 +39,14 @@ $(EXPANDROLLNO)$(O) : $(D_EXPANDROLLNO)
 $(ARRANGEROLLNO)$(O) : $(D_ARRANGEROLLNO)
 	$(CXX) $(CFLAG) $(ARRANGEROLLNO)$(CC)
 
-main.o: main.cpp $(H_ARRANGEROLLNO)
+$(DATESHEET)$(O) : $(D_DATESHEET)
+	$(CXX) $(CFLAG) $(DATESHEET)$(CC)
+
+main.o: main.cpp $(H_DATESHEET)
 	$(CXX) $(CFLAG) main.cpp
 
-main: $(L_ARRANGE) main.o
-	$(CXX) $(OFLAG) main $(L_ARRANGE) main.o
+main: $(L_DATESHEET) main.o
+	$(CXX) $(OFLAG) main $(L_DATESHEET) main.o
 
 run : main
 	./main
