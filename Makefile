@@ -19,8 +19,8 @@
 # 	Variables
 # ====================================================================
 
-MAKE			=	cd src && make && cd ..
-CLEAN			=	cd src && make clean && cd ..
+MAKE			=	make -C src
+CLEAN			=	make -C src clean
 COPY_HOMEPAGE	=	cp -r BaKaPlan ~/public_html/
 COPY_DOC 		=	cp -r Documentation ~/public_html/BaKaPlan/
 COPY			=	$(COPY_HOMEPAGE) && $(COPY_DOC)
@@ -32,6 +32,8 @@ T_MAKE_SRC		=	make_src
 T_COPY			=	copy
 T_CLEAN			=	clean
 T_INSTALL       =   install
+T_BACKEND       =   backend
+T_CLEAN_BACKEND =   clean-backend
 
 # ====================================================================
 #	Main target (1st target)
@@ -52,9 +54,15 @@ $(T_MAKE_SRC):
 $(T_COPY):
 	$(COPY)	
 
+$(T_BACKEND):
+	make -C bakaplan
+
 # ====================================================================
 # 	Clean .o, .html files
 # ====================================================================
 
 $(T_CLEAN):
 	$(CLEAN)
+
+$(T_CLEAN_BACKEND):
+	make -C bakaplan clean
