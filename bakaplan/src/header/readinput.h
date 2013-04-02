@@ -51,7 +51,7 @@ class ReadInput
         string fileName,                         /**< I/O file name */
                temp;                         /**< For temporary use */
 
-        int i, j, k;                               /**< for looping */
+        int i, j, k, l, m, n;                      /**< for looping */
 
         string projectID;         /**< Project id of user's project */
 
