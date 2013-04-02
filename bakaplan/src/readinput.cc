@@ -60,6 +60,122 @@ string ReadInput :: FileName(string file, string projectID,
 
 /**
  *      \class  ReadInput
+ *      \fn     ReadInput :: ReadDateSheetOut(string projectID)
+ *      \brief  Reading datesheet.out file 
+ *      \param  projectID ProjectID
+ */
+
+void ReadInput :: ReadDateSheetOut(string projectID)
+{
+    temp = FileName(DATESHEET, projectID, 0);
+
+    inFile.open(temp.c_str());
+
+    inFile >> totalDays;
+    
+    // Resizing variables size for reading datesheet detail
+
+    date.resize(totalDays);
+    totalExams.resize(totalDays);
+    examSubCode.resize(totalDays);
+    examSubName.resize(totalDays);
+    dateSheetRNoSize.resize(totalDays);
+    dateSheetRNo.resize(totalDays);
+
+    getline(inFile, temp, '\n');
+    for(i = 0; i < totalDays; i++)
+    {
+        getline(inFile, date[i], '\n');
+        inFile >> totalExams[i];
+
+        getline(inFile, temp, '\n');
+        
+        for(j = 0; j < totalExams[i]; j++)
+        {
+            examSubCode[i].resize(totalExams[i]);
+            examSubName[i].resize(totalExams[i]);
+            dateSheetRNoSize[i].resize(totalExams[i]);
+            dateSheetRNo[i].resize(totalExams[i]);
+        }
+        
+        for(j = 0; j < totalExams[i]; j++)
+        {
+            getline(inFile, examSubCode[i][j], '\n');
+            getline(inFile, examSubName[i][j], '\n');
+
+            inFile >> dateSheetRNoSize[i][j];
+
+            getline(inFile, temp, '\n');
+
+            for(k = 0; k < dateSheetRNoSize[i][j]; k++)
+            {
+                dateSheetRNo[i][j].resize(dateSheetRNoSize[i][j]);
+            }
+
+            for(k = 0; k < dateSheetRNoSize[i][j]; k++)
+            {
+                getline(inFile, dateSheetRNo[i][j][k], '\n');
+//                cout << dateSheetRNo[i][j][k] << " ";
+            }
+  //          cout << "\n ====\n ";
+        }
+    }
+
+    inFile.close();
+}
+
+/**
+ *      \class  ReadInput
+ *      \fn     ReadInput :: ReadRoomDetail(string projectID)
+ *      \brief  Reading room details
+ *      \param  projectID projectId of user's project
+ */
+
+void ReadInput :: ReadRoomDetail(string projectID)
+{
+    temp = FileName(ROOM_DETAIL, projectID, 1);
+
+    inFile.open(temp.c_str());
+    
+    inFile >> totalCentres;
+    
+    // Resizing vector array
+    centreName.resize(totalCentres);
+    totalRooms.resize(totalCentres);
+    roomNo.resize(totalCentres);
+    rows.resize(totalCentres);
+    cols.resize(totalCentres);
+
+    getline(inFile, temp, '\n');
+    for(i = 0; i < totalCentres; i++)
+    {
+        getline(inFile, centreName[i], '\n');
+
+        inFile >> totalRooms[i];
+ 
+        for(j = 0; j < totalRooms[i]; j++)
+        {
+            roomNo[i].resize(totalRooms[i]);
+            rows[i].resize(totalRooms[i]);
+            cols[i].resize(totalRooms[i]);
+        }
+         
+        getline(inFile, temp, '\n');
+        for(j = 0; j < totalRooms[i]; j++)
+        {
+            getline(inFile, roomNo[i][j], '\n');
+
+            inFile >> rows[i][j] >> cols[i][j];
+
+            getline(inFile, temp, '\n');
+        }
+     }
+
+    inFile.close();
+}
+
+/**
+ *      \class  ReadInput
  *      \fn     ReadInput :: ReadRollNoDetail(string fileName)
  *      \brief  Reading Roll No detail from file
  *      \param  projectID Name of I/P file for roll nos.
@@ -153,7 +269,7 @@ void ReadInput :: ReadDateSheet(string projectID)
  
     date.resize(totalDays);
     totalExams.resize(totalDays);
-    examCode.resize(totalDays);
+    examSubCode.resize(totalDays);
      
     getline(inFile, temp, '\n');
     for(i = 0; i < totalDays; i++)
@@ -164,12 +280,12 @@ void ReadInput :: ReadDateSheet(string projectID)
         getline(inFile, temp, '\n');
         for(j = 0; j < totalExams[i]; j++)
         {
-            examCode[i].resize(totalExams[i]);
+            examSubCode[i].resize(totalExams[i]);
         }
         
         for(j = 0; j < totalExams[i]; j++)
         {
-            getline(inFile, examCode[i][j], '\n');
+            getline(inFile, examSubCode[i][j], '\n');
 //            cout << examCode[i][j] << " " ;
         }
     }
@@ -178,6 +294,23 @@ void ReadInput :: ReadDateSheet(string projectID)
    
 }
 
+/**
+ *      \class  ReadInput
+ *      \fn     ReadInput :: ReadStrategy(string projectID)
+ *      \brief  Function for reading strategy
+ *      \param  projectID projectId of user's project
+ */
+
+void ReadInput :: ReadStrategy(string projectID)
+{
+    temp = FileName(STRATEGY, projectID, 1);
+
+    inFile.open(temp.c_str());
+
+    getline(inFile, strategyOption, '\n');
+
+    inFile.close();
+}
 
 /**
  *      \class  ReadInput

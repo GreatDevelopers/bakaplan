@@ -15,6 +15,7 @@
 
 //#include "readinput.cc"
 #include "header/datesheet.h"
+#include "header/strategy.h"
 
 int main(void)
 {
@@ -23,6 +24,8 @@ int main(void)
 //    rNo.ReadDateSheet("1");
 //    rNo.expandRNo.ExpandRollNos("1");
     rNo.Main("1");
+    Strategy str;
+    str.Main("1");
 
     return 0;
 }

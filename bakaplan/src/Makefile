@@ -42,11 +42,17 @@ $(ARRANGEROLLNO)$(O) : $(D_ARRANGEROLLNO)
 $(DATESHEET)$(O) : $(D_DATESHEET)
 	$(CXX) $(CFLAG) $(DATESHEET)$(CC)
 
-main.o: main.cpp $(H_DATESHEET)
+$(SEATPLAN)$(O) : $(D_SEATPLAN)
+	$(CXX) $(CFLAG) $(SEATPLAN)$(CC)
+
+$(STRATEGY)$(O) : $(D_STRATEGY)
+	$(CXX) $(CFLAG) $(STRATEGY)$(CC)
+
+main.o: main.cpp $(H_DATESHEET) $(H_STRATEGY)
 	$(CXX) $(CFLAG) main.cpp
 
-main: $(L_DATESHEET) main.o
-	$(CXX) $(OFLAG) main $(L_DATESHEET) main.o
+main: $(L_DATESHEET) $(L_STRATEGY) main.o
+	$(CXX) $(OFLAG) main $(L_DATESHEET) $(L_STRATEGY) main.o
 
 run : main
 	./main

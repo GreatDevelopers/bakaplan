@@ -13,6 +13,9 @@
  *                   https://github.com/GreatDevelopers
  */
 
+#ifndef FILENAME_H
+#define FILENAME_H
+
 const int FILE_SIZE = 25;
 
 const char INPUT[FILE_SIZE]   =   "../input/";
@@ -30,3 +33,5 @@ const char EXPAND_ROLLNO[FILE_SIZE]  = "expand-rollno-";
 const char ARRANGE_ROLLNO[FILE_SIZE] = "arrange-rollno-";
 
 const char TEMP[FILE_SIZE] = "temp-";
+
+#endif

@@ -28,11 +28,6 @@ class DateSheet : public ArrangeRollNo
 {
     protected:
     
-        INT_2DVEC dateSheetRNoSize;             /**< Total roll nos 
-                                                for exam code */
-        STRING_3DVEC dateSheetRNo;              /**< Roll Nos w.r.t 
-                                                datesheet */
-
     public:
         /** Constructor */
         DateSheet();

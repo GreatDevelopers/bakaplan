@@ -32,18 +32,20 @@ DateSheet :: DateSheet()
 /**
  *      \class  DateSheet
  *      \fn     DateSheet :: AddRollNoWithDateSheet()
- *      \brief  Adding roll no to with exam code in datesheet
+ *      \brief  Adding roll no to with exam subject code in datesheet
  */
 
 void DateSheet :: AddRollNoWithDateSheet()
 {
     dateSheetRNoSize.resize(totalDays);
     dateSheetRNo.resize(totalDays);
+    examSubName.resize(totalDays);
 
     for(i = 0; i < totalDays; i++)
     {
         dateSheetRNoSize[i].resize(totalExams[i]);
         dateSheetRNo[i].resize(totalExams[i]);
+        examSubName[i].resize(totalExams[i]);
 /*        for(j = 0; j < totalExams[i]; j++)
         {
             dateSheetRNo[i][j].resize(0);
@@ -67,8 +69,9 @@ void DateSheet :: AddRollNoWithDateSheet()
             {
                 for(l = 0; l < totalSubjects[k]; l++)
                 {
-                    if(examCode[i][j] == subjectCode[k][l])
+                    if(examSubCode[i][j] == subjectCode[k][l])
                     {
+                        examSubName[i][j] = subjectName[k][l];
                         dateSheetRNoSize[i][j] += rollNoSize[k];
 
                         int size = dateSheetRNo[i][j].size();
@@ -99,15 +102,17 @@ void DateSheet :: WriteDateSheet(string projectID)
 
     outFile.open(temp.c_str());
 
+    outFile << totalDays << endl;
+
     for(i = 0; i < totalDays; i++)
     {
-        outFile << totalDays << endl
-             << date[i] << endl
-             << totalExams[i] << endl;
+        outFile << date[i] << endl
+                << totalExams[i] << endl;
 
         for(j = 0; j < totalExams[i]; j++)
         {
-            outFile << examCode[i][j] << endl
+            outFile << examSubCode[i][j] << endl
+                    << examSubName[i][j] << endl
                     << dateSheetRNoSize[i][j] << endl;
 
             for(k = 0; k < dateSheetRNoSize[i][j]; k++)
