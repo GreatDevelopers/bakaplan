@@ -137,39 +137,56 @@ void ReadInput :: ReadRoomDetail(string projectID)
 
     inFile.open(temp.c_str());
     
-    inFile >> totalCentres;
+    int t;
     
-    // Resizing vector array
-    centreName.resize(totalCentres);
-    totalRooms.resize(totalCentres);
-    roomNo.resize(totalCentres);
-    rows.resize(totalCentres);
-    cols.resize(totalCentres);
+    inFile >> t;
+    
+    totalCentres.resize(t);
+    centreName.resize(t);
+    totalRooms.resize(t);
+    roomNo.resize(t);
+    rows.resize(t);
+    cols.resize(t);
 
-    getline(inFile, temp, '\n');
-    for(i = 0; i < totalCentres; i++)
+    for(i = 0; i < t; i++)
     {
-        getline(inFile, centreName[i], '\n');
-
-        inFile >> totalRooms[i];
- 
-        for(j = 0; j < totalRooms[i]; j++)
+        inFile >> totalCentres[i];
+    
+        // Resizing vector array
+        for(j = 0; j < totalCentres[i]; j++)
         {
-            roomNo[i].resize(totalRooms[i]);
-            rows[i].resize(totalRooms[i]);
-            cols[i].resize(totalRooms[i]);
+            centreName[i].resize(totalCentres[i]);
+            totalRooms[i].resize(totalCentres[i]);
+            roomNo[i].resize(totalCentres[i]);
+            rows[i].resize(totalCentres[i]);
+            cols[i].resize(totalCentres[i]);
         }
-         
+
         getline(inFile, temp, '\n');
-        for(j = 0; j < totalRooms[i]; j++)
+        for(j = 0; j < totalCentres[i]; j++)
         {
-            getline(inFile, roomNo[i][j], '\n');
-
-            inFile >> rows[i][j] >> cols[i][j];
-
+            getline(inFile, centreName[i][j], '\n');
+    
+            inFile >> totalRooms[i][j];
+    
+            for(k = 0; k < totalRooms[i][j]; k++)
+            {
+                roomNo[i][j].resize(totalRooms[i][j]);
+                rows[i][j].resize(totalRooms[i][j]);
+                cols[i][j].resize(totalRooms[i][j]);
+            }
+         
             getline(inFile, temp, '\n');
+            for(k = 0; k < totalRooms[i][j]; k++)
+            {
+                getline(inFile, roomNo[i][j][k], '\n');
+
+                inFile >> rows[i][j][k] >> cols[i][j][k];
+
+//                getline(inFile, temp, '\n');
+            }
         }
-     }
+    }
 
     inFile.close();
 }

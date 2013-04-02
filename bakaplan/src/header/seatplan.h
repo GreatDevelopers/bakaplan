@@ -38,7 +38,7 @@ class SeatPlan : public ReadInput
                 seatSize,
                 size;
 
-        INT_2DVEC roomSize;
+        INT_3DVEC roomSize;
         
         STRING_VEC subSubCode;
 

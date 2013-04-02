@@ -33,19 +33,26 @@ Strategy :: Strategy()
 
 void Strategy :: TotalSeats(int strategy)
 {
-    roomSize.resize(totalCentres);
-    for(i = 0; i < totalCentres; i++)
+    roomSize.resize(totalDays);
+    for(i = 0; i < totalDays; i++)
     {
-        roomSize[i].resize(totalRooms[i]);
+        roomSize[i].resize(totalCentres[i]);
+        for(j = 0; j < totalCentres[i]; j++)
+        {   
+            roomSize[i][j].resize(totalRooms[i][j]);
+        }
     }
 
-    for(i = 0; i < totalCentres; i++)
+    for(i = 0; i < totalDays; i++)
     {
-        for(j = 0; j < totalRooms[i]; j++)
+        for(j = 0; j < totalCentres[i]; j++)
         {
-            roomSize[i][j] = rows[i][j] * cols[i][j];
-            totalSeats += roomSize[i][j];
-            totalGroupSeats += roomSize[i][j] / strategy;
+            for(k = 0; k < totalRooms[i][j]; k++)
+            {
+                roomSize[i][j][k] = rows[i][j][k] * cols[i][j][k];
+                totalSeats += roomSize[i][j][k];
+                totalGroupSeats += roomSize[i][j][k] / strategy;
+            }
         }
     }
 }

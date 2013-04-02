@@ -37,24 +37,26 @@ class ReadInput
                    notIncluded, /**< Rollno ie not for seating plan */
 
                    className,          /**< Branch/trade/class Name */
-                   date,                  /**< Date for examination */
-                   centreName;                  /**< Centre NAme */
+                   date;                  /**< Date for examination */
 
         STRING_2DVEC subjectCode,                 /**< Subject Code */
                      subjectName,                 /**< Subject Name */
                      examSubCode,     /**< Examination/subject code */
                      examSubName,           /**< Exam/ subejct Name */
-                     roomNo;                    /**< Room No */
+                     centreName;                   /**< Centre NAme */
+
+        STRING_3DVEC roomNo;                           /**< Room No */
 
         int totalClasses,        /**< Total classes/branches/trades */
-            totalDays,                /**< No. of days in datesheet */
-            totalCentres;                       /**< Total centres */
+            totalDays;                /**< No. of days in datesheet */
 
         INT_VEC totalSubjects,         /**< Total subejcts of class */
                 totalExams,               /**< Total exams on 1 day */
-                totalRooms;              /**< total rooms in centre */
+                totalCentres;                    /**< Total centres */
 
-        INT_2DVEC rows,                         /**< Rows in room */
+        INT_2DVEC totalRooms;            /**< total rooms in centre */
+
+        INT_3DVEC rows,                           /**< Rows in room */
                   cols;                        /**< columns in room */
 
         ifstream inFile;            /**< For reading data from file */
