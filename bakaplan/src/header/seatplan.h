@@ -56,9 +56,9 @@ class SeatPlan : public ReadInput
         /** Constructor */
         SeatPlan();
 
-        void SetRollNo(int);
-        string RollNo(int);
-        void SeatingPlan(int);
+        void SetRollNo(int strategy, int i);
+        string RollNo(int s);
+        void SeatingPlan(int strategy, int i);
         void CreateFile(string projectID);
         void WriteSeatPlan(string projectID);
 

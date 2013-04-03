@@ -29,62 +29,93 @@ SeatPlan :: SeatPlan()
     // constructor
 }
 
-/*  
-void SeatPlan :: setRollNo(int strategy)
-{
+void SeatPlan :: SetRollNo(int strategy, int i)
+{ 
     int stra;
     if(strategy == 5)
         stra = 1;
     else
         stra = strategy;
     s = 0;
-    for(i = 0; i < strategy; i++)
+    for(j = 0; j < strategy; j++)
     {
-        seat_size[i] = 0;
+        seatSize[j] = 0;
     }
-    
-    for(i = 0; i < total_code; i++)
+   
+    seatRollNo.resize(strategy);
+    for(j = 0; j < totalExams[i]; j++)
     {
         if(s == stra)
             s = 0;
         
-        start = seat_size[s];
-        index = index_value[i];
-        end = sub_totalrno[index];
-        
-        for(j = 0; j < end; j++)
+        start = seatSize[s];
+        index = indexValue[j];
+        end = dateSheetRNoSize[i][index];
+        seatRollNo[s].resize(start + end);
+        for(k = 0; k < end; k++)
         {
-            seat_rollno[s][start + j] = sub_rollno[index][j];
+            seatRollNo[s][start + k] = dateSheetRNo[i][index][k];
         }
         
-        seat_size[s] = start + end;
+        seatSize[s] = start + end;
         s++;
-    }    
+    }
 }
-*/
-void SeatPlan :: SeatingPlan(int strategy)
-{/* 
-    int from, to, next, stra;
-    
-    setRollNo(strategy);
+
+void SeatPlan :: SeatingPlan(int strategy, int i)
+{  
+    int stra;
+  
+    seatSize.resize(strategy);
+
+    SetRollNo(strategy, i);
     
     if(strategy == 5)
         stra = 1;
     else
         stra = strategy;
     
-    for(i = 0; i < stra; i++)
+    size.resize(stra);
+    for(j = 0; j < stra; j++)
     {
-        size[i] = 0;
+        size[j] = 0;
     }
-    
-    // centre = total centre, room = total room[], row = rows[][], col = cols[][]
-    
-    for(centre = 0; centre < total_centres; centre++)
+ /* 
+//    seat.resize(i);
+    seat.resize(totalCentres[i]);
+    for(j = 0; j < totalCentres[i]; j++)
     {
-        for(room = 0; room < total_rooms[centre]; room++)
+        seat[j].resize(totalRooms[i][j]);
+        for(k = 0; k < totalRooms[i][j]; k++)
         {
-            for(row = 0; row < cols[centre][room]; row++)
+            seat[j][k].resize(cols[i][j][k]);
+            for(l = 0; l < cols[i][j][k]; l++)
+            {
+                seat[j][k][l].resize(rows[i][j][k]);
+            }
+        }
+    }*/
+    seat.resize(totalCentres[i]);
+    for(centre = 0; centre < totalCentres[i]; centre++)
+    {
+        seat[centre].resize(totalRooms[i][centre]);
+        for(room = 0; room < totalRooms[i][centre]; room++)
+        {
+            seat[centre][room].resize(cols[i][centre][room]);
+            for(row = 0; row < cols[i][centre][room]; row++)
+            {
+                seat[centre][room][row].resize(rows[i][centre][room]);
+            }
+        }
+    }
+
+    // centre = total centre, room = total room[], row = rows[][], col = cols[][]
+      
+    for(centre = 0; centre < totalCentres[i]; centre++)
+    {
+        for(room = 0; room < totalRooms[i][centre]; room++)
+        {
+            for(row = 0; row < cols[i][centre][room]; row++)
             {
                 if((row % 2) != 0)
                 {
@@ -96,63 +127,64 @@ void SeatPlan :: SeatingPlan(int strategy)
                     {
                         s = 0;
                     }
-                        
                 }
                 else
                     s = 0;
-                
+                  
                 if(strategy == 5)
                 {
                     if((row % 2) != 0)
                     {
-                        for(col = rows[centre][room]-1; col >= 0 ; col--)
+                        for(col = rows[i][centre][room]-1; col >= 0 ; col--)
                         {
                             if(s == stra)
                                 s = 0;
-                            seat[centre][room][col][row] = rollNo(s);
+                            seat[centre][room][col][row] = RollNo(s);
                             s++;
                         }
                     }
                     else
                     {
-                        for(col = 0; col < rows[centre][room]; col++)
+                        for(col = 0; col < rows[i][centre][room]; col++)
                         {
                             if(s == stra)
                                 s = 0;
-                            seat[centre][room][col][row] = rollNo(s);
+                            seat[centre][room][col][row] = RollNo(s);
                             s++;
                         }
                     }
                 }
-                else
-                {          
-                    for(col = 0; col < rows[centre][room]; col++)
+    /*            else
+                {
+                    for(col = 0; col < rows[i][centre][room]; col++)
                     {
                         if(s == strategy)
                             s = 0;
-                        seat[centre][room][col][row] = rollNo(s);
+                        seat[centre][room][col][row] = RollNo(s);
                         s++;
                     }
                 }
+      */          
             }
         }
-    }*/
+    }
 }
-/* 
-string SeatPlan :: rollNo(int s)
+ 
+string SeatPlan :: RollNo(int s)
 {
     string rno;
-    
-    if(seat_size[s] == size[s])
+     
+    if(seatSize[s] == size[s])
         rno = "-";
     else
     {
-        rno = seat_rollno[s][size[s]];
+        rno = seatRollNo[s][size[s]];
         size[s]++;
     }
     return rno;
+    
 }
-*/
+
 void SeatPlan :: WriteSeatPlan(string projectID)
 {/* 
     outfile.close();

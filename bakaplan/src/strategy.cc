@@ -136,7 +136,7 @@ void Strategy :: GroupCondition(int strategy, int i)
         outFile << "Y" << endl;
         outFile << "\t condition is valid" << endl;
         outFile.close();
-        SeatingPlan(strategy);
+        SeatingPlan(strategy, i);
         WriteSeatPlan(projectID);
 //        Report :: Main();
     }
