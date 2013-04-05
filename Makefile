@@ -33,7 +33,9 @@ T_COPY			=	copy
 T_CLEAN			=	clean
 T_INSTALL       =   install
 T_BACKEND       =   backend
+T_FRONTEND      =   front
 T_CLEAN_BACKEND =   clean-backend
+T_CLEAN_FRONTEND=   clean-front
 
 # ====================================================================
 #	Main target (1st target)
@@ -57,6 +59,9 @@ $(T_COPY):
 $(T_BACKEND):
 	make -C bakaplan
 
+$(T_FRONTEND):
+	make -C frontend
+
 # ====================================================================
 # 	Clean .o, .html files
 # ====================================================================
@@ -66,3 +71,6 @@ $(T_CLEAN):
 
 $(T_CLEAN_BACKEND):
 	make -C bakaplan clean
+
+$(T_CLEAN_FRONTEND):
+	make -C frontend clean

@@ -43,8 +43,8 @@ Login :: Login()
  
 void Login :: SelectLoginDetail()
 {
-    database.SelectQuery("EmailID", "User", emailID);
-    database.SelectQuery("Password", "User", password);
+//    database.SelectQuery("EmailID", "User", emailID);
+//    database.SelectQuery("Password", "User", password);
 
 /*      
     vector<string>::iterator v = emailID.begin();
@@ -70,8 +70,8 @@ void Login :: SelectLoginDetail()
 
 void Login :: ReadLoginDetail()
 {
-    userEmailID  = readField.ReadFieldValue(fieldName.emailID);
-    userPassword = readField.ReadFieldValue(fieldName.password);
+//    userEmailID  = readField.ReadFieldValue(fieldName.emailID);
+//    userPassword = readField.ReadFieldValue(fieldName.password);
 }
 
 /**
@@ -84,7 +84,7 @@ void Login :: ReadLoginDetail()
 
 void Login :: LoginPage(string msg, string emailID, string password)
 {
-    ContextType();
+    page.ContentType();
     Header("Login");
 
     page.DivStart("login", "");
@@ -110,7 +110,7 @@ void Login :: LoginPage(string msg, string emailID, string password)
     
     cout << page.brk << page.brk;
     
-    Button("next", "submit", "btn", "Login");
+    page.Button("next", "submit", "btn", "Login");
 
     cout << page.brk << page.brk << page.startB;
     page.Anchor("register.html", "Register Here");
@@ -218,7 +218,7 @@ void Login :: AddNewUser()
 
 void Login :: LogoutPage()
 {
-    SetCookies("", "");
+    page.SetCookies("", "");
     //string s = readField.ReadCookie("SessionID");
 /*    userEmailID = readField.ReadFieldValue(fieldName.emailID);
     temp  = "delete from Session where EmailID = \"" + userEmailID;

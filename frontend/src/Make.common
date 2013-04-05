@@ -73,41 +73,76 @@ HTML   =  .html
 #   Variables for defining header files
 
 H_CONSTANT        =  $(F_HEADER)$(CONSTANT)$(H)
+
 H_FILENAME        =  $(F_HEADER)$(FILENAME)$(H)
+
 H_HEADER          =  $(F_HEADER)$(HEADER)$(H)
+
 H_DATABASE       :=  $(F_HEADER)$(DATABASE)$(H) \
-                    $(F_HEADER)$(DATABASE)-$(DETAIL)$(H) $(H_HEADER)
+                     $(F_HEADER)$(DATABASE)-$(DETAIL)$(H) $(H_HEADER)
 H_INPUTFIELDNAME  =  $(F_HEADER)$(INPUTFIELDNAME)$(H) $(H_HEADER)
+
 H_READINPUTFIELD :=  $(F_HEADER)$(READINPUTFIELD)$(H) $(H_HEADER) \
-                    $(F_HEADER)$(CGICC)$(H)
+                     $(F_HEADER)$(CGICC)$(H)
 H_MD5             =  $(F_HEADER)$(MD5)$(H)
+
 H_JAVASCRIPT      =  $(F_HEADER)$(JAVASCRIPT)$(H) $(H_HEADER)
+
 H_PAGESTRUCTURE   =  $(F_HEADER)$(PAGESTRUCTURE)$(H) $(H_HEADER)
+
 H_PAGELAYOUT      =  $(F_HEADER)$(PAGELAYOUT)$(H) $(H_PAGESTRUCTURE)
+
 H_INPUTDETAIL    :=  $(F_HEADER)$(INPUTDETAIL)$(H) $(H_FILENAME) \
-                    $(H_PAGELAYOUT) $(H_INPUTFIELDNAME) \
-                    $(H_READINPUTFIELD) $(H_CONSTANT) $(H_DATABASE)
+                     $(H_PAGELAYOUT) $(H_INPUTFIELDNAME) \
+                     $(H_READINPUTFIELD) $(H_CONSTANT) $(H_DATABASE)
+
+# Page header file
+
+H_LOGIN           =  $(F_HEADER)$(LOGIN)$(H) $(H_INPUTDETAIL) 
 
 #   Variables for defining dependancy
 
 D_DATABASE         =    $(DATABASE)$(CC) $(H_DATABASE)
+
 D_INPUTFIELDNAME   =    $(INPUTFIELDNAME)$(CC) $(H_INPUTFIELDNAME)
+
 D_READINPUTFIELD   =    $(READINPUTFIELD)$(CC) $(H_READINPUTFIELD)
+
 D_MD5              =    $(MD5)$(CC) $(H_MD5)
+
 D_JAVASCRIPT       =    $(JAVASCRIPT)$(CC) $(H_JAVASCRIPT)
+
 D_PAGELAYOUT       =    $(PAGELAYOUT)$(CC) $(H_PAGELAYOUT)
+
 D_PAGESTRUCTURE    =    $(PAGESTRUCTURE)$(CC) $(H_PAGESTRUCTURE)
+
 D_INPUTDETAIL      =    $(INPUTDETAIL)$(CC) $(H_INPUTDETAIL)
+
+D_LOGIN            =    $(LOGIN)$(CC) $(H_LOGIN) $(D_INPUTDETAIL)
 
 #   Linking variables
 
-#L_LOGIN         =  
-#L_PROJECT       =  
-#L_CLASS         =  
-#L_ROLLNO        =  
-#L_DATESHEET     =  
-#L_EXAM          =  
-#L_ROOM          =  
-#L_STRATEGY      =  
-#L_VALIDATION    =  
-#L_REPORT        =  
+L_INPUT       :=  $(INPUTDETAIL)$(O) $(PAGESTRUCTURE)$(O) \
+                  $(DATABASE)$(O) $(READINPUTFIELD)$(O) \
+                  $(INPUTFIELDNAME)$(O) $(MD5)$(O) $(PAGELAYOUT)$(O)
+
+L_LOGIN        =  $(LOGIN)$(MAIN)$(O) $(LOGIN)$(O) $(L_INPUT)
+
+#L_PROJECT      =  
+
+#L_CLASS        =  
+
+#L_ROLLNO       =  
+
+#L_DATESHEET    =  
+
+#L_EXAM         =  
+
+#L_ROOM         =  
+
+#L_STRATEGY     =  
+
+#L_VALIDATION   =  
+
+#L_REPORT       =  
+

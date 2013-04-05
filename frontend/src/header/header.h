@@ -31,7 +31,7 @@
 #include <exception>
 
 // for using multi-dimentional array
-#include "boost/multi_array.hpp"
+#include <boost/multi_array.hpp>
 #include <cassert>
 
 /**-------------------------------------------------------------------

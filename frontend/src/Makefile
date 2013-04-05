@@ -25,7 +25,9 @@ include Make.common
 #   Targets
 # ====================================================================
 
-all: $(DATABASE)$(O) $(INPUTFIELDNAME)$(O) $(READINPUTFIELD)$(O) $(MD5)$(O) $(JAVASCRIPT)$(O) $(PAGELAYOUT)$(O) $(PAGESTRUCTURE)$(O) $(INPUTDETAIL)$(O)
+all: $(LOGIN)$(HTML)
+
+#$(DATABASE)$(O) $(INPUTFIELDNAME)$(O) $(READINPUTFIELD)$(O) $(MD5)$(O) $(JAVASCRIPT)$(O) $(PAGELAYOUT)$(O) $(PAGESTRUCTURE)$(O) $(INPUTDETAIL)$(O)
 
 #$(READINPUT)$(O)
 
@@ -53,7 +55,20 @@ $(PAGESTRUCTURE)$(O) : $(D_PAGEsTRUCTURE)
 	$(CXX) $(CFLAG) $(PAGESTRUCTURE)$(CC)
 
 $(INPUTDETAIL)$(O) : $(D_INPUTDETAIL)
-	$(CXX) $(CFLAG) $(INPUTDETAIL)$(CC) $(LMYSQL) 
+	$(CXX) $(CFLAG) $(INPUTDETAIL)$(CC) $(LMYSQL)
+
+$(LOGIN)$(O) : $(D_LOGIN)
+	$(CXX) $(CFLAG) $(LOGIN)$(CC) $(LMYSQL)
+
+#	Targets for compiling cpp file(main files)
+
+$(LOGIN)$(MAIN)$(O) : $(D_LOGIN_M)
+	$(CXX) $(CFLAG) $(LOGIN)$(MAIN)$(CPP) $(LMYSQL)
+
+#	Targets for html pages
+
+$(LOGIN)$(HTML) : $(L_LOGIN)
+	$(CXX) $(OFLAG) $(LOGIN)$(HTML) $(L_LOGIN) $(LMYSQL) $(LCGICC)
 
 $(CLEAN) : 
-	rm -f *.o main
+	rm -f *.o *.html
