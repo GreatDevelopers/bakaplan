@@ -60,7 +60,7 @@ class SeatPlan : public ReadInput
         string RollNo(int s);
         void SeatingPlan(int strategy, int i);
         void CreateFile(string projectID);
-        void WriteSeatPlan(string projectID);
+        void WriteSeatPlan(string projectID, int i);
 
         /** Destructor */
         ~SeatPlan();

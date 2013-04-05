@@ -33,6 +33,7 @@ const char STRATEGY[FILE_SIZE]       = "strategy-";
 const char EXPAND_ROLLNO[FILE_SIZE]  = "expand-rollno-";
 const char ARRANGE_ROLLNO[FILE_SIZE] = "arrange-rollno-";
 const char VALIDATION[FILE_SIZE]     = "validation-";
+const char SEATPLAN[FILE_SIZE]       = "seatplan-";
 
 const char TEMP[FILE_SIZE] = "temp-";
 

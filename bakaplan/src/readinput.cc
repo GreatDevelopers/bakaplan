@@ -26,7 +26,7 @@
 
 ReadInput :: ReadInput()
 {
-    // constructor
+    // constructor of class
 }
 
 /**

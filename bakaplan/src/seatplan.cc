@@ -1,4 +1,5 @@
 /**
+ *
  *       \file       seatplan.cc
  *
  *       \brief      Function definition of SeatPlan Class
@@ -76,41 +77,26 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
         stra = strategy;
     
     size.resize(stra);
+
     for(j = 0; j < stra; j++)
     {
         size[j] = 0;
     }
- /* 
-//    seat.resize(i);
-    seat.resize(totalCentres[i]);
-    for(j = 0; j < totalCentres[i]; j++)
-    {
-        seat[j].resize(totalRooms[i][j]);
-        for(k = 0; k < totalRooms[i][j]; k++)
-        {
-            seat[j][k].resize(cols[i][j][k]);
-            for(l = 0; l < cols[i][j][k]; l++)
-            {
-                seat[j][k][l].resize(rows[i][j][k]);
-            }
-        }
-    }*/
+
     seat.resize(totalCentres[i]);
     for(centre = 0; centre < totalCentres[i]; centre++)
     {
         seat[centre].resize(totalRooms[i][centre]);
         for(room = 0; room < totalRooms[i][centre]; room++)
         {
-            seat[centre][room].resize(cols[i][centre][room]);
-            for(row = 0; row < cols[i][centre][room]; row++)
+            seat[centre][room].resize(rows[i][centre][room]);
+            for(row = 0; row < rows[i][centre][room]; row++)
             {
-                seat[centre][room][row].resize(rows[i][centre][room]);
+                seat[centre][room][row].resize(cols[i][centre][room]);
             }
         }
     }
 
-    // centre = total centre, room = total room[], row = rows[][], col = cols[][]
-      
     for(centre = 0; centre < totalCentres[i]; centre++)
     {
         for(room = 0; room < totalRooms[i][centre]; room++)
@@ -135,7 +121,7 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
                 {
                     if((row % 2) != 0)
                     {
-                        for(col = rows[i][centre][room]-1; col >= 0 ; col--)
+                        for(col = rows[i][centre][room]-1; col >= 0; col--)
                         {
                             if(s == stra)
                                 s = 0;
@@ -154,7 +140,7 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
                         }
                     }
                 }
-    /*            else
+                else
                 {
                     for(col = 0; col < rows[i][centre][room]; col++)
                     {
@@ -164,10 +150,12 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
                         s++;
                     }
                 }
-      */          
+                
             }
         }
     }
+
+   // WriteSeatPlan(projectID, i);
 }
  
 string SeatPlan :: RollNo(int s)
@@ -185,36 +173,42 @@ string SeatPlan :: RollNo(int s)
     
 }
 
-void SeatPlan :: WriteSeatPlan(string projectID)
-{/* 
-    outfile.close();
-  fileName  = "";//"../";
-    fileName += OUTPUT_FOLDER;
-    fileName += PID + projectID + SEATPLAN_OUT;
+void SeatPlan :: WriteSeatPlan(string projectID, int i)
+{ 
+    stringstream ss;
 
-    outfile.open(fileName.c_str());
-    outfile << total_centres << endl;
-    for(centre = 0; centre < total_centres; centre++)
+    ss << (i + 1);
+
+    projectID += "-" + ss.str();
+    
+    temp = FileName(SEATPLAN, projectID, 0);
+    
+    outFile.open(temp.c_str());
+    
+    outFile << totalCentres[i] << endl;
+    
+    for(centre = 0; centre < totalCentres[i]; centre++)
     {
-        outfile << centre_no[centre] << endl
-                << total_rooms[centre] << endl;
-        for(room = 0; room < total_rooms[centre]; room++)
+        outFile << centreName[i][centre] << endl
+                << totalRooms[i][centre] << endl;
+        
+        for(room = 0; room < totalRooms[i][centre]; room++)
         {
-            outfile << room_no[centre][room] << endl
-                    << rows[centre][room] << " "
-                    << cols[centre][room] << endl;
-                    
-            for(row = 0; row < rows[centre][room]; row++)
+            outFile << roomNo[i][centre][room] << endl
+                    << rows[i][centre][room] << " "
+                    << cols[i][centre][room] << endl;
+
+            for(row = 0; row < rows[i][centre][room]; row++)
             {
-                for(col = 0; col < cols[centre][room]; col++)
+                for(col = 0; col < cols[i][centre][room]; col++)
                 {
-                    outfile << seat[centre][room][row][col] << "\t";
+                    outFile << seat[centre][room][row][col] << "\t";
                 }
-                outfile << "\n";
+                outFile << "\n";
             }
         }
     }
-    outfile.close();*/
+    outFile.close();
 }
 
 /**
