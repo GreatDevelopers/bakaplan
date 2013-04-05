@@ -28,6 +28,7 @@
 #include <vector>
 #include <algorithm>
 #include <ctime>
+#include <exception>
 
 // for using multi-dimentional array
 #include "boost/multi_array.hpp"
