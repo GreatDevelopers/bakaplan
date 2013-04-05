@@ -1,0 +1,53 @@
+/*
+ * ===================================================================
+ *
+ *       Filename:  header.h
+ *
+ *    Description:  Header file for including commom headerfiles.
+ *
+ *        Version:  0.6
+ *        Created:  Friday 15 February 2013 04:53:17  IST
+ *       Compiler:  g++
+ *
+ *         Author:  Mandeep Kaur, meghasimak@gmail.com
+ *        License:  GNU General Public License
+ *      Copyright:  Copyright (c) 2013, Great Developers
+ *
+ * ===================================================================
+ */
+
+/**-------------------------------------------------------------------
+ *  Header file
+ *------------------------------------------------------------------*/
+
+#include <iostream>
+#include <cstring>
+#include <fstream>
+#include <sstream>
+#include <cstdlib>
+#include <vector>
+#include <algorithm>
+#include <ctime>
+
+// for using multi-dimentional array
+#include "boost/multi_array.hpp"
+#include <cassert>
+
+/**-------------------------------------------------------------------
+ *  using namespace std
+ *------------------------------------------------------------------*/
+
+using namespace std;
+
+/**
+ *  Typedef variables for using vector definiton
+ */
+
+typedef vector<string> STRING_VEC;
+typedef vector<vector<string> > STRING_2DVEC;
+typedef vector<vector<vector<string> > > STRING_3DVEC;
+typedef vector<vector<vector<vector<string> > > > STRING_4DVEC;
+typedef vector<vector<vector<int> > > INT_3DVEC;
+typedef vector<vector<int> > INT_2DVEC;
+typedef vector<int> INT_VEC;
+

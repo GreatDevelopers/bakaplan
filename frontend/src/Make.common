@@ -1,0 +1,113 @@
+# ====================================================================
+# 
+#        Filename:  Make.common
+# 
+#     Description:  Definition of common variables used in Makefile
+# 
+#         Created:  Saturday 30 March 2013 11:15:42  IST
+#        Compiler:  g++
+# 
+#          Author:  Mandeep Kaur, meghasimak@gmail.com
+#         License:  GNU General Public License
+#       Copyright:  Copyright (c) 2013, Great Developers
+#                   https://github.com/GreatDevelopers 
+# 
+# ====================================================================
+
+#   Variables for compilation of c/c++ files
+
+CXX     =   g++                          # Compiler 
+WALL    =   -Wall                        # Warning all flag
+WERROR  =   -Werror                      # Convert warnings into error
+DEBUG   =   -g $(WALL) $(WERROR)         # Debugging flag
+CFLAG   =   -c $(DEBUG)   #-Wl,--stack,8388608     # Compilation flag 
+OFLAG   =   $(DEBUG) -o                  # O/p Flag
+LCGICC  =   -lcgicc                      # cgicc lib flag
+LMYSQL  =   -L/usr/include/mysql -lmysqlclient -I/usr/include/mysql
+
+#   Target names
+
+CLEAN   =   clean
+
+#   Common variables
+
+F_HEADER        =  header/
+F_HEADER_BOOST  =  header/boost/
+F_HEADER_JWSMTP =  header/jwsmtp/
+HEADER          =  header
+DETAIL          =  detail
+FILENAME        =  filename
+MAIN            =  -main
+CGICC           =  cgicc
+CONSTANT        =  constant
+DATABASE        =  database
+INPUTDETAIL     =  inputdetail
+INPUTFIELDNAME  =  inputfieldname
+JAVASCRIPT      =  javascript
+MD5             =  md5
+PAGELAYOUT      =  pagelayout
+PAGESTRUCTURE   =  pagestructure
+READINPUTFIELD  =  readinputfield
+
+#   Html pages file names
+
+LOGIN       =  login
+PROJECT     =  project
+CLASS       =  class
+ROLLNO      =  rollno
+DATESHEET   =  datesheet
+EXAM        =  exam
+ROOM        =  room
+STRATEGY    =  strategy
+VALIDATION  =  validation
+REPORT      =  report
+
+#   File Extention variables
+
+H      =  .h
+O      =  .o
+CC     =  .cc
+CPP    =  .cpp
+HTML   =  .html     
+
+#   Variables for defining header files
+
+H_CONSTANT        =  $(F_HEADER)$(CONSTANT)$(H)
+H_FILENAME        =  $(F_HEADER)$(FILENAME)$(H)
+H_HEADER          =  $(F_HEADER)$(HEADER)$(H)
+H_DATABASE       :=  $(F_HEADER)$(DATABASE)$(H) \
+                    $(F_HEADER)$(DATABASE)-$(DETAIL)$(H) $(H_HEADER)
+H_INPUTFIELDNAME  =  $(F_HEADER)$(INPUTFIELDNAME)$(H) $(H_HEADER)
+H_READINPUTFIELD :=  $(F_HEADER)$(READINPUTFIELD)$(H) $(H_HEADER) \
+                    $(F_HEADER)$(CGICC)$(H)
+H_MD5             =  $(F_HEADER)$(MD5)$(H)
+H_JAVASCRIPT      =  $(F_HEADER)$(JAVASCRIPT)$(H) $(H_HEADER)
+H_PAGESTRUCTURE   =  $(F_HEADER)$(PAGESTRUCTURE)$(H) $(H_HEADER)
+H_PAGELAYOUT      =  $(F_HEADER)$(PAGELAYOUT)$(H) $(H_PAGESTRUCTURE)
+H_INPUTDETAIL    :=  $(F_HEADER)$(INPUTDETAIL)$(H) $(H_FILENAME) \
+                    $(H_PAGELAYOUT) $(H_INPUTFIELDNAME) \
+                    $(H_READINPUTFIELD) $(H_CONSTANT) $(H_DATABASE)
+
+#   Variables for defining dependancy
+
+D_DATABASE         =    $(DATABASE)$(CC) $(H_DATABASE)
+D_INPUTFIELDNAME   =    $(INPUTFIELDNAME)$(CC) $(H_INPUTFIELDNAME)
+D_READINPUTFIELD   =    $(READINPUTFIELD)$(CC) $(H_READINPUTFIELD)
+D_MD5              =    $(MD5)$(CC) $(H_MD5)
+D_JAVASCRIPT       =    $(JAVASCRIPT)$(CC) $(H_JAVASCRIPT)
+D_PAGELAYOUT       =    $(PAGELAYOUT)$(CC) $(H_PAGELAYOUT)
+D_PAGESTRUCTURE    =    $(PAGESTRUCTURE)$(CC) $(H_PAGESTRUCTURE)
+D_INPUTDETAIL      =    $(INPUTDETAIL)$(CC) $(H_INPUTDETAIL)
+
+#   Linking variables
+
+#L_LOGIN         =  
+#L_PROJECT       =  
+#L_CLASS         =  
+#L_ROLLNO        =  
+#L_DATESHEET     =  
+#L_EXAM          =  
+#L_ROOM          =  
+#L_STRATEGY      =  
+#L_VALIDATION    =  
+#L_REPORT        =  
