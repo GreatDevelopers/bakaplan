@@ -17,3 +17,5 @@ src/backend/*.o
 bakaplan/src/*.o
 bakaplan/src/main
 
+frontend/src/*.o
+frontend/src/*.html
