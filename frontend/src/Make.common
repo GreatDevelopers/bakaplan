@@ -101,7 +101,8 @@ H_INPUTDETAIL    :=  $(F_HEADER)$(INPUTDETAIL)$(H) $(H_FILENAME) \
                      $(H_PAGELAYOUT) $(H_INPUTFIELDNAME) \
                      $(H_READINPUTFIELD) $(H_CONSTANT) $(H_DATABASE)
 
-H_SENDMAIL        =  $(F_HEADER)$(SENDMAIL)$(H) $(H_HEADER)
+H_SENDMAIL       :=  $(F_HEADER)$(SENDMAIL)$(H) $(H_HEADER) \
+                     $(F_HEADER)$(SENDMAIL)-$(DETAIL)$(H)
 
 # Page header file
 
