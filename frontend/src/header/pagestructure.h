@@ -112,7 +112,7 @@ class PageStructureMaker
                         string value);
         
         /** Label tag */
-        void Label(string forField, string fieldName, string value);
+        void Label(string forField, string value);
 
         /** Select Field Start */
         void SelectFieldStart(string name);

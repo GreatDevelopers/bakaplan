@@ -329,11 +329,10 @@ void PageStructureMaker :: Anchor(string href, string target)
  *--------------------------------------------------------------------
  */
 
-void PageStructureMaker :: Label(string forValue, string fieldName,
-                                 string value)
+void PageStructureMaker :: Label(string forField, string value)
 {
-    cout << "<label for=\"" << forValue << "\" name=\"" 
-         << fieldName << "\" >" << value << "</label>";
+    cout << "<label for=\"" << forField << "\" >" 
+         << value << "</label>";
 }
 
 /**
@@ -349,7 +348,8 @@ void PageStructureMaker :: InputField(string type, string name,
                                       string value)
 {
     cout << "<input type=\"" << type << "\" name=\"" << name;
-    cout << "\"" << " value = \"" << value << "\" " 
+    cout << "\" id = \"" << name << "\""
+         << " value = \"" << value << "\" " 
          //<< " onfocus = \"OnFocus(this.value, this.name, \"" << value
          //<< "\")\""
          << ">" << endl;

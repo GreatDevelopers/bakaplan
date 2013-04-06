@@ -23,6 +23,7 @@
 
 #include "inputdetail.h"
 #include "md5.h"
+#include "sendmail.h"
 
 /**
  * ===================================================================
@@ -46,6 +47,8 @@ class Login : public InputDetail
         string msg,           /**< Msg string to show error message */
                currentDate;                      /**< Currennt Date */
 
+        SendMail sendMail;
+
     public:
         /** Constructor */
         Login();
@@ -64,7 +67,7 @@ class Login : public InputDetail
                                string password = "******");
 
         /** Add new user in database */
-        void AddNewUser();
+        void NewUser();
 
         /** For selecting emial and password fron user table */
         void SelectLoginDetail();

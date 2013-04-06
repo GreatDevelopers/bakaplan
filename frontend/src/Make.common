@@ -24,6 +24,7 @@ CFLAG   =   -c $(DEBUG)   #-Wl,--stack,8388608     # Compilation flag
 OFLAG   =   $(DEBUG) -o                  # O/p Flag
 LCGICC  =   -lcgicc                      # cgicc lib flag
 LMYSQL  =   -L/usr/include/mysql -lmysqlclient -I/usr/include/mysql
+LSMTP   =   -ljwsmtp
 
 #   Target names
 
@@ -34,6 +35,7 @@ CLEAN   =   clean
 F_HEADER        =  header/
 F_HEADER_BOOST  =  header/boost/
 F_HEADER_JWSMTP =  header/jwsmtp/
+F_BP            =  ../bp/
 HEADER          =  header
 DETAIL          =  detail
 FILENAME        =  filename
@@ -48,10 +50,13 @@ MD5             =  md5
 PAGELAYOUT      =  pagelayout
 PAGESTRUCTURE   =  pagestructure
 READINPUTFIELD  =  readinputfield
+SENDMAIL        =  sendmail
 
 #   Html pages file names
 
 LOGIN       =  login
+REGISTER    =  register
+NEWUSER     =  newuser
 PROJECT     =  project
 CLASS       =  class
 ROLLNO      =  rollno
@@ -96,9 +101,12 @@ H_INPUTDETAIL    :=  $(F_HEADER)$(INPUTDETAIL)$(H) $(H_FILENAME) \
                      $(H_PAGELAYOUT) $(H_INPUTFIELDNAME) \
                      $(H_READINPUTFIELD) $(H_CONSTANT) $(H_DATABASE)
 
+H_SENDMAIL        =  $(F_HEADER)$(SENDMAIL)$(H) $(H_HEADER)
+
 # Page header file
 
-H_LOGIN           =  $(F_HEADER)$(LOGIN)$(H) $(H_INPUTDETAIL) 
+H_LOGIN          :=  $(F_HEADER)$(LOGIN)$(H) $(H_INPUTDETAIL) \
+                     $(H_SENDMAIL)
 
 #   Variables for defining dependancy
 
@@ -118,7 +126,17 @@ D_PAGESTRUCTURE    =    $(PAGESTRUCTURE)$(CC) $(H_PAGESTRUCTURE)
 
 D_INPUTDETAIL      =    $(INPUTDETAIL)$(CC) $(H_INPUTDETAIL)
 
-D_LOGIN            =    $(LOGIN)$(CC) $(H_LOGIN) $(D_INPUTDETAIL)
+D_SENDMAIL         =    $(SENDMAIL)$(CC) $(H_SENDMAIL)
+
+D_LOGIN            =    $(LOGIN)$(CC) $(H_LOGIN)
+
+#   Dependncy of main files
+
+D_LOGIN_M          =    $(LOGIN)$(MAIN)$(CPP) $(H_LOGIN)
+
+D_REGISTER_M       =    $(REGISTER)$(MAIN)$(CPP) $(H_LOGIN)
+
+D_NEWUSER_M        =    $(NEWUSER)$(MAIN)$(CPP) $(H_LOGIN)
 
 #   Linking variables
 
@@ -126,7 +144,14 @@ L_INPUT       :=  $(INPUTDETAIL)$(O) $(PAGESTRUCTURE)$(O) \
                   $(DATABASE)$(O) $(READINPUTFIELD)$(O) \
                   $(INPUTFIELDNAME)$(O) $(MD5)$(O) $(PAGELAYOUT)$(O)
 
-L_LOGIN        =  $(LOGIN)$(MAIN)$(O) $(LOGIN)$(O) $(L_INPUT)
+L_LOGIN       :=  $(LOGIN)$(MAIN)$(O) $(LOGIN)$(O) $(SENDMAIL)$(O) \
+                  $(L_INPUT)
+
+L_REGISTER    :=  $(REGISTER)$(MAIN)$(O) $(LOGIN)$(O) $(SENDMAIL)$(O) \
+                  $(L_INPUT)
+
+L_NEWUSER     :=  $(NEWUSER)$(MAIN)$(O) $(LOGIN)$(O) $(SENDMAIL)$(O) \
+                  $(L_INPUT)
 
 #L_PROJECT      =  
 

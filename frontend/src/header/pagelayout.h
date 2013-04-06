@@ -35,10 +35,6 @@ class PageLayout : public PageStructureMaker
     protected:
         string projectName;              /* Project Name = BaKaPlan */
         
-        ifstream inFile;                        /* For Reading file */
-        ofstream outFile;                       /* For writing file */
-        string sessionID;                       /**< Session ID */
-
     public:
         /** Constructor */
         PageLayout();

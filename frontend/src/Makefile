@@ -25,7 +25,7 @@ include Make.common
 #   Targets
 # ====================================================================
 
-all: $(LOGIN)$(HTML)
+all: $(F_BP)$(LOGIN)$(HTML) $(F_BP)$(REGISTER)$(HTML) $(F_BP)$(NEWUSER)$(HTML)
 
 #$(DATABASE)$(O) $(INPUTFIELDNAME)$(O) $(READINPUTFIELD)$(O) $(MD5)$(O) $(JAVASCRIPT)$(O) $(PAGELAYOUT)$(O) $(PAGESTRUCTURE)$(O) $(INPUTDETAIL)$(O)
 
@@ -51,11 +51,14 @@ $(JAVASCRIPT)$(O) : $(D_JAVASCRIPT)
 $(PAGELAYOUT)$(O) : $(D_PAGELAYOUT)
 	$(CXX) $(CFLAG) $(PAGELAYOUT)$(CC)
 
-$(PAGESTRUCTURE)$(O) : $(D_PAGEsTRUCTURE)
+$(PAGESTRUCTURE)$(O) : $(D_PAGESTRUCTURE)
 	$(CXX) $(CFLAG) $(PAGESTRUCTURE)$(CC)
 
 $(INPUTDETAIL)$(O) : $(D_INPUTDETAIL)
 	$(CXX) $(CFLAG) $(INPUTDETAIL)$(CC) $(LMYSQL)
+
+$(SENDMAIL)$(O) : $(D_SENDMAIL)
+	$(CXX) $(CFLAG) $(SENDMAIL)$(CC) $(LSMTP)
 
 $(LOGIN)$(O) : $(D_LOGIN)
 	$(CXX) $(CFLAG) $(LOGIN)$(CC) $(LMYSQL)
@@ -65,10 +68,26 @@ $(LOGIN)$(O) : $(D_LOGIN)
 $(LOGIN)$(MAIN)$(O) : $(D_LOGIN_M)
 	$(CXX) $(CFLAG) $(LOGIN)$(MAIN)$(CPP) $(LMYSQL)
 
+$(REGISTER)$(MAIN)$(O) : $(D_REGISTER_M)
+	$(CXX) $(CFLAG) $(REGISTER)$(MAIN)$(CPP) $(LMYSQL)
+
+$(NEWUSER)$(MAIN)$(O) : $(D_NEWUSER_M)
+	$(CXX) $(CFLAG) $(NEWUSER)$(MAIN)$(CPP) $(LMYSQL)
+
+
 #	Targets for html pages
 
-$(LOGIN)$(HTML) : $(L_LOGIN)
-	$(CXX) $(OFLAG) $(LOGIN)$(HTML) $(L_LOGIN) $(LMYSQL) $(LCGICC)
+$(F_BP)$(LOGIN)$(HTML) : $(L_LOGIN)
+	$(CXX) $(OFLAG) $(F_BP)$(LOGIN)$(HTML) $(L_LOGIN) \
+	$(LMYSQL) $(LCGICC) $(LSMTP)
+
+$(F_BP)$(REGISTER)$(HTML) : $(L_REGISTER)
+	$(CXX) $(OFLAG) $(F_BP)$(REGISTER)$(HTML) $(L_REGISTER) \
+	$(LMYSQL) $(LCGICC) $(LSMTP)
+
+$(F_BP)$(NEWUSER)$(HTML) : $(L_NEWUSER)
+	$(CXX) $(OFLAG) $(F_BP)$(NEWUSER)$(HTML) $(L_NEWUSER) \
+	$(LMYSQL) $(LCGICC) $(LSMTP)
 
 $(CLEAN) : 
 	rm -f *.o *.html

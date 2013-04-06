@@ -102,10 +102,11 @@ void Login :: LoginPage(string msg, string emailID, string password)
         page.DivEnd();
     }
 
-    cout << " Email ID ";
+    page.Label(fieldName.emailID, "Email ID");
     page.InputField("email", fieldName.emailID, emailID);
     cout << page.brk << page.brk;
-    cout << " Password ";
+
+    page.Label(fieldName.password, " Password ");
     page.InputField("password", fieldName.password, password);
     
     cout << page.brk << page.brk;
@@ -131,44 +132,49 @@ void Login :: LoginPage(string msg, string emailID, string password)
 void Login :: RegisterationPage(string msg, string emailID, 
                                 string password)
 {
-    /* 
-    ContextType();
+     
+    page.ContentType();
     Header("Register");
     
-    DivStart("register", "");
-    cout << brk;
-    FormStart("register", "newuser.html", "POST");
+    page.DivStart("register", "");
+    cout << page.brk;
+
+    page.Anchor("login.html", "Login");
+
+    page.FormStart("register", "newuser.html", "POST");
     
-    cout << startH1 << " Register New User " << endH1 <<  brk;
+    cout << page.startH1 << " Register New User " << page.endH1 
+         <<  page.brk;
 
     if(msg != "")                                                     
     {
-        DivStart("msg", "error");
-        cout << msg << brk << brk;
-        DivEnd();
+        page.DivStart("msg", "error");
+        cout << msg << page.brk << page.brk;
+        page.DivEnd();
     }
     
-    cout << " Email ID ";
-    InputField("text", fieldName.emailID, emailID);
-    
-    cout << brk << brk
+    //cout << " Email ID ";
+    page.Label(fieldName.emailID, "Email ID");
+    page.InputField("email", fieldName.emailID, emailID);
+/*     
+    cout << page.brk << page.brk
          << " Password ";
-    InputField("password", fieldName.password, password);
+    page.InputField("password", fieldName.password, password);
     
-    cout << brk << brk
+    cout << page.brk << page.brk
          << " Re-type Password ";
-    InputField("password", fieldName.retypePassword, password);
+    page.InputField("password", fieldName.retypePassword, password);
+*/
+    cout << page.brk << page.brk;
 
-    cout << brk << brk;
+    page.Button("register", "submit", "btn", "Register");
 
-    Button("register", "submit", "btn", "Register");
+    page.FormEnd();
 
-    FormEnd();
-
-    DivEnd();
+    page.DivEnd();
 
     Footer();
-    */
+    
 }
 
 /**
@@ -179,8 +185,27 @@ void Login :: RegisterationPage(string msg, string emailID,
  *              email id.
  */
 
-void Login :: AddNewUser()
+void Login :: NewUser()
 {
+    userEmailID = readField.ReadFieldValue(fieldName.emailID);
+
+    sendMail.RegistrationMail(userEmailID, "fd324cr3rc3cr4c334dui");
+
+    page.ContentType();
+    Header("New User");
+    
+    page.DivStart("newuser", "");
+    cout << page.brk;
+
+    page.Anchor("login.html", "Login");
+
+    cout << page.startH1 << " Check mail in Junk/Trash " << userEmailID 
+         << page.endH1 <<  page.brk;
+
+    page.DivEnd();
+
+    Footer();
+ 
     /* 
     SelectLoginDetail();
     
