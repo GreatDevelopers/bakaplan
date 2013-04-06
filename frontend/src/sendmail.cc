@@ -41,7 +41,7 @@ void SendMail :: SetMailData()
     setSender   =   "meghasimak@gmail.com";
     setSubject  =   "BaKaPlan : Account Activation";
     setMessage  =   "Plain text message body";
-    setServer   =   "192.168.0.101";//"localhost";
+    setServer   =   "localhost";//"localhost";
 }
 
 /**
