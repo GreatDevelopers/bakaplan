@@ -187,11 +187,11 @@ void Login :: RegisterationPage(string msg, string emailID,
 
 void Login :: NewUser()
 {
+    page.ContentType();
     userEmailID = readField.ReadFieldValue(fieldName.emailID);
 
     sendMail.RegistrationMail(userEmailID, "fd324cr3rc3cr4c334dui");
 
-    page.ContentType();
     Header("New User");
     
     page.DivStart("newuser", "");
