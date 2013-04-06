@@ -19,6 +19,6 @@
 #include "constant.h"
 
 const char SENDER_EMAILID[FILE_SIZE] = "baithnekaplan@gmail.com";
-const char LOCALHOST[FILE_SIZE]      = "localhoat";
+const char SERVER_MAIL[FILE_SIZE]    = "localhoat";
 
 #endif

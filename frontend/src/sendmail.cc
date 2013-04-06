@@ -41,7 +41,7 @@ void SendMail :: SetMailData()
     setSender   =   SENDER_EMAILID;//"baithnekaplan@gmail.com";
     setSubject  =   "BaKaPlan : Account Activation";
     setMessage  =   "Plain text message body";
-    setServer   =   LOCALHOST;//"202.164.53.122";//"localhost";
+    setServer   =   SERVER_MAIL;//"202.164.53.122";//"localhost";
 }
 
 /**
@@ -53,14 +53,14 @@ void SendMail :: SetMailData()
 
 void SendMail :: SetHTMLMessage(string regKey)
 {
-    url  = "http://localhost/~mandy/cgi-bin/bakaplan";
+    url  = "http://localhost/~mandeep/cgi-bin/bakaplan";
     url += "/frontend/src/confirm.html?Key=" + regKey;
               
     htmlMessage  = "<html> <body>";
     htmlMessage += "Thanks for registration. </br></br>";
     htmlMessage += "To complete your registration process, you need ";
     htmlMessage += "to confirm your Email by clicking following link.";
-    htmlMessage += "</br></br>" + url + "</br></brk>";
+    htmlMessage += "</br></br>" + url + "</br></br>";
     htmlMessage += "</body> </html>";
 }
 
