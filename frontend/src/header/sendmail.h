@@ -13,13 +13,17 @@
  *       \copyright  Copyright (c) 2013, GreatDevelopers
  *                   https://github.com/GreatDevelopers
  */
- 
+
+#ifndef SENDMAIL_H
+#define SENDMAIL_H
 
 /**
  *  Include header.h and jwsmtp.h 
  */
 #include "header.h"
 #include "jwsmtp/jwsmtp.h"
+
+#include "sendmail-detail.h"
 
 using namespace jwsmtp;
 
@@ -55,3 +59,5 @@ class SendMail
         ~SendMail();
     
 };
+
+#endif

@@ -16,7 +16,7 @@
 #ifndef FILENAME_H
 #define FILENAME_H
 
-const int FILE_SIZE = 25;
+#include "constant.h"
 
 const char INPUT[FILE_SIZE]   =   "../input/";
 const char OUTPUT[FILE_SIZE]  =   "../output/";

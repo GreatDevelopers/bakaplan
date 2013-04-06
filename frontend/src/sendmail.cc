@@ -38,10 +38,10 @@ SendMail :: SendMail()
 
 void SendMail :: SetMailData()
 {
-    setSender   =   "meghasimak@gmail.com";
+    setSender   =   SENDER_EMAILID;//"baithnekaplan@gmail.com";
     setSubject  =   "BaKaPlan : Account Activation";
     setMessage  =   "Plain text message body";
-    setServer   =   "localhost";//"localhost";
+    setServer   =   LOCALHOST;//"202.164.53.122";//"localhost";
 }
 
 /**

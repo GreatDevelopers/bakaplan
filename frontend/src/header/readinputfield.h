@@ -17,6 +17,8 @@
  * ===================================================================
  */
 
+#ifndef READINPUTFIELD_H
+#define READINPUTFIELD_H
 
 /**-------------------------------------------------------------------
  *  Include required header files
@@ -62,3 +64,5 @@ class ReadInputField
         /** Read cookies */
         //string ReadCookie(string cookieName);
 };
+
+#endif

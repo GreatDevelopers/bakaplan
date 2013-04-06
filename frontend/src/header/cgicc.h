@@ -17,6 +17,8 @@
  * ===================================================================
  */
 
+#ifndef CGICC_H
+#define CGICC_H
 
 /**-------------------------------------------------------------------
  *  Header files for using cgicc library
@@ -28,3 +30,5 @@
 #include <cgicc/HTMLClasses.h>
 
 using namespace cgicc;
+
+#endif

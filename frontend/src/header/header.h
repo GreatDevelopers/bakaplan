@@ -16,6 +16,9 @@
  * ===================================================================
  */
 
+#ifndef HEADER_H
+#define HEADER_H
+
 /**-------------------------------------------------------------------
  *  Header file
  *------------------------------------------------------------------*/
@@ -52,3 +55,4 @@ typedef vector<vector<vector<int> > > INT_3DVEC;
 typedef vector<vector<int> > INT_2DVEC;
 typedef vector<int> INT_VEC;
 
+#endif

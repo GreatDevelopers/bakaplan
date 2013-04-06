@@ -17,6 +17,9 @@
  * ===================================================================
  */
 
+#ifndef INPUTFIELDNAME_H
+#define INPUTFIELDNAME_H
+
 /**-------------------------------------------------------------------
  *  Include local header file that has global header files
  *------------------------------------------------------------------*/
@@ -81,3 +84,5 @@ class InputFieldName
         InputFieldName();                     /**< Constructor */
         void SetFieldNames();                 /**< Set Field Values */
 };
+
+#endif

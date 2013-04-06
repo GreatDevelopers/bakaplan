@@ -18,6 +18,9 @@
  * ===================================================================
  */
 
+#ifndef DATABASE_DETAIL_H
+#define DATABASE_DETAIL_H
+
 /**-------------------------------------------------------------------
  *  define variables for DB Details
  *------------------------------------------------------------------*/
@@ -26,3 +29,5 @@
 #define USER "SP"
 #define PASSWORD "password"
 #define DATABASE "BP"
+
+#endif

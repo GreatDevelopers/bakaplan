@@ -17,6 +17,9 @@
  * ===================================================================
  */
 
+#ifndef PAGELAYOUT_H
+#define PAGELAYOUT_H
+
 /**-------------------------------------------------------------------
  *  Include required header files
  *------------------------------------------------------------------*/
@@ -63,3 +66,5 @@ class PageLayout : public PageStructureMaker
         /** Logout link  */
         void LogoutLink();
 };
+
+#endif

@@ -18,6 +18,9 @@
  * ===================================================================
  */
 
+#ifndef PAGESTRUCTURE_H
+#define PAGESTRUCTURE_H
+
 /** Include Header file */
 #include "header.h"
 
@@ -130,3 +133,5 @@ class PageStructureMaker
         void Button(string id, string type, string className, 
                     string value);
 };
+
+#endif

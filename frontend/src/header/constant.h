@@ -27,4 +27,6 @@
 const int MIN_SIZE = 25;
 const int MAX_SIZE = 550;
 
+const int FILE_SIZE = 30;
+
 #endif

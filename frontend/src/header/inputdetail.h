@@ -17,6 +17,9 @@
  * ===================================================================
  */
 
+#ifndef INPUTDETAIL_H
+#define INPUTDETAIL_H
+
 /**
  *  Include Local header files 
  */
@@ -74,3 +77,5 @@ class InputDetail //: public PageLayout
         /// Convert String to Integer
         int StringToInt(string value);
 };
+
+#endif
