@@ -41,6 +41,7 @@ ProjectDetail :: ProjectDetail()
 
 void ProjectDetail :: AuthorizeUser()
 {
+//    page.ContentType();
     SelectLoginDetail();
     ReadLoginDetail();
     
@@ -48,10 +49,17 @@ void ProjectDetail :: AuthorizeUser()
     if ( ( find(emailID.begin(), emailID.end(), userEmailID) 
          != emailID.end() ) )                /**< If Email ID valid */
     {
-        int index = find(emailID.begin(), emailID.end(), userEmailID) 
-                    - emailID.begin();
+//        int index = find(emailID.begin(), emailID.end(), userEmailID) 
+  //                  - emailID.begin();
+//        cout << "email" << userEmailID << "<br>" << userPassword;
+        temp = md5(userPassword);
+//        cout << "pwd : " << temp;
+        
+        where = "EmailID = \"" + userEmailID + "\"";
+        database.SelectColumn(vecTemp, "Password", "User", where);
+//        cout << "   pwd : db : " << vecTemp[0];
 
-        if( md5(userPassword) == password[index] )   /**< If Password 
+        if( temp == vecTemp[0] )   /**< If Password 
             Correct */
         {
             sessionID  = md5(userEmailID);
@@ -105,24 +113,7 @@ void ProjectDetail :: ProjectDetailPage()
 
     cout << page.startH1 << "Project Detail" << page.endH1 << page.brk;
     
-    {// For getting previous projects of user
-        temp = "EmailID = \"" + userEmailID + "\"";
-
-        database.SelectColumn(oldProject, "ProjectName", "ProjectDetail",
-                              temp);
-
-        if(oldProject.size() != 0)
-        {
-            cout << " Old Projects " << page.brk;
-            for(unsigned i = 0; i < oldProject.size(); i++)
-            {
-                cout << (i + 1) << ") " << oldProject[i] << page.brk;
-            }
-            cout << page.brk;
-        }
-        else
-            cout << " No Previous Projects " << page.brk << page.brk;
-    }
+    OldProject();
 
     page.Label(fieldName.projectName, " Project Name ");
     page.InputField("text", fieldName.projectName, "Project Name");
@@ -144,6 +135,54 @@ void ProjectDetail :: ProjectDetailPage()
     page.DivEnd();
 
     Footer();
+}
+
+/**
+ *      \class  ProjectDetail
+ *      \fn     ProjectDetail :: OldProject()
+ *      \brief  List Existing projects from database
+ */
+
+void ProjectDetail :: OldProject()
+{
+// For getting previous projects of user
+    
+    where = "EmailID = \"" + userEmailID + "\"";
+
+    database.SelectColumn(oldProject, "ProjectName", "ProjectDetail",
+                          where);
+
+    if(oldProject.size() != 0)
+    {
+        cout << " Old Projects " << page.brk;
+        for(unsigned i = 0; i < oldProject.size(); i++)
+        {
+            cout << (i + 1) << ") " << oldProject[i] << page.brk;
+        }
+        cout << page.brk;
+    }
+    else
+        cout << " No Previous Projects " << page.brk << page.brk;
+}
+
+/**
+ *      \class  ProjectDetail
+ *      \fn     ProjectDetail :: HomePage()
+ *      \brief  Home Page
+ */
+
+void ProjectDetail :: HomePage()
+{
+    
+    projectID = readField.ReadFieldValue(fieldName.projectID);
+
+    where = "ProjectID = " + projectID;
+    database.SelectColumn(emailID, "EmailID", "ProjectDetail", where);
+
+    userEmailID = emailID[0];
+    
+    ProjectDetailPage();
+
 }
 
 /**

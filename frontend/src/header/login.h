@@ -48,8 +48,7 @@ class Login : public InputDetail
                userPassword, /**< For reading password in text field*/
                retypePassword;            /**< For reading password */
 
-        string msg,           /**< Msg string to show error message */
-               currentTime,                      /**< Currennt Time */
+        string currentTime,                      /**< Currennt Time */
                key;
 
         SendMail sendMail;

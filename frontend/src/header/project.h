@@ -42,6 +42,12 @@ class ProjectDetail : public Login
         /** Checking user login details valid or not */
         void AuthorizeUser();
 
+        /** Old projects */
+        void OldProject();
+
+        /** Home Page */
+        void HomePage();
+
         /** Destructor */
         ~ProjectDetail();
 };

@@ -58,9 +58,12 @@ class InputDetail //: public PageLayout
                emailID,                               /**< Email id */
                projectName;                       /**< Project Name */
 
-        string fileName;            /**< file name for opening file */
+        string fileName,            /**< file name for opening file */
+               where,                     /**< Temp variable to store 
+                                                       where clause */
+               msg;                   /**< For Displaying error msg */
 
-        STRING_VEC vecTemp;    /**< string Vector temporary use */
+        STRING_VEC vecTemp;        /**< string Vector temporary use */
 
         ifstream inFile;                      /**< For Reading file */
         ofstream outFile;                     /**< For writing file */
