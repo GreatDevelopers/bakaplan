@@ -55,7 +55,8 @@ class InputFieldName
                                                    plan */
         // For project details
                 projectName,                      /**< Project Name */
-                projectID;                          /**< Project ID */
+                projectID,                          /**< Project ID */
+                projectType;         /**< ProjectType ie new or old */
 
         /* For login.html page */
         string emailID,                            /**< Email Field */

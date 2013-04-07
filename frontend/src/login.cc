@@ -43,8 +43,8 @@ Login :: Login()
  
 void Login :: SelectLoginDetail()
 {
-//    database.SelectQuery("EmailID", "User", emailID);
-//    database.SelectQuery("Password", "User", password);
+    database.SelectColumn(emailID, "EmailID", "User");
+    database.SelectColumn(password, "Password", "User");
 
 /*      
     vector<string>::iterator v = emailID.begin();
@@ -70,28 +70,8 @@ void Login :: SelectLoginDetail()
 
 void Login :: ReadLoginDetail()
 {
-//    userEmailID  = readField.ReadFieldValue(fieldName.emailID);
-//    userPassword = readField.ReadFieldValue(fieldName.password);
-}
-
-/**
- *      \class  Login
- *      \fn     Login :: Time()
- *      \brief  For finding current time nd date of system
- *      \retun  Return string having result
- */
-
-string Login :: Time()
-{
-    ostringstream time;
-    const boost::posix_time::ptime now=                             
-    boost::posix_time::second_clock::local_time();                  
-    boost::posix_time::time_facet*const f = new                     
-    boost::posix_time::time_facet("%H-%M-%S");                      
-    time.imbue(std::locale(time.getloc(),f));                         
-    time << now;
-
-    return time.str();
+    userEmailID  = readField.ReadFieldValue(fieldName.emailID);
+    userPassword = readField.ReadFieldValue(fieldName.password);
 }
 
 /**
@@ -113,7 +93,7 @@ void Login :: LoginPage(string msg, string emailID, string password)
 
     cout << page.brk;
 
-    page.FormStart("login", "projectdetail.html", "POST");
+    page.FormStart("login", "project.html", "POST");
 
     cout << page.startH1 << "Login" << page.endH1 << page.brk;
     
@@ -164,18 +144,9 @@ void Login :: RegistrationPage(string msg, string emailID)
     
     ErrorMessage(msg);
 
-    //cout << " Email ID ";
     page.Label(fieldName.emailID, "Email ID");
     page.InputField("email", fieldName.emailID, emailID);
-/*     
-    cout << page.brk << page.brk
-         << " Password ";
-    page.InputField("password", fieldName.password, password);
-    
-    cout << page.brk << page.brk
-         << " Re-type Password ";
-    page.InputField("password", fieldName.retypePassword, password);
-*/
+
     cout << page.brk << page.brk;
 
     page.Button("register", "submit", "btn", "Register");

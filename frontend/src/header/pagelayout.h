@@ -65,6 +65,7 @@ class PageLayout : public PageStructureMaker
 
         /** Logout link  */
         void LogoutLink();
+
 };
 
 #endif

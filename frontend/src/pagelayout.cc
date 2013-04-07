@@ -176,6 +176,8 @@ void PageLayout :: LogoutLink()
 {
     cout << brk;
     Anchor("logout.html", "Logout");
+    cout << " | ";
+    Anchor("project.html", "Home");
     cout << brk;
 }
 

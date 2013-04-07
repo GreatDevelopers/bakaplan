@@ -58,9 +58,6 @@ class Login : public InputDetail
         /** Constructor */
         Login();
 
-        /** For locating current time on system */
-        string Time();
-
         /** Creating login page */
         void LoginPage(string msg = "", 
                        string emailID = "abc@you.com",

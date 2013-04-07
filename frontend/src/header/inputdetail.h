@@ -79,6 +79,9 @@ class InputDetail //: public PageLayout
 
         /** Shows message if user filled data in field */
         void ErrorMessage(string msg = "");
+
+        /** For locating current time on system */
+        string Time();
 };
 
 #endif

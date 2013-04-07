@@ -25,7 +25,7 @@ include Make.common
 #   Targets
 # ====================================================================
 
-all: $(F_BP)$(LOGIN)$(HTML) $(F_BP)$(REGISTER)$(HTML) $(F_BP)$(NEWUSER)$(HTML) $(F_BP)$(CONFIRM)$(HTML) $(F_BP)$(ADDUSER)$(HTML)
+all: $(F_BP)$(LOGIN)$(HTML) $(F_BP)$(REGISTER)$(HTML) $(F_BP)$(NEWUSER)$(HTML) $(F_BP)$(CONFIRM)$(HTML) $(F_BP)$(ADDUSER)$(HTML) $(F_BP)$(PROJECT)$(HTML)
 
 #$(DATABASE)$(O) $(INPUTFIELDNAME)$(O) $(READINPUTFIELD)$(O) $(MD5)$(O) $(JAVASCRIPT)$(O) $(PAGELAYOUT)$(O) $(PAGESTRUCTURE)$(O) $(INPUTDETAIL)$(O)
 
@@ -63,6 +63,10 @@ $(SENDMAIL)$(O) : $(D_SENDMAIL)
 $(LOGIN)$(O) : $(D_LOGIN)
 	$(CXX) $(CFLAG) $(LOGIN)$(CC) $(LMYSQL)
 
+$(PROJECT)$(O) : $(D_PROJECT)
+	$(CXX) $(CFLAG) $(PROJECT)$(CC) $(LMYSQL)
+
+
 #	Targets for compiling cpp file(main files)
 
 $(LOGIN)$(MAIN)$(O) : $(D_LOGIN_M)
@@ -79,6 +83,9 @@ $(CONFIRM)$(MAIN)$(O) : $(D_CONFIRM_M)
 
 $(ADDUSER)$(MAIN)$(O) : $(D_ADDUSER_M)
 	$(CXX) $(CFLAG) $(ADDUSER)$(MAIN)$(CPP) $(LMYSQL)
+
+$(PROJECT)$(MAIN)$(O) : $(D_PROJECT_M)
+	$(CXX) $(CFLAG) $(PROJECT)$(MAIN)$(CPP) $(LMYSQL)
 
 #	Targets for html pages
 
@@ -101,6 +108,11 @@ $(F_BP)$(CONFIRM)$(HTML) : $(L_CONFIRM)
 $(F_BP)$(ADDUSER)$(HTML) : $(L_ADDUSER)
 	$(CXX) $(OFLAG) $(F_BP)$(ADDUSER)$(HTML) $(L_ADDUSER) \
 	$(LMYSQL) $(LCGICC) $(LSMTP)
+
+$(F_BP)$(PROJECT)$(HTML) : $(L_PROJECT)
+	$(CXX) $(OFLAG) $(F_BP)$(PROJECT)$(HTML) $(L_PROJECT) \
+	$(LMYSQL) $(LCGICC) $(LSMTP)
+
 
 
 $(CLEAN) : 

@@ -115,3 +115,24 @@ void InputDetail :: ErrorMessage(string msg)
         page.DivEnd();
     }
 }
+
+/**
+ *      \class  Login
+ *      \fn     Login :: Time()
+ *      \brief  For finding current time nd date of system
+ *      \retun  Return string having result
+ */
+
+string InputDetail :: Time()
+{
+    ostringstream time;
+    const boost::posix_time::ptime now=                             
+    boost::posix_time::second_clock::local_time();                  
+    boost::posix_time::time_facet*const f = new                     
+    boost::posix_time::time_facet("%H-%M-%S");                      
+    time.imbue(std::locale(time.getloc(),f));                         
+    time << now;
+
+    return time.str();
+}
+

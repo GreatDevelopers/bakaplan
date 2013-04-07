@@ -111,6 +111,8 @@ H_SENDMAIL       :=  $(F_HEADER)$(SENDMAIL)$(H) $(H_HEADER) \
 H_LOGIN          :=  $(F_HEADER)$(LOGIN)$(H) $(H_INPUTDETAIL) \
                      $(H_SENDMAIL)
 
+H_PROJECT        :=  $(F_HEADER)$(PROJECT)$(H) $(H_INPUTDETAIL)
+
 #   Variables for defining dependancy
 
 D_DATABASE         =    $(DATABASE)$(CC) $(H_DATABASE)
@@ -133,17 +135,21 @@ D_SENDMAIL         =    $(SENDMAIL)$(CC) $(H_SENDMAIL)
 
 D_LOGIN            =    $(LOGIN)$(CC) $(H_LOGIN)
 
+D_PROJECT          =    $(PROJECT)$(CC) $(H_PROJECT)
+
 #   Dependncy of main files
 
-D_LOGIN_M          =    $(LOGIN)$(MAIN)$(CPP) $(H_LOGIN)
+D_LOGIN_M       =   $(LOGIN)$(MAIN)$(CPP) $(H_LOGIN)
 
-D_REGISTER_M       =    $(REGISTER)$(MAIN)$(CPP) $(H_LOGIN)
+D_REGISTER_M    =   $(REGISTER)$(MAIN)$(CPP) $(H_LOGIN)
 
-D_NEWUSER_M        =    $(NEWUSER)$(MAIN)$(CPP) $(H_LOGIN)
+D_NEWUSER_M     =   $(NEWUSER)$(MAIN)$(CPP) $(H_LOGIN)
 
-D_CONFIRM_M        =    $(CONFIRM)$(MAIN)$(CPP) $(H_LOGIN)
+D_CONFIRM_M     =   $(CONFIRM)$(MAIN)$(CPP) $(H_LOGIN)
 
-D_ADDUSER_M        =    $(ADDUSER)$(MAIN)$(CPP) $(H_LOGIN)
+D_ADDUSER_M     =   $(ADDUSER)$(MAIN)$(CPP) $(H_LOGIN)
+
+D_PROJECT_M     =   $(PROJECT)$(MAIN)$(CPP) $(H_PROJECT)
 
 #   Linking variables
 
@@ -151,23 +157,19 @@ L_INPUT       :=  $(INPUTDETAIL)$(O) $(PAGESTRUCTURE)$(O) \
                   $(DATABASE)$(O) $(READINPUTFIELD)$(O) \
                   $(INPUTFIELDNAME)$(O) $(MD5)$(O) $(PAGELAYOUT)$(O)
 
-L_LOGIN       :=  $(LOGIN)$(MAIN)$(O) $(LOGIN)$(O) $(SENDMAIL)$(O) \
-                  $(L_INPUT)
+L_LOG         :=  $(LOGIN)$(O) $(L_INPUT) $(SENDMAIL)$(O)
 
-L_REGISTER    :=  $(REGISTER)$(MAIN)$(O) $(LOGIN)$(O) $(SENDMAIL)$(O) \
-                  $(L_INPUT)
+L_LOGIN        =  $(LOGIN)$(MAIN)$(O) $(L_LOG)
 
-L_NEWUSER     :=  $(NEWUSER)$(MAIN)$(O) $(LOGIN)$(O) $(SENDMAIL)$(O) \
-                  $(L_INPUT)
+L_REGISTER     =  $(REGISTER)$(MAIN)$(O) $(L_LOG)
 
-L_CONFIRM     :=  $(CONFIRM)$(MAIN)$(O) $(LOGIN)$(O) $(SENDMAIL)$(O) \
-                  $(L_INPUT)
+L_NEWUSER      =  $(NEWUSER)$(MAIN)$(O) $(L_LOG)
 
-L_ADDUSER     :=  $(ADDUSER)$(MAIN)$(O) $(LOGIN)$(O) $(SENDMAIL)$(O) \
-                  $(L_INPUT)
+L_CONFIRM      =  $(CONFIRM)$(MAIN)$(O) $(L_LOG)
 
+L_ADDUSER      =  $(ADDUSER)$(MAIN)$(O) $(L_LOG)
 
-#L_PROJECT      =  
+L_PROJECT      =  $(PROJECT)$(MAIN)$(O) $(L_LOG) $(PROJECT)$(O)
 
 #L_CLASS        =  
 
