@@ -57,6 +57,8 @@ SENDMAIL        =  sendmail
 LOGIN       =  login
 REGISTER    =  register
 NEWUSER     =  newuser
+CONFIRM     =  confirm
+ADDUSER     =  adduser
 PROJECT     =  project
 CLASS       =  class
 ROLLNO      =  rollno
@@ -139,6 +141,10 @@ D_REGISTER_M       =    $(REGISTER)$(MAIN)$(CPP) $(H_LOGIN)
 
 D_NEWUSER_M        =    $(NEWUSER)$(MAIN)$(CPP) $(H_LOGIN)
 
+D_CONFIRM_M        =    $(CONFIRM)$(MAIN)$(CPP) $(H_LOGIN)
+
+D_ADDUSER_M        =    $(ADDUSER)$(MAIN)$(CPP) $(H_LOGIN)
+
 #   Linking variables
 
 L_INPUT       :=  $(INPUTDETAIL)$(O) $(PAGESTRUCTURE)$(O) \
@@ -153,6 +159,13 @@ L_REGISTER    :=  $(REGISTER)$(MAIN)$(O) $(LOGIN)$(O) $(SENDMAIL)$(O) \
 
 L_NEWUSER     :=  $(NEWUSER)$(MAIN)$(O) $(LOGIN)$(O) $(SENDMAIL)$(O) \
                   $(L_INPUT)
+
+L_CONFIRM     :=  $(CONFIRM)$(MAIN)$(O) $(LOGIN)$(O) $(SENDMAIL)$(O) \
+                  $(L_INPUT)
+
+L_ADDUSER     :=  $(ADDUSER)$(MAIN)$(O) $(LOGIN)$(O) $(SENDMAIL)$(O) \
+                  $(L_INPUT)
+
 
 #L_PROJECT      =  
 

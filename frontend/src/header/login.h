@@ -40,15 +40,17 @@ class Login : public InputDetail
     protected:
         /** For storting email and password of users */
 
-        vector<string> emailID,             /**< Email ID as vector */
-                       password;   /**< password as vector variable */
+        STRING_VEC emailID,                 /**< Email ID as vector */
+                   password,       /**< password as vector variable */
+                   regKey;                    /**< Registration key */
 
         string userEmailID,  /**< For reading emailID in text field */
                userPassword, /**< For reading password in text field*/
                retypePassword;            /**< For reading password */
 
         string msg,           /**< Msg string to show error message */
-               currentTime;                      /**< Currennt Time */
+               currentTime,                      /**< Currennt Time */
+               key;
 
         SendMail sendMail;
 
@@ -76,6 +78,11 @@ class Login : public InputDetail
 
         /** For selecting emial and password fron user table */
         void SelectLoginDetail();
+
+        void ConfirmPage(string msg = "", string password = "******",
+                         string retypePassword = "******");
+
+        void AddUser();
 
         /** Logout Page */
         void LogoutPage();

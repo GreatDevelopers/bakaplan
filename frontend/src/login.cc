@@ -190,7 +190,7 @@ void Login :: RegistrationPage(string msg, string emailID)
 
 /**
  *      \class  Login
- *      \fn     Login :: AddNewUser()
+ *      \fn     Login :: NewUser()
  *      \brief  Adding new user into database and if user already
  *              exists then move back to register page for unique 
  *              email id.
@@ -199,19 +199,30 @@ void Login :: RegistrationPage(string msg, string emailID)
 void Login :: NewUser()
 {
     userEmailID = readField.ReadFieldValue(fieldName.emailID);
+
+    database.SelectColumn(emailID, "EmailID", "User");
+
+    if ( find(emailID.begin(), emailID.end(), userEmailID)
+         != emailID.end() )
+    {
+        msg = "User already exists. Try another email ID";
+        RegistrationPage( msg, userEmailID );
+    }
+    else
+    {
+        currentTime = Time();
+
+        currentTime = md5(currentTime);
+
+        database.InsertRegistrationDetail(userEmailID, currentTime);
+
+        sendMail.RegistrationMail(userEmailID, currentTime);
     
-    currentTime = Time();
+        msg = "Check mail for verification in Junk/Trash.";
 
-    currentTime = md5(currentTime);
+        RegistrationPage(msg);
+    }
 
-    database.InsertRegistrationDetail(userEmailID, currentTime);
-
-    sendMail.RegistrationMail(userEmailID, currentTime);
-    
-    msg = "Check mail for verification in Junk/Trash.";
-
-    RegistrationPage(msg);
- 
     /* 
     SelectLoginDetail();
     
@@ -239,6 +250,122 @@ void Login :: NewUser()
             LoginPage();
         }
     }*/
+}
+
+/**
+ *      \class  Login
+ *      \fn     Login :: ConfirmPage(string msg, string password, 
+ *                       string retypePassword)
+ *      \brief  Page for validating email ID and setting user's
+ *              password
+ *      \param  msg Shows error message
+ *      \param  password Password filled by user
+ *      \param  retypePassword Password filled by user
+ */
+
+void Login :: ConfirmPage(string msg, string password, 
+                          string retypePassword)
+{
+    //if (key != "")
+    key = readField.ReadFieldValue(fieldName.key);
+
+    
+    database.SelectColumn(regKey, "RegistrationKey", "Registeration");
+/* 
+    for(unsigned i = 0; i < regKey.size(); i++)
+    {
+        cout << regKey[i] << page.brk;
+    }*/
+
+
+    if ( find(regKey.begin(), regKey.end(), key) != regKey.end() )
+    {
+       
+        page.ContentType();
+        Header("Confirm Email");
+    
+        page.DivStart("confirm", "");
+        cout << page.brk;
+
+        page.Anchor("login.html", "Login");
+
+        page.FormStart("confirm", "adduser.html", "POST");
+    
+        cout << page.startH1 << " Email Confirmed " << page.endH1 
+             <<  page.brk
+             << page.startB << " Set Password " << page.endB;
+    
+        ErrorMessage(msg);
+
+        page.InputField("hidden", "Key", key);
+
+        cout << page.brk << page.brk;
+        page.Label(fieldName.password, " Password ");
+        page.InputField("password", fieldName.password, password);
+    
+        cout << page.brk << page.brk;
+        page.Label(fieldName.retypePassword, " Retype Password ");
+        page.InputField("password", fieldName.retypePassword, 
+                        retypePassword);
+
+        cout << page.brk << page.brk;
+
+        page.Button("next", "submit", "btn", "Submit");
+
+        page.FormEnd();
+
+        page.DivEnd();
+
+        Footer();
+    }
+    else
+    {
+        msg = "Invalid Link. Register Again!";
+        RegistrationPage(msg);
+    }
+    
+}
+
+/**
+ *      \class  Login
+ *      \fn     Login :: AddUser()
+ *      \brief  Add New user
+ */
+
+void Login :: AddUser()
+{
+    retypePassword = readField.ReadFieldValue(fieldName.retypePassword);
+
+    userPassword = readField.ReadFieldValue(fieldName.password);
+
+    key = readField.ReadFieldValue(fieldName.key);
+
+    database.SelectColumn(regKey, "RegistrationKey", "Registeration");
+    
+    temp = "RegistrationKey = \"" + key + "\"";
+
+    database.SelectColumn(emailID, "EmailID", "Registeration", temp);
+    userEmailID = emailID[0];
+
+    if ( find(regKey.begin(), regKey.end(), key) != regKey.end() )
+    {
+        if( retypePassword != userPassword )
+        {
+            msg = "Password doesn't match";
+            ConfirmPage( msg );
+        }
+        else
+        {
+            userPassword = md5(userPassword);
+            database.InsertUserDetail( userEmailID, userPassword );
+            LoginPage();
+        }
+    }
+    else
+    {
+        msg = "Invalid Link";
+        RegistrationPage( msg );
+    }
 }
 
 /**

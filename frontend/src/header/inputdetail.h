@@ -60,7 +60,7 @@ class InputDetail //: public PageLayout
 
         string fileName;            /**< file name for opening file */
 
-        vector<string> vecTemp;    /**< string Vector temporary use */
+        STRING_VEC vecTemp;    /**< string Vector temporary use */
 
         ifstream inFile;                      /**< For Reading file */
         ofstream outFile;                     /**< For writing file */

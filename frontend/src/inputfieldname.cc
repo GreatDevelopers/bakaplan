@@ -71,6 +71,7 @@ void InputFieldName :: SetFieldNames()
     emailID         =   "EmailID";
     password        =   "Password";
     retypePassword  =   "RetypePassword";
+    key             =   "Key";
 
     /* Project Detail */
 

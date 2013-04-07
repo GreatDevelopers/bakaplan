@@ -25,7 +25,7 @@ include Make.common
 #   Targets
 # ====================================================================
 
-all: $(F_BP)$(LOGIN)$(HTML) $(F_BP)$(REGISTER)$(HTML) $(F_BP)$(NEWUSER)$(HTML)
+all: $(F_BP)$(LOGIN)$(HTML) $(F_BP)$(REGISTER)$(HTML) $(F_BP)$(NEWUSER)$(HTML) $(F_BP)$(CONFIRM)$(HTML) $(F_BP)$(ADDUSER)$(HTML)
 
 #$(DATABASE)$(O) $(INPUTFIELDNAME)$(O) $(READINPUTFIELD)$(O) $(MD5)$(O) $(JAVASCRIPT)$(O) $(PAGELAYOUT)$(O) $(PAGESTRUCTURE)$(O) $(INPUTDETAIL)$(O)
 
@@ -74,6 +74,11 @@ $(REGISTER)$(MAIN)$(O) : $(D_REGISTER_M)
 $(NEWUSER)$(MAIN)$(O) : $(D_NEWUSER_M)
 	$(CXX) $(CFLAG) $(NEWUSER)$(MAIN)$(CPP) $(LMYSQL)
 
+$(CONFIRM)$(MAIN)$(O) : $(D_CONFIRM_M)
+	$(CXX) $(CFLAG) $(CONFIRM)$(MAIN)$(CPP) $(LMYSQL)
+
+$(ADDUSER)$(MAIN)$(O) : $(D_ADDUSER_M)
+	$(CXX) $(CFLAG) $(ADDUSER)$(MAIN)$(CPP) $(LMYSQL)
 
 #	Targets for html pages
 
@@ -88,6 +93,15 @@ $(F_BP)$(REGISTER)$(HTML) : $(L_REGISTER)
 $(F_BP)$(NEWUSER)$(HTML) : $(L_NEWUSER)
 	$(CXX) $(OFLAG) $(F_BP)$(NEWUSER)$(HTML) $(L_NEWUSER) \
 	$(LMYSQL) $(LCGICC) $(LSMTP)
+
+$(F_BP)$(CONFIRM)$(HTML) : $(L_CONFIRM)
+	$(CXX) $(OFLAG) $(F_BP)$(CONFIRM)$(HTML) $(L_CONFIRM) \
+	$(LMYSQL) $(LCGICC) $(LSMTP)
+
+$(F_BP)$(ADDUSER)$(HTML) : $(L_ADDUSER)
+	$(CXX) $(OFLAG) $(F_BP)$(ADDUSER)$(HTML) $(L_ADDUSER) \
+	$(LMYSQL) $(LCGICC) $(LSMTP)
+
 
 $(CLEAN) : 
 	rm -f *.o *.html

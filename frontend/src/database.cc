@@ -130,7 +130,7 @@ void Database :: SelectColumn(STRING_VEC & result, string column,
 {
     query  = "select " + column + " from " + table;
 
-    if(where == "")
+    if(where != "")
     {
         query += " where " + where + ";";
     }
@@ -138,7 +138,7 @@ void Database :: SelectColumn(STRING_VEC & result, string column,
     {
         query += ";";
     }
-
+//    cout << query;
     SelectQuery(query, result);
 }
 

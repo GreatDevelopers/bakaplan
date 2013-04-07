@@ -61,6 +61,7 @@ class InputFieldName
         string emailID,                            /**< Email Field */
                password,                        /**< Password field */
                retypePassword,                 /**< Retype Password */
+               key,                           /**< Registration Key */
 
         /* Room detail fields  */
                totalCentres,                     /**< Total centres */
