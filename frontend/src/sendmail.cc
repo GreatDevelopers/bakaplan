@@ -54,7 +54,7 @@ void SendMail :: SetMailData()
 void SendMail :: SetHTMLMessage(string regKey)
 {
     url  = "http://202.164.53.122/~mandeep/cgi-bin/bakaplan";
-    url += "/frontend/src/confirm.html?Key=" + regKey;
+    url += "/frontend/bp/confirm.html?Key=" + regKey;
               
     htmlMessage  = "<html> <body>";
     htmlMessage += "Thanks for registration. </br></br>";
