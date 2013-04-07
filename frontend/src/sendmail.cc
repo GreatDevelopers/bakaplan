@@ -38,10 +38,10 @@ SendMail :: SendMail()
 
 void SendMail :: SetMailData()
 {
-    setSender   =   SENDER_EMAILID;//"baithnekaplan@gmail.com";
+    setSender   =   SENDER_EMAILID;
     setSubject  =   "BaKaPlan : Account Activation";
     setMessage  =   "Plain text message body";
-    setServer   =   SERVER_MAIL;//"202.164.53.122";//"localhost";
+    setServer   =   "localhost";//"202.164.53.122";
 }
 
 /**
@@ -53,7 +53,7 @@ void SendMail :: SetMailData()
 
 void SendMail :: SetHTMLMessage(string regKey)
 {
-    url  = "http://localhost/~mandeep/cgi-bin/bakaplan";
+    url  = "http://202.164.53.122/~mandeep/cgi-bin/bakaplan";
     url += "/frontend/src/confirm.html?Key=" + regKey;
               
     htmlMessage  = "<html> <body>";

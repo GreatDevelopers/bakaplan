@@ -20,12 +20,16 @@
 /**
  *  Include header.h and jwsmtp.h 
  */
-#include "header.h"
+//#include "header.h"
+
+#include <iostream>
 #include "jwsmtp/jwsmtp.h"
 
 #include "sendmail-detail.h"
 
 using namespace jwsmtp;
+
+using namespace std;
 
 /**
  *      \class  SendMail
