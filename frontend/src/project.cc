@@ -44,8 +44,6 @@ void ProjectDetail :: AuthorizeUser()
     SelectLoginDetail();
     ReadLoginDetail();
     
-   // string pass = md5(userPassword);
-    
     /** Matching user details with values in database */
     if ( ( find(emailID.begin(), emailID.end(), userEmailID) 
          != emailID.end() ) )                /**< If Email ID valid */
@@ -58,16 +56,6 @@ void ProjectDetail :: AuthorizeUser()
         {
             sessionID  = md5(userEmailID);
         
-            /* For current date */
-/* 
-            time_t t = time(0);   // get time now
-        
-            struct tm * now = localtime( & t );
-        
-            currentDate  = IntToString(now->tm_year + 1900);
-            currentDate += IntToString(now->tm_mon + 1);
-            currentDate += IntToString(now->tm_mday);*/
-            
             currentTime = Time();
             
             sessionID += md5(currentTime);

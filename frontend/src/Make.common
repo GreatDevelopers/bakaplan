@@ -55,6 +55,7 @@ SENDMAIL        =  sendmail
 #   Html pages file names
 
 LOGIN       =  login
+LOGOUT      =  logout
 REGISTER    =  register
 NEWUSER     =  newuser
 CONFIRM     =  confirm
@@ -141,6 +142,8 @@ D_PROJECT          =    $(PROJECT)$(CC) $(H_PROJECT)
 
 D_LOGIN_M       =   $(LOGIN)$(MAIN)$(CPP) $(H_LOGIN)
 
+D_LOGOUT_M      =   $(LOGOUT)$(MAIN)$(CPP) $(H_LOGIN)
+
 D_REGISTER_M    =   $(REGISTER)$(MAIN)$(CPP) $(H_LOGIN)
 
 D_NEWUSER_M     =   $(NEWUSER)$(MAIN)$(CPP) $(H_LOGIN)
@@ -160,6 +163,8 @@ L_INPUT       :=  $(INPUTDETAIL)$(O) $(PAGESTRUCTURE)$(O) \
 L_LOG         :=  $(LOGIN)$(O) $(L_INPUT) $(SENDMAIL)$(O)
 
 L_LOGIN        =  $(LOGIN)$(MAIN)$(O) $(L_LOG)
+
+L_LOGOUT       =  $(LOGOUT)$(MAIN)$(O) $(L_LOG)
 
 L_REGISTER     =  $(REGISTER)$(MAIN)$(O) $(L_LOG)
 

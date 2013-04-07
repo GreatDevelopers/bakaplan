@@ -25,7 +25,7 @@ include Make.common
 #   Targets
 # ====================================================================
 
-all: $(F_BP)$(LOGIN)$(HTML) $(F_BP)$(REGISTER)$(HTML) $(F_BP)$(NEWUSER)$(HTML) $(F_BP)$(CONFIRM)$(HTML) $(F_BP)$(ADDUSER)$(HTML) $(F_BP)$(PROJECT)$(HTML)
+all: $(F_BP)$(LOGIN)$(HTML) $(F_BP)$(REGISTER)$(HTML) $(F_BP)$(NEWUSER)$(HTML) $(F_BP)$(CONFIRM)$(HTML) $(F_BP)$(ADDUSER)$(HTML) $(F_BP)$(PROJECT)$(HTML) $(F_BP)$(LOGOUT)$(HTML)
 
 #$(DATABASE)$(O) $(INPUTFIELDNAME)$(O) $(READINPUTFIELD)$(O) $(MD5)$(O) $(JAVASCRIPT)$(O) $(PAGELAYOUT)$(O) $(PAGESTRUCTURE)$(O) $(INPUTDETAIL)$(O)
 
@@ -87,6 +87,9 @@ $(ADDUSER)$(MAIN)$(O) : $(D_ADDUSER_M)
 $(PROJECT)$(MAIN)$(O) : $(D_PROJECT_M)
 	$(CXX) $(CFLAG) $(PROJECT)$(MAIN)$(CPP) $(LMYSQL)
 
+$(LOGOUT)$(MAIN)$(O) : $(D_LOGOUT_M)
+	$(CXX) $(CFLAG) $(LOGOUT)$(MAIN)$(CPP) $(LMYSQL)
+
 #	Targets for html pages
 
 $(F_BP)$(LOGIN)$(HTML) : $(L_LOGIN)
@@ -113,7 +116,9 @@ $(F_BP)$(PROJECT)$(HTML) : $(L_PROJECT)
 	$(CXX) $(OFLAG) $(F_BP)$(PROJECT)$(HTML) $(L_PROJECT) \
 	$(LMYSQL) $(LCGICC) $(LSMTP)
 
-
+$(F_BP)$(LOGOUT)$(HTML) : $(L_LOGOUT)
+	$(CXX) $(OFLAG) $(F_BP)$(LOGOUT)$(HTML) $(L_LOGOUT) \
+	$(LMYSQL) $(LCGICC) $(LSMTP)
 
 $(CLEAN) : 
 	rm -f *.o *.html
