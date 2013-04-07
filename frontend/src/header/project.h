@@ -15,6 +15,9 @@
  *                   https://github.com/GreatDevelopers
  */
 
+#ifndef PROJECT_H
+#define PROJECT_H
+
 /**
  *  Include login.h 
  */
@@ -52,3 +55,5 @@ class ProjectDetail : public Login
         /** Destructor */
         ~ProjectDetail();
 };
+
+#endif
