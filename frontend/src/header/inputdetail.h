@@ -76,6 +76,9 @@ class InputDetail //: public PageLayout
         
         /// Convert String to Integer
         int StringToInt(string value);
+
+        /** Shows message if user filled data in field */
+        void ErrorMessage(string msg = "");
 };
 
 #endif

@@ -98,3 +98,20 @@ int InputDetail :: StringToInt(string value)
 {
     return atoi(value.c_str());
 }
+
+/**
+ *      \class  InputDetail
+ *      \fn     InputDetail :: Message(string msg)
+ *      \brief  For dispaying message if user fill wrong info in field 
+ *      \param  msg Message string
+ */
+
+void InputDetail :: ErrorMessage(string msg)
+{
+    if(msg != "")
+    {   
+        page.DivStart("msg", "error");
+        cout <<  msg << page.brk << page.brk;
+        page.DivEnd();
+    }
+}

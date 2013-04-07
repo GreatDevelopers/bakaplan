@@ -95,11 +95,13 @@ string Login :: Time()
 }
 
 /**
- *--------------------------------------------------------------------\n
- *       Class:  Login \n
- *      Method:  Login :: LoginPage() \n
- * Description:  Form for user login \n
- *--------------------------------------------------------------------
+ *      \class  Login
+ *      \fn     Login :: LoginPage(string msg, sting emailID, 
+ *                                 stirng password)
+ *      \brief  Function for creating login Page
+ *      \param  msg Show Message if emailID/ password incorrect
+ *      \param  emialID user filled email id
+ *      \param  password uer password
  */
 
 void Login :: LoginPage(string msg, string emailID, string password)
@@ -115,13 +117,8 @@ void Login :: LoginPage(string msg, string emailID, string password)
 
     cout << page.startH1 << "Login" << page.endH1 << page.brk;
     
-    if(msg != "")
-    {   
-        page.DivStart("msg", "error");
-        cout <<  msg << page.brk << page.brk;
-        page.DivEnd();
-    }
-
+    ErrorMessage(msg);
+    
     page.Label(fieldName.emailID, "Email ID");
     page.InputField("email", fieldName.emailID, emailID);
     cout << page.brk << page.brk;
@@ -164,14 +161,9 @@ void Login :: RegistrationPage(string msg, string emailID)
     
     cout << page.startH1 << " Register New User " << page.endH1 
          <<  page.brk;
-
-    if(msg != "")                                                     
-    {
-        page.DivStart("msg", "error");
-        cout << msg << page.brk << page.brk;
-        page.DivEnd();
-    }
     
+    ErrorMessage(msg);
+
     //cout << " Email ID ";
     page.Label(fieldName.emailID, "Email ID");
     page.InputField("email", fieldName.emailID, emailID);
