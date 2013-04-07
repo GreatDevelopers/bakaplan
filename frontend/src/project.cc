@@ -49,18 +49,12 @@ void ProjectDetail :: AuthorizeUser()
     if ( ( find(emailID.begin(), emailID.end(), userEmailID) 
          != emailID.end() ) )                /**< If Email ID valid */
     {
-//        int index = find(emailID.begin(), emailID.end(), userEmailID) 
-  //                  - emailID.begin();
-//        cout << "email" << userEmailID << "<br>" << userPassword;
         temp = md5(userPassword);
-//        cout << "pwd : " << temp;
         
         where = "EmailID = \"" + userEmailID + "\"";
         database.SelectColumn(vecTemp, "Password", "User", where);
-//        cout << "   pwd : db : " << vecTemp[0];
 
-        if( temp == vecTemp[0] )   /**< If Password 
-            Correct */
+        if( temp == vecTemp[0] )   /**< If Password Correct */
         {
             sessionID  = md5(userEmailID);
         
@@ -96,7 +90,7 @@ void ProjectDetail :: AuthorizeUser()
  *--------------------------------------------------------------------
  */
 
-void ProjectDetail :: ProjectDetailPage()
+void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
 {
     page.ContentType();
 
@@ -114,9 +108,11 @@ void ProjectDetail :: ProjectDetailPage()
     cout << page.startH1 << "Project Detail" << page.endH1 << page.brk;
     
     OldProject();
+    
+    ErrorMessage(msg);
 
     page.Label(fieldName.projectName, " Project Name ");
-    page.InputField("text", fieldName.projectName, "Project Name");
+    page.InputField("text", fieldName.projectName, projectName);
     page.InputField("hidden", fieldName.emailID, userEmailID);
 
     cout << page.brk << page.brk

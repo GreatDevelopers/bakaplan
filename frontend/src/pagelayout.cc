@@ -74,7 +74,7 @@ void PageLayout :: Menu()
 void PageLayout :: Logo(string logoName)
 {
     DivStart("slogo", "logo");
-    cout << logoName << " <sup>Beta</sup>" << endl;
+    cout << logoName << endl;//" <sup>Beta</sup>" << endl;
     DivEnd();
 }
 

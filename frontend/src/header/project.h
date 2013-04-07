@@ -37,7 +37,8 @@ class ProjectDetail : public Login
         ProjectDetail();
 
         /** Display Page for project details */
-        void ProjectDetailPage();
+        void ProjectDetailPage(string msg = "", 
+                               string projectName = "Project Name");
 
         /** Checking user login details valid or not */
         void AuthorizeUser();
