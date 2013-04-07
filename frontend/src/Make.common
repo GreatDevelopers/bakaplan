@@ -114,6 +114,22 @@ H_LOGIN          :=  $(F_HEADER)$(LOGIN)$(H) $(H_INPUTDETAIL) \
 
 H_PROJECT        :=  $(F_HEADER)$(PROJECT)$(H) $(H_INPUTDETAIL)
 
+H_CLASS          :=  $(F_HEADER)$(CLASS)$(H) $(H_INPUTDETAIL) 
+
+H_ROLLNO         :=  $(F_HEADER)$(ROLLNO)$(H) $(H_INPUTDETAIL)
+
+H_DATESHEET      :=  $(F_HEADER)$(DATESHEET)$(H) $(H_INPUTDETAIL)
+
+H_EXAM           :=  $(F_HEADER)$(EXAM)$(H) $(H_INPUTDETAIL)
+
+H_ROOM           :=  $(F_HEADER)$(ROOM)$(H) $(H_INPUTDETAIL)
+
+H_STRATEGY       :=  $(F_HEADER)$(STRATEGY)$(H) $(H_INPUTDETAIL)
+
+H_VALIDATION     :=  $(F_HEADER)$(VALIDATION)$(H) $(H_INPUTDETAIL)
+
+H_REPORT         :=  $(F_HEADER)$(REPORT)$(H) $(H_INPUTDETAIL)
+
 #   Variables for defining dependancy
 
 D_DATABASE         =    $(DATABASE)$(CC) $(H_DATABASE)
@@ -138,6 +154,22 @@ D_LOGIN            =    $(LOGIN)$(CC) $(H_LOGIN)
 
 D_PROJECT          =    $(PROJECT)$(CC) $(H_PROJECT)
 
+D_CLASS            =    $(CLASS)$(CC) $(H_CLASS)
+
+D_ROLLNO           =    $(ROLLNO)$(CC) $(H_ROLLNO)
+
+D_DATESHEET        =    $(DATESHEET)$(CC) $(H_DATESHEET)
+
+D_EXAM             =    $(EXAM)$(CC) $(H_EXAM)
+
+D_ROOM             =    $(ROOM)$(CC) $(H_ROOM)
+
+D_STRATEGY         =    $(STRATEGY)$(CC) $(H_STRATEGY)
+
+D_VALIDATION       =    $(VALIDATION)$(CC) $(H_VALIDATION)
+
+D_REPORT           =    $(REPORT)$(CC) $(H_REPORT)
+
 #   Dependncy of main files
 
 D_LOGIN_M       =   $(LOGIN)$(MAIN)$(CPP) $(H_LOGIN)
@@ -153,6 +185,22 @@ D_CONFIRM_M     =   $(CONFIRM)$(MAIN)$(CPP) $(H_LOGIN)
 D_ADDUSER_M     =   $(ADDUSER)$(MAIN)$(CPP) $(H_LOGIN)
 
 D_PROJECT_M     =   $(PROJECT)$(MAIN)$(CPP) $(H_PROJECT)
+
+D_CLASS_M       =   $(CLASS)$(MAIN)$(CPP) $(H_CLASS)
+
+D_ROLLNO_M      =   $(ROLLNO)$(MAIN)$(CPP) $(H_ROLLNO)
+
+D_DATESHEET_M   =   $(DATESHEET)$(MAIN)$(CPP) $(H_DATESHEET)
+
+D_EXAM_M        =   $(EXAM)$(MAIN)$(CPP) $(H_EXAM)
+
+D_ROOM_M        =   $(ROOM)$(MAIN)$(CPP) $(H_ROOM)
+
+D_STRATEGY_M    =   $(STRATEGY)$(MAIN)$(CPP) $(H_STRATEGY)
+
+D_VALIDATION_M  =   $(VALIDATION)$(MAIN)$(CPP) $(H_VALIDATION)
+
+D_REPORT_M      =   $(REPORT)$(MAIN)$(CPP) $(H_REPORT)
 
 #   Linking variables
 
@@ -176,19 +224,19 @@ L_ADDUSER      =  $(ADDUSER)$(MAIN)$(O) $(L_LOG)
 
 L_PROJECT      =  $(PROJECT)$(MAIN)$(O) $(L_LOG) $(PROJECT)$(O)
 
-#L_CLASS        =  
+L_CLASS        =  $(CLASS)$(MAIN)$(O) $(CLASS)$(O) $(L_INPUT)
 
-#L_ROLLNO       =  
+L_ROLLNO       =  $(ROLLNO)$(MAIN)$(O) $(ROLLNO)$(O) $(L_INPUT)
 
-#L_DATESHEET    =  
+L_DATESHEET    =  $(DATESHEET)$(MAIN)$(O) $(DATESHEET)$(O) $(L_INPUT)
 
-#L_EXAM         =  
+L_EXAM         =  $(EXAM)$(MAIN)$(O) $(EXAM)$(O) $(L_INPUT)
 
-#L_ROOM         =  
+L_ROOM         =  $(ROOM)$(MAIN)$(O) $(ROOM)$(O) $(L_INPUT)
 
-#L_STRATEGY     =  
+L_STRATEGY     =  $(STRATEGY)$(MAIN)$(O) $(STRATEGY)$(O) $(L_INPUT)
 
-#L_VALIDATION   =  
+L_VALIDATION   =  $(VALIDATION)$(MAIN)$(O) $(VALIDATION)$(O) $(L_INPUT)
 
-#L_REPORT       =  
+L_REPORT       =  $(REPORT)$(MAIN)$(O) $(REPORT)$(O) $(L_INPUT)
 

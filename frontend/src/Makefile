@@ -25,7 +25,7 @@ include Make.common
 #   Targets
 # ====================================================================
 
-all: $(F_BP)$(LOGIN)$(HTML) $(F_BP)$(REGISTER)$(HTML) $(F_BP)$(NEWUSER)$(HTML) $(F_BP)$(CONFIRM)$(HTML) $(F_BP)$(ADDUSER)$(HTML) $(F_BP)$(PROJECT)$(HTML) $(F_BP)$(LOGOUT)$(HTML)
+all: $(F_BP)$(LOGIN)$(HTML) $(F_BP)$(REGISTER)$(HTML) $(F_BP)$(NEWUSER)$(HTML) $(F_BP)$(CONFIRM)$(HTML) $(F_BP)$(ADDUSER)$(HTML) $(F_BP)$(PROJECT)$(HTML) $(F_BP)$(LOGOUT)$(HTML) $(F_BP)$(CLASS)$(HTML) $(F_BP)$(ROLLNO)$(HTML) $(F_BP)$(DATESHEET)$(HTML) $(F_BP)$(EXAM)$(HTML) $(F_BP)$(ROOM)$(HTML) $(F_BP)$(STRATEGY)$(HTML) $(F_BP)$(VALIDATION)$(HTML) $(F_BP)$(REPORT)$(HTML)
 
 #$(DATABASE)$(O) $(INPUTFIELDNAME)$(O) $(READINPUTFIELD)$(O) $(MD5)$(O) $(JAVASCRIPT)$(O) $(PAGELAYOUT)$(O) $(PAGESTRUCTURE)$(O) $(INPUTDETAIL)$(O)
 
@@ -66,6 +66,29 @@ $(LOGIN)$(O) : $(D_LOGIN)
 $(PROJECT)$(O) : $(D_PROJECT)
 	$(CXX) $(CFLAG) $(PROJECT)$(CC) $(LMYSQL)
 
+$(CLASS)$(O) : $(D_CLASS)
+	$(CXX) $(CFLAG) $(CLASS)$(CC) $(LMYSQL)
+
+$(ROLLNO)$(O) : $(D_ROLLNO)
+	$(CXX) $(CFLAG) $(ROLLNO)$(CC) $(LMYSQL)
+
+$(DATESHEET)$(O) : $(D_DATESHEET)
+	$(CXX) $(CFLAG) $(DATESHEET)$(CC) $(LMYSQL)
+
+$(EXAM)$(O) : $(D_EXAM)
+	$(CXX) $(CFLAG) $(EXAM)$(CC) $(LMYSQL)
+
+$(ROOM)$(O) : $(D_ROOM)
+	$(CXX) $(CFLAG) $(ROOM)$(CC) $(LMYSQL)
+
+$(STRATEGY)$(O) : $(D_STRATEGY)
+	$(CXX) $(CFLAG) $(STRATEGY)$(CC) $(LMYSQL)
+
+$(VALIDATION)$(O) : $(D_VALIDATION)
+	$(CXX) $(CFLAG) $(VALIDATION)$(CC) $(LMYSQL)
+
+$(REPORT)$(O) : $(D_REPORT)
+	$(CXX) $(CFLAG) $(REPORT)$(CC) $(LMYSQL)
 
 #	Targets for compiling cpp file(main files)
 
@@ -89,6 +112,30 @@ $(PROJECT)$(MAIN)$(O) : $(D_PROJECT_M)
 
 $(LOGOUT)$(MAIN)$(O) : $(D_LOGOUT_M)
 	$(CXX) $(CFLAG) $(LOGOUT)$(MAIN)$(CPP) $(LMYSQL)
+
+$(CLASS)$(MAIN)$(O) : $(D_CLASS_M)
+	$(CXX) $(CFLAG) $(CLASS)$(MAIN)$(CPP) $(LMYSQL)
+
+$(ROLLNO)$(MAIN)$(O) : $(D_ROLLNO_M)
+	$(CXX) $(CFLAG) $(ROLLNO)$(MAIN)$(CPP) $(LMYSQL)
+
+$(DATESHEET)$(MAIN)$(O) : $(D_DATESHEET_M)
+	$(CXX) $(CFLAG) $(DATESHEET)$(MAIN)$(CPP) $(LMYSQL)
+
+$(EXAM)$(MAIN)$(O) : $(D_EXAM_M)
+	$(CXX) $(CFLAG) $(EXAM)$(MAIN)$(CPP) $(LMYSQL)
+
+$(ROOM)$(MAIN)$(O) : $(D_ROOM_M)
+	$(CXX) $(CFLAG) $(ROOM)$(MAIN)$(CPP) $(LMYSQL)
+
+$(STRATEGY)$(MAIN)$(O) : $(D_STRATEGY_M)
+	$(CXX) $(CFLAG) $(STRATEGY)$(MAIN)$(CPP) $(LMYSQL)
+
+$(VALIDATION)$(MAIN)$(O) : $(D_LOGOUT_M)
+	$(CXX) $(CFLAG) $(VALIDATION)$(MAIN)$(CPP) $(LMYSQL)
+
+$(REPORT)$(MAIN)$(O) : $(D_REPORT_M)
+	$(CXX) $(CFLAG) $(REPORT)$(MAIN)$(CPP) $(LMYSQL)
 
 #	Targets for html pages
 
@@ -119,6 +166,45 @@ $(F_BP)$(PROJECT)$(HTML) : $(L_PROJECT)
 $(F_BP)$(LOGOUT)$(HTML) : $(L_LOGOUT)
 	$(CXX) $(OFLAG) $(F_BP)$(LOGOUT)$(HTML) $(L_LOGOUT) \
 	$(LMYSQL) $(LCGICC) $(LSMTP)
+
+$(F_BP)$(CLASS)$(HTML) : $(L_CLASS)
+	$(CXX) $(OFLAG) $(F_BP)$(CLASS)$(HTML) $(L_CLASS) \
+	$(LMYSQL) $(LCGICC) $(LSMTP)
+
+$(F_BP)$(ROLLNO)$(HTML) : $(L_ROLLNO)
+	$(CXX) $(OFLAG) $(F_BP)$(ROLLNO)$(HTML) $(L_ROLLNO) \
+	$(LMYSQL) $(LCGICC) $(LSMTP)
+
+$(F_BP)$(DATESHEET)$(HTML) : $(L_DATESHEET)
+	$(CXX) $(OFLAG) $(F_BP)$(DATESHEET)$(HTML) $(L_DATESHEET) \
+	$(LMYSQL) $(LCGICC) $(LSMTP)
+
+$(F_BP)$(EXAM)$(HTML) : $(L_EXAM)
+	$(CXX) $(OFLAG) $(F_BP)$(EXAM)$(HTML) $(L_EXAM) \
+	$(LMYSQL) $(LCGICC) $(LSMTP)
+
+$(F_BP)$(ROOM)$(HTML) : $(L_ROOM)
+	$(CXX) $(OFLAG) $(F_BP)$(ROOM)$(HTML) $(L_ROOM) \
+	$(LMYSQL) $(LCGICC) $(LSMTP)
+
+$(F_BP)$(STRATEGY)$(HTML) : $(L_STRATEGY)
+	$(CXX) $(OFLAG) $(F_BP)$(STRATEGY)$(HTML) $(L_STRATEGY) \
+	$(LMYSQL) $(LCGICC) $(LSMTP)
+
+$(F_BP)$(VALIDATION)$(HTML) : $(L_VALIDATION)
+	$(CXX) $(OFLAG) $(F_BP)$(VALIDATION)$(HTML) $(L_VALIDATION) \
+	$(LMYSQL) $(LCGICC) $(LSMTP)
+
+$(F_BP)$(REPORT)$(HTML) : $(L_REPORT)
+	$(CXX) $(OFLAG) $(F_BP)$(REPORT)$(HTML) $(L_REPORT) \
+	$(LMYSQL) $(LCGICC) $(LSMTP)
+
+
+
+
+
+
+
 
 $(CLEAN) : 
 	rm -f *.o *.html
