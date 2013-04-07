@@ -26,7 +26,7 @@
 int main(void)
 {
     Login user;
-    user.RegisterationPage();
+    user.RegistrationPage();
 
     return 0;
 }

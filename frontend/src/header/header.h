@@ -35,6 +35,7 @@
 
 // for using multi-dimentional array
 #include <boost/multi_array.hpp>
+#include <boost/date_time/local_time/local_time.hpp>
 #include <cassert>
 
 /**-------------------------------------------------------------------

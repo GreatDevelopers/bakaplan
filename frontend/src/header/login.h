@@ -48,13 +48,16 @@ class Login : public InputDetail
                retypePassword;            /**< For reading password */
 
         string msg,           /**< Msg string to show error message */
-               currentDate;                      /**< Currennt Date */
+               currentTime;                      /**< Currennt Time */
 
         SendMail sendMail;
 
     public:
         /** Constructor */
         Login();
+
+        /** For locating current time on system */
+        string Time();
 
         /** Creating login page */
         void LoginPage(string msg = "", 
@@ -65,9 +68,8 @@ class Login : public InputDetail
         void ReadLoginDetail();
 
         /** Register user page  */
-        void RegisterationPage(string msg = "", 
-                               string emailID = "abc@you.com",
-                               string password = "******");
+        void RegistrationPage(string msg = "", 
+                               string emailID = "abc@you.com");
 
         /** Add new user in database */
         void NewUser();

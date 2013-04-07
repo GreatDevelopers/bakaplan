@@ -162,7 +162,7 @@ void Database :: InsertUserDetail(string emailID, string password)
 void Database :: InsertRegistrationDetail(string emailID,
                                           string registrationKey)
 {
-    query  = "insert into Registration(EmailID, RegistrationKey) ";
+    query  = "insert into Registeration(EmailID, RegistrationKey) ";
     query += "values(\"" + emailID + "\", \"" + registrationKey;
     query += "\");";
 

@@ -75,6 +75,26 @@ void Login :: ReadLoginDetail()
 }
 
 /**
+ *      \class  Login
+ *      \fn     Login :: Time()
+ *      \brief  For finding current time nd date of system
+ *      \retun  Return string having result
+ */
+
+string Login :: Time()
+{
+    ostringstream time;
+    const boost::posix_time::ptime now=                             
+    boost::posix_time::second_clock::local_time();                  
+    boost::posix_time::time_facet*const f = new                     
+    boost::posix_time::time_facet("%H-%M-%S");                      
+    time.imbue(std::locale(time.getloc(),f));                         
+    time << now;
+
+    return time.str();
+}
+
+/**
  *--------------------------------------------------------------------\n
  *       Class:  Login \n
  *      Method:  Login :: LoginPage() \n
@@ -129,8 +149,7 @@ void Login :: LoginPage(string msg, string emailID, string password)
  *      \brief  For registering new user
  */
 
-void Login :: RegisterationPage(string msg, string emailID, 
-                                string password)
+void Login :: RegistrationPage(string msg, string emailID)
 {
      
     page.ContentType();
@@ -187,24 +206,19 @@ void Login :: RegisterationPage(string msg, string emailID,
 
 void Login :: NewUser()
 {
-    page.ContentType();
     userEmailID = readField.ReadFieldValue(fieldName.emailID);
-
-    sendMail.RegistrationMail(userEmailID, "fd324cr3rc3cr4c334dui");
-
-    Header("New User");
     
-    page.DivStart("newuser", "");
-    cout << page.brk;
+    currentTime = Time();
 
-    page.Anchor("login.html", "Login");
+    currentTime = md5(currentTime);
 
-    cout << page.startH1 << " Check mail in Junk/Trash " << userEmailID 
-         << page.endH1 <<  page.brk;
+    database.InsertRegistrationDetail(userEmailID, currentTime);
 
-    page.DivEnd();
+    sendMail.RegistrationMail(userEmailID, currentTime);
+    
+    msg = "Check mail for verification in Junk/Trash.";
 
-    Footer();
+    RegistrationPage(msg);
  
     /* 
     SelectLoginDetail();
