@@ -170,26 +170,17 @@ void ClassDetail :: ClassDetailPage(string msg)
     page.LogoutLink();
 
     cout << page.brk;
-   
 
     page.FormStart("classdetail", "rollno.html", "POST");
 
-    cout << page.startH1 << "Class Detail" << page.endH1 << page.brk;
+    cout << page.startH1 << "Class/Branch/Trade Detail" 
+         << page.endH1 << page.brk;
     
     ErrorMessage(msg);
-/* 
-    page.Label(fieldName.projectName, " Project Name ");
-    page.InputField("text", fieldName.projectName, projectName);
-    page.InputField("hidden", fieldName.emailID, userEmailID);
 
-    cout << page.brk << page.brk
-         << " Project Type ";
-    page.InputField("radio", fieldName.projectType, "New");
-    page.Label(fieldName.projectType, "New");
-
-    page.InputField("radio", fieldName.projectType, "Old");
-    page.Label(fieldName.projectType, "Old");
-*/
+    page.InputField("hidden", fieldName.projectID, projectID);
+    page.InputField("hidden", fieldName.totalClasses, 
+                    IntToString(totalClasses));
 
     page.TableStart("classdetails", "");
     
@@ -232,7 +223,6 @@ void ClassDetail :: ClassDetailPage(string msg)
     page.DivEnd();
 
     Footer();
-
 }
 
 /**
