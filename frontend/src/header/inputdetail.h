@@ -71,7 +71,6 @@ class InputDetail //: public PageLayout
         ofstream outFile;                     /**< For writing file */
         string sessionID;                       /**< Session ID */
 
-
     public:
         Database data;
         InputDetail();       

@@ -190,27 +190,53 @@ void ClassDetail :: ClassDetailPage(string msg)
         cout << page.startTH << tableHeading[i] << page.endTH;
     }
     cout << page.endTR;
-
-    for(i = 0; i < totalClasses; i++)
+    if(projectType == "Old")
     {
-        cout << page.startTR;
+        for(i = 0; i < totalClasses; i++)
+        {
+            cout << page.startTR;
         
-        cout << page.startTD;
-        page.InputField("text", fieldName.className, (i+1),
-                        className[i]);
-        cout << page.endTD;
+            cout << page.startTD;
+            page.InputField("text", fieldName.className, (i + 1),
+                            className[i], className[i]);
+            cout << page.endTD;
         
-        cout << page.startTD;
-        page.InputField("text", fieldName.subjectName, (i + 1),
-                         subjectName[i]);
-        cout << page.endTD;
+            cout << page.startTD;
+            page.InputField("text", fieldName.subjectName, (i + 1),
+                             subjectName[i], subjectName[i]);
+            cout << page.endTD;
         
-        cout << page.startTD;
-        page.InputField("text", fieldName.subjectCode, (i + 1),
-                        subjectCode[i]);
-        cout << page.endTD;
+            cout << page.startTD;
+            page.InputField("text", fieldName.subjectCode, (i + 1),
+                            subjectCode[i], subjectCode[i]);
+            cout << page.endTD;
 
-        cout << page.endTR;
+            cout << page.endTR;
+        }
+    }
+    else
+    {
+        for(i = 0; i < totalClasses; i++)
+        {
+            cout << page.startTR;
+        
+            cout << page.startTD;
+            page.InputField("text", fieldName.className, (i + 1),
+                            className[i]);
+            cout << page.endTD;
+        
+            cout << page.startTD;
+            page.InputField("text", fieldName.subjectName, (i + 1),
+                             subjectName[i]);
+            cout << page.endTD;
+        
+            cout << page.startTD;
+            page.InputField("text", fieldName.subjectCode, (i + 1),
+                            subjectCode[i]);
+            cout << page.endTD;
+
+            cout << page.endTR;
+        }
     }
     
     page.TableEnd();
