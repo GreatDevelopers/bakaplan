@@ -345,14 +345,23 @@ void PageStructureMaker :: Label(string forField, string value)
  */
 
 void PageStructureMaker :: InputField(string type, string name, 
-                                      string value)
+                                      string placeholder, string value)
 {
     cout << "<input type=\"" << type << "\" name=\"" << name;
     cout << "\" id = \"" << name << "\""
-         << " value = \"" << value << "\" " 
+         << " placeholder = \"" << placeholder << "\" ";
+    if(value != "")    
+    {
+        cout << "value = \"" << value << "\" ";
+    }
+    else 
+    {
+        if(type == "hidden" || type == "radio")
+            cout << "value = \"" << placeholder << "\" ";
+    }
          //<< " onfocus = \"OnFocus(this.value, this.name, \"" << value
          //<< "\")\""
-         << ">" << endl;
+    cout << ">" << endl;
 }
 
 /**
@@ -366,14 +375,18 @@ void PageStructureMaker :: InputField(string type, string name,
  */
 
 void PageStructureMaker :: InputField(string type, string name, 
-                            int nameNo, string value)
+                            int nameNo, string placeholder,
+                            string value)
 {
     stringstream ss;
     //ss.str(name);
     ss << nameNo;
     name += ss.str();
     
-    InputField(type, name, value);
+    if(value == "")
+        InputField(type, name, placeholder);
+    else
+        InputField(type, name, placeholder, value);
     /*  
     cout << "<input type=\"" << type << "\" name=\"" << name;
     if( nameNo != 0)
