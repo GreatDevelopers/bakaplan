@@ -28,6 +28,8 @@
 int main(void)
 {
     ClassDetail detail;
+    detail.ProjectType();
+//    detail.ClassDetailPage();
 
     return 0;
 }

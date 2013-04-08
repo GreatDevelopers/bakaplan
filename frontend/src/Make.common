@@ -224,7 +224,7 @@ L_ADDUSER      =  $(ADDUSER)$(MAIN)$(O) $(L_LOG)
 
 L_PROJECT      =  $(PROJECT)$(MAIN)$(O) $(L_LOG) $(PROJECT)$(O)
 
-L_CLASS        =  $(CLASS)$(MAIN)$(O) $(CLASS)$(O) $(L_INPUT)
+L_CLASS        =  $(CLASS)$(MAIN)$(O) $(CLASS)$(O) $(PROJECT)$(O) $(L_LOG)
 
 L_ROLLNO       =  $(ROLLNO)$(MAIN)$(O) $(ROLLNO)$(O) $(L_INPUT)
 

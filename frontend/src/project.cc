@@ -92,6 +92,7 @@ void ProjectDetail :: AuthorizeUser()
 
 void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
 {
+    userEmailID = readField.ReadFieldValue(fieldName.emailID);
     page.ContentType();
 
     Header("Project Detail");
@@ -101,9 +102,8 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
     page.LogoutLink();
 
     cout << page.brk;
-   
 
-    page.FormStart("projectdetail", "class.html", "POST");
+    page.FormStart("projectdetail", "class.html", "GET");
 
     cout << page.startH1 << "Project Detail" << page.endH1 << page.brk;
     

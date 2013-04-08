@@ -63,8 +63,10 @@ class InputDetail //: public PageLayout
                                                        where clause */
                msg;                   /**< For Displaying error msg */
 
-        STRING_VEC vecTemp;        /**< string Vector temporary use */
-
+        STRING_VEC vecTemp,        /**< string Vector temporary use */
+                   oldProject;                 /**< For stroring old
+                                                    projects if any */
+ 
         ifstream inFile;                      /**< For Reading file */
         ofstream outFile;                     /**< For writing file */
         string sessionID;                       /**< Session ID */

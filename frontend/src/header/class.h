@@ -31,11 +31,37 @@ class ClassDetail : public InputDetail
 {
     protected:
 
-    public:
+        int totalClasses;                      /**< No. of classes for 
+                                                       seating plan */
 
+        string projectType;               /**< Project Type Old/New */
+
+        STRING_VEC className,                /**< Class/Branch Name */
+                   subjectName,                  /**< Subject Names */
+                   subjectCode,                  /**< Subject Codes */
+                   tableHeading;             /**< For table heading */
+
+        ProjectDetail project;
+
+    public:
+        /** Constructor */
         ClassDetail();
 
+        void SetDefaultValue();
 
+        /** Type of project */
+        void ProjectType();
+
+        /** Existing project */
+        void OldProject();
+
+        /** New project */
+        void NewProject();
+
+        /** Class detail page */
+        void ClassDetailPage(string msg = "");
+
+        /** DEstructor */
         ~ClassDetail();
 };
 

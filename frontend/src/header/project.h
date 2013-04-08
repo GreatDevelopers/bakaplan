@@ -32,9 +32,6 @@ class ProjectDetail : public Login
 {
     protected:
         
-        STRING_VEC oldProject;                  /**< For stroring olde 
-                                                    projects if any */
-    
     public:
         /** ProjectDetail Consructor */
         ProjectDetail();
