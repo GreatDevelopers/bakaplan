@@ -46,6 +46,7 @@ class InputFieldName
                totalSubjects,                    /**< TotalSubjects */
                subjectCode,                        /**< SubjectCode */
                subjectName,                        /**< SubjectName */
+               classID,                               /**< Class id */
         // Roll No details fields
                 prefix,                       /**< Prefix of rollno */
                 startRollNo,                  /**< starting roll no */
@@ -79,8 +80,12 @@ class InputFieldName
                examName,                      /**< Examination Name */
                examDate,                      /**< Examination Date */
                examTime,                      /**< Examination Time */
-               examVenue;                    /**< Examination Venue */
-               
+               examVenue,                    /**< Examination Venue */
+        /* Date sheet variables */
+               date,                       /**< Date of examination */
+               examCode,                   /**< Exam code accord to 
+                                                         date sheet */
+               totalDays;              /**< Total days in datesheet */
 
     public:
         InputFieldName();                     /**< Constructor */

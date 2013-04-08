@@ -58,6 +58,7 @@ void InputFieldName :: SetFieldNames()
     totalSubjects   =   "TotalSubjects";
     subjectCode     =   "SubjectCode";
     subjectName     =   "SubjectName";
+    classID         =   "ClassID";
     
     /* variable for roll no fields */
 
@@ -98,4 +99,10 @@ void InputFieldName :: SetFieldNames()
     examDate        =   "ExamDate";
     examTime        =   "ExamTime";
     examVenue       =   "ExamVenue";
+
+    /* Date Sheet field values */
+
+    date            =   "Date";
+    examCode        =   "ExamCode";
+    totalDays       =   "TotalDays";
 }
