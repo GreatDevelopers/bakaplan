@@ -59,7 +59,7 @@ void Database :: Query(string query)
     if ( mysql_query( connect, query.c_str() ) == 0)
         cout << "";
     else
-        cout << " Query not executed ";
+        cout << " Query not executed " << query;
 }
 
 /**
@@ -109,7 +109,7 @@ void Database :: InsertQuery(string query)
 
 void Database :: DeleteQuery(string table, string where = "")
 {
-    query = "delete row from " + table + " where " + where + ";";
+    query = "delete from " + table + " where " + where + ";";
     Query(query);
 }
 
@@ -258,16 +258,17 @@ void Database :: InsertSessionDetail(string emailID, string sessionKey)
     InsertQuery(query);
 }
 
-/* 
 void Database :: SelectSum(string column, string table, 
                            string projectID, string & result)
 {
     query  = "Select sum(" + column + ") as sum from " + table;
     query += " where ProjectID = " + projectID + ";";
-    vector<string> res;
-    SelectColumn(query, res);
-    result = res[0];
+    
+    SelectQuery(query, vecTemp);
+    result = vecTemp[0];
 }
+
+/* 
 void Database :: SelectColumn(string query, vector<string> & result)
 {
 

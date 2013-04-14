@@ -66,6 +66,10 @@ class Database
         /** Delete Query  */
         void DeleteQuery(string table, string where);
 
+        /** Select sum of data entry in table of specific projectID */
+        void SelectSum(string column, string table, string projectID,
+                       string & result);
+
         /** Select single column from table */
         void SelectColumn(STRING_VEC & result, string column, 
                           string table, string where = "" );
