@@ -36,10 +36,16 @@ ClassDetail :: ClassDetail()
     totalClasses = 1;
 }
 
+/**
+ *      \class  ClassDetail
+ *      \fn     ClassDetail :: ProjectType()
+ *      \brief  For reading project type ie old or new then calling
+ *              OldProject and NewProject func. accord to that.
+ */
+
 void ClassDetail :: ProjectType()
 {
 //    page.ContentType();
-//	cout << "Content-type:text/html\n\n\n";
 
     projectType = readField.ReadFieldValue(fieldName.projectType);
     emailID = readField.ReadFieldValue(fieldName.emailID);
@@ -55,6 +61,13 @@ void ClassDetail :: ProjectType()
         NewProject();
 		
 }
+
+/**
+ *      \class  ClassDetail
+ *      \fn     ClassDetail :: SetDefaultValue()
+ *      \brief  Setting default values of text fields (classname,
+ *              subject name, subject code)
+ */
 
 void ClassDetail :: SetDefaultValue()
 {
@@ -100,6 +113,12 @@ void ClassDetail :: SetDefaultValue()
     subjectCode[i++]    =   "ME-101,ME-501,IT-101";*/
 }
 
+/**
+ *      \class  ClassDetail
+ *      \fn     ClassDetail :: NewProject()
+ *      \brief  This func tis called if ProjectType = New
+ */
+
 void ClassDetail :: NewProject()
 {
 
@@ -123,6 +142,12 @@ void ClassDetail :: NewProject()
         ClassDetailPage();
     }
 }
+
+/**
+ *      \class  ClassDetail
+ *      \fn     ClassDetail :: OldProject()
+ *      \brief  This func. is called is project type = Old
+ */
 
 void ClassDetail :: OldProject()
 {
@@ -159,6 +184,10 @@ void ClassDetail :: OldProject()
 			 */
             SetDefaultValue();
         }
+        else
+        {
+            totalClasses = className.size();
+        }
       
         ClassDetailPage();
     }
@@ -168,6 +197,13 @@ void ClassDetail :: OldProject()
         project.ProjectDetailPage(msg); 
     }
 }
+
+/**
+ *      \class  ClassDetail
+ *      \fn     ClassDetail :: ClassDetailPage(string msg)
+ *      \brief  function for displaying html page for class details
+ *      \param  msg For displaying error message if any
+ */
 
 void ClassDetail :: ClassDetailPage(string msg)
 {
@@ -191,14 +227,17 @@ void ClassDetail :: ClassDetailPage(string msg)
     page.InputField("hidden", fieldName.projectID, projectID);
     page.InputField("hidden", fieldName.totalClasses, 
                     IntToString(totalClasses));
+    page.InputField("hidden", fieldName.projectType, projectType);
     
-//    cout << page.brk;
-    cout << "<input type=\"button\" value=\"Add Row\" onclick=\""
-         << "addRow('TableClass', 'TotalClasses', 'class')\" />";
+    page.InputField("button", "AddRow", 
+                    "addRow('TableClass', 'TotalClasses', 'class')",
+                    "Add Row");
+    
+    page.InputField("button", "DeleteRow", 
+                    "deleteRow('TableClass', 'TotalClasses')",
+                    "Delete Row");
 
-    cout << "<input type=\"button\" value=\"Delete Row\" onclick=\""
-         << "removeRow('TableClass', 'TotalClasses')\" />" 
-         << page.brk << page.brk;
+    cout << page.brk << page.brk;
 
     page.TableStart("TableClass", "");
    
