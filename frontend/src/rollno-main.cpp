@@ -29,6 +29,7 @@ int main(void)
 {
     
     RollNoDetail rollNo;
+    rollNo.ReadClassDetail();
 
     return 0;
 }

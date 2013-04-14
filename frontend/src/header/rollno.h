@@ -33,9 +33,30 @@ class RollNoDetail : public InputDetail
 {
     protected:
 
+        int totalClasses;                      /**< No. of classes for 
+                                                       seating plan */
+
+        string projectType;               /**< Project Type Old/New */
+
+        STRING_VEC className,                /**< Class/Branch Name */
+                   subjectName,                  /**< Subject Names */
+                   subjectCode,                  /**< Subject Codes */
+                   tableHeading;             /**< For table heading */
+
     public:
+        /** Roll No detail Constructor*/
         RollNoDetail();
 
+        /** Read Class Details */
+        void ReadClassDetail();
+
+        /** Write class details in database */
+        void WriteClassDetail();
+
+        /** RollNo detail page */
+        void RollNoDetailPage(string msg="");
+
+        /** Destructor */
         ~RollNoDetail();
 };
 
