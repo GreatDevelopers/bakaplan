@@ -181,6 +181,8 @@ void RollNoDetail :: RollNoDetailPage(string msg)
 
     page.DivStart("DivRollNo", "");
 
+    page.LogoutLink();
+
     cout << page.brk;
 
     page.FormStart("FormRollNo", "datesheet.html", "POST");
