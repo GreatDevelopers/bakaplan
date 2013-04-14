@@ -111,7 +111,41 @@ void RollNoDetail :: WriteClassDetail()
 
 void RollNoDetail :: RollNoDetailPage(string msg)
 {
+    page.ContentType();
+    Header("Roll No Detail");
 
+    page.DivStart("DivRollNo", "");
+
+    cout << page.brk;
+
+    page.FormStart("FormRollNo", "datesheet.html", "POST");
+
+    cout << page.startH1 << "Roll No Detail" << page.endH1 << page.brk;
+    
+    ErrorMessage(msg);
+
+    page.InputField("hidden", fieldName.projectID, projectID);
+    page.InputField("hidden", fieldName.totalClasses, 
+                    IntToString(totalClasses));
+    page.InputField("hidden", fieldName.projectType, projectType);
+
+    page.TableStart("TableRollNo", "");
+
+    for(i = 0; i < totalClasses; i++)
+    {
+        
+    }
+
+    page.TableEnd();
+
+    cout << page.brk << page.brk;
+    
+    page.Button("next", "submit", "btn", "Login");
+
+    page.FormEnd();
+    page.DivEnd();
+
+    Footer();
 }
 
 /**

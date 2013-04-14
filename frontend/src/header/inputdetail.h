@@ -71,6 +71,16 @@ class InputDetail //: public PageLayout
         ofstream outFile;                     /**< For writing file */
         string sessionID;                       /**< Session ID */
 
+        int totalClasses,                      /**< No. of classes for 
+                                                       seating plan */
+            totalCols;                  /**< total Columns in table */
+
+        string projectType;               /**< Project Type Old/New */
+
+        STRING_VEC className,                /**< Class/Branch Name */
+                   subjectName,                  /**< Subject Names */
+                   subjectCode,                  /**< Subject Codes */
+                   tableHeading;             /**< For table heading */
     public:
         Database data;
         InputDetail();       

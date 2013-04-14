@@ -28,10 +28,12 @@ ClassDetail :: ClassDetail()
 {
     // constructor
 
+    totalCols = 3;
+    tableHeading.resize(totalCols);
     i = 0;
-    tableHeading.push_back("Class Name");//[i++]   =   "Class Name";
-    tableHeading.push_back("Subject Name");//[i++]   =   "Subject Name";
-    tableHeading.push_back("Subject Code");//[i++]   =   "Subject Code";
+    tableHeading[i++]   =   "Class Name";
+    tableHeading[i++]   =   "Subject Name";
+    tableHeading[i++]   =   "Subject Code";
 
     totalClasses = 1;
 }
@@ -175,13 +177,6 @@ void ClassDetail :: OldProject()
         
         if(className.size() <= 0)
         {
-/*             className.resize(1);
-             subjectCode.resize(1);
-             subjectName.resize(1);
-             className[0] = "Info. Tech.";
-             subjectCode[0] = "IT-102, IT 104";
-             subjectName[0] = "DBMS, OOPS";
-			 */
             SetDefaultValue();
         }
         else
@@ -242,7 +237,7 @@ void ClassDetail :: ClassDetailPage(string msg)
     page.TableStart("TableClass", "");
    
     cout << page.startTR;
-    for(i = 0; i < 3; i++)
+    for(i = 0; i < totalCols; i++)
     {   
         cout << page.startTH << tableHeading[i] << page.endTH;
     }
