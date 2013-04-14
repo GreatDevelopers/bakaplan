@@ -132,7 +132,7 @@ class PageStructureMaker
 
         /** Button */
         void Button(string id, string type, string className, 
-                    string value);
+                    string value, string onClick = "");
 };
 
 #endif

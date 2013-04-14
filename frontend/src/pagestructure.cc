@@ -354,6 +354,11 @@ void PageStructureMaker :: InputField(string type, string name,
     {
         cout << "value = \"" << placeholder << "\" ";
     }
+    else if(type == "button")
+    {
+        cout << "value = \"" << value << "\" "
+             << "onclick = \"" << placeholder << "\" ";
+    }
     else
     {
         cout << "placeholder = \"" << placeholder << "\" ";
@@ -466,9 +471,15 @@ void PageStructureMaker :: SelectOptionEnd()
  */
 
 void PageStructureMaker :: Button(string id, string type, 
-                            string className, string value)
+                            string className, string value, 
+                            string onClick)
 {
     cout << "<button id = \"" << id << "\" type = \"" << type 
-         << "\" class=\"" << className << "\">" << value
+         << "\" class=\"" << className << "\" ";
+
+    if(onClick != "")
+        cout << "onClick = \"" << onClick << "\" ";
+         
+    cout << ">" << value
          << "</button>" << endl;
 }
