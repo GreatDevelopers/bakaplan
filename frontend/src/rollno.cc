@@ -213,13 +213,15 @@ void RollNoDetail :: RollNoDetailPage(string msg)
             cout << page.startTR;
         
             cout << page.startTD;
-            page.InputField("text", fieldName.className, (i + 1),
-                            className[i], className[i]);
+            cout << className[i];
+            page.InputField("hidden", fieldName.className, (i + 1),
+                            className[i]);
             cout << page.endTD;
        
             cout << page.startTD;
-            page.InputField("text", fieldName.subjectCode, (i + 1),
-                            subjectCode[i], subjectCode[i]);
+            cout << subjectCode[i];
+            page.InputField("hidden", fieldName.subjectCode, (i + 1),
+                            subjectCode[i]);
             cout << page.endTD;
         
             cout << page.startTD;
@@ -252,13 +254,15 @@ void RollNoDetail :: RollNoDetailPage(string msg)
             cout << page.startTR;
         
             cout << page.startTD;
-            page.InputField("text", fieldName.className, (i + 1),
-                            className[i], className[i]);
+            cout << className[i];
+            page.InputField("hidden", fieldName.className, (i + 1),
+                            className[i]);
             cout << page.endTD;
         
             cout << page.startTD;
-            page.InputField("text", fieldName.subjectCode, (i + 1),
-                            subjectCode[i], subjectCode[i]);
+            cout << subjectCode[i];
+            page.InputField("hidden", fieldName.subjectCode, (i + 1),
+                            subjectCode[i]);
             cout << page.endTD;
         
             cout << page.startTD;
