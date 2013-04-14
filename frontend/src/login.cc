@@ -89,11 +89,11 @@ void Login :: LoginPage(string msg, string emailID, string password)
     page.ContentType();
     Header("Login");
 
-    page.DivStart("login", "");
+    page.DivStart("DivLogin", "");
 
     cout << page.brk;
 
-    page.FormStart("login", "project.html", "POST");
+    page.FormStart("FormLogin", "project.html", "POST");
 
     cout << page.startH1 << "Login" << page.endH1 << page.brk;
     
@@ -132,12 +132,12 @@ void Login :: RegistrationPage(string msg, string emailID)
     page.ContentType();
     Header("Register");
     
-    page.DivStart("register", "");
+    page.DivStart("DivRegister", "");
     cout << page.brk;
 
     page.Anchor("login.html", "Login");
 
-    page.FormStart("register", "newuser.html", "POST");
+    page.FormStart("FormRegister", "newuser.html", "POST");
     
     cout << page.startH1 << " Register New User " << page.endH1 
          <<  page.brk;
@@ -149,7 +149,7 @@ void Login :: RegistrationPage(string msg, string emailID)
 
     cout << page.brk << page.brk;
 
-    page.Button("register", "submit", "btn", "Register");
+    page.Button("Register", "submit", "btn", "Register");
 
     page.FormEnd();
 
@@ -255,12 +255,12 @@ void Login :: ConfirmPage(string msg, string password,
         page.ContentType();
         Header("Confirm Email");
     
-        page.DivStart("confirm", "");
+        page.DivStart("DivConfirm", "");
         cout << page.brk;
 
         page.Anchor("login.html", "Login");
 
-        page.FormStart("confirm", "adduser.html", "POST");
+        page.FormStart("FormConfirm", "adduser.html", "POST");
     
         cout << page.startH1 << " Email Confirmed " << page.endH1 
              <<  page.brk
