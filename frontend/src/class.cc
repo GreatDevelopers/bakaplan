@@ -18,7 +18,6 @@
  */
 #include "header/class.h"
 
-
 /**
  *      \class  ClassDetail
  *      \fn     ClassDetail :: ClassDetail()
@@ -34,15 +33,15 @@ ClassDetail :: ClassDetail()
     tableHeading.push_back("Subject Name");//[i++]   =   "Subject Name";
     tableHeading.push_back("Subject Code");//[i++]   =   "Subject Code";
 
-    totalClasses = 3;
+    totalClasses = 1;
 }
 
 void ClassDetail :: ProjectType()
 {
 //    page.ContentType();
+//	cout << "Content-type:text/html\n\n\n";
 
     projectType = readField.ReadFieldValue(fieldName.projectType);
-  //  cout <<  projectType;
     emailID = readField.ReadFieldValue(fieldName.emailID);
     projectName = readField.ReadFieldValue(fieldName.projectName); 
  
@@ -54,51 +53,51 @@ void ClassDetail :: ProjectType()
         OldProject();
     else
         NewProject();
+		
 }
 
 void ClassDetail :: SetDefaultValue()
 {
-        className.resize(10);
-        subjectCode.resize(10);
-        subjectName.resize(10);
+    className.resize(totalClasses);
+    subjectCode.resize(totalClasses);
+    subjectName.resize(totalClasses);
  
-        //maxClasses      =   10;
-        i = 0;
-        className[i++]      =   "Info. Tech.";
-        className[i++]      =   "IT 2nd Yr";
-        className[i++]      =   "ECE";
-        className[i++]      =   "Mech. Engg.";
-        className[i++]      =   "Production Engg.";
-        className[i++]      =   "Electrical Engg.";
-        className[i++]      =   "IT";
-        className[i++]      =   "Electronics Engg.";
-        className[i++]      =   "Comp. Sci. Engg.";
-        className[i++]      =   "MBA";
+    //maxClasses      =   10;
+    i = 0;
+    className[i++]      =   "Info. Tech.";/*
+    className[i++]      =   "IT 2nd Yr";
+    className[i++]      =   "ECE";
+    className[i++]      =   "Mech. Engg.";
+    className[i++]      =   "Production Engg.";
+    className[i++]      =   "Electrical Engg.";
+    className[i++]      =   "IT";
+    className[i++]      =   "Electronics Engg.";
+    className[i++]      =   "Comp. Sci. Engg.";
+    className[i++]      =   "MBA";*/
     
-        i = 0;
-        subjectName[i++]    =   "DBMS, SAD";
-        subjectName[i++]    =   "Maths,Physics";
-        subjectName[i++]    =   "OS, EVS";
-        subjectName[i++]    =   "Java, C++";
-        subjectName[i++]    =   "EVS";
-        subjectName[i++]    =   "Chem.";
-        subjectName[i++]    =   "ED";
-        subjectName[i++]    =   "Maths";
-        subjectName[i++]    =   "Maths,DBMS, Physics";
-        subjectName[i++]    =   "Multimedia, Dot Net, ED";
-
-        i = 0;
-        subjectCode[i++]    =   "IT-101, IT-102";
-        subjectCode[i++]    =   "ME-10,CE-252";
-        subjectCode[i++]    =   "EVS, ED-10";
-        subjectCode[i++]    =   "ED-10, IT-102";
-        subjectCode[i++]    =   "IT-102";
-        subjectCode[i++]    =   "IT-203";
-        subjectCode[i++]    =   "CE-120";
-        subjectCode[i++]    =   "ME-140";
-        subjectCode[i++]    =   "EE-109, 1234S, IT-203";
-        subjectCode[i++]    =   "ME-101,ME-501,IT-101";
-
+    i = 0;
+    subjectName[i++]    =   "DBMS, SAD";/* 
+    subjectName[i++]    =   "Maths,Physics";
+    subjectName[i++]    =   "OS, EVS";
+    subjectName[i++]    =   "Java, C++";
+    subjectName[i++]    =   "EVS";
+    subjectName[i++]    =   "Chem.";
+    subjectName[i++]    =   "ED";
+    subjectName[i++]    =   "Maths";
+    subjectName[i++]    =   "Maths,DBMS, Physics";
+    subjectName[i++]    =   "Multimedia, Dot Net, ED";
+*/
+    i = 0;
+    subjectCode[i++]    =   "IT-101, IT-102";/*
+    subjectCode[i++]    =   "ME-10,CE-252";
+    subjectCode[i++]    =   "EVS, ED-10";
+    subjectCode[i++]    =   "ED-10, IT-102";
+    subjectCode[i++]    =   "IT-102";
+    subjectCode[i++]    =   "IT-203";
+    subjectCode[i++]    =   "CE-120";
+    subjectCode[i++]    =   "ME-140";
+    subjectCode[i++]    =   "EE-109, 1234S, IT-203";
+    subjectCode[i++]    =   "ME-101,ME-501,IT-101";*/
 }
 
 void ClassDetail :: NewProject()
@@ -118,6 +117,9 @@ void ClassDetail :: NewProject()
     else
     {
         SetDefaultValue();
+
+        database.InsertProjectDetail(emailID, projectName);
+        
         ClassDetailPage();
     }
 }
@@ -147,15 +149,23 @@ void ClassDetail :: OldProject()
                               where);
         
         if(className.size() <= 0)
+        {
+/*             className.resize(1);
+             subjectCode.resize(1);
+             subjectName.resize(1);
+             className[0] = "Info. Tech.";
+             subjectCode[0] = "IT-102, IT 104";
+             subjectName[0] = "DBMS, OOPS";
+			 */
             SetDefaultValue();
-
+        }
+      
         ClassDetailPage();
     }
     else
     {
         msg = "Project doesn't exists.";
         project.ProjectDetailPage(msg); 
-    
     }
 }
 
@@ -165,13 +175,13 @@ void ClassDetail :: ClassDetailPage(string msg)
 
     Header("Class Detail");
 
-    page.DivStart("classdetail", "");
+    page.DivStart("DivClass", "");
 
     page.LogoutLink();
 
     cout << page.brk;
 
-    page.FormStart("classdetail", "rollno.html", "POST");
+    page.FormStart("FormClass", "rollno.html", "POST");
 
     cout << page.startH1 << "Class/Branch/Trade Detail" 
          << page.endH1 << page.brk;
@@ -181,16 +191,26 @@ void ClassDetail :: ClassDetailPage(string msg)
     page.InputField("hidden", fieldName.projectID, projectID);
     page.InputField("hidden", fieldName.totalClasses, 
                     IntToString(totalClasses));
-
-    page.TableStart("classdetails", "");
     
+//    cout << page.brk;
+    cout << "<input type=\"button\" value=\"Add Row\" onclick=\""
+         << "addRow('TableClass', 'TotalClasses', 'class')\" />";
+
+    cout << "<input type=\"button\" value=\"Delete Row\" onclick=\""
+         << "removeRow('TableClass', 'TotalClasses')\" />" 
+         << page.brk << page.brk;
+
+    page.TableStart("TableClass", "");
+   
     cout << page.startTR;
     for(i = 0; i < 3; i++)
     {   
         cout << page.startTH << tableHeading[i] << page.endTH;
     }
     cout << page.endTR;
-    if(projectType == "Old")
+
+    if(projectType == "Old" && (className.size() > 1 || 
+       subjectName.size() >1 || subjectCode.size() > 1 ))
     {
         for(i = 0; i < totalClasses; i++)
         {
@@ -203,7 +223,7 @@ void ClassDetail :: ClassDetailPage(string msg)
         
             cout << page.startTD;
             page.InputField("text", fieldName.subjectName, (i + 1),
-                             subjectName[i], subjectName[i]);
+                            subjectName[i], subjectName[i]);
             cout << page.endTD;
         
             cout << page.startTD;

@@ -98,13 +98,13 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
 
     Header("Project Detail");
 
-    page.DivStart("projectdetail", "");
+    page.DivStart("DivProject", "");
 
     page.LogoutLink();
 
     cout << page.brk;
 
-    page.FormStart("projectdetail", "class.html", "GET");
+    page.FormStart("FormProject", "class.html", "get");
 
     cout << page.startH1 << "Project Detail" << page.endH1 << page.brk;
     
@@ -112,6 +112,7 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
     
     ErrorMessage(msg);
 
+ 
     page.Label(fieldName.projectName, " Project Name ");
     page.InputField("text", fieldName.projectName, projectName);
     page.InputField("hidden", fieldName.emailID, userEmailID);
@@ -119,10 +120,12 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
     cout << page.brk << page.brk
          << " Project Type ";
     page.InputField("radio", fieldName.projectType, "New");
-    page.Label(fieldName.projectType, "New");
+    cout << " New ";
+//    page.Label(fieldName.projectType, "New");
 
     page.InputField("radio", fieldName.projectType, "Old");
-    page.Label(fieldName.projectType, "Old");
+//    page.Label(fieldName.projectType, "Old");
+    cout << " Old ";
 
     cout << page.brk << page.brk;
 

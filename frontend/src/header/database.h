@@ -81,7 +81,7 @@ class Database
                                       string registrationKey);
 
         /** Insert Project Detail  */
-        void InsertProjectDetail(string projectID, string emailID,
+        void InsertProjectDetail(string emailID,
                                string projectName);
 
         /** Insert Class Detail  */

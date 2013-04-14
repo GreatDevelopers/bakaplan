@@ -169,11 +169,11 @@ void Database :: InsertRegistrationDetail(string emailID,
     InsertQuery(query);
 }
 
-void Database :: InsertProjectDetail(string projectID, string emailID,
+void Database :: InsertProjectDetail(string emailID, 
                                      string projectName)
 {
-    query  = "insert into ProjectDetail(ProjectID, EmailID, ";
-    query += "ProjectName) values(" + projectID + ", \"" + emailID + 
+    query  = "insert into ProjectDetail(EmailID, ";
+    query += "ProjectName) values(\"" + emailID + 
              "\", \"" + projectName + "\");";
 
     InsertQuery(query);

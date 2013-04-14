@@ -348,20 +348,23 @@ void PageStructureMaker :: InputField(string type, string name,
                                       string placeholder, string value)
 {
     cout << "<input type=\"" << type << "\" name=\"" << name;
-    cout << "\" id = \"" << name << "\""
-         << " placeholder = \"" << placeholder << "\" ";
-    if(value != "")    
+    cout << "\" id = \"" << name << "\" ";
+
+    if(type == "hidden" || type == "radio")
     {
-        cout << "value = \"" << value << "\" ";
+        cout << "value = \"" << placeholder << "\" ";
     }
-    else 
+    else
     {
-        if(type == "hidden" || type == "radio")
-            cout << "value = \"" << placeholder << "\" ";
+        cout << "placeholder = \"" << placeholder << "\" ";
+        if(value != "")    
+        {
+            cout << "value = \"" << value << "\" ";
+        }
     }
          //<< " onfocus = \"OnFocus(this.value, this.name, \"" << value
          //<< "\")\""
-    cout << ">" << endl;
+    cout << "/>" << endl;
 }
 
 /**
@@ -375,8 +378,8 @@ void PageStructureMaker :: InputField(string type, string name,
  */
 
 void PageStructureMaker :: InputField(string type, string name, 
-                            int nameNo, string placeholder,
-                            string value)
+                                      int nameNo, string placeholder,
+                                      string value)
 {
     stringstream ss;
     //ss.str(name);
