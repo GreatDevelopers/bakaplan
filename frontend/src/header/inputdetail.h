@@ -80,7 +80,13 @@ class InputDetail //: public PageLayout
         STRING_VEC className,                /**< Class/Branch Name */
                    subjectName,                  /**< Subject Names */
                    subjectCode,                  /**< Subject Codes */
-                   tableHeading;             /**< For table heading */
+                   tableHeading,             /**< For table heading */
+        /* Variables for roll no detail*/
+                   prefix,                   /**< Prefix of roll no */
+                   startRollNo,               /**< starting roll no */
+                   endRollNo,                   /**< ending roll no */
+                   notIncluded;                /**< roll no's that are 
+                                       not included in seating plan */
     public:
         Database data;
         InputDetail();       

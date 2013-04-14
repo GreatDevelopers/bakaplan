@@ -43,6 +43,9 @@ class RollNoDetail : public InputDetail
         /** Write class details in database */
         void WriteClassDetail();
 
+        /** Set default values of field */
+        void SetDefaultValue(int totalClasses);
+
         /** RollNo detail page */
         void RollNoDetailPage(string msg="");
 

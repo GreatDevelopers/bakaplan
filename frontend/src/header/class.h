@@ -32,10 +32,13 @@ class ClassDetail : public InputDetail
     protected:
         ProjectDetail project;
 
+        STRING_VEC value;
+
     public:
         /** Constructor */
         ClassDetail();
 
+        /** Set default values */
         void SetDefaultValue();
 
         /** Type of project */

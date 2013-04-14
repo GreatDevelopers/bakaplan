@@ -27,6 +27,16 @@
 RollNoDetail :: RollNoDetail()
 {
     // constructor
+    totalCols = 6;
+    tableHeading.resize(totalCols);
+
+    i = 0;
+    tableHeading[i++] = "Class Name";    
+    tableHeading[i++] = "Subject Code";
+    tableHeading[i++] = "Prefix";
+    tableHeading[i++] = "Start Roll No.";
+    tableHeading[i++] = "End Roll No.";
+    tableHeading[i++] = "Not Included";
 }
 
 /**
@@ -39,18 +49,18 @@ RollNoDetail :: RollNoDetail()
 void RollNoDetail :: ReadClassDetail()
 {
 
-    page.ContentType();
+//    page.ContentType();
 
     projectID = readField.ReadFieldValue(fieldName.projectID);
     projectType = readField.ReadFieldValue(fieldName.projectType);
     totalClasses = StringToInt(readField.ReadFieldValue(
                                fieldName.totalClasses));
 
-     className.resize(totalClasses);
+    className.resize(totalClasses);
     subjectName.resize(totalClasses);
     subjectCode.resize(totalClasses);
 
-     for(i = 0; i < totalClasses; i++)
+    for(i = 0; i < totalClasses; i++)
     {
         j = i + 1;
         className[i] = readField.ReadFieldValue(fieldName.className,
@@ -78,13 +88,65 @@ void RollNoDetail :: ReadClassDetail()
             where = "ProjectID = " + projectID;
             database.DeleteQuery("ClassDetail", where);
         }
+        
+        database.SelectColumn(prefix, "Prefix", "RollNoDetail", where);
+
+        if(prefix.size() <= 0)
+        {
+            prefix.resize(totalClasses);
+            startRollNo.resize(totalClasses);
+            endRollNo.resize(totalClasses);
+            notIncluded.resize(totalClasses);
+
+//            SetDefaultValue(totalClasses);
+            for(i = 0; i < totalClasses; i++)
+            {
+                prefix[i]       =   "";
+                startRollNo[i]  =   "";
+                endRollNo[i]    =   "";
+                notIncluded[i]  =   "";
+            }
+        }
+        else
+        {
+            database.SelectColumn(startRollNo, "StartRollNo", 
+                                  "RollNoDetail", where);
+            database.SelectColumn(endRollNo, "EndRollNo",
+                                  "RollNoDetail", where);
+            database.SelectColumn(notIncluded, "NotIncluded",
+                                  "RollNoDetail", where);
+        }
             
     }
-    
+    else
     {
-        WriteClassDetail();
+        SetDefaultValue(totalClasses);
     }
+    WriteClassDetail();
+}
 
+/**
+ *      \class  RollNoDetail
+ *      \fn     RollNoDetail :: SetDefaultValue(int totalClasses)
+ *      \brief  Setting default valued of i/p fields for taking i/p
+ *              from user
+ *      \param  totalClasses Total no. of rows/classes
+ */
+
+void RollNoDetail :: SetDefaultValue(int totalClasses)
+{
+    prefix.resize(totalClasses);
+    startRollNo.resize(totalClasses);
+    endRollNo.resize(totalClasses);
+    notIncluded.resize(totalClasses);
+
+    for(i = 0; i < totalClasses; i++)
+    {
+        prefix[i]       =   "Roll No Prefix";
+        startRollNo[i]  =   "101";
+        endRollNo[i]    =   "200";
+        notIncluded[i]  =   "101-103, 190, 199";
+    }
 }
 
 /**
@@ -112,6 +174,9 @@ void RollNoDetail :: WriteClassDetail()
 void RollNoDetail :: RollNoDetailPage(string msg)
 {
     page.ContentType();
+
+    ReadClassDetail();
+
     Header("Roll No Detail");
 
     page.DivStart("DivRollNo", "");
@@ -131,16 +196,98 @@ void RollNoDetail :: RollNoDetailPage(string msg)
 
     page.TableStart("TableRollNo", "");
 
-    for(i = 0; i < totalClasses; i++)
-    {
-        
+    cout << page.startTR;
+    for(i = 0; i < totalCols; i++)
+    {   
+        cout << page.startTH << tableHeading[i] << page.endTH;
     }
+    cout << page.endTR;
 
+    if(projectType == "Old")// && (prefix.size() > 1 || 
+//       subjectName.size() >1 || subjectCode.size() > 1 ))
+    {
+        for(i = 0; i < totalClasses; i++)
+        {
+            cout << page.startTR;
+        
+            cout << page.startTD;
+            page.InputField("text", fieldName.className, (i + 1),
+                            className[i], className[i]);
+            cout << page.endTD;
+       
+            cout << page.startTD;
+            page.InputField("text", fieldName.subjectCode, (i + 1),
+                            subjectCode[i], subjectCode[i]);
+            cout << page.endTD;
+        
+            cout << page.startTD;
+            page.InputField("text", fieldName.prefix, (i + 1),
+                            prefix[i], prefix[i]);
+            cout << page.endTD;
+         
+            cout << page.startTD;
+            page.InputField("text", fieldName.startRollNo, (i + 1),
+                            startRollNo[i], startRollNo[i]);
+            cout << page.endTD;
+         
+            cout << page.startTD;
+            page.InputField("text", fieldName.endRollNo, (i + 1),
+                            endRollNo[i], endRollNo[i]);
+            cout << page.endTD;
+         
+            cout << page.startTD;
+            page.InputField("text", fieldName.notIncluded, (i + 1),
+                            notIncluded[i], notIncluded[i]);
+            cout << page.endTD;
+ 
+            cout << page.endTR;
+        }
+    }
+    else
+    {
+        for(i = 0; i < totalClasses; i++)
+        {
+            cout << page.startTR;
+        
+            cout << page.startTD;
+            page.InputField("text", fieldName.className, (i + 1),
+                            className[i], className[i]);
+            cout << page.endTD;
+        
+            cout << page.startTD;
+            page.InputField("text", fieldName.subjectCode, (i + 1),
+                            subjectCode[i], subjectCode[i]);
+            cout << page.endTD;
+        
+            cout << page.startTD;
+            page.InputField("text", fieldName.prefix, (i + 1),
+                            prefix[i]);
+            cout << page.endTD;
+         
+            cout << page.startTD;
+            page.InputField("text", fieldName.startRollNo, (i + 1),
+                            startRollNo[i]);
+            cout << page.endTD;
+         
+            cout << page.startTD;
+            page.InputField("text", fieldName.endRollNo, (i + 1),
+                            endRollNo[i]);
+            cout << page.endTD;
+         
+            cout << page.startTD;
+            page.InputField("text", fieldName.notIncluded, (i + 1),
+                            notIncluded[i]);
+            cout << page.endTD;
+ 
+            cout << page.endTR;
+        }
+    }
+ 
     page.TableEnd();
 
     cout << page.brk << page.brk;
     
-    page.Button("next", "submit", "btn", "Login");
+    page.Button("next", "submit", "btn", "Next");
 
     page.FormEnd();
     page.DivEnd();

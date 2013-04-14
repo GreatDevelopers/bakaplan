@@ -76,10 +76,29 @@ void ClassDetail :: SetDefaultValue()
     className.resize(totalClasses);
     subjectCode.resize(totalClasses);
     subjectName.resize(totalClasses);
- 
-    //maxClasses      =   10;
+//    value.resize(totalClasses);
+
     i = 0;
-    className[i++]      =   "Info. Tech.";/*
+    className[i]    =   "Info. Tech";
+    subjectName[i]  =   "DBMS, SAD";
+    subjectCode[i]  =   "IT-101, IT 102";   
+    
+/*     if(projectType == "Old")
+    {
+        i = j = 0;
+        value[j++] = className[i];
+        value[j++] = subjectName[i];
+        value[j++] = subjectCode[i];
+    }
+    else
+    {
+        for(i = 0; i < totalCols; i++)
+            value[i] = "";
+    }*/
+
+/*     //maxClasses      =   10;
+    i = 0;
+    className[i++]      =   "Info. Tech.";
     className[i++]      =   "IT 2nd Yr";
     className[i++]      =   "ECE";
     className[i++]      =   "Mech. Engg.";
@@ -88,10 +107,10 @@ void ClassDetail :: SetDefaultValue()
     className[i++]      =   "IT";
     className[i++]      =   "Electronics Engg.";
     className[i++]      =   "Comp. Sci. Engg.";
-    className[i++]      =   "MBA";*/
+    className[i++]      =   "MBA";
     
     i = 0;
-    subjectName[i++]    =   "DBMS, SAD";/* 
+    subjectName[i++]    =   "DBMS, SAD";
     subjectName[i++]    =   "Maths,Physics";
     subjectName[i++]    =   "OS, EVS";
     subjectName[i++]    =   "Java, C++";
@@ -101,9 +120,9 @@ void ClassDetail :: SetDefaultValue()
     subjectName[i++]    =   "Maths";
     subjectName[i++]    =   "Maths,DBMS, Physics";
     subjectName[i++]    =   "Multimedia, Dot Net, ED";
-*/
+
     i = 0;
-    subjectCode[i++]    =   "IT-101, IT-102";/*
+    subjectCode[i++]    =   "IT-101, IT-102";
     subjectCode[i++]    =   "ME-10,CE-252";
     subjectCode[i++]    =   "EVS, ED-10";
     subjectCode[i++]    =   "ED-10, IT-102";
@@ -243,8 +262,8 @@ void ClassDetail :: ClassDetailPage(string msg)
     }
     cout << page.endTR;
 
-    if(projectType == "Old" && (className.size() > 1 || 
-       subjectName.size() >1 || subjectCode.size() > 1 ))
+    if(projectType == "Old" && (className.size() >= 1 || 
+       subjectName.size() >= 1 || subjectCode.size() >= 1 ))
     {
         for(i = 0; i < totalClasses; i++)
         {
@@ -292,7 +311,7 @@ void ClassDetail :: ClassDetailPage(string msg)
             cout << page.endTR;
         }
     }
-    
+   
     page.TableEnd();
     
     cout << page.brk << page.brk;

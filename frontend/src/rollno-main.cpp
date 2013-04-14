@@ -29,7 +29,7 @@ int main(void)
 {
     
     RollNoDetail rollNo;
-    rollNo.ReadClassDetail();
+    rollNo.RollNoDetailPage();
 
     return 0;
 }
