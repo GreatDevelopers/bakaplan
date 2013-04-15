@@ -28,7 +28,8 @@
 int main(void)
 {
     DateSheet dateSheet;
-    dateSheet.ReadRollNoDetail();
+//    dateSheet.ReadRollNoDetail();
+    dateSheet.DateSheetPage();    
 
     return 0;
 }

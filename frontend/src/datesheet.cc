@@ -27,6 +27,11 @@
 DateSheet :: DateSheet()
 {
     // constructor
+    totalCols = 2;
+    tableHeading.resize(totalCols);
+    i = 0;
+    tableHeading[i++] = "Date";
+    tableHeading[i++] = "Exams Code";
 }
 
 /**
@@ -37,7 +42,7 @@ DateSheet :: DateSheet()
 
 void DateSheet :: ReadRollNoDetail()
 {
-    page.ContentType();
+//    page.ContentType();
 
     projectID = readField.ReadFieldValue(fieldName.projectID);
     projectType = readField.ReadFieldValue(fieldName.projectType);
@@ -86,40 +91,27 @@ void DateSheet :: ReadRollNoDetail()
             database.DeleteQuery("RollNoDetail", where);
         }
        
-/*        database.SelectColumn(prefix, "Prefix", "RollNoDetail", where);
+        database.SelectColumn(date, "Date", "DateSheet", where);
 
-        if(prefix.size() <= 0)
+        if(date.size() <= 0)
         {
-            prefix.resize(totalClasses);
-            startRollNo.resize(totalClasses);
-            endRollNo.resize(totalClasses);
-            notIncluded.resize(totalClasses);
-
-//            SetDefaultValue(totalClasses);
-            for(i = 0; i < totalClasses; i++)
-            {
-                prefix[i]       =   "";
-                startRollNo[i]  =   "";
-                endRollNo[i]    =   "";
-                notIncluded[i]  =   "";
-            }
+            SetDefaultValue();
         }
         else
         {
-            database.SelectColumn(startRollNo, "StartRollNo", 
-                                  "RollNoDetail", where);
-            database.SelectColumn(endRollNo, "EndRollNo",
-                                  "RollNoDetail", where);
-            database.SelectColumn(notIncluded, "NotIncluded",
-                                  "RollNoDetail", where);
-        }
-    */        
+            database.SelectColumn(date, "Date", "DateSheet", where);
+            database.SelectColumn(examCode, "ExamCode",
+                                  "DateSheet", where);
+            totalDays = date.size();
+        } 
     }
     else
     {
         SetDefaultValue();
     }
+
     WriteRollNoDetail();
+//    DateSheetPage();
 }
 
 /**
@@ -129,29 +121,16 @@ void DateSheet :: ReadRollNoDetail()
  */
 
 void DateSheet :: WriteRollNoDetail()
-{/* 
+{
     for(i = 0; i < totalClasses; i++)
     {
-
-        where = "PrjectID = " + projectID + " AND SubjectCode =\"" +
+        where = "ProjectID = " + projectID + " AND SubjectCode =\"" +
                 subjectCode[i] + "\" AND ClassName =\"" + className[i] 
                 + "\"";
 
         database.SelectColumn(classID, "ClassID", "ClassDetail",
                               where);
-    }
-    */
-    for(i = 0; i < totalClasses; i++)
-    {
-        where = "ProjectID = " + projectID + " AND SubjectCode =\"" +
-                subjectCode[i] + "\" AND ClassName =\"" + className[i] +
-                "\"";
-
-        database.SelectColumn(classID, "ClassID", "ClassDetail",
-                              where);
-        temp = classID[i];
-        cout << temp << " ";
-         database.InsertRollNoDetail(projectID, classID[i], prefix[i],
+        database.InsertRollNoDetail(projectID, classID[i], prefix[i],
                                     startRollNo[i], endRollNo[i],
                                     notIncluded[i]);
     }
@@ -165,7 +144,12 @@ void DateSheet :: WriteRollNoDetail()
 
 void DateSheet :: SetDefaultValue()
 {
+    totalDays = 1;
+    date.resize(totalDays);
+    examCode.resize(totalDays);
 
+    date[0] = "12/04/2013";
+    examCode[0] = "IT-102, CSE 120";
 }
 
 /**
@@ -176,6 +160,99 @@ void DateSheet :: SetDefaultValue()
 
 void DateSheet :: DateSheetPage()
 {
+    page.ContentType();
+
+    ReadRollNoDetail();
+
+    Header("DateSheet");
+
+    page.DivStart("DivDateSheet", "");
+
+    page.LogoutLink();
+
+    cout << page.brk;
+
+    page.FormStart("FormDateSheet", "room.html", "POST");
+
+    cout << page.startH1 << "Date Sheet" 
+         << page.endH1 << page.brk;
+    
+    ErrorMessage(msg);
+
+    page.InputField("hidden", fieldName.projectID, projectID);
+    page.InputField("hidden", fieldName.totalDays, 
+                    IntToString(totalDays));
+    page.InputField("hidden", fieldName.projectType, projectType);
+    
+    page.InputField("button", "AddRow", 
+                    "addRow('TableDateSheet', 'TotalDays', 'date')",
+                    "Add Row");
+    
+    page.InputField("button", "DeleteRow", 
+                    "deleteRow('TableDateSheet', 'TotalDays')",
+                    "Delete Row");
+
+    cout << page.brk << page.brk;
+
+    page.TableStart("TableDateSheet", "");
+   
+    cout << page.startTR;
+    for(i = 0; i < totalCols; i++)
+    {   
+        cout << page.startTH << tableHeading[i] << page.endTH;
+    }
+    cout << page.endTR;
+
+    if(projectType == "Old")// && (className.size() >= 1 ) || 
+//       subjectName.size() >= 1 || subjectCode.size() >= 1 ))
+    {
+        for(i = 0; i < totalDays; i++)
+        {
+            cout << page.startTR;
+        
+            cout << page.startTD;
+            page.InputField("text", fieldName.date, (i + 1),
+                            date[i], date[i]);
+            cout << page.endTD;
+        
+            cout << page.startTD;
+            page.InputField("text", fieldName.examCode, (i + 1),
+                            examCode[i], examCode[i]);
+            cout << page.endTD;
+        
+            cout << page.endTR;
+        }
+    }
+    else
+    {
+        for(i = 0; i < totalDays; i++)
+        {
+            cout << page.startTR;
+        
+            cout << page.startTD;
+            page.InputField("text", fieldName.date, (i + 1),
+                            date[i]);
+            cout << page.endTD;
+        
+            cout << page.startTD;
+            page.InputField("text", fieldName.examCode, (i + 1),
+                            examCode[i]);
+            cout << page.endTD;
+
+            cout << page.endTR;
+        }
+    }
+   
+    page.TableEnd();
+    
+    cout << page.brk << page.brk;
+
+    page.Button("next", "submit", "btn", "NEXT");
+
+    page.FormEnd();
+    page.DivEnd();
+
+    Footer();
 
 }
 
