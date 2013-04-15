@@ -39,6 +39,9 @@ class DateSheet : public InputDetail
 
         /** Write roll no detail into database */
         void WriteRollNoDetail();
+
+        /** Setting dafalut values for datedheet page */
+        void SetDefaultValue();
         
         /** DateSheet page for taking I/P from user */
         void DateSheetPage();

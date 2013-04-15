@@ -86,8 +86,12 @@ class InputDetail //: public PageLayout
                    prefix,                   /**< Prefix of roll no */
                    startRollNo,               /**< starting roll no */
                    endRollNo,                   /**< ending roll no */
-                   notIncluded;                /**< roll no's that are 
+                   notIncluded,                /**< roll no's that are 
                                        not included in seating plan */
+        /* variables for datsheet detail */
+                   date,                   /**< Date of examination */
+                   examCode;                    /**< Exam/subject code 
+                                                for seating plan*/
     public:
         Database data;
         InputDetail();       
