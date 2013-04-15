@@ -31,8 +31,19 @@ class DateSheet : public InputDetail
     protected:
 
     public:
+        /** Constructor */
         DateSheet();
 
+        /** ReadRollNo detail */
+        void ReadRollNoDetail();
+
+        /** Write roll no detail into database */
+        void WriteRollNoDetail();
+        
+        /** DateSheet page for taking I/P from user */
+        void DateSheetPage();
+
+        /** Destructor */
         ~DateSheet();
 };
 

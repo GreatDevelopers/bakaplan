@@ -80,6 +80,7 @@ class InputDetail //: public PageLayout
         STRING_VEC className,                /**< Class/Branch Name */
                    subjectName,                  /**< Subject Names */
                    subjectCode,                  /**< Subject Codes */
+                   classID,                   /**< Class Details ID */
                    tableHeading,             /**< For table heading */
         /* Variables for roll no detail*/
                    prefix,                   /**< Prefix of roll no */
