@@ -159,7 +159,13 @@ void ClassDetail :: NewProject()
         SetDefaultValue();
 
         database.InsertProjectDetail(emailID, projectName);
-        
+        where = "EmailID = \"" + emailID + "\" AND ProjectName = \"" +
+                projectName + "\"";
+
+        database.SelectColumn(vecTemp, "ProjectID", "ProjectDetail",
+                              where);
+        projectID = vecTemp[0];
+
         ClassDetailPage();
     }
 }
