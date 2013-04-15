@@ -70,6 +70,7 @@ void DateSheet :: ReadRollNoDetail()
 
         notIncluded[i] = readField.ReadFieldValue(
                          fieldName.notIncluded, j);
+
     }
  
     if(projectType == "Old")
@@ -119,7 +120,6 @@ void DateSheet :: ReadRollNoDetail()
         SetDefaultValue();
     }
     WriteRollNoDetail();
-
 }
 
 /**
@@ -129,8 +129,32 @@ void DateSheet :: ReadRollNoDetail()
  */
 
 void DateSheet :: WriteRollNoDetail()
-{
+{/* 
+    for(i = 0; i < totalClasses; i++)
+    {
 
+        where = "PrjectID = " + projectID + " AND SubjectCode =\"" +
+                subjectCode[i] + "\" AND ClassName =\"" + className[i] 
+                + "\"";
+
+        database.SelectColumn(classID, "ClassID", "ClassDetail",
+                              where);
+    }
+    */
+    for(i = 0; i < totalClasses; i++)
+    {
+        where = "ProjectID = " + projectID + " AND SubjectCode =\"" +
+                subjectCode[i] + "\" AND ClassName =\"" + className[i] +
+                "\"";
+
+        database.SelectColumn(classID, "ClassID", "ClassDetail",
+                              where);
+        temp = classID[i];
+        cout << temp << " ";
+         database.InsertRollNoDetail(projectID, classID[i], prefix[i],
+                                    startRollNo[i], endRollNo[i],
+                                    notIncluded[i]);
+    }
 }
 
 /**

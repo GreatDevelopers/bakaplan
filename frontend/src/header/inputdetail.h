@@ -73,7 +73,8 @@ class InputDetail //: public PageLayout
 
         int totalClasses,                      /**< No. of classes for 
                                                        seating plan */
-            totalCols;                  /**< total Columns in table */
+            totalCols,                  /**< total Columns in table */
+            totalDays;                 /**< No of days in datesheet */
 
         string projectType;               /**< Project Type Old/New */
 

@@ -84,7 +84,7 @@ void Database :: SelectQuery(string query, STRING_VEC & result)
         }
      }
      else
-        cout << " Not Selected ";
+        cout << " Not Selected " << query << endl;
 }
 
 /**
@@ -114,7 +114,7 @@ void Database :: DeleteQuery(string table, string where = "")
 }
 
 /**
- *      \class  Database
+ *      \class  Databaso
  *      \fn     Database :: SelectQuery(SELECT_VEC & result, 
  *                          string column, string table, 
  *                          string where = "")
@@ -196,9 +196,9 @@ void Database :: InsertRollNoDetail(string projectID, string classID,
                                     string endRNo, string notIncluded)
 {
     query  = "insert into RollNoDetail(ProjectID, ClassID, Prefix, ";
-    query += "StartRNo, EndRNo, NotIncluded) values(" + projectID + 
-             ", " + classID + ", \"" + prefix + "\", " + startRNo +
-             ", " + endRNo + ", \"" + notIncluded +"\");";
+    query += "StartRollNo, EndRollNo, NotIncluded) values(" + 
+             projectID + ", " + classID + ", \"" + prefix + "\", " + 
+             startRNo + ", " + endRNo + ", \"" + notIncluded +"\");";
 
     InsertQuery(query);
 }
