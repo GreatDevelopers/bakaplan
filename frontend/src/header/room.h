@@ -27,9 +27,22 @@ class RoomDetail : public InputDetail
     protected:
 
     public:
-
+        /** Constructor */
         RoomDetail();
 
+        /** Set Default Value */
+        void SetDefaultValue();
+
+        /** Reading Datesheet */
+        void ReadDateSheet();
+
+        /** Writing DateSheet */
+        void WriteDateSheet();
+
+        /** Room DEtail page for taking I/P from user */
+        void RoomDetailPage();
+
+        /** Desctructor */
         ~RoomDetail();
 };
 

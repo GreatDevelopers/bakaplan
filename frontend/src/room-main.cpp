@@ -28,6 +28,7 @@
 int main(void)
 {
     RoomDetail room;
+    room.ReadDateSheet();
 
     return 0;
 }
