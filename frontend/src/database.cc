@@ -230,9 +230,9 @@ void Database :: InsertStrategyDetail(string projectID,
 void Database :: InsertDateSheet(string projectID, string date, 
                                  string examCode)
 {
-    query  = "insert into DateSheet(ProjectID, Date, ExamCode), ";
+    query  = "insert into DateSheet(ProjectID, Date, ExamCode) ";
     query += "values(" + projectID + ", \"" + date + "\", \"" +
-             examCode + ");";
+             examCode + "\");";
 
     InsertQuery(query);
 }
