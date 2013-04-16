@@ -142,6 +142,13 @@ void Database :: SelectColumn(STRING_VEC & result, string column,
     SelectQuery(query, result);
 }
 
+/**
+ *      \class  Database
+ *      \fn     Database :: SelectProjectID(string & projectID)
+ *      \brief  Select project ID from database
+ *      \param  projectID   Unique project ID
+ */
+
 void Database :: SelectProjectID(string & projectID)
 {
     query  = "Select ProjectID from ProjectName ORDER BY ProjectID ";
@@ -151,6 +158,15 @@ void Database :: SelectProjectID(string & projectID)
     projectID = vecTemp[0];     // last project Id in table
 }
 
+/**
+ *      \class  Database
+ *      \fn     Database :: InsertUserDetail(string emailID, 
+ *                          string password)
+ *      \brief  Insert User detail into User tabele
+ *      \param  emailID     Email Id
+ *      \param  password    Password of user in encrypted from
+ */
+
 void Database :: InsertUserDetail(string emailID, string password)
 {
     query = "insert into User(EmailID, Password) values(\"" + emailID
@@ -158,6 +174,15 @@ void Database :: InsertUserDetail(string emailID, string password)
 
     InsertQuery(query);
 }
+
+/**
+ *      \class  Database
+ *      \fn     Database :: InsertRegistrationDetail(string emailID, 
+ *                          string registrationKey)
+ *      \brief  Inserting Registration detail
+ *      \param  emailID   emailId of user
+ *      \param  registrationKey  Registration Key 
+ */
 
 void Database :: InsertRegistrationDetail(string emailID,
                                           string registrationKey)
@@ -168,6 +193,13 @@ void Database :: InsertRegistrationDetail(string emailID,
 
     InsertQuery(query);
 }
+
+/**
+ *      \class  Database
+ *      \fn     Database :: InsertProjectDetail(string emailID, 
+ *                          string projectName)
+ *      \brief  Inserting Project Detail into database
+ */
 
 void Database :: InsertProjectDetail(string emailID, 
                                      string projectName)
@@ -268,220 +300,6 @@ void Database :: SelectSum(string column, string table,
     result = vecTemp[0];
 }
 
-/* 
-void Database :: SelectColumn(string query, vector<string> & result)
-{
-
-    if ( mysql_query( connect, query.c_str() ) == 0 )
-    {
-        res_set = mysql_store_result( connect );
-
-        while ( ( ( row = mysql_fetch_row( res_set ) ) != NULL ) )
-        {
-            result.push_back( row[0] );
-        }
-     }
-     else
-        cout << "";
-}
-
-void Database :: Select(string & result)
-{
-    if ( mysql_query( connect, query.c_str() ) == 0 )
-        result = "T";    
-    else
-        result = "F";
-}
-
-void Database :: InsertQuery(string query)
-{
-    if ( mysql_query( connect, query.c_str() ) == 0)
-        cout << "";
-    else
-        cout << "</br>Not insterted</br>";
-}
-
-void Database :: DeleteQuery(string query)
-{
-    if ( mysql_query( connect, query.c_str() ) == 0)
-        cout << "";
-    else
-        cout << "</br>Not deleted</br>";
-}
-
-void Database :: InsertQuery(string column, string value, 
-                             string table)
-{
-    query  = "insert into ";
-    query += table;
-    query += "(";
-    query += column;
-    query += ") values ( \"";
-    query += value;
-    query += "\");";
-
-    InsertQuery(query);
-}
-
-void Database :: InsertUser(string userEmailID, string userPassword)
-{
-    query  = "Insert into User(EmailID, Password) values ";
-    query += "(\"";
-    query +=  userEmailID;
-    query += "\", \"";
-    query += userPassword; 
-    query += "\");";
-
-    InsertQuery(query);
-
-}
-
-void Database :: InsertSession(string emailID, string sessionID)
-{
-    query  = "insert into Session(EmailID, SessionID) values (\"";
-    query += emailID;
-    query += "\", \"";
-    query += sessionID;
-    query += "\");";
-
-    InsertQuery(query);
-}
-
-void Database :: InsertProjectName(string emailID, string projectName)
-{
-    query  = "Insert into ProjectName(EmailID, ProjectName) values ";
-    query += "(\"";
-    query += emailID;
-    query += "\", \"";
-    query += projectName;
-    query += "\");";
-
-    InsertQuery(query);
-}
-
-void Database :: InsertTotalClasses(string projectID, 
-                                    string totalClasses)
-{
-    query  = "Insert into TotalClasses(ProjectID, TotalClasses) ";
-    query += "values (";
-    query += projectID;
-    query += ", ";
-    query += totalClasses;
-    query += ")";
-
-    InsertQuery(query);
-}
-
-void Database :: InsertClassDetail(string projectID, string className,
-                                   string totalSubjects, 
-                                   string subjectName, 
-                                   string subjectCode)
-{
-    query  = "Insert into ClassDetails(ProjectID, ClassName, ";
-    query += "TotalSubjects, SubjectName, SubjectCode) values (";
-    query += projectID + ", \"";
-    query += className + "\" ,\"" + totalSubjects + "\", \"";
-    query += subjectName + "\" ,\"" + subjectCode;
-    query += "\");";
-
-    InsertQuery(query);
-
-}
-
-void Database :: InsertRollNoDetail(string projectID, string className, 
-                                string subjectCode, string prefix,
-                                string startRollNo, string endRollNo,
-                                string notIncluded)
-{
-    query  = "Insert into RollNoDetail(ProjectID, ClassName, ";
-    query += "SubjectCode, Prefix, StartRollNo, EndRollno, ";
-    query += "NotIncluded) values (" + projectID + ",\"" +
-             className + "\", \"" + subjectCode + "\", \"" +
-             prefix + "\", " + startRollNo + ", " + endRollNo +
-             ", \"" + notIncluded + "\");";
-    
-    InsertQuery(query);
-}
-
-void Database :: InsertTotalCentres(string projectID, 
-                                    string totalCentre)
-{
-    query  = "insert into TotalCentres(ProjectID, TotalCentres) ";
-    query += "values (";
-    query += projectID;
-    query += ", ";
-    query += totalCentre;
-    query += ");";
-
-    InsertQuery(query);
-}
-
-void Database :: InsertRoomDetail(string projectID, string centreName,
-                                  string roomNo, string rows,
-                                  string columns)
-{
-    query  = "insert into RoomDetail(ProjectID, CentreName, RoomNo,"; 
-    query += "Rows, Columns) values (";
-    query += projectID;
-    query += ", \"";
-    query += centreName;
-    query += "\", \"";
-    query += roomNo;
-    query += "\", ";
-    query += rows;
-    query += ", ";
-    query += columns;
-    query += ");";
-
-    InsertQuery(query);
-}
-
-void Database :: InsertTotalRooms(string projectID, string centreName,
-                                  string totalRooms)
-{
-    query  = "insert into TotalRooms(ProjectID, CentreName, ";
-    query += "TotalRooms) values(";
-    query += projectID;
-    query += ", '";
-    query += centreName;
-    query += "', ";
-    query += totalRooms;
-    query += ");";
-
-    InsertQuery(query);
-}
-
-void Database :: InsertExamDetail(string projectID, string examName, 
-                                  string examDate, string examTime,
-                                  string examVenue)
-{
-    query  = "insert into ExamDetail(ProjectID, ExamName, ExamDate, ";
-    query += "ExamVenue) values (";
-    query += projectID;
-    query += ", '";
-    query += examName;
-    query += "', '";
-    query += examDate;
-    query += "', '";
-    query += examTime;
-    query += "', '";
-    query += examVenue;
-    query += "');";
-
-    InsertQuery(query);
-}
-
-void Database :: InsertStrategy(string projectID, string strategy)
-{
-    query  = "insert into Strategy(ProjectID, StrategyName) values(";
-    query += projectID;
-    query += ", \"";
-    query += strategy;
-    query += "\");";
-
-    InsertQuery(query);
-}
-*/
 /**
  *--------------------------------------------------------------------
  *       Class:  Database
