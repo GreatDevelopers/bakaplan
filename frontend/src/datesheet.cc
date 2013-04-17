@@ -86,7 +86,6 @@ void DateSheet :: ReadRollNoDetail()
 
         if(vecTemp.size() > 0 )
         {
-//            database.SelectSum
             where = "ProjectID = " + projectID;
             database.DeleteQuery("RollNoDetail", where);
         }
@@ -99,7 +98,6 @@ void DateSheet :: ReadRollNoDetail()
         }
         else
         {
-            database.SelectColumn(date, "Date", "DateSheet", where);
             database.SelectColumn(examCode, "ExamCode",
                                   "DateSheet", where);
             totalDays = date.size();
