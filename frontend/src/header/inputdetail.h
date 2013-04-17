@@ -74,6 +74,7 @@ class InputDetail //: public PageLayout
         int totalClasses,                      /**< No. of classes for 
                                                        seating plan */
             totalCols,                  /**< total Columns in table */
+            totalRows,                     /**< total rows in table */
             totalDays;                 /**< No of days in datesheet */
 
         string projectType;               /**< Project Type Old/New */
@@ -93,6 +94,19 @@ class InputDetail //: public PageLayout
                    date,                   /**< Date of examination */
                    examCode;                    /**< Exam/subject code 
                                                 for seating plan*/
+        /* Room Detail variables */
+        STRING_2DVEC centreName,                   /**< Centre Name */
+                     roomNo,            /**< Room no. in one centre */
+                     rows,                        /**< Rows of room */
+                     columns,                   /**< columns of room */
+        /* Variable for exam detail */
+                     examName,                /**< Examination name */
+                     examSession,      /**< Session Morning/Evening */
+                     examVenue,                     /**< Exam Venue */
+                     examTime,                      /**< Exam. Time */
+        /* Strategy variables */
+                     strategyName;                  /**< Strategy name 
+                                                   selected by user */
     public:
         Database data;
         InputDetail();       
