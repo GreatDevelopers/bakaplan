@@ -273,10 +273,8 @@ void RoomDetail :: RoomDetailPage()
 
         for(j = 0; j < totalCentres[i]; j++)
         {
-            //for(k = 0; k < totalCentres[i]; k++)
+            if(projectType == "Old")
             {
-                if(projectType == "Old")
-                {
                 cout << page.startTR;
         
                 cout << page.startTD;
@@ -311,9 +309,9 @@ void RoomDetail :: RoomDetailPage()
                                 columns[i][j], columns[i][j]);
                 cout << page.endTD;       
                 cout << page.endTR;
-                }
-                else
-                {
+            }
+            else
+            {
                 cout << page.startTR;
         
                 cout << page.startTD;
@@ -349,13 +347,11 @@ void RoomDetail :: RoomDetailPage()
                 cout << page.endTD;       
                 cout << page.endTR;
                     
-                }
-
             }
 
         }
-
-            page.TableEnd();
+        
+        page.TableEnd();
     }
 /*    
     page.InputField("button", "AddRow", 

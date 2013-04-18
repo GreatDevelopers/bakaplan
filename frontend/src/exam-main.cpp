@@ -28,6 +28,7 @@
 int main(void)
 {
     ExamDetail exam;
+    exam.ReadRoomDetail();
 
     return 0;
 }

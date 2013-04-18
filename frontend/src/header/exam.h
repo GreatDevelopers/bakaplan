@@ -31,8 +31,22 @@ class ExamDetail : public InputDetail
     protected:
 
     public:
+        /** Constroctor  */
         ExamDetail();
 
+        /** Reading room detail */
+        void ReadRoomDetail();
+
+        /** Writing room details into database */
+        void WriteRoomDetail();
+
+        /** Setting default values */
+        void SetDefaultValue();
+
+        /** Exam Detail Page */
+        void ExamDetailPage();
+
+        /** Destructor */
         ~ExamDetail();
 };
 
