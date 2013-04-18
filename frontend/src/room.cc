@@ -271,6 +271,10 @@ void RoomDetail :: RoomDetailPage()
         }
         cout << page.endTR;
 
+        temp = fieldName.totalCentres;
+        temp += IntToString(i + 1);
+        page.InputField("hidden", temp, IntToString(totalCentres[i]));
+
         for(j = 0; j < totalCentres[i]; j++)
         {
             if(projectType == "Old")
