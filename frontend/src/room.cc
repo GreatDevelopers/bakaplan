@@ -53,7 +53,7 @@ void RoomDetail :: SetDefaultValue()
  
     for(i = 0; i < totalDays; i++)
     {
-        totalCentres[i] = 1;
+        totalCentres[i] = 2;
     }
     for(i = 0; i < totalDays; i++)
     {
@@ -98,6 +98,8 @@ void RoomDetail :: ReadDateSheet()
     projectType = readField.ReadFieldValue(fieldName.projectType);
     totalDays = StringToInt(readField.ReadFieldValue(
                             fieldName.totalDays));
+    sameDetail = readField.ReadFieldValue(fieldName.sameDetail);
+
     date.resize(totalDays);
     examCode.resize(totalDays);
     centreName.resize(totalDays);
@@ -159,6 +161,12 @@ void RoomDetail :: ReadDateSheet()
     }
 
     WriteDateSheet();
+    if(sameDetail == "Yes" && projectType == "New")
+    {
+        totalDays = 1;
+    }
+
+
     RoomDetailPage();
 }
 
@@ -219,44 +227,53 @@ void RoomDetail :: RoomDetailPage()
     page.InputField("hidden", fieldName.totalDays, 
                     IntToString(totalDays));
     page.InputField("hidden", fieldName.projectType, projectType);
- 
+    
     for(i = 0; i < totalDays; i++)
     {
-        cout << page.brk;
-        cout << "Date : " << date[i] 
-             << " Exam Code : " << examCode[i];
+        if(projectType == "Old" || 
+            (projectType == "New" && sameDetail == "No"))
+        {
+
+            cout << page.brk;
+            cout << "Date : " << date[i] 
+                 << " Exam Code : " << examCode[i];
+        }
+
         cout << page.brk << page.brk;       
         temp = "AddRow";
         temp += IntToString(i + 1);
 
-        page.InputField("button", temp, 
-                        "addRow('TableDateSheet', 'TotalDays', 'date')",
-                        "Add Row");
+        string table = "addRow('TableRoom" + IntToString(i + 1)
+                       + "', 'TotalCentres" + IntToString(i + 1)
+                       + "', 'room','" + IntToString(i + 1)
+                       + "')";
+
+        page.InputField("button", temp, table, "Add Row");
         temp = "DeleteRow";
         temp += IntToString(i + 1);
         
-        page.InputField("button", temp, 
-                        "deleteRow('TableDateSheet', 'TotalDays')",
-                        "Delete Row");
+        table = "addRow('TableRoom" + IntToString(i + 1)
+                + "', 'TotalCentres" + IntToString(i + 1)
+                + "', '" + IntToString(i + 1) + "')";
+ 
+        page.InputField("button", temp, table, "Delete Row");
 
+
+        cout << page.brk << page.brk;
+        temp = "TableRoom";
+        temp += IntToString(i + 1);
+
+        page.TableStart(temp, "");
+        cout << page.startTR;
+        for(k = 0; k < totalCols; k++)
+        {   
+            cout << page.startTH << tableHeading[k] << page.endTH;
+        }
+        cout << page.endTR;
 
         for(j = 0; j < totalCentres[i]; j++)
         {
-            cout << page.brk << page.brk;
-
-            temp = "TableRoom";
-            temp += IntToString(i + 1);
-
-            page.TableStart(temp, "");
-   
-            cout << page.startTR;
-            for(k = 0; k < totalCols; k++)
-            {   
-                cout << page.startTH << tableHeading[k] << page.endTH;
-            }
-            cout << page.endTR;
-
-            for(k = 0; k < totalCentres[i]; k++)
+            //for(k = 0; k < totalCentres[i]; k++)
             {
                 if(projectType == "Old")
                 {
@@ -331,12 +348,14 @@ void RoomDetail :: RoomDetailPage()
                                 columns[i][j]);
                 cout << page.endTD;       
                 cout << page.endTR;
+                    
                 }
 
             }
 
-            page.TableEnd();
         }
+
+            page.TableEnd();
     }
 /*    
     page.InputField("button", "AddRow", 

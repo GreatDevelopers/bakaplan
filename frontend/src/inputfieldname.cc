@@ -105,4 +105,7 @@ void InputFieldName :: SetFieldNames()
     date            =   "Date";
     examCode        =   "ExamCode";
     totalDays       =   "TotalDays";
+    
+    /* Variable for holding value of same detail */
+    sameDetail      =   "SameDetail";
 }

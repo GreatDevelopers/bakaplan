@@ -247,10 +247,10 @@ void DateSheet :: DateSheetPage()
     cout << page.brk << page.brk
          << " Same details for each day ";
     page.InputField("radio", fieldName.sameDetail, "Yes");
-    page.Label(fieldName.projectType, "Yes");
+    page.Label(fieldName.sameDetail, "Yes");
 
     page.InputField("radio", fieldName.sameDetail, "No");
-    page.Label(fieldName.projectType, "No");
+    page.Label(fieldName.sameDetail, "No");
    
     cout << page.brk << page.brk;
 

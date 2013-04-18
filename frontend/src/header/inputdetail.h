@@ -79,7 +79,10 @@ class InputDetail //: public PageLayout
 
         INT_VEC totalCentres;           /**< No of centres for exam */
 
-        string projectType;               /**< Project Type Old/New */
+        string projectType,               /**< Project Type Old/New */
+               sameDetail;                      /**< For holding value
+                                                yes/no for same detail 
+                                                for rest of pages*/
 
         STRING_VEC className,                /**< Class/Branch Name */
                    subjectName,                  /**< Subject Names */
