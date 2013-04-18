@@ -77,7 +77,7 @@ class InputDetail //: public PageLayout
             totalRows,                     /**< total rows in table */
             totalDays;                 /**< No of days in datesheet */
 
-        INT_2DVEC totalCentres;         /**< No of centres for exam */
+        INT_VEC totalCentres;           /**< No of centres for exam */
 
         string projectType;               /**< Project Type Old/New */
 

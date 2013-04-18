@@ -45,10 +45,42 @@ RoomDetail :: RoomDetail()
 
 void RoomDetail :: SetDefaultValue()
 {
-/*     totalCentres.resize(totalDays);
+    totalCentres.resize(totalDays);
+    centreName.resize(totalDays);
+    roomNo.resize(totalDays);
+    rows.resize(totalDays);
+    columns.resize(totalDays);
+ 
     for(i = 0; i < totalDays; i++)
     {
         totalCentres[i] = 1;
+    }
+    for(i = 0; i < totalDays; i++)
+    {
+//        totalCentres[i] = 1;
+        for(j = 0; j < totalCentres[i]; j++)
+        {
+            centreName[i].resize(totalCentres[i]);
+            roomNo[i].resize(totalCentres[i]);
+            rows[i].resize(totalCentres[i]);
+            columns[i].resize(totalCentres[i]);
+
+            centreName[i][j] = "Centre 1";
+            roomNo[i][j] =  "Room 1, Room 2";
+            rows[i][j]   =  "6, 6";
+            columns[i][j]=  "8, 8";
+        }
+    }
+    /*
+    for(i = 0; i < totalDays; i++)
+    {
+        for(j = 0; j < totalCentres[i]; j++)
+        {
+            centreName[i][j] = "Centre 1";
+            roomNo[i][j] =  "Room 1, Room 2";
+            rows[i][j]   =  "6, 6";
+            columns[i][j]=  "8, 8";
+        }
     }*/
 }
 
@@ -85,16 +117,23 @@ void RoomDetail :: ReadDateSheet()
         where = "ProjectID = " + projectID;      
         database.SelectColumn(vecTemp, "CentreName", 
                               "RoomDetail", where);
-        for(i = 0; i < totalDays; i++)
+        if(vecTemp.size() <= 0)
         {
-            for(unsigned j = 0; j < vecTemp.size(); j++)
+            SetDefaultValue();
+        }
+        else
+        {
+            for(i = 0; i < totalDays; i++)
             {
-                centreName[i].resize(vecTemp.size());
-            }
-            for(unsigned j = 0; j < vecTemp.size(); j++)
-            {
-                centreName[i][j] = vecTemp[j];
-                cout << centreName[i][j] << "<br>";
+                for(unsigned j = 0; j < vecTemp.size(); j++)
+                {
+                    centreName[i].resize(vecTemp.size());
+                }
+                for(unsigned j = 0; j < vecTemp.size(); j++)
+                {
+                    centreName[i][j] = vecTemp[j];
+                    cout << centreName[i][j] << "<br>";
+                }
             }
         }
 /*
@@ -120,6 +159,7 @@ void RoomDetail :: ReadDateSheet()
     }
 
     WriteDateSheet();
+    RoomDetailPage();
 }
 
 /**
@@ -156,7 +196,7 @@ void RoomDetail :: WriteDateSheet()
 
 void RoomDetail :: RoomDetailPage()
 {
-    page.ContentType();
+//    page.ContentType();
 
 //    ReadDatesheet();
 
@@ -179,14 +219,125 @@ void RoomDetail :: RoomDetailPage()
     page.InputField("hidden", fieldName.totalDays, 
                     IntToString(totalDays));
     page.InputField("hidden", fieldName.projectType, projectType);
-/* 
-    for(i = 0; i > totalDays; i++)
+ 
+    for(i = 0; i < totalDays; i++)
     {
+        cout << page.brk;
+        cout << "Date : " << date[i] 
+             << " Exam Code : " << examCode[i];
+        cout << page.brk << page.brk;       
+        temp = "AddRow";
+        temp += IntToString(i + 1);
+
+        page.InputField("button", temp, 
+                        "addRow('TableDateSheet', 'TotalDays', 'date')",
+                        "Add Row");
+        temp = "DeleteRow";
+        temp += IntToString(i + 1);
+        
+        page.InputField("button", temp, 
+                        "deleteRow('TableDateSheet', 'TotalDays')",
+                        "Delete Row");
+
+
         for(j = 0; j < totalCentres[i]; j++)
         {
-            
+            cout << page.brk << page.brk;
+
+            temp = "TableRoom";
+            temp += IntToString(i + 1);
+
+            page.TableStart(temp, "");
+   
+            cout << page.startTR;
+            for(k = 0; k < totalCols; k++)
+            {   
+                cout << page.startTH << tableHeading[k] << page.endTH;
+            }
+            cout << page.endTR;
+
+            for(k = 0; k < totalCentres[i]; k++)
+            {
+                if(projectType == "Old")
+                {
+                cout << page.startTR;
+        
+                cout << page.startTD;
+                temp = IntToString(i + 1);
+                temp += IntToString(j + 1);
+                page.InputField("text", fieldName.centreName, 
+                                StringToInt(temp),
+                                centreName[i][j], centreName[i][j]);
+                cout << page.endTD;
+        
+                cout << page.startTD;
+                temp = IntToString(i + 1);
+                temp += IntToString(j + 1);               
+                page.InputField("text", fieldName.roomNo,
+                                StringToInt(temp),
+                                roomNo[i][j], roomNo[i][j]);
+                cout << page.endTD;
+ 
+                cout << page.startTD;
+                temp  = IntToString(i + 1);
+                temp += IntToString(j + 1);
+                page.InputField("text", fieldName.rows,
+                                StringToInt(temp),
+                                rows[i][j], rows[i][j]);
+                cout << page.endTD;
+        
+                cout << page.startTD;
+                temp = IntToString(i + 1);
+                temp += IntToString(j + 1);
+                page.InputField("text", fieldName.columns, 
+                                StringToInt(temp),
+                                columns[i][j], columns[i][j]);
+                cout << page.endTD;       
+                cout << page.endTR;
+                }
+                else
+                {
+                cout << page.startTR;
+        
+                cout << page.startTD;
+                temp = IntToString(i + 1);
+                temp += IntToString(j + 1);
+                page.InputField("text", fieldName.centreName, 
+                                StringToInt(temp),
+                                centreName[i][j]);
+                cout << page.endTD;
+        
+                cout << page.startTD;
+                temp = IntToString(i + 1);
+                temp += IntToString(j + 1);               
+                page.InputField("text", fieldName.roomNo,
+                                StringToInt(temp),
+                                roomNo[i][j]);
+                cout << page.endTD;
+ 
+                cout << page.startTD;
+                temp = IntToString(i + 1);
+                temp += IntToString(j + 1);
+                page.InputField("text", fieldName.rows,
+                                StringToInt(temp),
+                                rows[i][j]);
+                cout << page.endTD;
+        
+                cout << page.startTD;
+                temp = IntToString(i + 1);
+                temp += IntToString(j + 1);
+                page.InputField("text", fieldName.columns, 
+                                StringToInt(temp),
+                                columns[i][j]);
+                cout << page.endTD;       
+                cout << page.endTR;
+                }
+
+            }
+
+            page.TableEnd();
         }
-    }*/
+    }
 /*    
     page.InputField("button", "AddRow", 
                     "addRow('TableDateSheet', 'TotalDays', 'date')",
