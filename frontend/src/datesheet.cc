@@ -80,16 +80,7 @@ void DateSheet :: ReadRollNoDetail()
  
     if(projectType == "Old")
     {
-        where = "ProjectID = " + projectID;
-        database.SelectColumn(vecTemp, "Prefix", "RollNoDetail",
-                              where);
-
-        if(vecTemp.size() > 0 )
-        {
-            where = "ProjectID = " + projectID;
-            database.DeleteQuery("RollNoDetail", where);
-        }
-       
+        where = "ProjectID = " + projectID;      
         database.SelectColumn(date, "Date", "DateSheet", where);
 
         if(date.size() <= 0)
@@ -120,6 +111,16 @@ void DateSheet :: ReadRollNoDetail()
 
 void DateSheet :: WriteRollNoDetail()
 {
+    where = "ProjectID = " + projectID;
+    database.SelectColumn(vecTemp, "Prefix", "RollNoDetail",
+                          where);
+
+    if(vecTemp.size() > 0 )
+    {
+        where = "ProjectID = " + projectID;
+        database.DeleteQuery("RollNoDetail", where);
+    }
+
     for(i = 0; i < totalClasses; i++)
     {
         where = "ProjectID = " + projectID + " AND SubjectCode =\"" +
@@ -242,7 +243,15 @@ void DateSheet :: DateSheetPage()
     }
    
     page.TableEnd();
-    
+  
+    cout << page.brk << page.brk
+         << " Same details for each day ";
+    page.InputField("radio", fieldName.sameDetail, "Yes");
+    page.Label(fieldName.projectType, "Yes");
+
+    page.InputField("radio", fieldName.sameDetail, "No");
+    page.Label(fieldName.projectType, "No");
+   
     cout << page.brk << page.brk;
 
     page.Button("next", "submit", "btn", "NEXT");
@@ -251,7 +260,6 @@ void DateSheet :: DateSheetPage()
     page.DivEnd();
 
     Footer();
-
 }
 
 /**

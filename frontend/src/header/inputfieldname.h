@@ -85,7 +85,9 @@ class InputFieldName
                date,                       /**< Date of examination */
                examCode,                   /**< Exam code accord to 
                                                          date sheet */
-               totalDays;              /**< Total days in datesheet */
+               totalDays,              /**< Total days in datesheet */
+               sameDetail;             /**< Same detail of room, exam, 
+                                          strategy for seating plan */
 
     public:
         InputFieldName();                     /**< Constructor */

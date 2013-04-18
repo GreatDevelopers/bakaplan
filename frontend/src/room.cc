@@ -27,6 +27,13 @@
 RoomDetail :: RoomDetail()
 {
     // constructor
+    totalCols = 4;
+    i = 0;
+    tableHeading.resize(totalCols);
+    tableHeading[i++] = "Centre Name";
+    tableHeading[i++] = "Room No.";
+    tableHeading[i++] = "Rows";
+    tableHeading[i++] = "Columns";
 }
 
 /**
@@ -38,7 +45,11 @@ RoomDetail :: RoomDetail()
 
 void RoomDetail :: SetDefaultValue()
 {
-
+/*     totalCentres.resize(totalDays);
+    for(i = 0; i < totalDays; i++)
+    {
+        totalCentres[i] = 1;
+    }*/
 }
 
 /**
@@ -57,6 +68,10 @@ void RoomDetail :: ReadDateSheet()
                             fieldName.totalDays));
     date.resize(totalDays);
     examCode.resize(totalDays);
+    centreName.resize(totalDays);
+    roomNo.resize(totalDays);
+    rows.resize(totalDays);
+    columns.resize(totalDays);
 
     for(i = 0; i < totalDays; i++)
     {
@@ -64,33 +79,40 @@ void RoomDetail :: ReadDateSheet()
         date[i] = readField.ReadFieldValue(fieldName.date, j);
         examCode[i] = readField.ReadFieldValue(fieldName.examCode, j);
     }
-
+ 
     if(projectType == "Old")
     {
-        where = "ProjectID = " + projectID;
-        database.SelectColumn(vecTemp, "Date", "DateSheet",
-                              where);
-
-        if(vecTemp.size() > 0 )
+        where = "ProjectID = " + projectID;      
+        database.SelectColumn(vecTemp, "CentreName", 
+                              "RoomDetail", where);
+        for(i = 0; i < totalDays; i++)
         {
-//            database.SelectSum
-            where = "ProjectID = " + projectID;
-            database.DeleteQuery("DateSheet", where);
+            for(unsigned j = 0; j < vecTemp.size(); j++)
+            {
+                centreName[i].resize(vecTemp.size());
+            }
+            for(unsigned j = 0; j < vecTemp.size(); j++)
+            {
+                centreName[i][j] = vecTemp[j];
+                cout << centreName[i][j] << "<br>";
+            }
         }
-       
-/*        database.SelectColumn(date, "Date", "DateSheet", where);
-
-        if(date.size() <= 0)
+/*
+        if(centreName.size() <= 0)
         {
             SetDefaultValue();
         }
         else
         {
-            database.SelectColumn(date, "Date", "DateSheet", where);
-            database.SelectColumn(examCode, "ExamCode",
-                                  "DateSheet", where);
-            totalDays = date.size();
-        } */
+             
+            database.SelectColumn(roomNo, "RoomNo", "RoomDetail", 
+                                  where);
+            database.SelectColumn(rows, "Rows", "RoomDetail", where);
+            database.SelectColumn(columns, "Columns", "RoomDetail",
+                                  where);
+            totalDays = centreName.size();
+            
+        }*/
     }
     else
     {
@@ -108,10 +130,143 @@ void RoomDetail :: ReadDateSheet()
 
 void RoomDetail :: WriteDateSheet()
 {
+    where = "ProjectID = " + projectID;
+    database.SelectColumn(vecTemp, "Date", "DateSheet",
+                          where);
+
+    if(vecTemp.size() > 0 )
+    {
+        where = "ProjectID = " + projectID;
+        database.DeleteQuery("DateSheet", where);
+    }
+        
+    vecTemp.clear();
+ 
     for(i = 0; i < totalDays; i++)
     {
         database.InsertDateSheet(projectID, date[i], examCode[i]);
     }
+}
+
+/**
+ *      \class  RoomDetail
+ *      \fn     RoomDetail :: RoomDetailPage()
+ *      \brief  For Taking I/P from user of room details
+ */
+
+void RoomDetail :: RoomDetailPage()
+{
+    page.ContentType();
+
+//    ReadDatesheet();
+
+    Header("Room Detail");
+
+    page.DivStart("DivRoom", "");
+
+    page.LogoutLink();
+
+    cout << page.brk;
+
+    page.FormStart("FormRoom", "exam.html", "POST");
+
+    cout << page.startH1 << "Room Detail" 
+         << page.endH1 << page.brk;
+    
+    ErrorMessage(msg);
+
+    page.InputField("hidden", fieldName.projectID, projectID);
+    page.InputField("hidden", fieldName.totalDays, 
+                    IntToString(totalDays));
+    page.InputField("hidden", fieldName.projectType, projectType);
+/* 
+    for(i = 0; i > totalDays; i++)
+    {
+        for(j = 0; j < totalCentres[i]; j++)
+        {
+            
+        }
+    }*/
+/*    
+    page.InputField("button", "AddRow", 
+                    "addRow('TableDateSheet', 'TotalDays', 'date')",
+                    "Add Row");
+    
+    page.InputField("button", "DeleteRow", 
+                    "deleteRow('TableDateSheet', 'TotalDays')",
+                    "Delete Row");
+*/
+/*
+    cout << page.brk << page.brk;
+
+    page.TableStart("TableDateSheet", "");
+   
+    cout << page.startTR;
+    for(i = 0; i < totalCols; i++)
+    {   
+        cout << page.startTH << tableHeading[i] << page.endTH;
+    }
+    cout << page.endTR;
+
+    if(projectType == "Old")// && (className.size() >= 1 ) || 
+//       subjectName.size() >= 1 || subjectCode.size() >= 1 ))
+    {
+        for(i = 0; i < totalDays; i++)
+        {
+            cout << page.startTR;
+        
+            cout << page.startTD;
+            page.InputField("text", fieldName.date, (i + 1),
+                            date[i], date[i]);
+            cout << page.endTD;
+        
+            cout << page.startTD;
+            page.InputField("text", fieldName.examCode, (i + 1),
+                            examCode[i], examCode[i]);
+            cout << page.endTD;
+        
+            cout << page.endTR;
+        }
+    }
+    else
+    {
+        for(i = 0; i < totalDays; i++)
+        {
+            cout << page.startTR;
+        
+            cout << page.startTD;
+            page.InputField("text", fieldName.date, (i + 1),
+                            date[i]);
+            cout << page.endTD;
+        
+            cout << page.startTD;
+            page.InputField("text", fieldName.examCode, (i + 1),
+                            examCode[i]);
+            cout << page.endTD;
+
+            cout << page.endTR;
+        }
+    }
+   
+    page.TableEnd();
+  
+    cout << page.brk << page.brk
+         << " Same details for each day ";
+    page.InputField("radio", fieldName.sameDetail, "Yes");
+    page.Label(fieldName.projectType, "Yes");
+
+    page.InputField("radio", fieldName.sameDetail, "No");
+    page.Label(fieldName.projectType, "No");
+*/   
+    cout << page.brk << page.brk;
+
+    page.Button("next", "submit", "btn", "NEXT");
+
+    page.FormEnd();
+    page.DivEnd();
+
+    Footer();
+
 }
 
 /**

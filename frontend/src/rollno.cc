@@ -75,20 +75,17 @@ void RollNoDetail :: ReadClassDetail()
  
     if(projectType == "Old")
     {
-        where = "ProjectID = " + projectID;
+/*        where = "ProjectID = " + projectID;
         database.SelectColumn(vecTemp, "ClassName", "ClassDetail",
                               where);
-/*       for(unsigned i = 0; i < vecTemp.size(); i++)
-            cout << vecTemp[i]; 
-*/
 
         if(vecTemp.size() > 0 )
         {
-//            database.SelectSum
             where = "ProjectID = " + projectID;
             database.DeleteQuery("ClassDetail", where);
         }
-        
+*/       
+        where = "ProjectID = " + projectID;
         database.SelectColumn(prefix, "Prefix", "RollNoDetail", where);
 
         if(prefix.size() <= 0)
@@ -157,6 +154,16 @@ void RollNoDetail :: SetDefaultValue(int totalClasses)
 
 void RollNoDetail :: WriteClassDetail()
 {
+    where = "ProjectID = " + projectID;
+    database.SelectColumn(vecTemp, "ClassName", "ClassDetail",
+                          where);
+
+    if(vecTemp.size() > 0 )
+    {
+        where = "ProjectID = " + projectID;
+        database.DeleteQuery("ClassDetail", where);
+    }
+
     for(i = 0; i < totalClasses; i++)
     {
         database.InsertClassDetail(projectID, className[i], 

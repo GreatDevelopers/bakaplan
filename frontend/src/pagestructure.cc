@@ -223,7 +223,8 @@ void PageStructureMaker :: DivEnd()
 void PageStructureMaker :: FormStart(string name, string action, 
                            string method)
 {
-    cout << "<form name = \"" << name << "\" action = \"" << action
+    cout << "<form name = \"" << name 
+         << "\" action = \"" << action
          << "\" method = \"" << method << "\" >" << endl;
 }
 

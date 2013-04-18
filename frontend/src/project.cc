@@ -120,12 +120,10 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
     cout << page.brk << page.brk
          << " Project Type ";
     page.InputField("radio", fieldName.projectType, "New");
-    cout << " New ";
-//    page.Label(fieldName.projectType, "New");
+    page.Label(fieldName.projectType, "New");
 
     page.InputField("radio", fieldName.projectType, "Old");
-//    page.Label(fieldName.projectType, "Old");
-    cout << " Old ";
+    page.Label(fieldName.projectType, "Old");
 
     cout << page.brk << page.brk;
 
