@@ -52,7 +52,7 @@ class InputDetail //: public PageLayout
         int i, j, k, l;                      /**< Looping Variables */
 
         stringstream ss;          /**< for converting int to string */
-        string temp;                    /**< for temporary strorage */
+        string temp, temp1;             /**< for temporary strorage */
         // For project detail
         string projectID,                           /**< Project ID */
                emailID,                               /**< Email id */

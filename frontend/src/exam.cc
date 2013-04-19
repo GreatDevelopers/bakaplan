@@ -55,6 +55,40 @@ void ExamDetail :: ReadRoomDetail()
     projectType = readField.ReadFieldValue(fieldName.projectType);
     totalDays = StringToInt(readField.ReadFieldValue(
                             fieldName.totalDays));
+    
+    totalCentres.resize(totalDays);
+    centreName.resize(totalDays);
+    roomNo.resize(totalDays);
+    rows.resize(totalDays);
+    columns.resize(totalDays);
+
+    for(i = 0; i < totalDays; i++)
+    {
+        j = i + 1;
+        totalCentres[i] = StringToInt(readField.ReadFieldValue(
+                          fieldName.totalCentres, j ));
+        for(j = 0; j < totalCentres[i]; j++)
+        {
+            temp1 = IntToString(i + 1) + IntToString(j + 1);
+
+            centreName[i].resize(totalCentres[i]);
+            roomNo[i].resize(totalCentres[i]);
+            rows[i].resize(totalCentres[i]);
+            columns[i].resize(totalCentres[i]);
+
+            temp  = fieldName.centreName + temp1;
+            centreName[i][j] = readField.ReadFieldValue(temp);
+
+            temp = fieldName.roomNo + temp1;
+            roomNo[i][j] = readField.ReadFieldValue(temp);
+
+            temp = fieldName.rows + temp1;
+            rows[i][j] = readField.ReadFieldValue(temp);
+
+            temp = fieldName.columns + temp1;
+            columns[i][i] = readField.ReadFieldValue(temp);
+        }
+    }
 
 }
 
