@@ -245,16 +245,16 @@ void RoomDetail :: RoomDetailPage()
 
         string table = "addRow('TableRoom" + IntToString(i + 1)
                        + "', 'TotalCentres" + IntToString(i + 1)
-                       + "', 'room','" + IntToString(i + 1)
-                       + "')";
+                       + "', 'room'," + IntToString(i + 1)
+                       + ")";
 
         page.InputField("button", temp, table, "Add Row");
         temp = "DeleteRow";
         temp += IntToString(i + 1);
         
-        table = "addRow('TableRoom" + IntToString(i + 1)
+        table = "deleteRow('TableRoom" + IntToString(i + 1)
                 + "', 'TotalCentres" + IntToString(i + 1)
-                + "', '" + IntToString(i + 1) + "')";
+                + "')";
  
         page.InputField("button", temp, table, "Delete Row");
 
