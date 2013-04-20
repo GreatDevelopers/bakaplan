@@ -97,6 +97,7 @@ void InputFieldName :: SetFieldNames()
 
     examName        =   "ExamName";
     examDate        =   "ExamDate";
+    examSession     =   "ExamSession";
     examTime        =   "ExamTime";
     examVenue       =   "ExamVenue";
 

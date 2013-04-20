@@ -79,6 +79,7 @@ class InputFieldName
         /* For Examination Details */
                examName,                      /**< Examination Name */
                examDate,                      /**< Examination Date */
+               examSession,                /**< Exam. Session (M/E) */
                examTime,                      /**< Examination Time */
                examVenue,                    /**< Examination Venue */
         /* Date sheet variables */
