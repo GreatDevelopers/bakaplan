@@ -94,7 +94,8 @@ void ExamDetail :: ReadRoomDetail()
     projectType = readField.ReadFieldValue(fieldName.projectType);
     totalDays = StringToInt(readField.ReadFieldValue(
                             fieldName.totalDays));
-     
+    sameDetail = readField.ReadFieldValue(fieldName.sameDetail);
+      
     totalCentres.resize(totalDays);
     centreName.resize(totalDays);
     roomNo.resize(totalDays);
@@ -118,25 +119,24 @@ void ExamDetail :: ReadRoomDetail()
             roomNo[i].resize(totalCentres[i]);
             rows[i].resize(totalCentres[i]);
             columns[i].resize(totalCentres[i]);
-
+ 
             temp  = fieldName.centreName + temp1;
             centreName[i][j] = readField.ReadFieldValue(temp);
-
+ 
             temp = fieldName.roomNo + temp1;
             roomNo[i][j] = readField.ReadFieldValue(temp);
-
+            
             temp = fieldName.rows + temp1;
             rows[i][j] = readField.ReadFieldValue(temp);
 
             temp = fieldName.columns + temp1;
-            columns[i][i] = readField.ReadFieldValue(temp);
+            columns[i][j] = readField.ReadFieldValue(temp);
         }
     }
     
     SetDefaultValue();
     WriteRoomDetail();
     ExamDetailPage();
-
 }
 
 /**
@@ -161,24 +161,13 @@ void ExamDetail :: WriteRoomDetail()
 
     for(i = 0; i < totalDays; i++)
     {
-        if(sameDetail == "No")
-        {
-            where += " AND Date = \"" + date[i] + "\"";
-            database.SelectColumn(vecTemp, "DateSheetID", "DateSheet", 
-                                  where);
-        }
-        else
-            vecTemp.push_back("1");
-
+        k = i + 1;
         for(j = 0; j < totalCentres[i]; j++)
         {
-            // here vecTemp = DateSheetId w.r.t. ProjectID and Date
-            // from DateSheet Table
-            database.InsertRoomDetail(projectID, vecTemp[0], 
+            database.InsertRoomDetail(projectID, IntToString(k), 
                                       centreName[i][j], roomNo[i][j],
                                       rows[i][j], columns[i][j]);
         }
-        vecTemp.clear();
     }
 
 }
@@ -228,11 +217,13 @@ void ExamDetail :: ExamDetailPage()
 
     for(i = 0; i < totalDays; i++)
     {
+        cout << page.startTR;
         j = i + 1;
         if(sameDetail == "No")
         {
             cout << page.startTD;
-            page.InputField("text", fieldName.date, j, date[i]);
+            cout << date[i];
+            page.InputField("hidden", fieldName.date, j, date[i]);
             cout << page.endTD;
         }
         cout << page.startTD;
@@ -249,6 +240,7 @@ void ExamDetail :: ExamDetailPage()
         page.InputField("text", fieldName.examVenue, j, 
                          examVenue[i]);
         cout << page.endTD;
+        cout << page.endTR;
     }
 
     page.TableEnd();
