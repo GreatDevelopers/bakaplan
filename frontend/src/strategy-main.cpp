@@ -28,6 +28,7 @@
 int main(void)
 {
     Strategy strategy;
+    strategy.ReadExamDetail();
 
     return 0;
 }

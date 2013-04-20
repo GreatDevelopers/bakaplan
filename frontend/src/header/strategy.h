@@ -24,10 +24,23 @@
 class Strategy : InputDetail
 {
     protected:
+        
+        STRING_VEC strategyName;
 
     public:
+        /** Constructor */
         Strategy();
 
+        /** Reading exam detail */
+        void ReadExamDetail();
+
+        /** Write Exam detail into database */
+        void WriteExamDetail();
+
+        /** strategy detail page */
+        void StrategyPage();
+
+        /** Destructor */
         ~Strategy();
 };
 
