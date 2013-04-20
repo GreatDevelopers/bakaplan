@@ -27,6 +27,14 @@
 ExamDetail :: ExamDetail()
 {
     // constructor
+    totalCols = 5;
+    tableHeading.resize(totalCols);
+    i = 0;
+    tableHeading[i++] = "Date";
+    tableHeading[i++] = "Name";
+    tableHeading[i++] = "Session";
+    tableHeading[i++] = "Time";
+    tableHeading[i++] = "Venue";
 }
 
 /**
@@ -38,7 +46,38 @@ ExamDetail :: ExamDetail()
 
 void ExamDetail :: SetDefaultValue()
 {
+    where = "ProjectID = " + projectID;
+    if(projectType == "Old")
+    {
+        database.SelectColumn(examName, "ExamName", "ExamDetail", 
+                              where);
+        if(examName.size() > 0)
+        {
+            database.SelectColumn(examSession, "ExamSession", 
+                                  "ExamDetail", where);
+            database.SelectColumn(examTime, "ExamTime", 
+                                  "ExamDetail", where);
+            database.SelectColumn(examVenue, "ExamVenue", 
+                                  "ExamDetail", where);
+        }
+    }
+    if((projectType == "Old" && examName.size() <= 0) || 
+        projectType == "New")
+    {
+        examName.resize(totalDays);
+        examSession.resize(totalDays);
+        examTime.resize(totalDays);
+        examVenue.resize(totalDays);
+        date.resize(totalDays);
 
+        for(i = 0; i < totalDays; i++)
+        {
+            examName[i] = "Examination Name";
+            examSession[i] = "M/E";
+            examTime[i] = "9:30 am - 12:30 pm";
+            examVenue[i] = "Venue/Place of Exam";
+        }
+    }
 }
 
 /**
@@ -93,8 +132,10 @@ void ExamDetail :: ReadRoomDetail()
             columns[i][i] = readField.ReadFieldValue(temp);
         }
     }
-
+    
+    SetDefaultValue();
     WriteRoomDetail();
+    ExamDetailPage();
 
 }
 
@@ -150,6 +191,76 @@ void ExamDetail :: WriteRoomDetail()
 
 void ExamDetail :: ExamDetailPage()
 {
+    Header("Exam Detail");
+
+    page.DivStart("DivExam", "");
+
+    page.LogoutLink();
+
+    cout << page.brk;
+
+    page.FormStart("FormExam", "strategy.html", "POST");
+
+    cout << page.startH1 << "Exam Detail" 
+         << page.endH1 << page.brk;
+    
+    ErrorMessage(msg);
+
+    page.InputField("hidden", fieldName.projectID, projectID);
+    page.InputField("hidden", fieldName.totalDays, 
+                    IntToString(totalDays));
+    page.InputField("hidden", fieldName.projectType, projectType);
+    page.InputField("hidden", fieldName.sameDetail, sameDetail);
+
+    page.TableStart("TableExam", "");
+    cout << page.startTR;
+    
+    if(totalDays == 1)
+        j = 1;
+    else
+        j = 0;
+
+    for(k = j; k < totalCols; k++)
+    {   
+        cout << page.startTH << tableHeading[k] << page.endTH;
+    }
+    cout << page.endTR;
+
+    for(i = 0; i < totalDays; i++)
+    {
+        j = i + 1;
+        if(sameDetail == "No")
+        {
+            cout << page.startTD;
+            page.InputField("text", fieldName.date, j, date[i]);
+            cout << page.endTD;
+        }
+        cout << page.startTD;
+        page.InputField("text", fieldName.examName, j, examName[i]);
+        cout << page.endTD;
+        cout << page.startTD;
+        page.InputField("text", fieldName.examSession, j, 
+                         examSession[i]);
+        cout << page.endTD;
+        cout << page.startTD;
+        page.InputField("text", fieldName.examTime, j, examTime[i]);
+        cout << page.endTD;
+        cout << page.startTD;
+        page.InputField("text", fieldName.examVenue, j, 
+                         examVenue[i]);
+        cout << page.endTD;
+    }
+
+    page.TableEnd();
+
+    cout << page.brk << page.brk;
+
+    page.Button("next", "submit", "btn", "NEXT");
+
+    page.FormEnd();
+    page.DivEnd();
+
+    Footer();
 
 }
 
