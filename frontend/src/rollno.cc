@@ -59,7 +59,7 @@ void RollNoDetail :: ReadClassDetail()
     className.resize(totalClasses);
     subjectName.resize(totalClasses);
     subjectCode.resize(totalClasses);
-
+ 
     for(i = 0; i < totalClasses; i++)
     {
         j = i + 1;
@@ -72,19 +72,9 @@ void RollNoDetail :: ReadClassDetail()
         subjectCode[i] = readField.ReadFieldValue(
                          fieldName.subjectCode, j);
     }
- 
+
     if(projectType == "Old")
     {
-/*        where = "ProjectID = " + projectID;
-        database.SelectColumn(vecTemp, "ClassName", "ClassDetail",
-                              where);
-
-        if(vecTemp.size() > 0 )
-        {
-            where = "ProjectID = " + projectID;
-            database.DeleteQuery("ClassDetail", where);
-        }
-*/       
         where = "ProjectID = " + projectID;
         database.SelectColumn(prefix, "Prefix", "RollNoDetail", where);
 

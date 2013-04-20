@@ -105,7 +105,7 @@ class InputDetail //: public PageLayout
                      examVenue,                     /**< Exam Venue */
                      examTime,                      /**< Exam. Time */
         /* Strategy variables */
-                     strategyName;                  /**< Strategy name 
+                     strategyChoice;                /**< Strategy name 
                                                    selected by user */
         /* Room Detail variables */
         STRING_2DVEC centreName,                   /**< Centre Name */

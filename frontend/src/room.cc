@@ -45,30 +45,63 @@ RoomDetail :: RoomDetail()
 
 void RoomDetail :: SetDefaultValue()
 {
-    totalCentres.resize(totalDays);
-    centreName.resize(totalDays);
-    roomNo.resize(totalDays);
-    rows.resize(totalDays);
-    columns.resize(totalDays);
- 
-    for(i = 0; i < totalDays; i++)
+    if(projectType == "Old")
     {
-        totalCentres[i] = 1;
-    }
-    for(i = 0; i < totalDays; i++)
-    {
-//        totalCentres[i] = 1;
-        for(j = 0; j < totalCentres[i]; j++)
+        where = "ProjectID = " + projectID;      
+        database.SelectColumn(vecTemp, "CentreName", 
+                              "RoomDetail", where);
+        if(vecTemp.size() <= 0)
         {
-            centreName[i].resize(totalCentres[i]);
-            roomNo[i].resize(totalCentres[i]);
-            rows[i].resize(totalCentres[i]);
-            columns[i].resize(totalCentres[i]);
+            SetDefaultValue();
+        }
+        else
+        {
+            
+            for(i = 0; i < totalDays; i++)
+            {
+                for(unsigned j = 0; j < vecTemp.size(); j++)
+                {
+                    centreName[i].resize(vecTemp.size());
+                    roomNo[i].resize(vecTemp.size());
+                    rows[i].resize(vecTemp.size());
+                    columns[i].resize(vecTemp.size());
+                }
 
-            centreName[i][j] = "Centre 1";
-            roomNo[i][j] =  "Room 1, Room 2";
-            rows[i][j]   =  "6, 6";
-            columns[i][j]=  "8, 8";
+                for(unsigned j = 0; j < vecTemp.size(); j++)
+                {
+                   // centreName[i][j] = vecTemp[j];
+                    cout << centreName[i][j] << "<br>";
+                }
+            }
+        }     
+    }
+    else
+    {
+        totalCentres.resize(totalDays);
+        centreName.resize(totalDays);
+        roomNo.resize(totalDays);
+        rows.resize(totalDays);
+        columns.resize(totalDays);
+ 
+        for(i = 0; i < totalDays; i++)
+        {
+            totalCentres[i] = 1;
+        }
+        for(i = 0; i < totalDays; i++)
+        {
+//        totalCentres[i] = 1;
+            for(j = 0; j < totalCentres[i]; j++)
+            {
+                centreName[i].resize(totalCentres[i]);
+                roomNo[i].resize(totalCentres[i]);
+                rows[i].resize(totalCentres[i]);
+                columns[i].resize(totalCentres[i]);
+
+                centreName[i][j] = "Centre 1";
+                roomNo[i][j] =  "Room 1, Room 2";
+                rows[i][j]   =  "6, 6";
+                columns[i][j]=  "8, 8";
+            }
         }
     }
     /*
@@ -114,42 +147,7 @@ void RoomDetail :: ReadDateSheet()
         date[i] = readField.ReadFieldValue(fieldName.date, j);
         examCode[i] = readField.ReadFieldValue(fieldName.examCode, j);
     }
-/*  
-    if(projectType == "Old")
-    {
-        where = "ProjectID = " + projectID;      
-        database.SelectColumn(vecTemp, "CentreName", 
-                              "RoomDetail", where);
-        if(vecTemp.size() <= 0)
-        {
-            SetDefaultValue();
-        }
-        else
-        {
-            
-            for(i = 0; i < totalDays; i++)
-            {
-                for(unsigned j = 0; j < vecTemp.size(); j++)
-                {
-                    centreName[i].resize(vecTemp.size());
-                    roomNo[i].resize(vecTemp.size());
-                    rows[i].resize(vecTemp.size());
-                    columns[i].resize(vecTemp.size());
-                }
-
-                for(unsigned j = 0; j < vecTemp.size(); j++)
-                {
-                   // centreName[i][j] = vecTemp[j];
-                    cout << centreName[i][j] << "<br>";
-                }
-            }
-        }     
-    }
-    else
-    {
-        SetDefaultValue();
-    }
-*/
+  
     SetDefaultValue();
     WriteDateSheet();
     if(sameDetail == "Yes")// && projectType == "New")
