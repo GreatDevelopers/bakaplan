@@ -1,5 +1,5 @@
 // Function for adding row in table
-function addRow(tableID, totalID, field) 
+function addRows(tableID, totalID, field) 
 {
     try
     {
@@ -10,7 +10,7 @@ function addRow(tableID, totalID, field)
         var total = document.getElementById(totalID).value;
         var classField = new Array("ClassName", "SubjectName", 
                                    "SubjectCode");
-        var DateField = new Array("Date", "ExamCode");
+        var dateField = new Array("Date", "ExamCode");
 /*        var RoomField = new Array("CentreName", "RoomNo", 
                                   "Rows", "Columns");
         var ExamField = new Array("ExamName", "ExamSession",
@@ -43,9 +43,9 @@ function addRow(tableID, totalID, field)
                     }
                     else if(field == "date")
                     {
-                        newcell.childNodes[0].name = DateField[i] 
+                        newcell.childNodes[0].name = dateField[i] 
                                                      + newTotal;
-                        newcell.childNodes[0].id = DateField[i] 
+                        newcell.childNodes[0].id = dateField[i] 
                                                      + newTotal;
                     }
 /*                    else if(field == "room")
