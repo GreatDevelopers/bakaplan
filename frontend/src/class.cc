@@ -250,7 +250,7 @@ void ClassDetail :: ClassDetailPage(string msg)
     page.InputField("hidden", fieldName.projectType, projectType);
     
     page.InputField("button", "AddRow", 
-                    "addRow('TableClass', 'TotalClasses', 'class')",
+                    "addRows('TableClass', 'TotalClasses', 'class')",
                     "Add Row");
     
     page.InputField("button", "DeleteRow", 
