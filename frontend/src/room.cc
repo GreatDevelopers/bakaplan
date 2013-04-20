@@ -53,7 +53,7 @@ void RoomDetail :: SetDefaultValue()
  
     for(i = 0; i < totalDays; i++)
     {
-        totalCentres[i] = 2;
+        totalCentres[i] = 1;
     }
     for(i = 0; i < totalDays; i++)
     {
@@ -106,14 +106,15 @@ void RoomDetail :: ReadDateSheet()
     roomNo.resize(totalDays);
     rows.resize(totalDays);
     columns.resize(totalDays);
-
+//cout << totalDays;
+ 
     for(i = 0; i < totalDays; i++)
     {
         j = i + 1;
         date[i] = readField.ReadFieldValue(fieldName.date, j);
         examCode[i] = readField.ReadFieldValue(fieldName.examCode, j);
     }
- 
+/*  
     if(projectType == "Old")
     {
         where = "ProjectID = " + projectID;      
@@ -125,47 +126,36 @@ void RoomDetail :: ReadDateSheet()
         }
         else
         {
+            
             for(i = 0; i < totalDays; i++)
             {
                 for(unsigned j = 0; j < vecTemp.size(); j++)
                 {
                     centreName[i].resize(vecTemp.size());
+                    roomNo[i].resize(vecTemp.size());
+                    rows[i].resize(vecTemp.size());
+                    columns[i].resize(vecTemp.size());
                 }
+
                 for(unsigned j = 0; j < vecTemp.size(); j++)
                 {
-                    centreName[i][j] = vecTemp[j];
+                   // centreName[i][j] = vecTemp[j];
                     cout << centreName[i][j] << "<br>";
                 }
             }
-        }
-/*
-        if(centreName.size() <= 0)
-        {
-            SetDefaultValue();
-        }
-        else
-        {
-             
-            database.SelectColumn(roomNo, "RoomNo", "RoomDetail", 
-                                  where);
-            database.SelectColumn(rows, "Rows", "RoomDetail", where);
-            database.SelectColumn(columns, "Columns", "RoomDetail",
-                                  where);
-            totalDays = centreName.size();
-            
-        }*/
+        }     
     }
     else
     {
         SetDefaultValue();
     }
-
+*/
+    SetDefaultValue();
     WriteDateSheet();
-    if(sameDetail == "Yes" && projectType == "New")
+    if(sameDetail == "Yes")// && projectType == "New")
     {
         totalDays = 1;
     }
-
 
     RoomDetailPage();
 }
@@ -230,13 +220,17 @@ void RoomDetail :: RoomDetailPage()
     
     for(i = 0; i < totalDays; i++)
     {
-        if(projectType == "Old" || 
-            (projectType == "New" && sameDetail == "No"))
+  /*      if(projectType == "Old" || 
+            (projectType == "New" && sameDetail == "No"))*/
+        if(sameDetail == "No")
         {
 
             cout << page.brk;
             cout << "Date : " << date[i] 
                  << " Exam Code : " << examCode[i];
+            page.InputField("hidden", 
+                            (fieldName.date + IntToString(i + 1)), 
+                             date[i]);
         }
 
         cout << page.brk << page.brk;       
@@ -277,7 +271,7 @@ void RoomDetail :: RoomDetailPage()
 
         for(j = 0; j < totalCentres[i]; j++)
         {
-            if(projectType == "Old")
+/*            if(projectType == "Old")
             {
                 cout << page.startTR;
         
@@ -315,7 +309,7 @@ void RoomDetail :: RoomDetailPage()
                 cout << page.endTR;
             }
             else
-            {
+*/            {
                 cout << page.startTR;
         
                 cout << page.startTD;

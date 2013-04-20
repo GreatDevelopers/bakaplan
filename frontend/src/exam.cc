@@ -55,18 +55,22 @@ void ExamDetail :: ReadRoomDetail()
     projectType = readField.ReadFieldValue(fieldName.projectType);
     totalDays = StringToInt(readField.ReadFieldValue(
                             fieldName.totalDays));
-    
+     
     totalCentres.resize(totalDays);
     centreName.resize(totalDays);
     roomNo.resize(totalDays);
     rows.resize(totalDays);
     columns.resize(totalDays);
+    date.resize(totalDays);
 
     for(i = 0; i < totalDays; i++)
     {
         j = i + 1;
         totalCentres[i] = StringToInt(readField.ReadFieldValue(
                           fieldName.totalCentres, j ));
+        if(sameDetail == "No")
+            date[i] = readField.ReadFieldValue("Date", j);
+
         for(j = 0; j < totalCentres[i]; j++)
         {
             temp1 = IntToString(i + 1) + IntToString(j + 1);
@@ -90,6 +94,8 @@ void ExamDetail :: ReadRoomDetail()
         }
     }
 
+    WriteRoomDetail();
+
 }
 
 /**
@@ -100,6 +106,39 @@ void ExamDetail :: ReadRoomDetail()
 
 void ExamDetail :: WriteRoomDetail()
 {
+    where = "ProjectID = " + projectID;
+    database.SelectColumn(vecTemp, "CentreName", "RoomDetail",
+                          where);
+
+    if(vecTemp.size() > 0 )
+    {
+        where = "ProjectID = " + projectID;
+        database.DeleteQuery("RoomDetail", where);
+    }
+        
+    vecTemp.clear();
+
+    for(i = 0; i < totalDays; i++)
+    {
+        if(sameDetail == "No")
+        {
+            where += " AND Date = \"" + date[i] + "\"";
+            database.SelectColumn(vecTemp, "DateSheetID", "DateSheet", 
+                                  where);
+        }
+        else
+            vecTemp.push_back("1");
+
+        for(j = 0; j < totalCentres[i]; j++)
+        {
+            // here vecTemp = DateSheetId w.r.t. ProjectID and Date
+            // from DateSheet Table
+            database.InsertRoomDetail(projectID, vecTemp[0], 
+                                      centreName[i][j], roomNo[i][j],
+                                      rows[i][j], columns[i][j]);
+        }
+        vecTemp.clear();
+    }
 
 }
 
