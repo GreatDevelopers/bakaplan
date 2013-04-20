@@ -97,13 +97,8 @@ class InputDetail //: public PageLayout
                                        not included in seating plan */
         /* variables for datsheet detail */
                    date,                   /**< Date of examination */
-                   examCode;                    /**< Exam/subject code 
+                   examCode,                    /**< Exam/subject code 
                                                 for seating plan*/
-        /* Room Detail variables */
-        STRING_2DVEC centreName,                   /**< Centre Name */
-                     roomNo,            /**< Room no. in one centre */
-                     rows,                        /**< Rows of room */
-                     columns,                   /**< columns of room */
         /* Variable for exam detail */
                      examName,                /**< Examination name */
                      examSession,      /**< Session Morning/Evening */
@@ -112,6 +107,11 @@ class InputDetail //: public PageLayout
         /* Strategy variables */
                      strategyName;                  /**< Strategy name 
                                                    selected by user */
+        /* Room Detail variables */
+        STRING_2DVEC centreName,                   /**< Centre Name */
+                     roomNo,            /**< Room no. in one centre */
+                     rows,                        /**< Rows of room */
+                     columns;                   /**< columns of room */
     public:
         Database data;
         InputDetail();       
