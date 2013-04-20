@@ -217,6 +217,7 @@ void RoomDetail :: RoomDetailPage()
     page.InputField("hidden", fieldName.totalDays, 
                     IntToString(totalDays));
     page.InputField("hidden", fieldName.projectType, projectType);
+    page.InputField("hidden", fieldName.sameDetail, sameDetail);
     
     for(i = 0; i < totalDays; i++)
     {
@@ -351,77 +352,7 @@ void RoomDetail :: RoomDetailPage()
         
         page.TableEnd();
     }
-/*    
-    page.InputField("button", "AddRow", 
-                    "addRow('TableDateSheet', 'TotalDays', 'date')",
-                    "Add Row");
-    
-    page.InputField("button", "DeleteRow", 
-                    "deleteRow('TableDateSheet', 'TotalDays')",
-                    "Delete Row");
-*/
-/*
-    cout << page.brk << page.brk;
 
-    page.TableStart("TableDateSheet", "");
-   
-    cout << page.startTR;
-    for(i = 0; i < totalCols; i++)
-    {   
-        cout << page.startTH << tableHeading[i] << page.endTH;
-    }
-    cout << page.endTR;
-
-    if(projectType == "Old")// && (className.size() >= 1 ) || 
-//       subjectName.size() >= 1 || subjectCode.size() >= 1 ))
-    {
-        for(i = 0; i < totalDays; i++)
-        {
-            cout << page.startTR;
-        
-            cout << page.startTD;
-            page.InputField("text", fieldName.date, (i + 1),
-                            date[i], date[i]);
-            cout << page.endTD;
-        
-            cout << page.startTD;
-            page.InputField("text", fieldName.examCode, (i + 1),
-                            examCode[i], examCode[i]);
-            cout << page.endTD;
-        
-            cout << page.endTR;
-        }
-    }
-    else
-    {
-        for(i = 0; i < totalDays; i++)
-        {
-            cout << page.startTR;
-        
-            cout << page.startTD;
-            page.InputField("text", fieldName.date, (i + 1),
-                            date[i]);
-            cout << page.endTD;
-        
-            cout << page.startTD;
-            page.InputField("text", fieldName.examCode, (i + 1),
-                            examCode[i]);
-            cout << page.endTD;
-
-            cout << page.endTR;
-        }
-    }
-   
-    page.TableEnd();
-  
-    cout << page.brk << page.brk
-         << " Same details for each day ";
-    page.InputField("radio", fieldName.sameDetail, "Yes");
-    page.Label(fieldName.projectType, "Yes");
-
-    page.InputField("radio", fieldName.sameDetail, "No");
-    page.Label(fieldName.projectType, "No");
-*/   
     cout << page.brk << page.brk;
 
     page.Button("next", "submit", "btn", "NEXT");
