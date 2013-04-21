@@ -98,6 +98,17 @@ void Strategy :: SetDefaultValue()
     where = "ProjectID = " + projectID;
     database.SelectColumn(strategyChoice, "StrategyName", 
                           "StrategyDetail", where);
+    if(strategyChoice.size() < unsigned(totalDays))
+    {
+        j = totalDays - strategyChoice.size() + 1;
+        
+        strategyChoice.resize(totalDays);
+        for(i = j; i < totalDays; i++)
+        {
+            strategyChoice[i] = "";
+        }
+    }
+
 }
 
 /**
