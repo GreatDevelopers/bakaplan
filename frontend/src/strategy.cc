@@ -140,11 +140,16 @@ void Strategy :: WriteExamDetail()
     }
 
     /* Writing i/p file for date sheet */
+    where = "ProjectID = " + projectID;
+    database.SelectColumn(vecTemp, "Date", "DateSheet", where);
+    int total = vecTemp.size();
+    int Days = 1;
+    vecTemp.clear();
 
     temp = FileName(EXAM_DETAIL, projectID, 1);
     outFile.open(temp.c_str());
 
-    outFile << totalDays << endl;
+    outFile << total << endl;
 
     for(i = 0; i < totalDays; i++)
     {
@@ -152,6 +157,16 @@ void Strategy :: WriteExamDetail()
                 << examSession[i] << endl
                 << examTime[i] << endl
                 << examVenue[i] << endl;
+        if(total > totalDays)
+        {
+            if(Days < total)
+            {
+                i--;
+                Days++;
+            }
+
+        }
+
     }
 
     outFile.close();
