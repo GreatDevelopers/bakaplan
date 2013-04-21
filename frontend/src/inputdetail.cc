@@ -136,3 +136,18 @@ string InputDetail :: Time()
     return time.str();
 }
 
+/**
+ *      \class  InputDetail
+ *      \fn     InputDetail :: SplitString(STRING_VEC & output,
+ *              string input, string token)
+ *      \brief  Split string using boost library func.
+ *      \param  output  Stores result of splitted string
+ *      \param  input   string for spliting
+ *      \param  token   eg , or . or - any char to split string
+ */
+
+void InputDetail :: SplitString(STRING_VEC & output, string input,
+                                string token)
+{
+    split( output, input, is_any_of(token), token_compress_on ); 
+}

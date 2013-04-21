@@ -36,6 +36,8 @@
 // for using multi-dimentional array
 #include <boost/multi_array.hpp>
 #include <boost/date_time/local_time/local_time.hpp>
+#include <boost/algorithm/string/split.hpp>
+#include <boost/algorithm/string.hpp>
 #include <cassert>
 
 /**-------------------------------------------------------------------
@@ -43,6 +45,7 @@
  *------------------------------------------------------------------*/
 
 using namespace std;
+using namespace boost::algorithm;
 
 /**
  *  Typedef variables for using vector definiton

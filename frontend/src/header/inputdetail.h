@@ -64,8 +64,10 @@ class InputDetail //: public PageLayout
                msg;                   /**< For Displaying error msg */
 
         STRING_VEC vecTemp,        /**< string Vector temporary use */
-                   oldProject;                 /**< For stroring old
+                   oldProject,                 /**< For stroring old
                                                     projects if any */
+                   splitString;            /**< For storing values of 
+                                                    splitted string */
  
         ifstream inFile;                      /**< For Reading file */
         ofstream outFile;                     /**< For writing file */
@@ -113,13 +115,19 @@ class InputDetail //: public PageLayout
                      rows,                        /**< Rows of room */
                      columns;                   /**< columns of room */
     public:
-        Database data;
-        InputDetail();       
+        /** Constructor */
+        InputDetail(); 
+
+        /** Header of page  */
         void Header(string titleName);
+
+        /** Footer of page */
         void Footer();
+
+        /** Convert Integer to string */
         string IntToString(int value);
         
-        /// Convert String to Integer
+        /** Convert String to Integer */
         int StringToInt(string value);
 
         /** Shows message if user filled data in field */
@@ -127,6 +135,10 @@ class InputDetail //: public PageLayout
 
         /** For locating current time on system */
         string Time();
+
+        /** Spliting string  */
+        void SplitString(STRING_VEC & output, 
+                         string input, string token);
 };
 
 #endif
