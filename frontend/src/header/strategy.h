@@ -37,6 +37,9 @@ class Strategy : InputDetail
         /** Write Exam detail into database */
         void WriteExamDetail();
 
+        /** Setting default value */
+        void SetDefaultValue();
+
         /** strategy detail page */
         void StrategyPage();
 

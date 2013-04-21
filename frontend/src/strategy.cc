@@ -82,9 +82,22 @@ void Strategy :: ReadExamDetail()
             date[i] = readField.ReadFieldValue(fieldName.date, j);
         }
     }
-
+    SetDefaultValue();
     WriteExamDetail();
     StrategyPage();       
+}
+
+/**
+ *      \class  Strategy
+ *      \fn     Strategy :: SetDefaultValue()
+ *      \brief  Setting default or retrieving old values from database
+ */
+
+void Strategy :: SetDefaultValue()
+{
+    where = "ProjectID = " + projectID;
+    database.SelectColumn(strategyChoice, "StrategyName", 
+                          "StrategyDetail", where);
 }
 
 /**
@@ -176,7 +189,15 @@ void Strategy :: StrategyPage()
         for(unsigned j = 0; j < strategyName.size(); j++)
         {
             temp = IntToString((j + 1));
-            page.SelectOptionStart(temp, "n");
+            if(strategyChoice.size() > 0 && 
+               strategyChoice[i] == strategyName[j])
+            {
+                page.SelectOptionStart(temp, "y");
+            }
+            else
+            {
+                page.SelectOptionStart(temp, "n");
+            }
             cout << strategyName[j];
             page.SelectOptionEnd();
         }
