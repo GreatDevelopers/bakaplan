@@ -151,3 +151,32 @@ void InputDetail :: SplitString(STRING_VEC & output, string input,
 {
     split( output, input, is_any_of(token), token_compress_on ); 
 }
+
+/**
+ *      \class  InputDetail
+ *      \fn     InputDetail :: FileName(string projectID, string file,
+ *                                    string io)
+ *      \brief  For creating filename w.r.t to projectID
+ *
+ *      \param  projectID Unique ID i.e. used to read file of user
+ *      \param  file I/O file Name
+ *      \param  fileType For defining file type i.e I/P or O/P file.
+ *              If fileType == 1, Input file
+ *              If fileType == 0(else), Output File
+ *
+ *      \return fileName This function will return file name with
+ *              project ID
+ */
+
+string InputDetail :: FileName(string file, string projectID, 
+                             int fileType)
+{
+    temp = file + projectID;
+
+    if(fileType == 1)
+        fileName = INPUT + temp + IN;
+    else
+        fileName = OUTPUT + temp + OUT;
+
+    return fileName;
+}
