@@ -6,16 +6,13 @@
 *.log
 *.toc
 
-src/*.o
-src/*.js
-src/*.html
-src/getcookie
+*.o
+*.js
+*.html
+*/getcookie
 src/SeatPlan
 src/backend/*.o
 *.in
-
-bakaplan/src/*.o
-bakaplan/src/main
-
-frontend/src/*.o
-frontend/bp/*.html
+*.out
+*.html
+frontend/src/backend/main
