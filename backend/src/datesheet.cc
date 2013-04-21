@@ -103,11 +103,14 @@ void DateSheet :: WriteDateSheet(string projectID)
     outFile.open(temp.c_str());
 
     outFile << totalDays << endl;
+//    cout << "Total Days : " << totalDays << endl;
 
     for(i = 0; i < totalDays; i++)
     {
         outFile << date[i] << endl
                 << totalExams[i] << endl;
+
+//        cout << date[i] << " : " << totalExams[i] << endl;
 
         for(j = 0; j < totalExams[i]; j++)
         {
@@ -115,9 +118,14 @@ void DateSheet :: WriteDateSheet(string projectID)
                     << examSubName[i][j] << endl
                     << dateSheetRNoSize[i][j] << endl;
 
+/*            cout << examSubCode[i][j] << endl
+                 << examSubName[i][j] << endl
+                 << dateSheetRNoSize[i][j] << endl;*/
+
             for(k = 0; k < dateSheetRNoSize[i][j]; k++)
             {
                 outFile << dateSheetRNo[i][j][k] << endl;
+//                cout << dateSheetRNo[i][j][k] << endl;
             }
         }
     }

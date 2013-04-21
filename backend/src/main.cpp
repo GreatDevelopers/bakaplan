@@ -23,9 +23,10 @@ int main(void)
 //    rNo.ReadClassDetail("1");
 //    rNo.ReadDateSheet("1");
 //    rNo.expandRNo.ExpandRollNos("1");
-    rNo.Main("1");
+    string pid = "20";
+    rNo.Main(pid);
     Strategy str;
-    str.Main("1");
+    str.Main(pid);
 
     return 0;
 }
