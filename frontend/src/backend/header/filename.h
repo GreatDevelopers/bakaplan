@@ -18,8 +18,8 @@
 
 const int FILE_SIZE = 25;
 
-const char INPUT[FILE_SIZE]   =   "../input/";
-const char OUTPUT[FILE_SIZE]  =   "../output/";
+const char INPUT[FILE_SIZE]   =   "../../input/";
+const char OUTPUT[FILE_SIZE]  =   "../../output/";
 const char IN[FILE_SIZE]      =   ".in";
 const char OUT[FILE_SIZE]     =   ".out";
 
