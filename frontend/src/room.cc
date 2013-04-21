@@ -45,51 +45,84 @@ RoomDetail :: RoomDetail()
 
 void RoomDetail :: SetDefaultValue()
 {
-    if(projectType == "Old")
+    totalCentres.resize(totalDays);
+    centreName.resize(totalDays);
+    roomNo.resize(totalDays);
+    rows.resize(totalDays);
+    columns.resize(totalDays);
+ 
+    where = "ProjectID = " + projectID;      
+    database.SelectColumn(vecTemp, "CentreName", 
+                          "RoomDetail", where);
+   
+    if(projectType == "Old" && vecTemp.size() > 0)
     {
-        where = "ProjectID = " + projectID;      
-        database.SelectColumn(vecTemp, "CentreName", 
-                              "RoomDetail", where);
-        if(vecTemp.size() <= 0)
-        {
-            SetDefaultValue();
-        }
-        else
-        {
-            
+        {       
             for(i = 0; i < totalDays; i++)
             {
-                for(unsigned j = 0; j < vecTemp.size(); j++)
+                vecTemp.clear();
+                where = "ProjectID = " + projectID;
+                where += " AND DateSheetID = " + IntToString(i + 1);
+                database.SelectColumn(vecTemp, "CentreName",
+                                      "RoomDetail", where);
+                if(vecTemp.size() > 0)
                 {
-                    centreName[i].resize(vecTemp.size());
-                    roomNo[i].resize(vecTemp.size());
-                    rows[i].resize(vecTemp.size());
-                    columns[i].resize(vecTemp.size());
+                    totalCentres[i] = vecTemp.size();
+                    centreName[i].assign(vecTemp.begin(), 
+                                         vecTemp.end());
+                }
+                else
+                {
+                    totalCentres[i] = 1;
+                    centreName[i].resize(totalCentres[i]);
+                    roomNo[i].resize(totalCentres[i]);          
+                    rows[i].resize(totalCentres[i]);
+                    columns[i].resize(totalCentres[i]);
+                }
+                vecTemp.clear();
+                database.SelectColumn(vecTemp, "RoomNo",
+                                      "RoomDetail", where);
+                if(vecTemp.size() > 0)
+                {
+                    roomNo[i].assign(vecTemp.begin(), 
+                                         vecTemp.end());
+                }
+                vecTemp.clear();
+                database.SelectColumn(vecTemp, "Rows",
+                                      "RoomDetail", where);
+                if(vecTemp.size() > 0)
+                {
+                    rows[i].assign(vecTemp.begin(), 
+                                         vecTemp.end());
+                }
+                vecTemp.clear();
+                database.SelectColumn(vecTemp, "Columns",
+                                      "RoomDetail", where);
+                if(vecTemp.size() > 0)
+                {
+                    columns[i].assign(vecTemp.begin(), 
+                                         vecTemp.end());
                 }
 
-                for(unsigned j = 0; j < vecTemp.size(); j++)
+/*                for(unsigned j = 0; j < centreName[i].size(); j++)
                 {
                    // centreName[i][j] = vecTemp[j];
-                    cout << centreName[i][j] << "<br>";
-                }
+                    cout << centreName[i][j] << " "
+                         << roomNo[i][j] << " "
+                         << rows[i][j] << " "
+                         << columns[i][j] << page.brk;
+                }*/
             }
         }     
     }
     else
     {
-        totalCentres.resize(totalDays);
-        centreName.resize(totalDays);
-        roomNo.resize(totalDays);
-        rows.resize(totalDays);
-        columns.resize(totalDays);
- 
         for(i = 0; i < totalDays; i++)
         {
             totalCentres[i] = 1;
         }
         for(i = 0; i < totalDays; i++)
         {
-//        totalCentres[i] = 1;
             for(j = 0; j < totalCentres[i]; j++)
             {
                 centreName[i].resize(totalCentres[i]);
@@ -104,17 +137,6 @@ void RoomDetail :: SetDefaultValue()
             }
         }
     }
-    /*
-    for(i = 0; i < totalDays; i++)
-    {
-        for(j = 0; j < totalCentres[i]; j++)
-        {
-            centreName[i][j] = "Centre 1";
-            roomNo[i][j] =  "Room 1, Room 2";
-            rows[i][j]   =  "6, 6";
-            columns[i][j]=  "8, 8";
-        }
-    }*/
 }
 
 /**
@@ -139,7 +161,6 @@ void RoomDetail :: ReadDateSheet()
     roomNo.resize(totalDays);
     rows.resize(totalDays);
     columns.resize(totalDays);
-//cout << totalDays;
  
     for(i = 0; i < totalDays; i++)
     {
