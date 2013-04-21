@@ -82,56 +82,6 @@ void ClassDetail :: SetDefaultValue()
     className[i]    =   "Info. Tech";
     subjectName[i]  =   "DBMS, SAD";
     subjectCode[i]  =   "IT-101, IT 102";   
-    
-/*     if(projectType == "Old")
-    {
-        i = j = 0;
-        value[j++] = className[i];
-        value[j++] = subjectName[i];
-        value[j++] = subjectCode[i];
-    }
-    else
-    {
-        for(i = 0; i < totalCols; i++)
-            value[i] = "";
-    }*/
-
-/*     //maxClasses      =   10;
-    i = 0;
-    className[i++]      =   "Info. Tech.";
-    className[i++]      =   "IT 2nd Yr";
-    className[i++]      =   "ECE";
-    className[i++]      =   "Mech. Engg.";
-    className[i++]      =   "Production Engg.";
-    className[i++]      =   "Electrical Engg.";
-    className[i++]      =   "IT";
-    className[i++]      =   "Electronics Engg.";
-    className[i++]      =   "Comp. Sci. Engg.";
-    className[i++]      =   "MBA";
-    
-    i = 0;
-    subjectName[i++]    =   "DBMS, SAD";
-    subjectName[i++]    =   "Maths,Physics";
-    subjectName[i++]    =   "OS, EVS";
-    subjectName[i++]    =   "Java, C++";
-    subjectName[i++]    =   "EVS";
-    subjectName[i++]    =   "Chem.";
-    subjectName[i++]    =   "ED";
-    subjectName[i++]    =   "Maths";
-    subjectName[i++]    =   "Maths,DBMS, Physics";
-    subjectName[i++]    =   "Multimedia, Dot Net, ED";
-
-    i = 0;
-    subjectCode[i++]    =   "IT-101, IT-102";
-    subjectCode[i++]    =   "ME-10,CE-252";
-    subjectCode[i++]    =   "EVS, ED-10";
-    subjectCode[i++]    =   "ED-10, IT-102";
-    subjectCode[i++]    =   "IT-102";
-    subjectCode[i++]    =   "IT-203";
-    subjectCode[i++]    =   "CE-120";
-    subjectCode[i++]    =   "ME-140";
-    subjectCode[i++]    =   "EE-109, 1234S, IT-203";
-    subjectCode[i++]    =   "ME-101,ME-501,IT-101";*/
 }
 
 /**
