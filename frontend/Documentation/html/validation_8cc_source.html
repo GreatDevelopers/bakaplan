@@ -102,21 +102,128 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="validation_8h.html" title="Validation class.">header/validation.h</a>&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;Validation :: Validation()</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">// constructor</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;Validation :: ~Validation()</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">// destructor</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *      \class  Validation</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *      \fn     Validation :: Validation()</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *      \brief  Constructor</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="classValidation.html#ada040c6d31004cc277e2b74290eec266">   24</a></span>&#160;<a class="code" href="classValidation.html#ada040c6d31004cc277e2b74290eec266" title="Constructor.">Validation :: Validation</a>()</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// constructor</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;   </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> *      \class  Validation</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *      \fn     Validation :: ReadStrategyDetail()</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *      \brief  Reading strategy value from last page</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="classValidation.html#ae90664b10a86d16af9991247a9875e9a">   36</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classValidation.html#ae90664b10a86d16af9991247a9875e9a" title="Reading strategy value from last page.">Validation :: ReadStrategyDetail</a>()</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageLayout.html#af1d13a4aa259cf62ccf92549b696de32">ContentType</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classInputDetail.html#a08069ee622c626c038b821ddcc7427b4">projectID</a> = <a class="code" href="classInputDetail.html#ac0cc70b017ef94fb55acb46fc44f0df5">readField</a>.<a class="code" href="classReadInputField.html#a7f6e49b47412649644cc644927ccc682">ReadFieldValue</a>(<a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#ac4bd117f3137956473f1a1d5ce9106a5">projectID</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classInputDetail.html#ad2c46fdc8093eb88e01497e55b2e8e4d">projectType</a> = <a class="code" href="classInputDetail.html#ac0cc70b017ef94fb55acb46fc44f0df5">readField</a>.<a class="code" href="classReadInputField.html#a7f6e49b47412649644cc644927ccc682">ReadFieldValue</a>(<a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#aaa398a603dfe98f4eca022ec9d90bc09">projectType</a>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classInputDetail.html#a8d1ba029791bb9b87330400d82cdbcde">totalDays</a> = <a class="code" href="classInputDetail.html#aaf532dd61f0aee82b116fef2da8e821f">StringToInt</a>(<a class="code" href="classInputDetail.html#ac0cc70b017ef94fb55acb46fc44f0df5">readField</a>.<a class="code" href="classReadInputField.html#a7f6e49b47412649644cc644927ccc682">ReadFieldValue</a>(</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                            <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a12ba65660edd7f8f7ecf1e25893716da">totalDays</a>));</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classInputDetail.html#a13313d76b2ccc308634a7d802a46936a">sameDetail</a> = <a class="code" href="classInputDetail.html#ac0cc70b017ef94fb55acb46fc44f0df5">readField</a>.<a class="code" href="classReadInputField.html#a7f6e49b47412649644cc644927ccc682">ReadFieldValue</a>(<a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a6de91205e7eac3168e17d100ab4d8e64">sameDetail</a>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classInputDetail.html#acbdbb6ecb850dec574b5878764c56c88">strategyChoice</a>.resize(<a class="code" href="classInputDetail.html#a8d1ba029791bb9b87330400d82cdbcde">totalDays</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; <a class="code" href="classInputDetail.html#a8d1ba029791bb9b87330400d82cdbcde">totalDays</a>; i++)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        j = i + 1;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="classInputDetail.html#acbdbb6ecb850dec574b5878764c56c88">strategyChoice</a>[i] = <a class="code" href="classInputDetail.html#ac0cc70b017ef94fb55acb46fc44f0df5">readField</a>.<a class="code" href="classReadInputField.html#a7f6e49b47412649644cc644927ccc682">ReadFieldValue</a>(</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                            <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a9a6b827d404cb279cc0ed836c069e4a9">strategyChoice</a>, j);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classValidation.html#ad4923b9d3fa95a060f922207468ae2f4" title="Write strategy detail into DB.">WriteStrategyDetail</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    validStrategy.<a class="code" href="classStrategy.html#a7d4c0323880066ee2815a3b3f20b61ea" title="Main Function to call all other functions.">Main</a>(<a class="code" href="classInputDetail.html#a08069ee622c626c038b821ddcc7427b4">projectID</a>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"> *      \class  Validation</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"> *      \fn     Validation :: WriteStrategyDetail()</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"> *      \brief  Write strategy detail into DB</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="code" href="classValidation.html#ad4923b9d3fa95a060f922207468ae2f4">   66</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classValidation.html#ad4923b9d3fa95a060f922207468ae2f4" title="Write strategy detail into DB.">Validation :: WriteStrategyDetail</a>()</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classInputDetail.html#a79d8a59940f25f4d2089e241c71a4279">where</a> = <span class="stringliteral">&quot;ProjectID = &quot;</span> + <a class="code" href="classInputDetail.html#a08069ee622c626c038b821ddcc7427b4">projectID</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classInputDetail.html#a479cd6c13833bd5de6e5630078c961b6">database</a>.<a class="code" href="classDatabase.html#a52049c686ad213533bdb1c4f2ac3c157">SelectColumn</a>(<a class="code" href="classInputDetail.html#abee6a659eb2e34b260aaf8b05d6003b4">vecTemp</a>, <span class="stringliteral">&quot;StrategyName&quot;</span>, </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                          <span class="stringliteral">&quot;StrategyDetail&quot;</span>, <a class="code" href="classInputDetail.html#a79d8a59940f25f4d2089e241c71a4279">where</a>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classInputDetail.html#abee6a659eb2e34b260aaf8b05d6003b4">vecTemp</a>.size() &gt; 0)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="classInputDetail.html#a479cd6c13833bd5de6e5630078c961b6">database</a>.<a class="code" href="classDatabase.html#a3ae42b73dea23470871c86af6b50bbf2" title="Delete Query.">DeleteQuery</a>(<span class="stringliteral">&quot;StrategyDetail&quot;</span>, <a class="code" href="classInputDetail.html#a79d8a59940f25f4d2089e241c71a4279">where</a>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; <a class="code" href="classInputDetail.html#a8d1ba029791bb9b87330400d82cdbcde">totalDays</a>; i++)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        temp = <a class="code" href="classInputDetail.html#ad0a78d7c864bcccf7813a526d59573be">IntToString</a>(i + 1);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="classInputDetail.html#a479cd6c13833bd5de6e5630078c961b6">database</a>.<a class="code" href="classDatabase.html#a8a13b478ab9c5c9fabc07b9513530bc0">InsertStrategyDetail</a>(<a class="code" href="classInputDetail.html#a08069ee622c626c038b821ddcc7427b4">projectID</a>, temp, </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                                      <a class="code" href="classInputDetail.html#acbdbb6ecb850dec574b5878764c56c88">strategyChoice</a>[i]);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">/* Writing I/P file for strategy detail */</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classInputDetail.html#a79d8a59940f25f4d2089e241c71a4279">where</a> = <span class="stringliteral">&quot;ProjectID = &quot;</span> + <a class="code" href="classInputDetail.html#a08069ee622c626c038b821ddcc7427b4">projectID</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classInputDetail.html#a479cd6c13833bd5de6e5630078c961b6">database</a>.<a class="code" href="classDatabase.html#a52049c686ad213533bdb1c4f2ac3c157">SelectColumn</a>(<a class="code" href="classInputDetail.html#abee6a659eb2e34b260aaf8b05d6003b4">vecTemp</a>, <span class="stringliteral">&quot;Date&quot;</span>, <span class="stringliteral">&quot;DateSheet&quot;</span>, <a class="code" href="classInputDetail.html#a79d8a59940f25f4d2089e241c71a4279">where</a>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">int</span> total = <a class="code" href="classInputDetail.html#abee6a659eb2e34b260aaf8b05d6003b4">vecTemp</a>.size();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> Days = 1;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="classInputDetail.html#abee6a659eb2e34b260aaf8b05d6003b4">vecTemp</a>.clear();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    temp = <a class="code" href="classInputDetail.html#a509ee6dd2de52e87cb764d0b0cceb05a" title="For creating filename w.r.t to projectID.">FileName</a>(STRATEGY, <a class="code" href="classInputDetail.html#a08069ee622c626c038b821ddcc7427b4">projectID</a>, 1);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="classInputDetail.html#a2b8484cfbfee98ae69e8476f8fd40000">outFile</a>.open(temp.c_str());</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="classInputDetail.html#a2b8484cfbfee98ae69e8476f8fd40000">outFile</a> &lt;&lt; total &lt;&lt; endl;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; <a class="code" href="classInputDetail.html#a8d1ba029791bb9b87330400d82cdbcde">totalDays</a>; i++)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="classInputDetail.html#a2b8484cfbfee98ae69e8476f8fd40000">outFile</a> &lt;&lt; <a class="code" href="classInputDetail.html#acbdbb6ecb850dec574b5878764c56c88">strategyChoice</a>[i] &lt;&lt; endl;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">if</span>(total &gt; totalDays)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">if</span>(Days &lt; total)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                i--;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                Days++;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="classInputDetail.html#a2b8484cfbfee98ae69e8476f8fd40000">outFile</a>.close();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment"> *      \class  Validation</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment"> *      \fn     Validation :: ValidationPage()</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment"> *      \brief  Validation.html page</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="code" href="classValidation.html#af93988b87e0fd8d086e0c7aed80ba0b7">  118</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classValidation.html#af93988b87e0fd8d086e0c7aed80ba0b7" title="Validation.html page.">Validation :: ValidationPage</a>()</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageLayout.html#af1d13a4aa259cf62ccf92549b696de32">ContentType</a>();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"> *      \class  Validation</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment"> *      \fn     Validation :: ~Validation</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment"> *      \brief  Destructor</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="code" href="classValidation.html#a8f5a5bdb6977eda8313bceabe8db814b">  130</a></span>&#160;<a class="code" href="classValidation.html#a8f5a5bdb6977eda8313bceabe8db814b" title="Destructor.">Validation :: ~Validation</a>()</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="comment">// destructor</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 21 2013 00:42:03 for Front End of BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 21 2013 20:34:04 for Front End of BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

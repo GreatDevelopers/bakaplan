@@ -88,17 +88,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Datesheet class for taking datesheet detail from user.  
+<p><a class="el" href="classDateSheet.html" title="DateSheet class for reading datesheet detail, class detail and create datesheet.out file for seating ...">DateSheet</a> class for reading datesheet detail, class detail and create datesheet.out file for seating plan.  
  <a href="classDateSheet.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="datesheet_8h_source.html">datesheet.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="backend_2header_2datesheet_8h_source.html">datesheet.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for DateSheet:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classDateSheet.png" usemap="#DateSheet_map" alt=""/>
   <map id="DateSheet_map" name="DateSheet_map">
-<area href="classInputDetail.html" title="Declare common variables, functions that are used by derived class." alt="InputDetail" shape="rect" coords="0,0,71,24"/>
+<area href="classInputDetail.html" title="Declare common variables, functions that are used by derived class." alt="InputDetail" shape="rect" coords="0,56,96,80"/>
+<area href="classArrangeRollNo.html" title="Arrange roll no class for sorting, removing redundant roll nos and also excludeing roll nos that are ..." alt="ArrangeRollNo" shape="rect" coords="106,56,202,80"/>
+<area href="classReadInput.html" title="Class for reading input files ie reading roll no details, class detail, room detail, etc." alt="ReadInput" shape="rect" coords="106,0,202,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -106,6 +108,13 @@ Inheritance diagram for DateSheet:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a17a1e5adc9b48e53091b89061ee0a360"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDateSheet.html#a17a1e5adc9b48e53091b89061ee0a360">DateSheet</a> ()</td></tr>
 <tr class="memdesc:a17a1e5adc9b48e53091b89061ee0a360"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a17a1e5adc9b48e53091b89061ee0a360"></a><br/></td></tr>
+<tr class="memitem:a8c1bd0daf35e3ea6f962a03fe78cdfa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDateSheet.html#a8c1bd0daf35e3ea6f962a03fe78cdfa3">AddRollNoWithDateSheet</a> ()</td></tr>
+<tr class="memdesc:a8c1bd0daf35e3ea6f962a03fe78cdfa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adding roll no to with exam subject code in datesheet.  <a href="#a8c1bd0daf35e3ea6f962a03fe78cdfa3"></a><br/></td></tr>
+<tr class="memitem:a3f7ea57a0ed85dc6c09f0eda9c30016b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDateSheet.html#a3f7ea57a0ed85dc6c09f0eda9c30016b">WriteDateSheet</a> (string <a class="el" href="classInputDetail.html#a08069ee622c626c038b821ddcc7427b4">projectID</a>)</td></tr>
+<tr class="memitem:af749306c14297b5c93c16f48f551d5bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDateSheet.html#af749306c14297b5c93c16f48f551d5bb">Main</a> (string pID)</td></tr>
+<tr class="memitem:af17d25ae4f39caf7b9ea62d73541813b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDateSheet.html#af17d25ae4f39caf7b9ea62d73541813b">~DateSheet</a> ()</td></tr>
+<tr class="memdesc:af17d25ae4f39caf7b9ea62d73541813b"><td class="mdescLeft">&#160;</td><td class="mdescRight">DEstructor.  <a href="#af17d25ae4f39caf7b9ea62d73541813b"></a><br/></td></tr>
+<tr class="memitem:a17a1e5adc9b48e53091b89061ee0a360"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDateSheet.html#a17a1e5adc9b48e53091b89061ee0a360">DateSheet</a> ()</td></tr>
 <tr class="memitem:a0d68cd26658c7dfc37ef512e6ed30528"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDateSheet.html#a0d68cd26658c7dfc37ef512e6ed30528">ReadRollNoDetail</a> ()</td></tr>
 <tr class="memdesc:a0d68cd26658c7dfc37ef512e6ed30528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reading roll no details filled by user.  <a href="#a0d68cd26658c7dfc37ef512e6ed30528"></a><br/></td></tr>
 <tr class="memitem:ab34e451b5322710f149a1fff5386d852"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDateSheet.html#ab34e451b5322710f149a1fff5386d852">WriteRollNoDetail</a> ()</td></tr>
@@ -113,24 +122,56 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2eab7d9256cd56064671ac4974846a7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDateSheet.html#a2eab7d9256cd56064671ac4974846a7a">SetDefaultValue</a> ()</td></tr>
 <tr class="memdesc:a2eab7d9256cd56064671ac4974846a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setting default values for i/p field of datesheet.  <a href="#a2eab7d9256cd56064671ac4974846a7a"></a><br/></td></tr>
 <tr class="memitem:a3a1721837309480f64f78745b865615f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDateSheet.html#a3a1721837309480f64f78745b865615f">DateSheetPage</a> ()</td></tr>
-<tr class="memdesc:a3a1721837309480f64f78745b865615f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classDateSheet.html" title="Datesheet class for taking datesheet detail from user.">DateSheet</a> Page for taking I/P from user.  <a href="#a3a1721837309480f64f78745b865615f"></a><br/></td></tr>
+<tr class="memdesc:a3a1721837309480f64f78745b865615f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classDateSheet.html" title="DateSheet class for reading datesheet detail, class detail and create datesheet.out file for seating ...">DateSheet</a> Page for taking I/P from user.  <a href="#a3a1721837309480f64f78745b865615f"></a><br/></td></tr>
 <tr class="memitem:af17d25ae4f39caf7b9ea62d73541813b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDateSheet.html#af17d25ae4f39caf7b9ea62d73541813b">~DateSheet</a> ()</td></tr>
-<tr class="memdesc:af17d25ae4f39caf7b9ea62d73541813b"><td class="mdescLeft">&#160;</td><td class="mdescRight">DEstructor.  <a href="#af17d25ae4f39caf7b9ea62d73541813b"></a><br/></td></tr>
 <tr class="inherit_header pub_methods_classInputDetail"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classInputDetail')"><img src="closed.png" alt="-"/>&nbsp;Public Member Functions inherited from <a class="el" href="classInputDetail.html">InputDetail</a></td></tr>
 <tr class="memitem:ab53655b14d922eb32b5d5d06c702e497 inherit pub_methods_classInputDetail"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#ab53655b14d922eb32b5d5d06c702e497">InputDetail</a> ()</td></tr>
 <tr class="memitem:ae55dcc0e15b85d302a09046b145330bb inherit pub_methods_classInputDetail"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#ae55dcc0e15b85d302a09046b145330bb">Header</a> (string titleName)</td></tr>
 <tr class="memitem:acbc05b1bc6a371cf0a52222cc95e467d inherit pub_methods_classInputDetail"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#acbc05b1bc6a371cf0a52222cc95e467d">Footer</a> ()</td></tr>
 <tr class="memitem:ad0a78d7c864bcccf7813a526d59573be inherit pub_methods_classInputDetail"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#ad0a78d7c864bcccf7813a526d59573be">IntToString</a> (int value)</td></tr>
 <tr class="memitem:aaf532dd61f0aee82b116fef2da8e821f inherit pub_methods_classInputDetail"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#aaf532dd61f0aee82b116fef2da8e821f">StringToInt</a> (string value)</td></tr>
-<tr class="memdesc:aaf532dd61f0aee82b116fef2da8e821f inherit pub_methods_classInputDetail"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert String to Integer.  <a href="#aaf532dd61f0aee82b116fef2da8e821f"></a><br/></td></tr>
 <tr class="memitem:a7f1d6cf5e946dadd511c2437b796e5f7 inherit pub_methods_classInputDetail"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#a7f1d6cf5e946dadd511c2437b796e5f7">ErrorMessage</a> (string <a class="el" href="classInputDetail.html#a1abb16cd695678c3fa05e3c812823fee">msg</a>=&quot;&quot;)</td></tr>
 <tr class="memitem:aaf6caee10a13697ca6dc2bc9aa02e8ab inherit pub_methods_classInputDetail"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#aaf6caee10a13697ca6dc2bc9aa02e8ab">Time</a> ()</td></tr>
+<tr class="memitem:aba635a55313b14cf8bb285560a55498e inherit pub_methods_classInputDetail"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#aba635a55313b14cf8bb285560a55498e">SplitString</a> (STRING_VEC &amp;output, string input, string token)</td></tr>
+<tr class="memdesc:aba635a55313b14cf8bb285560a55498e inherit pub_methods_classInputDetail"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split string using boost library func.  <a href="#aba635a55313b14cf8bb285560a55498e"></a><br/></td></tr>
+<tr class="memitem:a509ee6dd2de52e87cb764d0b0cceb05a inherit pub_methods_classInputDetail"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#a509ee6dd2de52e87cb764d0b0cceb05a">FileName</a> (string file, string <a class="el" href="classInputDetail.html#a08069ee622c626c038b821ddcc7427b4">projectID</a>, int fileType)</td></tr>
+<tr class="memdesc:a509ee6dd2de52e87cb764d0b0cceb05a inherit pub_methods_classInputDetail"><td class="mdescLeft">&#160;</td><td class="mdescRight">For creating filename w.r.t to projectID.  <a href="#a509ee6dd2de52e87cb764d0b0cceb05a"></a><br/></td></tr>
+<tr class="inherit_header pub_methods_classArrangeRollNo"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classArrangeRollNo')"><img src="closed.png" alt="-"/>&nbsp;Public Member Functions inherited from <a class="el" href="classArrangeRollNo.html">ArrangeRollNo</a></td></tr>
+<tr class="memitem:a430515990d97ffa02b65ed5d15d79c9f inherit pub_methods_classArrangeRollNo"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrangeRollNo.html#a430515990d97ffa02b65ed5d15d79c9f">ArrangeRollNo</a> ()</td></tr>
+<tr class="memdesc:a430515990d97ffa02b65ed5d15d79c9f inherit pub_methods_classArrangeRollNo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a430515990d97ffa02b65ed5d15d79c9f"></a><br/></td></tr>
+<tr class="memitem:aae9734fb7b98d980d3f1feb1b52a6195 inherit pub_methods_classArrangeRollNo"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrangeRollNo.html#aae9734fb7b98d980d3f1feb1b52a6195">SortRollNo</a> (INT_VEC &amp;rollno)</td></tr>
+<tr class="memdesc:aae9734fb7b98d980d3f1feb1b52a6195 inherit pub_methods_classArrangeRollNo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for sorting roll no vector array.  <a href="#aae9734fb7b98d980d3f1feb1b52a6195"></a><br/></td></tr>
+<tr class="memitem:ab0b6350a9113b86925133d7199929020 inherit pub_methods_classArrangeRollNo"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrangeRollNo.html#ab0b6350a9113b86925133d7199929020">RemoveRedundancy</a> (INT_VEC &amp;rollno)</td></tr>
+<tr class="memitem:adeb652c1977c668d2cd519c1a4f317bd inherit pub_methods_classArrangeRollNo"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrangeRollNo.html#adeb652c1977c668d2cd519c1a4f317bd">RemoveNonEligibleRollNo</a> (INT_VEC &amp;rollno, INT_VEC &amp;<a class="el" href="classArrangeRollNo.html#a1f6740950e3180731b74c3ecdc19b98c">notIncludedRNo</a>)</td></tr>
+<tr class="memdesc:adeb652c1977c668d2cd519c1a4f317bd inherit pub_methods_classArrangeRollNo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removing roll no that are not eligible.  <a href="#adeb652c1977c668d2cd519c1a4f317bd"></a><br/></td></tr>
+<tr class="memitem:a69151212acbfeb90780b066ade988418 inherit pub_methods_classArrangeRollNo"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrangeRollNo.html#a69151212acbfeb90780b066ade988418">AddPrefixWithRollNo</a> (INT_VEC &amp;rollno, STRING_VEC &amp;<a class="el" href="classArrangeRollNo.html#ac70b1f6e601cc5786ef339a38ae18c6f">prefix</a>)</td></tr>
+<tr class="memdesc:a69151212acbfeb90780b066ade988418 inherit pub_methods_classArrangeRollNo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adding prefix with roll nos.  <a href="#a69151212acbfeb90780b066ade988418"></a><br/></td></tr>
+<tr class="memitem:a12e17989e12519e37083b7f5649ebbec inherit pub_methods_classArrangeRollNo"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrangeRollNo.html#a12e17989e12519e37083b7f5649ebbec">WriteArrangedRollNo</a> ()</td></tr>
+<tr class="memdesc:a12e17989e12519e37083b7f5649ebbec inherit pub_methods_classArrangeRollNo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writing arranged roll nos to file as O/p file.  <a href="#a12e17989e12519e37083b7f5649ebbec"></a><br/></td></tr>
+<tr class="memitem:acbdaa06590d381ec19a7a07c718b9282 inherit pub_methods_classArrangeRollNo"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrangeRollNo.html#acbdaa06590d381ec19a7a07c718b9282">~ArrangeRollNo</a> ()</td></tr>
+<tr class="memdesc:acbdaa06590d381ec19a7a07c718b9282 inherit pub_methods_classArrangeRollNo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#acbdaa06590d381ec19a7a07c718b9282"></a><br/></td></tr>
+<tr class="inherit_header pub_methods_classReadInput"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classReadInput')"><img src="closed.png" alt="-"/>&nbsp;Public Member Functions inherited from <a class="el" href="classReadInput.html">ReadInput</a></td></tr>
+<tr class="memitem:a181da3d718520ea9168808dde2d3e867 inherit pub_methods_classReadInput"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReadInput.html#a181da3d718520ea9168808dde2d3e867">ReadInput</a> ()</td></tr>
+<tr class="memdesc:a181da3d718520ea9168808dde2d3e867 inherit pub_methods_classReadInput"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a181da3d718520ea9168808dde2d3e867"></a><br/></td></tr>
+<tr class="memitem:a990ac303132881774253593565e85bd0 inherit pub_methods_classReadInput"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReadInput.html#a990ac303132881774253593565e85bd0">FileName</a> (string file, string <a class="el" href="classReadInput.html#a3ad470a25b3e0a29466bf4ff1f7d8e81">projectID</a>, int fileType)</td></tr>
+<tr class="memdesc:a990ac303132881774253593565e85bd0 inherit pub_methods_classReadInput"><td class="mdescLeft">&#160;</td><td class="mdescRight">For creating filename w.r.t to projectID.  <a href="#a990ac303132881774253593565e85bd0"></a><br/></td></tr>
+<tr class="memitem:a6a901973196e63579e4452fede5ce01e inherit pub_methods_classReadInput"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReadInput.html#a6a901973196e63579e4452fede5ce01e">ReadRollNoDetail</a> (string <a class="el" href="classReadInput.html#a3ad470a25b3e0a29466bf4ff1f7d8e81">projectID</a>)</td></tr>
+<tr class="memdesc:a6a901973196e63579e4452fede5ce01e inherit pub_methods_classReadInput"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reading Roll No detail from file.  <a href="#a6a901973196e63579e4452fede5ce01e"></a><br/></td></tr>
+<tr class="memitem:aff1e359dc8b72c710bb15647ff4e78da inherit pub_methods_classReadInput"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReadInput.html#aff1e359dc8b72c710bb15647ff4e78da">ReadClassDetail</a> (string <a class="el" href="classReadInput.html#a3ad470a25b3e0a29466bf4ff1f7d8e81">projectID</a>)</td></tr>
+<tr class="memdesc:aff1e359dc8b72c710bb15647ff4e78da inherit pub_methods_classReadInput"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reading class details.  <a href="#aff1e359dc8b72c710bb15647ff4e78da"></a><br/></td></tr>
+<tr class="memitem:a582c57e19fd218bfdc8b83d6e8599ea2 inherit pub_methods_classReadInput"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReadInput.html#a582c57e19fd218bfdc8b83d6e8599ea2">ReadDateSheet</a> (string <a class="el" href="classReadInput.html#a3ad470a25b3e0a29466bf4ff1f7d8e81">projectID</a>)</td></tr>
+<tr class="memdesc:a582c57e19fd218bfdc8b83d6e8599ea2 inherit pub_methods_classReadInput"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reading datesheet.  <a href="#a582c57e19fd218bfdc8b83d6e8599ea2"></a><br/></td></tr>
+<tr class="memitem:aa8c2bc34575b32291e05bc00515530e5 inherit pub_methods_classReadInput"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReadInput.html#aa8c2bc34575b32291e05bc00515530e5">ReadDateSheetOut</a> (string <a class="el" href="classReadInput.html#a3ad470a25b3e0a29466bf4ff1f7d8e81">projectID</a>)</td></tr>
+<tr class="memdesc:aa8c2bc34575b32291e05bc00515530e5 inherit pub_methods_classReadInput"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reading datesheet.out file.  <a href="#aa8c2bc34575b32291e05bc00515530e5"></a><br/></td></tr>
+<tr class="memitem:a7a95590528e5e82277f75285e034eddd inherit pub_methods_classReadInput"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReadInput.html#a7a95590528e5e82277f75285e034eddd">ReadRoomDetail</a> (string <a class="el" href="classReadInput.html#a3ad470a25b3e0a29466bf4ff1f7d8e81">projectID</a>)</td></tr>
+<tr class="memdesc:a7a95590528e5e82277f75285e034eddd inherit pub_methods_classReadInput"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reading room details.  <a href="#a7a95590528e5e82277f75285e034eddd"></a><br/></td></tr>
+<tr class="memitem:a771826aa24574ac60472560c2c764755 inherit pub_methods_classReadInput"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReadInput.html#a771826aa24574ac60472560c2c764755">ReadStrategy</a> (string <a class="el" href="classReadInput.html#a3ad470a25b3e0a29466bf4ff1f7d8e81">projectID</a>)</td></tr>
+<tr class="memdesc:a771826aa24574ac60472560c2c764755 inherit pub_methods_classReadInput"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for reading strategy.  <a href="#a771826aa24574ac60472560c2c764755"></a><br/></td></tr>
+<tr class="memitem:aec19e94e448ed46207c55412a61728fa inherit pub_methods_classReadInput"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReadInput.html#aec19e94e448ed46207c55412a61728fa">~ReadInput</a> ()</td></tr>
+<tr class="memdesc:aec19e94e448ed46207c55412a61728fa inherit pub_methods_classReadInput"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#aec19e94e448ed46207c55412a61728fa"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_attribs_classInputDetail"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classInputDetail')"><img src="closed.png" alt="-"/>&nbsp;Public Attributes inherited from <a class="el" href="classInputDetail.html">InputDetail</a></td></tr>
-<tr class="memitem:a10827b6d56739ebca7c3526d0b2d0c7d inherit pub_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10827b6d56739ebca7c3526d0b2d0c7d"></a>
-<a class="el" href="classDatabase.html">Database</a>&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
 <tr class="inherit_header pro_attribs_classInputDetail"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classInputDetail')"><img src="closed.png" alt="-"/>&nbsp;Protected Attributes inherited from <a class="el" href="classInputDetail.html">InputDetail</a></td></tr>
 <tr class="memitem:ac6f85380c5152c406d483726382c4798 inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInputFieldName.html">InputFieldName</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a></td></tr>
 <tr class="memitem:ac0cc70b017ef94fb55acb46fc44f0df5 inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classReadInputField.html">ReadInputField</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#ac0cc70b017ef94fb55acb46fc44f0df5">readField</a></td></tr>
@@ -155,6 +196,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 <tr class="memitem:a1abb16cd695678c3fa05e3c812823fee inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#a1abb16cd695678c3fa05e3c812823fee">msg</a></td></tr>
 <tr class="memitem:abee6a659eb2e34b260aaf8b05d6003b4 inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top">STRING_VEC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#abee6a659eb2e34b260aaf8b05d6003b4">vecTemp</a></td></tr>
 <tr class="memitem:ae8ccc2e838c6d5a93ea544370dc1f272 inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top">STRING_VEC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#ae8ccc2e838c6d5a93ea544370dc1f272">oldProject</a></td></tr>
+<tr class="memitem:ab09ed4176090a72237531cedf00afb41 inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top">STRING_VEC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#ab09ed4176090a72237531cedf00afb41">splitString</a></td></tr>
 <tr class="memitem:a4c62c1934fbfcdcc8e2afaee44a87c15 inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top">ifstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#a4c62c1934fbfcdcc8e2afaee44a87c15">inFile</a></td></tr>
 <tr class="memitem:a2b8484cfbfee98ae69e8476f8fd40000 inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top">ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#a2b8484cfbfee98ae69e8476f8fd40000">outFile</a></td></tr>
 <tr class="memitem:a1f276e4df260009d465032ec64f3a543 inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#a1f276e4df260009d465032ec64f3a543">sessionID</a></td></tr>
@@ -185,13 +227,39 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 <tr class="memitem:a3193354764ba0b44b2eb4b366b4c273a inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top">STRING_2DVEC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#a3193354764ba0b44b2eb4b366b4c273a">roomNo</a></td></tr>
 <tr class="memitem:aa203edbcfd4083624dbc4dc055c1e6e5 inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top">STRING_2DVEC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#aa203edbcfd4083624dbc4dc055c1e6e5">rows</a></td></tr>
 <tr class="memitem:a8563f1b6c4d2e74a9b8421a12585395c inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top">STRING_2DVEC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#a8563f1b6c4d2e74a9b8421a12585395c">columns</a></td></tr>
+<tr class="memitem:a09dcf8264ffc09609448e32b0f27bd9a inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09dcf8264ffc09609448e32b0f27bd9a"></a>
+INT_VEC&#160;</td><td class="memItemRight" valign="bottom"><b>totalSubjects</b></td></tr>
+<tr class="memitem:ae47ff085393d9555ae7c080759a7dae7 inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae47ff085393d9555ae7c080759a7dae7"></a>
+INT_2DVEC&#160;</td><td class="memItemRight" valign="bottom"><b>totalRooms</b></td></tr>
+<tr class="memitem:a375eb1fe30c29f80a2020dd63c173428 inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a375eb1fe30c29f80a2020dd63c173428"></a>
+STRING_2DVEC&#160;</td><td class="memItemRight" valign="bottom"><b>subCode</b></td></tr>
+<tr class="memitem:ad5279168818a6af3578a0f70e4be195d inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5279168818a6af3578a0f70e4be195d"></a>
+STRING_2DVEC&#160;</td><td class="memItemRight" valign="bottom"><b>subName</b></td></tr>
+<tr class="memitem:a01a2dbec27704527002029a9ed8bb35f inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01a2dbec27704527002029a9ed8bb35f"></a>
+STRING_3DVEC&#160;</td><td class="memItemRight" valign="bottom"><b>rmNo</b></td></tr>
+<tr class="memitem:a2ecfc489098c98cf26d22ca422572a0f inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ecfc489098c98cf26d22ca422572a0f"></a>
+STRING_3DVEC&#160;</td><td class="memItemRight" valign="bottom"><b>row</b></td></tr>
+<tr class="memitem:a7d61822dbecef7d625efc05d7ab6bd30 inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d61822dbecef7d625efc05d7ab6bd30"></a>
+STRING_3DVEC&#160;</td><td class="memItemRight" valign="bottom"><b>col</b></td></tr>
+<tr class="inherit_header pro_attribs_classArrangeRollNo"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classArrangeRollNo')"><img src="closed.png" alt="-"/>&nbsp;Protected Attributes inherited from <a class="el" href="classArrangeRollNo.html">ArrangeRollNo</a></td></tr>
+<tr class="memitem:ad75d3ee3f709606da5b4871098c3e978 inherit pro_attribs_classArrangeRollNo"><td class="memItemLeft" align="right" valign="top">INT_VEC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrangeRollNo.html#ad75d3ee3f709606da5b4871098c3e978">rollNo</a></td></tr>
+<tr class="memitem:a1f6740950e3180731b74c3ecdc19b98c inherit pro_attribs_classArrangeRollNo"><td class="memItemLeft" align="right" valign="top">INT_VEC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrangeRollNo.html#a1f6740950e3180731b74c3ecdc19b98c">notIncludedRNo</a></td></tr>
+<tr class="memitem:ab39f82c658365388d106b3dcc18e69fb inherit pro_attribs_classArrangeRollNo"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab39f82c658365388d106b3dcc18e69fb"></a>
+INT_VEC&#160;</td><td class="memItemRight" valign="bottom"><b>rollNoSize</b></td></tr>
+<tr class="memitem:a728b87c54815f5393e93da5909ed90b2 inherit pro_attribs_classArrangeRollNo"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a728b87c54815f5393e93da5909ed90b2"></a>
+INT_VEC&#160;</td><td class="memItemRight" valign="bottom"><b>notIncludedRNoSize</b></td></tr>
+<tr class="memitem:ac70b1f6e601cc5786ef339a38ae18c6f inherit pro_attribs_classArrangeRollNo"><td class="memItemLeft" align="right" valign="top">STRING_VEC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrangeRollNo.html#ac70b1f6e601cc5786ef339a38ae18c6f">prefix</a></td></tr>
+<tr class="memitem:aa0401159b5d59c7afe77980a391a9a0a inherit pro_attribs_classArrangeRollNo"><td class="memItemLeft" align="right" valign="top">STRING_2DVEC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrangeRollNo.html#aa0401159b5d59c7afe77980a391a9a0a">prefixRollNo</a></td></tr>
+<tr class="memitem:a7ddd59b57f85cf6fea265d38c284df92 inherit pro_attribs_classArrangeRollNo"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classExpandRollNo.html">ExpandRollNo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrangeRollNo.html#a7ddd59b57f85cf6fea265d38c284df92">expandRNo</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Datesheet class for taking datesheet detail from user. </p>
-<p>include <a class="el" href="datesheet_8h.html" title="Datesheet class for taking i/p from user.">datesheet.h</a></p>
+<div class="textblock"><p><a class="el" href="classDateSheet.html" title="DateSheet class for reading datesheet detail, class detail and create datesheet.out file for seating ...">DateSheet</a> class for reading datesheet detail, class detail and create datesheet.out file for seating plan. </p>
+<p>Datesheet class for taking datesheet detail from user.</p>
+<p>Include <a class="el" href="arrangerollno_8h.html" title="ArrangeRollNo class for arranging roll no, sorting, and removing roll nos that are not required for s...">arrangerollno.h</a> header file</p>
+<p>include datesheet.h</p>
 <p>include <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a> </p>
 
-<p>Definition at line <a class="el" href="datesheet_8h_source.html#l00029">29</a> of file <a class="el" href="datesheet_8h_source.html">datesheet.h</a>.</p>
+<p>Definition at line <a class="el" href="backend_2header_2datesheet_8h_source.html#l00027">27</a> of file <a class="el" href="backend_2header_2datesheet_8h_source.html">datesheet.h</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a17a1e5adc9b48e53091b89061ee0a360"></a>
 <div class="memitem">
@@ -209,7 +277,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 <p>Constructor. </p>
 <p>Constructor </p>
 
-<p>Definition at line <a class="el" href="datesheet_8cc_source.html#l00027">27</a> of file <a class="el" href="datesheet_8cc_source.html">datesheet.cc</a>.</p>
+<p>Definition at line <a class="el" href="backend_2datesheet_8cc_source.html#l00027">27</a> of file <a class="el" href="backend_2datesheet_8cc_source.html">datesheet.cc</a>.</p>
 
 </div>
 </div>
@@ -227,13 +295,65 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 
 <p>DEstructor. </p>
-<p>Destructor </p>
+<p>Desructor </p>
 
-<p>Definition at line <a class="el" href="datesheet_8cc_source.html#l00271">271</a> of file <a class="el" href="datesheet_8cc_source.html">datesheet.cc</a>.</p>
+<p>Definition at line <a class="el" href="backend_2datesheet_8cc_source.html#l00161">161</a> of file <a class="el" href="backend_2datesheet_8cc_source.html">datesheet.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a17a1e5adc9b48e53091b89061ee0a360"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateSheet::DateSheet </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructor </p>
+
+</div>
+</div>
+<a class="anchor" id="af17d25ae4f39caf7b9ea62d73541813b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateSheet::~DateSheet </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destructor </p>
 
 </div>
 </div>
 <h2>Member Function Documentation</h2>
+<a class="anchor" id="a8c1bd0daf35e3ea6f962a03fe78cdfa3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DateSheet::AddRollNoWithDateSheet </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adding roll no to with exam subject code in datesheet. </p>
+<p>Adding roll nos with date sheet </p>
+
+<p>Definition at line <a class="el" href="backend_2datesheet_8cc_source.html#l00038">38</a> of file <a class="el" href="backend_2datesheet_8cc_source.html">datesheet.cc</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3a1721837309480f64f78745b865615f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -247,10 +367,31 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classDateSheet.html" title="Datesheet class for taking datesheet detail from user.">DateSheet</a> Page for taking I/P from user. </p>
-<p><a class="el" href="classDateSheet.html" title="Datesheet class for taking datesheet detail from user.">DateSheet</a> page for taking I/P from user </p>
+<p><a class="el" href="classDateSheet.html" title="DateSheet class for reading datesheet detail, class detail and create datesheet.out file for seating ...">DateSheet</a> Page for taking I/P from user. </p>
+<p><a class="el" href="classDateSheet.html" title="DateSheet class for reading datesheet detail, class detail and create datesheet.out file for seating ...">DateSheet</a> page for taking I/P from user </p>
 
-<p>Definition at line <a class="el" href="datesheet_8cc_source.html#l00160">160</a> of file <a class="el" href="datesheet_8cc_source.html">datesheet.cc</a>.</p>
+<p>Definition at line <a class="el" href="datesheet_8cc_source.html#l00181">181</a> of file <a class="el" href="datesheet_8cc_source.html">datesheet.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af749306c14297b5c93c16f48f551d5bb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DateSheet::Main </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>pID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Main function to call other functions </p>
+
+<p>Reimplemented from <a class="el" href="classArrangeRollNo.html#a795fde3b512631e07d7189138b39b775">ArrangeRollNo</a>.</p>
+
+<p>Definition at line <a class="el" href="backend_2datesheet_8cc_source.html#l00143">143</a> of file <a class="el" href="backend_2datesheet_8cc_source.html">datesheet.cc</a>.</p>
 
 </div>
 </div>
@@ -290,7 +431,26 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 <p>Setting default values for i/p field of datesheet. </p>
 <p>Setting dafalut values for datedheet page </p>
 
-<p>Definition at line <a class="el" href="datesheet_8cc_source.html#l00144">144</a> of file <a class="el" href="datesheet_8cc_source.html">datesheet.cc</a>.</p>
+<p>Definition at line <a class="el" href="datesheet_8cc_source.html#l00165">165</a> of file <a class="el" href="datesheet_8cc_source.html">datesheet.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3f7ea57a0ed85dc6c09f0eda9c30016b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DateSheet::WriteDateSheet </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>projectID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Writing datesheet.out file i.e. used for seating plan </p>
+
+<p>Definition at line <a class="el" href="backend_2datesheet_8cc_source.html#l00099">99</a> of file <a class="el" href="backend_2datesheet_8cc_source.html">datesheet.cc</a>.</p>
 
 </div>
 </div>
@@ -315,13 +475,15 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/header/<a class="el" href="datesheet_8h_source.html">datesheet.h</a></li>
+<li>src/backend/header/<a class="el" href="backend_2header_2datesheet_8h_source.html">datesheet.h</a></li>
+<li>src/header/<a class="el" href="header_2datesheet_8h_source.html">datesheet.h</a></li>
+<li>src/backend/<a class="el" href="backend_2datesheet_8cc_source.html">datesheet.cc</a></li>
 <li>src/<a class="el" href="datesheet_8cc_source.html">datesheet.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 21 2013 00:42:05 for Front End of BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 21 2013 20:34:06 for Front End of BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

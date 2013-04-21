@@ -12,6 +12,15 @@ var searchData=
   ['examdetailpage',['ExamDetailPage',['../classExamDetail.html#aa5bccd1f578e6149ad212206e95d9d57',1,'ExamDetail']]],
   ['examname',['examName',['../classInputDetail.html#a7b4e4a2a26f23da75d9928601a88a1d9',1,'InputDetail::examName()'],['../classInputFieldName.html#a4cee41667cdc0e38f8f76af94ef39c36',1,'InputFieldName::examName()']]],
   ['examsession',['examSession',['../classInputDetail.html#a4501d1379c278965497abf21d369ad9e',1,'InputDetail::examSession()'],['../classInputFieldName.html#afef45e787d3c737f9bdc3126ce29d8b9',1,'InputFieldName::examSession()']]],
+  ['examsubcode',['examSubCode',['../classReadInput.html#a81eee5f7478e5d2d76afad814a6c4e3e',1,'ReadInput']]],
+  ['examsubname',['examSubName',['../classReadInput.html#a6ac62618d1b89d823230ae93c7b85c3b',1,'ReadInput']]],
   ['examtime',['examTime',['../classInputDetail.html#a847dd8bb2f0c43960746cfa4d2310a15',1,'InputDetail::examTime()'],['../classInputFieldName.html#ab667062be019e5912683d33c45885bd3',1,'InputFieldName::examTime()']]],
-  ['examvenue',['examVenue',['../classInputDetail.html#a695928668a413ac052776c0b6cb27501',1,'InputDetail::examVenue()'],['../classInputFieldName.html#affaa2fe8246959748f43ea58f161b2b5',1,'InputFieldName::examVenue()']]]
+  ['examvenue',['examVenue',['../classInputDetail.html#a695928668a413ac052776c0b6cb27501',1,'InputDetail::examVenue()'],['../classInputFieldName.html#affaa2fe8246959748f43ea58f161b2b5',1,'InputFieldName::examVenue()']]],
+  ['exapandrollno',['ExapandRollNo',['../classExapandRollNo.html',1,'']]],
+  ['expandrno',['expandRNo',['../classArrangeRollNo.html#a7ddd59b57f85cf6fea265d38c284df92',1,'ArrangeRollNo']]],
+  ['expandrollno',['ExpandRollNo',['../classExpandRollNo.html',1,'ExpandRollNo'],['../classExpandRollNo.html#a60e3a3d50ebe826b6d5c3304757812ca',1,'ExpandRollNo::ExpandRollNo()']]],
+  ['expandrollno_2ecc',['expandrollno.cc',['../expandrollno_8cc.html',1,'']]],
+  ['expandrollno_2eh',['expandrollno.h',['../expandrollno_8h.html',1,'']]],
+  ['expandrollnolist',['ExpandRollNoList',['../classExpandRollNo.html#afcb476d9d9f1fdabd456f3ec84b14184',1,'ExpandRollNo']]],
+  ['expandrollnos',['ExpandRollNos',['../classExpandRollNo.html#a4917831a98da9aa068b2589945b46065',1,'ExpandRollNo']]]
 ];

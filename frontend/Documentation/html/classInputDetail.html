@@ -82,7 +82,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classInputDetail-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -101,13 +100,13 @@ Inheritance diagram for InputDetail:</div>
   <img src="classInputDetail.png" usemap="#InputDetail_map" alt=""/>
   <map id="InputDetail_map" name="InputDetail_map">
 <area href="classClassDetail.html" title="For getting class details nd reading projectdetail." alt="ClassDetail" shape="rect" coords="91,56,172,80"/>
-<area href="classDateSheet.html" title="Datesheet class for taking datesheet detail from user." alt="DateSheet" shape="rect" coords="91,112,172,136"/>
+<area href="classDateSheet.html" title="DateSheet class for reading datesheet detail, class detail and create datesheet.out file for seating ..." alt="DateSheet" shape="rect" coords="91,112,172,136"/>
 <area href="classExamDetail.html" title="ExamDetail class for getting exam from user." alt="ExamDetail" shape="rect" coords="91,168,172,192"/>
 <area href="classLogin.html" alt="Login" shape="rect" coords="91,224,172,248"/>
 <area href="classReport.html" alt="Report" shape="rect" coords="91,280,172,304"/>
 <area href="classRollNoDetail.html" title="RollNoDetail class for taking roll no detail from user." alt="RollNoDetail" shape="rect" coords="91,336,172,360"/>
 <area href="classRoomDetail.html" alt="RoomDetail" shape="rect" coords="91,392,172,416"/>
-<area href="classStrategy.html" alt="Strategy" shape="rect" coords="91,448,172,472"/>
+<area href="classStrategy.html" title="Strategy class to check selected strategy is valid or not for seating plan." alt="Strategy" shape="rect" coords="91,448,172,472"/>
 <area href="classValidation.html" alt="Validation" shape="rect" coords="91,504,172,528"/>
 </map>
  </div></div>
@@ -119,14 +118,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acbc05b1bc6a371cf0a52222cc95e467d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#acbc05b1bc6a371cf0a52222cc95e467d">Footer</a> ()</td></tr>
 <tr class="memitem:ad0a78d7c864bcccf7813a526d59573be"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#ad0a78d7c864bcccf7813a526d59573be">IntToString</a> (int value)</td></tr>
 <tr class="memitem:aaf532dd61f0aee82b116fef2da8e821f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#aaf532dd61f0aee82b116fef2da8e821f">StringToInt</a> (string value)</td></tr>
-<tr class="memdesc:aaf532dd61f0aee82b116fef2da8e821f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert String to Integer.  <a href="#aaf532dd61f0aee82b116fef2da8e821f"></a><br/></td></tr>
 <tr class="memitem:a7f1d6cf5e946dadd511c2437b796e5f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#a7f1d6cf5e946dadd511c2437b796e5f7">ErrorMessage</a> (string <a class="el" href="classInputDetail.html#a1abb16cd695678c3fa05e3c812823fee">msg</a>=&quot;&quot;)</td></tr>
 <tr class="memitem:aaf6caee10a13697ca6dc2bc9aa02e8ab"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#aaf6caee10a13697ca6dc2bc9aa02e8ab">Time</a> ()</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a10827b6d56739ebca7c3526d0b2d0c7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10827b6d56739ebca7c3526d0b2d0c7d"></a>
-<a class="el" href="classDatabase.html">Database</a>&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
+<tr class="memitem:aba635a55313b14cf8bb285560a55498e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#aba635a55313b14cf8bb285560a55498e">SplitString</a> (STRING_VEC &amp;output, string input, string token)</td></tr>
+<tr class="memdesc:aba635a55313b14cf8bb285560a55498e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split string using boost library func.  <a href="#aba635a55313b14cf8bb285560a55498e"></a><br/></td></tr>
+<tr class="memitem:a509ee6dd2de52e87cb764d0b0cceb05a"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#a509ee6dd2de52e87cb764d0b0cceb05a">FileName</a> (string file, string <a class="el" href="classInputDetail.html#a08069ee622c626c038b821ddcc7427b4">projectID</a>, int fileType)</td></tr>
+<tr class="memdesc:a509ee6dd2de52e87cb764d0b0cceb05a"><td class="mdescLeft">&#160;</td><td class="mdescRight">For creating filename w.r.t to projectID.  <a href="#a509ee6dd2de52e87cb764d0b0cceb05a"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -153,6 +150,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 <tr class="memitem:a1abb16cd695678c3fa05e3c812823fee"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#a1abb16cd695678c3fa05e3c812823fee">msg</a></td></tr>
 <tr class="memitem:abee6a659eb2e34b260aaf8b05d6003b4"><td class="memItemLeft" align="right" valign="top">STRING_VEC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#abee6a659eb2e34b260aaf8b05d6003b4">vecTemp</a></td></tr>
 <tr class="memitem:ae8ccc2e838c6d5a93ea544370dc1f272"><td class="memItemLeft" align="right" valign="top">STRING_VEC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#ae8ccc2e838c6d5a93ea544370dc1f272">oldProject</a></td></tr>
+<tr class="memitem:ab09ed4176090a72237531cedf00afb41"><td class="memItemLeft" align="right" valign="top">STRING_VEC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#ab09ed4176090a72237531cedf00afb41">splitString</a></td></tr>
 <tr class="memitem:a4c62c1934fbfcdcc8e2afaee44a87c15"><td class="memItemLeft" align="right" valign="top">ifstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#a4c62c1934fbfcdcc8e2afaee44a87c15">inFile</a></td></tr>
 <tr class="memitem:a2b8484cfbfee98ae69e8476f8fd40000"><td class="memItemLeft" align="right" valign="top">ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#a2b8484cfbfee98ae69e8476f8fd40000">outFile</a></td></tr>
 <tr class="memitem:a1f276e4df260009d465032ec64f3a543"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#a1f276e4df260009d465032ec64f3a543">sessionID</a></td></tr>
@@ -183,6 +181,20 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 <tr class="memitem:a3193354764ba0b44b2eb4b366b4c273a"><td class="memItemLeft" align="right" valign="top">STRING_2DVEC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#a3193354764ba0b44b2eb4b366b4c273a">roomNo</a></td></tr>
 <tr class="memitem:aa203edbcfd4083624dbc4dc055c1e6e5"><td class="memItemLeft" align="right" valign="top">STRING_2DVEC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#aa203edbcfd4083624dbc4dc055c1e6e5">rows</a></td></tr>
 <tr class="memitem:a8563f1b6c4d2e74a9b8421a12585395c"><td class="memItemLeft" align="right" valign="top">STRING_2DVEC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#a8563f1b6c4d2e74a9b8421a12585395c">columns</a></td></tr>
+<tr class="memitem:a09dcf8264ffc09609448e32b0f27bd9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09dcf8264ffc09609448e32b0f27bd9a"></a>
+INT_VEC&#160;</td><td class="memItemRight" valign="bottom"><b>totalSubjects</b></td></tr>
+<tr class="memitem:ae47ff085393d9555ae7c080759a7dae7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae47ff085393d9555ae7c080759a7dae7"></a>
+INT_2DVEC&#160;</td><td class="memItemRight" valign="bottom"><b>totalRooms</b></td></tr>
+<tr class="memitem:a375eb1fe30c29f80a2020dd63c173428"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a375eb1fe30c29f80a2020dd63c173428"></a>
+STRING_2DVEC&#160;</td><td class="memItemRight" valign="bottom"><b>subCode</b></td></tr>
+<tr class="memitem:ad5279168818a6af3578a0f70e4be195d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5279168818a6af3578a0f70e4be195d"></a>
+STRING_2DVEC&#160;</td><td class="memItemRight" valign="bottom"><b>subName</b></td></tr>
+<tr class="memitem:a01a2dbec27704527002029a9ed8bb35f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01a2dbec27704527002029a9ed8bb35f"></a>
+STRING_3DVEC&#160;</td><td class="memItemRight" valign="bottom"><b>rmNo</b></td></tr>
+<tr class="memitem:a2ecfc489098c98cf26d22ca422572a0f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ecfc489098c98cf26d22ca422572a0f"></a>
+STRING_3DVEC&#160;</td><td class="memItemRight" valign="bottom"><b>row</b></td></tr>
+<tr class="memitem:a7d61822dbecef7d625efc05d7ab6bd30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d61822dbecef7d625efc05d7ab6bd30"></a>
+STRING_3DVEC&#160;</td><td class="memItemRight" valign="bottom"><b>col</b></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Declare common variables, functions that are used by derived class. </p>
@@ -202,6 +214,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructor</p>
 <hr/>
  <h2>Include detail.h file</h2>
 <h2>Definition of member functions</h2>
@@ -233,6 +246,52 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a509ee6dd2de52e87cb764d0b0cceb05a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string InputDetail::FileName </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>projectID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fileType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For creating filename w.r.t to projectID. </p>
+<p>Retruning filename w.r.t. to project ID</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">projectID</td><td>Unique ID i.e. used to read file of user </td></tr>
+    <tr><td class="paramname">file</td><td>I/O file Name </td></tr>
+    <tr><td class="paramname">fileType</td><td>For defining file type i.e I/P or O/P file. If fileType == 1, Input file If fileType == 0(else), Output File</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>fileName This function will return file name with project ID </dd></dl>
+
+<p>Definition at line <a class="el" href="inputdetail_8cc_source.html#l00171">171</a> of file <a class="el" href="inputdetail_8cc_source.html">inputdetail.cc</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="acbc05b1bc6a371cf0a52222cc95e467d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -245,6 +304,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Footer of page</p>
 <hr/>
  Class: <a class="el" href="classInputDetail.html" title="Declare common variables, functions that are used by derived class.">InputDetail</a> Method: <a class="el" href="classInputDetail.html" title="Declare common variables, functions that are used by derived class.">InputDetail</a> :: <a class="el" href="classInputDetail.html#acbc05b1bc6a371cf0a52222cc95e467d">Footer()</a> </p>
 <h2>Description: Common for all pages(end body, html)</h2>
@@ -266,6 +326,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Header of page</p>
 <hr/>
  Class: <a class="el" href="classInputDetail.html" title="Declare common variables, functions that are used by derived class.">InputDetail</a> Method: <a class="el" href="classInputDetail.html" title="Declare common variables, functions that are used by derived class.">InputDetail</a> :: <a class="el" href="classInputDetail.html#ae55dcc0e15b85d302a09046b145330bb">Header(string titleName)</a> </p>
 <h2>Description: common header for all pages(start html, head, body)</h2>
@@ -287,11 +348,57 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Convert Integer to string</p>
 <hr/>
  Class: <a class="el" href="classInputDetail.html" title="Declare common variables, functions that are used by derived class.">InputDetail</a> Method: <a class="el" href="classInputDetail.html" title="Declare common variables, functions that are used by derived class.">InputDetail</a> :: <a class="el" href="classInputDetail.html#ad0a78d7c864bcccf7813a526d59573be">IntToString(int value)</a> </p>
 <h2>Description: Convert Int to String using stringstream object</h2>
 
 <p>Definition at line <a class="el" href="inputdetail_8cc_source.html#l00082">82</a> of file <a class="el" href="inputdetail_8cc_source.html">inputdetail.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aba635a55313b14cf8bb285560a55498e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InputDetail::SplitString </td>
+          <td>(</td>
+          <td class="paramtype">STRING_VEC &amp;&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Split string using boost library func. </p>
+<p>Spliting string</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">output</td><td>Stores result of splitted string </td></tr>
+    <tr><td class="paramname">input</td><td>string for spliting </td></tr>
+    <tr><td class="paramname">token</td><td>eg , or . or - any char to split string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="inputdetail_8cc_source.html#l00149">149</a> of file <a class="el" href="inputdetail_8cc_source.html">inputdetail.cc</a>.</p>
 
 </div>
 </div>
@@ -308,10 +415,9 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Convert String to Integer. </p>
+<p>Convert String to Integer</p>
 <hr/>
- Class: <a class="el" href="classReadInputField.html">ReadInputField</a> Method: <a class="el" href="classReadInputField.html">ReadInputField</a> :: <a class="el" href="classInputDetail.html#aaf532dd61f0aee82b116fef2da8e821f" title="Convert String to Integer.">StringToInt(string value)</a> </p>
+ Class: <a class="el" href="classReadInputField.html">ReadInputField</a> Method: <a class="el" href="classReadInputField.html">ReadInputField</a> :: <a class="el" href="classInputDetail.html#aaf532dd61f0aee82b116fef2da8e821f">StringToInt(string value)</a> </p>
 <h2>Description: Converts string value to integer</h2>
 
 <p>Definition at line <a class="el" href="inputdetail_8cc_source.html#l00097">97</a> of file <a class="el" href="inputdetail_8cc_source.html">inputdetail.cc</a>.</p>
@@ -356,7 +462,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>Centre Name </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00111">111</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00113">113</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -379,7 +485,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>Class Details ID </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00087">87</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00089">89</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -402,7 +508,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>Class/Branch Name </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00087">87</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00089">89</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -425,7 +531,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>columns of room </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00111">111</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00113">113</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -471,7 +577,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>Date of examination </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00087">87</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00089">89</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -517,7 +623,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>ending roll no </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00087">87</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00089">89</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -540,7 +646,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>Exam/subject code for seating plan </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00087">87</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00089">89</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -563,7 +669,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>Examination name </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00087">87</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00089">89</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -586,7 +692,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>Session Morning/Evening </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00087">87</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00089">89</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -609,7 +715,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>Exam. Time </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00087">87</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00089">89</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -632,7 +738,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>Exam Venue </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00087">87</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00089">89</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -701,7 +807,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>For Reading file </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00070">70</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00072">72</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -770,7 +876,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>roll no's that are not included in seating plan </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00087">87</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00089">89</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -816,7 +922,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>For writing file </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00071">71</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00073">73</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -862,7 +968,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>Prefix of roll no </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00087">87</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00089">89</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -931,7 +1037,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>Project Type Old/New </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00082">82</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00084">84</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -977,7 +1083,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>Room no. in one centre </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00111">111</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00113">113</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -1000,7 +1106,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>Rows of room </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00111">111</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00113">113</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -1023,7 +1129,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>For holding value yes/no for same detail for rest of pages </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00082">82</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00084">84</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -1046,7 +1152,30 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>Session ID </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00072">72</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00074">74</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab09ed4176090a72237531cedf00afb41"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">STRING_VEC InputDetail::splitString</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>For storing values of splitted string </p>
+
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00066">66</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -1092,7 +1221,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>starting roll no </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00087">87</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00089">89</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -1113,9 +1242,9 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p><a class="el" href="classStrategy.html">Strategy</a> name selected by user </p>
+<p><a class="el" href="classStrategy.html" title="Strategy class to check selected strategy is valid or not for seating plan.">Strategy</a> name selected by user </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00087">87</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00089">89</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -1138,7 +1267,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>Subject Codes </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00087">87</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00089">89</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -1161,7 +1290,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>Subject Names </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00087">87</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00089">89</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -1184,7 +1313,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>For table heading </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00087">87</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00089">89</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -1230,7 +1359,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>No of centres for exam </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00080">80</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00082">82</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -1253,7 +1382,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>No. of classes for seating plan </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00075">75</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00077">77</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -1276,7 +1405,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>total Columns in table </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00075">75</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00077">77</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -1299,7 +1428,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>No of days in datesheet </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00075">75</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00077">77</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -1322,7 +1451,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><div class="memdoc">
 <p>total rows in table </p>
 
-<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00075">75</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
+<p>Definition at line <a class="el" href="inputdetail_8h_source.html#l00077">77</a> of file <a class="el" href="inputdetail_8h_source.html">inputdetail.h</a>.</p>
 
 </div>
 </div>
@@ -1379,7 +1508,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>temp</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 21 2013 00:42:05 for Front End of BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 21 2013 20:34:06 for Front End of BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

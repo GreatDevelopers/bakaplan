@@ -1,0 +1,528 @@
+\hypertarget{classReadInput}{\section{Read\-Input Class Reference}
+\label{classReadInput}\index{Read\-Input@{Read\-Input}}
+}
+
+
+Class for reading input files ie reading roll no details, class detail, room detail, etc.  
+
+
+
+
+{\ttfamily \#include $<$readinput.\-h$>$}
+
+Inheritance diagram for Read\-Input\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classReadInput}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classReadInput_a181da3d718520ea9168808dde2d3e867}{Read\-Input} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+string \hyperlink{classReadInput_a990ac303132881774253593565e85bd0}{File\-Name} (string file, string \hyperlink{classReadInput_a3ad470a25b3e0a29466bf4ff1f7d8e81}{project\-I\-D}, int file\-Type)
+\begin{DoxyCompactList}\small\item\em For creating filename w.\-r.\-t to project\-I\-D. \end{DoxyCompactList}\item 
+void \hyperlink{classReadInput_a6a901973196e63579e4452fede5ce01e}{Read\-Roll\-No\-Detail} (string \hyperlink{classReadInput_a3ad470a25b3e0a29466bf4ff1f7d8e81}{project\-I\-D})
+\begin{DoxyCompactList}\small\item\em Reading Roll No detail from file. \end{DoxyCompactList}\item 
+void \hyperlink{classReadInput_aff1e359dc8b72c710bb15647ff4e78da}{Read\-Class\-Detail} (string \hyperlink{classReadInput_a3ad470a25b3e0a29466bf4ff1f7d8e81}{project\-I\-D})
+\begin{DoxyCompactList}\small\item\em Reading class details. \end{DoxyCompactList}\item 
+void \hyperlink{classReadInput_a582c57e19fd218bfdc8b83d6e8599ea2}{Read\-Date\-Sheet} (string \hyperlink{classReadInput_a3ad470a25b3e0a29466bf4ff1f7d8e81}{project\-I\-D})
+\begin{DoxyCompactList}\small\item\em Reading datesheet. \end{DoxyCompactList}\item 
+void \hyperlink{classReadInput_aa8c2bc34575b32291e05bc00515530e5}{Read\-Date\-Sheet\-Out} (string \hyperlink{classReadInput_a3ad470a25b3e0a29466bf4ff1f7d8e81}{project\-I\-D})
+\begin{DoxyCompactList}\small\item\em Reading datesheet.\-out file. \end{DoxyCompactList}\item 
+void \hyperlink{classReadInput_a7a95590528e5e82277f75285e034eddd}{Read\-Room\-Detail} (string \hyperlink{classReadInput_a3ad470a25b3e0a29466bf4ff1f7d8e81}{project\-I\-D})
+\begin{DoxyCompactList}\small\item\em Reading room details. \end{DoxyCompactList}\item 
+void \hyperlink{classReadInput_a771826aa24574ac60472560c2c764755}{Read\-Strategy} (string \hyperlink{classReadInput_a3ad470a25b3e0a29466bf4ff1f7d8e81}{project\-I\-D})
+\begin{DoxyCompactList}\small\item\em Function for reading strategy. \end{DoxyCompactList}\item 
+\hyperlink{classReadInput_aec19e94e448ed46207c55412a61728fa}{$\sim$\-Read\-Input} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classReadInput_a6a96c934f8c9a2a2056dc50505017e52}{prefix}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classReadInput_a862fbffdffa56fc6d66b1d1f14dae087}{roll\-No}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classReadInput_a4b4854ad4dd83b96d6c38d1f0b8d5417}{not\-Included}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classReadInput_ad156aed708a64ed861988673aa21be64}{class\-Name}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classReadInput_a3e8d6a0fef698a51e38fc06be401c390}{date}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classReadInput_a0f62d76d15b123767751a22f87dc79ed}{strategy\-Option}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C \hyperlink{classReadInput_a5db96d61a79c6a36bcdc4907bebf8bd0}{subject\-Code}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C \hyperlink{classReadInput_acbd2ac53fb64da88965fa5e542f2c456}{subject\-Name}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C \hyperlink{classReadInput_a81eee5f7478e5d2d76afad814a6c4e3e}{exam\-Sub\-Code}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C \hyperlink{classReadInput_a6ac62618d1b89d823230ae93c7b85c3b}{exam\-Sub\-Name}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C \hyperlink{classReadInput_aedfe51d1e35384a49a870516d229c4f7}{centre\-Name}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-3\-D\-V\-E\-C \hyperlink{classReadInput_a77f996670554c8a752e7cbd713ecb084}{room\-No}
+\item 
+int \hyperlink{classReadInput_a32d11288922cc26708b20324ae7b7a77}{total\-Classes}
+\item 
+int \hyperlink{classReadInput_a40dc15f03ab1d4c998aa48f2a7176574}{total\-Days}
+\item 
+I\-N\-T\-\_\-\-V\-E\-C \hyperlink{classReadInput_ad615390a3c9548b63e6081459801d3b3}{total\-Subjects}
+\item 
+I\-N\-T\-\_\-\-V\-E\-C \hyperlink{classReadInput_aa5fd69afc1c76686f37bcb20805ba551}{total\-Exams}
+\item 
+I\-N\-T\-\_\-\-V\-E\-C \hyperlink{classReadInput_ae6732644e5c3efd46f562493351c9820}{total\-Centres}
+\item 
+I\-N\-T\-\_\-2\-D\-V\-E\-C \hyperlink{classReadInput_a21ae2519b9f3dc9ae938fc670995822f}{total\-Rooms}
+\item 
+I\-N\-T\-\_\-3\-D\-V\-E\-C \hyperlink{classReadInput_ac853c80a2fad7a58fecde30db9fc93df}{rows}
+\item 
+I\-N\-T\-\_\-3\-D\-V\-E\-C \hyperlink{classReadInput_ac717fe1f94a77db9fb20161e00043a9d}{cols}
+\item 
+ifstream \hyperlink{classReadInput_afe0f493fcb2da1f644445501823fd0e2}{in\-File}
+\item 
+ofstream \hyperlink{classReadInput_af50237ba8a8e8e4a9e4ccc7926215937}{out\-File}
+\item 
+string \hyperlink{classReadInput_a834acf783052b5b2f129644b4accaadc}{file\-Name}
+\item 
+string \hyperlink{classReadInput_ab10b4c63b69664f292d1c66028618008}{temp}
+\item 
+\hypertarget{classReadInput_aa5794ec3922f26d376dba09946e73178}{int {\bfseries i}}\label{classReadInput_aa5794ec3922f26d376dba09946e73178}
+
+\item 
+\hypertarget{classReadInput_a9cff282fd247d9eca49c1acde4d08b11}{int {\bfseries j}}\label{classReadInput_a9cff282fd247d9eca49c1acde4d08b11}
+
+\item 
+\hypertarget{classReadInput_a28d5df9f425e54bb3575bdcc4d41a4d1}{int {\bfseries k}}\label{classReadInput_a28d5df9f425e54bb3575bdcc4d41a4d1}
+
+\item 
+\hypertarget{classReadInput_aefb680056346aa9e49f862faaabaa0f5}{int {\bfseries l}}\label{classReadInput_aefb680056346aa9e49f862faaabaa0f5}
+
+\item 
+\hypertarget{classReadInput_a54392c075b45ef52f121910f78114e1d}{int {\bfseries m}}\label{classReadInput_a54392c075b45ef52f121910f78114e1d}
+
+\item 
+int \hyperlink{classReadInput_a00428413f6f29154a5d1170c768bbe35}{n}
+\item 
+string \hyperlink{classReadInput_a3ad470a25b3e0a29466bf4ff1f7d8e81}{project\-I\-D}
+\item 
+I\-N\-T\-\_\-2\-D\-V\-E\-C \hyperlink{classReadInput_aa56be8b352098aff43c904982b3bc2b8}{date\-Sheet\-R\-No\-Size}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-3\-D\-V\-E\-C \hyperlink{classReadInput_ab3a09915476fba776592d85dff52187d}{date\-Sheet\-R\-No}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for reading input files ie reading roll no details, class detail, room detail, etc. 
+
+Include local header file
+
+Include \hyperlink{readinput_8h}{readinput.\-h} file 
+
+Definition at line 31 of file readinput.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classReadInput_a181da3d718520ea9168808dde2d3e867}{\index{Read\-Input@{Read\-Input}!Read\-Input@{Read\-Input}}
+\index{Read\-Input@{Read\-Input}!ReadInput@{Read\-Input}}
+\subsubsection[{Read\-Input}]{\setlength{\rightskip}{0pt plus 5cm}Read\-Input\-::\-Read\-Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classReadInput_a181da3d718520ea9168808dde2d3e867}
+
+
+Constructor. 
+
+Constructor 
+
+Definition at line 27 of file readinput.\-cc.
+
+\hypertarget{classReadInput_aec19e94e448ed46207c55412a61728fa}{\index{Read\-Input@{Read\-Input}!$\sim$\-Read\-Input@{$\sim$\-Read\-Input}}
+\index{$\sim$\-Read\-Input@{$\sim$\-Read\-Input}!ReadInput@{Read\-Input}}
+\subsubsection[{$\sim$\-Read\-Input}]{\setlength{\rightskip}{0pt plus 5cm}Read\-Input\-::$\sim$\-Read\-Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classReadInput_aec19e94e448ed46207c55412a61728fa}
+
+
+Destructor. 
+
+Desrtuctor 
+
+Definition at line 344 of file readinput.\-cc.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classReadInput_a990ac303132881774253593565e85bd0}{\index{Read\-Input@{Read\-Input}!File\-Name@{File\-Name}}
+\index{File\-Name@{File\-Name}!ReadInput@{Read\-Input}}
+\subsubsection[{File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Read\-Input\-::\-File\-Name (
+\begin{DoxyParamCaption}
+\item[{string}]{file, }
+\item[{string}]{project\-I\-D, }
+\item[{int}]{file\-Type}
+\end{DoxyParamCaption}
+)}}\label{classReadInput_a990ac303132881774253593565e85bd0}
+
+
+For creating filename w.\-r.\-t to project\-I\-D. 
+
+Retruning filename w.\-r.\-t. to project I\-D
+
+
+\begin{DoxyParams}{Parameters}
+{\em project\-I\-D} & Unique I\-D i.\-e. used to read file of user \\
+\hline
+{\em file} & I/\-O file Name \\
+\hline
+{\em file\-Type} & For defining file type i.\-e I/\-P or O/\-P file. If file\-Type == 1, Input file If file\-Type == 0(else), Output File\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+file\-Name This function will return file name with project I\-D 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file readinput.\-cc.
+
+\hypertarget{classReadInput_aff1e359dc8b72c710bb15647ff4e78da}{\index{Read\-Input@{Read\-Input}!Read\-Class\-Detail@{Read\-Class\-Detail}}
+\index{Read\-Class\-Detail@{Read\-Class\-Detail}!ReadInput@{Read\-Input}}
+\subsubsection[{Read\-Class\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}void Read\-Input\-::\-Read\-Class\-Detail (
+\begin{DoxyParamCaption}
+\item[{string}]{file\-Name}
+\end{DoxyParamCaption}
+)}}\label{classReadInput_aff1e359dc8b72c710bb15647ff4e78da}
+
+
+Reading class details. 
+
+Reading Class details from I/\-P file
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-Name} & I/\-P filename for class detail \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 233 of file readinput.\-cc.
+
+\hypertarget{classReadInput_a582c57e19fd218bfdc8b83d6e8599ea2}{\index{Read\-Input@{Read\-Input}!Read\-Date\-Sheet@{Read\-Date\-Sheet}}
+\index{Read\-Date\-Sheet@{Read\-Date\-Sheet}!ReadInput@{Read\-Input}}
+\subsubsection[{Read\-Date\-Sheet}]{\setlength{\rightskip}{0pt plus 5cm}void Read\-Input\-::\-Read\-Date\-Sheet (
+\begin{DoxyParamCaption}
+\item[{string}]{file\-Name}
+\end{DoxyParamCaption}
+)}}\label{classReadInput_a582c57e19fd218bfdc8b83d6e8599ea2}
+
+
+Reading datesheet. 
+
+Reading Datesheet
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-Name} & Name of I/\-P file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 278 of file readinput.\-cc.
+
+\hypertarget{classReadInput_aa8c2bc34575b32291e05bc00515530e5}{\index{Read\-Input@{Read\-Input}!Read\-Date\-Sheet\-Out@{Read\-Date\-Sheet\-Out}}
+\index{Read\-Date\-Sheet\-Out@{Read\-Date\-Sheet\-Out}!ReadInput@{Read\-Input}}
+\subsubsection[{Read\-Date\-Sheet\-Out}]{\setlength{\rightskip}{0pt plus 5cm}void Read\-Input\-::\-Read\-Date\-Sheet\-Out (
+\begin{DoxyParamCaption}
+\item[{string}]{project\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{classReadInput_aa8c2bc34575b32291e05bc00515530e5}
+
+
+Reading datesheet.\-out file. 
+
+Read date sheet with roll nos
+
+
+\begin{DoxyParams}{Parameters}
+{\em project\-I\-D} & Project\-I\-D \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 68 of file readinput.\-cc.
+
+\hypertarget{classReadInput_a6a901973196e63579e4452fede5ce01e}{\index{Read\-Input@{Read\-Input}!Read\-Roll\-No\-Detail@{Read\-Roll\-No\-Detail}}
+\index{Read\-Roll\-No\-Detail@{Read\-Roll\-No\-Detail}!ReadInput@{Read\-Input}}
+\subsubsection[{Read\-Roll\-No\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}void Read\-Input\-::\-Read\-Roll\-No\-Detail (
+\begin{DoxyParamCaption}
+\item[{string}]{file\-Name}
+\end{DoxyParamCaption}
+)}}\label{classReadInput_a6a901973196e63579e4452fede5ce01e}
+
+
+Reading Roll No detail from file. 
+
+Reading Roll No details from I/\-P file
+
+
+\begin{DoxyParams}{Parameters}
+{\em project\-I\-D} & Name of I/\-P file for roll nos. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 201 of file readinput.\-cc.
+
+\hypertarget{classReadInput_a7a95590528e5e82277f75285e034eddd}{\index{Read\-Input@{Read\-Input}!Read\-Room\-Detail@{Read\-Room\-Detail}}
+\index{Read\-Room\-Detail@{Read\-Room\-Detail}!ReadInput@{Read\-Input}}
+\subsubsection[{Read\-Room\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}void Read\-Input\-::\-Read\-Room\-Detail (
+\begin{DoxyParamCaption}
+\item[{string}]{project\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{classReadInput_a7a95590528e5e82277f75285e034eddd}
+
+
+Reading room details. 
+
+Read Room Details
+
+
+\begin{DoxyParams}{Parameters}
+{\em project\-I\-D} & project\-Id of user's project \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 134 of file readinput.\-cc.
+
+\hypertarget{classReadInput_a771826aa24574ac60472560c2c764755}{\index{Read\-Input@{Read\-Input}!Read\-Strategy@{Read\-Strategy}}
+\index{Read\-Strategy@{Read\-Strategy}!ReadInput@{Read\-Input}}
+\subsubsection[{Read\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}void Read\-Input\-::\-Read\-Strategy (
+\begin{DoxyParamCaption}
+\item[{string}]{project\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{classReadInput_a771826aa24574ac60472560c2c764755}
+
+
+Function for reading strategy. 
+
+Reading strategy choice from strategy.\-in file
+
+
+\begin{DoxyParams}{Parameters}
+{\em project\-I\-D} & project\-Id of user's project \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 321 of file readinput.\-cc.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classReadInput_aedfe51d1e35384a49a870516d229c4f7}{\index{Read\-Input@{Read\-Input}!centre\-Name@{centre\-Name}}
+\index{centre\-Name@{centre\-Name}!ReadInput@{Read\-Input}}
+\subsubsection[{centre\-Name}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C Read\-Input\-::centre\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_aedfe51d1e35384a49a870516d229c4f7}
+Centre N\-Ame 
+
+Definition at line 45 of file readinput.\-h.
+
+\hypertarget{classReadInput_ad156aed708a64ed861988673aa21be64}{\index{Read\-Input@{Read\-Input}!class\-Name@{class\-Name}}
+\index{class\-Name@{class\-Name}!ReadInput@{Read\-Input}}
+\subsubsection[{class\-Name}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Read\-Input\-::class\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_ad156aed708a64ed861988673aa21be64}
+Branch/trade/class Name 
+
+Definition at line 35 of file readinput.\-h.
+
+\hypertarget{classReadInput_ac717fe1f94a77db9fb20161e00043a9d}{\index{Read\-Input@{Read\-Input}!cols@{cols}}
+\index{cols@{cols}!ReadInput@{Read\-Input}}
+\subsubsection[{cols}]{\setlength{\rightskip}{0pt plus 5cm}I\-N\-T\-\_\-3\-D\-V\-E\-C Read\-Input\-::cols\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_ac717fe1f94a77db9fb20161e00043a9d}
+columns in room 
+
+Definition at line 62 of file readinput.\-h.
+
+\hypertarget{classReadInput_a3e8d6a0fef698a51e38fc06be401c390}{\index{Read\-Input@{Read\-Input}!date@{date}}
+\index{date@{date}!ReadInput@{Read\-Input}}
+\subsubsection[{date}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Read\-Input\-::date\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_a3e8d6a0fef698a51e38fc06be401c390}
+Date for examination 
+
+Definition at line 35 of file readinput.\-h.
+
+\hypertarget{classReadInput_ab3a09915476fba776592d85dff52187d}{\index{Read\-Input@{Read\-Input}!date\-Sheet\-R\-No@{date\-Sheet\-R\-No}}
+\index{date\-Sheet\-R\-No@{date\-Sheet\-R\-No}!ReadInput@{Read\-Input}}
+\subsubsection[{date\-Sheet\-R\-No}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-3\-D\-V\-E\-C Read\-Input\-::date\-Sheet\-R\-No\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_ab3a09915476fba776592d85dff52187d}
+Roll Nos w.\-r.\-t datesheet 
+
+Definition at line 78 of file readinput.\-h.
+
+\hypertarget{classReadInput_aa56be8b352098aff43c904982b3bc2b8}{\index{Read\-Input@{Read\-Input}!date\-Sheet\-R\-No\-Size@{date\-Sheet\-R\-No\-Size}}
+\index{date\-Sheet\-R\-No\-Size@{date\-Sheet\-R\-No\-Size}!ReadInput@{Read\-Input}}
+\subsubsection[{date\-Sheet\-R\-No\-Size}]{\setlength{\rightskip}{0pt plus 5cm}I\-N\-T\-\_\-2\-D\-V\-E\-C Read\-Input\-::date\-Sheet\-R\-No\-Size\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_aa56be8b352098aff43c904982b3bc2b8}
+Total roll nos for exam code 
+
+Definition at line 76 of file readinput.\-h.
+
+\hypertarget{classReadInput_a81eee5f7478e5d2d76afad814a6c4e3e}{\index{Read\-Input@{Read\-Input}!exam\-Sub\-Code@{exam\-Sub\-Code}}
+\index{exam\-Sub\-Code@{exam\-Sub\-Code}!ReadInput@{Read\-Input}}
+\subsubsection[{exam\-Sub\-Code}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C Read\-Input\-::exam\-Sub\-Code\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_a81eee5f7478e5d2d76afad814a6c4e3e}
+Examination/subject code 
+
+Definition at line 45 of file readinput.\-h.
+
+\hypertarget{classReadInput_a6ac62618d1b89d823230ae93c7b85c3b}{\index{Read\-Input@{Read\-Input}!exam\-Sub\-Name@{exam\-Sub\-Name}}
+\index{exam\-Sub\-Name@{exam\-Sub\-Name}!ReadInput@{Read\-Input}}
+\subsubsection[{exam\-Sub\-Name}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C Read\-Input\-::exam\-Sub\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_a6ac62618d1b89d823230ae93c7b85c3b}
+Exam/ subejct Name 
+
+Definition at line 45 of file readinput.\-h.
+
+\hypertarget{classReadInput_a834acf783052b5b2f129644b4accaadc}{\index{Read\-Input@{Read\-Input}!file\-Name@{file\-Name}}
+\index{file\-Name@{file\-Name}!ReadInput@{Read\-Input}}
+\subsubsection[{file\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Read\-Input\-::file\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_a834acf783052b5b2f129644b4accaadc}
+I/\-O file name 
+
+Definition at line 68 of file readinput.\-h.
+
+\hypertarget{classReadInput_afe0f493fcb2da1f644445501823fd0e2}{\index{Read\-Input@{Read\-Input}!in\-File@{in\-File}}
+\index{in\-File@{in\-File}!ReadInput@{Read\-Input}}
+\subsubsection[{in\-File}]{\setlength{\rightskip}{0pt plus 5cm}ifstream Read\-Input\-::in\-File\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_afe0f493fcb2da1f644445501823fd0e2}
+For reading data from file 
+
+Definition at line 65 of file readinput.\-h.
+
+\hypertarget{classReadInput_a00428413f6f29154a5d1170c768bbe35}{\index{Read\-Input@{Read\-Input}!n@{n}}
+\index{n@{n}!ReadInput@{Read\-Input}}
+\subsubsection[{n}]{\setlength{\rightskip}{0pt plus 5cm}int Read\-Input\-::n\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_a00428413f6f29154a5d1170c768bbe35}
+for looping 
+
+Definition at line 71 of file readinput.\-h.
+
+\hypertarget{classReadInput_a4b4854ad4dd83b96d6c38d1f0b8d5417}{\index{Read\-Input@{Read\-Input}!not\-Included@{not\-Included}}
+\index{not\-Included@{not\-Included}!ReadInput@{Read\-Input}}
+\subsubsection[{not\-Included}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Read\-Input\-::not\-Included\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_a4b4854ad4dd83b96d6c38d1f0b8d5417}
+Rollno ie not for seating plan 
+
+Definition at line 35 of file readinput.\-h.
+
+\hypertarget{classReadInput_af50237ba8a8e8e4a9e4ccc7926215937}{\index{Read\-Input@{Read\-Input}!out\-File@{out\-File}}
+\index{out\-File@{out\-File}!ReadInput@{Read\-Input}}
+\subsubsection[{out\-File}]{\setlength{\rightskip}{0pt plus 5cm}ofstream Read\-Input\-::out\-File\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_af50237ba8a8e8e4a9e4ccc7926215937}
+for writing data into file 
+
+Definition at line 66 of file readinput.\-h.
+
+\hypertarget{classReadInput_a6a96c934f8c9a2a2056dc50505017e52}{\index{Read\-Input@{Read\-Input}!prefix@{prefix}}
+\index{prefix@{prefix}!ReadInput@{Read\-Input}}
+\subsubsection[{prefix}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Read\-Input\-::prefix\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_a6a96c934f8c9a2a2056dc50505017e52}
+Prefix of rollno 
+
+Definition at line 35 of file readinput.\-h.
+
+\hypertarget{classReadInput_a3ad470a25b3e0a29466bf4ff1f7d8e81}{\index{Read\-Input@{Read\-Input}!project\-I\-D@{project\-I\-D}}
+\index{project\-I\-D@{project\-I\-D}!ReadInput@{Read\-Input}}
+\subsubsection[{project\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}string Read\-Input\-::project\-I\-D\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_a3ad470a25b3e0a29466bf4ff1f7d8e81}
+Project id of user's project 
+
+Definition at line 73 of file readinput.\-h.
+
+\hypertarget{classReadInput_a862fbffdffa56fc6d66b1d1f14dae087}{\index{Read\-Input@{Read\-Input}!roll\-No@{roll\-No}}
+\index{roll\-No@{roll\-No}!ReadInput@{Read\-Input}}
+\subsubsection[{roll\-No}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Read\-Input\-::roll\-No\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_a862fbffdffa56fc6d66b1d1f14dae087}
+rollno range 
+
+Definition at line 35 of file readinput.\-h.
+
+\hypertarget{classReadInput_a77f996670554c8a752e7cbd713ecb084}{\index{Read\-Input@{Read\-Input}!room\-No@{room\-No}}
+\index{room\-No@{room\-No}!ReadInput@{Read\-Input}}
+\subsubsection[{room\-No}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-3\-D\-V\-E\-C Read\-Input\-::room\-No\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_a77f996670554c8a752e7cbd713ecb084}
+Room No 
+
+Definition at line 51 of file readinput.\-h.
+
+\hypertarget{classReadInput_ac853c80a2fad7a58fecde30db9fc93df}{\index{Read\-Input@{Read\-Input}!rows@{rows}}
+\index{rows@{rows}!ReadInput@{Read\-Input}}
+\subsubsection[{rows}]{\setlength{\rightskip}{0pt plus 5cm}I\-N\-T\-\_\-3\-D\-V\-E\-C Read\-Input\-::rows\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_ac853c80a2fad7a58fecde30db9fc93df}
+Rows in room 
+
+Definition at line 62 of file readinput.\-h.
+
+\hypertarget{classReadInput_a0f62d76d15b123767751a22f87dc79ed}{\index{Read\-Input@{Read\-Input}!strategy\-Option@{strategy\-Option}}
+\index{strategy\-Option@{strategy\-Option}!ReadInput@{Read\-Input}}
+\subsubsection[{strategy\-Option}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Read\-Input\-::strategy\-Option\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_a0f62d76d15b123767751a22f87dc79ed}
+\hyperlink{classStrategy}{Strategy} option selected by user 
+
+Definition at line 35 of file readinput.\-h.
+
+\hypertarget{classReadInput_a5db96d61a79c6a36bcdc4907bebf8bd0}{\index{Read\-Input@{Read\-Input}!subject\-Code@{subject\-Code}}
+\index{subject\-Code@{subject\-Code}!ReadInput@{Read\-Input}}
+\subsubsection[{subject\-Code}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C Read\-Input\-::subject\-Code\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_a5db96d61a79c6a36bcdc4907bebf8bd0}
+Subject Code 
+
+Definition at line 45 of file readinput.\-h.
+
+\hypertarget{classReadInput_acbd2ac53fb64da88965fa5e542f2c456}{\index{Read\-Input@{Read\-Input}!subject\-Name@{subject\-Name}}
+\index{subject\-Name@{subject\-Name}!ReadInput@{Read\-Input}}
+\subsubsection[{subject\-Name}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C Read\-Input\-::subject\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_acbd2ac53fb64da88965fa5e542f2c456}
+Subject Name 
+
+Definition at line 45 of file readinput.\-h.
+
+\hypertarget{classReadInput_ab10b4c63b69664f292d1c66028618008}{\index{Read\-Input@{Read\-Input}!temp@{temp}}
+\index{temp@{temp}!ReadInput@{Read\-Input}}
+\subsubsection[{temp}]{\setlength{\rightskip}{0pt plus 5cm}string Read\-Input\-::temp\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_ab10b4c63b69664f292d1c66028618008}
+For temporary use 
+
+Definition at line 68 of file readinput.\-h.
+
+\hypertarget{classReadInput_ae6732644e5c3efd46f562493351c9820}{\index{Read\-Input@{Read\-Input}!total\-Centres@{total\-Centres}}
+\index{total\-Centres@{total\-Centres}!ReadInput@{Read\-Input}}
+\subsubsection[{total\-Centres}]{\setlength{\rightskip}{0pt plus 5cm}I\-N\-T\-\_\-\-V\-E\-C Read\-Input\-::total\-Centres\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_ae6732644e5c3efd46f562493351c9820}
+Total centres 
+
+Definition at line 56 of file readinput.\-h.
+
+\hypertarget{classReadInput_a32d11288922cc26708b20324ae7b7a77}{\index{Read\-Input@{Read\-Input}!total\-Classes@{total\-Classes}}
+\index{total\-Classes@{total\-Classes}!ReadInput@{Read\-Input}}
+\subsubsection[{total\-Classes}]{\setlength{\rightskip}{0pt plus 5cm}int Read\-Input\-::total\-Classes\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_a32d11288922cc26708b20324ae7b7a77}
+Total classes/branches/trades 
+
+Definition at line 53 of file readinput.\-h.
+
+\hypertarget{classReadInput_a40dc15f03ab1d4c998aa48f2a7176574}{\index{Read\-Input@{Read\-Input}!total\-Days@{total\-Days}}
+\index{total\-Days@{total\-Days}!ReadInput@{Read\-Input}}
+\subsubsection[{total\-Days}]{\setlength{\rightskip}{0pt plus 5cm}int Read\-Input\-::total\-Days\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_a40dc15f03ab1d4c998aa48f2a7176574}
+No. of days in datesheet 
+
+Definition at line 53 of file readinput.\-h.
+
+\hypertarget{classReadInput_aa5fd69afc1c76686f37bcb20805ba551}{\index{Read\-Input@{Read\-Input}!total\-Exams@{total\-Exams}}
+\index{total\-Exams@{total\-Exams}!ReadInput@{Read\-Input}}
+\subsubsection[{total\-Exams}]{\setlength{\rightskip}{0pt plus 5cm}I\-N\-T\-\_\-\-V\-E\-C Read\-Input\-::total\-Exams\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_aa5fd69afc1c76686f37bcb20805ba551}
+Total exams on 1 day 
+
+Definition at line 56 of file readinput.\-h.
+
+\hypertarget{classReadInput_a21ae2519b9f3dc9ae938fc670995822f}{\index{Read\-Input@{Read\-Input}!total\-Rooms@{total\-Rooms}}
+\index{total\-Rooms@{total\-Rooms}!ReadInput@{Read\-Input}}
+\subsubsection[{total\-Rooms}]{\setlength{\rightskip}{0pt plus 5cm}I\-N\-T\-\_\-2\-D\-V\-E\-C Read\-Input\-::total\-Rooms\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_a21ae2519b9f3dc9ae938fc670995822f}
+total rooms in centre 
+
+Definition at line 60 of file readinput.\-h.
+
+\hypertarget{classReadInput_ad615390a3c9548b63e6081459801d3b3}{\index{Read\-Input@{Read\-Input}!total\-Subjects@{total\-Subjects}}
+\index{total\-Subjects@{total\-Subjects}!ReadInput@{Read\-Input}}
+\subsubsection[{total\-Subjects}]{\setlength{\rightskip}{0pt plus 5cm}I\-N\-T\-\_\-\-V\-E\-C Read\-Input\-::total\-Subjects\hspace{0.3cm}{\ttfamily [protected]}}}\label{classReadInput_ad615390a3c9548b63e6081459801d3b3}
+Total subejcts of class 
+
+Definition at line 56 of file readinput.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/backend/header/\hyperlink{readinput_8h}{readinput.\-h}\item 
+src/backend/\hyperlink{readinput_8cc}{readinput.\-cc}\end{DoxyCompactItemize}

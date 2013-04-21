@@ -196,38 +196,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a8c0fae5b599182863066de56ae0cea42">Anchor</a>(<span class="keywordtype">string</span> href, <span class="keywordtype">string</span> target);</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">        /** Input field with 3 arguments */</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#aec87050d1230402d695290fe78c86f03">InputField</a>(<span class="keywordtype">string</span> type, <span class="keywordtype">string</span> name, <span class="keywordtype">string</span> placeholder,</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                        <span class="keywordtype">string</span> value = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#aec87050d1230402d695290fe78c86f03">InputField</a>( <span class="keywordtype">string</span> type, <span class="keywordtype">string</span> name, </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                        <span class="keywordtype">string</span> placeholder, <span class="keywordtype">string</span> value = <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">        /** Input Field with 4 arguments */</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#aec87050d1230402d695290fe78c86f03">InputField</a>(<span class="keywordtype">string</span> type, <span class="keywordtype">string</span> name, <span class="keywordtype">int</span> nameNo, </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                        <span class="keywordtype">string</span> placeholder, <span class="keywordtype">string</span> value = <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="comment"></span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">        /** Label tag */</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#ae85f66489db9a65682bb9a2c2128f433">Label</a>(<span class="keywordtype">string</span> forField, <span class="keywordtype">string</span> value);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">        /** Select Field Start */</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#ae8684bb66ca463e2f92e09c96137f9e3">SelectFieldStart</a>(<span class="keywordtype">string</span> name);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">        /** End Select Field */</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a81eb3cdbc840a4c8165cef87330ade09">SelectFieldEnd</a>();</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">        /** Select Option Start */</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a77856078e74dab25329132ea07466f92">SelectOptionStart</a>(<span class="keywordtype">string</span> value, <span class="keywordtype">string</span> selected);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">        /** Selct Option End */</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a7682f479f7f1012d426ec9f9535def60">SelectOptionEnd</a>();</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">        /** Button */</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a53c013b1d6251be853be8f6c413e3455">Button</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <span class="keywordtype">string</span> type, <span class="keywordtype">string</span> className, </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    <span class="keywordtype">string</span> value, <span class="keywordtype">string</span> onClick = <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;};</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#aec87050d1230402d695290fe78c86f03">InputField</a>(<span class="keywordtype">string</span> type, <span class="keywordtype">string</span> name, </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                        <span class="keywordtype">int</span> nameNo, <span class="keywordtype">string</span> placeholder, </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                        <span class="keywordtype">string</span> value = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">        /** Label tag */</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#ae85f66489db9a65682bb9a2c2128f433">Label</a>(<span class="keywordtype">string</span> forField, <span class="keywordtype">string</span> value);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">        /** Select Field Start */</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#ae8684bb66ca463e2f92e09c96137f9e3">SelectFieldStart</a>(<span class="keywordtype">string</span> name);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">        /** End Select Field */</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a81eb3cdbc840a4c8165cef87330ade09">SelectFieldEnd</a>();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">        /** Select Option Start */</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a77856078e74dab25329132ea07466f92">SelectOptionStart</a>(<span class="keywordtype">string</span> value, <span class="keywordtype">string</span> selected);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">        /** Selct Option End */</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a7682f479f7f1012d426ec9f9535def60">SelectOptionEnd</a>();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">        /** Button */</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a53c013b1d6251be853be8f6c413e3455">Button</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <span class="keywordtype">string</span> type, <span class="keywordtype">string</span> className, </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                    <span class="keywordtype">string</span> value, <span class="keywordtype">string</span> onClick = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;};</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 21 2013 00:42:03 for Front End of BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 21 2013 20:34:04 for Front End of BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
