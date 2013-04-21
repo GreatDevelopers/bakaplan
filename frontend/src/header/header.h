@@ -38,6 +38,7 @@
 #include <boost/date_time/local_time/local_time.hpp>
 #include <boost/algorithm/string/split.hpp>
 #include <boost/algorithm/string.hpp>
+#include <boost/algorithm/string/erase.hpp>
 #include <cassert>
 
 /**-------------------------------------------------------------------
