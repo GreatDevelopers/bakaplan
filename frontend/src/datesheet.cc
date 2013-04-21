@@ -133,6 +133,22 @@ void DateSheet :: WriteRollNoDetail()
                                     startRollNo[i], endRollNo[i],
                                     notIncluded[i]);
     }
+
+    /* write roll no detail into file */
+
+    temp = FileName(ROLLNO_DETAIL, projectID, 1);
+    outFile.open(temp.c_str());
+
+    outFile << totalClasses << endl;
+    for(i = 0; i < totalClasses; i++)
+    {
+        erase_all(notIncluded[i], " ");
+        outFile << prefix[i] << "-" << endl
+                << startRollNo[i] << "-" << endRollNo[i] << endl
+                << notIncluded[i] << endl;
+    }
+
+    outFile.close();
 }
 
 /**

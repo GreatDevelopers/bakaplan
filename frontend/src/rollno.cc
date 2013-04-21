@@ -159,6 +159,37 @@ void RollNoDetail :: WriteClassDetail()
         database.InsertClassDetail(projectID, className[i], 
                                    subjectName[i], subjectCode[i]);
     }
+   
+    /* Writing class details into I/P file*/
+    subCode.resize(totalClasses);
+    subName.resize(totalClasses);
+    totalSubjects.resize(totalClasses);
+
+    for(i = 0; i < totalClasses; i++)
+    {
+        SplitString(subCode[i], subjectCode[i], ",");
+        
+        SplitString(subName[i], subjectName[i], ",");
+        
+        totalSubjects[i] = subCode[i].size();
+    }
+
+    temp = FileName(CLASS_DETAIL, projectID, 1);
+    outFile.open(temp.c_str());
+
+    outFile << totalClasses << endl;
+    for(i = 0; i < totalClasses; i++)
+    {
+        outFile << className[i] << endl
+                << totalSubjects[i] << endl;
+        for(j = 0; j < totalSubjects[i]; j++)
+        {
+            outFile << subCode[i][j] << endl
+                    << subName[i][j] << endl;
+        }
+    }
+
+    outFile.close();
 }
 
 /**

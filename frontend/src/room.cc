@@ -203,6 +203,31 @@ void RoomDetail :: WriteDateSheet()
     {
         database.InsertDateSheet(projectID, date[i], examCode[i]);
     }
+
+    /* Write date sheet detail to i/p file */
+    subCode.resize(totalDays);
+    totalSubjects.resize(totalDays);
+    for(i = 0; i < totalDays; i++)
+    {
+        SplitString(subCode[i], examCode[i], ",");
+        totalSubjects[i] = subCode[i].size();
+    }
+    temp = FileName(DATESHEET, projectID, 1);
+    outFile.open(temp.c_str());
+
+    outFile << totalDays << endl;
+
+    for(i = 0; i < totalSubjects[i]; i++) 
+    {
+        outFile << date[i] << endl
+                << totalSubjects[i] << endl;
+        for(j = 0; j < totalSubjects[i]; j++)
+        {
+            outFile << subCode[i][j];
+        }
+    }
+
+    outFile.close();
 }
 
 /**
