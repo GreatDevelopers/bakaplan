@@ -157,7 +157,7 @@ void Strategy :: StrategyPage()
 
     cout << page.brk;
 
-    page.FormStart("FormStrategy", "validation.html", "POST");
+    page.FormStart("FormStrategy", "validation.html", "post");
 
     cout << page.startH1 << "Strategy" 
          << page.endH1 << page.brk;
@@ -195,13 +195,14 @@ void Strategy :: StrategyPage()
             cout << page.endTD;
         }
         cout << page.startTD;
-        page.SelectFieldStart(fieldName.strategyChoice);
+        temp = fieldName.strategyChoice + IntToString(j);
+        page.SelectFieldStart(temp);
         
         for(unsigned j = 0; j < strategyName.size(); j++)
         {
-            temp = IntToString((j + 1));
+            temp = IntToString((j));
             if(strategyChoice.size() > 0 && 
-               strategyChoice[i] == strategyName[j])
+               strategyChoice[i] == temp)
             {
                 page.SelectOptionStart(temp, "y");
             }
