@@ -164,7 +164,7 @@ void Strategy :: CheckValidation(int strategy, int i)
             << " Max Strategy Group Students = " 
             << groupStudentSize[strategy-1] 
             << endl;*/
-
+    outFile << date[i] << endl;
     outFile << strategy << endl
             << totalSeats << endl
             << totalStudents << endl

@@ -38,6 +38,9 @@ class Validation : public InputDetail
         /** Write Strategy Detail */
         void WriteStrategyDetail();
 
+        /** Read Validation.out file */
+        void ReadValidation();
+
         /** Validation Page */
         void ValidationPage();
     
