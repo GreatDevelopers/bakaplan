@@ -26,8 +26,19 @@ class Validation : public InputDetail
     protected:
 
     public:
+        /** Constructor */
         Validation();
 
+        /** Read Strategy Detail */
+        void ReadStrategyDetail();
+
+        /** Write Strategy Detail */
+        void WriteStrategyDetail();
+
+        /** Validation Page */
+        void ValidationPage();
+    
+        /** desrtuctor  */
         ~Validation();
 };
 

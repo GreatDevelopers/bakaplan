@@ -27,6 +27,7 @@
 int main(void)
 {
     Validation valid;
+    valid.ReadStrategyDetail();
 
     return 0;
 }
