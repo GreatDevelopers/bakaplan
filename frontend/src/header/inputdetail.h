@@ -114,6 +114,11 @@ class InputDetail //: public PageLayout
                      roomNo,            /**< Room no. in one centre */
                      rows,                        /**< Rows of room */
                      columns;                   /**< columns of room */
+
+        /* Temp variable used for writing details into file */
+        INT_VEC totalSubjects;
+        STRING_2DVEC subCode, subName;
+
     public:
         /** Constructor */
         InputDetail(); 
@@ -139,6 +144,9 @@ class InputDetail //: public PageLayout
         /** Spliting string  */
         void SplitString(STRING_VEC & output, 
                          string input, string token);
+
+        /** Retruning filename w.r.t. to project ID */
+        string FileName(string file, string projectID, int fileType);
 };
 
 #endif
