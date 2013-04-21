@@ -47,22 +47,38 @@ ExamDetail :: ExamDetail()
 void ExamDetail :: SetDefaultValue()
 {
     where = "ProjectID = " + projectID;
-    if(projectType == "Old")
+    database.SelectColumn(examName, "ExamName", "ExamDetail", 
+                          where);
+
+    if(projectType == "Old" && examName.size() > 0)
     {
-        database.SelectColumn(examName, "ExamName", "ExamDetail", 
-                              where);
-        if(examName.size() > 0)
+        database.SelectColumn(examSession, "ExamSession", 
+                              "ExamDetail", where);
+        database.SelectColumn(examTime, "ExamTime", 
+                              "ExamDetail", where);
+        database.SelectColumn(examVenue, "ExamVenue", 
+                              "ExamDetail", where);
+        if(examName.size() < unsigned(totalDays))
         {
-            database.SelectColumn(examSession, "ExamSession", 
-                                  "ExamDetail", where);
-            database.SelectColumn(examTime, "ExamTime", 
-                                  "ExamDetail", where);
-            database.SelectColumn(examVenue, "ExamVenue", 
-                                  "ExamDetail", where);
+            j = totalDays - examName.size() + 1;
+            
+            examName.resize(totalDays);
+            examSession.resize(totalDays);
+            examTime.resize(totalDays);
+            examVenue.resize(totalDays);
+            date.resize(totalDays);
+            cout << totalDays;
+            for(i = j; i < totalDays; i++)
+            {
+                examName[i] = "";
+                examSession[i] = "";
+                examTime[i] = "";
+                examVenue[i] = "";
+            }
+           
         }
     }
-    if((projectType == "Old" && examName.size() <= 0) || 
-        projectType == "New")
+    else
     {
         examName.resize(totalDays);
         examSession.resize(totalDays);
@@ -217,30 +233,63 @@ void ExamDetail :: ExamDetailPage()
 
     for(i = 0; i < totalDays; i++)
     {
-        cout << page.startTR;
         j = i + 1;
-        if(sameDetail == "No")
+        if(projectType == "Old")
         {
+            cout << page.startTR;
+            if(sameDetail == "No")
+            {
+                cout << page.startTD;
+                cout << date[i];
+                page.InputField("hidden", fieldName.date, j, date[i]);
+                cout << page.endTD;
+            }
             cout << page.startTD;
-            cout << date[i];
-            page.InputField("hidden", fieldName.date, j, date[i]);
+            page.InputField("text", fieldName.examName, j, 
+                            examName[i], examName[i]);
             cout << page.endTD;
+            cout << page.startTD;
+            page.InputField("text", fieldName.examSession, j, 
+                             examSession[i], examSession[i]);
+            cout << page.endTD;
+            cout << page.startTD;
+            page.InputField("text", fieldName.examTime, j, 
+                            examTime[i], examTime[i]);
+            cout << page.endTD;
+            cout << page.startTD;
+            page.InputField("text", fieldName.examVenue, j, 
+                             examVenue[i], examVenue[i]);
+            cout << page.endTD;
+            cout << page.endTR;           
         }
-        cout << page.startTD;
-        page.InputField("text", fieldName.examName, j, examName[i]);
-        cout << page.endTD;
-        cout << page.startTD;
-        page.InputField("text", fieldName.examSession, j, 
-                         examSession[i]);
-        cout << page.endTD;
-        cout << page.startTD;
-        page.InputField("text", fieldName.examTime, j, examTime[i]);
-        cout << page.endTD;
-        cout << page.startTD;
-        page.InputField("text", fieldName.examVenue, j, 
-                         examVenue[i]);
-        cout << page.endTD;
-        cout << page.endTR;
+        else
+        {
+            cout << page.startTR;
+            if(sameDetail == "No")
+            {
+                cout << page.startTD;
+                cout << date[i];
+                page.InputField("hidden", fieldName.date, j, date[i]);
+                cout << page.endTD;
+            }
+            cout << page.startTD;
+            page.InputField("text", fieldName.examName, j, 
+                            examName[i]);
+            cout << page.endTD;
+            cout << page.startTD;
+            page.InputField("text", fieldName.examSession, j, 
+                             examSession[i]);
+            cout << page.endTD;
+            cout << page.startTD;
+            page.InputField("text", fieldName.examTime, j, 
+                            examTime[i]);
+            cout << page.endTD;
+            cout << page.startTD;
+            page.InputField("text", fieldName.examVenue, j, 
+                             examVenue[i]);
+            cout << page.endTD;
+            cout << page.endTR;
+        }
     }
 
     page.TableEnd();

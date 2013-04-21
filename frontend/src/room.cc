@@ -291,7 +291,7 @@ void RoomDetail :: RoomDetailPage()
 
         for(j = 0; j < totalCentres[i]; j++)
         {
-/*            if(projectType == "Old")
+            if(projectType == "Old")
             {
                 cout << page.startTR;
         
@@ -329,7 +329,7 @@ void RoomDetail :: RoomDetailPage()
                 cout << page.endTR;
             }
             else
-*/            {
+            {
                 cout << page.startTR;
         
                 cout << page.startTD;
