@@ -21,10 +21,13 @@
  */
 
 #include "inputdetail.h"
+#include "../backend/header/datesheet.h"
 
 class RoomDetail : public InputDetail
 {
     protected:
+
+//    DateSheet dateWiseRollNo;
 
     public:
         /** Constructor */
