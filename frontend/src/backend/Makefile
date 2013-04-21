@@ -25,7 +25,7 @@ include Make.common
 #   Targets
 # ====================================================================
 
-all : run
+all : main
 #$(READINPUT)$(O)
 
 #	Target for compiling .cc or .cpp files
