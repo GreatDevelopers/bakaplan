@@ -126,15 +126,17 @@ void Strategy :: GroupCondition(int strategy, int i)
         
         extra = extra * strategy;
         
-        outFile << "\t condition invalid" << endl
-                << "\t Add " << extra << " more seats." << endl;
+        outFile << "N" << endl;
+        outFile << extra << endl;
+/*        outFile << "\t condition invalid" << endl
+                << "\t Add " << extra << " more seats." << endl;*/
         
         outFile.close();    
     }
     else
     {
         outFile << "Y" << endl;
-        outFile << "\t condition is valid" << endl;
+//        outFile << "\t condition is valid" << endl;
         outFile.close();
         SeatingPlan(strategy, i);
         
@@ -152,15 +154,23 @@ void Strategy :: CheckValidation(int strategy, int i)
     TotalStudents(i);
     TotalGroupStudents(strategy, i);
     
-    outFile << " Date " << date[i] << endl
+/*    outFile << " Date " << date[i] << endl
             << " Total Exams " << totalExams[i] << endl
             << " Selected Strategy " << strategy << endl;
-    outFile << "\n\t Total Seats = " << totalSeats << endl
-            << "\t Total Students = " << totalStudents << endl
-            << "\t Total Group Seats = " << totalGroupSeats << endl
-            << "\t Max Group Students = " << groupStudentSize[strategy-1] 
-            << endl;
-    
+    outFile << " Total Seats = " << totalSeats << endl
+            << " Total Students = " << totalStudents << endl
+            << " Total Strategy Group Seats = " 
+            << totalGroupSeats << endl
+            << " Max Strategy Group Students = " 
+            << groupStudentSize[strategy-1] 
+            << endl;*/
+
+    outFile << strategy << endl
+            << totalSeats << endl
+            << totalStudents << endl
+            << totalGroupSeats << endl
+            << groupStudentSize[strategy-1] << endl;
+
     if(totalSeats < totalStudents)
     {
         outFile << "\t Add More rooms!" << endl;
