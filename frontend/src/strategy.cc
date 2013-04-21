@@ -139,6 +139,22 @@ void Strategy :: WriteExamDetail()
                                   examVenue[i]);
     }
 
+    /* Writing i/p file for date sheet */
+
+    temp = FileName(EXAM_DETAIL, projectID, 1);
+    outFile.open(temp.c_str());
+
+    outFile << totalDays << endl;
+
+    for(i = 0; i < totalDays; i++)
+    {
+        outFile << examName[i] << endl
+                << examSession[i] << endl
+                << examTime[i] << endl
+                << examVenue[i] << endl;
+    }
+
+    outFile.close();
 }
 
 /**
