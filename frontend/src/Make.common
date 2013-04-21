@@ -33,7 +33,7 @@ CLEAN   =   clean
 #   Common variables
 
 F_HEADER        =  header/
-F_HEADER_BOOST  =  header/boost/
+F_BACKEND       =  backend/
 F_HEADER_JWSMTP =  header/jwsmtp/
 F_BP            =  ../bp/
 HEADER          =  header
@@ -69,6 +69,10 @@ ROOM        =  room
 STRATEGY    =  strategy
 VALIDATION  =  validation
 REPORT      =  report
+
+READINPUT     =  readinput                                            
+EXPANDROLLNO  =  expandrollno                                         
+ARRANGEROLLNO =  arrangerollno
 
 #   File Extention variables
 
@@ -122,7 +126,8 @@ H_DATESHEET      :=  $(F_HEADER)$(DATESHEET)$(H) $(H_INPUTDETAIL)
 
 H_EXAM           :=  $(F_HEADER)$(EXAM)$(H) $(H_INPUTDETAIL)
 
-H_ROOM           :=  $(F_HEADER)$(ROOM)$(H) $(H_INPUTDETAIL)
+H_ROOM           :=  $(F_HEADER)$(ROOM)$(H) $(H_INPUTDETAIL) \
+                     $(F_BACKEND)$(F_HEADER)$(DATESHEET)$(H)
 
 H_STRATEGY       :=  $(F_HEADER)$(STRATEGY)$(H) $(H_INPUTDETAIL)
 
@@ -131,6 +136,11 @@ H_VALIDATION     :=  $(F_HEADER)$(VALIDATION)$(H) $(H_INPUTDETAIL)
 H_REPORT         :=  $(F_HEADER)$(REPORT)$(H) $(H_INPUTDETAIL)
 
 #   Variables for defining dependancy
+L_B_DATESHEET	 :=  backend/readinput.o backend/expandrollno.o \
+                  backend/arrangerollno.o backend/datesheet.o
+
+L_B_STRATEGY	 :=  backend/seatplan.o backend/strategy.o \
+					 backend/readinput.o
 
 D_DATABASE         =    $(DATABASE)$(CC) $(H_DATABASE)
 
@@ -230,13 +240,20 @@ L_ROLLNO       =  $(ROLLNO)$(MAIN)$(O) $(ROLLNO)$(O) $(L_INPUT)
 
 L_DATESHEET    =  $(DATESHEET)$(MAIN)$(O) $(DATESHEET)$(O) $(L_INPUT)
 
+#L_B_DATESHEET :=  $(F_BACKEND)$(READINPUT)$(O) \
+#                  $(F_BACKEND)$(EXPANDROLLNO)$(O) \
+#$(F_BACKEND)$(ARRANGEROLLNO)$(O) \
+#                  $(F_BACKEND)$(DATESHEET)$(O) \
+
 L_EXAM         =  $(EXAM)$(MAIN)$(O) $(EXAM)$(O) $(L_INPUT)
 
-L_ROOM         =  $(ROOM)$(MAIN)$(O) $(ROOM)$(O) $(L_INPUT)
+L_ROOM        :=  $(ROOM)$(MAIN)$(O) $(ROOM)$(O) $(L_INPUT) \
+                  $(L_B_DATESHEET)
 
 L_STRATEGY     =  $(STRATEGY)$(MAIN)$(O) $(STRATEGY)$(O) $(L_INPUT)
 
-L_VALIDATION   =  $(VALIDATION)$(MAIN)$(O) $(VALIDATION)$(O) $(L_INPUT)
+L_VALIDATION  :=  $(VALIDATION)$(MAIN)$(O) $(VALIDATION)$(O) \
+				  $(L_INPUT) $(L_B_STRATEGY)
 
 L_REPORT       =  $(REPORT)$(MAIN)$(O) $(REPORT)$(O) $(L_INPUT)
 
