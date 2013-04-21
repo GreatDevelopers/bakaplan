@@ -76,6 +76,20 @@ void Validation :: WriteStrategyDetail()
         database.InsertStrategyDetail(projectID, temp, 
                                       strategyChoice[i]);
     }
+
+    /* Writing I/P file for strategy detail */
+
+    temp = FileName(STRATEGY, projectID, 1);
+    outFile.open(temp.c_str());
+
+    outFile << totalDays << endl;
+
+    for(i = 0; i < totalDays; i++)
+    {
+        outFile << strategyChoice[i] << endl;
+    }
+
+    outFile.close();
 }
 
 /**
