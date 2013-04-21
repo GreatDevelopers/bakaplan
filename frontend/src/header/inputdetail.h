@@ -117,7 +117,9 @@ class InputDetail //: public PageLayout
 
         /* Temp variable used for writing details into file */
         INT_VEC totalSubjects;
+        INT_2DVEC totalRooms;
         STRING_2DVEC subCode, subName;
+        STRING_3DVEC rmNo, row, col;
 
     public:
         /** Constructor */

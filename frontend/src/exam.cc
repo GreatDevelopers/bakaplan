@@ -186,6 +186,51 @@ void ExamDetail :: WriteRoomDetail()
         }
     }
 
+    /* Writing room details into file */
+    
+    totalRooms.resize(totalDays);
+    rmNo.resize(totalDays);
+    row.resize(totalDays);
+    col.resize(totalDays);
+
+    for(i = 0; i < totalDays; i++)
+    {
+        totalRooms[i].resize(totalCentres[i]);
+        rmNo[i].resize(totalCentres[i]);
+        row[i].resize(totalCentres[i]);
+        col[i].resize(totalCentres[i]);
+        
+        for(j = 0; j < totalCentres[i]; j++)
+        {
+            SplitString(rmNo[i][j], roomNo[i][j], ",");
+            SplitString(row[i][j], rows[i][j], ",");
+            SplitString(col[i][j], columns[i][j], ",");
+            totalRooms[i][j] = rmNo[i][j].size();
+        }
+    }
+    
+    temp = FileName(ROOM_DETAIL, projectID, 1);
+    outFile.open(temp.c_str());
+    
+    outFile << totalDays << endl;
+
+    for(i = 0; i < totalDays; i++)
+    {
+        outFile << totalCentres[i] << endl;
+        for(j = 0; j < totalCentres[i]; j++)
+        {
+            outFile << centreName[i][j] << endl
+                    << totalRooms[i][j] << endl;
+            for(k = 0; k < totalRooms[i][j]; k++)
+            {
+                outFile << rmNo[i][j][k] << endl
+                        << row[i][j][k]  << " "
+                        << col[i][j][k]  << endl;
+            }
+        }
+    }
+
+    outFile.close();
 }
 
 /**
