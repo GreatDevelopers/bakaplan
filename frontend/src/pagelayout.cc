@@ -109,9 +109,8 @@ void PageLayout :: Head(string titleName)
     Title(titleName);
     string js = "../../../../BaKaPlan/javascript/javascript.js";
     Javascript(js);
-/*     js = "../../../../BaKaPlan/javascript/parsley.js";
-    Javascript("jquery.js");
-    Javascript(js);*/
+    Javascript("https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js");
+    Javascript(js);
     /*  Include External CSS file path */
 /*     string js = "https://ajax.googleapis.com/ajax";
     js += "/libs/jquery/1.7.2/jquery.min.js";

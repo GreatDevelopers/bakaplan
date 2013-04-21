@@ -180,7 +180,23 @@ void PageStructureMaker :: BodyStart()
 void PageStructureMaker :: BodyEnd()
 {
     DivEnd();
-    cout << "</BODY>" << endl;
+/*    cout <<"<SCRIPT>"
+         << "var loginValidator = new FormValidator('FormLogin', [{"
+         << "name: 'EmailID',"
+         << "rules: 'valid_email'"
+         << "}, {"
+         << "  name: 'Password',"
+         << "  display: 'Password',"
+         << "      rules: 'min_length[8]'"
+         << "}], function(errors, event) {"
+        << "if (errors.length > 0) {"
+        << "alert(\"error\");"
+        << " }"
+        <<"    });"
+        <<" </SCRIPT>"; */
+          string js ="../../../../BaKaPlan/javascript/validateit.js" ;
+          Javascript(js);
+          cout << "</BODY>" << endl;
 }
 
 /**
@@ -223,9 +239,11 @@ void PageStructureMaker :: DivEnd()
 void PageStructureMaker :: FormStart(string name, string action, 
                            string method)
 {
+    
     cout << "<form name = \"" << name 
          << "\" action = \"" << action
-         << "\" method = \"" << method << "\" >" << endl;
+         << "\" method = \"" << method
+         << "\" >"<< endl;
 }
 
 /**
@@ -239,6 +257,9 @@ void PageStructureMaker :: FormStart(string name, string action,
 void PageStructureMaker :: FormEnd()
 {
     cout << "</form>" << endl;
+     string js = "http://rickharrison.github.io/validate.js/validate.min.js";
+    Javascript(js);
+     
 }
 
 /**
