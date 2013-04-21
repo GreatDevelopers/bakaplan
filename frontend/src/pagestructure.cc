@@ -366,10 +366,12 @@ void PageStructureMaker :: Label(string forField, string value)
  *--------------------------------------------------------------------
  */
 
-void PageStructureMaker :: InputField(string type, string name, 
-                                      string placeholder, string value)
+void PageStructureMaker :: InputField(string type, 
+                                      string name, string placeholder, 
+                                      string value)
 {
-    cout << "<input type=\"" << type << "\" name=\"" << name;
+    cout << "<input "//class = \"" << className << "\" "
+         << "type=\"" << type << "\" name=\"" << name;
     cout << "\" id = \"" << name << "\" ";
 
     if(type == "hidden" || type == "radio")

@@ -20,10 +20,13 @@
  *  include inpudetail.h 
  */
 #include "inputdetail.h"
+#include "../backend/header/strategy.h"
 
 class Validation : public InputDetail
 {
     protected:
+
+    Strategy validStrategy;
 
     public:
         /** Constructor */

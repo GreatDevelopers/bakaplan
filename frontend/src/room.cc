@@ -176,7 +176,7 @@ void RoomDetail :: ReadDateSheet()
         totalDays = 1;
     }
 
-//    dateWiseRollNo.Main(projectID);
+    dateWiseRollNo.Main(projectID);
     RoomDetailPage();
 }
 

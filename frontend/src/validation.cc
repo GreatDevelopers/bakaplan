@@ -53,6 +53,8 @@ void Validation :: ReadStrategyDetail()
                             fieldName.strategyChoice, j);
     }
     WriteStrategyDetail();
+
+    validStrategy.Main(projectID);
 }
 
 /**

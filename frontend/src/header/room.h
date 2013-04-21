@@ -27,7 +27,7 @@ class RoomDetail : public InputDetail
 {
     protected:
 
-//    DateSheet dateWiseRollNo;
+    DateSheet dateWiseRollNo;
 
     public:
         /** Constructor */
