@@ -25,11 +25,10 @@ include Make.common
 #   Targets
 # ====================================================================
 
-all: $(F_BP)$(LOGIN)$(HTML) $(F_BP)$(REGISTER)$(HTML) $(F_BP)$(NEWUSER)$(HTML) $(F_BP)$(CONFIRM)$(HTML) $(F_BP)$(ADDUSER)$(HTML) $(F_BP)$(PROJECT)$(HTML) $(F_BP)$(LOGOUT)$(HTML) $(F_BP)$(CLASS)$(HTML) $(F_BP)$(ROLLNO)$(HTML) $(F_BP)$(DATESHEET)$(HTML) $(F_BP)$(EXAM)$(HTML) $(F_BP)$(ROOM)$(HTML) $(F_BP)$(STRATEGY)$(HTML) $(F_BP)$(VALIDATION)$(HTML) $(F_BP)$(REPORT)$(HTML)
+all: back $(F_BP)$(LOGIN)$(HTML) $(F_BP)$(REGISTER)$(HTML) $(F_BP)$(NEWUSER)$(HTML) $(F_BP)$(CONFIRM)$(HTML) $(F_BP)$(ADDUSER)$(HTML) $(F_BP)$(PROJECT)$(HTML) $(F_BP)$(LOGOUT)$(HTML) $(F_BP)$(CLASS)$(HTML) $(F_BP)$(ROLLNO)$(HTML) $(F_BP)$(DATESHEET)$(HTML) $(F_BP)$(EXAM)$(HTML) $(F_BP)$(ROOM)$(HTML) $(F_BP)$(STRATEGY)$(HTML) $(F_BP)$(VALIDATION)$(HTML) $(F_BP)$(REPORT)$(HTML)
 
-#$(DATABASE)$(O) $(INPUTFIELDNAME)$(O) $(READINPUTFIELD)$(O) $(MD5)$(O) $(JAVASCRIPT)$(O) $(PAGELAYOUT)$(O) $(PAGESTRUCTURE)$(O) $(INPUTDETAIL)$(O)
-
-#$(READINPUT)$(O)
+back:
+	make -C backend
 
 #	Target for compiling .cc or .cpp files
 
@@ -199,12 +198,5 @@ $(F_BP)$(REPORT)$(HTML) : $(L_REPORT)
 	$(CXX) $(OFLAG) $(F_BP)$(REPORT)$(HTML) $(L_REPORT) \
 	$(LMYSQL) $(LCGICC) $(LSMTP)
 
-
-
-
-
-
-
-
 $(CLEAN) : 
-	rm -f *.o *.html
+	rm -f *.o *.html && make -C backend clean
