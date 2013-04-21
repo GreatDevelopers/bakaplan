@@ -39,6 +39,7 @@
 #include <boost/algorithm/string/split.hpp>
 #include <boost/algorithm/string.hpp>
 #include <boost/algorithm/string/erase.hpp>
+#include <boost/algorithm/string/trim.hpp>
 #include <cassert>
 
 /**-------------------------------------------------------------------

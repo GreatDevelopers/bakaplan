@@ -142,7 +142,12 @@ void DateSheet :: WriteRollNoDetail()
     outFile << totalClasses << endl;
     for(i = 0; i < totalClasses; i++)
     {
+        trim(prefix[i]);
+        trim(startRollNo[i]);
+        trim(endRollNo[i]);
+
         erase_all(notIncluded[i], " ");
+
         outFile << prefix[i] << "-" << endl
                 << startRollNo[i] << "-" << endRollNo[i] << endl
                 << notIncluded[i] << endl;

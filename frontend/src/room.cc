@@ -217,12 +217,15 @@ void RoomDetail :: WriteDateSheet()
 
     outFile << totalDays << endl;
 
-    for(i = 0; i < totalSubjects[i]; i++) 
+    for(i = 0; i < totalDays; i++) 
     {
+        trim(date[i]);
+        
         outFile << date[i] << endl
                 << totalSubjects[i] << endl;
         for(j = 0; j < totalSubjects[i]; j++)
         {
+            trim(subCode[i][j]);
             outFile << subCode[i][j] << endl;
         }
     }

@@ -219,10 +219,16 @@ void ExamDetail :: WriteRoomDetail()
         outFile << totalCentres[i] << endl;
         for(j = 0; j < totalCentres[i]; j++)
         {
+            trim(centreName[i][j]);
+            
             outFile << centreName[i][j] << endl
                     << totalRooms[i][j] << endl;
             for(k = 0; k < totalRooms[i][j]; k++)
             {
+                trim(rmNo[i][j][k]);
+                trim(row[i][j][k]);
+                trim(col[i][j][k]);
+
                 outFile << rmNo[i][j][k] << endl
                         << row[i][j][k]  << " "
                         << col[i][j][k]  << endl;

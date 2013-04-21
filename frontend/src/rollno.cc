@@ -102,7 +102,25 @@ void RollNoDetail :: ReadClassDetail()
                                   "RollNoDetail", where);
             database.SelectColumn(notIncluded, "NotIncluded",
                                   "RollNoDetail", where);
+
+            if(startRollNo.size() < unsigned(totalClasses))
+            {
+                j = startRollNo.size();
+                prefix.resize(totalClasses);
+                startRollNo.resize(totalClasses);
+                endRollNo.resize(totalClasses);
+                notIncluded.resize(totalClasses);
+
+                for(i = j; i < totalClasses; i++)
+                {
+                    prefix[i]       =   "";
+                    startRollNo[i]  =   "";
+                    endRollNo[i]    =   "";
+                    notIncluded[i]  =   "";
+                }
+            }
         }
+        
             
     }
     else
@@ -184,6 +202,8 @@ void RollNoDetail :: WriteClassDetail()
                 << totalSubjects[i] << endl;
         for(j = 0; j < totalSubjects[i]; j++)
         {
+            trim(subCode[i][j]);
+            trim(subName[i][j]);
             outFile << subCode[i][j] << endl
                     << subName[i][j] << endl;
         }
