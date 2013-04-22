@@ -141,6 +141,8 @@ void Validation :: ReadValidation()
         {
             getline(inFile, temp1, '\n');
             vecTemp[j] = temp1;
+            if(vecTemp[j] == "N")
+                j = totalCols;
         }
     }
 
@@ -195,6 +197,10 @@ void Validation :: ValidationPage()
         
         if(vecTemp[i] == "Y")
             i = i + 1;
+        else if(vecTemp[i] == "N")
+            i = totalCols;
+        else
+            //-
         cout << page.endTR;
     }
 

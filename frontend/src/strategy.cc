@@ -144,7 +144,7 @@ void Strategy :: WriteExamDetail()
     database.SelectColumn(vecTemp, "Date", "DateSheet", where);
     int total = vecTemp.size();
     int Days = 1;
-    vecTemp.clear();
+//    vecTemp.clear();
 
     temp = FileName(EXAM_DETAIL, projectID, 1);
     outFile.open(temp.c_str());
@@ -153,6 +153,7 @@ void Strategy :: WriteExamDetail()
 
     for(i = 0; i < totalDays; i++)
     {
+        outFile << vecTemp[i] << endl;      // date of exam
         outFile << examName[i] << endl
                 << examSession[i] << endl
                 << examTime[i] << endl
@@ -164,9 +165,7 @@ void Strategy :: WriteExamDetail()
                 i--;
                 Days++;
             }
-
         }
-
     }
 
     outFile.close();
