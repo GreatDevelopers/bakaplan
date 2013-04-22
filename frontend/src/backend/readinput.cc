@@ -225,6 +225,40 @@ void ReadInput :: ReadRollNoDetail(string projectID)
 
 /**
  *      \class  ReadInput
+ *      \fn     ReadInput :: ReadExamDetail(string projectID);
+ *      \brief  Reading Exam DEtails
+ */
+
+void ReadInput :: ReadExamDetail(string projectID)
+{
+    temp = FileName(EXAM_DETAIL, projectID, 1);
+
+    inFile.open(temp.c_str());
+    
+    inFile >> totalDays;
+
+    getline(inFile, temp, '\n');
+
+    examDate.resize(totalDays);
+    examName.resize(totalDays);
+    examSession.resize(totalDays);
+    examTime.resize(totalDays);
+    examVenue.resize(totalDays);
+
+    for(i = 0; i < totalDays; i++)
+    {
+        getline(inFile, examDate[i], '\n');
+        getline(inFile, examName[i], '\n');
+        getline(inFile, examSession[i], '\n');
+        getline(inFile, examTime[i], '\n');
+        getline(inFile, examVenue[i], '\n');
+    }
+
+    inFile.close();
+}
+
+/**
+ *      \class  ReadInput
  *      \fn     ReadInput :: ReadClassDetail(string fileName)
  *      \brief  Reading class details
  *      \param  fileName I/P filename for class detail

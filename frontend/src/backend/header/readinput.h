@@ -38,8 +38,13 @@ class ReadInput
 
                    className,          /**< Branch/trade/class Name */
                    date,                  /**< Date for examination */
-                   strategyOption;       /**< Strategy option selected 
+                   strategyOption,       /**< Strategy option selected 
                                                             by user */
+                   examName,
+                   examSession,
+                   examTime,
+                   examVenue,
+                   examDate;
 
 
         STRING_2DVEC subjectCode,                 /**< Subject Code */
@@ -100,6 +105,9 @@ class ReadInput
 
         /** Reading strategy choice from strategy.in file */
         void ReadStrategy(string projectID);
+
+        /** Reading exam details */
+        void ReadExamDetail(string projectID);
         
         ~ReadInput();                           /**< Desrtuctor */
 };
