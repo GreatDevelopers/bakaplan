@@ -192,7 +192,7 @@ void DateSheet :: DateSheetPage()
 
     cout << page.brk;
 
-    page.FormStart("FormDateSheet", "room.html", "POST");
+    page.FormStart("FormDateSheet", "room", "POST");
 
     cout << page.startH1 << "Date Sheet" 
          << page.endH1 << page.brk;

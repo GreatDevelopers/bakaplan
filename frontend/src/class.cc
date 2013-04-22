@@ -187,7 +187,7 @@ void ClassDetail :: ClassDetailPage(string msg)
 
     cout << page.brk;
 
-    page.FormStart("FormClass", "rollno.html", "POST");
+    page.FormStart("FormClass", "rollno", "POST");
 
     cout << page.startH1 << "Class/Branch/Trade Detail" 
          << page.endH1 << page.brk;

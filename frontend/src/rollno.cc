@@ -233,7 +233,7 @@ void RollNoDetail :: RollNoDetailPage(string msg)
 
     cout << page.brk;
 
-    page.FormStart("FormRollNo", "datesheet.html", "POST");
+    page.FormStart("FormRollNo", "datesheet", "POST");
 
     cout << page.startH1 << "Roll No Detail" << page.endH1 << page.brk;
     

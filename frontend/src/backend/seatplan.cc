@@ -225,7 +225,7 @@ void SeatPlan :: WriteSeatPlan(string projectID, int i)
 void SeatPlan :: WriteHTMLFile(string projectID, int i)
 {
 
-    temp = "../../../../SeatPlan/seatplan-" + projectID + ".html";
+    temp = "../../SeatPlan/seatplan-" + projectID + ".html";
     
     outFile.open(temp.c_str());
     outFile << "<html><head><title>BaKaPlan</title>"

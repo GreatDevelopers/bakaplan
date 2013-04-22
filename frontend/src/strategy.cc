@@ -187,7 +187,7 @@ void Strategy :: StrategyPage()
 
     cout << page.brk;
 
-    page.FormStart("FormStrategy", "validation.html", "post");
+    page.FormStart("FormStrategy", "validation", "post");
 
     cout << page.startH1 << "Strategy" 
          << page.endH1 << page.brk;

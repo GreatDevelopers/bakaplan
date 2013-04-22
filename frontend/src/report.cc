@@ -101,7 +101,7 @@ void Report :: ReportPage()
              << examCode[i]
              << page.endTD;
 
-         temp = "../../../../SeatPlan/seatplan-" + projectID +
+         temp = "../../SeatPlan/seatplan-" + projectID +
                 "-" + IntToString(i + 1) + ".html";
          cout << page.startTD;
          page.Anchor(temp, "View Report");

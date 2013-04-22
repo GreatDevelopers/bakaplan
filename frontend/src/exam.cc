@@ -270,7 +270,7 @@ void ExamDetail :: ExamDetailPage()
 
     cout << page.brk;
 
-    page.FormStart("FormExam", "strategy.html", "POST");
+    page.FormStart("FormExam", "strategy", "POST");
 
     cout << page.startH1 << "Exam Detail" 
          << page.endH1 << page.brk;

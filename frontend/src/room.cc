@@ -254,7 +254,7 @@ void RoomDetail :: RoomDetailPage()
 
     cout << page.brk;
 
-    page.FormStart("FormRoom", "exam.html", "POST");
+    page.FormStart("FormRoom", "exam", "POST");
 
     cout << page.startH1 << "Room Detail" 
          << page.endH1 << page.brk;

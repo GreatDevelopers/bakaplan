@@ -167,7 +167,7 @@ void Validation :: ValidationPage()
 
     cout << page.brk;
 
-    page.FormStart("FormValid", "report.html", "post");
+    page.FormStart("FormValid", "report", "post");
 
     cout << page.startH1 << "Validation Detail" 
          << page.endH1 << page.brk;

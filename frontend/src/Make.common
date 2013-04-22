@@ -80,7 +80,7 @@ H      =  .h
 O      =  .o
 CC     =  .cc
 CPP    =  .cpp
-HTML   =  .html     
+HTML   =   
 
 #   Variables for defining header files
 

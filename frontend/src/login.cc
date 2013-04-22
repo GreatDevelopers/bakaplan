@@ -93,7 +93,7 @@ void Login :: LoginPage(string msg, string emailID, string password)
 
     cout << page.brk;
 
-    page.FormStart("FormLogin", "project.html", "POST");
+    page.FormStart("FormLogin", "project", "POST");
 
     cout << page.startH1 << "Login" << page.endH1 << page.brk;
     
@@ -111,7 +111,7 @@ void Login :: LoginPage(string msg, string emailID, string password)
     page.Button("next", "submit", "btn", "Login");
 
     cout << page.brk << page.brk << page.startB;
-    page.Anchor("register.html", "Register Here");
+    page.Anchor("register", "Register Here");
     cout << page.endB;
 
     page.FormEnd();
@@ -135,9 +135,9 @@ void Login :: RegistrationPage(string msg, string emailID)
     page.DivStart("DivRegister", "");
     cout << page.brk;
 
-    page.Anchor("login.html", "Login");
+    page.Anchor("login", "Login");
 
-    page.FormStart("FormRegister", "newuser.html", "POST");
+    page.FormStart("FormRegister", "newuser", "POST");
     
     cout << page.startH1 << " Register New User " << page.endH1 
          <<  page.brk;
@@ -258,9 +258,9 @@ void Login :: ConfirmPage(string msg, string password,
         page.DivStart("DivConfirm", "");
         cout << page.brk;
 
-        page.Anchor("login.html", "Login");
+        page.Anchor("login", "Login");
 
-        page.FormStart("FormConfirm", "adduser.html", "POST");
+        page.FormStart("FormConfirm", "adduser", "POST");
     
         cout << page.startH1 << " Email Confirmed " << page.endH1 
              <<  page.brk

@@ -104,7 +104,7 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
 
     cout << page.brk;
 
-    page.FormStart("FormProject", "class.html", "get");
+    page.FormStart("FormProject", "class", "get");
 
     cout << page.startH1 << "Project Detail" << page.endH1 << page.brk;
     

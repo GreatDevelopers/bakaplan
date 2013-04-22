@@ -107,7 +107,7 @@ void PageLayout :: Head(string titleName)
 {
     HeadStart();
     Title(titleName);
-    string js = "../../../../BaKaPlan/javascript/javascript.js";
+    string js = "../../BaKaPlan/javascript/javascript.js";
     Javascript(js);
     Javascript("https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js");
     Javascript(js);
@@ -179,9 +179,9 @@ void PageLayout :: ContentType()
 void PageLayout :: LogoutLink()
 {
     cout << brk;
-    Anchor("logout.html", "Logout");
+    Anchor("logout", "Logout");
     cout << " | ";
-    Anchor("project.html", "Home");
+    Anchor("project", "Home");
     cout << brk;
 }
 
