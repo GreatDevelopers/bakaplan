@@ -106,7 +106,7 @@ void Report :: ReportPage()
          cout << page.startTD;
          page.Anchor(temp, "View Report");
          cout << page.endTD;
-        cout << page.endTR;
+         cout << page.endTR;
     }
 
     page.TableEnd();
