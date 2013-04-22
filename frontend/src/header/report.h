@@ -23,8 +23,16 @@ class Report : InputDetail
     protected:
 
     public:
+        /** Constructor */
         Report();
+        
+        /** Reading validation page's hidden fields  */
+        void ReadValidationDetail();
 
+        /** Report Page */
+        void ReportPage();
+
+        /** Destructor */
         ~Report();
 };
 

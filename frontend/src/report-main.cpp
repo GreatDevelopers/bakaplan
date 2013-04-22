@@ -28,6 +28,7 @@ int main(void)
 {
 
     Report report;
+    report.ReadValidationDetail();
 
     return 0;
 }
