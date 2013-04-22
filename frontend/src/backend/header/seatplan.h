@@ -61,21 +61,9 @@ class SeatPlan : public ReadInput
         void SeatingPlan(int strategy, int i);
         void CreateFile(string projectID);
         void WriteSeatPlan(string projectID, int i);
+        void WriteHTMLFile(string projectID, int i);
 
         /** Destructor */
         ~SeatPlan();
 
 };
-
-/* 
-        int total_seats, total_students, room_size[MIN_SIZE][MIN_SIZE],
-            total_group_seats, temp[MIN_SIZE], 
-            index_value[MIN_SIZE], group_student_size[MIN_SIZE];
-            
-        string seat[MIN_SIZE][MIN_SIZE][MIN_SIZE][MIN_SIZE]; // seatplan array
-        string seat_rollno[MIN_SIZE][MAX_SIZE], strategy_choice;
-        
-        int seat_size[MIN_SIZE];
-    
-        string sub_subcode[MIN_SIZE], sub_rollno[MIN_SIZE][MAX_SIZE];*/
-  

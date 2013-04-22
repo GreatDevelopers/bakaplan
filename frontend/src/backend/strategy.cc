@@ -141,6 +141,7 @@ void Strategy :: GroupCondition(int strategy, int i)
         SeatingPlan(strategy, i);
         
         WriteSeatPlan(projectID, i);
+//        WriteHTMLFile(projectID, i);
     }
 }
 
@@ -173,7 +174,8 @@ void Strategy :: CheckValidation(int strategy, int i)
 
     if(totalSeats < totalStudents)
     {
-        outFile << "\t Add More rooms!" << endl;
+        outFile << "N";
+        //outFile << "\t Add More rooms!" << endl;
         outFile.close();
     }
     else
@@ -222,6 +224,7 @@ void Strategy :: Main(string pID)
 
     ReadDateSheetOut(projectID);
     ReadRoomDetail(projectID);
+    ReadExamDetail(projectID);
     ReadStrategy(projectID);
 
     ChooseStrategy();
