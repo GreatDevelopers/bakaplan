@@ -77,8 +77,8 @@ $(DATESHEET)$(O) : $(D_DATESHEET)
 $(EXAM)$(O) : $(D_EXAM)
 	$(CXX) $(CFLAG) $(EXAM)$(CC) $(LMYSQL)
 
-$(ROOM)$(O) : $(D_ROOM) $(L_B_DATESHEET)
-	$(CXX) $(CFLAG) $(ROOM)$(CC) $(L_B_DATESHEET) $(LMYSQL)
+$(ROOM)$(O) : $(D_ROOM)
+	$(CXX) $(CFLAG) $(ROOM)$(CC) $(LMYSQL)
 
 $(STRATEGY)$(O) : $(D_STRATEGY)
 	$(CXX) $(CFLAG) $(STRATEGY)$(CC) $(LMYSQL)
