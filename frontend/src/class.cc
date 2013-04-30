@@ -28,12 +28,13 @@ ClassDetail :: ClassDetail()
 {
     // constructor
 
-    totalCols = 3;
+    totalCols = 4;
     tableHeading.resize(totalCols);
     i = 0;
     tableHeading[i++]   =   "Class Name";
     tableHeading[i++]   =   "Subject Name";
     tableHeading[i++]   =   "Subject Code";
+    tableHeading[i++]   =   "Delete Row";
 
     totalClasses = 1;
 }
@@ -202,10 +203,10 @@ void ClassDetail :: ClassDetailPage(string msg)
     page.InputField("button", "AddRow", 
                     "addRows('TableClass', 'TotalClasses', 'class')",
                     "Add Row");
-    
+/*    
     page.InputField("button", "DeleteRow", 
                     "deleteRow('TableClass', 'TotalClasses')",
-                    "Delete Row");
+                    "Delete Row");*/
 
     cout << page.brk << page.brk;
 
@@ -240,6 +241,12 @@ void ClassDetail :: ClassDetailPage(string msg)
                             subjectCode[i], subjectCode[i]);
             cout << page.endTD;
 
+            cout << page.startTD;
+            page.InputField("button", "DeleteRow", 
+                            "delRow('TotalClasses')",
+                            "Delete Row");
+            cout << page.endTD;
+
             cout << page.endTR;
         }
     }
@@ -262,6 +269,12 @@ void ClassDetail :: ClassDetailPage(string msg)
             cout << page.startTD;
             page.InputField("text", fieldName.subjectCode, (i + 1),
                             subjectCode[i]);
+            cout << page.endTD;
+
+            cout << page.startTD;
+            page.InputField("button", "DeleteRow", 
+                            "delRow('TotalClasses')",
+                            "Delete Row");
             cout << page.endTD;
 
             cout << page.endTR;

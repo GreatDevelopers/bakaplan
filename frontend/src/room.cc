@@ -27,13 +27,14 @@
 RoomDetail :: RoomDetail()
 {
     // constructor
-    totalCols = 4;
+    totalCols = 5;
     i = 0;
     tableHeading.resize(totalCols);
     tableHeading[i++] = "Centre Name";
     tableHeading[i++] = "Room No.";
     tableHeading[i++] = "Rows";
     tableHeading[i++] = "Columns";
+    tableHeading[i++] = "Delete Row";
 }
 
 /**
@@ -292,7 +293,7 @@ void RoomDetail :: RoomDetailPage()
                        + ")";
 
         page.InputField("button", temp, table, "Add Row");
-        temp = "DeleteRow";
+/*        temp = "DeleteRow";
         temp += IntToString(i + 1);
         
         table = "deleteRow('TableRoom" + IntToString(i + 1)
@@ -301,7 +302,7 @@ void RoomDetail :: RoomDetailPage()
  
         page.InputField("button", temp, table, "Delete Row");
 
-
+*/
         cout << page.brk << page.brk;
         temp = "TableRoom";
         temp += IntToString(i + 1);
@@ -355,6 +356,16 @@ void RoomDetail :: RoomDetailPage()
                                 StringToInt(temp),
                                 columns[i][j], columns[i][j]);
                 cout << page.endTD;       
+                
+                cout << page.startTD;
+                temp = "delRow('TotalCentres" + IntToString(i + 1) 
+                        + "')";
+                page.InputField("button", "DeleteRow", 
+                                temp,
+                                "Delete Row");
+                cout << page.endTD;
+
+
                 cout << page.endTR;
             }
             else
@@ -392,6 +403,15 @@ void RoomDetail :: RoomDetailPage()
                                 StringToInt(temp),
                                 columns[i][j]);
                 cout << page.endTD;       
+
+                cout << page.startTD;
+                temp = "delRow('TotalCentres" + IntToString(i + 1) 
+                        + "')";
+                page.InputField("button", "DeleteRow", 
+                                temp,
+                                "Delete Row");
+                cout << page.endTD;
+
                 cout << page.endTR;
                     
             }

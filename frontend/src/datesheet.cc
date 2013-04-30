@@ -27,11 +27,12 @@
 DateSheet :: DateSheet()
 {
     // constructor
-    totalCols = 2;
+    totalCols = 3;
     tableHeading.resize(totalCols);
     i = 0;
     tableHeading[i++] = "Date";
     tableHeading[i++] = "Exams Code";
+    tableHeading[i++] = "Delete Row";
 }
 
 /**
@@ -207,11 +208,11 @@ void DateSheet :: DateSheetPage()
     page.InputField("button", "AddRow", 
                     "addRows('TableDateSheet', 'TotalDays', 'date')",
                     "Add Row");
-    
+/*     
     page.InputField("button", "DeleteRow", 
                     "deleteRow('TableDateSheet', 'TotalDays')",
                     "Delete Row");
-
+*/
     cout << page.brk << page.brk;
 
     page.TableStart("TableDateSheet", "");
@@ -240,6 +241,13 @@ void DateSheet :: DateSheetPage()
                             examCode[i], examCode[i]);
             cout << page.endTD;
         
+            cout << page.startTD;
+            page.InputField("button", "DeleteRow", 
+                            "delRow('TotalDays')",
+                            "Delete Row");
+            cout << page.endTD;
+
+
             cout << page.endTR;
         }
     }
@@ -259,6 +267,13 @@ void DateSheet :: DateSheetPage()
                             examCode[i]);
             cout << page.endTD;
 
+            cout << page.startTD;
+            page.InputField("button", "DeleteRow", 
+                            "delRow('TotalDays')",
+                            "Delete Row");
+            cout << page.endTD;
+
+
             cout << page.endTR;
         }
     }
@@ -266,7 +281,7 @@ void DateSheet :: DateSheetPage()
     page.TableEnd();
   
     cout << page.brk << page.brk
-         << " Same details for each day ";
+         << " Same room and exam details for each day ";
     page.InputField("radio", fieldName.sameDetail, "Yes");
     page.Label(fieldName.sameDetail, "Yes");
 
