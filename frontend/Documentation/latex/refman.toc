@@ -1,0 +1,498 @@
+\contentsline {chapter}{\numberline {1}Class Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Class Hierarchy}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}Class Documentation}{9}{chapter.4}
+\contentsline {section}{\numberline {4.1}Arrange\discretionary {-}{}{}Roll\discretionary {-}{}{}No Class Reference}{9}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{10}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Constructor \& Destructor Documentation}{10}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}Arrange\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{10}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.2}$\sim $\discretionary {-}{}{}Arrange\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{10}{subsubsection.4.1.2.2}
+\contentsline {subsection}{\numberline {4.1.3}Member Function Documentation}{10}{subsection.4.1.3}
+\contentsline {subsubsection}{\numberline {4.1.3.1}Add\discretionary {-}{}{}Prefix\discretionary {-}{}{}With\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{10}{subsubsection.4.1.3.1}
+\contentsline {subsubsection}{\numberline {4.1.3.2}Main}{10}{subsubsection.4.1.3.2}
+\contentsline {subsubsection}{\numberline {4.1.3.3}Remove\discretionary {-}{}{}Non\discretionary {-}{}{}Eligible\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{11}{subsubsection.4.1.3.3}
+\contentsline {subsubsection}{\numberline {4.1.3.4}Remove\discretionary {-}{}{}Redundancy}{11}{subsubsection.4.1.3.4}
+\contentsline {subsubsection}{\numberline {4.1.3.5}Sort\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{11}{subsubsection.4.1.3.5}
+\contentsline {subsubsection}{\numberline {4.1.3.6}Write\discretionary {-}{}{}Arranged\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{11}{subsubsection.4.1.3.6}
+\contentsline {subsection}{\numberline {4.1.4}Member Data Documentation}{11}{subsection.4.1.4}
+\contentsline {subsubsection}{\numberline {4.1.4.1}expand\discretionary {-}{}{}R\discretionary {-}{}{}No}{11}{subsubsection.4.1.4.1}
+\contentsline {subsubsection}{\numberline {4.1.4.2}not\discretionary {-}{}{}Included\discretionary {-}{}{}R\discretionary {-}{}{}No}{12}{subsubsection.4.1.4.2}
+\contentsline {subsubsection}{\numberline {4.1.4.3}prefix}{12}{subsubsection.4.1.4.3}
+\contentsline {subsubsection}{\numberline {4.1.4.4}prefix\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{12}{subsubsection.4.1.4.4}
+\contentsline {subsubsection}{\numberline {4.1.4.5}roll\discretionary {-}{}{}No}{12}{subsubsection.4.1.4.5}
+\contentsline {section}{\numberline {4.2}Class\discretionary {-}{}{}Detail Class Reference}{12}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{13}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Constructor \& Destructor Documentation}{13}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}Class\discretionary {-}{}{}Detail}{13}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2.2}$\sim $\discretionary {-}{}{}Class\discretionary {-}{}{}Detail}{13}{subsubsection.4.2.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Member Function Documentation}{13}{subsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.3.1}Class\discretionary {-}{}{}Detail\discretionary {-}{}{}Page}{13}{subsubsection.4.2.3.1}
+\contentsline {subsubsection}{\numberline {4.2.3.2}New\discretionary {-}{}{}Project}{13}{subsubsection.4.2.3.2}
+\contentsline {subsubsection}{\numberline {4.2.3.3}Old\discretionary {-}{}{}Project}{14}{subsubsection.4.2.3.3}
+\contentsline {subsubsection}{\numberline {4.2.3.4}Project\discretionary {-}{}{}Type}{14}{subsubsection.4.2.3.4}
+\contentsline {subsubsection}{\numberline {4.2.3.5}Set\discretionary {-}{}{}Default\discretionary {-}{}{}Value}{14}{subsubsection.4.2.3.5}
+\contentsline {section}{\numberline {4.3}Database Class Reference}{14}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{15}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Constructor \& Destructor Documentation}{15}{subsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2.1}Database}{15}{subsubsection.4.3.2.1}
+\contentsline {subsubsection}{\numberline {4.3.2.2}$\sim $\discretionary {-}{}{}Database}{15}{subsubsection.4.3.2.2}
+\contentsline {subsection}{\numberline {4.3.3}Member Function Documentation}{16}{subsection.4.3.3}
+\contentsline {subsubsection}{\numberline {4.3.3.1}Delete\discretionary {-}{}{}Query}{16}{subsubsection.4.3.3.1}
+\contentsline {subsubsection}{\numberline {4.3.3.2}Insert\discretionary {-}{}{}Class\discretionary {-}{}{}Detail}{16}{subsubsection.4.3.3.2}
+\contentsline {subsubsection}{\numberline {4.3.3.3}Insert\discretionary {-}{}{}Date\discretionary {-}{}{}Sheet}{16}{subsubsection.4.3.3.3}
+\contentsline {subsubsection}{\numberline {4.3.3.4}Insert\discretionary {-}{}{}Exam\discretionary {-}{}{}Detail}{16}{subsubsection.4.3.3.4}
+\contentsline {subsubsection}{\numberline {4.3.3.5}Insert\discretionary {-}{}{}Project\discretionary {-}{}{}Detail}{16}{subsubsection.4.3.3.5}
+\contentsline {subsubsection}{\numberline {4.3.3.6}Insert\discretionary {-}{}{}Query}{16}{subsubsection.4.3.3.6}
+\contentsline {subsubsection}{\numberline {4.3.3.7}Insert\discretionary {-}{}{}Registration\discretionary {-}{}{}Detail}{17}{subsubsection.4.3.3.7}
+\contentsline {subsubsection}{\numberline {4.3.3.8}Insert\discretionary {-}{}{}Roll\discretionary {-}{}{}No\discretionary {-}{}{}Detail}{17}{subsubsection.4.3.3.8}
+\contentsline {subsubsection}{\numberline {4.3.3.9}Insert\discretionary {-}{}{}Room\discretionary {-}{}{}Detail}{17}{subsubsection.4.3.3.9}
+\contentsline {subsubsection}{\numberline {4.3.3.10}Insert\discretionary {-}{}{}Session\discretionary {-}{}{}Detail}{17}{subsubsection.4.3.3.10}
+\contentsline {subsubsection}{\numberline {4.3.3.11}Insert\discretionary {-}{}{}Strategy\discretionary {-}{}{}Detail}{17}{subsubsection.4.3.3.11}
+\contentsline {subsubsection}{\numberline {4.3.3.12}Insert\discretionary {-}{}{}User\discretionary {-}{}{}Detail}{17}{subsubsection.4.3.3.12}
+\contentsline {subsubsection}{\numberline {4.3.3.13}Query}{17}{subsubsection.4.3.3.13}
+\contentsline {subsubsection}{\numberline {4.3.3.14}Select\discretionary {-}{}{}Column}{18}{subsubsection.4.3.3.14}
+\contentsline {subsubsection}{\numberline {4.3.3.15}Select\discretionary {-}{}{}Project\discretionary {-}{}{}I\discretionary {-}{}{}D}{18}{subsubsection.4.3.3.15}
+\contentsline {subsubsection}{\numberline {4.3.3.16}Select\discretionary {-}{}{}Query}{18}{subsubsection.4.3.3.16}
+\contentsline {subsubsection}{\numberline {4.3.3.17}Select\discretionary {-}{}{}Sum}{18}{subsubsection.4.3.3.17}
+\contentsline {subsection}{\numberline {4.3.4}Member Data Documentation}{18}{subsection.4.3.4}
+\contentsline {subsubsection}{\numberline {4.3.4.1}connect}{18}{subsubsection.4.3.4.1}
+\contentsline {subsubsection}{\numberline {4.3.4.2}numrows}{18}{subsubsection.4.3.4.2}
+\contentsline {section}{\numberline {4.4}Databaso Class Reference}{19}{section.4.4}
+\contentsline {section}{\numberline {4.5}Data\discretionary {-}{}{}Sheet Class Reference}{19}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{19}{subsection.4.5.1}
+\contentsline {section}{\numberline {4.6}Date\discretionary {-}{}{}Sheet Class Reference}{19}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{20}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Constructor \& Destructor Documentation}{20}{subsection.4.6.2}
+\contentsline {subsubsection}{\numberline {4.6.2.1}Date\discretionary {-}{}{}Sheet}{20}{subsubsection.4.6.2.1}
+\contentsline {subsubsection}{\numberline {4.6.2.2}$\sim $\discretionary {-}{}{}Date\discretionary {-}{}{}Sheet}{20}{subsubsection.4.6.2.2}
+\contentsline {subsubsection}{\numberline {4.6.2.3}Date\discretionary {-}{}{}Sheet}{20}{subsubsection.4.6.2.3}
+\contentsline {subsubsection}{\numberline {4.6.2.4}$\sim $\discretionary {-}{}{}Date\discretionary {-}{}{}Sheet}{20}{subsubsection.4.6.2.4}
+\contentsline {subsection}{\numberline {4.6.3}Member Function Documentation}{20}{subsection.4.6.3}
+\contentsline {subsubsection}{\numberline {4.6.3.1}Add\discretionary {-}{}{}Roll\discretionary {-}{}{}No\discretionary {-}{}{}With\discretionary {-}{}{}Date\discretionary {-}{}{}Sheet}{20}{subsubsection.4.6.3.1}
+\contentsline {subsubsection}{\numberline {4.6.3.2}Date\discretionary {-}{}{}Sheet\discretionary {-}{}{}Page}{21}{subsubsection.4.6.3.2}
+\contentsline {subsubsection}{\numberline {4.6.3.3}Main}{21}{subsubsection.4.6.3.3}
+\contentsline {subsubsection}{\numberline {4.6.3.4}Read\discretionary {-}{}{}Roll\discretionary {-}{}{}No\discretionary {-}{}{}Detail}{21}{subsubsection.4.6.3.4}
+\contentsline {subsubsection}{\numberline {4.6.3.5}Set\discretionary {-}{}{}Default\discretionary {-}{}{}Value}{21}{subsubsection.4.6.3.5}
+\contentsline {subsubsection}{\numberline {4.6.3.6}Write\discretionary {-}{}{}Date\discretionary {-}{}{}Sheet}{21}{subsubsection.4.6.3.6}
+\contentsline {subsubsection}{\numberline {4.6.3.7}Write\discretionary {-}{}{}Roll\discretionary {-}{}{}No\discretionary {-}{}{}Detail}{21}{subsubsection.4.6.3.7}
+\contentsline {section}{\numberline {4.7}Exam\discretionary {-}{}{}Detail Class Reference}{22}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{22}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Constructor \& Destructor Documentation}{22}{subsection.4.7.2}
+\contentsline {subsubsection}{\numberline {4.7.2.1}Exam\discretionary {-}{}{}Detail}{22}{subsubsection.4.7.2.1}
+\contentsline {subsubsection}{\numberline {4.7.2.2}$\sim $\discretionary {-}{}{}Exam\discretionary {-}{}{}Detail}{22}{subsubsection.4.7.2.2}
+\contentsline {subsection}{\numberline {4.7.3}Member Function Documentation}{23}{subsection.4.7.3}
+\contentsline {subsubsection}{\numberline {4.7.3.1}Exam\discretionary {-}{}{}Detail\discretionary {-}{}{}Page}{23}{subsubsection.4.7.3.1}
+\contentsline {subsubsection}{\numberline {4.7.3.2}Read\discretionary {-}{}{}Room\discretionary {-}{}{}Detail}{23}{subsubsection.4.7.3.2}
+\contentsline {subsubsection}{\numberline {4.7.3.3}Set\discretionary {-}{}{}Default\discretionary {-}{}{}Value}{23}{subsubsection.4.7.3.3}
+\contentsline {subsubsection}{\numberline {4.7.3.4}Write\discretionary {-}{}{}Room\discretionary {-}{}{}Detail}{23}{subsubsection.4.7.3.4}
+\contentsline {section}{\numberline {4.8}Exapand\discretionary {-}{}{}Roll\discretionary {-}{}{}No Class Reference}{23}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{23}{subsection.4.8.1}
+\contentsline {section}{\numberline {4.9}Expand\discretionary {-}{}{}Roll\discretionary {-}{}{}No Class Reference}{24}{section.4.9}
+\contentsline {subsection}{\numberline {4.9.1}Detailed Description}{24}{subsection.4.9.1}
+\contentsline {subsection}{\numberline {4.9.2}Constructor \& Destructor Documentation}{24}{subsection.4.9.2}
+\contentsline {subsubsection}{\numberline {4.9.2.1}Expand\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{24}{subsubsection.4.9.2.1}
+\contentsline {subsubsection}{\numberline {4.9.2.2}$\sim $\discretionary {-}{}{}Expand\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{24}{subsubsection.4.9.2.2}
+\contentsline {subsection}{\numberline {4.9.3}Member Function Documentation}{25}{subsection.4.9.3}
+\contentsline {subsubsection}{\numberline {4.9.3.1}Expand\discretionary {-}{}{}Roll\discretionary {-}{}{}No\discretionary {-}{}{}List}{25}{subsubsection.4.9.3.1}
+\contentsline {subsubsection}{\numberline {4.9.3.2}Expand\discretionary {-}{}{}Roll\discretionary {-}{}{}Nos}{25}{subsubsection.4.9.3.2}
+\contentsline {subsubsection}{\numberline {4.9.3.3}Write\discretionary {-}{}{}Expand\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{25}{subsubsection.4.9.3.3}
+\contentsline {section}{\numberline {4.10}Input\discretionary {-}{}{}Detail Class Reference}{25}{section.4.10}
+\contentsline {subsection}{\numberline {4.10.1}Detailed Description}{27}{subsection.4.10.1}
+\contentsline {subsection}{\numberline {4.10.2}Constructor \& Destructor Documentation}{28}{subsection.4.10.2}
+\contentsline {subsubsection}{\numberline {4.10.2.1}Input\discretionary {-}{}{}Detail}{28}{subsubsection.4.10.2.1}
+\contentsline {subsection}{\numberline {4.10.3}Member Function Documentation}{28}{subsection.4.10.3}
+\contentsline {subsubsection}{\numberline {4.10.3.1}Error\discretionary {-}{}{}Message}{28}{subsubsection.4.10.3.1}
+\contentsline {subsubsection}{\numberline {4.10.3.2}File\discretionary {-}{}{}Name}{28}{subsubsection.4.10.3.2}
+\contentsline {subsubsection}{\numberline {4.10.3.3}Footer}{28}{subsubsection.4.10.3.3}
+\contentsline {subsubsection}{\numberline {4.10.3.4}Header}{29}{subsubsection.4.10.3.4}
+\contentsline {subsubsection}{\numberline {4.10.3.5}Int\discretionary {-}{}{}To\discretionary {-}{}{}String}{29}{subsubsection.4.10.3.5}
+\contentsline {subsubsection}{\numberline {4.10.3.6}Split\discretionary {-}{}{}String}{29}{subsubsection.4.10.3.6}
+\contentsline {subsubsection}{\numberline {4.10.3.7}String\discretionary {-}{}{}To\discretionary {-}{}{}Int}{29}{subsubsection.4.10.3.7}
+\contentsline {subsubsection}{\numberline {4.10.3.8}Time}{29}{subsubsection.4.10.3.8}
+\contentsline {subsection}{\numberline {4.10.4}Member Data Documentation}{29}{subsection.4.10.4}
+\contentsline {subsubsection}{\numberline {4.10.4.1}centre\discretionary {-}{}{}Name}{29}{subsubsection.4.10.4.1}
+\contentsline {subsubsection}{\numberline {4.10.4.2}class\discretionary {-}{}{}I\discretionary {-}{}{}D}{30}{subsubsection.4.10.4.2}
+\contentsline {subsubsection}{\numberline {4.10.4.3}class\discretionary {-}{}{}Name}{30}{subsubsection.4.10.4.3}
+\contentsline {subsubsection}{\numberline {4.10.4.4}columns}{30}{subsubsection.4.10.4.4}
+\contentsline {subsubsection}{\numberline {4.10.4.5}database}{30}{subsubsection.4.10.4.5}
+\contentsline {subsubsection}{\numberline {4.10.4.6}date}{30}{subsubsection.4.10.4.6}
+\contentsline {subsubsection}{\numberline {4.10.4.7}email\discretionary {-}{}{}I\discretionary {-}{}{}D}{30}{subsubsection.4.10.4.7}
+\contentsline {subsubsection}{\numberline {4.10.4.8}end\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{30}{subsubsection.4.10.4.8}
+\contentsline {subsubsection}{\numberline {4.10.4.9}exam\discretionary {-}{}{}Code}{30}{subsubsection.4.10.4.9}
+\contentsline {subsubsection}{\numberline {4.10.4.10}exam\discretionary {-}{}{}Name}{30}{subsubsection.4.10.4.10}
+\contentsline {subsubsection}{\numberline {4.10.4.11}exam\discretionary {-}{}{}Session}{31}{subsubsection.4.10.4.11}
+\contentsline {subsubsection}{\numberline {4.10.4.12}exam\discretionary {-}{}{}Time}{31}{subsubsection.4.10.4.12}
+\contentsline {subsubsection}{\numberline {4.10.4.13}exam\discretionary {-}{}{}Venue}{31}{subsubsection.4.10.4.13}
+\contentsline {subsubsection}{\numberline {4.10.4.14}field\discretionary {-}{}{}Name}{31}{subsubsection.4.10.4.14}
+\contentsline {subsubsection}{\numberline {4.10.4.15}file\discretionary {-}{}{}Name}{31}{subsubsection.4.10.4.15}
+\contentsline {subsubsection}{\numberline {4.10.4.16}in\discretionary {-}{}{}File}{31}{subsubsection.4.10.4.16}
+\contentsline {subsubsection}{\numberline {4.10.4.17}l}{31}{subsubsection.4.10.4.17}
+\contentsline {subsubsection}{\numberline {4.10.4.18}msg}{31}{subsubsection.4.10.4.18}
+\contentsline {subsubsection}{\numberline {4.10.4.19}not\discretionary {-}{}{}Included}{31}{subsubsection.4.10.4.19}
+\contentsline {subsubsection}{\numberline {4.10.4.20}old\discretionary {-}{}{}Project}{32}{subsubsection.4.10.4.20}
+\contentsline {subsubsection}{\numberline {4.10.4.21}out\discretionary {-}{}{}File}{32}{subsubsection.4.10.4.21}
+\contentsline {subsubsection}{\numberline {4.10.4.22}page}{32}{subsubsection.4.10.4.22}
+\contentsline {subsubsection}{\numberline {4.10.4.23}prefix}{32}{subsubsection.4.10.4.23}
+\contentsline {subsubsection}{\numberline {4.10.4.24}project\discretionary {-}{}{}I\discretionary {-}{}{}D}{32}{subsubsection.4.10.4.24}
+\contentsline {subsubsection}{\numberline {4.10.4.25}project\discretionary {-}{}{}Name}{32}{subsubsection.4.10.4.25}
+\contentsline {subsubsection}{\numberline {4.10.4.26}project\discretionary {-}{}{}Type}{32}{subsubsection.4.10.4.26}
+\contentsline {subsubsection}{\numberline {4.10.4.27}read\discretionary {-}{}{}Field}{32}{subsubsection.4.10.4.27}
+\contentsline {subsubsection}{\numberline {4.10.4.28}room\discretionary {-}{}{}No}{32}{subsubsection.4.10.4.28}
+\contentsline {subsubsection}{\numberline {4.10.4.29}rows}{33}{subsubsection.4.10.4.29}
+\contentsline {subsubsection}{\numberline {4.10.4.30}same\discretionary {-}{}{}Detail}{33}{subsubsection.4.10.4.30}
+\contentsline {subsubsection}{\numberline {4.10.4.31}session\discretionary {-}{}{}I\discretionary {-}{}{}D}{33}{subsubsection.4.10.4.31}
+\contentsline {subsubsection}{\numberline {4.10.4.32}split\discretionary {-}{}{}String}{33}{subsubsection.4.10.4.32}
+\contentsline {subsubsection}{\numberline {4.10.4.33}ss}{33}{subsubsection.4.10.4.33}
+\contentsline {subsubsection}{\numberline {4.10.4.34}start\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{33}{subsubsection.4.10.4.34}
+\contentsline {subsubsection}{\numberline {4.10.4.35}strategy\discretionary {-}{}{}Choice}{33}{subsubsection.4.10.4.35}
+\contentsline {subsubsection}{\numberline {4.10.4.36}subject\discretionary {-}{}{}Code}{33}{subsubsection.4.10.4.36}
+\contentsline {subsubsection}{\numberline {4.10.4.37}subject\discretionary {-}{}{}Name}{33}{subsubsection.4.10.4.37}
+\contentsline {subsubsection}{\numberline {4.10.4.38}table\discretionary {-}{}{}Heading}{34}{subsubsection.4.10.4.38}
+\contentsline {subsubsection}{\numberline {4.10.4.39}temp1}{34}{subsubsection.4.10.4.39}
+\contentsline {subsubsection}{\numberline {4.10.4.40}total\discretionary {-}{}{}Centres}{34}{subsubsection.4.10.4.40}
+\contentsline {subsubsection}{\numberline {4.10.4.41}total\discretionary {-}{}{}Classes}{34}{subsubsection.4.10.4.41}
+\contentsline {subsubsection}{\numberline {4.10.4.42}total\discretionary {-}{}{}Cols}{34}{subsubsection.4.10.4.42}
+\contentsline {subsubsection}{\numberline {4.10.4.43}total\discretionary {-}{}{}Days}{34}{subsubsection.4.10.4.43}
+\contentsline {subsubsection}{\numberline {4.10.4.44}total\discretionary {-}{}{}Rows}{34}{subsubsection.4.10.4.44}
+\contentsline {subsubsection}{\numberline {4.10.4.45}vec\discretionary {-}{}{}Temp}{34}{subsubsection.4.10.4.45}
+\contentsline {subsubsection}{\numberline {4.10.4.46}where}{34}{subsubsection.4.10.4.46}
+\contentsline {section}{\numberline {4.11}Input\discretionary {-}{}{}Field\discretionary {-}{}{}Name Class Reference}{35}{section.4.11}
+\contentsline {subsection}{\numberline {4.11.1}Detailed Description}{35}{subsection.4.11.1}
+\contentsline {subsection}{\numberline {4.11.2}Constructor \& Destructor Documentation}{36}{subsection.4.11.2}
+\contentsline {subsubsection}{\numberline {4.11.2.1}Input\discretionary {-}{}{}Field\discretionary {-}{}{}Name}{36}{subsubsection.4.11.2.1}
+\contentsline {subsection}{\numberline {4.11.3}Member Function Documentation}{36}{subsection.4.11.3}
+\contentsline {subsubsection}{\numberline {4.11.3.1}Set\discretionary {-}{}{}Field\discretionary {-}{}{}Names}{36}{subsubsection.4.11.3.1}
+\contentsline {subsection}{\numberline {4.11.4}Member Data Documentation}{36}{subsection.4.11.4}
+\contentsline {subsubsection}{\numberline {4.11.4.1}centre\discretionary {-}{}{}Name}{36}{subsubsection.4.11.4.1}
+\contentsline {subsubsection}{\numberline {4.11.4.2}class\discretionary {-}{}{}I\discretionary {-}{}{}D}{36}{subsubsection.4.11.4.2}
+\contentsline {subsubsection}{\numberline {4.11.4.3}class\discretionary {-}{}{}Name}{36}{subsubsection.4.11.4.3}
+\contentsline {subsubsection}{\numberline {4.11.4.4}columns}{37}{subsubsection.4.11.4.4}
+\contentsline {subsubsection}{\numberline {4.11.4.5}date}{37}{subsubsection.4.11.4.5}
+\contentsline {subsubsection}{\numberline {4.11.4.6}email\discretionary {-}{}{}I\discretionary {-}{}{}D}{37}{subsubsection.4.11.4.6}
+\contentsline {subsubsection}{\numberline {4.11.4.7}end\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{37}{subsubsection.4.11.4.7}
+\contentsline {subsubsection}{\numberline {4.11.4.8}exam\discretionary {-}{}{}Code}{37}{subsubsection.4.11.4.8}
+\contentsline {subsubsection}{\numberline {4.11.4.9}exam\discretionary {-}{}{}Date}{37}{subsubsection.4.11.4.9}
+\contentsline {subsubsection}{\numberline {4.11.4.10}exam\discretionary {-}{}{}Name}{37}{subsubsection.4.11.4.10}
+\contentsline {subsubsection}{\numberline {4.11.4.11}exam\discretionary {-}{}{}Session}{37}{subsubsection.4.11.4.11}
+\contentsline {subsubsection}{\numberline {4.11.4.12}exam\discretionary {-}{}{}Time}{37}{subsubsection.4.11.4.12}
+\contentsline {subsubsection}{\numberline {4.11.4.13}exam\discretionary {-}{}{}Venue}{38}{subsubsection.4.11.4.13}
+\contentsline {subsubsection}{\numberline {4.11.4.14}key}{38}{subsubsection.4.11.4.14}
+\contentsline {subsubsection}{\numberline {4.11.4.15}not\discretionary {-}{}{}Included}{38}{subsubsection.4.11.4.15}
+\contentsline {subsubsection}{\numberline {4.11.4.16}password}{38}{subsubsection.4.11.4.16}
+\contentsline {subsubsection}{\numberline {4.11.4.17}prefix}{38}{subsubsection.4.11.4.17}
+\contentsline {subsubsection}{\numberline {4.11.4.18}project\discretionary {-}{}{}I\discretionary {-}{}{}D}{38}{subsubsection.4.11.4.18}
+\contentsline {subsubsection}{\numberline {4.11.4.19}project\discretionary {-}{}{}Name}{38}{subsubsection.4.11.4.19}
+\contentsline {subsubsection}{\numberline {4.11.4.20}project\discretionary {-}{}{}Type}{38}{subsubsection.4.11.4.20}
+\contentsline {subsubsection}{\numberline {4.11.4.21}retype\discretionary {-}{}{}Password}{38}{subsubsection.4.11.4.21}
+\contentsline {subsubsection}{\numberline {4.11.4.22}room\discretionary {-}{}{}No}{39}{subsubsection.4.11.4.22}
+\contentsline {subsubsection}{\numberline {4.11.4.23}rows}{39}{subsubsection.4.11.4.23}
+\contentsline {subsubsection}{\numberline {4.11.4.24}same\discretionary {-}{}{}Detail}{39}{subsubsection.4.11.4.24}
+\contentsline {subsubsection}{\numberline {4.11.4.25}start\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{39}{subsubsection.4.11.4.25}
+\contentsline {subsubsection}{\numberline {4.11.4.26}strategy\discretionary {-}{}{}Choice}{39}{subsubsection.4.11.4.26}
+\contentsline {subsubsection}{\numberline {4.11.4.27}subject\discretionary {-}{}{}Code}{39}{subsubsection.4.11.4.27}
+\contentsline {subsubsection}{\numberline {4.11.4.28}subject\discretionary {-}{}{}Name}{39}{subsubsection.4.11.4.28}
+\contentsline {subsubsection}{\numberline {4.11.4.29}total\discretionary {-}{}{}Centres}{39}{subsubsection.4.11.4.29}
+\contentsline {subsubsection}{\numberline {4.11.4.30}total\discretionary {-}{}{}Classes}{39}{subsubsection.4.11.4.30}
+\contentsline {subsubsection}{\numberline {4.11.4.31}total\discretionary {-}{}{}Days}{40}{subsubsection.4.11.4.31}
+\contentsline {subsubsection}{\numberline {4.11.4.32}total\discretionary {-}{}{}Rooms}{40}{subsubsection.4.11.4.32}
+\contentsline {subsubsection}{\numberline {4.11.4.33}total\discretionary {-}{}{}Subjects}{40}{subsubsection.4.11.4.33}
+\contentsline {section}{\numberline {4.12}Java\discretionary {-}{}{}Script Class Reference}{40}{section.4.12}
+\contentsline {subsection}{\numberline {4.12.1}Detailed Description}{40}{subsection.4.12.1}
+\contentsline {subsection}{\numberline {4.12.2}Constructor \& Destructor Documentation}{40}{subsection.4.12.2}
+\contentsline {subsubsection}{\numberline {4.12.2.1}Java\discretionary {-}{}{}Script}{40}{subsubsection.4.12.2.1}
+\contentsline {subsection}{\numberline {4.12.3}Member Function Documentation}{41}{subsection.4.12.3}
+\contentsline {subsubsection}{\numberline {4.12.3.1}On\discretionary {-}{}{}Change\discretionary {-}{}{}Event}{41}{subsubsection.4.12.3.1}
+\contentsline {subsubsection}{\numberline {4.12.3.2}On\discretionary {-}{}{}Focus\discretionary {-}{}{}Event}{41}{subsubsection.4.12.3.2}
+\contentsline {section}{\numberline {4.13}Login Class Reference}{41}{section.4.13}
+\contentsline {subsection}{\numberline {4.13.1}Detailed Description}{42}{subsection.4.13.1}
+\contentsline {subsection}{\numberline {4.13.2}Constructor \& Destructor Documentation}{42}{subsection.4.13.2}
+\contentsline {subsubsection}{\numberline {4.13.2.1}Login}{42}{subsubsection.4.13.2.1}
+\contentsline {subsubsection}{\numberline {4.13.2.2}$\sim $\discretionary {-}{}{}Login}{42}{subsubsection.4.13.2.2}
+\contentsline {subsection}{\numberline {4.13.3}Member Function Documentation}{42}{subsection.4.13.3}
+\contentsline {subsubsection}{\numberline {4.13.3.1}Confirm\discretionary {-}{}{}Page}{42}{subsubsection.4.13.3.1}
+\contentsline {subsubsection}{\numberline {4.13.3.2}Login\discretionary {-}{}{}Page}{43}{subsubsection.4.13.3.2}
+\contentsline {subsubsection}{\numberline {4.13.3.3}Logout\discretionary {-}{}{}Page}{43}{subsubsection.4.13.3.3}
+\contentsline {subsubsection}{\numberline {4.13.3.4}New\discretionary {-}{}{}User}{43}{subsubsection.4.13.3.4}
+\contentsline {subsubsection}{\numberline {4.13.3.5}Read\discretionary {-}{}{}Login\discretionary {-}{}{}Detail}{43}{subsubsection.4.13.3.5}
+\contentsline {subsubsection}{\numberline {4.13.3.6}Registration\discretionary {-}{}{}Page}{43}{subsubsection.4.13.3.6}
+\contentsline {subsubsection}{\numberline {4.13.3.7}Select\discretionary {-}{}{}Login\discretionary {-}{}{}Detail}{43}{subsubsection.4.13.3.7}
+\contentsline {subsection}{\numberline {4.13.4}Member Data Documentation}{43}{subsection.4.13.4}
+\contentsline {subsubsection}{\numberline {4.13.4.1}current\discretionary {-}{}{}Time}{44}{subsubsection.4.13.4.1}
+\contentsline {subsubsection}{\numberline {4.13.4.2}email\discretionary {-}{}{}I\discretionary {-}{}{}D}{44}{subsubsection.4.13.4.2}
+\contentsline {subsubsection}{\numberline {4.13.4.3}password}{44}{subsubsection.4.13.4.3}
+\contentsline {subsubsection}{\numberline {4.13.4.4}reg\discretionary {-}{}{}Key}{44}{subsubsection.4.13.4.4}
+\contentsline {subsubsection}{\numberline {4.13.4.5}retype\discretionary {-}{}{}Password}{44}{subsubsection.4.13.4.5}
+\contentsline {subsubsection}{\numberline {4.13.4.6}user\discretionary {-}{}{}Email\discretionary {-}{}{}I\discretionary {-}{}{}D}{44}{subsubsection.4.13.4.6}
+\contentsline {subsubsection}{\numberline {4.13.4.7}user\discretionary {-}{}{}Password}{44}{subsubsection.4.13.4.7}
+\contentsline {section}{\numberline {4.14}jwsmtp\discretionary {-}{}{}:\discretionary {-}{}{}:mailer Class Reference}{44}{section.4.14}
+\contentsline {subsection}{\numberline {4.14.1}Detailed Description}{45}{subsection.4.14.1}
+\contentsline {section}{\numberline {4.15}M\discretionary {-}{}{}D5 Class Reference}{46}{section.4.15}
+\contentsline {subsection}{\numberline {4.15.1}Detailed Description}{46}{subsection.4.15.1}
+\contentsline {section}{\numberline {4.16}Page\discretionary {-}{}{}Layout Class Reference}{46}{section.4.16}
+\contentsline {subsection}{\numberline {4.16.1}Detailed Description}{47}{subsection.4.16.1}
+\contentsline {subsection}{\numberline {4.16.2}Constructor \& Destructor Documentation}{47}{subsection.4.16.2}
+\contentsline {subsubsection}{\numberline {4.16.2.1}Page\discretionary {-}{}{}Layout}{47}{subsubsection.4.16.2.1}
+\contentsline {subsection}{\numberline {4.16.3}Member Function Documentation}{47}{subsection.4.16.3}
+\contentsline {subsubsection}{\numberline {4.16.3.1}Content\discretionary {-}{}{}Type}{47}{subsubsection.4.16.3.1}
+\contentsline {subsubsection}{\numberline {4.16.3.2}Footer}{47}{subsubsection.4.16.3.2}
+\contentsline {subsubsection}{\numberline {4.16.3.3}Head}{48}{subsubsection.4.16.3.3}
+\contentsline {subsubsection}{\numberline {4.16.3.4}Header}{48}{subsubsection.4.16.3.4}
+\contentsline {subsubsection}{\numberline {4.16.3.5}Logo}{48}{subsubsection.4.16.3.5}
+\contentsline {subsubsection}{\numberline {4.16.3.6}Logout\discretionary {-}{}{}Link}{48}{subsubsection.4.16.3.6}
+\contentsline {subsubsection}{\numberline {4.16.3.7}Menu}{48}{subsubsection.4.16.3.7}
+\contentsline {subsubsection}{\numberline {4.16.3.8}Set\discretionary {-}{}{}Cookies}{49}{subsubsection.4.16.3.8}
+\contentsline {section}{\numberline {4.17}Page\discretionary {-}{}{}Structure\discretionary {-}{}{}Maker Class Reference}{49}{section.4.17}
+\contentsline {subsection}{\numberline {4.17.1}Detailed Description}{50}{subsection.4.17.1}
+\contentsline {subsection}{\numberline {4.17.2}Constructor \& Destructor Documentation}{50}{subsection.4.17.2}
+\contentsline {subsubsection}{\numberline {4.17.2.1}Page\discretionary {-}{}{}Structure\discretionary {-}{}{}Maker}{50}{subsubsection.4.17.2.1}
+\contentsline {subsection}{\numberline {4.17.3}Member Function Documentation}{51}{subsection.4.17.3}
+\contentsline {subsubsection}{\numberline {4.17.3.1}Anchor}{51}{subsubsection.4.17.3.1}
+\contentsline {subsubsection}{\numberline {4.17.3.2}Body\discretionary {-}{}{}End}{51}{subsubsection.4.17.3.2}
+\contentsline {subsubsection}{\numberline {4.17.3.3}Body\discretionary {-}{}{}Start}{51}{subsubsection.4.17.3.3}
+\contentsline {subsubsection}{\numberline {4.17.3.4}Button}{51}{subsubsection.4.17.3.4}
+\contentsline {subsubsection}{\numberline {4.17.3.5}C\discretionary {-}{}{}S\discretionary {-}{}{}S}{51}{subsubsection.4.17.3.5}
+\contentsline {subsubsection}{\numberline {4.17.3.6}Div\discretionary {-}{}{}End}{52}{subsubsection.4.17.3.6}
+\contentsline {subsubsection}{\numberline {4.17.3.7}Div\discretionary {-}{}{}Start}{52}{subsubsection.4.17.3.7}
+\contentsline {subsubsection}{\numberline {4.17.3.8}Form\discretionary {-}{}{}End}{52}{subsubsection.4.17.3.8}
+\contentsline {subsubsection}{\numberline {4.17.3.9}Form\discretionary {-}{}{}Start}{52}{subsubsection.4.17.3.9}
+\contentsline {subsubsection}{\numberline {4.17.3.10}Head\discretionary {-}{}{}End}{52}{subsubsection.4.17.3.10}
+\contentsline {subsubsection}{\numberline {4.17.3.11}Head\discretionary {-}{}{}Start}{53}{subsubsection.4.17.3.11}
+\contentsline {subsubsection}{\numberline {4.17.3.12}H\discretionary {-}{}{}T\discretionary {-}{}{}M\discretionary {-}{}{}L\discretionary {-}{}{}End}{53}{subsubsection.4.17.3.12}
+\contentsline {subsubsection}{\numberline {4.17.3.13}H\discretionary {-}{}{}T\discretionary {-}{}{}M\discretionary {-}{}{}L\discretionary {-}{}{}Start}{53}{subsubsection.4.17.3.13}
+\contentsline {subsubsection}{\numberline {4.17.3.14}Input\discretionary {-}{}{}Field}{53}{subsubsection.4.17.3.14}
+\contentsline {subsubsection}{\numberline {4.17.3.15}Input\discretionary {-}{}{}Field}{53}{subsubsection.4.17.3.15}
+\contentsline {subsubsection}{\numberline {4.17.3.16}Javascript}{54}{subsubsection.4.17.3.16}
+\contentsline {subsubsection}{\numberline {4.17.3.17}Label}{54}{subsubsection.4.17.3.17}
+\contentsline {subsubsection}{\numberline {4.17.3.18}List\discretionary {-}{}{}End}{54}{subsubsection.4.17.3.18}
+\contentsline {subsubsection}{\numberline {4.17.3.19}List\discretionary {-}{}{}Item}{54}{subsubsection.4.17.3.19}
+\contentsline {subsubsection}{\numberline {4.17.3.20}List\discretionary {-}{}{}Start}{54}{subsubsection.4.17.3.20}
+\contentsline {subsubsection}{\numberline {4.17.3.21}Select\discretionary {-}{}{}Field\discretionary {-}{}{}End}{55}{subsubsection.4.17.3.21}
+\contentsline {subsubsection}{\numberline {4.17.3.22}Select\discretionary {-}{}{}Field\discretionary {-}{}{}Start}{55}{subsubsection.4.17.3.22}
+\contentsline {subsubsection}{\numberline {4.17.3.23}Select\discretionary {-}{}{}Option\discretionary {-}{}{}End}{55}{subsubsection.4.17.3.23}
+\contentsline {subsubsection}{\numberline {4.17.3.24}Select\discretionary {-}{}{}Option\discretionary {-}{}{}Start}{55}{subsubsection.4.17.3.24}
+\contentsline {subsubsection}{\numberline {4.17.3.25}Set\discretionary {-}{}{}H\discretionary {-}{}{}T\discretionary {-}{}{}M\discretionary {-}{}{}L\discretionary {-}{}{}Variables}{55}{subsubsection.4.17.3.25}
+\contentsline {subsubsection}{\numberline {4.17.3.26}Table\discretionary {-}{}{}End}{56}{subsubsection.4.17.3.26}
+\contentsline {subsubsection}{\numberline {4.17.3.27}Table\discretionary {-}{}{}Start}{56}{subsubsection.4.17.3.27}
+\contentsline {subsubsection}{\numberline {4.17.3.28}Title}{56}{subsubsection.4.17.3.28}
+\contentsline {subsection}{\numberline {4.17.4}Member Data Documentation}{56}{subsection.4.17.4}
+\contentsline {subsubsection}{\numberline {4.17.4.1}start\discretionary {-}{}{}H1}{56}{subsubsection.4.17.4.1}
+\contentsline {section}{\numberline {4.18}Project\discretionary {-}{}{}Detail Class Reference}{56}{section.4.18}
+\contentsline {subsection}{\numberline {4.18.1}Detailed Description}{57}{subsection.4.18.1}
+\contentsline {subsection}{\numberline {4.18.2}Constructor \& Destructor Documentation}{57}{subsection.4.18.2}
+\contentsline {subsubsection}{\numberline {4.18.2.1}Project\discretionary {-}{}{}Detail}{57}{subsubsection.4.18.2.1}
+\contentsline {subsubsection}{\numberline {4.18.2.2}$\sim $\discretionary {-}{}{}Project\discretionary {-}{}{}Detail}{57}{subsubsection.4.18.2.2}
+\contentsline {subsection}{\numberline {4.18.3}Member Function Documentation}{58}{subsection.4.18.3}
+\contentsline {subsubsection}{\numberline {4.18.3.1}Authorize\discretionary {-}{}{}User}{58}{subsubsection.4.18.3.1}
+\contentsline {subsubsection}{\numberline {4.18.3.2}Home\discretionary {-}{}{}Page}{58}{subsubsection.4.18.3.2}
+\contentsline {subsubsection}{\numberline {4.18.3.3}Old\discretionary {-}{}{}Project}{58}{subsubsection.4.18.3.3}
+\contentsline {subsubsection}{\numberline {4.18.3.4}Project\discretionary {-}{}{}Detail\discretionary {-}{}{}Page}{58}{subsubsection.4.18.3.4}
+\contentsline {section}{\numberline {4.19}Read\discretionary {-}{}{}Input Class Reference}{59}{section.4.19}
+\contentsline {subsection}{\numberline {4.19.1}Detailed Description}{60}{subsection.4.19.1}
+\contentsline {subsection}{\numberline {4.19.2}Constructor \& Destructor Documentation}{60}{subsection.4.19.2}
+\contentsline {subsubsection}{\numberline {4.19.2.1}Read\discretionary {-}{}{}Input}{60}{subsubsection.4.19.2.1}
+\contentsline {subsubsection}{\numberline {4.19.2.2}$\sim $\discretionary {-}{}{}Read\discretionary {-}{}{}Input}{60}{subsubsection.4.19.2.2}
+\contentsline {subsection}{\numberline {4.19.3}Member Function Documentation}{61}{subsection.4.19.3}
+\contentsline {subsubsection}{\numberline {4.19.3.1}File\discretionary {-}{}{}Name}{61}{subsubsection.4.19.3.1}
+\contentsline {subsubsection}{\numberline {4.19.3.2}Read\discretionary {-}{}{}Class\discretionary {-}{}{}Detail}{61}{subsubsection.4.19.3.2}
+\contentsline {subsubsection}{\numberline {4.19.3.3}Read\discretionary {-}{}{}Date\discretionary {-}{}{}Sheet}{61}{subsubsection.4.19.3.3}
+\contentsline {subsubsection}{\numberline {4.19.3.4}Read\discretionary {-}{}{}Date\discretionary {-}{}{}Sheet\discretionary {-}{}{}Out}{61}{subsubsection.4.19.3.4}
+\contentsline {subsubsection}{\numberline {4.19.3.5}Read\discretionary {-}{}{}Exam\discretionary {-}{}{}Detail}{62}{subsubsection.4.19.3.5}
+\contentsline {subsubsection}{\numberline {4.19.3.6}Read\discretionary {-}{}{}Roll\discretionary {-}{}{}No\discretionary {-}{}{}Detail}{62}{subsubsection.4.19.3.6}
+\contentsline {subsubsection}{\numberline {4.19.3.7}Read\discretionary {-}{}{}Room\discretionary {-}{}{}Detail}{62}{subsubsection.4.19.3.7}
+\contentsline {subsubsection}{\numberline {4.19.3.8}Read\discretionary {-}{}{}Strategy}{62}{subsubsection.4.19.3.8}
+\contentsline {subsection}{\numberline {4.19.4}Member Data Documentation}{62}{subsection.4.19.4}
+\contentsline {subsubsection}{\numberline {4.19.4.1}centre\discretionary {-}{}{}Name}{62}{subsubsection.4.19.4.1}
+\contentsline {subsubsection}{\numberline {4.19.4.2}class\discretionary {-}{}{}Name}{62}{subsubsection.4.19.4.2}
+\contentsline {subsubsection}{\numberline {4.19.4.3}cols}{63}{subsubsection.4.19.4.3}
+\contentsline {subsubsection}{\numberline {4.19.4.4}date}{63}{subsubsection.4.19.4.4}
+\contentsline {subsubsection}{\numberline {4.19.4.5}date\discretionary {-}{}{}Sheet\discretionary {-}{}{}R\discretionary {-}{}{}No}{63}{subsubsection.4.19.4.5}
+\contentsline {subsubsection}{\numberline {4.19.4.6}date\discretionary {-}{}{}Sheet\discretionary {-}{}{}R\discretionary {-}{}{}No\discretionary {-}{}{}Size}{63}{subsubsection.4.19.4.6}
+\contentsline {subsubsection}{\numberline {4.19.4.7}exam\discretionary {-}{}{}Sub\discretionary {-}{}{}Code}{63}{subsubsection.4.19.4.7}
+\contentsline {subsubsection}{\numberline {4.19.4.8}exam\discretionary {-}{}{}Sub\discretionary {-}{}{}Name}{63}{subsubsection.4.19.4.8}
+\contentsline {subsubsection}{\numberline {4.19.4.9}file\discretionary {-}{}{}Name}{63}{subsubsection.4.19.4.9}
+\contentsline {subsubsection}{\numberline {4.19.4.10}in\discretionary {-}{}{}File}{63}{subsubsection.4.19.4.10}
+\contentsline {subsubsection}{\numberline {4.19.4.11}n}{63}{subsubsection.4.19.4.11}
+\contentsline {subsubsection}{\numberline {4.19.4.12}not\discretionary {-}{}{}Included}{64}{subsubsection.4.19.4.12}
+\contentsline {subsubsection}{\numberline {4.19.4.13}out\discretionary {-}{}{}File}{64}{subsubsection.4.19.4.13}
+\contentsline {subsubsection}{\numberline {4.19.4.14}prefix}{64}{subsubsection.4.19.4.14}
+\contentsline {subsubsection}{\numberline {4.19.4.15}project\discretionary {-}{}{}I\discretionary {-}{}{}D}{64}{subsubsection.4.19.4.15}
+\contentsline {subsubsection}{\numberline {4.19.4.16}roll\discretionary {-}{}{}No}{64}{subsubsection.4.19.4.16}
+\contentsline {subsubsection}{\numberline {4.19.4.17}room\discretionary {-}{}{}No}{64}{subsubsection.4.19.4.17}
+\contentsline {subsubsection}{\numberline {4.19.4.18}rows}{64}{subsubsection.4.19.4.18}
+\contentsline {subsubsection}{\numberline {4.19.4.19}strategy\discretionary {-}{}{}Option}{64}{subsubsection.4.19.4.19}
+\contentsline {subsubsection}{\numberline {4.19.4.20}subject\discretionary {-}{}{}Code}{64}{subsubsection.4.19.4.20}
+\contentsline {subsubsection}{\numberline {4.19.4.21}subject\discretionary {-}{}{}Name}{65}{subsubsection.4.19.4.21}
+\contentsline {subsubsection}{\numberline {4.19.4.22}temp}{65}{subsubsection.4.19.4.22}
+\contentsline {subsubsection}{\numberline {4.19.4.23}total\discretionary {-}{}{}Centres}{65}{subsubsection.4.19.4.23}
+\contentsline {subsubsection}{\numberline {4.19.4.24}total\discretionary {-}{}{}Classes}{65}{subsubsection.4.19.4.24}
+\contentsline {subsubsection}{\numberline {4.19.4.25}total\discretionary {-}{}{}Days}{65}{subsubsection.4.19.4.25}
+\contentsline {subsubsection}{\numberline {4.19.4.26}total\discretionary {-}{}{}Exams}{65}{subsubsection.4.19.4.26}
+\contentsline {subsubsection}{\numberline {4.19.4.27}total\discretionary {-}{}{}Rooms}{65}{subsubsection.4.19.4.27}
+\contentsline {subsubsection}{\numberline {4.19.4.28}total\discretionary {-}{}{}Subjects}{65}{subsubsection.4.19.4.28}
+\contentsline {section}{\numberline {4.20}Read\discretionary {-}{}{}Input\discretionary {-}{}{}Field Class Reference}{65}{section.4.20}
+\contentsline {subsection}{\numberline {4.20.1}Detailed Description}{66}{subsection.4.20.1}
+\contentsline {subsection}{\numberline {4.20.2}Constructor \& Destructor Documentation}{66}{subsection.4.20.2}
+\contentsline {subsubsection}{\numberline {4.20.2.1}Read\discretionary {-}{}{}Input\discretionary {-}{}{}Field}{66}{subsubsection.4.20.2.1}
+\contentsline {subsection}{\numberline {4.20.3}Member Function Documentation}{66}{subsection.4.20.3}
+\contentsline {subsubsection}{\numberline {4.20.3.1}Read\discretionary {-}{}{}Field\discretionary {-}{}{}Value}{66}{subsubsection.4.20.3.1}
+\contentsline {subsubsection}{\numberline {4.20.3.2}Read\discretionary {-}{}{}Field\discretionary {-}{}{}Value}{66}{subsubsection.4.20.3.2}
+\contentsline {subsection}{\numberline {4.20.4}Member Data Documentation}{67}{subsection.4.20.4}
+\contentsline {subsubsection}{\numberline {4.20.4.1}fi}{67}{subsubsection.4.20.4.1}
+\contentsline {subsubsection}{\numberline {4.20.4.2}form\discretionary {-}{}{}Data}{67}{subsubsection.4.20.4.2}
+\contentsline {section}{\numberline {4.21}Report Class Reference}{67}{section.4.21}
+\contentsline {subsection}{\numberline {4.21.1}Detailed Description}{67}{subsection.4.21.1}
+\contentsline {subsection}{\numberline {4.21.2}Constructor \& Destructor Documentation}{68}{subsection.4.21.2}
+\contentsline {subsubsection}{\numberline {4.21.2.1}Report}{68}{subsubsection.4.21.2.1}
+\contentsline {subsubsection}{\numberline {4.21.2.2}$\sim $\discretionary {-}{}{}Report}{68}{subsubsection.4.21.2.2}
+\contentsline {subsection}{\numberline {4.21.3}Member Function Documentation}{68}{subsection.4.21.3}
+\contentsline {subsubsection}{\numberline {4.21.3.1}Read\discretionary {-}{}{}Validation\discretionary {-}{}{}Detail}{68}{subsubsection.4.21.3.1}
+\contentsline {subsubsection}{\numberline {4.21.3.2}Report\discretionary {-}{}{}Page}{68}{subsubsection.4.21.3.2}
+\contentsline {section}{\numberline {4.22}Roll\discretionary {-}{}{}No\discretionary {-}{}{}Detail Class Reference}{68}{section.4.22}
+\contentsline {subsection}{\numberline {4.22.1}Detailed Description}{69}{subsection.4.22.1}
+\contentsline {subsection}{\numberline {4.22.2}Constructor \& Destructor Documentation}{69}{subsection.4.22.2}
+\contentsline {subsubsection}{\numberline {4.22.2.1}Roll\discretionary {-}{}{}No\discretionary {-}{}{}Detail}{69}{subsubsection.4.22.2.1}
+\contentsline {subsubsection}{\numberline {4.22.2.2}$\sim $\discretionary {-}{}{}Roll\discretionary {-}{}{}No\discretionary {-}{}{}Detail}{69}{subsubsection.4.22.2.2}
+\contentsline {subsection}{\numberline {4.22.3}Member Function Documentation}{69}{subsection.4.22.3}
+\contentsline {subsubsection}{\numberline {4.22.3.1}Read\discretionary {-}{}{}Class\discretionary {-}{}{}Detail}{69}{subsubsection.4.22.3.1}
+\contentsline {subsubsection}{\numberline {4.22.3.2}Roll\discretionary {-}{}{}No\discretionary {-}{}{}Detail\discretionary {-}{}{}Page}{69}{subsubsection.4.22.3.2}
+\contentsline {subsubsection}{\numberline {4.22.3.3}Set\discretionary {-}{}{}Default\discretionary {-}{}{}Value}{70}{subsubsection.4.22.3.3}
+\contentsline {subsubsection}{\numberline {4.22.3.4}Write\discretionary {-}{}{}Class\discretionary {-}{}{}Detail}{70}{subsubsection.4.22.3.4}
+\contentsline {section}{\numberline {4.23}Room\discretionary {-}{}{}Detail Class Reference}{70}{section.4.23}
+\contentsline {subsection}{\numberline {4.23.1}Detailed Description}{71}{subsection.4.23.1}
+\contentsline {subsection}{\numberline {4.23.2}Constructor \& Destructor Documentation}{71}{subsection.4.23.2}
+\contentsline {subsubsection}{\numberline {4.23.2.1}Room\discretionary {-}{}{}Detail}{71}{subsubsection.4.23.2.1}
+\contentsline {subsubsection}{\numberline {4.23.2.2}$\sim $\discretionary {-}{}{}Room\discretionary {-}{}{}Detail}{71}{subsubsection.4.23.2.2}
+\contentsline {subsection}{\numberline {4.23.3}Member Function Documentation}{71}{subsection.4.23.3}
+\contentsline {subsubsection}{\numberline {4.23.3.1}Read\discretionary {-}{}{}Date\discretionary {-}{}{}Sheet}{71}{subsubsection.4.23.3.1}
+\contentsline {subsubsection}{\numberline {4.23.3.2}Room\discretionary {-}{}{}Detail\discretionary {-}{}{}Page}{71}{subsubsection.4.23.3.2}
+\contentsline {subsubsection}{\numberline {4.23.3.3}Set\discretionary {-}{}{}Default\discretionary {-}{}{}Value}{71}{subsubsection.4.23.3.3}
+\contentsline {subsubsection}{\numberline {4.23.3.4}Write\discretionary {-}{}{}Date\discretionary {-}{}{}Sheet}{71}{subsubsection.4.23.3.4}
+\contentsline {section}{\numberline {4.24}Seat\discretionary {-}{}{}Plan Class Reference}{72}{section.4.24}
+\contentsline {subsection}{\numberline {4.24.1}Detailed Description}{73}{subsection.4.24.1}
+\contentsline {subsection}{\numberline {4.24.2}Constructor \& Destructor Documentation}{73}{subsection.4.24.2}
+\contentsline {subsubsection}{\numberline {4.24.2.1}$\sim $\discretionary {-}{}{}Room\discretionary {-}{}{}Report}{73}{subsubsection.4.24.2.1}
+\contentsline {subsubsection}{\numberline {4.24.2.2}Seat\discretionary {-}{}{}Plan}{73}{subsubsection.4.24.2.2}
+\contentsline {subsubsection}{\numberline {4.24.2.3}$\sim $\discretionary {-}{}{}Seat\discretionary {-}{}{}Plan}{73}{subsubsection.4.24.2.3}
+\contentsline {subsection}{\numberline {4.24.3}Member Function Documentation}{73}{subsection.4.24.3}
+\contentsline {subsubsection}{\numberline {4.24.3.1}Read\discretionary {-}{}{}Exam\discretionary {-}{}{}Detail}{73}{subsubsection.4.24.3.1}
+\contentsline {subsubsection}{\numberline {4.24.3.2}Read\discretionary {-}{}{}Seat\discretionary {-}{}{}Plan}{74}{subsubsection.4.24.3.2}
+\contentsline {subsubsection}{\numberline {4.24.3.3}Room\discretionary {-}{}{}Report}{74}{subsubsection.4.24.3.3}
+\contentsline {subsubsection}{\numberline {4.24.3.4}Write\discretionary {-}{}{}H\discretionary {-}{}{}T\discretionary {-}{}{}M\discretionary {-}{}{}L\discretionary {-}{}{}File}{74}{subsubsection.4.24.3.4}
+\contentsline {subsubsection}{\numberline {4.24.3.5}Write\discretionary {-}{}{}H\discretionary {-}{}{}T\discretionary {-}{}{}M\discretionary {-}{}{}L\discretionary {-}{}{}File}{74}{subsubsection.4.24.3.5}
+\contentsline {section}{\numberline {4.25}Send\discretionary {-}{}{}Mail Class Reference}{74}{section.4.25}
+\contentsline {subsection}{\numberline {4.25.1}Detailed Description}{75}{subsection.4.25.1}
+\contentsline {subsection}{\numberline {4.25.2}Constructor \& Destructor Documentation}{75}{subsection.4.25.2}
+\contentsline {subsubsection}{\numberline {4.25.2.1}Send\discretionary {-}{}{}Mail}{75}{subsubsection.4.25.2.1}
+\contentsline {subsubsection}{\numberline {4.25.2.2}$\sim $\discretionary {-}{}{}Send\discretionary {-}{}{}Mail}{75}{subsubsection.4.25.2.2}
+\contentsline {subsection}{\numberline {4.25.3}Member Function Documentation}{75}{subsection.4.25.3}
+\contentsline {subsubsection}{\numberline {4.25.3.1}Registration\discretionary {-}{}{}Mail}{75}{subsubsection.4.25.3.1}
+\contentsline {subsubsection}{\numberline {4.25.3.2}Set\discretionary {-}{}{}H\discretionary {-}{}{}T\discretionary {-}{}{}M\discretionary {-}{}{}L\discretionary {-}{}{}Message}{75}{subsubsection.4.25.3.2}
+\contentsline {subsubsection}{\numberline {4.25.3.3}Set\discretionary {-}{}{}Mail\discretionary {-}{}{}Data}{76}{subsubsection.4.25.3.3}
+\contentsline {section}{\numberline {4.26}jwsmtp\discretionary {-}{}{}:\discretionary {-}{}{}:S\discretionary {-}{}{}O\discretionary {-}{}{}C\discretionary {-}{}{}K\discretionary {-}{}{}A\discretionary {-}{}{}D\discretionary {-}{}{}D\discretionary {-}{}{}R\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}I\discretionary {-}{}{}N Struct Reference}{76}{section.4.26}
+\contentsline {subsection}{\numberline {4.26.1}Detailed Description}{76}{subsection.4.26.1}
+\contentsline {section}{\numberline {4.27}Strategy Class Reference}{76}{section.4.27}
+\contentsline {subsection}{\numberline {4.27.1}Detailed Description}{77}{subsection.4.27.1}
+\contentsline {subsection}{\numberline {4.27.2}Constructor \& Destructor Documentation}{77}{subsection.4.27.2}
+\contentsline {subsubsection}{\numberline {4.27.2.1}Strategy}{77}{subsubsection.4.27.2.1}
+\contentsline {subsubsection}{\numberline {4.27.2.2}$\sim $\discretionary {-}{}{}Strategy}{78}{subsubsection.4.27.2.2}
+\contentsline {subsubsection}{\numberline {4.27.2.3}Strategy}{78}{subsubsection.4.27.2.3}
+\contentsline {subsubsection}{\numberline {4.27.2.4}$\sim $\discretionary {-}{}{}Strategy}{78}{subsubsection.4.27.2.4}
+\contentsline {subsection}{\numberline {4.27.3}Member Function Documentation}{78}{subsection.4.27.3}
+\contentsline {subsubsection}{\numberline {4.27.3.1}Main}{78}{subsubsection.4.27.3.1}
+\contentsline {subsubsection}{\numberline {4.27.3.2}Read\discretionary {-}{}{}Exam\discretionary {-}{}{}Detail}{78}{subsubsection.4.27.3.2}
+\contentsline {subsubsection}{\numberline {4.27.3.3}Set\discretionary {-}{}{}Default\discretionary {-}{}{}Value}{78}{subsubsection.4.27.3.3}
+\contentsline {subsubsection}{\numberline {4.27.3.4}Strategy\discretionary {-}{}{}Page}{78}{subsubsection.4.27.3.4}
+\contentsline {subsubsection}{\numberline {4.27.3.5}Write\discretionary {-}{}{}Exam\discretionary {-}{}{}Detail}{78}{subsubsection.4.27.3.5}
+\contentsline {subsection}{\numberline {4.27.4}Member Data Documentation}{79}{subsection.4.27.4}
+\contentsline {subsubsection}{\numberline {4.27.4.1}strategy\discretionary {-}{}{}Name}{79}{subsubsection.4.27.4.1}
+\contentsline {subsubsection}{\numberline {4.27.4.2}total\discretionary {-}{}{}Strategy}{79}{subsubsection.4.27.4.2}
+\contentsline {section}{\numberline {4.28}Validation Class Reference}{79}{section.4.28}
+\contentsline {subsection}{\numberline {4.28.1}Detailed Description}{80}{subsection.4.28.1}
+\contentsline {subsection}{\numberline {4.28.2}Constructor \& Destructor Documentation}{80}{subsection.4.28.2}
+\contentsline {subsubsection}{\numberline {4.28.2.1}Validation}{80}{subsubsection.4.28.2.1}
+\contentsline {subsubsection}{\numberline {4.28.2.2}$\sim $\discretionary {-}{}{}Validation}{80}{subsubsection.4.28.2.2}
+\contentsline {subsection}{\numberline {4.28.3}Member Function Documentation}{80}{subsection.4.28.3}
+\contentsline {subsubsection}{\numberline {4.28.3.1}Read\discretionary {-}{}{}Strategy\discretionary {-}{}{}Detail}{80}{subsubsection.4.28.3.1}
+\contentsline {subsubsection}{\numberline {4.28.3.2}Read\discretionary {-}{}{}Validation}{80}{subsubsection.4.28.3.2}
+\contentsline {subsubsection}{\numberline {4.28.3.3}Validation\discretionary {-}{}{}Page}{80}{subsubsection.4.28.3.3}
+\contentsline {subsubsection}{\numberline {4.28.3.4}Write\discretionary {-}{}{}Strategy\discretionary {-}{}{}Detail}{80}{subsubsection.4.28.3.4}
+\contentsline {chapter}{\numberline {5}File Documentation}{83}{chapter.5}
+\contentsline {section}{\numberline {5.1}src/adduser-\/main.cpp File Reference}{83}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{83}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Function Documentation}{83}{subsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.2.1}main}{84}{subsubsection.5.1.2.1}
+\contentsline {section}{\numberline {5.2}src/backend/arrangerollno.cc File Reference}{84}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{84}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.3}src/backend/expandrollno.cc File Reference}{85}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{85}{subsection.5.3.1}
+\contentsline {section}{\numberline {5.4}src/backend/header/arrangerollno.h File Reference}{85}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{85}{subsection.5.4.1}
+\contentsline {section}{\numberline {5.5}src/backend/header/expandrollno.h File Reference}{86}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{86}{subsection.5.5.1}
+\contentsline {section}{\numberline {5.6}src/backend/header/readinput.h File Reference}{86}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{87}{subsection.5.6.1}
+\contentsline {section}{\numberline {5.7}src/backend/header/seatplan.h File Reference}{87}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{87}{subsection.5.7.1}
+\contentsline {section}{\numberline {5.8}src/backend/main.cpp File Reference}{88}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}Detailed Description}{88}{subsection.5.8.1}
+\contentsline {section}{\numberline {5.9}src/backend/readinput.cc File Reference}{88}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}Detailed Description}{88}{subsection.5.9.1}
+\contentsline {section}{\numberline {5.10}src/backend/seatplan.cc File Reference}{89}{section.5.10}
+\contentsline {subsection}{\numberline {5.10.1}Detailed Description}{89}{subsection.5.10.1}
+\contentsline {section}{\numberline {5.11}src/class-\/main.cpp File Reference}{89}{section.5.11}
+\contentsline {subsection}{\numberline {5.11.1}Detailed Description}{90}{subsection.5.11.1}
+\contentsline {section}{\numberline {5.12}src/class.cc File Reference}{90}{section.5.12}
+\contentsline {subsection}{\numberline {5.12.1}Detailed Description}{90}{subsection.5.12.1}
+\contentsline {section}{\numberline {5.13}src/confirm-\/main.cpp File Reference}{91}{section.5.13}
+\contentsline {subsection}{\numberline {5.13.1}Detailed Description}{91}{subsection.5.13.1}
+\contentsline {section}{\numberline {5.14}src/datesheet-\/main.cpp File Reference}{91}{section.5.14}
+\contentsline {subsection}{\numberline {5.14.1}Detailed Description}{91}{subsection.5.14.1}
+\contentsline {section}{\numberline {5.15}src/exam-\/main.cpp File Reference}{92}{section.5.15}
+\contentsline {subsection}{\numberline {5.15.1}Detailed Description}{92}{subsection.5.15.1}
+\contentsline {section}{\numberline {5.16}src/exam.cc File Reference}{92}{section.5.16}
+\contentsline {subsection}{\numberline {5.16.1}Detailed Description}{93}{subsection.5.16.1}
+\contentsline {section}{\numberline {5.17}src/header/class.h File Reference}{93}{section.5.17}
+\contentsline {subsection}{\numberline {5.17.1}Detailed Description}{93}{subsection.5.17.1}
+\contentsline {section}{\numberline {5.18}src/header/exam.h File Reference}{94}{section.5.18}
+\contentsline {subsection}{\numberline {5.18.1}Detailed Description}{94}{subsection.5.18.1}
+\contentsline {section}{\numberline {5.19}src/header/rollno.h File Reference}{94}{section.5.19}
+\contentsline {subsection}{\numberline {5.19.1}Detailed Description}{94}{subsection.5.19.1}
+\contentsline {section}{\numberline {5.20}src/header/room.h File Reference}{95}{section.5.20}
+\contentsline {subsection}{\numberline {5.20.1}Detailed Description}{95}{subsection.5.20.1}
+\contentsline {section}{\numberline {5.21}src/header/sendmail-\/detail.h File Reference}{96}{section.5.21}
+\contentsline {subsection}{\numberline {5.21.1}Detailed Description}{96}{subsection.5.21.1}
+\contentsline {section}{\numberline {5.22}src/header/sendmail.h File Reference}{96}{section.5.22}
+\contentsline {subsection}{\numberline {5.22.1}Detailed Description}{97}{subsection.5.22.1}
+\contentsline {section}{\numberline {5.23}src/header/validation.h File Reference}{97}{section.5.23}
+\contentsline {subsection}{\numberline {5.23.1}Detailed Description}{97}{subsection.5.23.1}
+\contentsline {section}{\numberline {5.24}src/javascript.cc File Reference}{98}{section.5.24}
+\contentsline {subsection}{\numberline {5.24.1}Detailed Description}{98}{subsection.5.24.1}
+\contentsline {section}{\numberline {5.25}src/login-\/main.cpp File Reference}{98}{section.5.25}
+\contentsline {subsection}{\numberline {5.25.1}Detailed Description}{98}{subsection.5.25.1}
+\contentsline {section}{\numberline {5.26}src/logout-\/main.cpp File Reference}{99}{section.5.26}
+\contentsline {subsection}{\numberline {5.26.1}Detailed Description}{99}{subsection.5.26.1}
+\contentsline {section}{\numberline {5.27}src/register-\/main.cpp File Reference}{99}{section.5.27}
+\contentsline {subsection}{\numberline {5.27.1}Detailed Description}{100}{subsection.5.27.1}
+\contentsline {subsection}{\numberline {5.27.2}Function Documentation}{100}{subsection.5.27.2}
+\contentsline {subsubsection}{\numberline {5.27.2.1}main}{100}{subsubsection.5.27.2.1}
+\contentsline {section}{\numberline {5.28}src/report-\/main.cpp File Reference}{100}{section.5.28}
+\contentsline {subsection}{\numberline {5.28.1}Detailed Description}{100}{subsection.5.28.1}
+\contentsline {section}{\numberline {5.29}src/rollno-\/main.cpp File Reference}{101}{section.5.29}
+\contentsline {subsection}{\numberline {5.29.1}Detailed Description}{101}{subsection.5.29.1}
+\contentsline {section}{\numberline {5.30}src/rollno.cc File Reference}{101}{section.5.30}
+\contentsline {subsection}{\numberline {5.30.1}Detailed Description}{102}{subsection.5.30.1}
+\contentsline {section}{\numberline {5.31}src/room-\/main.cpp File Reference}{102}{section.5.31}
+\contentsline {subsection}{\numberline {5.31.1}Detailed Description}{102}{subsection.5.31.1}
+\contentsline {section}{\numberline {5.32}src/room.cc File Reference}{103}{section.5.32}
+\contentsline {subsection}{\numberline {5.32.1}Detailed Description}{103}{subsection.5.32.1}
+\contentsline {section}{\numberline {5.33}src/sendmail.cc File Reference}{103}{section.5.33}
+\contentsline {subsection}{\numberline {5.33.1}Detailed Description}{103}{subsection.5.33.1}
+\contentsline {section}{\numberline {5.34}src/strategy-\/main.cpp File Reference}{104}{section.5.34}
+\contentsline {subsection}{\numberline {5.34.1}Detailed Description}{104}{subsection.5.34.1}
+\contentsline {section}{\numberline {5.35}src/validation-\/main.cpp File Reference}{104}{section.5.35}
+\contentsline {subsection}{\numberline {5.35.1}Detailed Description}{104}{subsection.5.35.1}
+\contentsline {section}{\numberline {5.36}src/validation.cc File Reference}{105}{section.5.36}
+\contentsline {subsection}{\numberline {5.36.1}Detailed Description}{105}{subsection.5.36.1}

@@ -26,7 +26,7 @@ var searchData=
   ['setmaildata',['SetMailData',['../classSendMail.html#a25ba5afabc97cf3dab525f2eb1e67e0e',1,'SendMail']]],
   ['sockaddr_5fin',['SOCKADDR_IN',['../structjwsmtp_1_1SOCKADDR__IN.html',1,'jwsmtp']]],
   ['sortrollno',['SortRollNo',['../classArrangeRollNo.html#aae9734fb7b98d980d3f1feb1b52a6195',1,'ArrangeRollNo']]],
-  ['splitstring',['SplitString',['../classInputDetail.html#aba635a55313b14cf8bb285560a55498e',1,'InputDetail::SplitString(STRING_VEC &amp;output, string input, string token)'],['../classInputDetail.html#ab09ed4176090a72237531cedf00afb41',1,'InputDetail::splitString()']]],
+  ['splitstring',['splitString',['../classInputDetail.html#ab09ed4176090a72237531cedf00afb41',1,'InputDetail::splitString()'],['../classInputDetail.html#aba635a55313b14cf8bb285560a55498e',1,'InputDetail::SplitString(STRING_VEC &amp;output, string input, string token)']]],
   ['ss',['ss',['../classInputDetail.html#a5284736b5fd3db0251cfeab7c581c0bd',1,'InputDetail']]],
   ['starth1',['startH1',['../classPageStructureMaker.html#af41d4e21b808f5f8dc2c727f775b6fb2',1,'PageStructureMaker']]],
   ['startrollno',['startRollNo',['../classInputDetail.html#a7262436753ac62bf068cc23b97049f61',1,'InputDetail::startRollNo()'],['../classInputFieldName.html#a24baf5c915b4ee0fb8678e03adec043a',1,'InputFieldName::startRollNo()']]],

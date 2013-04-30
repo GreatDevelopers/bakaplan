@@ -8,7 +8,7 @@
 
 
 
-{\ttfamily \#include $<$seatplan.\-h$>$}
+{\ttfamily \#include $<$report.\-h$>$}
 
 Inheritance diagram for Seat\-Plan\-:\begin{figure}[H]
 \begin{center}
@@ -18,6 +18,16 @@ Inheritance diagram for Seat\-Plan\-:\begin{figure}[H]
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSeatPlan_a974a336df39c9fefc2b239a382a4749c}{Room\-Report} ()
+\item 
+void \hyperlink{classSeatPlan_ae93cefd4fd0401c5d54b8e97b23541ae}{Read\-Exam\-Detail} (string \hyperlink{classReadInput_a3ad470a25b3e0a29466bf4ff1f7d8e81}{project\-I\-D})
+\item 
+void \hyperlink{classSeatPlan_a618d148beefee9d4db3d038328c9b2c8}{Read\-Seat\-Plan} (string \hyperlink{classReadInput_a3ad470a25b3e0a29466bf4ff1f7d8e81}{project\-I\-D})
+\item 
+void \hyperlink{classSeatPlan_af572f79142f4dad362f54892c6747214}{Write\-H\-T\-M\-L\-File} (string \hyperlink{classReadInput_a3ad470a25b3e0a29466bf4ff1f7d8e81}{project\-I\-D})
+\item 
+\hyperlink{classSeatPlan_a446949506a25bcda5eb972c8a4b1384d}{$\sim$\-Room\-Report} ()
 \item 
 \hyperlink{classSeatPlan_ab1906186f96847704ed71f1a6c738327}{Seat\-Plan} ()
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
@@ -36,6 +46,8 @@ Inheritance diagram for Seat\-Plan\-:\begin{figure}[H]
 \hypertarget{classSeatPlan_a3f29cad9d9be46f7bc3055de2ab887fc}{void {\bfseries Write\-Seat\-Plan} (string \hyperlink{classReadInput_a3ad470a25b3e0a29466bf4ff1f7d8e81}{project\-I\-D}, int i)}\label{classSeatPlan_a3f29cad9d9be46f7bc3055de2ab887fc}
 
 \item 
+void \hyperlink{classSeatPlan_a67c10e2277f1f2823581cddf4df373c5}{Write\-H\-T\-M\-L\-File} (string \hyperlink{classReadInput_a3ad470a25b3e0a29466bf4ff1f7d8e81}{project\-I\-D}, int i)
+\begin{DoxyCompactList}\small\item\em Creating H\-T\-M\-L file. \end{DoxyCompactList}\item 
 \hyperlink{classSeatPlan_a373a1d60b6617a2e424f7d2f8866ec2e}{$\sim$\-Seat\-Plan} ()
 \begin{DoxyCompactList}\small\item\em D\-Estructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
@@ -112,16 +124,25 @@ Inheritance diagram for Seat\-Plan\-:\begin{figure}[H]
 \subsection{Detailed Description}
 \hyperlink{classSeatPlan}{Seat\-Plan} C\-Lass for generating seating plan. 
 
+Include local header file
+
 include \hyperlink{readinput_8h}{readinput.\-h}
 
 include \hyperlink{seatplan_8h}{seatplan.\-h} file 
 
-Definition at line 27 of file seatplan.\-h.
+Definition at line 25 of file report.\-h.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classSeatPlan_ab1906186f96847704ed71f1a6c738327}{\index{Seat\-Plan@{Seat\-Plan}!Seat\-Plan@{Seat\-Plan}}
+\hypertarget{classSeatPlan_a446949506a25bcda5eb972c8a4b1384d}{\index{Seat\-Plan@{Seat\-Plan}!$\sim$\-Room\-Report@{$\sim$\-Room\-Report}}
+\index{$\sim$\-Room\-Report@{$\sim$\-Room\-Report}!SeatPlan@{Seat\-Plan}}
+\subsubsection[{$\sim$\-Room\-Report}]{\setlength{\rightskip}{0pt plus 5cm}Seat\-Plan\-::$\sim$\-Room\-Report (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSeatPlan_a446949506a25bcda5eb972c8a4b1384d}
+Destructor \hypertarget{classSeatPlan_ab1906186f96847704ed71f1a6c738327}{\index{Seat\-Plan@{Seat\-Plan}!Seat\-Plan@{Seat\-Plan}}
 \index{Seat\-Plan@{Seat\-Plan}!SeatPlan@{Seat\-Plan}}
 \subsubsection[{Seat\-Plan}]{\setlength{\rightskip}{0pt plus 5cm}Seat\-Plan\-::\-Seat\-Plan (
 \begin{DoxyParamCaption}
@@ -149,11 +170,70 @@ D\-Estructor.
 
 Destructor 
 
-Definition at line 220 of file seatplan.\-cc.
+Definition at line 313 of file seatplan.\-cc.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSeatPlan_ae93cefd4fd0401c5d54b8e97b23541ae}{\index{Seat\-Plan@{Seat\-Plan}!Read\-Exam\-Detail@{Read\-Exam\-Detail}}
+\index{Read\-Exam\-Detail@{Read\-Exam\-Detail}!SeatPlan@{Seat\-Plan}}
+\subsubsection[{Read\-Exam\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}void Seat\-Plan\-::\-Read\-Exam\-Detail (
+\begin{DoxyParamCaption}
+\item[{string}]{project\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{classSeatPlan_ae93cefd4fd0401c5d54b8e97b23541ae}
+Read Exam Detail 
+
+Reimplemented from \hyperlink{classReadInput_a6e0815acdfaf61b7637a9c9e1c3621d1}{Read\-Input}.
+
+\hypertarget{classSeatPlan_a618d148beefee9d4db3d038328c9b2c8}{\index{Seat\-Plan@{Seat\-Plan}!Read\-Seat\-Plan@{Read\-Seat\-Plan}}
+\index{Read\-Seat\-Plan@{Read\-Seat\-Plan}!SeatPlan@{Seat\-Plan}}
+\subsubsection[{Read\-Seat\-Plan}]{\setlength{\rightskip}{0pt plus 5cm}void Seat\-Plan\-::\-Read\-Seat\-Plan (
+\begin{DoxyParamCaption}
+\item[{string}]{project\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{classSeatPlan_a618d148beefee9d4db3d038328c9b2c8}
+Read Seat Plan \hypertarget{classSeatPlan_a974a336df39c9fefc2b239a382a4749c}{\index{Seat\-Plan@{Seat\-Plan}!Room\-Report@{Room\-Report}}
+\index{Room\-Report@{Room\-Report}!SeatPlan@{Seat\-Plan}}
+\subsubsection[{Room\-Report}]{\setlength{\rightskip}{0pt plus 5cm}Seat\-Plan\-::\-Room\-Report (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSeatPlan_a974a336df39c9fefc2b239a382a4749c}
+Constructor \hypertarget{classSeatPlan_af572f79142f4dad362f54892c6747214}{\index{Seat\-Plan@{Seat\-Plan}!Write\-H\-T\-M\-L\-File@{Write\-H\-T\-M\-L\-File}}
+\index{Write\-H\-T\-M\-L\-File@{Write\-H\-T\-M\-L\-File}!SeatPlan@{Seat\-Plan}}
+\subsubsection[{Write\-H\-T\-M\-L\-File}]{\setlength{\rightskip}{0pt plus 5cm}void Seat\-Plan\-::\-Write\-H\-T\-M\-L\-File (
+\begin{DoxyParamCaption}
+\item[{string}]{project\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{classSeatPlan_af572f79142f4dad362f54892c6747214}
+Write\-H\-T\-M\-L\-File \hypertarget{classSeatPlan_a67c10e2277f1f2823581cddf4df373c5}{\index{Seat\-Plan@{Seat\-Plan}!Write\-H\-T\-M\-L\-File@{Write\-H\-T\-M\-L\-File}}
+\index{Write\-H\-T\-M\-L\-File@{Write\-H\-T\-M\-L\-File}!SeatPlan@{Seat\-Plan}}
+\subsubsection[{Write\-H\-T\-M\-L\-File}]{\setlength{\rightskip}{0pt plus 5cm}void Seat\-Plan\-::\-Write\-H\-T\-M\-L\-File (
+\begin{DoxyParamCaption}
+\item[{string}]{project\-I\-D, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{classSeatPlan_a67c10e2277f1f2823581cddf4df373c5}
+
+
+Creating H\-T\-M\-L file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em project\-I\-D} & Project Id of eting plan project \\
+\hline
+{\em i} & For creating file accord to datesheet \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 225 of file seatplan.\-cc.
 
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
+src/backend/header/report.\-h\item 
 src/backend/header/\hyperlink{seatplan_8h}{seatplan.\-h}\item 
 src/backend/\hyperlink{seatplan_8cc}{seatplan.\-cc}\end{DoxyCompactItemize}
