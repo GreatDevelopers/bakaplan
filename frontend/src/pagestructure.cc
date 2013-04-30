@@ -7,7 +7,7 @@
  *
  *        Version:  0.6
  *        Created:  Friday 15 February 2013 05:27:13  IST
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Mandeep Kaur, meghasimak@gmail.com
  *        License:  GNU General Public License
