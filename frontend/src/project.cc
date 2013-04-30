@@ -116,14 +116,21 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
     page.Label(fieldName.projectName, " Project Name ");
     page.InputField("text", fieldName.projectName, projectName);
     page.InputField("hidden", fieldName.emailID, userEmailID);
+    
+    if(oldProject.size() > 0)
+    {
+        cout << page.brk << page.brk
+             << " Project Type ";
+        page.InputField("radio", fieldName.projectType, "New");
+        page.Label(fieldName.projectType, "New");
 
-    cout << page.brk << page.brk
-         << " Project Type ";
-    page.InputField("radio", fieldName.projectType, "New");
-    page.Label(fieldName.projectType, "New");
-
-    page.InputField("radio", fieldName.projectType, "Old");
-    page.Label(fieldName.projectType, "Old");
+        page.InputField("radio", fieldName.projectType, "Old");
+        page.Label(fieldName.projectType, "Old");
+    }
+    else
+    {
+        page.InputField("hidden", fieldName.projectType, "New");
+    }
 
     cout << page.brk << page.brk;
 
