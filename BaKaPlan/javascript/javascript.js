@@ -9,7 +9,7 @@ function addRows(tableID, totalID, field)
         var table = document.getElementById(tableID);
         var total = document.getElementById(totalID).value;
         var classField = new Array("ClassName", "SubjectName", 
-                                   "SubjectCode");
+                                   "SubjectCode", "Delete");
         var dateField = new Array("Date", "ExamCode");
 /*        var RoomField = new Array("CentreName", "RoomNo", 
                                   "Rows", "Columns");
@@ -168,6 +168,28 @@ function deleteRow(tableID, totalID)
             document.getElementById(totalID).value = newTotal;       
             tbl.deleteRow(lastRow - 1);
         }
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+}
+
+// function for delete current row
+function delRow(totalID)
+{
+    try
+    {
+        var total = document.getElementById(totalID).value;
+
+        var current = window.event.srcElement;
+        //here we will delete the line
+        while ( (current = current.parentElement) && 
+                current.tagName !="TR");
+            current.parentElement.removeChild(current);
+        var newTotal = parseInt(total) - 1;
+        document.getElementById(totalID).value = newTotal;       
+
     }
     catch(e)
     {
