@@ -194,7 +194,7 @@ void PageStructureMaker :: BodyEnd()
         << " }"
         <<"    });"
         <<" </SCRIPT>"; */
-          string js ="../../../../BaKaPlan/javascript/validateit.js" ;
+          string js ="../../BaKaPlan/javascript/validateit.js" ;
           Javascript(js);
           cout << "</BODY>" << endl;
 }
@@ -256,8 +256,9 @@ void PageStructureMaker :: FormStart(string name, string action,
 
 void PageStructureMaker :: FormEnd()
 {
+    string js;
     cout << "</form>" << endl;
-     string js = "http://rickharrison.github.io/validate.js/validate.min.js";
+    js = "http://rickharrison.github.io/validate.js/validate.min.js";
     Javascript(js);
      
 }
