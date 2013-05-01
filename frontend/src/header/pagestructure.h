@@ -109,7 +109,8 @@ class PageStructureMaker
 
         /** Input field with 3 arguments */
         void InputField( string type, string name, 
-                        string placeholder, string value = "");
+                        string placeholder, string onfocus = "",
+                        string value = "");
 
         /** Input Field with 4 arguments */
         void InputField(string type, string name, 

@@ -138,7 +138,7 @@ void PageStructureMaker :: Title(string pageTitle)
 void PageStructureMaker :: CSS(string href)
 {
     cout << "<link href=\"" << href << "\"" 
-         << " rel=\"stylesheet\" media=\"screen\">"
+         << " rel=\"stylesheet\" media=\"screen\" type=\"text/css\">"
          << endl;
 }
 
@@ -368,8 +368,9 @@ void PageStructureMaker :: Label(string forField, string value)
  */
 
 void PageStructureMaker :: InputField(string type, 
-                                      string name, string placeholder, 
-                                      string value)
+                                      string name, string placeholder,
+                                      string value,
+                                      string onFocus)
 {
     cout << "<input "//class = \"" << className << "\" "
          << "type=\"" << type << "\" name=\"" << name;
@@ -392,8 +393,10 @@ void PageStructureMaker :: InputField(string type,
             cout << "value = \"" << value << "\" ";
         }
     }
-         //<< " onfocus = \"OnFocus(this.value, this.name, \"" << value
-         //<< "\")\""
+    if(onFocus == "date" && type == "text")
+    {
+        cout << "onfocus = \"showCalendarControl(this);\" ";
+    }
     cout << "/>" << endl;
 }
 
@@ -413,13 +416,20 @@ void PageStructureMaker :: InputField(string type, string name,
 {
     stringstream ss;
     //ss.str(name);
+
+    string onFocus;
+    if(name == "Date")
+        onFocus = "date";
+    else 
+        onFocus = "";
+ 
     ss << nameNo;
-    name += ss.str();
+    name += ss.str();   
     
     if(value == "")
-        InputField(type, name, placeholder);
+        InputField(type, name, placeholder, value, onFocus);
     else
-        InputField(type, name, placeholder, value);
+        InputField(type, name, placeholder, value, onFocus);
     /*  
     cout << "<input type=\"" << type << "\" name=\"" << name;
     if( nameNo != 0)
