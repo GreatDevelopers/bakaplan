@@ -16,10 +16,8 @@ REQUIREMENTS:
     Assuming you already installed apache
     
     **Steps to configure public_html**
-
-        $ cd ~
         
-        $ mkdir public_html
+        $ mkdir ~/public_html
     
         $ sudo a2enmod userdir
         
