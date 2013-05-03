@@ -13,21 +13,22 @@ REQUIREMENTS:
     $ sudo apt-get install g++
 
 2) Configure public_html/cgi-bin folder for executing files on browser.<br>
+    Assuming you already installed apache
     
     **Steps to configure public_html**
-    
+
         $ cd ~
         
         $ mkdir public_html
     
-        $ cd /etc/apache2/mods-enabled
-    
-        $ sudo ln -s ../mods-available/userdir.conf userdir.conf
-    
-        $ sudo ln -s ../mods-available/userdir.load userdir.load
-    
-        $ sudo /etc/init.d/apache2 restart
-    
+        $ sudo a2enmod userdir
+        
+        $ sudo service apache2 restart
+        
+        Give 755 permissions to public_html directory
+        
+        $ chmod -R 755 ~/public_html
+        
     Now open http://localhost/~username in browser.
     Here username is your login name.
     
