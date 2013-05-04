@@ -62,9 +62,15 @@ REQUIREMENTS:
     
 3) CGICC Library<br>
 
-    Download any latest package from http://ftp.gnu.org/gnu/cgicc/<br>
+Run following command in terminal
     
-    Then run following commands in terminal
+    $ sudo apt-get install libcgicc-dev
+
+OR
+
+Download any latest package from http://ftp.gnu.org/gnu/cgicc/<br>
+    
+Then run following commands in terminal
     
     $ tar xzf cgicc-X.X.X.tar.gz 
     
