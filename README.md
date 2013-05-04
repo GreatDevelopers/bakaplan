@@ -36,9 +36,7 @@ REQUIREMENTS:
     
         $ sudo a2enmod cgid
     
-        $ sudo a2enmod userdir
-    
-        $ sudo /etc/init.d/apache2 restart
+        $ sudo service apache2 restart
      
         $ cd ~/public_html
     
