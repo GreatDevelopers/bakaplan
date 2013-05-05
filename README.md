@@ -6,6 +6,18 @@ strategies to create seat plan.
 
 REQUIREMENTS:
 ----------------------------
+
+1) GNU G++ Compiler
+2) LAMP 
+3) make command
+4) Configure public_html and cgi-bin in home
+5) MySQL Connector for C++
+6) CGICC Library
+7) Boost Library
+8) jwSMTP Library
+
+Installation of requirements
+
 1) GNU G++ Compiler
     
     Run following command in terminal to install
