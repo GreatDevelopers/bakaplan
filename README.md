@@ -7,70 +7,71 @@ strategies to create seat plan.
 REQUIREMENTS:
 ----------------------------
 
-1) GNU G++ Compiler
-2) LAMP 
-3) make command
-4) Configure public_html and cgi-bin in home
-5) MySQL Connector for C++
-6) CGICC Library
-7) Boost Library
-8) jwSMTP Library
+    1) GNU G++ Compiler <br>
+    2) LAMP <br>
+    3) make command <br>
+    4) Configure public_html and cgi-bin in home <br>
+    5) MySQL Connector for C++ <br>
+    6) CGICC Library <br>
+    7) Boost Library <br>
+    8) jwSMTP Library <br>
 
 Installation of requirements
 
 1) GNU G++ Compiler
     
-    Run following command in terminal to install
+Run following command in terminal to install
     
     $ sudo apt-get install g++
 
 2) Configure public_html/cgi-bin folder for executing files on browser.<br>
-    Assuming you already installed apache
+Assuming you already installed apache
     
-    **Steps to configure public_html**
+**Steps to configure public_html**
         
-        $ mkdir ~/public_html
+    $ mkdir ~/public_html
     
-        $ sudo a2enmod userdir
+    $ sudo a2enmod userdir
         
-        $ sudo service apache2 restart
+    $ sudo service apache2 restart
         
-        Give 755 permissions to public_html directory
+Give 755 permissions to public_html directory
         
-        $ chmod -R 755 ~/public_html
+    $ chmod -R 755 ~/public_html
         
-    Now open http://localhost/~username in browser.
-    Here username is your login name.
+Now open http://localhost/~username in browser.
+Here username is your login name.
     
-    **Steps to configure cgi-bin in public_html**
+**Steps to configure cgi-bin in public_html**
     
-        $ sudo a2enmod cgi
+    $ sudo a2enmod cgi
     
-        $ sudo a2enmod cgid
+    $ sudo a2enmod cgid
     
-        $ sudo service apache2 restart
+    $ sudo service apache2 restart
      
-        $ cd ~/public_html
+    $ cd ~/public_html
     
-        $ mkdir cgi-bin
+    $ mkdir cgi-bin
     
-        $ cd /etc/apache2
+    $ cd /etc/apache2
     
-        $ sudo vim sites-available/default
+    $ sudo vim sites-available/default
     
-        Add following text in file:
+Add following text in file:
     
-        ScriptAlias /cgi-bin/ /home/*/public_html/cgi-bin/
-        <Directory "/home/*/public_html/cgi-bin">
-            AllowOverride None
-            Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
-            SetHandler cgi-script
-            Order allow,deny
-            Allow from all
-        </Directory>
+    ScriptAlias /cgi-bin/ /home/*/public_html/cgi-bin/
+    <Directory "/home/*/public_html/cgi-bin">
+        AllowOverride None
+        Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+        SetHandler cgi-script
+        Order allow,deny
+        Allow from all
+    </Directory>
     
-        Save it and then restart apache
-        $ sudo service apache2 restart
+Save it and then restart apache
+
+    $ sudo service apache2 restart
     
 3) CGICC Library<br>
 
@@ -93,6 +94,7 @@ Then run following commands in terminal
     $ make
     
     $ sudo make install
+    
 <!--    NOTE: If you got permission error then use sudo with command.-->
 
 INSTALLATION:
