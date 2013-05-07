@@ -192,8 +192,6 @@ void ClassDetail :: ClassDetailPage(string msg)
 
     cout << page.startH1 << "Class/Branch/Trade Detail" 
          << page.endH1 << page.brk;
-    
-    ErrorMessage(msg);
 
     page.InputField("hidden", fieldName.projectID, projectID);
     page.InputField("hidden", fieldName.totalClasses, 
@@ -203,12 +201,14 @@ void ClassDetail :: ClassDetailPage(string msg)
     page.InputField("button", "AddRow", 
                     "addRows('TableClass', 'TotalClasses', 'class')",
                     "Add Row");
-/*    
+    
     page.InputField("button", "DeleteRow", 
                     "deleteRow('TableClass', 'TotalClasses')",
-                    "Delete Row");*/
+                    "Delete Row");
 
     cout << page.brk << page.brk;
+
+    ErrorMessage(msg);
 
     page.TableStart("TableClass", "");
    
