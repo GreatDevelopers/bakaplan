@@ -199,4 +199,4 @@ $(F_BP)$(REPORT)$(HTML) : $(L_REPORT)
 	$(LMYSQL) $(LCGICC) $(LSMTP)
 
 $(CLEAN) : 
-	rm -f *.o /home/*/public_html/bp/*.html && make -C backend clean
+	rm -f *.o /home/*/public_html/bp/* && make -C backend clean
