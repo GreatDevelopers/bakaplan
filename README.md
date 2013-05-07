@@ -1,8 +1,8 @@
 BaKa Plan
 ============
 
-This software creates seating plan for examinations. It provides four different
-strategies to create seat plan.
+This software creates seating plan for examinations. It provides four 
+different strategies to create seat plan.
 
 REQUIREMENTS:
 ----------------------------
