@@ -258,7 +258,8 @@ void PageStructureMaker :: FormEnd()
 {
     string js;
     cout << "</form>" << endl;
-    js = "http://rickharrison.github.io/validate.js/validate.min.js";
+    js = "../../BaKaPlan/javascript/validate.min.js";
+//    js = "http://rickharrison.github.io/validate.js/validate.min.js";
     Javascript(js);
      
 }
