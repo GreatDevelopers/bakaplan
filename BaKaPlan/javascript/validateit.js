@@ -1,45 +1,119 @@
-var loginValidator = new FormValidator('FormLogin', [{
-name: 'EmailID',
-rules: 'required|valid_email'
-         }, {
-           name: 'Password',
-          display: 'Password',
-               rules: 'required'
-         }], function(errors, event) {
-       if (errors.length > 0) {
-       var errorString;
-       for( var i=0, errorLength = errors.length; i < errorLength; i++){
-           errorString += errors[i].message ;
+/** Login Page Validation */
+
+var loginValidator = new FormValidator('FormLogin', 
+[
+    {
+        name: 'EmailID',
+        display: 'Email ID',
+        rules: 'required|valid_email'
+    }, 
+    {
+        name: 'Password',
+        display: 'Password',
+        rules: 'required'
+    }
+], 
+function(errors, event) 
+{
+    msg = document.getElementById("Error");
+    msg.innerHTML = "";
+
+    if (errors.length > 0) 
+    {
+        var errorString;
+        for( var i = 0, errorLength = errors.length; i < errorLength; i++)
+        {
+            msg.innerHTML += errors[i].message + "<br>";            
         }
-        alert(errorString);
-         }
-            }); /*  if (errors.length > 0) {
-         
-                                    var errorString;
-                                     alert(errors[errors.length].message);
-                            
-                                    for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
-                                                    errorString += errors[i].message + '<br />';
-                                                            }
-                                                                                getElementById(DivLogin).innerHTML = errorString;
-                                                                                alert(errorString);
-                                                                                }       
-     
-});*/
-var projectValidator = new FormValidator('FormProject', [{
-name: 'ProjectType',
-rules: 'required'
-         }, {
-           name: 'ProjectName',
-          display: 'Project Name',
-               rules: 'required'
-         }], function(errors, event) {
-       if (errors.length > 0) {
-       var errorString;
-       for( var i=0, errorLength = errors.length; i < errorLength; i++){
-           errorString += errors[i].message ;
+        msg.innerHTML += "<br>";
+    }
+}); 
+
+/** Validation for Project Detail Page*/
+
+var projectValidator = new FormValidator('FormProject', 
+[
+{
+    name: 'ProjectType',
+    display: 'Project Type',
+    rules: 'required'
+}, 
+{
+    name: 'ProjectName',
+    display: 'Project Name',
+    rules: 'required'
+}
+], 
+function(errors, event) 
+{
+    msg = document.getElementById("Error");
+    msg.innerHTML = "";
+
+    if (errors.length > 0) 
+    {
+        var errorString;
+        for( var i = 0, errorLength = errors.length; i < errorLength; i++)
+        {
+            msg.innerHTML += errors[i].message + "<br>";            
         }
-        alert(errorString);
-         }
-            }); 
- 
+        msg.innerHTML += "<br>";
+    }
+}); 
+
+/** Validation for Registration Page*/
+
+var projectValidator = new FormValidator('FormRegister', 
+[
+{
+    name: 'EmailID',
+    display: 'Email ID',
+    rules: 'required|valid_email'
+} 
+], 
+function(errors, event) 
+{
+    msg = document.getElementById("Error");
+    msg.innerHTML = "";
+
+    if (errors.length > 0) 
+    {
+        var errorString;
+        for( var i = 0, errorLength = errors.length; i < errorLength; i++)
+        {
+            msg.innerHTML += errors[i].message + "<br>";            
+        }
+        msg.innerHTML += "<br>";
+    }
+}); 
+
+/** Password Setting Page Validation */
+
+var loginValidator = new FormValidator('FormConfirm', 
+[
+    {
+        name: 'Password',
+        display: 'Password',
+        rules: 'required|min_length[8]'
+    },
+    {
+        name: 'RetypePassword',
+        display: 'Re-type Password',
+        rules: 'required|min_length[8]|matches[Password]'
+    } 
+], 
+function(errors, event) 
+{
+    msg = document.getElementById("Error");
+    msg.innerHTML = "";
+
+    if (errors.length > 0) 
+    {
+        var errorString;
+        for( var i = 0, errorLength = errors.length; i < errorLength; i++)
+        {
+            msg.innerHTML += errors[i].message + "<br>";            
+        }
+        msg.innerHTML += "<br>";
+    }
+}); 
+
