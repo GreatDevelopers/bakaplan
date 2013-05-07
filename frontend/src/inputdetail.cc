@@ -108,12 +108,12 @@ int InputDetail :: StringToInt(string value)
 
 void InputDetail :: ErrorMessage(string msg)
 {
+    page.DivStart("Error", "Error");
     if(msg != "")
     {   
-        page.DivStart("msg", "error");
         cout <<  msg << page.brk << page.brk;
-        page.DivEnd();
     }
+    page.DivEnd();
 }
 
 /**

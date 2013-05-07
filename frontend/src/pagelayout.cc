@@ -115,6 +115,8 @@ void PageLayout :: Head(string titleName)
     Javascript(js);
     string css = "../../BaKaPlan/css/CalendarControl.css";
     CSS(css);
+    css = "../../BaKaPlan/css/default.css";
+    CSS(css);
     /*  Include External CSS file path */
 /*     string js = "https://ajax.googleapis.com/ajax";
     js += "/libs/jquery/1.7.2/jquery.min.js";

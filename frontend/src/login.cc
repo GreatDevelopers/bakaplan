@@ -87,6 +87,7 @@ void Login :: ReadLoginDetail()
 void Login :: LoginPage(string msg, string emailID, string password)
 {
     page.ContentType();
+
     Header("Login");
 
     page.DivStart("DivLogin", "");
@@ -99,7 +100,7 @@ void Login :: LoginPage(string msg, string emailID, string password)
     
     ErrorMessage(msg);
     
-    page.Label(fieldName.emailID, "Email ID");
+    page.Label(fieldName.emailID, " Email ID ");
     page.InputField("email", fieldName.emailID, emailID);
     cout << page.brk << page.brk;
 
@@ -266,11 +267,12 @@ void Login :: ConfirmPage(string msg, string password,
              <<  page.brk
              << page.startB << " Set Password " << page.endB;
     
-        ErrorMessage(msg);
-
         page.InputField("hidden", "Key", key);
 
         cout << page.brk << page.brk;
+
+        ErrorMessage(msg);
+
         page.Label(fieldName.password, " Password ");
         page.InputField("password", fieldName.password, password);
     
