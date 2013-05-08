@@ -237,13 +237,16 @@ void PageStructureMaker :: DivEnd()
  */
 
 void PageStructureMaker :: FormStart(string name, string action, 
-                           string method)
+                           string method, string onSubmit)
 {
     
     cout << "<form name = \"" << name 
          << "\" action = \"" << action
-         << "\" method = \"" << method
-         << "\" >"<< endl;
+         << "\" method = \"" << method << "\"";
+    if (onSubmit != "")
+        cout << " onsubmit = \'return " << onSubmit << "\'";
+    else
+        cout << " >" << endl;
 }
 
 /**

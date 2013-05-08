@@ -84,7 +84,8 @@ class PageStructureMaker
         void DivEnd();
 
         /** Start Form */
-        void FormStart(string name, string action, string method);
+        void FormStart(string name, string action, string method, 
+                       string onSubmit = "");
 
         /** End Form */
         void FormEnd();
