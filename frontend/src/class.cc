@@ -49,10 +49,10 @@ ClassDetail :: ClassDetail()
 void ClassDetail :: ProjectType()
 {
 //    page.ContentType();
-
+ 
     projectType = readField.ReadFieldValue(fieldName.projectType);
     emailID = readField.ReadFieldValue(fieldName.emailID);
-    projectName = readField.ReadFieldValue(fieldName.projectName); 
+     projectName = readField.ReadFieldValue(fieldName.projectName); 
  
     where = "EmailID = \"" + emailID + "\"";
     database.SelectColumn(oldProject, "ProjectName", "ProjectDetail",

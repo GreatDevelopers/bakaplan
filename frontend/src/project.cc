@@ -104,7 +104,7 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
 
     cout << page.brk;
 
-    page.FormStart("FormProject", "class", "get");
+    page.FormStart("FormProject", "class", "GET");
 
     cout << page.startH1 << "Project Detail" << page.endH1 << page.brk;
     
@@ -112,10 +112,10 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
     
     ErrorMessage(msg);
 
- 
+    page.InputField("hidden", fieldName.emailID, userEmailID);
+  
     page.Label(fieldName.projectName, " Project Name ");
     page.InputField("text", fieldName.projectName, projectName);
-    page.InputField("hidden", fieldName.emailID, userEmailID);
     
     if(oldProject.size() > 0)
     {
