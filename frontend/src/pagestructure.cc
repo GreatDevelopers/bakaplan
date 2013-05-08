@@ -244,7 +244,7 @@ void PageStructureMaker :: FormStart(string name, string action,
          << "\" action = \"" << action
          << "\" method = \"" << method << "\"";
     if (onSubmit != "")
-        cout << " onsubmit = \'return " << onSubmit << "\'";
+        cout << " onsubmit = \'" << onSubmit << "\'";
     else
         cout << " >" << endl;
 }
