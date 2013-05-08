@@ -187,8 +187,8 @@ void ClassDetail :: ClassDetailPage(string msg)
     page.LogoutLink();
 
     cout << page.brk;
-
-    page.FormStart("FormClass", "rollno", "POST");
+    page.FormStart("FormClass", "rollno", "POST", 
+                   "classSubjects(\"TotalClasses\")");
 
     cout << page.startH1 << "Class/Branch/Trade Detail" 
          << page.endH1 << page.brk;
