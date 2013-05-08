@@ -243,6 +243,9 @@ void ClassDetail :: ClassDetailPage(string msg)
 
             cout << page.startTD;
             page.InputField("button", "DeleteRow", 
+//                            "classSubjects('TotalClasses')",
+//                            "Check Subs");
+            
                             "delRow('TotalClasses')",
                             "Delete Row");
             cout << page.endTD;
@@ -285,7 +288,9 @@ void ClassDetail :: ClassDetailPage(string msg)
     
     cout << page.brk << page.brk;
 
-    page.Button("next", "submit", "btn", "NEXT");
+    page.Button("next", "submit", "btn", "NEXT", 
+                "javascript:classSubjects('TotalClasses')");
+//    page.InputField("submit", "submit", "", "Next");
 
     page.FormEnd();
     page.DivEnd();

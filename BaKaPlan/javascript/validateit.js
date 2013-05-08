@@ -62,7 +62,7 @@ function(errors, event)
 
 /** Validation for Registration Page*/
 
-var projectValidator = new FormValidator('FormRegister', 
+var registerValidator = new FormValidator('FormRegister', 
 [
 {
     name: 'EmailID',
@@ -88,7 +88,7 @@ function(errors, event)
 
 /** Password Setting Page Validation */
 
-var loginValidator = new FormValidator('FormConfirm', 
+var confirmValidator = new FormValidator('FormConfirm', 
 [
     {
         name: 'Password',
@@ -116,4 +116,44 @@ function(errors, event)
         msg.innerHTML += "<br>";
     }
 }); 
+
+/** Form Class Validation */
+/*
+var classValidator = new FormValidator('FormClass', 
+[
+    var total = document.getElementById("TotalClasses").value;
+    for( var i = 1; i < total.parseInt(); i++)
+    {
+        var className = "ClassName" + i;
+        {
+            name: className,
+            rules: required
+        }
+    }
+/*    {
+        name: 'Password',
+        display: 'Password',
+        rules: 'required|min_length[8]'
+    },
+    {
+        name: 'RetypePassword',
+        display: 'Re-type Password',
+        rules: 'required|min_length[8]|matches[Password]'
+    }
+], 
+function(errors, event) 
+{
+    msg = document.getElementById("Error");
+    msg.innerHTML = "";
+
+    if (errors.length > 0) 
+    {
+        var errorString;
+        for( var i = 0, errorLength = errors.length; i < errorLength; i++)
+        {
+            msg.innerHTML += errors[i].message + "<br>";            
+        }
+        msg.innerHTML += "<br>";
+    }
+}); */
 

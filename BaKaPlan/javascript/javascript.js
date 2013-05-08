@@ -196,3 +196,57 @@ function delRow(totalID)
         alert(e);
     }
 }
+
+/** Function for checking subject detail on class page */
+
+function classSubjects(totalID)
+{
+    try
+    {
+    var total = document.getElementById(totalID).value;
+
+    var msg = document.getElementById("Error");
+    msg.innerHTML = " ";
+
+//    msg.innerHTML += "Total Classes " + total + "<br>";
+
+    for( var i = 1; i <= parseInt(total); i++)
+    {
+        subName = "SubjectName" + i;
+        subCode = "SubjectCode" + i;
+
+        compareSubjects(subName, subCode);
+    }
+    }
+    catch( e )
+    {
+        alert(e);
+    }
+
+}
+
+/** comparing subject name nd subject code size */
+
+function compareSubjects(subName, subCode)
+{
+    var subjectName = document.getElementById(subName).value;
+    var subjectCode = document.getElementById(subCode).value;
+
+    var splitName = subjectName.split(",");
+    var splitCode = subjectCode.split(",");
+
+    var msg = document.getElementById("Error");
+    
+//    msg.innerHTML += splitName.length + "<br>" + splitCode.length;
+
+    if(splitName.length != splitCode.length)
+    {
+        msg.innerHTML += subName + " != " + subCode + "<br>";
+        return false;
+    }
+    else
+    {
+        msg.innerHTML += "Subjects no. matched";
+        document.FormClass.submit();
+    }
+}
