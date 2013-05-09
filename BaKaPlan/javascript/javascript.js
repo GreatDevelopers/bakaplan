@@ -205,24 +205,42 @@ function validateForm(totalID)
     {
         var total = document.getElementById(totalID).value;
 
-        var returnFalse, returnEmpty;
+        var returnFalse, emptyMsg = "";
 
         var msg = document.getElementById("Error");
         msg.innerHTML = " ";
 
-//    msg.innerHTML += "Total Classes " + total + "<br>";
+        var fieldName = new Array("ClassName", "SubjectName", 
+                                  "SubjectCode");
 
         for( var i = 1; i <= parseInt(total); i++)
         {
-            subName = "SubjectName" + i;
-            subCode = "SubjectCode" + i;
-            className = "ClassName" + i;
+            className = fieldName[0] + i;
+            subName = fieldName[1] + i;
+            subCode = fieldName[2] + i;
 
             returnFalse = compareSubjects(subName, subCode);
-            returnEmpty = isEmpty(subName, subCode, className);
+
+            // Checking field is empty or not
+            for (j = 0; j < fieldName.length; j++)
+            {
+                if(document.getElementById(
+                    (fieldName[j] + i)).value.length == 0)
+                {
+                    changeBorder((fieldName[j] + i), "red");
+                    emptyMsg = "<br> Fill Empty Fields!";
+                    returnFalse = false;
+                }
+                else
+                {
+                    if(j == 0)
+                        changeBorder((fieldName[j] + i), "");
+                }
+            }
         }
-        if (returnFalse == false || returnEmpty == false)
+        if (returnFalse == false)
         {
+            msg.innerHTML += emptyMsg;
             return false;
         }
     }
@@ -245,40 +263,23 @@ function compareSubjects(subName, subCode)
 
     var msg = document.getElementById("Error");
     
-//    msg.innerHTML += splitName.length + "<br>" + splitCode.length;
-
     if(splitName.length != splitCode.length)
     {
-        msg.innerHTML += "Check Subject Name and Subject Code";
-        document.getElementById(subName).style.borderColor = "red";
-        document.getElementById(subCode).style.borderColor = "red";
+        msg.innerHTML = "Check Subject Name and Subject Code";
+        changeBorder(subName, "red");
+        changeBorder(subCode, "red");
         return false;
     }
     else
     {
-        document.getElementById(subName).style.borderColor = "";
-        document.getElementById(subCode).style.borderColor = "";
-//        msg.innerHTML += "Subjects no. matched";
-//        document.FormClass.submit();
+        changeBorder(subName, "");
+        changeBorder(subCode, "");
     }
 }
 
 /** function for checking empty fields */
 
-function isEmpty()
+function changeBorder(field, color)
 { 
-    for(var j = 0; j < arguments.length; j++)
-    {
-//        alert(arguments[j]);
-        var fieldValue = document.getElementById(arguments[j]).value;
-        if( fieldValue.length == 0);
-        {
-            document.getElementById(arguments[j]).style.borderColor = "red";
-            return false;
-        }
-/*        else
-        {
-            document.getElementById(arguments[j]).style.borderColor = "";
-        }*/
-    }
+    document.getElementById(field).style.borderColor = color;
 }
