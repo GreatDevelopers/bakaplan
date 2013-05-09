@@ -110,7 +110,7 @@ void PageLayout :: Head(string titleName)
     string js = "../../BaKaPlan/javascript/javascript.js";
     Javascript(js);
     Javascript("https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js");
-    Javascript(js);
+//    Javascript(js);
     js = "../../BaKaPlan/javascript/CalendarControl.js";
     Javascript(js);
     string css = "../../BaKaPlan/css/CalendarControl.css";
