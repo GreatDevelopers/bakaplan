@@ -128,9 +128,9 @@ function addRow(tableID, totalID, field, tableNo)
                     }*/
                     if(field == "room")
                     {
-                        var fn = RoomField[i] + tableNo + newTotal;
-                        newcell.childNodes[0].name = fn;
-                        newcell.childNodes[0].id = fn; 
+                        var fieldName = RoomField[i] + tableNo + newTotal;
+                        newcell.childNodes[0].name = fieldName;
+                        newcell.childNodes[0].id = fieldName; 
 
                     }
                     else
@@ -227,9 +227,9 @@ function validateForm(totalID)
                 if(document.getElementById(
                     (fieldName[j] + i)).value.length == 0)
                 {
-                    changeBorder((fieldName[j] + i), "red");
                     emptyMsg = "<br> Fill Empty Fields!";
                     returnFalse = false;
+                    changeBorder((fieldName[j] + i), "red");
                 }
                 else
                 {
