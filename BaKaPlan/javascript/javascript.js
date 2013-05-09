@@ -199,30 +199,38 @@ function delRow(totalID)
 
 /** Function for checking subject detail on class page */
 
-function classSubjects(totalID)
+function validateForm(totalID)
 {
     try
     {
-    var total = document.getElementById(totalID).value;
+        var total = document.getElementById(totalID).value;
 
-    var msg = document.getElementById("Error");
-    msg.innerHTML = " ";
+        var returnFalse, returnEmpty;
+
+        var msg = document.getElementById("Error");
+        msg.innerHTML = " ";
 
 //    msg.innerHTML += "Total Classes " + total + "<br>";
 
-    for( var i = 1; i <= parseInt(total); i++)
-    {
-        subName = "SubjectName" + i;
-        subCode = "SubjectCode" + i;
+        for( var i = 1; i <= parseInt(total); i++)
+        {
+            subName = "SubjectName" + i;
+            subCode = "SubjectCode" + i;
+            className = "ClassName" + i;
 
-        compareSubjects(subName, subCode);
-    }
+            returnFalse = compareSubjects(subName, subCode);
+            returnEmpty = isEmpty(subName, subCode, className);
+        }
+        if (returnFalse == false || returnEmpty == false)
+        {
+            return false;
+        }
     }
     catch( e )
     {
         alert(e);
+        return false;
     }
-
 }
 
 /** comparing subject name nd subject code size */
@@ -241,12 +249,36 @@ function compareSubjects(subName, subCode)
 
     if(splitName.length != splitCode.length)
     {
-        msg.innerHTML += subName + " != " + subCode + "<br>";
+        msg.innerHTML += "Check Subject Name and Subject Code";
+        document.getElementById(subName).style.borderColor = "red";
+        document.getElementById(subCode).style.borderColor = "red";
         return false;
     }
     else
     {
-        msg.innerHTML += "Subjects no. matched";
-        document.FormClass.submit();
+        document.getElementById(subName).style.borderColor = "";
+        document.getElementById(subCode).style.borderColor = "";
+//        msg.innerHTML += "Subjects no. matched";
+//        document.FormClass.submit();
+    }
+}
+
+/** function for checking empty fields */
+
+function isEmpty()
+{ 
+    for(var j = 0; j < arguments.length; j++)
+    {
+//        alert(arguments[j]);
+        var fieldValue = document.getElementById(arguments[j]).value;
+        if( fieldValue.length == 0);
+        {
+            document.getElementById(arguments[j]).style.borderColor = "red";
+            return false;
+        }
+/*        else
+        {
+            document.getElementById(arguments[j]).style.borderColor = "";
+        }*/
     }
 }

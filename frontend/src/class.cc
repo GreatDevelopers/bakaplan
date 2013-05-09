@@ -188,7 +188,7 @@ void ClassDetail :: ClassDetailPage(string msg)
 
     cout << page.brk;
     page.FormStart("FormClass", "rollno", "POST", 
-                   "classSubjects(\"TotalClasses\")");
+                   "return validateForm(\"TotalClasses\")");
 
     cout << page.startH1 << "Class/Branch/Trade Detail" 
          << page.endH1 << page.brk;
@@ -288,8 +288,8 @@ void ClassDetail :: ClassDetailPage(string msg)
     
     cout << page.brk << page.brk;
 
-    page.Button("next", "submit", "btn", "NEXT", 
-                "javascript:classSubjects('TotalClasses')");
+    page.Button("next", "submit", "btn", "NEXT" );
+//                "javascript:classSubjects('TotalClasses')");
 //    page.InputField("submit", "submit", "", "Next");
 
     page.FormEnd();
