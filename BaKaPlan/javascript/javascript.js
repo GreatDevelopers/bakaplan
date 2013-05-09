@@ -1,5 +1,5 @@
 // Function for adding row in table
-function addRows(tableID, totalID, field) 
+function AddRows(tableID, totalID, field) 
 {
     try
     {
@@ -77,7 +77,7 @@ function addRows(tableID, totalID, field)
 }
 
 // Function for adding row in table
-function addRow(tableID, totalID, field, tableNo) 
+function AddRow(tableID, totalID, field, tableNo) 
 {
     try
     {
@@ -154,7 +154,7 @@ function addRow(tableID, totalID, field, tableNo)
     }
 }
 // Function for deleting row from table
-function deleteRow(tableID, totalID)
+function DeleteRow(tableID, totalID)
 {
     try
     {        
@@ -176,7 +176,7 @@ function deleteRow(tableID, totalID)
 }
 
 // function for delete current row
-function delRow(totalID)
+function DelRow(totalID)
 {
     try
     {
@@ -199,7 +199,7 @@ function delRow(totalID)
 
 /** Function for checking subject detail on class page */
 
-function validateForm(totalID)
+function ValidateClassForm(totalID)
 {
     try
     {
@@ -219,7 +219,7 @@ function validateForm(totalID)
             subName = fieldName[1] + i;
             subCode = fieldName[2] + i;
 
-            returnFalse = compareSubjects(subName, subCode);
+            returnFalse = CompareSubjects(subName, subCode);
 
             // Checking field is empty or not
             for (j = 0; j < fieldName.length; j++)
@@ -229,12 +229,12 @@ function validateForm(totalID)
                 {
                     emptyMsg = "<br> Fill Empty Fields!";
                     returnFalse = false;
-                    changeBorder((fieldName[j] + i), "red");
+                    ChangeBorder((fieldName[j] + i), "red");
                 }
                 else
                 {
                     if(j == 0)
-                        changeBorder((fieldName[j] + i), "");
+                        ChangeBorder((fieldName[j] + i), "");
                 }
             }
         }
@@ -253,7 +253,7 @@ function validateForm(totalID)
 
 /** comparing subject name nd subject code size */
 
-function compareSubjects(subName, subCode)
+function CompareSubjects(subName, subCode)
 {
     var subjectName = document.getElementById(subName).value;
     var subjectCode = document.getElementById(subCode).value;
@@ -266,20 +266,100 @@ function compareSubjects(subName, subCode)
     if(splitName.length != splitCode.length)
     {
         msg.innerHTML = "Check Subject Name and Subject Code";
-        changeBorder(subName, "red");
-        changeBorder(subCode, "red");
+        ChangeBorder(subName, "red");
+        ChangeBorder(subCode, "red");
         return false;
     }
     else
     {
-        changeBorder(subName, "");
-        changeBorder(subCode, "");
+        ChangeBorder(subName, "");
+        ChangeBorder(subCode, "");
     }
 }
 
-/** function for checking empty fields */
+/** Function for validation roll no form */
 
-function changeBorder(field, color)
+function ValidateRollNoForm(totalID)
+{
+    try
+    {
+        var total = document.getElementById(totalID).value;
+
+        var returnFalse, emptyMsg = "";
+
+        var msg = document.getElementById("Error");
+        msg.innerHTML = " ";
+
+        var fieldName = new Array("Prefix", "StartRollNo", 
+                                  "EndRollNo", "NotIncluded");
+
+        for( var i = 1; i <= parseInt(total); i++)
+        {
+            startField = fieldName[1] + i;
+            endField = fieldName[2] + i;
+
+            returnFalse = CheckRollNo(startField, endField);
+
+            // Checking field is empty or not
+            for (j = 0; j < fieldName.length; j++)
+            {
+//                alert((fieldName[j] + i));
+                if(document.getElementById(
+                    (fieldName[j] + i)).value.length == 0)
+                {
+                    emptyMsg = "<br> Fill Empty Fields!<br>";
+                    returnFalse = false;
+                    ChangeBorder((fieldName[j] + i), "red");
+                }
+                else
+                {
+                    if(j != 1 || j != 2)
+                        ChangeBorder((fieldName[j] + i), "");
+                }
+            }
+        }
+        if (returnFalse == false)
+        {
+            msg.innerHTML += emptyMsg;
+            return false;
+        }
+        return false;
+    }
+    catch( e )
+    {
+        alert(e);
+        return false;
+    }
+}
+
+/** Function for checking range of roll no i.e. starting roll no
+ *  should be less than ending roll no 
+ */
+
+function CheckRollNo(startField, endField)
+{
+    var startRNo = document.getElementById(startField).value;
+    var endRNo = document.getElementById(endField).value;
+    var msg = document.getElementById("Error");
+    msg = "";
+    if(parseInt(startRNo) > parseInt(endRNo))
+    {
+        alert(parseInt(startRNo));
+        msg.innerHTML = "Check Starting and ending Roll No";
+        ChangeBorder(startField, "red");
+        ChangeBorder(endField, "red");
+        return false;
+    }
+    else
+    {
+        ChangeBorder(startField, "");
+        ChangeBorder(endField, "");
+    }
+}
+
+/** function for changing border color of I/p field */
+
+function ChangeBorder(field, color)
 { 
     document.getElementById(field).style.borderColor = color;
 }
