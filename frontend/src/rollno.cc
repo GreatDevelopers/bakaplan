@@ -233,7 +233,8 @@ void RollNoDetail :: RollNoDetailPage(string msg)
 
     cout << page.brk;
 
-    page.FormStart("FormRollNo", "datesheet", "POST");
+    page.FormStart("FormRollNo", "datesheet", "POST",
+                   "return ValidateRollNoForm(\"TotalClasses\")");
 
     cout << page.startH1 << "Roll No Detail" << page.endH1 << page.brk;
     

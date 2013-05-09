@@ -188,7 +188,7 @@ void ClassDetail :: ClassDetailPage(string msg)
 
     cout << page.brk;
     page.FormStart("FormClass", "rollno", "POST", 
-                   "return validateForm(\"TotalClasses\")");
+                   "return ValidateClassForm(\"TotalClasses\")");
 
     cout << page.startH1 << "Class/Branch/Trade Detail" 
          << page.endH1 << page.brk;
@@ -199,11 +199,11 @@ void ClassDetail :: ClassDetailPage(string msg)
     page.InputField("hidden", fieldName.projectType, projectType);
     
     page.InputField("button", "AddRow", 
-                    "addRows('TableClass', 'TotalClasses', 'class')",
+                    "AddRows('TableClass', 'TotalClasses', 'class')",
                     "Add Row");
     
     page.InputField("button", "DeleteRow", 
-                    "deleteRow('TableClass', 'TotalClasses')",
+                    "DeleteRow('TableClass', 'TotalClasses')",
                     "Delete Row");
 
     cout << page.brk << page.brk;
@@ -246,7 +246,7 @@ void ClassDetail :: ClassDetailPage(string msg)
 //                            "classSubjects('TotalClasses')",
 //                            "Check Subs");
             
-                            "delRow('TotalClasses')",
+                            "DelRow('TotalClasses')",
                             "Delete Row");
             cout << page.endTD;
 
@@ -276,7 +276,7 @@ void ClassDetail :: ClassDetailPage(string msg)
 
             cout << page.startTD;
             page.InputField("button", "DeleteRow", 
-                            "delRow('TotalClasses')",
+                            "DelRow('TotalClasses')",
                             "Delete Row");
             cout << page.endTD;
 
