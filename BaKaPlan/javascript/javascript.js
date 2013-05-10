@@ -219,7 +219,10 @@ function ValidateClassForm(totalID)
             subName = fieldName[1] + i;
             subCode = fieldName[2] + i;
 
-            returnFalse = CompareSubjects(subName, subCode);
+            var temp = CompareSubjects(subName, subCode);
+
+            if(temp == false)
+                returnFalse = false;
 
             // Checking field is empty or not
             for (j = 0; j < fieldName.length; j++)
@@ -291,14 +294,17 @@ function ValidateRollNoForm(totalID)
         msg.innerHTML = " ";
 
         var fieldName = new Array("Prefix", "StartRollNo", 
-                                  "EndRollNo", "NotIncluded");
+                                  "EndRollNo");//, "NotIncluded");
 
         for( var i = 1; i <= parseInt(total); i++)
         {
             startField = fieldName[1] + i;
             endField = fieldName[2] + i;
 
-            returnFalse = CheckRollNo(startField, endField);
+            var temp = CheckRollNo(startField, endField);
+
+            if(temp == false)
+                returnFalse = false;
 
             // Checking field is empty or not
             for (j = 0; j < fieldName.length; j++)
@@ -313,7 +319,7 @@ function ValidateRollNoForm(totalID)
                 }
                 else
                 {
-                    if(j != 1 || j != 2)
+                    if(j == 0 || j > 2 )
                         ChangeBorder((fieldName[j] + i), "");
                 }
             }
@@ -323,7 +329,7 @@ function ValidateRollNoForm(totalID)
             msg.innerHTML += emptyMsg;
             return false;
         }
-        return false;
+//        return false;
     }
     catch( e )
     {
@@ -341,11 +347,12 @@ function CheckRollNo(startField, endField)
     var startRNo = document.getElementById(startField).value;
     var endRNo = document.getElementById(endField).value;
     var msg = document.getElementById("Error");
-    msg = "";
-    if(parseInt(startRNo) > parseInt(endRNo))
+//    msg = "";
+//    alert(parseInt(startRNo));
+    if(parseInt(startRNo) >= parseInt(endRNo))
     {
-        alert(parseInt(startRNo));
-        msg.innerHTML = "Check Starting and ending Roll No";
+//        alert("hello");
+        msg.innerHTML += "<br>Check Starting and ending Roll No<br>";
         ChangeBorder(startField, "red");
         ChangeBorder(endField, "red");
         return false;
