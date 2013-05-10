@@ -194,8 +194,8 @@ void PageStructureMaker :: BodyEnd()
         << " }"
         <<"    });"
         <<" </SCRIPT>"; */
-//          string js ="../../BaKaPlan/javascript/validateit.js" ;
-//          Javascript(js);
+          string js ="../../BaKaPlan/javascript/validateit.js" ;
+          Javascript(js);
           cout << "</BODY>" << endl;
 }
 

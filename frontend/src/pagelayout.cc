@@ -118,13 +118,13 @@ void PageLayout :: Head(string titleName)
     css = "../../BaKaPlan/css/default.css";
     CSS(css);
     /*  Include External CSS file path */
-/*     string js = "https://ajax.googleapis.com/ajax";
+   /* js = "https://ajax.googleapis.com/ajax";
     js += "/libs/jquery/1.7.2/jquery.min.js";
-//    Javascript(js);
+    Javascript(js);*/
 //    Javascript("javascript.js");
     CSS("../../../BaKaPlan/styles.css");
    // Javascript(js);
-
+/* 
     cout << "<!-- jQuery for navigation -->  "
          << "<script>"
          << "$(function() {"
