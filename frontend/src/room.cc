@@ -287,7 +287,7 @@ void RoomDetail :: RoomDetailPage()
         temp = "AddRow";
         temp += IntToString(i + 1);
 
-        string table = "addRow('TableRoom" + IntToString(i + 1)
+        string table = "AddRow('TableRoom" + IntToString(i + 1)
                        + "', 'TotalCentres" + IntToString(i + 1)
                        + "', 'room'," + IntToString(i + 1)
                        + ")";
@@ -358,8 +358,8 @@ void RoomDetail :: RoomDetailPage()
                 cout << page.endTD;       
                 
                 cout << page.startTD;
-                temp = "delRow('TotalCentres" + IntToString(i + 1) 
-                        + "')";
+                temp = "DelRow('TotalCentres" + IntToString(i + 1) 
+                        + "', event)";
                 page.InputField("button", "DeleteRow", 
                                 temp,
                                 "Delete Row");
@@ -406,7 +406,7 @@ void RoomDetail :: RoomDetailPage()
 
                 cout << page.startTD;
                 temp = "delRow('TotalCentres" + IntToString(i + 1) 
-                        + "')";
+                        + "', event)";
                 page.InputField("button", "DeleteRow", 
                                 temp,
                                 "Delete Row");

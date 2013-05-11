@@ -97,7 +97,36 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
     page.ContentType();
 
     Header("Project Detail");
-
+/* ---------------------------------------------------------
+    cout << "<form class=\"theForm\" id=\"contact-form\" action=\"#\" >"
+         << "<h2> Create a new project </h2>"
+         << "<label for=\"theProjectName\" class=\"theLabel\">Name your new project:</label>"
+	     << "<input type=\"text\" name=\"theProjectName\" "
+         << "id=\"theProjectName\" class=\"theFormTextInput\""
+         << " placeholder=\" Your Project name here_\""
+	     << "data-ot=\" Be innovative, This name should not clash with your old projects\""
+	     << "data-ot-style=\"dark\""
+         << "data-ot-delay=\"1\""
+	     << "data-ot-target=\"#theProjectName\""
+	     << "data-ot-tip-joint=\"right\""
+	     << "data-ot-show-on=\"click\""
+	     << "/>"
+	     << "<h2> Or, Open an existing one </h2>"
+	     << "<label for=\"oldProjectName\" class=\"theLabel\"> "
+         << "Name of your old project: </label>"
+	     << "<input type=\"text\" name=\"theOldProjectName\" "
+         << "id=\"theOldProjectName\"  class=\"theFormTextInput\" "
+         << "placeholder=\" one of your old projects\" "
+	     << "data-ot=\"@Mandy,will soon replace it with a drop down menu \""
+	     << "data-ot-style=\"dark\""
+	     << "data-ot-delay=\"1\""
+	     << "data-ot-target=\"#theOldProjectName\""
+	     << "data-ot-tip-joint=\"right\""
+	     << "data-ot-show-on=\"click\" />"
+	     << "<input type=\"submit\"name=\"theSubmit\" id=\"theSubmit\" class=\"theFormButton\" value=\"Start Project\" />"
+	     << "</form>";
+*/
+ 
     page.DivStart("DivProject", "");
 
     page.LogoutLink();

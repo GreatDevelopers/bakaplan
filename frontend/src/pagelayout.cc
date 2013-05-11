@@ -144,6 +144,33 @@ void PageLayout :: Head(string titleName)
          << "});"
          << "</script>";
 */
+    // New Look
+/*
+//	<!-- Fonts from google fonts, Roboto and Arvo -->
+    cout << "<link href='http://fonts.googleapis.com/css?family="
+         << "Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>";
+
+//	<!-- CSS files for our pages layout -->
+	
+    cout << "<link rel=\"stylesheet\" "
+         << "href=\"../../BaKaPlan/styles/general.css\" "
+         << "type=\"text/css\" media=\"all\">"
+         << "<link rel=\"stylesheet\" "
+         << "href=\"../../BaKaPlan/styles/pages.css\" "
+         << "type=\"text/css\" media=\"all\">"
+
+//	<!-- Open Tooltip Javascript and css framework for adding tooltips -->	
+
+         << "<script src=\"http://ajax.googleapis.com/ajax/"
+         << "libs/jquery/2.0.0/jquery.min.js\"></script>"
+         << "<script src=\"../../BaKaPlanjs/opentip-jquery.min.js\">"
+         << "</script>"
+         << "<script src=\"../../BaKaPlan/js/opentip-myStyles.js\">"
+         << "</script>"
+         << "<link rel=\"stylesheet\" "
+         << "href=\"../../BaKaPlan/styles/opentip.css\" "
+         << "type=\"text/css\" media=\"all\">";
+*/
     HeadEnd();
 }
 

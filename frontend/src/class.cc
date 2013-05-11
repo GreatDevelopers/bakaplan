@@ -191,7 +191,7 @@ void ClassDetail :: ClassDetailPage(string msg)
                    "return ValidateClassForm(\"TotalClasses\")");
 
     cout << page.startH1 << "Class/Branch/Trade Detail" 
-         << page.endH1 << page.brk;
+         << page.endH1 << page.brk << page.brk;
 
     page.InputField("hidden", fieldName.projectID, projectID);
     page.InputField("hidden", fieldName.totalClasses, 
@@ -201,11 +201,11 @@ void ClassDetail :: ClassDetailPage(string msg)
     page.InputField("button", "AddRow", 
                     "AddRows('TableClass', 'TotalClasses', 'class')",
                     "Add Row");
-    
+/*    
     page.InputField("button", "DeleteRow", 
                     "DeleteRow('TableClass', 'TotalClasses')",
                     "Delete Row");
-
+*/
     cout << page.brk << page.brk;
 
     ErrorMessage(msg);
@@ -246,7 +246,7 @@ void ClassDetail :: ClassDetailPage(string msg)
 //                            "classSubjects('TotalClasses')",
 //                            "Check Subs");
             
-                            "DelRow('TotalClasses')",
+                            "DelRow('TotalClasses', event)",
                             "Delete Row");
             cout << page.endTD;
 
@@ -276,7 +276,7 @@ void ClassDetail :: ClassDetailPage(string msg)
 
             cout << page.startTD;
             page.InputField("button", "DeleteRow", 
-                            "DelRow('TotalClasses')",
+                            "DelRow('TotalClasses', event)",
                             "Delete Row");
             cout << page.endTD;
 
