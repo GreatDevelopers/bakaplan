@@ -255,7 +255,7 @@ void ClassDetail :: ClassDetailPage(string msg)
 //                            "classSubjects('TotalClasses')",
 //                            "Check Subs");
             
-                            "DelRow('TotalClasses', event)",
+                            "DelRow('RowIndex', 'TotalClasses', event)",
                             "Delete Row");
             cout << page.endTD;
 
@@ -283,7 +283,7 @@ void ClassDetail :: ClassDetailPage(string msg)
 
             cout << page.startTD;
             page.InputField("button", IntToString(i + 1), 
-                            "DelRow('TotalClasses', event)",
+                            "DelRow('RowIndex', 'TotalClasses', event)",
                             "Delete Row");
             cout << page.endTD;
 

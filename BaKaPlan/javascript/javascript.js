@@ -187,7 +187,7 @@ function DeleteRow(tableID, totalID)
 }
 
 // function for delete current row
-function DelRow(totalID, e)
+function DelRow(indexField, totalID, e)
 {
     try
     {
@@ -195,8 +195,8 @@ function DelRow(totalID, e)
         var evt = e || window.event; // this assign evt with the event object
 
         var current = evt.target || evt.srcElement;
-        rowID = current.id;
-        alert(rowID);
+        rowId = current.id;
+        alert(rowId);
         
         //here we will delete the line
         while ( (current = current.parentElement) && 
@@ -208,25 +208,32 @@ function DelRow(totalID, e)
         }
         var newTotal = parseInt(total) - 1;
         document.getElementById(totalID).value = newTotal;
-        var rowIndex = document.getElementById('RowIndex').value;
-        var index = rowIndex.split(",");
-        index.splice(index.indexOf(rowID), 1);
-        rowIndex = "";
-        for(var i = 0; i < index.length; i++)
-        {
-            if(index[i] != rowID)
-            {
-                rowIndex += index[i];
-                if(i != index.length-1)
-                    rowIndex += ",";
-            }
-        }
-        document.getElementById('RowIndex').value = rowIndex;
+        RemoveItem(indexField, rowId);
     }
     catch(e)
     {
         alert(e);
     }
+}
+
+/** Remove element from array */
+
+function RemoveItem(fieldName, rowId)
+{
+    var rowIndex = document.getElementById(fieldName).value;
+    var index = rowIndex.split(",");
+    index.splice(index.indexOf(rowId), 1);
+    rowIndex = "";
+    for(var i = 0; i < index.length; i++)
+    {
+        if(index[i] != rowId)
+        {
+            rowIndex += index[i];
+            if(i != index.length-1)
+                rowIndex += ",";
+        }
+    }
+    document.getElementById('RowIndex').value = rowIndex;
 }
 
 /** Function for checking subject detail on class page */
@@ -245,11 +252,14 @@ function ValidateClassForm(totalID)
         var fieldName = new Array("ClassName", "SubjectName", 
                                   "SubjectCode");
 
-        for( var i = 1; i <= parseInt(total); i++)
+        var rowIndex = document.getElementById('RowIndex').value;
+        var index = rowIndex.split(',');
+
+        for( var i = 0; i < parseInt(total); i++)
         {
-            className = fieldName[0] + i;
-            subName = fieldName[1] + i;
-            subCode = fieldName[2] + i;
+            className = fieldName[0] + index[i];
+            subName = fieldName[1] + index[i];
+            subCode = fieldName[2] + index[i];
 
             var temp = CompareSubjects(subName, subCode);
 
@@ -260,16 +270,16 @@ function ValidateClassForm(totalID)
             for (j = 0; j < fieldName.length; j++)
             {
                 if(document.getElementById(
-                    (fieldName[j] + i)).value.length == 0)
+                    (fieldName[j] + index[i])).value.length == 0)
                 {
                     emptyMsg = "<br> Fill Empty Fields!";
                     returnFalse = false;
-                    ChangeBorder((fieldName[j] + i), "red");
+                    ChangeBorder((fieldName[j] + index[i]), "red");
                 }
                 else
                 {
                     if(j == 0)
-                        ChangeBorder((fieldName[j] + i), "");
+                        ChangeBorder((fieldName[j] + index[i]), "");
                 }
             }
         }
