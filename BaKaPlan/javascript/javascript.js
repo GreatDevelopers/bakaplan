@@ -18,6 +18,9 @@ function AddRows(tableID, totalID, field)
         var StrategyFiels = new Array("Strategy");
 */
         var newTotal = parseInt(total) + 1;
+
+        var lastRow = parseInt(document.getElementById('LastRow').value) 
+                      + 1;
  
         var rowCount = table.rows.length;
         var row = table.insertRow(rowCount);
@@ -37,16 +40,16 @@ function AddRows(tableID, totalID, field)
                     if(field == "class")
                     {
                         newcell.childNodes[0].name = classField[i] 
-                                                     + newTotal;
+                                                     + lastRow;
                         newcell.childNodes[0].id = classField[i] 
-                                                     + newTotal;
+                                                     + lastRow;
                     }
                     else if(field == "date")
                     {
                         newcell.childNodes[0].name = dateField[i] 
-                                                     + newTotal;
+                                                     + lastRow;
                         newcell.childNodes[0].id = dateField[i] 
-                                                     + newTotal;
+                                                     + lastRow;
                     }
 /*                    else if(field == "room")
                     {
@@ -60,6 +63,11 @@ function AddRows(tableID, totalID, field)
 
                     }
                     break;
+
+                case "button":
+                    newcell.childNodes[0].id = lastRow;
+                    break;
+
                 case "checkbox":
                     newcell.childNodes[0].checked = false;
                     break;
@@ -69,6 +77,9 @@ function AddRows(tableID, totalID, field)
             }
          }
          document.getElementById(totalID).value = newTotal;
+         alert(newTotal);
+         document.getElementById('LastRow').value = lastRow;
+         document.getElementById('RowIndex').value += "," + lastRow;
     }
     catch(e)
     {
@@ -176,20 +187,41 @@ function DeleteRow(tableID, totalID)
 }
 
 // function for delete current row
-function DelRow(totalID)
+function DelRow(totalID, e)
 {
     try
     {
         var total = document.getElementById(totalID).value;
+        var evt = e || window.event; // this assign evt with the event object
 
-        var current = window.event.srcElement;
+        var current = evt.target || evt.srcElement;
+        rowID = current.id;
+        alert(rowID);
+        
         //here we will delete the line
         while ( (current = current.parentElement) && 
                 current.tagName !="TR");
-            current.parentElement.removeChild(current);
+        {
+//            alert(current.rowIndex);
+            if(current.rowIndex != 1)
+                current.parentElement.removeChild(current);
+        }
         var newTotal = parseInt(total) - 1;
-        document.getElementById(totalID).value = newTotal;       
-
+        document.getElementById(totalID).value = newTotal;
+        var rowIndex = document.getElementById('RowIndex').value;
+        var index = rowIndex.split(",");
+        index.splice(index.indexOf(rowID), 1);
+        rowIndex = "";
+        for(var i = 0; i < index.length; i++)
+        {
+            if(index[i] != rowID)
+            {
+                rowIndex += index[i];
+                if(i != index.length-1)
+                    rowIndex += ",";
+            }
+        }
+        document.getElementById('RowIndex').value = rowIndex;
     }
     catch(e)
     {
