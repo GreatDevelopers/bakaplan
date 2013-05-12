@@ -6,9 +6,9 @@
  *    Description:  Declaration of ReadInputField i.e. used to read
  *    value of any field using cgicc library.
  *
- *        Version:  0.6
+ *        Version:  0.7
  *        Created:  Saturday 16 February 2013 02:31:27  IST
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Mandeep Kaur, meghasimak@gmail.com
  *        License:  GNU General Public License

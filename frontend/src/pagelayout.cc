@@ -7,9 +7,9 @@
  *                  class. This includes header, footer section of 
  *                  html pages.
  *
- *        Version:  0.6
+ *        Version:  0.7
  *        Created:  Friday 15 February 2013 07:05:50  IST
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Mandeep Kaur, meghasimak@gmail.com
  *        License:  GNU General Public License
@@ -109,7 +109,7 @@ void PageLayout :: Head(string titleName)
     Title(titleName);
     string js = "../../BaKaPlan/javascript/javascript.js";
     Javascript(js);
-    Javascript("https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js");
+//    Javascript("https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js");
 //    Javascript(js);
     js = "../../BaKaPlan/javascript/CalendarControl.js";
     Javascript(js);
@@ -122,8 +122,9 @@ void PageLayout :: Head(string titleName)
     js += "/libs/jquery/1.7.2/jquery.min.js";
     Javascript(js);*/
 //    Javascript("javascript.js");
-    CSS("../../../BaKaPlan/styles.css");
-   // Javascript(js);
+
+    //CSS("../../BaKaPlan/styles.css");   // ---------- CSS
+
 /* 
     cout << "<!-- jQuery for navigation -->  "
          << "<script>"
@@ -143,6 +144,33 @@ void PageLayout :: Head(string titleName)
          << "});"
          << "});"
          << "</script>";
+*/
+    // New Look
+/*
+//	<!-- Fonts from google fonts, Roboto and Arvo -->
+    cout << "<link href='http://fonts.googleapis.com/css?family="
+         << "Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>";
+
+//	<!-- CSS files for our pages layout -->
+	
+    cout << "<link rel=\"stylesheet\" "
+         << "href=\"../../BaKaPlan/styles/general.css\" "
+         << "type=\"text/css\" media=\"all\">"
+         << "<link rel=\"stylesheet\" "
+         << "href=\"../../BaKaPlan/styles/pages.css\" "
+         << "type=\"text/css\" media=\"all\">"
+
+//	<!-- Open Tooltip Javascript and css framework for adding tooltips -->	
+
+         << "<script src=\"http://ajax.googleapis.com/ajax/"
+         << "libs/jquery/2.0.0/jquery.min.js\"></script>"
+         << "<script src=\"../../BaKaPlanjs/opentip-jquery.min.js\">"
+         << "</script>"
+         << "<script src=\"../../BaKaPlan/js/opentip-myStyles.js\">"
+         << "</script>"
+         << "<link rel=\"stylesheet\" "
+         << "href=\"../../BaKaPlan/styles/opentip.css\" "
+         << "type=\"text/css\" media=\"all\">";
 */
     HeadEnd();
 }

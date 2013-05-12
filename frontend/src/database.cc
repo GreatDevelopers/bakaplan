@@ -5,7 +5,7 @@
  *
  *    Description:  Definition of Database Class for accessing database
  *
- *        Version:  0.6
+ *        Version:  0.7
  *        Created:  Friday 22 February 2013 02:07:49  IST
  *       Compiler:  g++
  *

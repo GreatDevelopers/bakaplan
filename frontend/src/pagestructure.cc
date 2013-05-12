@@ -5,7 +5,7 @@
  *
  *    Description:  Function definitions of PageStructureMaker Class
  *
- *        Version:  0.6
+ *        Version:  0.7
  *        Created:  Friday 15 February 2013 05:27:13  IST
  *       Compiler:  g++
  *
@@ -72,7 +72,7 @@ void PageStructureMaker :: SetHTMLVariables()
 
 void PageStructureMaker :: HTMLStart()
 {
-    cout << "<HTML>" << endl;
+    cout << "<HTML lang=\"en\">" << endl;
 }
 
 /**
@@ -98,7 +98,8 @@ void PageStructureMaker :: HTMLEnd()
 
 void PageStructureMaker :: HeadStart()
 {
-    cout << "<HEAD>" << endl;
+    cout << "<HEAD>" << endl
+         << "<meta charset=\"UTF-8\">" << endl;
 }
 
 /**
@@ -165,8 +166,21 @@ void PageStructureMaker :: Javascript(string src)
 
 void PageStructureMaker :: BodyStart()
 {
-    cout << "<BODY align=\"center\">" << endl;
-    DivStart("wrapper", "");                    /* (id, classname) */
+    cout << "<BODY  class=\"coloredBody\" >" << endl;
+/*     
+    cout << " <nav class=\"side-menu\"> "
+         << " <span id=\"toggle-menu\"> <p id=\"toggle-menu-circle\"> "
+         << "Show Menu </p> </span> "
+         << " <h3> Ba<span class=\"ka\">ka</span> Plan</h3>"
+         << "<a href=\"index.html\"> Home </a>"
+         << "<a href=\"about.html\"> About </a>"
+         << "<a href=\"contribute.html\"> Contribute </a>"
+         << "<a href=\"contact.html\">Contact  </a>"
+         << "<a href=\"login.html\"> Log Out </a>"
+         << "</nav> ";
+*/
+    DivStart("page-wrap", "");                    /* (id, classname) */
+//    cout << "<h1>~</h1>" << endl;
 }
 
 /**
@@ -196,6 +210,8 @@ void PageStructureMaker :: BodyEnd()
         <<" </SCRIPT>"; */
           string js ="../../BaKaPlan/javascript/validateit.js" ;
           Javascript(js);
+/*           cout << "<script type=\"text/javascript\" "
+               << "src=\"../../BaKaPlan/js/sidemenu.js\"></script>";*/
           cout << "</BODY>" << endl;
 }
 
@@ -236,11 +252,13 @@ void PageStructureMaker :: DivEnd()
  *--------------------------------------------------------------------
  */
 
-void PageStructureMaker :: FormStart(string name, string action, 
-                           string method, string onSubmit)
+void PageStructureMaker :: FormStart(string name, // cssClass
+                                     string action, string method, 
+                                     string onSubmit)
 {
     
-    cout << "<form name = \"" << name 
+    cout << "<form "//class = \"" << cssClass
+         << "\" name = \"" << name 
          << "\" action = \"" << action
          << "\" method = \"" << method << "\"";
     if (onSubmit != "")

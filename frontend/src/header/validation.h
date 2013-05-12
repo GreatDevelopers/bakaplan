@@ -3,7 +3,7 @@
  *
  *       \brief      Validation class
  *
- *       \version    0.6
+ *       \version    0.7
  *       \date       Sunday 07 April 2013 08:24:00  IST\n
  *       Compiler    g++
  *

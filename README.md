@@ -1,11 +1,11 @@
 BaKa Plan
-============
+=========
 
 This software creates seating plan for examinations. It provides four 
 different strategies to create seat plan.
 
 REQUIREMENTS:
-----------------------------
+-------------
 
     1) GNU G++ Compiler
     2) LAMP
@@ -98,15 +98,15 @@ Then run following commands in terminal
 <!--    NOTE: If you got permission error then use sudo with command.-->
 
 INSTALLATION:
-----------------------------
+-------------
 Check [INSTALLATION](https://github.com/GreatDevelopers/bakaplan/blob/master/INSTALLATION.txt) steps for using this software.
 
 INPUT FORMAT:
-----------------------------
-[USER GUIDE](https://github.com/GreatDevelopers/bakaplan/blob/master/USER%20GUIDE.txt)
+-------------
+USER GUIDE](https://github.com/GreatDevelopers/bakaplan/blob/master/USER%20GUIDE.txt)
 
 AUTHORS:
-----------------------------
+--------
 <b>Mentor and Manager</b>
 
 Dr. Hardeep Singh Rai
@@ -119,5 +119,5 @@ Mandeep Kaur
 
 Website: http://mandeepsimak.wordpress.com
 
-Email: baithnekaplan AT gmail.com
+Email: baithnekaplan \[AT\] gmail.com
 

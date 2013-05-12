@@ -4,7 +4,7 @@
  *       \brief      Strategy class for checking selected strategy is
  *                   valid for seating plan or not.
  *
- *       \version    0.6
+ *       \version    0.7
  *       \date       Tuesday 02 April 2013 02:09:24  IST\n
  *       Compiler    g++
  *

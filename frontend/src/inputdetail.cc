@@ -5,9 +5,9 @@
  *
  *    Description:  Definition of member functions of InputDetail class
  *
- *        Version:  0.6
+ *        Version:  0.7
  *        Created:  Sunday 24 February 2013 01:31:21  IST
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Mandeep Kaur, meghasimak@gmail.com
  *        License:  GNU General Public License

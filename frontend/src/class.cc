@@ -3,7 +3,7 @@
  *
  *       \brief      ClassDetail function definition
  *
- *       \version    0.6
+ *       \version    0.7
  *       \date       Sunday 07 April 2013 07:49:18  IST\n
  *       Compiler    g++
  *
@@ -48,12 +48,14 @@ ClassDetail :: ClassDetail()
 
 void ClassDetail :: ProjectType()
 {
-//    page.ContentType();
+    page.ContentType();
+
+    cout << "Hello !";
  
-    projectType = readField.ReadFieldValue(fieldName.projectType);
-    emailID = readField.ReadFieldValue(fieldName.emailID);
-     projectName = readField.ReadFieldValue(fieldName.projectName); 
- 
+//    projectType = readField.ReadFieldValue(fieldName.projectType);
+//    emailID = readField.ReadFieldValue(fieldName.emailID);
+//    projectName = readField.ReadFieldValue(fieldName.projectName); 
+/*  
     where = "EmailID = \"" + emailID + "\"";
     database.SelectColumn(oldProject, "ProjectName", "ProjectDetail",
                           where);
@@ -62,7 +64,7 @@ void ClassDetail :: ProjectType()
         OldProject();
     else
         NewProject();
-		
+*/		
 }
 
 /**
@@ -191,7 +193,7 @@ void ClassDetail :: ClassDetailPage(string msg)
                    "return ValidateClassForm(\"TotalClasses\")");
 
     cout << page.startH1 << "Class/Branch/Trade Detail" 
-         << page.endH1 << page.brk;
+         << page.endH1 << page.brk << page.brk;
 
     page.InputField("hidden", fieldName.projectID, projectID);
     page.InputField("hidden", fieldName.totalClasses, 
@@ -201,11 +203,11 @@ void ClassDetail :: ClassDetailPage(string msg)
     page.InputField("button", "AddRow", 
                     "AddRows('TableClass', 'TotalClasses', 'class')",
                     "Add Row");
-    
+/*    
     page.InputField("button", "DeleteRow", 
                     "DeleteRow('TableClass', 'TotalClasses')",
                     "Delete Row");
-
+*/
     cout << page.brk << page.brk;
 
     ErrorMessage(msg);
@@ -246,7 +248,7 @@ void ClassDetail :: ClassDetailPage(string msg)
 //                            "classSubjects('TotalClasses')",
 //                            "Check Subs");
             
-                            "DelRow('TotalClasses')",
+                            "DelRow('TotalClasses', event)",
                             "Delete Row");
             cout << page.endTD;
 
@@ -276,7 +278,7 @@ void ClassDetail :: ClassDetailPage(string msg)
 
             cout << page.startTD;
             page.InputField("button", "DeleteRow", 
-                            "DelRow('TotalClasses')",
+                            "DelRow('TotalClasses', event)",
                             "Delete Row");
             cout << page.endTD;
 

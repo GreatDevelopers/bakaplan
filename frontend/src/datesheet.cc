@@ -3,7 +3,7 @@
  *
  *       \brief      Function definition of datesheet class
  *
- *       \version    0.6
+ *       \version    0.7
  *       \date       Sunday 07 April 2013 07:59:55  IST\n
  *       Compiler    g++
  *
@@ -206,7 +206,7 @@ void DateSheet :: DateSheetPage()
     page.InputField("hidden", fieldName.projectType, projectType);
     
     page.InputField("button", "AddRow", 
-                    "addRows('TableDateSheet', 'TotalDays', 'date')",
+                    "AddRows('TableDateSheet', 'TotalDays', 'date')",
                     "Add Row");
 /*     
     page.InputField("button", "DeleteRow", 
@@ -243,7 +243,7 @@ void DateSheet :: DateSheetPage()
         
             cout << page.startTD;
             page.InputField("button", "DeleteRow", 
-                            "delRow('TotalDays')",
+                            "DelRow('TotalDays', event)",
                             "Delete Row");
             cout << page.endTD;
 
@@ -269,7 +269,7 @@ void DateSheet :: DateSheetPage()
 
             cout << page.startTD;
             page.InputField("button", "DeleteRow", 
-                            "delRow('TotalDays')",
+                            "DelRow('TotalDays', event)",
                             "Delete Row");
             cout << page.endTD;
 

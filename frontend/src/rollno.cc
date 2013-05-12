@@ -3,7 +3,7 @@
  *
  *       \brief      RollNo detail Class definition
  *
- *       \version    0.6
+ *       \version    0.7
  *       \date       Sunday 07 April 2013 07:53:57  IST\n
  *       Compiler    g++
  *

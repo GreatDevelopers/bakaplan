@@ -3,7 +3,7 @@
  *
  *       \brief      Report class definition
  *
- *       \version    0.6
+ *       \version    0.7
  *       \date       Wednesday 03 April 2013 05:05:51  IST\n
  *       Compiler    g++
  *

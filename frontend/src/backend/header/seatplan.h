@@ -4,7 +4,7 @@
  *       \brief      Declaration of SeatPlan class for generating
  *                   seating plan
  *
- *       \version    0.6
+ *       \version    0.7
  *       \date       Tuesday 02 April 2013 02:05:39  IST\n
  *       Compiler    g++
  *

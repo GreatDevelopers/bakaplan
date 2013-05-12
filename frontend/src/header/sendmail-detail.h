@@ -3,7 +3,7 @@
  *
  *       \brief      SMTP swttings detail
  *
- *       \version    0.6
+ *       \version    0.7
  *       \date       Saturday 06 April 2013 10:46:54  IST\n
  *       Compiler    g++
  *

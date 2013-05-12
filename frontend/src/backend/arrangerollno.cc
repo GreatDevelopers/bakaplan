@@ -3,7 +3,7 @@
  *
  *       \brief      Function definition of ArrangeRollNo class
  *
- *       \version    0.6
+ *       \version    0.7
  *       \date       Sunday 31 March 2013 06:50:00  IST\n
  *       Compiler    g++
  *

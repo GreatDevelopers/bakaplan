@@ -6,9 +6,9 @@
  *    Description:  Database details like database name, username,
  *                  password, and server(localhost)
  *
- *        Version:  0.6
+ *        Version:  0.7
  *        Created:  Sunday 03 March 2013 12:10:05  IST
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Mandeep Kaur, meghasimak@gmail.com
  *        License:  GNU General Public License                                         

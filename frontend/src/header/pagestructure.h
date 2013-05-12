@@ -7,9 +7,9 @@
  *                  includes basic HTML tags that included for all 
  *                  pages like <HTML>, <HEAD>, </HEAD>, etc.
  *
- *        Version:  0.6
+ *        Version:  0.7
  *        Created:  Friday 15 February 2013 05:08:42  IST
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Mandeep Kaur, meghasimak@gmail.com
  *        License:  GNU General Public License

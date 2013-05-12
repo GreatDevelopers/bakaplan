@@ -6,9 +6,9 @@
  *    Description:  Include header files required for using cgicc 
  *    library.
  *
- *        Version:  0.6
+ *        Version:  0.7
  *        Created:  Saturday 16 February 2013 02:24:53  IST
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Mandeep Kaur, meghasimak@gmail.com
  *        License:  GNU General Public License

@@ -3,7 +3,7 @@
  *
  *       \brief      Function definition of ProjectDetail class
  *
- *       \version    0.6
+ *       \version    0.7
  *       \date       Sunday 07 April 2013 03:27:02  IST\n
  *       Compiler    g++
  *
@@ -97,26 +97,55 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
     page.ContentType();
 
     Header("Project Detail");
-
+/* ---------------------------------------------------------
+    cout << "<form class=\"theForm\" id=\"contact-form\" action=\"#\" >"
+         << "<h2> Create a new project </h2>"
+         << "<label for=\"theProjectName\" class=\"theLabel\">Name your new project:</label>"
+	     << "<input type=\"text\" name=\"theProjectName\" "
+         << "id=\"theProjectName\" class=\"theFormTextInput\""
+         << " placeholder=\" Your Project name here_\""
+	     << "data-ot=\" Be innovative, This name should not clash with your old projects\""
+	     << "data-ot-style=\"dark\""
+         << "data-ot-delay=\"1\""
+	     << "data-ot-target=\"#theProjectName\""
+	     << "data-ot-tip-joint=\"right\""
+	     << "data-ot-show-on=\"click\""
+	     << "/>"
+	     << "<h2> Or, Open an existing one </h2>"
+	     << "<label for=\"oldProjectName\" class=\"theLabel\"> "
+         << "Name of your old project: </label>"
+	     << "<input type=\"text\" name=\"theOldProjectName\" "
+         << "id=\"theOldProjectName\"  class=\"theFormTextInput\" "
+         << "placeholder=\" one of your old projects\" "
+	     << "data-ot=\"@Mandy,will soon replace it with a drop down menu \""
+	     << "data-ot-style=\"dark\""
+	     << "data-ot-delay=\"1\""
+	     << "data-ot-target=\"#theOldProjectName\""
+	     << "data-ot-tip-joint=\"right\""
+	     << "data-ot-show-on=\"click\" />"
+	     << "<input type=\"submit\"name=\"theSubmit\" id=\"theSubmit\" class=\"theFormButton\" value=\"Start Project\" />"
+	     << "</form>";
+*/
+  
     page.DivStart("DivProject", "");
 
     page.LogoutLink();
 
     cout << page.brk;
 
-    page.FormStart("FormProject", "class", "GET");
+    page.FormStart("FormProject", "class", "POST");
 
     cout << page.startH1 << "Project Detail" << page.endH1 << page.brk;
-    
-    OldProject();
+     
+//    OldProject();
     
     ErrorMessage(msg);
 
-    page.InputField("hidden", fieldName.emailID, userEmailID);
+//    page.InputField("hidden", fieldName.emailID, userEmailID);
   
     page.Label(fieldName.projectName, " Project Name ");
     page.InputField("text", fieldName.projectName, projectName);
-    
+/*  
     if(oldProject.size() > 0)
     {
         cout << page.brk << page.brk
@@ -131,7 +160,7 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
     {
         page.InputField("hidden", fieldName.projectType, "New");
     }
-
+*/
     cout << page.brk << page.brk;
 
     page.Button("next", "submit", "btn", "NEXT");
