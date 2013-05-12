@@ -48,14 +48,14 @@ ClassDetail :: ClassDetail()
 
 void ClassDetail :: ProjectType()
 {
-    page.ContentType();
+//    page.ContentType();
 
-    cout << "Hello !";
+//    cout << "Hello !";
  
-//    projectType = readField.ReadFieldValue(fieldName.projectType);
-//    emailID = readField.ReadFieldValue(fieldName.emailID);
-//    projectName = readField.ReadFieldValue(fieldName.projectName); 
-/*  
+    projectType = readField.ReadFieldValue(fieldName.projectType);
+    emailID = readField.ReadFieldValue(fieldName.emailID);
+    projectName = readField.ReadFieldValue(fieldName.projectName); 
+  
     where = "EmailID = \"" + emailID + "\"";
     database.SelectColumn(oldProject, "ProjectName", "ProjectDetail",
                           where);
@@ -64,7 +64,7 @@ void ClassDetail :: ProjectType()
         OldProject();
     else
         NewProject();
-*/		
+		
 }
 
 /**
@@ -221,11 +221,18 @@ void ClassDetail :: ClassDetailPage(string msg)
     }
     cout << page.endTR;
 
-    if(projectType == "Old" && (className.size() >= 1 || 
-       subjectName.size() >= 1 || subjectCode.size() >= 1 ))
+    rowIndex = "";
+
+    for(i = 0; i < totalClasses; i++)
     {
-        for(i = 0; i < totalClasses; i++)
+        rowIndex += IntToString(i + 1);
+        if((i + 1) != totalClasses)
+            rowIndex += ",";
+
+        if(projectType == "Old" && (className.size() >= 1 || 
+           subjectName.size() >= 1 || subjectCode.size() >= 1 ))
         {
+        
             cout << page.startTR;
         
             cout << page.startTD;
@@ -244,20 +251,18 @@ void ClassDetail :: ClassDetailPage(string msg)
             cout << page.endTD;
 
             cout << page.startTD;
-            page.InputField("button", "DeleteRow", 
+            page.InputField("button", IntToString(i + 1), 
 //                            "classSubjects('TotalClasses')",
 //                            "Check Subs");
             
-                            "DelRow('TotalClasses', event)",
+                            "DelRow('RowIndex', 'TotalClasses', event)",
                             "Delete Row");
             cout << page.endTD;
 
             cout << page.endTR;
+        
         }
-    }
-    else
-    {
-        for(i = 0; i < totalClasses; i++)
+        else
         {
             cout << page.startTR;
         
@@ -277,17 +282,22 @@ void ClassDetail :: ClassDetailPage(string msg)
             cout << page.endTD;
 
             cout << page.startTD;
-            page.InputField("button", "DeleteRow", 
-                            "DelRow('TotalClasses', event)",
+            page.InputField("button", IntToString(i + 1), 
+                            "DelRow('RowIndex', 'TotalClasses', event)",
                             "Delete Row");
             cout << page.endTD;
 
             cout << page.endTR;
         }
     }
-   
+
+    lastRow = IntToString(totalClasses);
+
     page.TableEnd();
     
+    page.InputField("hidden", fieldName.lastRow, lastRow);
+    page.InputField("hidden", fieldName.rowIndex, rowIndex);
+   
     cout << page.brk << page.brk;
 
     page.Button("next", "submit", "btn", "NEXT" );

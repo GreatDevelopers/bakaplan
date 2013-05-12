@@ -18,6 +18,9 @@ function AddRows(tableID, totalID, field)
         var StrategyFiels = new Array("Strategy");
 */
         var newTotal = parseInt(total) + 1;
+
+        var lastRow = parseInt(document.getElementById('LastRow').value) 
+                      + 1;
  
         var rowCount = table.rows.length;
         var row = table.insertRow(rowCount);
@@ -37,16 +40,16 @@ function AddRows(tableID, totalID, field)
                     if(field == "class")
                     {
                         newcell.childNodes[0].name = classField[i] 
-                                                     + newTotal;
+                                                     + lastRow;
                         newcell.childNodes[0].id = classField[i] 
-                                                     + newTotal;
+                                                     + lastRow;
                     }
                     else if(field == "date")
                     {
                         newcell.childNodes[0].name = dateField[i] 
-                                                     + newTotal;
+                                                     + lastRow;
                         newcell.childNodes[0].id = dateField[i] 
-                                                     + newTotal;
+                                                     + lastRow;
                     }
 /*                    else if(field == "room")
                     {
@@ -60,6 +63,11 @@ function AddRows(tableID, totalID, field)
 
                     }
                     break;
+
+                case "button":
+                    newcell.childNodes[0].id = lastRow;
+                    break;
+
                 case "checkbox":
                     newcell.childNodes[0].checked = false;
                     break;
@@ -69,6 +77,9 @@ function AddRows(tableID, totalID, field)
             }
          }
          document.getElementById(totalID).value = newTotal;
+         alert(newTotal);
+         document.getElementById('LastRow').value = lastRow;
+         document.getElementById('RowIndex').value += "," + lastRow;
     }
     catch(e)
     {
@@ -96,7 +107,10 @@ function AddRow(tableID, totalID, field, tableNo)
         var StrategyFiels = new Array("Strategy");
 
         var newTotal = parseInt(total) + 1;
- 
+        var fieldRow = "LastRow" + tableNo;
+        var lastRow = parseInt(document.getElementById(fieldRow).value) 
+                      + 1;
+        alert(lastRow);
         var rowCount = table.rows.length;
         var row = table.insertRow(rowCount);
  
@@ -128,7 +142,7 @@ function AddRow(tableID, totalID, field, tableNo)
                     }*/
                     if(field == "room")
                     {
-                        var fieldName = RoomField[i] + tableNo + newTotal;
+                        var fieldName = RoomField[i] + tableNo + lastRow;
                         newcell.childNodes[0].name = fieldName;
                         newcell.childNodes[0].id = fieldName; 
 
@@ -137,6 +151,9 @@ function AddRow(tableID, totalID, field, tableNo)
                     {
 
                     }
+                    break;
+                case "button":
+                    newcell.childNodes[0].id = lastRow;
                     break;
                 case "checkbox":
                     newcell.childNodes[0].checked = false;
@@ -147,6 +164,9 @@ function AddRow(tableID, totalID, field, tableNo)
             }
          }
          document.getElementById(totalID).value = newTotal;
+         alert(newTotal);
+         document.getElementById(("LastRow" + tableNo)).value = lastRow;
+         document.getElementById(("RowIndex" + tableNo)).value += "," + lastRow;
     }
     catch(e)
     {
@@ -176,25 +196,54 @@ function DeleteRow(tableID, totalID)
 }
 
 // function for delete current row
-function DelRow(totalID)
+function DelRow(indexField, totalID, e)
 {
     try
     {
         var total = document.getElementById(totalID).value;
+        var evt = e || window.event; // this assign evt with the event object
 
-        var current = window.event.srcElement;
+        var current = evt.target || evt.srcElement;
+        rowId = current.id;
+        alert(rowId);
+        
         //here we will delete the line
         while ( (current = current.parentElement) && 
                 current.tagName !="TR");
-            current.parentElement.removeChild(current);
+        {
+//            alert(current.rowIndex);
+            if(current.rowIndex != 1)
+                current.parentElement.removeChild(current);
+        }
         var newTotal = parseInt(total) - 1;
-        document.getElementById(totalID).value = newTotal;       
-
+        document.getElementById(totalID).value = newTotal;
+//        alert(indexField);
+        RemoveItem(indexField, rowId);
     }
     catch(e)
     {
         alert(e);
     }
+}
+
+/** Remove element from array */
+
+function RemoveItem(indexField, rowId)
+{
+    var rowIndex = document.getElementById(indexField).value;
+    var index = rowIndex.split(",");
+    index.splice(index.indexOf(rowId), 1);
+    rowIndex = "";
+    for(var i = 0; i < index.length; i++)
+    {
+        if(index[i] != rowId)
+        {
+            rowIndex += index[i];
+            if(i != index.length-1)
+                rowIndex += ",";
+        }
+    }
+    document.getElementById(indexField).value = rowIndex;
 }
 
 /** Function for checking subject detail on class page */
@@ -213,11 +262,14 @@ function ValidateClassForm(totalID)
         var fieldName = new Array("ClassName", "SubjectName", 
                                   "SubjectCode");
 
-        for( var i = 1; i <= parseInt(total); i++)
+        var rowIndex = document.getElementById('RowIndex').value;
+        var index = rowIndex.split(',');
+
+        for( var i = 0; i < parseInt(total); i++)
         {
-            className = fieldName[0] + i;
-            subName = fieldName[1] + i;
-            subCode = fieldName[2] + i;
+            className = fieldName[0] + index[i];
+            subName = fieldName[1] + index[i];
+            subCode = fieldName[2] + index[i];
 
             var temp = CompareSubjects(subName, subCode);
 
@@ -228,16 +280,16 @@ function ValidateClassForm(totalID)
             for (j = 0; j < fieldName.length; j++)
             {
                 if(document.getElementById(
-                    (fieldName[j] + i)).value.length == 0)
+                    (fieldName[j] + index[i])).value.length == 0)
                 {
                     emptyMsg = "<br> Fill Empty Fields!";
                     returnFalse = false;
-                    ChangeBorder((fieldName[j] + i), "red");
+                    ChangeBorder((fieldName[j] + index[i]), "red");
                 }
                 else
                 {
                     if(j == 0)
-                        ChangeBorder((fieldName[j] + i), "");
+                        ChangeBorder((fieldName[j] + index[i]), "");
                 }
             }
         }

@@ -109,4 +109,8 @@ void InputFieldName :: SetFieldNames()
     
     /* Variable for holding value of same detail */
     sameDetail      =   "SameDetail";
+
+    /* Variables for row index and last row in table */
+    lastRow         =   "LastRow";
+    rowIndex        =   "RowIndex";
 }

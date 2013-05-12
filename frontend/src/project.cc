@@ -133,19 +133,19 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
 
     cout << page.brk;
 
-    page.FormStart("FormProject", "class", "POST");
+    page.FormStart("FormProject", "class", "GET");
 
     cout << page.startH1 << "Project Detail" << page.endH1 << page.brk;
      
-//    OldProject();
+    OldProject();
     
     ErrorMessage(msg);
 
-//    page.InputField("hidden", fieldName.emailID, userEmailID);
+    page.InputField("hidden", fieldName.emailID, userEmailID);
   
     page.Label(fieldName.projectName, " Project Name ");
     page.InputField("text", fieldName.projectName, projectName);
-/*  
+  
     if(oldProject.size() > 0)
     {
         cout << page.brk << page.brk
@@ -160,7 +160,7 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
     {
         page.InputField("hidden", fieldName.projectType, "New");
     }
-*/
+
     cout << page.brk << page.brk;
 
     page.Button("next", "submit", "btn", "NEXT");

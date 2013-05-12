@@ -87,8 +87,10 @@ class InputFieldName
                examCode,                   /**< Exam code accord to 
                                                          date sheet */
                totalDays,              /**< Total days in datesheet */
-               sameDetail;             /**< Same detail of room, exam, 
+               sameDetail,             /**< Same detail of room, exam, 
                                           strategy for seating plan */
+               lastRow,                   /**< Last row index value */
+               rowIndex;              /**< Index values of all rows */
 
     public:
         InputFieldName();                     /**< Constructor */

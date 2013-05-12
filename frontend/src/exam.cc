@@ -111,7 +111,7 @@ void ExamDetail :: ReadRoomDetail()
     totalDays = StringToInt(readField.ReadFieldValue(
                             fieldName.totalDays));
     sameDetail = readField.ReadFieldValue(fieldName.sameDetail);
-      
+ 
     totalCentres.resize(totalDays);
     centreName.resize(totalDays);
     roomNo.resize(totalDays);
@@ -127,9 +127,14 @@ void ExamDetail :: ReadRoomDetail()
         if(sameDetail == "No")
             date[i] = readField.ReadFieldValue("Date", j);
 
+        rowIndex = readField.ReadFieldValue(fieldName.rowIndex, j);
+        STRING_VEC index;
+//      index.resize(totalDays);
+        SplitString(index, rowIndex, ",");
+
         for(j = 0; j < totalCentres[i]; j++)
         {
-            temp1 = IntToString(i + 1) + IntToString(j + 1);
+            temp1 = IntToString(i + 1) + index[j];//IntToString(j + 1);
 
             centreName[i].resize(totalCentres[i]);
             roomNo[i].resize(totalCentres[i]);
