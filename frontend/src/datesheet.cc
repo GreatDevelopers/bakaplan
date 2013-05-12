@@ -169,7 +169,7 @@ void DateSheet :: SetDefaultValue()
     date.resize(totalDays);
     examCode.resize(totalDays);
 
-    date[0] = "12/04/2013";
+    date[0] = "2013-05-10";
     examCode[0] = "IT-102, CSE 120";
 }
 
@@ -223,11 +223,16 @@ void DateSheet :: DateSheetPage()
         cout << page.startTH << tableHeading[i] << page.endTH;
     }
     cout << page.endTR;
+    rowIndex = "";
 
-    if(projectType == "Old")// && (className.size() >= 1 ) || 
-//       subjectName.size() >= 1 || subjectCode.size() >= 1 ))
+    for(i = 0; i < totalDays; i++)
     {
-        for(i = 0; i < totalDays; i++)
+        rowIndex += IntToString(i + 1);
+        if((i + 1) != totalDays)
+            rowIndex += ",";
+
+        if(projectType == "Old")// && (className.size() >= 1 ) || 
+//           subjectName.size() >= 1 || subjectCode.size() >= 1 ))
         {
             cout << page.startTR;
         
@@ -243,17 +248,13 @@ void DateSheet :: DateSheetPage()
         
             cout << page.startTD;
             page.InputField("button", "DeleteRow", 
-                            "DelRow('TotalDays', event)",
+                            "DelRow('RowIndex', 'TotalDays', event)",
                             "Delete Row");
             cout << page.endTD;
 
-
             cout << page.endTR;
         }
-    }
-    else
-    {
-        for(i = 0; i < totalDays; i++)
+        else
         {
             cout << page.startTR;
         
@@ -269,15 +270,15 @@ void DateSheet :: DateSheetPage()
 
             cout << page.startTD;
             page.InputField("button", "DeleteRow", 
-                            "DelRow('TotalDays', event)",
+                            "DelRow('RowIndex', 'TotalDays', event)",
                             "Delete Row");
             cout << page.endTD;
-
 
             cout << page.endTR;
         }
     }
-   
+    lastRow = IntToString(totalDays);
+
     page.TableEnd();
   
     cout << page.brk << page.brk
@@ -288,6 +289,9 @@ void DateSheet :: DateSheetPage()
     page.InputField("radio", fieldName.sameDetail, "No");
     page.Label(fieldName.sameDetail, "No");
    
+    page.InputField("hidden", fieldName.lastRow, lastRow);
+    page.InputField("hidden", fieldName.rowIndex, rowIndex);
+
     cout << page.brk << page.brk;
 
     page.Button("next", "submit", "btn", "NEXT");

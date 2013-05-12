@@ -156,6 +156,10 @@ void RoomDetail :: ReadDateSheet()
                             fieldName.totalDays));
     sameDetail = readField.ReadFieldValue(fieldName.sameDetail);
 
+    rowIndex = readField.ReadFieldValue(fieldName.rowIndex);
+    STRING_VEC index;
+    SplitString(index, rowIndex, ",");
+
     date.resize(totalDays);
     examCode.resize(totalDays);
     centreName.resize(totalDays);
@@ -165,7 +169,7 @@ void RoomDetail :: ReadDateSheet()
  
     for(i = 0; i < totalDays; i++)
     {
-        j = i + 1;
+        j = StringToInt(index[i]);
         date[i] = readField.ReadFieldValue(fieldName.date, j);
         examCode[i] = readField.ReadFieldValue(fieldName.examCode, j);
     }
@@ -318,9 +322,15 @@ void RoomDetail :: RoomDetailPage()
         temp = fieldName.totalCentres;
         temp += IntToString(i + 1);
         page.InputField("hidden", temp, IntToString(totalCentres[i]));
+    
+        rowIndex = "";
 
         for(j = 0; j < totalCentres[i]; j++)
         {
+            rowIndex += IntToString(j + 1);
+            if((j + 1) != totalCentres[i])
+                rowIndex += ",";
+
             if(projectType == "Old")
             {
                 cout << page.startTR;
@@ -358,9 +368,11 @@ void RoomDetail :: RoomDetailPage()
                 cout << page.endTD;       
                 
                 cout << page.startTD;
-                temp = "DelRow('TotalCentres" + IntToString(i + 1) 
-                        + "', event)";
-                page.InputField("button", "DeleteRow", 
+                temp = "DelRow('" 
+                       + (fieldName.rowIndex + IntToString(i + 1))  
+                       + "', 'TotalCentres" 
+                       + IntToString(i + 1) + "', event)";
+                page.InputField("button", IntToString(i + 1), 
                                 temp,
                                 "Delete Row");
                 cout << page.endTD;
@@ -405,9 +417,12 @@ void RoomDetail :: RoomDetailPage()
                 cout << page.endTD;       
 
                 cout << page.startTD;
-                temp = "delRow('TotalCentres" + IntToString(i + 1) 
-                        + "', event)";
-                page.InputField("button", "DeleteRow", 
+                temp = "DelRow('" 
+                       + (fieldName.rowIndex + IntToString(i + 1))  
+                       + "', 'TotalCentres" 
+                       + IntToString(i + 1) + "', event)";
+                
+                page.InputField("button", IntToString(i + 1), 
                                 temp,
                                 "Delete Row");
                 cout << page.endTD;
@@ -415,9 +430,16 @@ void RoomDetail :: RoomDetailPage()
                 cout << page.endTR;
                     
             }
-
         }
-        
+
+        lastRow = IntToString(totalCentres[i]);
+        page.InputField("hidden", 
+                        (fieldName.lastRow + IntToString(i + 1)), 
+                        lastRow);
+        page.InputField("hidden", 
+                        (fieldName.rowIndex + IntToString(i + 1)), 
+                        rowIndex);
+       
         page.TableEnd();
     }
 

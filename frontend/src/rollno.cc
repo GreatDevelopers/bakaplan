@@ -56,13 +56,17 @@ void RollNoDetail :: ReadClassDetail()
     totalClasses = StringToInt(readField.ReadFieldValue(
                                fieldName.totalClasses));
 
+    rowIndex = readField.ReadFieldValue(fieldName.rowIndex);
+    STRING_VEC index;
+    SplitString(index, rowIndex, ",");
+
     className.resize(totalClasses);
     subjectName.resize(totalClasses);
     subjectCode.resize(totalClasses);
  
     for(i = 0; i < totalClasses; i++)
     {
-        j = i + 1;
+        j = StringToInt(index[i]);
         className[i] = readField.ReadFieldValue(fieldName.className,
                                                 j);
 
@@ -254,11 +258,12 @@ void RollNoDetail :: RollNoDetailPage(string msg)
     }
     cout << page.endTR;
 
-    if(projectType == "Old")// && (prefix.size() > 1 || 
-//       subjectName.size() >1 || subjectCode.size() > 1 ))
+    for(i = 0; i < totalClasses; i++)
     {
-        for(i = 0; i < totalClasses; i++)
+        if(projectType == "Old")// && (prefix.size() > 1 || 
+//           subjectName.size() >1 || subjectCode.size() > 1 ))
         {
+
             cout << page.startTR;
         
             cout << page.startTD;
@@ -295,11 +300,9 @@ void RollNoDetail :: RollNoDetailPage(string msg)
  
             cout << page.endTR;
         }
-    }
-    else
-    {
-        for(i = 0; i < totalClasses; i++)
+        else
         {
+        
             cout << page.startTR;
         
             cout << page.startTD;

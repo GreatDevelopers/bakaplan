@@ -107,7 +107,10 @@ function AddRow(tableID, totalID, field, tableNo)
         var StrategyFiels = new Array("Strategy");
 
         var newTotal = parseInt(total) + 1;
- 
+        var fieldRow = "LastRow" + tableNo;
+        var lastRow = parseInt(document.getElementById(fieldRow).value) 
+                      + 1;
+        alert(lastRow);
         var rowCount = table.rows.length;
         var row = table.insertRow(rowCount);
  
@@ -139,7 +142,7 @@ function AddRow(tableID, totalID, field, tableNo)
                     }*/
                     if(field == "room")
                     {
-                        var fieldName = RoomField[i] + tableNo + newTotal;
+                        var fieldName = RoomField[i] + tableNo + lastRow;
                         newcell.childNodes[0].name = fieldName;
                         newcell.childNodes[0].id = fieldName; 
 
@@ -148,6 +151,9 @@ function AddRow(tableID, totalID, field, tableNo)
                     {
 
                     }
+                    break;
+                case "button":
+                    newcell.childNodes[0].id = lastRow;
                     break;
                 case "checkbox":
                     newcell.childNodes[0].checked = false;
@@ -158,6 +164,9 @@ function AddRow(tableID, totalID, field, tableNo)
             }
          }
          document.getElementById(totalID).value = newTotal;
+         alert(newTotal);
+         document.getElementById(("LastRow" + tableNo)).value = lastRow;
+         document.getElementById(("RowIndex" + tableNo)).value += "," + lastRow;
     }
     catch(e)
     {
@@ -208,6 +217,7 @@ function DelRow(indexField, totalID, e)
         }
         var newTotal = parseInt(total) - 1;
         document.getElementById(totalID).value = newTotal;
+//        alert(indexField);
         RemoveItem(indexField, rowId);
     }
     catch(e)
@@ -218,9 +228,9 @@ function DelRow(indexField, totalID, e)
 
 /** Remove element from array */
 
-function RemoveItem(fieldName, rowId)
+function RemoveItem(indexField, rowId)
 {
-    var rowIndex = document.getElementById(fieldName).value;
+    var rowIndex = document.getElementById(indexField).value;
     var index = rowIndex.split(",");
     index.splice(index.indexOf(rowId), 1);
     rowIndex = "";
@@ -233,7 +243,7 @@ function RemoveItem(fieldName, rowId)
                 rowIndex += ",";
         }
     }
-    document.getElementById('RowIndex').value = rowIndex;
+    document.getElementById(indexField).value = rowIndex;
 }
 
 /** Function for checking subject detail on class page */
