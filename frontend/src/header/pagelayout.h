@@ -6,9 +6,9 @@
  *    Description:  Add Header, Footer, Menus to webpage(output html
  *                  pages. PageLayout Class for this purpose.
  *
- *        Version:  0.6
+ *        Version:  0.7
  *        Created:  Friday 15 February 2013 06:10:40  IST
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Mandeep Kaur, meghasimak@gmail.com
  *        License:  GNU General Public License

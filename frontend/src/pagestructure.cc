@@ -5,7 +5,7 @@
  *
  *    Description:  Function definitions of PageStructureMaker Class
  *
- *        Version:  0.6
+ *        Version:  0.7
  *        Created:  Friday 15 February 2013 05:27:13  IST
  *       Compiler:  g++
  *
@@ -252,11 +252,13 @@ void PageStructureMaker :: DivEnd()
  *--------------------------------------------------------------------
  */
 
-void PageStructureMaker :: FormStart(string name, string action, 
-                           string method, string onSubmit)
+void PageStructureMaker :: FormStart(string name, // cssClass
+                                     string action, string method, 
+                                     string onSubmit)
 {
     
-    cout << "<form name = \"" << name 
+    cout << "<form "//class = \"" << cssClass
+         << "\" name = \"" << name 
          << "\" action = \"" << action
          << "\" method = \"" << method << "\"";
     if (onSubmit != "")

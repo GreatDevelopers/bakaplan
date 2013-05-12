@@ -7,9 +7,9 @@
  *                  class. This includes header, footer section of 
  *                  html pages.
  *
- *        Version:  0.6
+ *        Version:  0.7
  *        Created:  Friday 15 February 2013 07:05:50  IST
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Mandeep Kaur, meghasimak@gmail.com
  *        License:  GNU General Public License
@@ -109,7 +109,7 @@ void PageLayout :: Head(string titleName)
     Title(titleName);
     string js = "../../BaKaPlan/javascript/javascript.js";
     Javascript(js);
-    Javascript("https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js");
+//    Javascript("https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js");
 //    Javascript(js);
     js = "../../BaKaPlan/javascript/CalendarControl.js";
     Javascript(js);
@@ -122,8 +122,9 @@ void PageLayout :: Head(string titleName)
     js += "/libs/jquery/1.7.2/jquery.min.js";
     Javascript(js);*/
 //    Javascript("javascript.js");
-    CSS("../../../BaKaPlan/styles.css");
-   // Javascript(js);
+
+    //CSS("../../BaKaPlan/styles.css");   // ---------- CSS
+
 /* 
     cout << "<!-- jQuery for navigation -->  "
          << "<script>"

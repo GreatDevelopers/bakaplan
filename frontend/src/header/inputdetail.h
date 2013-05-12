@@ -6,9 +6,9 @@
  *    Description:  Base class for all common variable declaration and
  *                  functions that are used by derived classes
  *
- *        Version:  0.6
+ *        Version:  0.7
  *        Created:  Friday 22 February 2013 11:34:29  IST
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Mandeep Kaur, meghasimak@gmail.com
  *        License:  GNU General Public License

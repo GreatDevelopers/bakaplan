@@ -4,7 +4,7 @@
  *       \brief      Main method to call ConfirmPage of Login class
  *                   and creating confirm.html page
  *
- *       \version    0.6
+ *       \version    0.7
  *       \date       Sunday 07 April 2013 07:40:31  IST\n
  *       Compiler    g++
  *

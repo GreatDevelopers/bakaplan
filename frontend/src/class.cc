@@ -3,7 +3,7 @@
  *
  *       \brief      ClassDetail function definition
  *
- *       \version    0.6
+ *       \version    0.7
  *       \date       Sunday 07 April 2013 07:49:18  IST\n
  *       Compiler    g++
  *
@@ -48,12 +48,14 @@ ClassDetail :: ClassDetail()
 
 void ClassDetail :: ProjectType()
 {
-//    page.ContentType();
+    page.ContentType();
+
+    cout << "Hello !";
  
-    projectType = readField.ReadFieldValue(fieldName.projectType);
-    emailID = readField.ReadFieldValue(fieldName.emailID);
-     projectName = readField.ReadFieldValue(fieldName.projectName); 
- 
+//    projectType = readField.ReadFieldValue(fieldName.projectType);
+//    emailID = readField.ReadFieldValue(fieldName.emailID);
+//    projectName = readField.ReadFieldValue(fieldName.projectName); 
+/*  
     where = "EmailID = \"" + emailID + "\"";
     database.SelectColumn(oldProject, "ProjectName", "ProjectDetail",
                           where);
@@ -62,7 +64,7 @@ void ClassDetail :: ProjectType()
         OldProject();
     else
         NewProject();
-		
+*/		
 }
 
 /**

@@ -5,9 +5,9 @@
  *
  *    Description:  
  *
- *        Version:  0.6
+ *        Version:  0.7
  *        Created:  Saturday 09 March 2013 12:56:23  IST
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Mandeep Kaur, meghasimak@gmail.com
  *        License:  GNU General Public License

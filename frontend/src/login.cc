@@ -5,9 +5,9 @@
  *
  *    Description:  Definition of LoginPage function of Login class
  *
- *        Version:  0.6
+ *        Version:  0.7
  *        Created:  Sunday 03 March 2013 02:52:49  IST
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Mandeep Kaur, meghasimak@gmail.com
  *        License:  GNU General Public License

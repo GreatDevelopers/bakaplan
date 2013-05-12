@@ -5,9 +5,9 @@
  *
  *    Description:  Login class definition for user login 
  *
- *        Version:  0.6
+ *        Version:  0.7
  *        Created:  Sunday 03 March 2013 01:13:08  IST
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Mandeep Kaur, meghasimak@gmail.com
  *        License:  GNU General Public License

@@ -6,9 +6,9 @@
  *    Description:  For creating .js files, Javascript class
  *                  definition
  *
- *        Version:  0.6
+ *        Version:  0.7
  *        Created:  Sunday 03 March 2013 04:25:09  IST
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Mandeep Kaur, meghasimak@gmail.com
  *        License:  GNU General Public License

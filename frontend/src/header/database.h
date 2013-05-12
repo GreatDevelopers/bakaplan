@@ -5,7 +5,7 @@
  *
  *    Description:  Declaring Database class for using database.
  *
- *        Version:  0.6
+ *        Version:  0.7
  *        Created:  Friday 22 February 2013 12:48:40  IST
  *       Compiler:  g++
  *

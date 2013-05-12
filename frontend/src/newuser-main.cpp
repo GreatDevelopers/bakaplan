@@ -3,7 +3,7 @@
  *
  *       \brief      Main method for creating newuser.html page
  *
- *       \version    0.6
+ *       \version    0.7
  *       \date       Saturday 06 April 2013 08:51:23  IST\n
  *       Compiler    g++
  *

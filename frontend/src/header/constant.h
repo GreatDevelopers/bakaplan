@@ -6,9 +6,9 @@
  *    Description:  Include constant values for defining size of
  *    array.
  *
- *        Version:  0.6
+ *        Version:  0.7
  *        Created:  Monday 18 February 2013 04:06:52  IST
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Mandeep Kaur, meghasimak@gmail.com
  *        License:  GNU General Public License

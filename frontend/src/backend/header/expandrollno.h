@@ -4,7 +4,7 @@
  *       \brief      ExpandRollNo class declaration for expanding roll
  *                   nos.
  *
- *       \version    0.6
+ *       \version    0.7
  *       \date       Sunday 31 March 2013 05:45:55  IST\n
  *       Compiler    g++
  *

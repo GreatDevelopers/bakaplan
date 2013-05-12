@@ -3,7 +3,7 @@
  *
  *       \brief      Function definition of ProjectDetail class
  *
- *       \version    0.6
+ *       \version    0.7
  *       \date       Sunday 07 April 2013 03:27:02  IST\n
  *       Compiler    g++
  *
@@ -126,26 +126,26 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
 	     << "<input type=\"submit\"name=\"theSubmit\" id=\"theSubmit\" class=\"theFormButton\" value=\"Start Project\" />"
 	     << "</form>";
 */
- 
+  
     page.DivStart("DivProject", "");
 
     page.LogoutLink();
 
     cout << page.brk;
 
-    page.FormStart("FormProject", "class", "GET");
+    page.FormStart("FormProject", "class", "POST");
 
     cout << page.startH1 << "Project Detail" << page.endH1 << page.brk;
-    
-    OldProject();
+     
+//    OldProject();
     
     ErrorMessage(msg);
 
-    page.InputField("hidden", fieldName.emailID, userEmailID);
+//    page.InputField("hidden", fieldName.emailID, userEmailID);
   
     page.Label(fieldName.projectName, " Project Name ");
     page.InputField("text", fieldName.projectName, projectName);
-    
+/*  
     if(oldProject.size() > 0)
     {
         cout << page.brk << page.brk
@@ -160,7 +160,7 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
     {
         page.InputField("hidden", fieldName.projectType, "New");
     }
-
+*/
     cout << page.brk << page.brk;
 
     page.Button("next", "submit", "btn", "NEXT");
