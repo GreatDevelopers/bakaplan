@@ -259,7 +259,8 @@ void RoomDetail :: RoomDetailPage()
 
     cout << page.brk;
 
-    page.FormStart("FormRoom", "exam", "POST");
+    page.FormStart("FormRoom", "exam", "POST",
+                    "return ValidateRoomForm(\"TotalDays\")");
 
     cout << page.startH1 << "Room Detail" 
          << page.endH1 << page.brk;

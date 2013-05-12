@@ -117,29 +117,15 @@ function(errors, event)
     }
 }); 
 
-/** Form Class Validation */
-/*
-var classValidator = new FormValidator('FormClass', 
+/** Validation for Datesheet Page*/
+
+var datesheetValidator = new FormValidator('FormDateSheet', 
 [
-    var total = document.getElementById("TotalClasses").value;
-    for( var i = 1; i < total.parseInt(); i++)
-    {
-        var className = "ClassName" + i;
-        {
-            name: className,
-            rules: required
-        }
-    }
-/*    {
-        name: 'Password',
-        display: 'Password',
-        rules: 'required|min_length[8]'
-    },
-    {
-        name: 'RetypePassword',
-        display: 'Re-type Password',
-        rules: 'required|min_length[8]|matches[Password]'
-    }
+{
+    name: 'SameDetail',
+    display: 'Same Detail',
+    rules: 'required'
+}
 ], 
 function(errors, event) 
 {
@@ -155,5 +141,6 @@ function(errors, event)
         }
         msg.innerHTML += "<br>";
     }
-}); */
+}); 
+
 

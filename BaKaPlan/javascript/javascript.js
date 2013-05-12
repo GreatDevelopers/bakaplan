@@ -30,6 +30,8 @@ function AddRows(tableID, totalID, field)
         for(var i=0; i<colCount; i++) 
         {
             var newcell = row.insertCell(i);
+
+            var j = 0;
  
             newcell.innerHTML = table.rows[1].cells[i].innerHTML;
             //alert(newcell.childNodes);
@@ -71,13 +73,27 @@ function AddRows(tableID, totalID, field)
                 case "checkbox":
                     newcell.childNodes[0].checked = false;
                     break;
-                case "select-one":
+                case "select":
                     newcell.childNodes[0].selectedIndex = 0;
+//                    if(field == "date")
+                    {
+                        newcell.childNodes[0].name = "ExamCode" 
+                                                     + lastRow + j++;
+                    }
+                    break;
+
+                case "select-one":
+                    newcell.childNodes[0].selectedIndex = 1;
+//                    if(field == "date")
+                    {
+                        newcell.childNodes[0].name = "ExamCode" 
+                                                     + lastRow + j++;
+                    }
                     break;
             }
          }
          document.getElementById(totalID).value = newTotal;
-         alert(newTotal);
+//         alert(newTotal);
          document.getElementById('LastRow').value = lastRow;
          document.getElementById('RowIndex').value += "," + lastRow;
     }
@@ -110,7 +126,7 @@ function AddRow(tableID, totalID, field, tableNo)
         var fieldRow = "LastRow" + tableNo;
         var lastRow = parseInt(document.getElementById(fieldRow).value) 
                       + 1;
-        alert(lastRow);
+//        alert(lastRow);
         var rowCount = table.rows.length;
         var row = table.insertRow(rowCount);
  
@@ -164,7 +180,7 @@ function AddRow(tableID, totalID, field, tableNo)
             }
          }
          document.getElementById(totalID).value = newTotal;
-         alert(newTotal);
+//         alert(newTotal);
          document.getElementById(("LastRow" + tableNo)).value = lastRow;
          document.getElementById(("RowIndex" + tableNo)).value += "," + lastRow;
     }
@@ -205,7 +221,7 @@ function DelRow(indexField, totalID, e)
 
         var current = evt.target || evt.srcElement;
         rowId = current.id;
-        alert(rowId);
+//        alert(rowId);
         
         //here we will delete the line
         while ( (current = current.parentElement) && 
@@ -416,9 +432,158 @@ function CheckRollNo(startField, endField)
     }
 }
 
+/** Function for validation Datesheet form */
+
+function ValidateDateSheetForm(totalID)
+{
+    try
+    {
+        var total = document.getElementById(totalID).value;
+
+        var returnFalse, emptyMsg = "";
+
+        var msg = document.getElementById("Error");
+        msg.innerHTML = " ";
+
+        var fieldName = new Array("Date", "ExamCode");
+        var rowIndex = document.getElementById('RowIndex').value;
+        var index = rowIndex.split(',');
+
+        for( var i = 0; i < parseInt(total); i++)
+        {
+            // Checking field is empty or not
+            for (j = 0; j < fieldName.length; j++)
+            {
+//                alert((fieldName[j] + i));
+                if(document.getElementById(
+                    (fieldName[j] + index[i])).value.length == 0)
+                {
+                    emptyMsg = "<br> Fill Empty Fields!<br>";
+                    returnFalse = false;
+                    ChangeBorder((fieldName[j] + index[i]), "red");
+                }
+                else
+                {
+                    ChangeBorder((fieldName[j] + index[i]), "");
+                }
+            }
+        }
+        if (returnFalse == false)
+        {
+            msg.innerHTML += emptyMsg;
+            return false;
+        }
+//        return false;
+    }
+    catch( e )
+    {
+        alert(e);
+        return false;
+    }
+}
+
 /** function for changing border color of I/p field */
 
 function ChangeBorder(field, color)
 { 
     document.getElementById(field).style.borderColor = color;
 }
+
+/** Function for validating room detail */
+/*
+function ValidateRoomForm(totalID)
+{
+    try
+    {
+        var total = document.getElementById(totalID).value;
+
+        var returnFalse, emptyMsg = "";
+
+        var msg = document.getElementById("Error");
+        msg.innerHTML = " ";
+
+        var fieldName = new Array("CentreName", "RoomNo", 
+                                  "Rows", "Columns");
+
+        for( var i = 0; i < parseInt(total); i++)
+        {
+            var fn = "RowIndex" + (i + 1);
+            var rowIndex = document.getElementById(
+                            (fn).value;
+
+            var index = rowIndex.split(',');
+            fn = "TotalCentres" + (i + 1);
+            totalCentres = document.getElementById(
+                            (fn).value;
+
+            for(var j = 0; j < parseInt(totalCentres); j++)
+            {
+                centreName = fieldName[0] + (i + 1) + index[j];
+                roomNo = fieldName[1] + (i + 1) + index[j];
+                rows = fieldName[2] + (i + 1) + index[j];
+                cols = fieldName[3] + (i + 1) + index[j];
+
+//                var temp = CompareRoom(roomNo, rows, cols);
+
+//                if(temp == false)
+//                    returnFalse = false;
+
+                // Checking field is empty or not
+                for (var k = 0; k < fieldName.length; k++)
+                {
+                    var fn = fieldName[k] + (i + 1) + index[j];
+                    if(document.getElementById(fn).value.length == 0)
+                    {
+                        emptyMsg = "<br> Fill Empty Fields!";
+                        returnFalse = false;
+                        ChangeBorder(fn), "red");
+                    }
+                    else
+                    {
+//                        if(k == 0)
+                            ChangeBorder(fn), "");
+                    }
+                }
+            }
+        }
+        if (returnFalse == false)
+        {
+            msg.innerHTML += emptyMsg;
+            return false;
+        }
+        return false;
+    }
+    catch( e )
+    {
+        alert(e);
+        return false;
+    }
+}
+*/
+/** comparing room detail */
+/*
+function CompareRoom(roomNo, rows, cols)
+{
+    var roomNo1 = document.getElementById(roomNo).value;
+    var rows1 = document.getElementById(rows).value;
+    var cols1 = document.getElementById(cols).value;
+
+    var splitRoomNo = roomNo1.split(",");
+    var splitRows = rows1.split(",");
+    var splitCols = cols1.split(",");
+
+    var msg = document.getElementById("Error");
+    
+    if(splitRoomNo.length != splitRows.length != splitCols.length)
+    {
+        msg.innerHTML = "Check Subject Name and Subject Code";
+        ChangeBorder(subName, "red");
+        ChangeBorder(subCode, "red");
+        return false;
+    }
+    else
+    {
+        ChangeBorder(subName, "");
+        ChangeBorder(subCode, "");
+    }
+}*/
