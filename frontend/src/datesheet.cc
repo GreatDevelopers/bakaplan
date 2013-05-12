@@ -27,6 +27,7 @@
 DateSheet :: DateSheet()
 {
     // constructor
+     
     totalCols = 3;
     tableHeading.resize(totalCols);
     i = 0;
@@ -193,7 +194,8 @@ void DateSheet :: DateSheetPage()
 
     cout << page.brk;
 
-    page.FormStart("FormDateSheet", "room", "POST");
+    page.FormStart("FormDateSheet", "room", "POST",
+                   "return ValidateDateSheetForm(\"TotalDays\")");
 
     cout << page.startH1 << "Date Sheet" 
          << page.endH1 << page.brk;
@@ -204,6 +206,8 @@ void DateSheet :: DateSheetPage()
     page.InputField("hidden", fieldName.totalDays, 
                     IntToString(totalDays));
     page.InputField("hidden", fieldName.projectType, projectType);
+    page.InputField("hidden", fieldName.totalClasses, 
+                    IntToString(totalClasses));
     
     page.InputField("button", "AddRow", 
                     "AddRows('TableDateSheet', 'TotalDays', 'date')",
@@ -215,14 +219,63 @@ void DateSheet :: DateSheetPage()
 */
     cout << page.brk << page.brk;
 
+//------------- Temp. option -----------------------------------------
+    
+    where = "ProjectID = " + projectID;
+    
+    database.SelectColumn(className, "ClassName", 
+                          "ClassDetail", where);
+
+    database.SelectColumn(subjectCode, "SubjectCode", 
+                         "ClassDetail", where);
+    subCode.resize(totalClasses);
+    totalSubjects.resize(totalClasses);
+    for(j = 0; j < totalClasses; j++)
+    {
+        SplitString(subCode[j], subjectCode[j], ",");
+        
+        totalSubjects[j] = subCode[j].size();
+    }
+
+    page.TableStart("ClassDetail", "");
+    cout << page.startTR;
+    cout << page.startTH << "Class Name" << page.endTH
+         << page.startTH << "Subject Codes" << page.endTH;
+    cout << page.endTR;    
+    for(i = 0; i < totalClasses; i++)
+    {
+        cout << page.startTR 
+             << page.startTD << className[i] << page.endTD
+             << page.startTD << subjectCode[i];
+/*        for(j = 0; j < totalSubjects[i]; j++)
+        {
+            trim(subCode[i][j]);
+            cout << subCode[i][j] << " ";
+        }*/
+         cout << page.endTD;
+        cout << page.endTR;
+    }
+    
+    page.TableEnd();
+
+    cout << page.brk << page.brk;
+
+//--------------------------------------------------------------------
     page.TableStart("TableDateSheet", "");
    
     cout << page.startTR;
+
+//    cout << page.startTH << "Date" << page.endTH;
+
     for(i = 0; i < totalCols; i++)
     {   
         cout << page.startTH << tableHeading[i] << page.endTH;
     }
+
+//    cout << page.startTH << "Delete Row" << page.endTH;
+
     cout << page.endTR;
+
     rowIndex = "";
 
     for(i = 0; i < totalDays; i++)
@@ -240,7 +293,35 @@ void DateSheet :: DateSheetPage()
             page.InputField("text", fieldName.date, (i + 1),
                             date[i], date[i]);
             cout << page.endTD;
-        
+
+/*
+            // Adding all subjects w.r.t. to class
+            for(j = 0; j < totalClasses; j++)
+            {
+                cout << page.startTD;
+                temp = fieldName.examCode + IntToString(i + 1) 
+                       + IntToString(j + 1);
+                page.SelectFieldStart(temp);
+
+                page.SelectOptionStart("Select", "y");
+                cout << " Select ";    
+                page.SelectOptionEnd();
+
+//                outFile << className[j] << endl
+                for(k = 0; k < totalSubjects[j]; k++)
+                {
+                    trim(subCode[j][k]);
+//                    outFile << subCode[j][k] << endl
+                    page.SelectOptionStart(IntToString(k), "n");
+                    cout << subCode[j][k];    
+                    page.SelectOptionEnd();
+                }
+ 
+                page.SelectFieldEnd();
+                cout << page.endTD;
+            }*/
+
+         
             cout << page.startTD;
             page.InputField("text", fieldName.examCode, (i + 1),
                             examCode[i], examCode[i]);
@@ -262,7 +343,32 @@ void DateSheet :: DateSheetPage()
             page.InputField("text", fieldName.date, (i + 1),
                             date[i]);
             cout << page.endTD;
-        
+/*             // Adding all subjects w.r.t. to class
+            for(j = 0; j < totalClasses; j++)
+            {
+                cout << page.startTD;
+                temp = fieldName.examCode + IntToString(i + 1) 
+                       + IntToString(j + 1);
+                page.SelectFieldStart(temp);
+
+                page.SelectOptionStart("Select", "y");
+                cout << " Select ";    
+                page.SelectOptionEnd();
+
+//                outFile << className[j] << endl
+                for(k = 0; k < totalSubjects[j]; k++)
+                {
+                    trim(subCode[j][k]);
+//                    outFile << subCode[j][k] << endl
+                    page.SelectOptionStart(IntToString(k), "n");
+                    cout << subCode[j][k];    
+                    page.SelectOptionEnd();
+                }
+ 
+                page.SelectFieldEnd();
+                cout << page.endTD;
+            }*/
+       
             cout << page.startTD;
             page.InputField("text", fieldName.examCode, (i + 1),
                             examCode[i]);
