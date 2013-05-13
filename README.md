@@ -8,13 +8,11 @@ REQUIREMENTS:
 -------------
 
     1) GNU G++ Compiler
-    2) LAMP
-    3) make command
-    4) Configure public_html and cgi-bin in home
-    5) MySQL Connector for C++
-    6) CGICC Library
-    7) Boost Library
-    8) jwSMTP Library
+    2) Configure public_html and cgi-bin in home
+    3) CGICC Library
+    4) MySQL Connector for C++
+    5) Boost Library
+    6) jwSMTP Library
 
 Installation of requirements
 
@@ -97,13 +95,40 @@ Then run following commands in terminal
     
 <!--    NOTE: If you got permission error then use sudo with command.-->
 
+4) MySQL Connector for C++
+
+Run following commands in terminal
+    
+    $ sudo apt-get install libmysql++
+
+    $ sudo apt-get install libmysql++-dev
+
+5) Boost Library
+
+Run following command in terminal
+
+    $ sudo apt-get install libboost1.53-all-dev 
+
+6) jwSMTP Library
+
+Download
+[jwSMTP](http://sourceforge.net/projects/jwsmtp/files/latest/download) Library
+
+Follow steps to install
+
+    $ cd ~/Downloads
+    $ tar -xzf jwsmtp-X.X.X.tar.gz
+    $ cd jwsmtp-X.X.X
+    $ ./configure
+    $ make
+    $ make install
+
+    NOTE: If you got error in */mailer.cpp or */demo2.cpp file then
+    include string header file in that. And again run make
+
 INSTALLATION:
 -------------
 Check [INSTALLATION](https://github.com/GreatDevelopers/bakaplan/blob/master/INSTALLATION.txt) steps for using this software.
-
-INPUT FORMAT:
--------------
-[USER GUIDE](https://github.com/GreatDevelopers/bakaplan/blob/master/USER%20GUIDE.txt)
 
 AUTHORS:
 --------
