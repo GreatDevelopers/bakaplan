@@ -22,7 +22,7 @@
 MAKE			=	make -C frontend
 CLEAN			=	make -C frontend clean
 COPY_HOMEPAGE	=	cp -r BaKaPlan ~/public_html/
-COPY_DOC 		=	cp -r doc ~/public_html/BaKaPlan/doc
+COPY_DOC 		=	cp -r doc ~/public_html/BaKaPlan/
 COPY			=	$(COPY_HOMEPAGE) && $(COPY_DOC)
 INSTALL         =   $(COPY)
 BP              =   mkdir ~/public_html/cgi-bin/bp && mkdir ~/public_html/SeatPlan
