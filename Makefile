@@ -25,6 +25,11 @@ COPY_HOMEPAGE	=	cp -r BaKaPlan ~/public_html/
 COPY_DOC 		=	cp -r doc ~/public_html/BaKaPlan/doc
 COPY			=	$(COPY_HOMEPAGE) && $(COPY_DOC)
 INSTALL         =   $(COPY)
+BP              =   mkdir ~/public_html/cgi-bin/bp && mkdir ~/public_html/SeatPlan
+PERMISSIONS     =   chmod -R 777 ~/public_html/cgi-bin/bp \
+					~/public_html/cgi-bin/bakaplan/frontend/input \
+                    ~/public_html/cgi-bin/bakaplan/frontend/output \
+                    ~/public_html/SeatPlan
 
 # Target Names
 
@@ -45,7 +50,7 @@ all: $(T_FRONTEND)
 # ====================================================================
 
 $(T_INSTALL):
-	$(INSTALL) && $(MAKE)
+	$(INSTALL) && $(BP) && $(PERMISSIONS) && $(MAKE)
 
 $(T_COPY):
 	$(COPY)	
