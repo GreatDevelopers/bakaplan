@@ -103,7 +103,7 @@ Check [INSTALLATION](https://github.com/GreatDevelopers/bakaplan/blob/master/INS
 
 INPUT FORMAT:
 -------------
-USER GUIDE](https://github.com/GreatDevelopers/bakaplan/blob/master/USER%20GUIDE.txt)
+[USER GUIDE](https://github.com/GreatDevelopers/bakaplan/blob/master/USER%20GUIDE.txt)
 
 AUTHORS:
 --------
