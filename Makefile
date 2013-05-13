@@ -32,7 +32,7 @@ T_COPY			=	copy
 T_CLEAN			=	clean
 T_INSTALL       =   install
 T_FRONTEND      =   front
-T_COPY_DOC		=	$(COPY_DOC)
+T_COPY_DOC		=	copy-doc
 
 # ====================================================================
 #	Main target (1st target)
