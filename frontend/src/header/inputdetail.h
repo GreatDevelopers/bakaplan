@@ -123,6 +123,8 @@ class InputDetail //: public PageLayout
         STRING_2DVEC subCode, subName;
         STRING_3DVEC rmNo, row, col;
 
+        STRING_VEC hours, minutes, ampm;
+
     public:
         /** Constructor */
         InputDetail(); 

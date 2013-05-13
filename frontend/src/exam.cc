@@ -27,13 +27,14 @@
 ExamDetail :: ExamDetail()
 {
     // constructor
-    totalCols = 5;
+    totalCols = 6;
     tableHeading.resize(totalCols);
     i = 0;
     tableHeading[i++] = "Date";
     tableHeading[i++] = "Name";
     tableHeading[i++] = "Session";
-    tableHeading[i++] = "Time";
+    tableHeading[i++] = "From";
+    tableHeading[i++] = "To";
     tableHeading[i++] = "Venue";
 }
 
@@ -305,6 +306,7 @@ void ExamDetail :: ExamDetailPage()
     for(i = 0; i < totalDays; i++)
     {
         j = i + 1;
+/*       
         if(projectType == "Old")
         {
             cout << page.startTR;
@@ -333,7 +335,7 @@ void ExamDetail :: ExamDetailPage()
             cout << page.endTD;
             cout << page.endTR;           
         }
-        else
+        else*/
         {
             cout << page.startTR;
             if(sameDetail == "No")
@@ -348,13 +350,82 @@ void ExamDetail :: ExamDetailPage()
                             examName[i]);
             cout << page.endTD;
             cout << page.startTD;
-            page.InputField("text", fieldName.examSession, j, 
-                             examSession[i]);
+            
+            temp = fieldName.examSession + IntToString(j);
+            page.SelectFieldStart(temp);
+        
+            page.SelectOptionStart("select", "y");
+            cout << "Select";
+            page.SelectOptionEnd();
+            page.SelectOptionStart("Morming", "n");
+            cout << "Morning";
+            page.SelectOptionEnd();
+            page.SelectOptionStart("Evening", "n");
+            cout << "Evening";
+            page.SelectOptionEnd();
+            page.SelectFieldEnd();
+
+/*            page.InputField("text", fieldName.examSession, j, 
+                             examSession[i]);*/
             cout << page.endTD;
+// Timing
+            for(k = 0; k < 2; k++)
+            {
+                cout << page.startTD;
+                if(k == 0)
+                    temp = "F";
+                else
+                    temp = "T";
+
+                page.SelectFieldStart((temp +"Hours" + IntToString(j)));
+                page.SelectOptionStart("select", "y");
+                cout << "Hours";
+                page.SelectOptionEnd();               
+            
+                for(unsigned l = 0; l < hours.size(); l++)
+                {
+                    page.SelectOptionStart(hours[l], "n");
+                    cout << hours[l];
+                    page.SelectOptionEnd();
+                }
+                
+                page.SelectFieldEnd();   
+
+                page.SelectFieldStart((temp + "Minutes" + IntToString(j)));
+                page.SelectOptionStart("select", "y");
+                cout << "Minutes";
+                page.SelectOptionEnd();               
+            
+                for(unsigned l = 0; l < minutes.size(); l++)
+                {
+                    page.SelectOptionStart(minutes[l], "n");
+                    cout << minutes[l];
+                    page.SelectOptionEnd();
+                }
+                
+                page.SelectFieldEnd();  
+
+                page.SelectFieldStart((temp + "AMPM" + IntToString(j)));
+                page.SelectOptionStart("select", "y");
+                cout << "AM/PM";
+                page.SelectOptionEnd();               
+            
+                for(unsigned l = 0; l < ampm.size(); l++)
+                {
+                    page.SelectOptionStart(ampm[l], "n");
+                    cout << ampm[l];
+                    page.SelectOptionEnd();
+                }
+                
+                page.SelectFieldEnd();   
+                cout << page.endTD;
+            }
+            /*
             cout << page.startTD;
             page.InputField("text", fieldName.examTime, j, 
                             examTime[i]);
             cout << page.endTD;
+            */
             cout << page.startTD;
             page.InputField("text", fieldName.examVenue, j, 
                              examVenue[i]);
