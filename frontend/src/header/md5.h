@@ -3,16 +3,11 @@
  *
  *       Filename:  md5.h
  *
- *    Description:  
+ *    Description:  For cencrypting password 
  *
  *        Version:  0.7
  *        Created:  Saturday 09 March 2013 12:56:23  IST
  *       Compiler:  g++
- *
- *         Author:  Mandeep Kaur, meghasimak@gmail.com
- *        License:  GNU General Public License
- *      Copyright:  Copyright (c) 2013, GreatDevelopers
- *                  https://github.com/GreatDevelopers
  *
  * ===================================================================
  */

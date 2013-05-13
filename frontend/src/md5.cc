@@ -10,11 +10,6 @@
  *        Created:  Saturday 09 March 2013 01:09:14  IST
  *       Compiler:  g++
  *
- *         Author:  Mandeep Kaur, meghasimak@gmail.com
- *        License:  GNU General Public License                                         
- *      Copyright:  Copyright (c) 2013, GreatDevelopers 
- *                  https://github.com/GreatDevelopers
- *
  * ===================================================================
  */
 

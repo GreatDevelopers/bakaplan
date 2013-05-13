@@ -5,9 +5,9 @@
 #     Description:  Makefile to compile and execute cc/cpp files in
 #     src/ folder.
 # 
-#         Version:  0.6
+#         Version:  0.7
 #         Created:  Saturday 16 February 2013 11:15:42  IST
-#        Compiler:  gcc
+#        Compiler:  g++
 # 
 #          Author:  Mandeep Kaur, meghasimak@gmail.com
 #         License:  GNU General Public License
@@ -32,7 +32,7 @@ T_COPY			=	copy
 T_CLEAN			=	clean
 T_INSTALL       =   install
 T_FRONTEND      =   front
-T_CLEAN_FRONTEND=   clean-front
+T_COPY_DOC		=	$(COPY_DOC)
 
 # ====================================================================
 #	Main target (1st target)
@@ -50,8 +50,8 @@ $(T_INSTALL):
 $(T_COPY):
 	$(COPY)	
 
-$(T_FRONTEND):
-	make -C frontend
+$(T_COPY_DOC):
+	$(COPY_DOC)
 
 # ====================================================================
 # 	Clean .o, .html files
@@ -59,6 +59,3 @@ $(T_FRONTEND):
 
 $(T_CLEAN):
 	$(CLEAN)
-
-$(T_CLEAN_FRONTEND):
-	make -C frontend clean

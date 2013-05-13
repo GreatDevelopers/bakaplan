@@ -4,7 +4,7 @@
 # 
 #     Description:  Makefile to compile and execute cc/cpp files.
 # 
-#         Version:  0.6
+#         Version:  0.7
 #         Created:  Saturday 30 February 2013 11:15:42  IST
 #        Compiler:  g++
 # 

@@ -5,9 +5,9 @@
 #     Description:  Makefile to compile and execute cc/cpp files in
 #     src/ folder.
 # 
-#         Version:  0.6
+#         Version:  0.7
 #         Created:  Saturday 16 February 2013 11:15:42  IST
-#        Compiler:  gcc
+#        Compiler:  g++
 # 
 #          Author:  Mandeep Kaur, meghasimak@gmail.com
 #         License:  GNU General Public License
