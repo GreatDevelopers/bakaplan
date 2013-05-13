@@ -11,9 +11,20 @@ After this open terminal and run following commands
 
  $ make install
 
+Now edit database details
+
+Open ~/public_html/cgi-bin/bakaplan/frontend/header/database-detail.h
+
+Add your details and save file
+
+Now cd to ~/public_html/cgi-bin/bakaplan and run $ make.
+
+Now import ~/public_html/cgi-bin/bakaplan/database/*.sql file in your
+database.
+
 After all above steps open browser and open following link:
 
-http://localhost/~username/BaKaPlan
+http://localhost/~username/cgi-bin/bp/login
 
 Here username is your login username
 
