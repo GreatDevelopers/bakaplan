@@ -577,13 +577,15 @@ function CompareRoom(roomNo, rows, cols)
     if(splitRoomNo.length != splitRows.length != splitCols.length)
     {
         msg.innerHTML = "Check Subject Name and Subject Code";
-        ChangeBorder(subName, "red");
-        ChangeBorder(subCode, "red");
+        ChangeBorder(roomNo1, "red");
+        ChangeBorder(rows1, "red");
+        ChangeBorder(cols1, "red");
         return false;
     }
     else
     {
-        ChangeBorder(subName, "");
-        ChangeBorder(subCode, "");
+        ChangeBorder(roomNo1, "");
+        ChangeBorder(rows1, "");
+        ChangeBorder(cols1, "");
     }
 }*/
