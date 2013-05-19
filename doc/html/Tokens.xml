@@ -5380,15 +5380,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>MD5</Name>
-      <APILanguage>c</APILanguage>
-      <Type>cl</Type>
-      <Scope>MD5</Scope>
-    </TokenIdentifier>
-    <Path>classMD5.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>PageLayout</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
