@@ -3,6 +3,707 @@
 }
 
 
-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+Declare common variables, functions that are used by derived class.  
+
+
+
+
+{\ttfamily \#include $<$inputdetail.\-h$>$}
+
+Inheritance diagram for Input\-Detail\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=10.000000cm]{classInputDetail}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
 \item 
+\hyperlink{classInputDetail_ab53655b14d922eb32b5d5d06c702e497}{Input\-Detail} ()
+\item 
+void \hyperlink{classInputDetail_ae55dcc0e15b85d302a09046b145330bb}{Header} (string title\-Name)
+\item 
+void \hyperlink{classInputDetail_acbc05b1bc6a371cf0a52222cc95e467d}{Footer} ()
+\item 
+string \hyperlink{classInputDetail_ad0a78d7c864bcccf7813a526d59573be}{Int\-To\-String} (int value)
+\item 
+int \hyperlink{classInputDetail_aaf532dd61f0aee82b116fef2da8e821f}{String\-To\-Int} (string value)
+\item 
+void \hyperlink{classInputDetail_a7f1d6cf5e946dadd511c2437b796e5f7}{Error\-Message} (string \hyperlink{classInputDetail_a1abb16cd695678c3fa05e3c812823fee}{msg}=\char`\"{}\char`\"{})
+\item 
+string \hyperlink{classInputDetail_aaf6caee10a13697ca6dc2bc9aa02e8ab}{Time} ()
+\item 
+void \hyperlink{classInputDetail_aba635a55313b14cf8bb285560a55498e}{Split\-String} (S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \&output, string input, string token)
+\begin{DoxyCompactList}\small\item\em Split string using boost library func. \end{DoxyCompactList}\item 
+string \hyperlink{classInputDetail_a509ee6dd2de52e87cb764d0b0cceb05a}{File\-Name} (string file, string \hyperlink{classInputDetail_a08069ee622c626c038b821ddcc7427b4}{project\-I\-D}, int file\-Type)
+\begin{DoxyCompactList}\small\item\em For creating filename w.\-r.\-t to project\-I\-D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classInputFieldName}{Input\-Field\-Name} \hyperlink{classInputDetail_ac6f85380c5152c406d483726382c4798}{field\-Name}
+\item 
+\hyperlink{classReadInputField}{Read\-Input\-Field} \hyperlink{classInputDetail_ac0cc70b017ef94fb55acb46fc44f0df5}{read\-Field}
+\item 
+\hyperlink{classDatabase}{Database} \hyperlink{classInputDetail_a479cd6c13833bd5de6e5630078c961b6}{database}
+\item 
+\hyperlink{classPageLayout}{Page\-Layout} \hyperlink{classInputDetail_ae487757aaafba4ac372c327e2b7a9673}{page}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classInputDetail_a2e9226db1b744de4bf406398f48cf962}{int {\bfseries i}}\label{classInputDetail_a2e9226db1b744de4bf406398f48cf962}
+
+\item 
+\hypertarget{classInputDetail_af124a26cb4e4f86d0d9eb68200ee500b}{int {\bfseries j}}\label{classInputDetail_af124a26cb4e4f86d0d9eb68200ee500b}
+
+\item 
+\hypertarget{classInputDetail_a1bb6b8bff3d5fc6d5c998e4c451035bc}{int {\bfseries k}}\label{classInputDetail_a1bb6b8bff3d5fc6d5c998e4c451035bc}
+
+\item 
+int \hyperlink{classInputDetail_a3a950727518c2f6ed3c068125a037b9e}{l}
+\item 
+stringstream \hyperlink{classInputDetail_a5284736b5fd3db0251cfeab7c581c0bd}{ss}
+\item 
+\hypertarget{classInputDetail_abacd5d7ee7ebd7e9f36bbf3fefd13a5d}{string {\bfseries temp}}\label{classInputDetail_abacd5d7ee7ebd7e9f36bbf3fefd13a5d}
+
+\item 
+string \hyperlink{classInputDetail_aa5659e496977cc83f743725f6aaf2d6a}{temp1}
+\item 
+string \hyperlink{classInputDetail_a08069ee622c626c038b821ddcc7427b4}{project\-I\-D}
+\item 
+string \hyperlink{classInputDetail_ad3f1db4fddbe0d4efbf1d5bc74d52257}{email\-I\-D}
+\item 
+string \hyperlink{classInputDetail_aaaf51475a2a4ddbe34e38c96bdb45bad}{project\-Name}
+\item 
+string \hyperlink{classInputDetail_a4a7fb27e52bed0f40de143634f2c486b}{file\-Name}
+\item 
+string \hyperlink{classInputDetail_a79d8a59940f25f4d2089e241c71a4279}{where}
+\item 
+string \hyperlink{classInputDetail_a1abb16cd695678c3fa05e3c812823fee}{msg}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_abee6a659eb2e34b260aaf8b05d6003b4}{vec\-Temp}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_ae8ccc2e838c6d5a93ea544370dc1f272}{old\-Project}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_ab09ed4176090a72237531cedf00afb41}{split\-String}
+\item 
+ifstream \hyperlink{classInputDetail_a4c62c1934fbfcdcc8e2afaee44a87c15}{in\-File}
+\item 
+ofstream \hyperlink{classInputDetail_a2b8484cfbfee98ae69e8476f8fd40000}{out\-File}
+\item 
+string \hyperlink{classInputDetail_a1f276e4df260009d465032ec64f3a543}{session\-I\-D}
+\item 
+int \hyperlink{classInputDetail_aac4c49f5453d86c4c79bcb87361ad28d}{total\-Classes}
+\item 
+int \hyperlink{classInputDetail_aeba19a14044746fd0c87b356d05d88c0}{total\-Cols}
+\item 
+int \hyperlink{classInputDetail_a3710702eafae009629e99f1dc76d5285}{total\-Rows}
+\item 
+int \hyperlink{classInputDetail_a8d1ba029791bb9b87330400d82cdbcde}{total\-Days}
+\item 
+I\-N\-T\-\_\-\-V\-E\-C \hyperlink{classInputDetail_a11f9eb0c33682bf3c9b1e2cac50ebaad}{total\-Centres}
+\item 
+string \hyperlink{classInputDetail_ad2c46fdc8093eb88e01497e55b2e8e4d}{project\-Type}
+\item 
+string \hyperlink{classInputDetail_a13313d76b2ccc308634a7d802a46936a}{same\-Detail}
+\item 
+\hypertarget{classInputDetail_a8e266c7e4fae2e36b254fec63e20d88a}{string {\bfseries last\-Row}}\label{classInputDetail_a8e266c7e4fae2e36b254fec63e20d88a}
+
+\item 
+\hypertarget{classInputDetail_a8294712a038ec4934eec54c835b20d23}{string {\bfseries row\-Index}}\label{classInputDetail_a8294712a038ec4934eec54c835b20d23}
+
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_a6ee80d01e417bea608374ba83e17b425}{class\-Name}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_a860676e6e8b258a4cf6265e693194e93}{subject\-Name}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_ab391f03f242defb952e24a584eefdb35}{subject\-Code}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_a67c823f91164f534250751ab8da7b7cf}{class\-I\-D}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_a9adc25a6c332855ee0c2dbd5fd71ca86}{table\-Heading}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_af81c2cdf9b1336634bbb33165921d879}{prefix}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_a7262436753ac62bf068cc23b97049f61}{start\-Roll\-No}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_abc3249eab8fbf895620deff0a9349333}{end\-Roll\-No}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_aba862d64d7f84a385e528d0daf42e9fc}{not\-Included}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_a7d1c7ceb33eb86058e00c3a6a68cae4a}{date}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_ac48c0170ce354d3cd188ddc2e83e2c67}{exam\-Code}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_a7b4e4a2a26f23da75d9928601a88a1d9}{exam\-Name}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_a4501d1379c278965497abf21d369ad9e}{exam\-Session}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_a695928668a413ac052776c0b6cb27501}{exam\-Venue}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_a847dd8bb2f0c43960746cfa4d2310a15}{exam\-Time}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classInputDetail_acbdbb6ecb850dec574b5878764c56c88}{strategy\-Choice}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C \hyperlink{classInputDetail_a44d0e743d84bfce178975192fc2ddde7}{centre\-Name}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C \hyperlink{classInputDetail_a3193354764ba0b44b2eb4b366b4c273a}{room\-No}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C \hyperlink{classInputDetail_aa203edbcfd4083624dbc4dc055c1e6e5}{rows}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C \hyperlink{classInputDetail_a8563f1b6c4d2e74a9b8421a12585395c}{columns}
+\item 
+\hypertarget{classInputDetail_a09dcf8264ffc09609448e32b0f27bd9a}{I\-N\-T\-\_\-\-V\-E\-C {\bfseries total\-Subjects}}\label{classInputDetail_a09dcf8264ffc09609448e32b0f27bd9a}
+
+\item 
+\hypertarget{classInputDetail_ae47ff085393d9555ae7c080759a7dae7}{I\-N\-T\-\_\-2\-D\-V\-E\-C {\bfseries total\-Rooms}}\label{classInputDetail_ae47ff085393d9555ae7c080759a7dae7}
+
+\item 
+\hypertarget{classInputDetail_a375eb1fe30c29f80a2020dd63c173428}{S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C {\bfseries sub\-Code}}\label{classInputDetail_a375eb1fe30c29f80a2020dd63c173428}
+
+\item 
+\hypertarget{classInputDetail_ad5279168818a6af3578a0f70e4be195d}{S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C {\bfseries sub\-Name}}\label{classInputDetail_ad5279168818a6af3578a0f70e4be195d}
+
+\item 
+\hypertarget{classInputDetail_a01a2dbec27704527002029a9ed8bb35f}{S\-T\-R\-I\-N\-G\-\_\-3\-D\-V\-E\-C {\bfseries rm\-No}}\label{classInputDetail_a01a2dbec27704527002029a9ed8bb35f}
+
+\item 
+\hypertarget{classInputDetail_a2ecfc489098c98cf26d22ca422572a0f}{S\-T\-R\-I\-N\-G\-\_\-3\-D\-V\-E\-C {\bfseries row}}\label{classInputDetail_a2ecfc489098c98cf26d22ca422572a0f}
+
+\item 
+\hypertarget{classInputDetail_a7d61822dbecef7d625efc05d7ab6bd30}{S\-T\-R\-I\-N\-G\-\_\-3\-D\-V\-E\-C {\bfseries col}}\label{classInputDetail_a7d61822dbecef7d625efc05d7ab6bd30}
+
+\item 
+\hypertarget{classInputDetail_a04f56832f80cc0bee7bdba684021a7a7}{S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C {\bfseries hours}}\label{classInputDetail_a04f56832f80cc0bee7bdba684021a7a7}
+
+\item 
+\hypertarget{classInputDetail_a57361640f5fb45f680771c135eccbb16}{S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C {\bfseries minutes}}\label{classInputDetail_a57361640f5fb45f680771c135eccbb16}
+
+\item 
+\hypertarget{classInputDetail_ab308f31066a7be5513bd59bdcdbd9066}{S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C {\bfseries ampm}}\label{classInputDetail_ab308f31066a7be5513bd59bdcdbd9066}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Declare common variables, functions that are used by derived class. 
+
+Include Local header files 
+
+Definition at line 40 of file inputdetail.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classInputDetail_ab53655b14d922eb32b5d5d06c702e497}{\index{Input\-Detail@{Input\-Detail}!Input\-Detail@{Input\-Detail}}
+\index{Input\-Detail@{Input\-Detail}!InputDetail@{Input\-Detail}}
+\subsubsection[{Input\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}Input\-Detail\-::\-Input\-Detail (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classInputDetail_ab53655b14d922eb32b5d5d06c702e497}
+Constructor
+
+
+
+ \subsubsection*{Include detail.\-h file}
+
+\subsubsection*{Definition of member functions}
+
+
+
+ Class\-: \hyperlink{classInputDetail}{Input\-Detail} Method\-: \hyperlink{classInputDetail}{Input\-Detail} \-:\-: \hyperlink{classInputDetail_ab53655b14d922eb32b5d5d06c702e497}{Input\-Detail()} \subsubsection*{Description\-: Constructor}
+
+Definition at line 37 of file inputdetail.\-cc.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classInputDetail_a7f1d6cf5e946dadd511c2437b796e5f7}{\index{Input\-Detail@{Input\-Detail}!Error\-Message@{Error\-Message}}
+\index{Error\-Message@{Error\-Message}!InputDetail@{Input\-Detail}}
+\subsubsection[{Error\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void Input\-Detail\-::\-Error\-Message (
+\begin{DoxyParamCaption}
+\item[{string}]{msg = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classInputDetail_a7f1d6cf5e946dadd511c2437b796e5f7}
+Shows message if user filled data in field 
+
+Definition at line 126 of file inputdetail.\-cc.
+
+\hypertarget{classInputDetail_a509ee6dd2de52e87cb764d0b0cceb05a}{\index{Input\-Detail@{Input\-Detail}!File\-Name@{File\-Name}}
+\index{File\-Name@{File\-Name}!InputDetail@{Input\-Detail}}
+\subsubsection[{File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::\-File\-Name (
+\begin{DoxyParamCaption}
+\item[{string}]{file, }
+\item[{string}]{project\-I\-D, }
+\item[{int}]{file\-Type}
+\end{DoxyParamCaption}
+)}}\label{classInputDetail_a509ee6dd2de52e87cb764d0b0cceb05a}
+
+
+For creating filename w.\-r.\-t to project\-I\-D. 
+
+Retruning filename w.\-r.\-t. to project I\-D
+
+
+\begin{DoxyParams}{Parameters}
+{\em project\-I\-D} & Unique I\-D i.\-e. used to read file of user \\
+\hline
+{\em file} & I/\-O file Name \\
+\hline
+{\em file\-Type} & For defining file type i.\-e I/\-P or O/\-P file. If file\-Type == 1, Input file If file\-Type == 0(else), Output File\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+file\-Name This function will return file name with project I\-D 
+\end{DoxyReturn}
+
+
+Definition at line 188 of file inputdetail.\-cc.
+
+\hypertarget{classInputDetail_acbc05b1bc6a371cf0a52222cc95e467d}{\index{Input\-Detail@{Input\-Detail}!Footer@{Footer}}
+\index{Footer@{Footer}!InputDetail@{Input\-Detail}}
+\subsubsection[{Footer}]{\setlength{\rightskip}{0pt plus 5cm}void Input\-Detail\-::\-Footer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classInputDetail_acbc05b1bc6a371cf0a52222cc95e467d}
+Footer of page
+
+
+
+ Class\-: \hyperlink{classInputDetail}{Input\-Detail} Method\-: \hyperlink{classInputDetail}{Input\-Detail} \-:\-: \hyperlink{classInputDetail_acbc05b1bc6a371cf0a52222cc95e467d}{Footer()} \subsubsection*{Description\-: Common for all pages(end body, html)}
+
+Definition at line 85 of file inputdetail.\-cc.
+
+\hypertarget{classInputDetail_ae55dcc0e15b85d302a09046b145330bb}{\index{Input\-Detail@{Input\-Detail}!Header@{Header}}
+\index{Header@{Header}!InputDetail@{Input\-Detail}}
+\subsubsection[{Header}]{\setlength{\rightskip}{0pt plus 5cm}void Input\-Detail\-::\-Header (
+\begin{DoxyParamCaption}
+\item[{string}]{title\-Name}
+\end{DoxyParamCaption}
+)}}\label{classInputDetail_ae55dcc0e15b85d302a09046b145330bb}
+Header of page
+
+
+
+ Class\-: \hyperlink{classInputDetail}{Input\-Detail} Method\-: \hyperlink{classInputDetail}{Input\-Detail} \-:\-: \hyperlink{classInputDetail_ae55dcc0e15b85d302a09046b145330bb}{Header(string title\-Name)} \subsubsection*{Description\-: common header for all pages(start html, head, body)}
+
+Definition at line 67 of file inputdetail.\-cc.
+
+\hypertarget{classInputDetail_ad0a78d7c864bcccf7813a526d59573be}{\index{Input\-Detail@{Input\-Detail}!Int\-To\-String@{Int\-To\-String}}
+\index{Int\-To\-String@{Int\-To\-String}!InputDetail@{Input\-Detail}}
+\subsubsection[{Int\-To\-String}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::\-Int\-To\-String (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}\label{classInputDetail_ad0a78d7c864bcccf7813a526d59573be}
+Convert Integer to string
+
+
+
+ Class\-: \hyperlink{classInputDetail}{Input\-Detail} Method\-: \hyperlink{classInputDetail}{Input\-Detail} \-:\-: \hyperlink{classInputDetail_ad0a78d7c864bcccf7813a526d59573be}{Int\-To\-String(int value)} \subsubsection*{Description\-: Convert Int to String using stringstream object}
+
+Definition at line 99 of file inputdetail.\-cc.
+
+\hypertarget{classInputDetail_aba635a55313b14cf8bb285560a55498e}{\index{Input\-Detail@{Input\-Detail}!Split\-String@{Split\-String}}
+\index{Split\-String@{Split\-String}!InputDetail@{Input\-Detail}}
+\subsubsection[{Split\-String}]{\setlength{\rightskip}{0pt plus 5cm}void Input\-Detail\-::\-Split\-String (
+\begin{DoxyParamCaption}
+\item[{S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \&}]{output, }
+\item[{string}]{input, }
+\item[{string}]{token}
+\end{DoxyParamCaption}
+)}}\label{classInputDetail_aba635a55313b14cf8bb285560a55498e}
+
+
+Split string using boost library func. 
+
+Spliting string
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & Stores result of splitted string \\
+\hline
+{\em input} & string for spliting \\
+\hline
+{\em token} & eg , or . or -\/ any char to split string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 166 of file inputdetail.\-cc.
+
+\hypertarget{classInputDetail_aaf532dd61f0aee82b116fef2da8e821f}{\index{Input\-Detail@{Input\-Detail}!String\-To\-Int@{String\-To\-Int}}
+\index{String\-To\-Int@{String\-To\-Int}!InputDetail@{Input\-Detail}}
+\subsubsection[{String\-To\-Int}]{\setlength{\rightskip}{0pt plus 5cm}int Input\-Detail\-::\-String\-To\-Int (
+\begin{DoxyParamCaption}
+\item[{string}]{value}
+\end{DoxyParamCaption}
+)}}\label{classInputDetail_aaf532dd61f0aee82b116fef2da8e821f}
+Convert String to Integer
+
+
+
+ Class\-: \hyperlink{classReadInputField}{Read\-Input\-Field} Method\-: \hyperlink{classReadInputField}{Read\-Input\-Field} \-:\-: \hyperlink{classInputDetail_aaf532dd61f0aee82b116fef2da8e821f}{String\-To\-Int(string value)} \subsubsection*{Description\-: Converts string value to integer}
+
+Definition at line 114 of file inputdetail.\-cc.
+
+\hypertarget{classInputDetail_aaf6caee10a13697ca6dc2bc9aa02e8ab}{\index{Input\-Detail@{Input\-Detail}!Time@{Time}}
+\index{Time@{Time}!InputDetail@{Input\-Detail}}
+\subsubsection[{Time}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classInputDetail_aaf6caee10a13697ca6dc2bc9aa02e8ab}
+For locating current time on system 
+
+Definition at line 143 of file inputdetail.\-cc.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classInputDetail_a44d0e743d84bfce178975192fc2ddde7}{\index{Input\-Detail@{Input\-Detail}!centre\-Name@{centre\-Name}}
+\index{centre\-Name@{centre\-Name}!InputDetail@{Input\-Detail}}
+\subsubsection[{centre\-Name}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C Input\-Detail\-::centre\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a44d0e743d84bfce178975192fc2ddde7}
+Centre Name 
+
+Definition at line 109 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a67c823f91164f534250751ab8da7b7cf}{\index{Input\-Detail@{Input\-Detail}!class\-I\-D@{class\-I\-D}}
+\index{class\-I\-D@{class\-I\-D}!InputDetail@{Input\-Detail}}
+\subsubsection[{class\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::class\-I\-D\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a67c823f91164f534250751ab8da7b7cf}
+Class Details I\-D 
+
+Definition at line 85 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a6ee80d01e417bea608374ba83e17b425}{\index{Input\-Detail@{Input\-Detail}!class\-Name@{class\-Name}}
+\index{class\-Name@{class\-Name}!InputDetail@{Input\-Detail}}
+\subsubsection[{class\-Name}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::class\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a6ee80d01e417bea608374ba83e17b425}
+Class/\-Branch Name 
+
+Definition at line 85 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a8563f1b6c4d2e74a9b8421a12585395c}{\index{Input\-Detail@{Input\-Detail}!columns@{columns}}
+\index{columns@{columns}!InputDetail@{Input\-Detail}}
+\subsubsection[{columns}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C Input\-Detail\-::columns\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a8563f1b6c4d2e74a9b8421a12585395c}
+columns of room 
+
+Definition at line 109 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a479cd6c13833bd5de6e5630078c961b6}{\index{Input\-Detail@{Input\-Detail}!database@{database}}
+\index{database@{database}!InputDetail@{Input\-Detail}}
+\subsubsection[{database}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Database} Input\-Detail\-::database}}\label{classInputDetail_a479cd6c13833bd5de6e5630078c961b6}
+Accecing \hyperlink{classDatabase}{Database} 
+
+Definition at line 128 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a7d1c7ceb33eb86058e00c3a6a68cae4a}{\index{Input\-Detail@{Input\-Detail}!date@{date}}
+\index{date@{date}!InputDetail@{Input\-Detail}}
+\subsubsection[{date}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::date\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a7d1c7ceb33eb86058e00c3a6a68cae4a}
+Date of examination 
+
+Definition at line 85 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_ad3f1db4fddbe0d4efbf1d5bc74d52257}{\index{Input\-Detail@{Input\-Detail}!email\-I\-D@{email\-I\-D}}
+\index{email\-I\-D@{email\-I\-D}!InputDetail@{Input\-Detail}}
+\subsubsection[{email\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::email\-I\-D\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_ad3f1db4fddbe0d4efbf1d5bc74d52257}
+Email id 
+
+Definition at line 51 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_abc3249eab8fbf895620deff0a9349333}{\index{Input\-Detail@{Input\-Detail}!end\-Roll\-No@{end\-Roll\-No}}
+\index{end\-Roll\-No@{end\-Roll\-No}!InputDetail@{Input\-Detail}}
+\subsubsection[{end\-Roll\-No}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::end\-Roll\-No\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_abc3249eab8fbf895620deff0a9349333}
+ending roll no 
+
+Definition at line 85 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_ac48c0170ce354d3cd188ddc2e83e2c67}{\index{Input\-Detail@{Input\-Detail}!exam\-Code@{exam\-Code}}
+\index{exam\-Code@{exam\-Code}!InputDetail@{Input\-Detail}}
+\subsubsection[{exam\-Code}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::exam\-Code\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_ac48c0170ce354d3cd188ddc2e83e2c67}
+\begin{DoxyVerb}                         Exam/subject code 
+\end{DoxyVerb}
+ for seating plan 
+
+Definition at line 85 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a7b4e4a2a26f23da75d9928601a88a1d9}{\index{Input\-Detail@{Input\-Detail}!exam\-Name@{exam\-Name}}
+\index{exam\-Name@{exam\-Name}!InputDetail@{Input\-Detail}}
+\subsubsection[{exam\-Name}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::exam\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a7b4e4a2a26f23da75d9928601a88a1d9}
+Examination name 
+
+Definition at line 85 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a4501d1379c278965497abf21d369ad9e}{\index{Input\-Detail@{Input\-Detail}!exam\-Session@{exam\-Session}}
+\index{exam\-Session@{exam\-Session}!InputDetail@{Input\-Detail}}
+\subsubsection[{exam\-Session}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::exam\-Session\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a4501d1379c278965497abf21d369ad9e}
+Session Morning/\-Evening 
+
+Definition at line 85 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a847dd8bb2f0c43960746cfa4d2310a15}{\index{Input\-Detail@{Input\-Detail}!exam\-Time@{exam\-Time}}
+\index{exam\-Time@{exam\-Time}!InputDetail@{Input\-Detail}}
+\subsubsection[{exam\-Time}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::exam\-Time\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a847dd8bb2f0c43960746cfa4d2310a15}
+Exam. Time 
+
+Definition at line 85 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a695928668a413ac052776c0b6cb27501}{\index{Input\-Detail@{Input\-Detail}!exam\-Venue@{exam\-Venue}}
+\index{exam\-Venue@{exam\-Venue}!InputDetail@{Input\-Detail}}
+\subsubsection[{exam\-Venue}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::exam\-Venue\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a695928668a413ac052776c0b6cb27501}
+Exam Venue 
+
+Definition at line 85 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_ac6f85380c5152c406d483726382c4798}{\index{Input\-Detail@{Input\-Detail}!field\-Name@{field\-Name}}
+\index{field\-Name@{field\-Name}!InputDetail@{Input\-Detail}}
+\subsubsection[{field\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Input\-Field\-Name} Input\-Detail\-::field\-Name}}\label{classInputDetail_ac6f85380c5152c406d483726382c4798}
+I/\-P field name 
+
+Definition at line 126 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a4a7fb27e52bed0f40de143634f2c486b}{\index{Input\-Detail@{Input\-Detail}!file\-Name@{file\-Name}}
+\index{file\-Name@{file\-Name}!InputDetail@{Input\-Detail}}
+\subsubsection[{file\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::file\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a4a7fb27e52bed0f40de143634f2c486b}
+file name for opening file 
+
+Definition at line 55 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a4c62c1934fbfcdcc8e2afaee44a87c15}{\index{Input\-Detail@{Input\-Detail}!in\-File@{in\-File}}
+\index{in\-File@{in\-File}!InputDetail@{Input\-Detail}}
+\subsubsection[{in\-File}]{\setlength{\rightskip}{0pt plus 5cm}ifstream Input\-Detail\-::in\-File\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a4c62c1934fbfcdcc8e2afaee44a87c15}
+For Reading file 
+
+Definition at line 66 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a3a950727518c2f6ed3c068125a037b9e}{\index{Input\-Detail@{Input\-Detail}!l@{l}}
+\index{l@{l}!InputDetail@{Input\-Detail}}
+\subsubsection[{l}]{\setlength{\rightskip}{0pt plus 5cm}int Input\-Detail\-::l\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a3a950727518c2f6ed3c068125a037b9e}
+Looping Variables 
+
+Definition at line 46 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a1abb16cd695678c3fa05e3c812823fee}{\index{Input\-Detail@{Input\-Detail}!msg@{msg}}
+\index{msg@{msg}!InputDetail@{Input\-Detail}}
+\subsubsection[{msg}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::msg\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a1abb16cd695678c3fa05e3c812823fee}
+For Displaying error msg 
+
+Definition at line 55 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_aba862d64d7f84a385e528d0daf42e9fc}{\index{Input\-Detail@{Input\-Detail}!not\-Included@{not\-Included}}
+\index{not\-Included@{not\-Included}!InputDetail@{Input\-Detail}}
+\subsubsection[{not\-Included}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::not\-Included\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_aba862d64d7f84a385e528d0daf42e9fc}
+\begin{DoxyVerb}                             roll no's that are 
+\end{DoxyVerb}
+ not included in seating plan 
+
+Definition at line 85 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_ae8ccc2e838c6d5a93ea544370dc1f272}{\index{Input\-Detail@{Input\-Detail}!old\-Project@{old\-Project}}
+\index{old\-Project@{old\-Project}!InputDetail@{Input\-Detail}}
+\subsubsection[{old\-Project}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::old\-Project\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_ae8ccc2e838c6d5a93ea544370dc1f272}
+\begin{DoxyVerb}                 For stroring old
+\end{DoxyVerb}
+ projects if any 
+
+Definition at line 60 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a2b8484cfbfee98ae69e8476f8fd40000}{\index{Input\-Detail@{Input\-Detail}!out\-File@{out\-File}}
+\index{out\-File@{out\-File}!InputDetail@{Input\-Detail}}
+\subsubsection[{out\-File}]{\setlength{\rightskip}{0pt plus 5cm}ofstream Input\-Detail\-::out\-File\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a2b8484cfbfee98ae69e8476f8fd40000}
+For writing file 
+
+Definition at line 67 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_ae487757aaafba4ac372c327e2b7a9673}{\index{Input\-Detail@{Input\-Detail}!page@{page}}
+\index{page@{page}!InputDetail@{Input\-Detail}}
+\subsubsection[{page}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Page\-Layout} Input\-Detail\-::page}}\label{classInputDetail_ae487757aaafba4ac372c327e2b7a9673}
+H\-T\-M\-L Tags 
+
+Definition at line 129 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_af81c2cdf9b1336634bbb33165921d879}{\index{Input\-Detail@{Input\-Detail}!prefix@{prefix}}
+\index{prefix@{prefix}!InputDetail@{Input\-Detail}}
+\subsubsection[{prefix}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::prefix\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_af81c2cdf9b1336634bbb33165921d879}
+Prefix of roll no 
+
+Definition at line 85 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a08069ee622c626c038b821ddcc7427b4}{\index{Input\-Detail@{Input\-Detail}!project\-I\-D@{project\-I\-D}}
+\index{project\-I\-D@{project\-I\-D}!InputDetail@{Input\-Detail}}
+\subsubsection[{project\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::project\-I\-D\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a08069ee622c626c038b821ddcc7427b4}
+Project I\-D 
+
+Definition at line 51 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_aaaf51475a2a4ddbe34e38c96bdb45bad}{\index{Input\-Detail@{Input\-Detail}!project\-Name@{project\-Name}}
+\index{project\-Name@{project\-Name}!InputDetail@{Input\-Detail}}
+\subsubsection[{project\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::project\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_aaaf51475a2a4ddbe34e38c96bdb45bad}
+Project Name 
+
+Definition at line 51 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_ad2c46fdc8093eb88e01497e55b2e8e4d}{\index{Input\-Detail@{Input\-Detail}!project\-Type@{project\-Type}}
+\index{project\-Type@{project\-Type}!InputDetail@{Input\-Detail}}
+\subsubsection[{project\-Type}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::project\-Type\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_ad2c46fdc8093eb88e01497e55b2e8e4d}
+Project Type Old/\-New 
+
+Definition at line 78 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_ac0cc70b017ef94fb55acb46fc44f0df5}{\index{Input\-Detail@{Input\-Detail}!read\-Field@{read\-Field}}
+\index{read\-Field@{read\-Field}!InputDetail@{Input\-Detail}}
+\subsubsection[{read\-Field}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Read\-Input\-Field} Input\-Detail\-::read\-Field}}\label{classInputDetail_ac0cc70b017ef94fb55acb46fc44f0df5}
+Read I/\-P Field 
+
+Definition at line 127 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a3193354764ba0b44b2eb4b366b4c273a}{\index{Input\-Detail@{Input\-Detail}!room\-No@{room\-No}}
+\index{room\-No@{room\-No}!InputDetail@{Input\-Detail}}
+\subsubsection[{room\-No}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C Input\-Detail\-::room\-No\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a3193354764ba0b44b2eb4b366b4c273a}
+Room no. in one centre 
+
+Definition at line 109 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_aa203edbcfd4083624dbc4dc055c1e6e5}{\index{Input\-Detail@{Input\-Detail}!rows@{rows}}
+\index{rows@{rows}!InputDetail@{Input\-Detail}}
+\subsubsection[{rows}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-2\-D\-V\-E\-C Input\-Detail\-::rows\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_aa203edbcfd4083624dbc4dc055c1e6e5}
+Rows of room 
+
+Definition at line 109 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a13313d76b2ccc308634a7d802a46936a}{\index{Input\-Detail@{Input\-Detail}!same\-Detail@{same\-Detail}}
+\index{same\-Detail@{same\-Detail}!InputDetail@{Input\-Detail}}
+\subsubsection[{same\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::same\-Detail\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a13313d76b2ccc308634a7d802a46936a}
+\begin{DoxyVerb}                           For holding value
+\end{DoxyVerb}
+ yes/no for same detail for rest of pages 
+
+Definition at line 78 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a1f276e4df260009d465032ec64f3a543}{\index{Input\-Detail@{Input\-Detail}!session\-I\-D@{session\-I\-D}}
+\index{session\-I\-D@{session\-I\-D}!InputDetail@{Input\-Detail}}
+\subsubsection[{session\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::session\-I\-D\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a1f276e4df260009d465032ec64f3a543}
+Session I\-D 
+
+Definition at line 68 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_ab09ed4176090a72237531cedf00afb41}{\index{Input\-Detail@{Input\-Detail}!split\-String@{split\-String}}
+\index{split\-String@{split\-String}!InputDetail@{Input\-Detail}}
+\subsubsection[{split\-String}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::split\-String\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_ab09ed4176090a72237531cedf00afb41}
+\begin{DoxyVerb}        For storing values of 
+\end{DoxyVerb}
+ splitted string 
+
+Definition at line 60 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a5284736b5fd3db0251cfeab7c581c0bd}{\index{Input\-Detail@{Input\-Detail}!ss@{ss}}
+\index{ss@{ss}!InputDetail@{Input\-Detail}}
+\subsubsection[{ss}]{\setlength{\rightskip}{0pt plus 5cm}stringstream Input\-Detail\-::ss\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a5284736b5fd3db0251cfeab7c581c0bd}
+for converting int to string 
+
+Definition at line 48 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a7262436753ac62bf068cc23b97049f61}{\index{Input\-Detail@{Input\-Detail}!start\-Roll\-No@{start\-Roll\-No}}
+\index{start\-Roll\-No@{start\-Roll\-No}!InputDetail@{Input\-Detail}}
+\subsubsection[{start\-Roll\-No}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::start\-Roll\-No\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a7262436753ac62bf068cc23b97049f61}
+starting roll no 
+
+Definition at line 85 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_acbdbb6ecb850dec574b5878764c56c88}{\index{Input\-Detail@{Input\-Detail}!strategy\-Choice@{strategy\-Choice}}
+\index{strategy\-Choice@{strategy\-Choice}!InputDetail@{Input\-Detail}}
+\subsubsection[{strategy\-Choice}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::strategy\-Choice\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_acbdbb6ecb850dec574b5878764c56c88}
+\begin{DoxyVerb}                      Strategy name 
+\end{DoxyVerb}
+ selected by user 
+
+Definition at line 85 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_ab391f03f242defb952e24a584eefdb35}{\index{Input\-Detail@{Input\-Detail}!subject\-Code@{subject\-Code}}
+\index{subject\-Code@{subject\-Code}!InputDetail@{Input\-Detail}}
+\subsubsection[{subject\-Code}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::subject\-Code\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_ab391f03f242defb952e24a584eefdb35}
+Subject Codes 
+
+Definition at line 85 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a860676e6e8b258a4cf6265e693194e93}{\index{Input\-Detail@{Input\-Detail}!subject\-Name@{subject\-Name}}
+\index{subject\-Name@{subject\-Name}!InputDetail@{Input\-Detail}}
+\subsubsection[{subject\-Name}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::subject\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a860676e6e8b258a4cf6265e693194e93}
+Subject Names 
+
+Definition at line 85 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a9adc25a6c332855ee0c2dbd5fd71ca86}{\index{Input\-Detail@{Input\-Detail}!table\-Heading@{table\-Heading}}
+\index{table\-Heading@{table\-Heading}!InputDetail@{Input\-Detail}}
+\subsubsection[{table\-Heading}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::table\-Heading\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a9adc25a6c332855ee0c2dbd5fd71ca86}
+For table heading 
+
+Definition at line 85 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_aa5659e496977cc83f743725f6aaf2d6a}{\index{Input\-Detail@{Input\-Detail}!temp1@{temp1}}
+\index{temp1@{temp1}!InputDetail@{Input\-Detail}}
+\subsubsection[{temp1}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::temp1\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_aa5659e496977cc83f743725f6aaf2d6a}
+for temporary strorage 
+
+Definition at line 49 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a11f9eb0c33682bf3c9b1e2cac50ebaad}{\index{Input\-Detail@{Input\-Detail}!total\-Centres@{total\-Centres}}
+\index{total\-Centres@{total\-Centres}!InputDetail@{Input\-Detail}}
+\subsubsection[{total\-Centres}]{\setlength{\rightskip}{0pt plus 5cm}I\-N\-T\-\_\-\-V\-E\-C Input\-Detail\-::total\-Centres\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a11f9eb0c33682bf3c9b1e2cac50ebaad}
+No of centres for exam 
+
+Definition at line 76 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_aac4c49f5453d86c4c79bcb87361ad28d}{\index{Input\-Detail@{Input\-Detail}!total\-Classes@{total\-Classes}}
+\index{total\-Classes@{total\-Classes}!InputDetail@{Input\-Detail}}
+\subsubsection[{total\-Classes}]{\setlength{\rightskip}{0pt plus 5cm}int Input\-Detail\-::total\-Classes\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_aac4c49f5453d86c4c79bcb87361ad28d}
+\begin{DoxyVerb}                   No. of classes for 
+\end{DoxyVerb}
+ seating plan 
+
+Definition at line 71 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_aeba19a14044746fd0c87b356d05d88c0}{\index{Input\-Detail@{Input\-Detail}!total\-Cols@{total\-Cols}}
+\index{total\-Cols@{total\-Cols}!InputDetail@{Input\-Detail}}
+\subsubsection[{total\-Cols}]{\setlength{\rightskip}{0pt plus 5cm}int Input\-Detail\-::total\-Cols\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_aeba19a14044746fd0c87b356d05d88c0}
+total Columns in table 
+
+Definition at line 71 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a8d1ba029791bb9b87330400d82cdbcde}{\index{Input\-Detail@{Input\-Detail}!total\-Days@{total\-Days}}
+\index{total\-Days@{total\-Days}!InputDetail@{Input\-Detail}}
+\subsubsection[{total\-Days}]{\setlength{\rightskip}{0pt plus 5cm}int Input\-Detail\-::total\-Days\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a8d1ba029791bb9b87330400d82cdbcde}
+No of days in datesheet 
+
+Definition at line 71 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a3710702eafae009629e99f1dc76d5285}{\index{Input\-Detail@{Input\-Detail}!total\-Rows@{total\-Rows}}
+\index{total\-Rows@{total\-Rows}!InputDetail@{Input\-Detail}}
+\subsubsection[{total\-Rows}]{\setlength{\rightskip}{0pt plus 5cm}int Input\-Detail\-::total\-Rows\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a3710702eafae009629e99f1dc76d5285}
+total rows in table 
+
+Definition at line 71 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_abee6a659eb2e34b260aaf8b05d6003b4}{\index{Input\-Detail@{Input\-Detail}!vec\-Temp@{vec\-Temp}}
+\index{vec\-Temp@{vec\-Temp}!InputDetail@{Input\-Detail}}
+\subsubsection[{vec\-Temp}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Input\-Detail\-::vec\-Temp\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_abee6a659eb2e34b260aaf8b05d6003b4}
+string Vector temporary use 
+
+Definition at line 60 of file inputdetail.\-h.
+
+\hypertarget{classInputDetail_a79d8a59940f25f4d2089e241c71a4279}{\index{Input\-Detail@{Input\-Detail}!where@{where}}
+\index{where@{where}!InputDetail@{Input\-Detail}}
+\subsubsection[{where}]{\setlength{\rightskip}{0pt plus 5cm}string Input\-Detail\-::where\hspace{0.3cm}{\ttfamily [protected]}}}\label{classInputDetail_a79d8a59940f25f4d2089e241c71a4279}
+\begin{DoxyVerb}             Temp variable to store 
+\end{DoxyVerb}
+ where clause 
+
+Definition at line 55 of file inputdetail.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+frontend/src/header/inputdetail.\-h\item 
 frontend/src/inputdetail.\-cc\end{DoxyCompactItemize}

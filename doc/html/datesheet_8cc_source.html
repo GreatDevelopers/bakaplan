@@ -54,168 +54,168 @@
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;header/datesheet.h&quot;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;DateSheet :: DateSheet()</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<a class="code" href="classDateSheet.html#a17a1e5adc9b48e53091b89061ee0a360" title="Constructor.">DateSheet :: DateSheet</a>()</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// constructor</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;     </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    totalCols = 3;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    tableHeading.resize(totalCols);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classInputDetail.html#aeba19a14044746fd0c87b356d05d88c0">totalCols</a> = 3;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classInputDetail.html#a9adc25a6c332855ee0c2dbd5fd71ca86">tableHeading</a>.resize(<a class="code" href="classInputDetail.html#aeba19a14044746fd0c87b356d05d88c0">totalCols</a>);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    i = 0;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    tableHeading[i++] = <span class="stringliteral">&quot;Date&quot;</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    tableHeading[i++] = <span class="stringliteral">&quot;Exams Code&quot;</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    tableHeading[i++] = <span class="stringliteral">&quot;Delete Row&quot;</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classInputDetail.html#a9adc25a6c332855ee0c2dbd5fd71ca86">tableHeading</a>[i++] = <span class="stringliteral">&quot;Date&quot;</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classInputDetail.html#a9adc25a6c332855ee0c2dbd5fd71ca86">tableHeading</a>[i++] = <span class="stringliteral">&quot;Exams Code&quot;</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classInputDetail.html#a9adc25a6c332855ee0c2dbd5fd71ca86">tableHeading</a>[i++] = <span class="stringliteral">&quot;Delete Row&quot;</span>;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> DateSheet :: ReadRollNoDetail()</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="classDateSheet.html#a0d68cd26658c7dfc37ef512e6ed30528">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classDateSheet.html#a0d68cd26658c7dfc37ef512e6ed30528" title="Reading roll no details filled by user.">DateSheet :: ReadRollNoDetail</a>()</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">//    page.ContentType();</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    projectID = readField.ReadFieldValue(fieldName.projectID);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    projectType = readField.ReadFieldValue(fieldName.projectType);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    totalClasses = StringToInt(readField.ReadFieldValue(</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                               fieldName.totalClasses));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classInputDetail.html#a08069ee622c626c038b821ddcc7427b4">projectID</a> = <a class="code" href="classInputDetail.html#ac0cc70b017ef94fb55acb46fc44f0df5">readField</a>.<a class="code" href="classReadInputField.html#a7f6e49b47412649644cc644927ccc682">ReadFieldValue</a>(<a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#ac4bd117f3137956473f1a1d5ce9106a5">projectID</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classInputDetail.html#ad2c46fdc8093eb88e01497e55b2e8e4d">projectType</a> = <a class="code" href="classInputDetail.html#ac0cc70b017ef94fb55acb46fc44f0df5">readField</a>.<a class="code" href="classReadInputField.html#a7f6e49b47412649644cc644927ccc682">ReadFieldValue</a>(<a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#aaa398a603dfe98f4eca022ec9d90bc09">projectType</a>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classInputDetail.html#aac4c49f5453d86c4c79bcb87361ad28d">totalClasses</a> = <a class="code" href="classInputDetail.html#aaf532dd61f0aee82b116fef2da8e821f">StringToInt</a>(<a class="code" href="classInputDetail.html#ac0cc70b017ef94fb55acb46fc44f0df5">readField</a>.<a class="code" href="classReadInputField.html#a7f6e49b47412649644cc644927ccc682">ReadFieldValue</a>(</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                               <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a5bf413dee6dcf29c1872e93f150d48c0">totalClasses</a>));</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    className.resize(totalClasses);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    subjectCode.resize(totalClasses);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    prefix.resize(totalClasses);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    startRollNo.resize(totalClasses);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    endRollNo.resize(totalClasses);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    notIncluded.resize(totalClasses);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classInputDetail.html#a6ee80d01e417bea608374ba83e17b425">className</a>.resize(<a class="code" href="classInputDetail.html#aac4c49f5453d86c4c79bcb87361ad28d">totalClasses</a>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classInputDetail.html#ab391f03f242defb952e24a584eefdb35">subjectCode</a>.resize(<a class="code" href="classInputDetail.html#aac4c49f5453d86c4c79bcb87361ad28d">totalClasses</a>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classArrangeRollNo.html#ac70b1f6e601cc5786ef339a38ae18c6f">prefix</a>.resize(<a class="code" href="classInputDetail.html#aac4c49f5453d86c4c79bcb87361ad28d">totalClasses</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classInputDetail.html#a7262436753ac62bf068cc23b97049f61">startRollNo</a>.resize(<a class="code" href="classInputDetail.html#aac4c49f5453d86c4c79bcb87361ad28d">totalClasses</a>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classInputDetail.html#abc3249eab8fbf895620deff0a9349333">endRollNo</a>.resize(<a class="code" href="classInputDetail.html#aac4c49f5453d86c4c79bcb87361ad28d">totalClasses</a>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classInputDetail.html#aba862d64d7f84a385e528d0daf42e9fc">notIncluded</a>.resize(<a class="code" href="classInputDetail.html#aac4c49f5453d86c4c79bcb87361ad28d">totalClasses</a>);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; totalClasses; i++)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; <a class="code" href="classInputDetail.html#aac4c49f5453d86c4c79bcb87361ad28d">totalClasses</a>; i++)</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        j = i + 1;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        className[i] = readField.ReadFieldValue(fieldName.className,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="classInputDetail.html#a6ee80d01e417bea608374ba83e17b425">className</a>[i] = <a class="code" href="classInputDetail.html#ac0cc70b017ef94fb55acb46fc44f0df5">readField</a>.<a class="code" href="classReadInputField.html#a7f6e49b47412649644cc644927ccc682">ReadFieldValue</a>(<a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#ad8b28ebeabdabb5967542e317f549280">className</a>,</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                                j);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        subjectCode[i] = readField.ReadFieldValue(</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                         fieldName.subjectCode, j);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="classInputDetail.html#ab391f03f242defb952e24a584eefdb35">subjectCode</a>[i] = <a class="code" href="classInputDetail.html#ac0cc70b017ef94fb55acb46fc44f0df5">readField</a>.<a class="code" href="classReadInputField.html#a7f6e49b47412649644cc644927ccc682">ReadFieldValue</a>(</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                         <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#af1cc6871c33344c365e6e25ea482bd48">subjectCode</a>, j);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        prefix[i] = readField.ReadFieldValue(fieldName.prefix, j);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="classArrangeRollNo.html#ac70b1f6e601cc5786ef339a38ae18c6f">prefix</a>[i] = <a class="code" href="classInputDetail.html#ac0cc70b017ef94fb55acb46fc44f0df5">readField</a>.<a class="code" href="classReadInputField.html#a7f6e49b47412649644cc644927ccc682">ReadFieldValue</a>(<a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a161d155f8faca2c5dea1bbd607b17553">prefix</a>, j);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        startRollNo[i] = readField.ReadFieldValue(</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                         fieldName.startRollNo, j);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="classInputDetail.html#a7262436753ac62bf068cc23b97049f61">startRollNo</a>[i] = <a class="code" href="classInputDetail.html#ac0cc70b017ef94fb55acb46fc44f0df5">readField</a>.<a class="code" href="classReadInputField.html#a7f6e49b47412649644cc644927ccc682">ReadFieldValue</a>(</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                         <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a24baf5c915b4ee0fb8678e03adec043a">startRollNo</a>, j);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        endRollNo[i] = readField.ReadFieldValue(</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                       fieldName.endRollNo, j);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="classInputDetail.html#abc3249eab8fbf895620deff0a9349333">endRollNo</a>[i] = <a class="code" href="classInputDetail.html#ac0cc70b017ef94fb55acb46fc44f0df5">readField</a>.<a class="code" href="classReadInputField.html#a7f6e49b47412649644cc644927ccc682">ReadFieldValue</a>(</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                       <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a06435f9ba5a529cbba4ee1ce9b02e5cc">endRollNo</a>, j);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        notIncluded[i] = readField.ReadFieldValue(</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                         fieldName.notIncluded, j);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="classInputDetail.html#aba862d64d7f84a385e528d0daf42e9fc">notIncluded</a>[i] = <a class="code" href="classInputDetail.html#ac0cc70b017ef94fb55acb46fc44f0df5">readField</a>.<a class="code" href="classReadInputField.html#a7f6e49b47412649644cc644927ccc682">ReadFieldValue</a>(</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                         <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a9ee6ee84737e1199bdfd9fb24c82c2c7">notIncluded</a>, j);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span>(projectType == <span class="stringliteral">&quot;Old&quot;</span>)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classInputDetail.html#ad2c46fdc8093eb88e01497e55b2e8e4d">projectType</a> == <span class="stringliteral">&quot;Old&quot;</span>)</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        where = <span class="stringliteral">&quot;ProjectID = &quot;</span> + projectID;      </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        database.SelectColumn(date, <span class="stringliteral">&quot;Date&quot;</span>, <span class="stringliteral">&quot;DateSheet&quot;</span>, where);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="classInputDetail.html#a79d8a59940f25f4d2089e241c71a4279">where</a> = <span class="stringliteral">&quot;ProjectID = &quot;</span> + <a class="code" href="classInputDetail.html#a08069ee622c626c038b821ddcc7427b4">projectID</a>;      </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="classInputDetail.html#a479cd6c13833bd5de6e5630078c961b6">database</a>.<a class="code" href="classDatabase.html#a52049c686ad213533bdb1c4f2ac3c157">SelectColumn</a>(<a class="code" href="classInputDetail.html#a7d1c7ceb33eb86058e00c3a6a68cae4a">date</a>, <span class="stringliteral">&quot;Date&quot;</span>, <span class="stringliteral">&quot;DateSheet&quot;</span>, <a class="code" href="classInputDetail.html#a79d8a59940f25f4d2089e241c71a4279">where</a>);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">if</span>(date.size() &lt;= 0)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classInputDetail.html#a7d1c7ceb33eb86058e00c3a6a68cae4a">date</a>.size() &lt;= 0)</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            SetDefaultValue();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <a class="code" href="classDateSheet.html#a2eab7d9256cd56064671ac4974846a7a" title="Setting default values for i/p field of datesheet.">SetDefaultValue</a>();</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            database.SelectColumn(examCode, <span class="stringliteral">&quot;ExamCode&quot;</span>,</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                                  <span class="stringliteral">&quot;DateSheet&quot;</span>, where);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            totalDays = date.size();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <a class="code" href="classInputDetail.html#a479cd6c13833bd5de6e5630078c961b6">database</a>.<a class="code" href="classDatabase.html#a52049c686ad213533bdb1c4f2ac3c157">SelectColumn</a>(<a class="code" href="classInputDetail.html#ac48c0170ce354d3cd188ddc2e83e2c67">examCode</a>, <span class="stringliteral">&quot;ExamCode&quot;</span>,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                                  <span class="stringliteral">&quot;DateSheet&quot;</span>, <a class="code" href="classInputDetail.html#a79d8a59940f25f4d2089e241c71a4279">where</a>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <a class="code" href="classInputDetail.html#a8d1ba029791bb9b87330400d82cdbcde">totalDays</a> = <a class="code" href="classInputDetail.html#a7d1c7ceb33eb86058e00c3a6a68cae4a">date</a>.size();</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        } </div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        SetDefaultValue();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="classDateSheet.html#a2eab7d9256cd56064671ac4974846a7a" title="Setting default values for i/p field of datesheet.">SetDefaultValue</a>();</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    WriteRollNoDetail();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="classDateSheet.html#ab34e451b5322710f149a1fff5386d852" title="Writing rol no details into database.">WriteRollNoDetail</a>();</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">//    DateSheetPage();</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keywordtype">void</span> DateSheet :: WriteRollNoDetail()</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="code" href="classDateSheet.html#ab34e451b5322710f149a1fff5386d852">  114</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classDateSheet.html#ab34e451b5322710f149a1fff5386d852" title="Writing rol no details into database.">DateSheet :: WriteRollNoDetail</a>()</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;{</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    where = <span class="stringliteral">&quot;ProjectID = &quot;</span> + projectID;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    database.SelectColumn(vecTemp, <span class="stringliteral">&quot;Prefix&quot;</span>, <span class="stringliteral">&quot;RollNoDetail&quot;</span>,</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                          where);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="classInputDetail.html#a79d8a59940f25f4d2089e241c71a4279">where</a> = <span class="stringliteral">&quot;ProjectID = &quot;</span> + <a class="code" href="classInputDetail.html#a08069ee622c626c038b821ddcc7427b4">projectID</a>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="classInputDetail.html#a479cd6c13833bd5de6e5630078c961b6">database</a>.<a class="code" href="classDatabase.html#a52049c686ad213533bdb1c4f2ac3c157">SelectColumn</a>(<a class="code" href="classInputDetail.html#abee6a659eb2e34b260aaf8b05d6003b4">vecTemp</a>, <span class="stringliteral">&quot;Prefix&quot;</span>, <span class="stringliteral">&quot;RollNoDetail&quot;</span>,</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                          <a class="code" href="classInputDetail.html#a79d8a59940f25f4d2089e241c71a4279">where</a>);</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">if</span>(vecTemp.size() &gt; 0 )</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classInputDetail.html#abee6a659eb2e34b260aaf8b05d6003b4">vecTemp</a>.size() &gt; 0 )</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        where = <span class="stringliteral">&quot;ProjectID = &quot;</span> + projectID;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        database.DeleteQuery(<span class="stringliteral">&quot;RollNoDetail&quot;</span>, where);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <a class="code" href="classInputDetail.html#a79d8a59940f25f4d2089e241c71a4279">where</a> = <span class="stringliteral">&quot;ProjectID = &quot;</span> + <a class="code" href="classInputDetail.html#a08069ee622c626c038b821ddcc7427b4">projectID</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <a class="code" href="classInputDetail.html#a479cd6c13833bd5de6e5630078c961b6">database</a>.<a class="code" href="classDatabase.html#a3ae42b73dea23470871c86af6b50bbf2" title="Delete Query.">DeleteQuery</a>(<span class="stringliteral">&quot;RollNoDetail&quot;</span>, <a class="code" href="classInputDetail.html#a79d8a59940f25f4d2089e241c71a4279">where</a>);</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; totalClasses; i++)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; <a class="code" href="classInputDetail.html#aac4c49f5453d86c4c79bcb87361ad28d">totalClasses</a>; i++)</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        where = <span class="stringliteral">&quot;ProjectID = &quot;</span> + projectID + <span class="stringliteral">&quot; AND SubjectCode =\&quot;&quot;</span> +</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                subjectCode[i] + <span class="stringliteral">&quot;\&quot; AND ClassName =\&quot;&quot;</span> + className[i] </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="classInputDetail.html#a79d8a59940f25f4d2089e241c71a4279">where</a> = <span class="stringliteral">&quot;ProjectID = &quot;</span> + <a class="code" href="classInputDetail.html#a08069ee622c626c038b821ddcc7427b4">projectID</a> + <span class="stringliteral">&quot; AND SubjectCode =\&quot;&quot;</span> +</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                <a class="code" href="classInputDetail.html#ab391f03f242defb952e24a584eefdb35">subjectCode</a>[i] + <span class="stringliteral">&quot;\&quot; AND ClassName =\&quot;&quot;</span> + <a class="code" href="classInputDetail.html#a6ee80d01e417bea608374ba83e17b425">className</a>[i] </div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                + <span class="stringliteral">&quot;\&quot;&quot;</span>;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        database.SelectColumn(classID, <span class="stringliteral">&quot;ClassID&quot;</span>, <span class="stringliteral">&quot;ClassDetail&quot;</span>,</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                              where);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        database.InsertRollNoDetail(projectID, classID[i], prefix[i],</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                                    startRollNo[i], endRollNo[i],</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                                    notIncluded[i]);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="classInputDetail.html#a479cd6c13833bd5de6e5630078c961b6">database</a>.<a class="code" href="classDatabase.html#a52049c686ad213533bdb1c4f2ac3c157">SelectColumn</a>(<a class="code" href="classInputDetail.html#a67c823f91164f534250751ab8da7b7cf">classID</a>, <span class="stringliteral">&quot;ClassID&quot;</span>, <span class="stringliteral">&quot;ClassDetail&quot;</span>,</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                              <a class="code" href="classInputDetail.html#a79d8a59940f25f4d2089e241c71a4279">where</a>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <a class="code" href="classInputDetail.html#a479cd6c13833bd5de6e5630078c961b6">database</a>.<a class="code" href="classDatabase.html#a91882082bd5309ba21d7250f0877ab39">InsertRollNoDetail</a>(<a class="code" href="classInputDetail.html#a08069ee622c626c038b821ddcc7427b4">projectID</a>, <a class="code" href="classInputDetail.html#a67c823f91164f534250751ab8da7b7cf">classID</a>[i], <a class="code" href="classArrangeRollNo.html#ac70b1f6e601cc5786ef339a38ae18c6f">prefix</a>[i],</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                                    <a class="code" href="classInputDetail.html#a7262436753ac62bf068cc23b97049f61">startRollNo</a>[i], <a class="code" href="classInputDetail.html#abc3249eab8fbf895620deff0a9349333">endRollNo</a>[i],</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                                    <a class="code" href="classInputDetail.html#aba862d64d7f84a385e528d0daf42e9fc">notIncluded</a>[i]);</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="comment">/* write roll no detail into file */</span></div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    temp = FileName(ROLLNO_DETAIL, projectID, 1);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    outFile.open(temp.c_str());</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    temp = <a class="code" href="classInputDetail.html#a509ee6dd2de52e87cb764d0b0cceb05a" title="For creating filename w.r.t to projectID.">FileName</a>(ROLLNO_DETAIL, <a class="code" href="classInputDetail.html#a08069ee622c626c038b821ddcc7427b4">projectID</a>, 1);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="classInputDetail.html#a2b8484cfbfee98ae69e8476f8fd40000">outFile</a>.open(temp.c_str());</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    outFile &lt;&lt; totalClasses &lt;&lt; endl;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; totalClasses; i++)</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="classInputDetail.html#a2b8484cfbfee98ae69e8476f8fd40000">outFile</a> &lt;&lt; totalClasses &lt;&lt; endl;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; <a class="code" href="classInputDetail.html#aac4c49f5453d86c4c79bcb87361ad28d">totalClasses</a>; i++)</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    {</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        trim(prefix[i]);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        trim(startRollNo[i]);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        trim(endRollNo[i]);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        trim(<a class="code" href="classArrangeRollNo.html#ac70b1f6e601cc5786ef339a38ae18c6f">prefix</a>[i]);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        trim(<a class="code" href="classInputDetail.html#a7262436753ac62bf068cc23b97049f61">startRollNo</a>[i]);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        trim(<a class="code" href="classInputDetail.html#abc3249eab8fbf895620deff0a9349333">endRollNo</a>[i]);</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        erase_all(notIncluded[i], <span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        erase_all(<a class="code" href="classInputDetail.html#aba862d64d7f84a385e528d0daf42e9fc">notIncluded</a>[i], <span class="stringliteral">&quot; &quot;</span>);</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        outFile &lt;&lt; prefix[i] &lt;&lt; <span class="stringliteral">&quot;-&quot;</span> &lt;&lt; endl</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                &lt;&lt; startRollNo[i] &lt;&lt; <span class="stringliteral">&quot;-&quot;</span> &lt;&lt; endRollNo[i] &lt;&lt; endl</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                &lt;&lt; notIncluded[i] &lt;&lt; endl;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <a class="code" href="classInputDetail.html#a2b8484cfbfee98ae69e8476f8fd40000">outFile</a> &lt;&lt; <a class="code" href="classArrangeRollNo.html#ac70b1f6e601cc5786ef339a38ae18c6f">prefix</a>[i] &lt;&lt; <span class="stringliteral">&quot;-&quot;</span> &lt;&lt; endl</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                &lt;&lt; <a class="code" href="classInputDetail.html#a7262436753ac62bf068cc23b97049f61">startRollNo</a>[i] &lt;&lt; <span class="stringliteral">&quot;-&quot;</span> &lt;&lt; <a class="code" href="classInputDetail.html#abc3249eab8fbf895620deff0a9349333">endRollNo</a>[i] &lt;&lt; endl</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                &lt;&lt; <a class="code" href="classInputDetail.html#aba862d64d7f84a385e528d0daf42e9fc">notIncluded</a>[i] &lt;&lt; endl;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    }</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    outFile.close();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="classInputDetail.html#a2b8484cfbfee98ae69e8476f8fd40000">outFile</a>.close();</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="keywordtype">void</span> DateSheet :: SetDefaultValue()</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="code" href="classDateSheet.html#a2eab7d9256cd56064671ac4974846a7a">  167</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classDateSheet.html#a2eab7d9256cd56064671ac4974846a7a" title="Setting default values for i/p field of datesheet.">DateSheet :: SetDefaultValue</a>()</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;{</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    totalDays = 1;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    date.resize(totalDays);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    examCode.resize(totalDays);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="code" href="classInputDetail.html#a8d1ba029791bb9b87330400d82cdbcde">totalDays</a> = 1;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="classInputDetail.html#a7d1c7ceb33eb86058e00c3a6a68cae4a">date</a>.resize(<a class="code" href="classInputDetail.html#a8d1ba029791bb9b87330400d82cdbcde">totalDays</a>);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="classInputDetail.html#ac48c0170ce354d3cd188ddc2e83e2c67">examCode</a>.resize(<a class="code" href="classInputDetail.html#a8d1ba029791bb9b87330400d82cdbcde">totalDays</a>);</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    date[0] = <span class="stringliteral">&quot;2013-05-10&quot;</span>;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    examCode[0] = <span class="stringliteral">&quot;IT-102, CSE 120&quot;</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="classInputDetail.html#a7d1c7ceb33eb86058e00c3a6a68cae4a">date</a>[0] = <span class="stringliteral">&quot;2013-05-10&quot;</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="classInputDetail.html#ac48c0170ce354d3cd188ddc2e83e2c67">examCode</a>[0] = <span class="stringliteral">&quot;IT-102, CSE 120&quot;</span>;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="keywordtype">void</span> DateSheet :: DateSheetPage()</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="code" href="classDateSheet.html#a3a1721837309480f64f78745b865615f">  183</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classDateSheet.html#a3a1721837309480f64f78745b865615f" title="DateSheet Page for taking I/P from user.">DateSheet :: DateSheetPage</a>()</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;{</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    page.ContentType();</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageLayout.html#af1d13a4aa259cf62ccf92549b696de32">ContentType</a>();</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    ReadRollNoDetail();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="classDateSheet.html#a0d68cd26658c7dfc37ef512e6ed30528" title="Reading roll no details filled by user.">ReadRollNoDetail</a>();</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    Header(<span class="stringliteral">&quot;DateSheet&quot;</span>);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <a class="code" href="classInputDetail.html#ae55dcc0e15b85d302a09046b145330bb">Header</a>(<span class="stringliteral">&quot;DateSheet&quot;</span>);</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    page.DivStart(<span class="stringliteral">&quot;DivDateSheet&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a927f92889555dd316c129f706be86a5c">DivStart</a>(<span class="stringliteral">&quot;DivDateSheet&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    page.LogoutLink();</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageLayout.html#abe2cfa43480c1b48125b3d618cab7831">LogoutLink</a>();</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    cout &lt;&lt; page.brk;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.brk;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    page.FormStart(<span class="stringliteral">&quot;FormDateSheet&quot;</span>, <span class="stringliteral">&quot;room&quot;</span>, <span class="stringliteral">&quot;POST&quot;</span>,</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#aa87c4296495fb0a175f40701deda7745">FormStart</a>(<span class="stringliteral">&quot;FormDateSheet&quot;</span>, <span class="stringliteral">&quot;room&quot;</span>, <span class="stringliteral">&quot;POST&quot;</span>,</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                   <span class="stringliteral">&quot;return ValidateDateSheetForm(\&quot;TotalDays\&quot;)&quot;</span>);</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    cout &lt;&lt; page.startH1 &lt;&lt; <span class="stringliteral">&quot;Date Sheet&quot;</span> </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;         &lt;&lt; page.endH1 &lt;&lt; page.brk;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#af41d4e21b808f5f8dc2c727f775b6fb2">startH1</a> &lt;&lt; <span class="stringliteral">&quot;Date Sheet&quot;</span> </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;         &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.endH1 &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.brk;</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    ErrorMessage(msg);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="classInputDetail.html#a7f1d6cf5e946dadd511c2437b796e5f7">ErrorMessage</a>(<a class="code" href="classInputDetail.html#a1abb16cd695678c3fa05e3c812823fee">msg</a>);</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    page.InputField(<span class="stringliteral">&quot;hidden&quot;</span>, fieldName.projectID, projectID);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    page.InputField(<span class="stringliteral">&quot;hidden&quot;</span>, fieldName.totalDays, </div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                    IntToString(totalDays));</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    page.InputField(<span class="stringliteral">&quot;hidden&quot;</span>, fieldName.projectType, projectType);</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    page.InputField(<span class="stringliteral">&quot;hidden&quot;</span>, fieldName.totalClasses, </div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                    IntToString(totalClasses));</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(<span class="stringliteral">&quot;hidden&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#ac4bd117f3137956473f1a1d5ce9106a5">projectID</a>, <a class="code" href="classInputDetail.html#a08069ee622c626c038b821ddcc7427b4">projectID</a>);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(<span class="stringliteral">&quot;hidden&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a12ba65660edd7f8f7ecf1e25893716da">totalDays</a>, </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                    <a class="code" href="classInputDetail.html#ad0a78d7c864bcccf7813a526d59573be">IntToString</a>(<a class="code" href="classInputDetail.html#a8d1ba029791bb9b87330400d82cdbcde">totalDays</a>));</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(<span class="stringliteral">&quot;hidden&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#aaa398a603dfe98f4eca022ec9d90bc09">projectType</a>, <a class="code" href="classInputDetail.html#ad2c46fdc8093eb88e01497e55b2e8e4d">projectType</a>);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(<span class="stringliteral">&quot;hidden&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a5bf413dee6dcf29c1872e93f150d48c0">totalClasses</a>, </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                    <a class="code" href="classInputDetail.html#ad0a78d7c864bcccf7813a526d59573be">IntToString</a>(<a class="code" href="classInputDetail.html#aac4c49f5453d86c4c79bcb87361ad28d">totalClasses</a>));</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    page.InputField(<span class="stringliteral">&quot;button&quot;</span>, <span class="stringliteral">&quot;AddRow&quot;</span>, </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(<span class="stringliteral">&quot;button&quot;</span>, <span class="stringliteral">&quot;AddRow&quot;</span>, </div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                    <span class="stringliteral">&quot;AddRows(&#39;TableDateSheet&#39;, &#39;TotalDays&#39;, &#39;date&#39;)&quot;</span>,</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                    <span class="stringliteral">&quot;Add Row&quot;</span>);</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="comment">/*     </span></div>
@@ -223,82 +223,82 @@
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">                    &quot;deleteRow(&#39;TableDateSheet&#39;, &#39;TotalDays&#39;)&quot;,</span></div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment">                    &quot;Delete Row&quot;);</span></div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    cout &lt;&lt; page.brk &lt;&lt; page.brk;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.brk &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.brk;</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">//------------- Temp. option -----------------------------------------</span></div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    </div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    where = <span class="stringliteral">&quot;ProjectID = &quot;</span> + projectID;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <a class="code" href="classInputDetail.html#a79d8a59940f25f4d2089e241c71a4279">where</a> = <span class="stringliteral">&quot;ProjectID = &quot;</span> + <a class="code" href="classInputDetail.html#a08069ee622c626c038b821ddcc7427b4">projectID</a>;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    </div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    database.SelectColumn(className, <span class="stringliteral">&quot;ClassName&quot;</span>, </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                          <span class="stringliteral">&quot;ClassDetail&quot;</span>, where);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="classInputDetail.html#a479cd6c13833bd5de6e5630078c961b6">database</a>.<a class="code" href="classDatabase.html#a52049c686ad213533bdb1c4f2ac3c157">SelectColumn</a>(<a class="code" href="classInputDetail.html#a6ee80d01e417bea608374ba83e17b425">className</a>, <span class="stringliteral">&quot;ClassName&quot;</span>, </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                          <span class="stringliteral">&quot;ClassDetail&quot;</span>, <a class="code" href="classInputDetail.html#a79d8a59940f25f4d2089e241c71a4279">where</a>);</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    database.SelectColumn(subjectCode, <span class="stringliteral">&quot;SubjectCode&quot;</span>, </div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                         <span class="stringliteral">&quot;ClassDetail&quot;</span>, where);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    subCode.resize(totalClasses);</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    totalSubjects.resize(totalClasses);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">for</span>(j = 0; j &lt; totalClasses; j++)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <a class="code" href="classInputDetail.html#a479cd6c13833bd5de6e5630078c961b6">database</a>.<a class="code" href="classDatabase.html#a52049c686ad213533bdb1c4f2ac3c157">SelectColumn</a>(<a class="code" href="classInputDetail.html#ab391f03f242defb952e24a584eefdb35">subjectCode</a>, <span class="stringliteral">&quot;SubjectCode&quot;</span>, </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                         <span class="stringliteral">&quot;ClassDetail&quot;</span>, <a class="code" href="classInputDetail.html#a79d8a59940f25f4d2089e241c71a4279">where</a>);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    subCode.resize(<a class="code" href="classInputDetail.html#aac4c49f5453d86c4c79bcb87361ad28d">totalClasses</a>);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    totalSubjects.resize(<a class="code" href="classInputDetail.html#aac4c49f5453d86c4c79bcb87361ad28d">totalClasses</a>);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">for</span>(j = 0; j &lt; <a class="code" href="classInputDetail.html#aac4c49f5453d86c4c79bcb87361ad28d">totalClasses</a>; j++)</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    {</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        SplitString(subCode[j], subjectCode[j], <span class="stringliteral">&quot;,&quot;</span>);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <a class="code" href="classInputDetail.html#aba635a55313b14cf8bb285560a55498e" title="Split string using boost library func.">SplitString</a>(subCode[j], <a class="code" href="classInputDetail.html#ab391f03f242defb952e24a584eefdb35">subjectCode</a>[j], <span class="stringliteral">&quot;,&quot;</span>);</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        </div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        totalSubjects[j] = subCode[j].size();</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    }</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    page.TableStart(<span class="stringliteral">&quot;ClassDetail&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    cout &lt;&lt; page.startTR;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    cout &lt;&lt; page.startTH &lt;&lt; <span class="stringliteral">&quot;Class Name&quot;</span> &lt;&lt; page.endTH</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;         &lt;&lt; page.startTH &lt;&lt; <span class="stringliteral">&quot;Subject Codes&quot;</span> &lt;&lt; page.endTH;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    cout &lt;&lt; page.endTR;    </div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; totalClasses; i++)</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a04e68e69005f3933e0f496c3db474daf">TableStart</a>(<span class="stringliteral">&quot;ClassDetail&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.startTR;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.startTH &lt;&lt; <span class="stringliteral">&quot;Class Name&quot;</span> &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.endTH</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;         &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.startTH &lt;&lt; <span class="stringliteral">&quot;Subject Codes&quot;</span> &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.endTH;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.endTR;    </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; <a class="code" href="classInputDetail.html#aac4c49f5453d86c4c79bcb87361ad28d">totalClasses</a>; i++)</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    {</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        cout &lt;&lt; page.startTR </div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;             &lt;&lt; page.startTD &lt;&lt; className[i] &lt;&lt; page.endTD</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;             &lt;&lt; page.startTD &lt;&lt; subjectCode[i];</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.startTR </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;             &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.startTD &lt;&lt; <a class="code" href="classInputDetail.html#a6ee80d01e417bea608374ba83e17b425">className</a>[i] &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.endTD</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;             &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.startTD &lt;&lt; <a class="code" href="classInputDetail.html#ab391f03f242defb952e24a584eefdb35">subjectCode</a>[i];</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment">/*        for(j = 0; j &lt; totalSubjects[i]; j++)</span></div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment">        {</span></div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment">            trim(subCode[i][j]);</span></div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="comment">            cout &lt;&lt; subCode[i][j] &lt;&lt; &quot; &quot;;</span></div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment">        }*/</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;         cout &lt;&lt; page.endTD;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        cout &lt;&lt; page.endTR;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;         cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.endTD;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.endTR;</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    </div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    page.TableEnd();</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a7f8fefbe7a825c1b7761fc8a0f1bb8e4">TableEnd</a>();</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    cout &lt;&lt; page.brk &lt;&lt; page.brk;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.brk &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.brk;</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="comment">//--------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    page.TableStart(<span class="stringliteral">&quot;TableDateSheet&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a04e68e69005f3933e0f496c3db474daf">TableStart</a>(<span class="stringliteral">&quot;TableDateSheet&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;   </div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    cout &lt;&lt; page.startTR;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.startTR;</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="comment">//    cout &lt;&lt; page.startTH &lt;&lt; &quot;Date&quot; &lt;&lt; page.endTH;</span></div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; totalCols; i++)</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; <a class="code" href="classInputDetail.html#aeba19a14044746fd0c87b356d05d88c0">totalCols</a>; i++)</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    {   </div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        cout &lt;&lt; page.startTH &lt;&lt; tableHeading[i] &lt;&lt; page.endTH;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.startTH &lt;&lt; <a class="code" href="classInputDetail.html#a9adc25a6c332855ee0c2dbd5fd71ca86">tableHeading</a>[i] &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.endTH;</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    }</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment">//    cout &lt;&lt; page.startTH &lt;&lt; &quot;Delete Row&quot; &lt;&lt; page.endTH;</span></div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    cout &lt;&lt; page.endTR;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.endTR;</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    rowIndex = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; totalDays; i++)</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; <a class="code" href="classInputDetail.html#a8d1ba029791bb9b87330400d82cdbcde">totalDays</a>; i++)</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    {</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        rowIndex += IntToString(i + 1);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        rowIndex += <a class="code" href="classInputDetail.html#ad0a78d7c864bcccf7813a526d59573be">IntToString</a>(i + 1);</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">if</span>((i + 1) != totalDays)</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            rowIndex += <span class="stringliteral">&quot;,&quot;</span>;</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">if</span>(projectType == <span class="stringliteral">&quot;Old&quot;</span>)<span class="comment">// &amp;&amp; (className.size() &gt;= 1 ) || </span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classInputDetail.html#ad2c46fdc8093eb88e01497e55b2e8e4d">projectType</a> == <span class="stringliteral">&quot;Old&quot;</span>)<span class="comment">// &amp;&amp; (className.size() &gt;= 1 ) || </span></div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment">//           subjectName.size() &gt;= 1 || subjectCode.size() &gt;= 1 ))</span></div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        {</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            cout &lt;&lt; page.startTR;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.startTR;</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            cout &lt;&lt; page.startTD;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            page.InputField(<span class="stringliteral">&quot;text&quot;</span>, fieldName.date, (i + 1),</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                            date[i], date[i]);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            cout &lt;&lt; page.endTD;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.startTD;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(<span class="stringliteral">&quot;text&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#afb053a44abe76e108533e23902e90321">date</a>, (i + 1),</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                            <a class="code" href="classInputDetail.html#a7d1c7ceb33eb86058e00c3a6a68cae4a">date</a>[i], <a class="code" href="classInputDetail.html#a7d1c7ceb33eb86058e00c3a6a68cae4a">date</a>[i]);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.endTD;</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment">            // Adding all subjects w.r.t. to class</span></div>
@@ -328,27 +328,27 @@
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="comment">            }*/</span></div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;         </div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            cout &lt;&lt; page.startTD;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            page.InputField(<span class="stringliteral">&quot;text&quot;</span>, fieldName.examCode, (i + 1),</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                            examCode[i], examCode[i]);</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            cout &lt;&lt; page.endTD;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.startTD;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(<span class="stringliteral">&quot;text&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a3cc09a852d20e96bb4908b9f66c01ed7">examCode</a>, (i + 1),</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                            <a class="code" href="classInputDetail.html#ac48c0170ce354d3cd188ddc2e83e2c67">examCode</a>[i], <a class="code" href="classInputDetail.html#ac48c0170ce354d3cd188ddc2e83e2c67">examCode</a>[i]);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.endTD;</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        </div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            cout &lt;&lt; page.startTD;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            page.InputField(<span class="stringliteral">&quot;button&quot;</span>, <span class="stringliteral">&quot;DeleteRow&quot;</span>, </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.startTD;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(<span class="stringliteral">&quot;button&quot;</span>, <span class="stringliteral">&quot;DeleteRow&quot;</span>, </div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                            <span class="stringliteral">&quot;DelRow(&#39;RowIndex&#39;, &#39;TotalDays&#39;, event)&quot;</span>,</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                            <span class="stringliteral">&quot;Delete Row&quot;</span>);</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            cout &lt;&lt; page.endTD;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.endTD;</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            cout &lt;&lt; page.endTR;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.endTR;</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        }</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        {</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            cout &lt;&lt; page.startTR;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.startTR;</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        </div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            cout &lt;&lt; page.startTD;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            page.InputField(<span class="stringliteral">&quot;text&quot;</span>, fieldName.date, (i + 1),</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                            date[i]);</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            cout &lt;&lt; page.endTD;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.startTD;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(<span class="stringliteral">&quot;text&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#afb053a44abe76e108533e23902e90321">date</a>, (i + 1),</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                            <a class="code" href="classInputDetail.html#a7d1c7ceb33eb86058e00c3a6a68cae4a">date</a>[i]);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.endTD;</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="comment">/*             // Adding all subjects w.r.t. to class</span></div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="comment">            for(j = 0; j &lt; totalClasses; j++)</span></div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="comment">            {</span></div>
@@ -375,53 +375,53 @@
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="comment">                cout &lt;&lt; page.endTD;</span></div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="comment">            }*/</span></div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;       </div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;            cout &lt;&lt; page.startTD;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            page.InputField(<span class="stringliteral">&quot;text&quot;</span>, fieldName.examCode, (i + 1),</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                            examCode[i]);</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            cout &lt;&lt; page.endTD;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;            cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.startTD;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(<span class="stringliteral">&quot;text&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a3cc09a852d20e96bb4908b9f66c01ed7">examCode</a>, (i + 1),</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                            <a class="code" href="classInputDetail.html#ac48c0170ce354d3cd188ddc2e83e2c67">examCode</a>[i]);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.endTD;</div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;            cout &lt;&lt; page.startTD;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            page.InputField(<span class="stringliteral">&quot;button&quot;</span>, <span class="stringliteral">&quot;DeleteRow&quot;</span>, </div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;            cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.startTD;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(<span class="stringliteral">&quot;button&quot;</span>, <span class="stringliteral">&quot;DeleteRow&quot;</span>, </div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                            <span class="stringliteral">&quot;DelRow(&#39;RowIndex&#39;, &#39;TotalDays&#39;, event)&quot;</span>,</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                            <span class="stringliteral">&quot;Delete Row&quot;</span>);</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            cout &lt;&lt; page.endTD;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.endTD;</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            cout &lt;&lt; page.endTR;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.endTR;</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        }</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    }</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    lastRow = IntToString(totalDays);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    lastRow = <a class="code" href="classInputDetail.html#ad0a78d7c864bcccf7813a526d59573be">IntToString</a>(totalDays);</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    page.TableEnd();</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a7f8fefbe7a825c1b7761fc8a0f1bb8e4">TableEnd</a>();</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;  </div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    cout &lt;&lt; page.brk &lt;&lt; page.brk</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.brk &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.brk</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;         &lt;&lt; <span class="stringliteral">&quot; Same room and exam details for each day &quot;</span>;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    page.InputField(<span class="stringliteral">&quot;radio&quot;</span>, fieldName.sameDetail, <span class="stringliteral">&quot;Yes&quot;</span>);</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    page.Label(fieldName.sameDetail, <span class="stringliteral">&quot;Yes&quot;</span>);</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(<span class="stringliteral">&quot;radio&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a6de91205e7eac3168e17d100ab4d8e64">sameDetail</a>, <span class="stringliteral">&quot;Yes&quot;</span>);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#ae85f66489db9a65682bb9a2c2128f433">Label</a>(<a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a6de91205e7eac3168e17d100ab4d8e64">sameDetail</a>, <span class="stringliteral">&quot;Yes&quot;</span>);</div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    page.InputField(<span class="stringliteral">&quot;radio&quot;</span>, fieldName.sameDetail, <span class="stringliteral">&quot;No&quot;</span>);</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    page.Label(fieldName.sameDetail, <span class="stringliteral">&quot;No&quot;</span>);</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(<span class="stringliteral">&quot;radio&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a6de91205e7eac3168e17d100ab4d8e64">sameDetail</a>, <span class="stringliteral">&quot;No&quot;</span>);</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#ae85f66489db9a65682bb9a2c2128f433">Label</a>(<a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a6de91205e7eac3168e17d100ab4d8e64">sameDetail</a>, <span class="stringliteral">&quot;No&quot;</span>);</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;   </div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    page.InputField(<span class="stringliteral">&quot;hidden&quot;</span>, fieldName.lastRow, lastRow);</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    page.InputField(<span class="stringliteral">&quot;hidden&quot;</span>, fieldName.rowIndex, rowIndex);</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(<span class="stringliteral">&quot;hidden&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#a12e0f0ec0ad7962271d6dae576e5ee0a">lastRow</a>, lastRow);</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(<span class="stringliteral">&quot;hidden&quot;</span>, <a class="code" href="classInputDetail.html#ac6f85380c5152c406d483726382c4798">fieldName</a>.<a class="code" href="classInputFieldName.html#adfb1d136313267eecabe30391a03b49b">rowIndex</a>, rowIndex);</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    cout &lt;&lt; page.brk &lt;&lt; page.brk;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    cout &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.brk &lt;&lt; <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.brk;</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    page.Button(<span class="stringliteral">&quot;next&quot;</span>, <span class="stringliteral">&quot;submit&quot;</span>, <span class="stringliteral">&quot;btn&quot;</span>, <span class="stringliteral">&quot;NEXT&quot;</span>);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a53c013b1d6251be853be8f6c413e3455">Button</a>(<span class="stringliteral">&quot;next&quot;</span>, <span class="stringliteral">&quot;submit&quot;</span>, <span class="stringliteral">&quot;btn&quot;</span>, <span class="stringliteral">&quot;NEXT&quot;</span>);</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    page.FormEnd();</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    page.DivEnd();</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a65d97f23bb543f3db5201b2009f7f65a">FormEnd</a>();</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <a class="code" href="classInputDetail.html#ae487757aaafba4ac372c327e2b7a9673">page</a>.<a class="code" href="classPageStructureMaker.html#a2913e76bf188ed777dcd33003ef6207d">DivEnd</a>();</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    Footer();</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <a class="code" href="classInputDetail.html#acbc05b1bc6a371cf0a52222cc95e467d">Footer</a>();</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;}</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;DateSheet :: ~DateSheet()</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;<a class="code" href="classDateSheet.html#af17d25ae4f39caf7b9ea62d73541813b" title="DEstructor.">DateSheet :: ~DateSheet</a>()</div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;{</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="comment">// destructor</span></div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 14 2013 18:07:03 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 19 2013 20:12:10 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
