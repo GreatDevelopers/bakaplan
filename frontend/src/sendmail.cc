@@ -40,7 +40,7 @@ void SendMail :: SetMailData()
 {
     setSender   =   SENDER_EMAILID;
     setMessage  =   "Plain text message body";
-    setServer   =   SERVER_MAIL;//"localhost";//"202.164.53.122";
+    setServer   =   "202.164.53.122";
 }
 
 /**
