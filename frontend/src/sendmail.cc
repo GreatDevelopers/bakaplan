@@ -39,9 +39,8 @@ SendMail :: SendMail()
 void SendMail :: SetMailData()
 {
     setSender   =   SENDER_EMAILID;
-    setSubject  =   "BaKaPlan : Account Activation";
     setMessage  =   "Plain text message body";
-    setServer   =   "localhost";//"202.164.53.122";
+    setServer   =   SERVER_MAIL;//"localhost";//"202.164.53.122";
 }
 
 /**
@@ -89,6 +88,8 @@ void SendMail :: RegistrationMail(string setRecipient, string regKey)
 {
     SetMailData();
 
+    setSubject  =   "BaKaPlan : Account Activation";
+
     mailer mail;
     mail.addrecipient(setRecipient);
     mail.setsender(setSender);
@@ -106,6 +107,8 @@ void SendMail :: RegistrationMail(string setRecipient, string regKey)
 void SendMail :: ResetPasswordMail(string setRecipient, string regKey)
 {
     SetMailData();
+
+    setSubject  =   "BaKaPlan : Reset Password";
 
     mailer mail;
     mail.addrecipient(setRecipient);

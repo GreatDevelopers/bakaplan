@@ -114,7 +114,7 @@ void Login :: LoginPage(string msg, string emailID, string password)
     cout << page.brk << page.brk << page.startB;
     page.Anchor("register", "Register Here"); 
     cout << page.brk;
-    page.Anchor("reset", "Reset Password");
+    page.Anchor("reset?type=1", "Reset Password");
     cout << page.endB;
 
     page.FormEnd();
