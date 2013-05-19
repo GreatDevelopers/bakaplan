@@ -1,5 +1,5 @@
 /**
- *       \file       validation-main.cpp
+ *       \file       validstrategy-main.cpp
  *
  *       \brief      main method
  *
@@ -17,7 +17,7 @@
  *  include header file 
  */
 
-#include "header/validation.h"
+#include "header/validstrategy.h"
 
 /** 
  *      \fn     main(void)
@@ -26,7 +26,7 @@
 
 int main(void)
 {
-    Validation valid;
+    ValidStrategy valid;
     valid.ReadStrategyDetail();
 
     return 0;

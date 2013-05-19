@@ -68,7 +68,7 @@ DATESHEET   =  datesheet
 EXAM        =  exam
 ROOM        =  room
 STRATEGY    =  strategy
-VALIDATION  =  validation
+VALIDSTRATEGY  =  validstrategy
 REPORT      =  report
 
 READINPUT     =  readinput                                            
@@ -132,7 +132,7 @@ H_ROOM           :=  $(F_HEADER)$(ROOM)$(H) $(H_INPUTDETAIL) \
 
 H_STRATEGY       :=  $(F_HEADER)$(STRATEGY)$(H) $(H_INPUTDETAIL)
 
-H_VALIDATION     :=  $(F_HEADER)$(VALIDATION)$(H) $(H_INPUTDETAIL)
+H_VALIDSTRATEGY     :=  $(F_HEADER)$(VALIDSTRATEGY)$(H) $(H_INPUTDETAIL)
 
 H_REPORT         :=  $(F_HEADER)$(REPORT)$(H) $(H_INPUTDETAIL)
 
@@ -177,7 +177,7 @@ D_ROOM             =    $(ROOM)$(CC) $(H_ROOM)
 
 D_STRATEGY         =    $(STRATEGY)$(CC) $(H_STRATEGY)
 
-D_VALIDATION       =    $(VALIDATION)$(CC) $(H_VALIDATION)
+D_VALIDSTRATEGY       =    $(VALIDSTRATEGY)$(CC) $(H_VALIDSTRATEGY)
 
 D_REPORT           =    $(REPORT)$(CC) $(H_REPORT)
 
@@ -211,7 +211,7 @@ D_ROOM_M        =   $(ROOM)$(MAIN)$(CPP) $(H_ROOM)
 
 D_STRATEGY_M    =   $(STRATEGY)$(MAIN)$(CPP) $(H_STRATEGY)
 
-D_VALIDATION_M  =   $(VALIDATION)$(MAIN)$(CPP) $(H_VALIDATION)
+D_VALIDSTRATEGY_M  =   $(VALIDSTRATEGY)$(MAIN)$(CPP) $(H_VALIDSTRATEGY)
 
 D_REPORT_M      =   $(REPORT)$(MAIN)$(CPP) $(H_REPORT)
 
@@ -257,7 +257,7 @@ L_ROOM        :=  $(ROOM)$(MAIN)$(O) $(ROOM)$(O) $(L_INPUT) \
 
 L_STRATEGY     =  $(STRATEGY)$(MAIN)$(O) $(STRATEGY)$(O) $(L_INPUT)
 
-L_VALIDATION  :=  $(VALIDATION)$(MAIN)$(O) $(VALIDATION)$(O) \
+L_VALIDSTRATEGY  :=  $(VALIDSTRATEGY)$(MAIN)$(O) $(VALIDSTRATEGY)$(O) \
 				  $(L_INPUT) $(L_B_STRATEGY)
 
 L_REPORT       =  $(REPORT)$(MAIN)$(O) $(REPORT)$(O) $(L_INPUT)

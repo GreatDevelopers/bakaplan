@@ -13,15 +13,15 @@
  *                   https://github.com/GreatDevelopers
  */
 
-#include "header/validation.h"
+#include "header/validstrategy.h"
 
 /**
- *      \class  Validation
- *      \fn     Validation :: Validation()
+ *      \class  ValidStrategy
+ *      \fn     ValidStrategy :: ValidStrategy()
  *      \brief  Constructor
  */
 
-Validation :: Validation()
+ValidStrategy :: ValidStrategy()
 {
     // constructor
     totalCols = 8;
@@ -38,12 +38,12 @@ Validation :: Validation()
 }
 
 /**
- *      \class  Validation
- *      \fn     Validation :: ReadStrategyDetail()
+ *      \class  ValidStrategy
+ *      \fn     ValidStrategy :: ReadStrategyDetail()
  *      \brief  Reading strategy value from last page
  */
 
-void Validation :: ReadStrategyDetail()
+void ValidStrategy :: ReadStrategyDetail()
 {
     page.ContentType();
 
@@ -66,18 +66,18 @@ void Validation :: ReadStrategyDetail()
 
     validStrategy.Main(projectID);
 
-    ReadValidation();
+    ReadValidStrategy();
 
-    ValidationPage();
+    ValidStrategyPage();
 }
 
 /**
- *      \class  Validation
- *      \fn     Validation :: WriteStrategyDetail()
+ *      \class  ValidStrategy
+ *      \fn     ValidStrategy :: WriteStrategyDetail()
  *      \brief  Write strategy detail into DB
  */
 
-void Validation :: WriteStrategyDetail()
+void ValidStrategy :: WriteStrategyDetail()
 {
     where = "ProjectID = " + projectID;
     database.SelectColumn(vecTemp, "StrategyName", 
@@ -122,13 +122,13 @@ void Validation :: WriteStrategyDetail()
 }
 
 /**
- *      \class  Validation
- *      \fn     Validation :: ReadValidation()
+ *      \class  ValidStrategy
+ *      \fn     ValidStrategy :: ReadValidStrategy()
  *      \brief  Reading validation file for checking strategy is valid
  *              or not
  */
 
-void Validation :: ReadValidation()
+void ValidStrategy :: ReadValidStrategy()
 {
     temp = FileName(VALIDATION, projectID, 0);
     inFile.open(temp.c_str());
@@ -150,18 +150,18 @@ void Validation :: ReadValidation()
 }
 
 /**
- *      \class  Validation
- *      \fn     Validation :: ValidationPage()
- *      \brief  Validation.html page
+ *      \class  ValidStrategy
+ *      \fn     ValidStrategy :: ValidStrategyPage()
+ *      \brief  ValidStrategy.html page
  */
 
-void Validation :: ValidationPage()
+void ValidStrategy :: ValidStrategyPage()
 {
 //    page.ContentType();
 
-    Header("Validation");
+    Header("ValidStrategy");
 
-    page.DivStart("DivValidation", "");
+    page.DivStart("DivValidStrategy", "");
 
     page.LogoutLink();
 
@@ -169,7 +169,7 @@ void Validation :: ValidationPage()
 
     page.FormStart("FormValid", "report", "post");
 
-    cout << page.startH1 << "Validation Detail" 
+    cout << page.startH1 << "ValidStrategy Detail" 
          << page.endH1 << page.brk;
     
     page.InputField("hidden", fieldName.projectID, projectID);
@@ -178,9 +178,9 @@ void Validation :: ValidationPage()
     page.InputField("hidden", fieldName.projectType, projectType);
     page.InputField("hidden", fieldName.sameDetail, sameDetail);
 
-    ReadValidation();
+    ReadValidStrategy();
 
-    page.TableStart("TableValidation", "");
+    page.TableStart("TableValidStrategy", "");
 
     if(totalDays == 1)
         j = 1;
@@ -221,12 +221,12 @@ void Validation :: ValidationPage()
 }
 
 /**
- *      \class  Validation
- *      \fn     Validation :: ~Validation
+ *      \class  ValidStrategy
+ *      \fn     ValidStrategy :: ~ValidStrategy
  *      \brief  Destructor
  */
 
-Validation :: ~Validation()
+ValidStrategy :: ~ValidStrategy()
 {
     // destructor
 }

@@ -1,7 +1,7 @@
 /**
  *       \file       validation.h
  *
- *       \brief      Validation class
+ *       \brief      ValidStrategy class
  *
  *       \version    0.7
  *       \date       Sunday 07 April 2013 08:24:00  IST\n
@@ -22,7 +22,7 @@
 #include "inputdetail.h"
 #include "../backend/header/strategy.h"
 
-class Validation : public InputDetail
+class ValidStrategy : public InputDetail
 {
     protected:
 
@@ -30,7 +30,7 @@ class Validation : public InputDetail
 
     public:
         /** Constructor */
-        Validation();
+        ValidStrategy();
 
         /** Read Strategy Detail */
         void ReadStrategyDetail();
@@ -38,14 +38,14 @@ class Validation : public InputDetail
         /** Write Strategy Detail */
         void WriteStrategyDetail();
 
-        /** Read Validation.out file */
-        void ReadValidation();
+        /** Read ValidStrategy.out file */
+        void ReadValidStrategy();
 
-        /** Validation Page */
-        void ValidationPage();
+        /** ValidStrategy Page */
+        void ValidStrategyPage();
     
         /** desrtuctor  */
-        ~Validation();
+        ~ValidStrategy();
 };
 
 #endif
