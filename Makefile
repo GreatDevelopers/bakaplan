@@ -23,6 +23,7 @@ MAKE			=	make -C frontend
 CLEAN			=	make -C frontend clean
 COPY_HOMEPAGE	=	cp -r BaKaPlan ~/public_html/
 COPY_DOC 		=	cp -r doc ~/public_html/BaKaPlan/
+DOC				=	doxygen doxy.conf
 COPY			=	$(COPY_HOMEPAGE) && $(COPY_DOC)
 INSTALL         =   $(COPY)
 BP              =   mkdir ~/public_html/cgi-bin/bp && mkdir ~/public_html/SeatPlan
@@ -38,6 +39,7 @@ T_CLEAN			=	clean
 T_INSTALL       =   install
 T_FRONTEND      =   front
 T_COPY_DOC		=	copy-doc
+T_DOC			=	doc
 
 # ====================================================================
 #	Main target (1st target)
@@ -60,6 +62,9 @@ $(T_COPY_DOC):
 
 $(T_FRONTEND):
 	$(MAKE)
+
+$(T_DOC): doxy.conf
+	$(DOC) && $(COPY_DOC)
 
 # ====================================================================
 # 	Clean .o, .html files
