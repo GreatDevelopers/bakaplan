@@ -54,13 +54,6 @@ exam_8h_source.html
 inputdetail_8h_source.html
 inputfieldname_8h_source.html
 javascript_8h_source.html
-base64_8cpp_source.html
-base64_8h_source.html
-compat_8cpp_source.html
-compat_8h_source.html
-jwsmtp_8h_source.html
-mailer_8cpp_source.html
-mailer_8h_source.html
 login_8h_source.html
 md5_8h_source.html
 pagelayout_8h_source.html
@@ -137,7 +130,6 @@ classClassDetail.html
 classClassDetail-members.html
 classDatabase.html
 classDatabase-members.html
-classDatabaso.html
 classDataSheet.html
 classDateSheet.html
 classDateSheet-members.html
@@ -180,15 +172,10 @@ classStrategy.html
 classStrategy-members.html
 classValidStrategy.html
 classValidStrategy-members.html
-structjwsmtp_1_1SOCKADDR__IN.html
-structjwsmtp_1_1SOCKADDR__IN-members.html
-classjwsmtp_1_1mailer.html
-classjwsmtp_1_1mailer-members.html
 dir_144d0f14f3b4f8557e7069929c2c90d6.html
 dir_3eff4a38a71fcc9c8c8ceb9bf8e6d54b.html
 dir_147863059a2b168dd3396712b9cb9141.html
 dir_601f3f70d9f1caf065dad8b3c8239928.html
-dir_81872c9ded6f1caab1b0c1f0153fc9f2.html
 dir_1b93002d2af90ab2912aa3ec617f9610.html
 index.html
 annotated.html

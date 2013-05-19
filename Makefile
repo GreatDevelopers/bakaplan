@@ -39,7 +39,7 @@ T_CLEAN			=	clean
 T_INSTALL       =   install
 T_FRONTEND      =   front
 T_COPY_DOC		=	copy-doc
-T_DOC			=	doc
+T_DOC			=	Doc
 
 # ====================================================================
 #	Main target (1st target)
@@ -63,7 +63,7 @@ $(T_COPY_DOC):
 $(T_FRONTEND):
 	$(MAKE)
 
-$(T_DOC): doxy.conf
+$(T_DOC): doxy.conf frontend
 	$(DOC) && $(COPY_DOC)
 
 # ====================================================================

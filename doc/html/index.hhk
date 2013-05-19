@@ -5,8 +5,6 @@
 </OBJECT>
 <UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classArrangeRollNo.html#a69151212acbfeb90780b066ade988418"><param name="Name" value="AddPrefixWithRollNo"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#ad23415107871375647977a3ac0a897a4"><param name="Name" value="ADDR"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#addd31c1223de1b269973077f3f5ce60d"><param name="Name" value="addrecipient"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classDateSheet.html#a8c1bd0daf35e3ea6f962a03fe78cdfa3"><param name="Name" value="AddRollNoWithDateSheet"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="adduser-main_8cpp.html"><param name="Name" value="adduser-main.cpp"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogin.html#ac91737b2085d0b7e8943f49f2d08a0ff"><param name="Name" value="AddUser"></OBJECT>
@@ -30,9 +28,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classArrangeRollNo.html#a12e17989e12519e37083b7f5649ebbec"><param name="Name" value="WriteArrangedRollNo"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classArrangeRollNo.html#acbdaa06590d381ec19a7a07c718b9282"><param name="Name" value="~ArrangeRollNo"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a9ce0dcada15b7afe5c48fea57c28140d"><param name="Name" value="attach"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classProjectDetail.html#ab78c9e2a0cd5079c427638a5a3971c28"><param name="Name" value="AuthorizeUser"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a13e354584e6b389b53db283105e1d995"><param name="Name" value="authtype"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classPageStructureMaker.html#ac91e234e2d54dedd9d7e556fabf21d2b"><param name="Name" value="BodyEnd"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classPageStructureMaker.html#ab7a645675166f34fac99f1ed8feb7c27"><param name="Name" value="BodyStart"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classPageStructureMaker.html#a63911cb925ccdc6c879905a677ed8881"><param name="Name" value="brk"></OBJECT>
@@ -71,8 +67,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputFieldName.html#ad8b28ebeabdabb5967542e317f549280"><param name="Name" value="InputFieldName"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#ad156aed708a64ed861988673aa21be64"><param name="Name" value="ReadInput"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a77d2b39ec4855a741ac0156e242d5224"><param name="Name" value="clearattachments"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#abe98321f7402147da6d43726b7f0b72c"><param name="Name" value="clearrecipients"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#a7d61822dbecef7d625efc05d7ab6bd30"><param name="Name" value="col"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#a7d61822dbecef7d625efc05d7ab6bd30"><param name="Name" value="InputDetail"></OBJECT>
@@ -87,7 +81,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="confirm-main_8cpp.html"><param name="Name" value="confirm-main.cpp"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogin.html#a38f58197839dc8918425f69399ed5f8f"><param name="Name" value="ConfirmPage"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#aa232b806b05ef654cd5579bca5f1dbad"><param name="Name" value="connect"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#abdf7408f0f12643fa0591ea90ebd151f"><param name="Name" value="consts"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classPageLayout.html#af1d13a4aa259cf62ccf92549b696de32"><param name="Name" value="ContentType"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSeatPlan.html#ade684c0f63b648d4d62df8e7ed800682"><param name="Name" value="CreateFile"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classPageStructureMaker.html#aacdb11817f8ab246bc59c552e04e862d"><param name="Name" value="CSS"></OBJECT>
@@ -128,7 +121,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#a88f3a0df87e5e40207100d5b1f7ee6b1"><param name="Name" value="vecTemp"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#a84d399a2ad58d69daab9b05330e1316d"><param name="Name" value="~Database"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabaso.html"><param name="Name" value="Databaso"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classDataSheet.html"><param name="Name" value="DataSheet"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#a7d1c7ceb33eb86058e00c3a6a68cae4a"><param name="Name" value="date"></OBJECT>
   <UL>
@@ -257,8 +249,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInputField.html#a1e4ebac8979fd9b2771320d669fce5fc"><param name="Name" value="formData"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classPageStructureMaker.html#a65d97f23bb543f3db5201b2009f7f65a"><param name="Name" value="FormEnd"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classPageStructureMaker.html#aa87c4296495fb0a175f40701deda7745"><param name="Name" value="FormStart"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#a85af8047968eec8bb4d534f30cb120ba"><param name="Name" value="get_sin_addr"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#a2fa14b8fb4f89917920c8f48db1af9e5"><param name="Name" value="get_size"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classStrategy.html#a7e76aa724063b44a471679eabb31e011"><param name="Name" value="GroupCondition"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSeatPlan.html#a6cb00329d2f0760f679d7e00958da879"><param name="Name" value="groupStudentSize"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classPageLayout.html#ae50907d56f0ba7a85f7ccfdeafa45bcc"><param name="Name" value="Head"></OBJECT>
@@ -430,45 +420,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classJavaScript.html#a00f423ed216ac8558efc63d450e76b0e"><param name="Name" value="OnFocusEvent"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classPageStructureMaker.html#ac221d1169f4dbcef6adb00938919193d"><param name="Name" value="Javascript"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html"><param name="Name" value="jwsmtp::mailer"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#addd31c1223de1b269973077f3f5ce60d"><param name="Name" value="addrecipient"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a9ce0dcada15b7afe5c48fea57c28140d"><param name="Name" value="attach"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a13e354584e6b389b53db283105e1d995"><param name="Name" value="authtype"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a77d2b39ec4855a741ac0156e242d5224"><param name="Name" value="clearattachments"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#abe98321f7402147da6d43726b7f0b72c"><param name="Name" value="clearrecipients"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#abdf7408f0f12643fa0591ea90ebd151f"><param name="Name" value="consts"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#aa503174a1bfb40f7d6018240108f8e81"><param name="Name" value="mailer"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a64a9eee2d170acf7463daf2bdd278ccb"><param name="Name" value="operator()"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#ab0d3608eefc489f80c145530f45e1c49"><param name="Name" value="password"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a19da3595b2a9cb61555e9b5568c55005"><param name="Name" value="removeattachment"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#aaf08ac5f9cfe7b2c2491cf9bd86dd2dc"><param name="Name" value="removerecipient"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a4bf4b663e343bad40f658cef48f78521"><param name="Name" value="reset"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a862d80a5c66fac98d254745fde7b1fb8"><param name="Name" value="response"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a1e797008e879c8d5f0bd5a24c96b4cbd"><param name="Name" value="send"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#ac1a1bb8ed20a7bb0e2e09ee495ae7c8c"><param name="Name" value="setmessage"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a57d9e64123a363c105c741f4be61d050"><param name="Name" value="setmessageHTML"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a3c1c568d65e70362c090182bfa107777"><param name="Name" value="setmessageHTMLfile"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#ad57a8e1e89f333ee67cb97ed7dc79c16"><param name="Name" value="setsender"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#ae07dfb015a5a14f023f7b24eef81ba7e"><param name="Name" value="setserver"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#aab8f43694c42a82043dce23a5c49dfdd"><param name="Name" value="setsubject"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a34be8c1b0f30f2e794629a463450df4e"><param name="Name" value="type"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a8f43636be8ea428371915b611c508fc3"><param name="Name" value="username"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html"><param name="Name" value="jwsmtp::SOCKADDR_IN"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#ad23415107871375647977a3ac0a897a4"><param name="Name" value="ADDR"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#a85af8047968eec8bb4d534f30cb120ba"><param name="Name" value="get_sin_addr"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#a2fa14b8fb4f89917920c8f48db1af9e5"><param name="Name" value="get_size"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#a883ebbb530c08261aecfb81da3837bc2"><param name="Name" value="operator bool"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#a36659eb6c2d8d7b3c2f0a58f47d58b19"><param name="Name" value="operator const sockaddr"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#aaa8635472b494bfdf51fdfcefd28f0cf"><param name="Name" value="operator const sockaddr_in"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#a65ac978b686ce5077f7bf084ce2a8a92"><param name="Name" value="operator="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#aa5a98e0ccbe4c286b944de1bcc75d9c5"><param name="Name" value="set_ip"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#aa64b304782ebcec318d12b6e4137de0b"><param name="Name" value="set_port"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#acc8e9b5dd53ebd6df566f141deb04dbf"><param name="Name" value="SOCKADDR_IN"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#a3c825338ac7bd9b2d0dcf7514dfaaa2a"><param name="Name" value="zeroaddress"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#a1bb6b8bff3d5fc6d5c998e4c451035bc"><param name="Name" value="k"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#a1bb6b8bff3d5fc6d5c998e4c451035bc"><param name="Name" value="InputDetail"></OBJECT>
@@ -525,7 +476,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classPageLayout.html#abe2cfa43480c1b48125b3d618cab7831"><param name="Name" value="LogoutLink"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogin.html#a153d72df8d3333317e60219e8f6b8257"><param name="Name" value="LogoutPage"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#a54392c075b45ef52f121910f78114e1d"><param name="Name" value="m"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#aa503174a1bfb40f7d6018240108f8e81"><param name="Name" value="mailer"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8cpp.html"><param name="Name" value="main.cpp"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="adduser-main_8cpp.html#a568b3afc214ba30be5bf526d6b27b611"><param name="Name" value="main"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classArrangeRollNo.html#a795fde3b512631e07d7189138b39b775"><param name="Name" value="Main"></OBJECT>
@@ -586,12 +536,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classProjectDetail.html#ab92c992a37524a5f90fdcaf4868ac218"><param name="Name" value="OldProject"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classJavaScript.html#ac5803cc3a4389673132a35070d0b0825"><param name="Name" value="OnChangeEvent"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classJavaScript.html#a00f423ed216ac8558efc63d450e76b0e"><param name="Name" value="OnFocusEvent"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#a883ebbb530c08261aecfb81da3837bc2"><param name="Name" value="operator bool"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#a36659eb6c2d8d7b3c2f0a58f47d58b19"><param name="Name" value="operator const sockaddr"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#aaa8635472b494bfdf51fdfcefd28f0cf"><param name="Name" value="operator const sockaddr_in"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a64a9eee2d170acf7463daf2bdd278ccb"><param name="Name" value="operator()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classMD5.html#a0739666fd0f3a7117546f6c50e0783b2"><param name="Name" value="operator<<"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#a65ac978b686ce5077f7bf084ce2a8a92"><param name="Name" value="operator="></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#a2b8484cfbfee98ae69e8476f8fd40000"><param name="Name" value="outFile"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#a2b8484cfbfee98ae69e8476f8fd40000"><param name="Name" value="InputDetail"></OBJECT>
@@ -658,7 +603,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputFieldName.html#a318f819ef4663d7e5f40d91180093cb9"><param name="Name" value="password"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputFieldName.html#a318f819ef4663d7e5f40d91180093cb9"><param name="Name" value="InputFieldName"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#ab0d3608eefc489f80c145530f45e1c49"><param name="Name" value="jwsmtp::mailer"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogin.html#a39f7fd03b2b27c927c657ee73e7fcbbc"><param name="Name" value="Login"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classArrangeRollNo.html#ac70b1f6e601cc5786ef339a38ae18c6f"><param name="Name" value="prefix"></OBJECT>
@@ -734,8 +678,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#a6ac62618d1b89d823230ae93c7b85c3b"><param name="Name" value="examSubName"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#a5699b918caccc7ac1a0f11fe718d175f"><param name="Name" value="examTime"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#a9a42610cf6380926b41de17cc82a8107"><param name="Name" value="examVenue"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#a834acf783052b5b2f129644b4accaadc"><param name="Name" value="fileName"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#a990ac303132881774253593565e85bd0"><param name="Name" value="FileName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#a834acf783052b5b2f129644b4accaadc"><param name="Name" value="fileName"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#aa5794ec3922f26d376dba09946e73178"><param name="Name" value="i"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#afe0f493fcb2da1f644445501823fd0e2"><param name="Name" value="inFile"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#a9cff282fd247d9eca49c1acde4d08b11"><param name="Name" value="j"></OBJECT>
@@ -798,9 +742,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSendMail.html#a4c9983852dbcd1eb07170582761ed559"><param name="Name" value="RegistrationMail"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogin.html#a3f4e5e4087c007e8e605849778881b39"><param name="Name" value="RegistrationPage"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogin.html#ae22f0ed73e5248cd71a7b2167676376a"><param name="Name" value="regKey"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a19da3595b2a9cb61555e9b5568c55005"><param name="Name" value="removeattachment"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classArrangeRollNo.html#adeb652c1977c668d2cd519c1a4f317bd"><param name="Name" value="RemoveNonEligibleRollNo"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#aaf08ac5f9cfe7b2c2491cf9bd86dd2dc"><param name="Name" value="removerecipient"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classArrangeRollNo.html#ab0b6350a9113b86925133d7199929020"><param name="Name" value="RemoveRedundancy"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classReport.html"><param name="Name" value="Report"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="report-main_8cpp.html"><param name="Name" value="report-main.cpp"></OBJECT>
@@ -813,11 +755,9 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classReport.html#aa763587ca224dc7a1011c8e235937f24"><param name="Name" value="ReportPage"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#ad5921cd2f70d0c22895f2cc5542ab4d7"><param name="Name" value="res_set"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a4bf4b663e343bad40f658cef48f78521"><param name="Name" value="reset"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogin.html#aa6978512971283a486347c3aa6ae0478"><param name="Name" value="ResetPasswordForm"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSendMail.html#a56180b5a27efd4d43514f91008b280ef"><param name="Name" value="ResetPasswordMail"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogin.html#a4c5f4b15cce8b6bf325f35544f512fe2"><param name="Name" value="ResetPasswordPage"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a862d80a5c66fac98d254745fde7b1fb8"><param name="Name" value="response"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputFieldName.html#acd50095ae8540a735bcd5787b904b06c"><param name="Name" value="retypePassword"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputFieldName.html#acd50095ae8540a735bcd5787b904b06c"><param name="Name" value="InputFieldName"></OBJECT>
@@ -940,7 +880,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#a20f7ccadac8f3b67d4344f7da4594eda"><param name="Name" value="SelectProjectID"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#a4ccf07a8481a83055d8ce5fd27f0b415"><param name="Name" value="SelectQuery"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#af237df2de117cf94e23d288ad3345ca0"><param name="Name" value="SelectSum"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a1e797008e879c8d5f0bd5a24c96b4cbd"><param name="Name" value="send"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="sendmail-detail_8h.html#a6a17dd6df02d3a5118873bc84ce9801d"><param name="Name" value="SENDER_EMAILID"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSendMail.html"><param name="Name" value="SendMail"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="sendmail-detail_8h.html"><param name="Name" value="sendmail-detail.h"></OBJECT>
@@ -966,8 +905,6 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="sendmail-detail_8h.html#a5a43d9760874d06771eec35419dad507"><param name="Name" value="SERVER_MAIL"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#a1f276e4df260009d465032ec64f3a543"><param name="Name" value="sessionID"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#aa5a98e0ccbe4c286b944de1bcc75d9c5"><param name="Name" value="set_ip"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#aa64b304782ebcec318d12b6e4137de0b"><param name="Name" value="set_port"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classPageLayout.html#a449b4dde24cf3dc10299dc3c7bfc0e9c"><param name="Name" value="SetCookies"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classClassDetail.html#a2e2384f482bb2dca5f2d8a1c27491ae9"><param name="Name" value="SetDefaultValue"></OBJECT>
   <UL>
@@ -982,20 +919,13 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSendMail.html#a89c5a5bace5c21014b8184db5707b986"><param name="Name" value="SetHTMLMessage"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classPageStructureMaker.html#aaf78d67380c400cc0057c6519276f721"><param name="Name" value="SetHTMLVariables"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSendMail.html#a25ba5afabc97cf3dab525f2eb1e67e0e"><param name="Name" value="SetMailData"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#ac1a1bb8ed20a7bb0e2e09ee495ae7c8c"><param name="Name" value="setmessage"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSendMail.html#ac4e386f1e7775484429f7b01ef1623a3"><param name="Name" value="setMessage"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a57d9e64123a363c105c741f4be61d050"><param name="Name" value="setmessageHTML"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a3c1c568d65e70362c090182bfa107777"><param name="Name" value="setmessageHTMLfile"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSeatPlan.html#afa418b9edadff831c73ea6005666becf"><param name="Name" value="SetRollNo"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#ad57a8e1e89f333ee67cb97ed7dc79c16"><param name="Name" value="setsender"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSendMail.html#ae6776dfd1b92b97837f25259f7b57d2f"><param name="Name" value="setSender"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#ae07dfb015a5a14f023f7b24eef81ba7e"><param name="Name" value="setserver"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSendMail.html#a5337895c22cda4db5ebd05e43925e391"><param name="Name" value="setServer"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#aab8f43694c42a82043dce23a5c49dfdd"><param name="Name" value="setsubject"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSendMail.html#a22e32135e60ad02a6beff91638907cc6"><param name="Name" value="setSubject"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSeatPlan.html#a45d2c9c1d580d442bc15dcb50265d627"><param name="Name" value="size"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classMD5.html#aa836972700679dbcff6ae8337f6db464"><param name="Name" value="size_type"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#acc8e9b5dd53ebd6df566f141deb04dbf"><param name="Name" value="SOCKADDR_IN"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classArrangeRollNo.html#aae9734fb7b98d980d3f1feb1b52a6195"><param name="Name" value="SortRollNo"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#aba635a55313b14cf8bb285560a55498e"><param name="Name" value="SplitString"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#ab09ed4176090a72237531cedf00afb41"><param name="Name" value="splitString"></OBJECT>
@@ -1108,12 +1038,10 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputFieldName.html#ac58130077f39d82aaf447b1a67e9f70f"><param name="Name" value="InputFieldName"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#ad615390a3c9548b63e6081459801d3b3"><param name="Name" value="ReadInput"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a34be8c1b0f30f2e794629a463450df4e"><param name="Name" value="type"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classMD5.html#ac5ddf6cd8f940422396d321ea90ed045"><param name="Name" value="update"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#adab1d6cc97c8b14e9d170d5659a92d3e"><param name="Name" value="UpdateQuery"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSendMail.html#a6b02c708619c2fb35216b2ee3061f33b"><param name="Name" value="url"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogin.html#aa83b4706e0f0f0afc65f210ee8e4839a"><param name="Name" value="userEmailID"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classjwsmtp_1_1mailer.html#a8f43636be8ea428371915b611c508fc3"><param name="Name" value="username"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogin.html#a9731be126468f535f161f045c95687c6"><param name="Name" value="userPassword"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classValidStrategy.html"><param name="Name" value="ValidStrategy"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="validstrategy-main_8cpp.html"><param name="Name" value="validstrategy-main.cpp"></OBJECT>
@@ -1121,8 +1049,8 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classValidStrategy.html#ae8b17f98d81f8f70d974139086495dfa"><param name="Name" value="ReadStrategyDetail"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classValidStrategy.html#a234ca3ab5aa4684306148afa47b6860b"><param name="Name" value="ReadValidStrategy"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classValidStrategy.html#aac23ca61c16d79b48603a7db96617003"><param name="Name" value="validStrategy"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classValidStrategy.html#ae168db88ebfa1eabdd7f241a631ffc27"><param name="Name" value="ValidStrategy"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classValidStrategy.html#aac23ca61c16d79b48603a7db96617003"><param name="Name" value="validStrategy"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classValidStrategy.html#aac23ca61c16d79b48603a7db96617003"><param name="Name" value="validStrategy"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classValidStrategy.html"><param name="Name" value="ValidStrategy"></OBJECT>
@@ -1153,7 +1081,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classExamDetail.html#a51cb1af0e7d6f077aa662b120fd7aec2"><param name="Name" value="WriteRoomDetail"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSeatPlan.html#a3f29cad9d9be46f7bc3055de2ab887fc"><param name="Name" value="WriteSeatPlan"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classValidStrategy.html#a093620e19cef0865e6e38a26bb41b8bd"><param name="Name" value="WriteStrategyDetail"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structjwsmtp_1_1SOCKADDR__IN.html#a3c825338ac7bd9b2d0dcf7514dfaaa2a"><param name="Name" value="zeroaddress"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classArrangeRollNo.html#acbdaa06590d381ec19a7a07c718b9282"><param name="Name" value="~ArrangeRollNo"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classClassDetail.html#a2aeaf33b0a277a897aad308cffde211a"><param name="Name" value="~ClassDetail"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#a84d399a2ad58d69daab9b05330e1316d"><param name="Name" value="~Database"></OBJECT>

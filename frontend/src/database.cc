@@ -123,7 +123,7 @@ void Database :: DeleteQuery(string table, string where = "")
 }
 
 /**
- *      \class  Databaso
+ *      \class  Database
  *      \fn     Database :: SelectQuery(SELECT_VEC & result, 
  *                          string column, string table, 
  *                          string where = "")

@@ -1504,15 +1504,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>Databaso</Name>
-      <APILanguage>c</APILanguage>
-      <Type>cl</Type>
-      <Scope>Databaso</Scope>
-    </TokenIdentifier>
-    <Path>classDatabaso.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>DataSheet</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
@@ -11396,23 +11387,5 @@
     </TokenIdentifier>
     <Path>classInputDetail.html</Path>
     <Anchor>ae487757aaafba4ac372c327e2b7a9673</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>jwsmtp::SOCKADDR_IN</Name>
-      <APILanguage>c</APILanguage>
-      <Type>cl</Type>
-      <Scope>jwsmtp::SOCKADDR_IN</Scope>
-    </TokenIdentifier>
-    <Path>structjwsmtp_1_1SOCKADDR__IN.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>jwsmtp::mailer</Name>
-      <APILanguage>c</APILanguage>
-      <Type>cl</Type>
-      <Scope>jwsmtp::mailer</Scope>
-    </TokenIdentifier>
-    <Path>classjwsmtp_1_1mailer.html</Path>
   </Token>
 </Tokens>

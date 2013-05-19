@@ -14,256 +14,6 @@
           <Path>annotated.html</Path>
           <Subnodes>
            <Node>
-            <Name>jwsmtp</Name>
-            <Path></Path>
-            <Subnodes>
-             <Node>
-              <Name>SOCKADDR_IN</Name>
-              <Path>structjwsmtp_1_1SOCKADDR__IN.html</Path>
-              <Subnodes>
-               <Node>
-                <Name>SOCKADDR_IN</Name>
-                <Path>structjwsmtp_1_1SOCKADDR__IN.html</Path>
-                <Anchor>acc8e9b5dd53ebd6df566f141deb04dbf</Anchor>
-               </Node>
-               <Node>
-                <Name>SOCKADDR_IN</Name>
-                <Path>structjwsmtp_1_1SOCKADDR__IN.html</Path>
-                <Anchor>a600e2092c64ea21893b1bb1446de0dd6</Anchor>
-               </Node>
-               <Node>
-                <Name>get_sin_addr</Name>
-                <Path>structjwsmtp_1_1SOCKADDR__IN.html</Path>
-                <Anchor>a85af8047968eec8bb4d534f30cb120ba</Anchor>
-               </Node>
-               <Node>
-                <Name>get_size</Name>
-                <Path>structjwsmtp_1_1SOCKADDR__IN.html</Path>
-                <Anchor>a2fa14b8fb4f89917920c8f48db1af9e5</Anchor>
-               </Node>
-               <Node>
-                <Name>operator bool</Name>
-                <Path>structjwsmtp_1_1SOCKADDR__IN.html</Path>
-                <Anchor>a883ebbb530c08261aecfb81da3837bc2</Anchor>
-               </Node>
-               <Node>
-                <Name>operator const sockaddr</Name>
-                <Path>structjwsmtp_1_1SOCKADDR__IN.html</Path>
-                <Anchor>a36659eb6c2d8d7b3c2f0a58f47d58b19</Anchor>
-               </Node>
-               <Node>
-                <Name>operator const sockaddr_in</Name>
-                <Path>structjwsmtp_1_1SOCKADDR__IN.html</Path>
-                <Anchor>aaa8635472b494bfdf51fdfcefd28f0cf</Anchor>
-               </Node>
-               <Node>
-                <Name>operator=</Name>
-                <Path>structjwsmtp_1_1SOCKADDR__IN.html</Path>
-                <Anchor>a65ac978b686ce5077f7bf084ce2a8a92</Anchor>
-               </Node>
-               <Node>
-                <Name>set_ip</Name>
-                <Path>structjwsmtp_1_1SOCKADDR__IN.html</Path>
-                <Anchor>aa5a98e0ccbe4c286b944de1bcc75d9c5</Anchor>
-               </Node>
-               <Node>
-                <Name>set_port</Name>
-                <Path>structjwsmtp_1_1SOCKADDR__IN.html</Path>
-                <Anchor>aa64b304782ebcec318d12b6e4137de0b</Anchor>
-               </Node>
-               <Node>
-                <Name>zeroaddress</Name>
-                <Path>structjwsmtp_1_1SOCKADDR__IN.html</Path>
-                <Anchor>a3c825338ac7bd9b2d0dcf7514dfaaa2a</Anchor>
-               </Node>
-               <Node>
-                <Name>ADDR</Name>
-                <Path>structjwsmtp_1_1SOCKADDR__IN.html</Path>
-                <Anchor>ad23415107871375647977a3ac0a897a4</Anchor>
-               </Node>
-              </Subnodes>
-             </Node>
-             <Node>
-              <Name>mailer</Name>
-              <Path>classjwsmtp_1_1mailer.html</Path>
-              <Subnodes>
-               <Node>
-                <Name>TO</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a2e5bc7fa0ed5d046f966e4cdc84eb24ca74e835c4cc272296a4a1e82421906cb3</Anchor>
-               </Node>
-               <Node>
-                <Name>Cc</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a2e5bc7fa0ed5d046f966e4cdc84eb24ca562d5daf61453e68013e791df3628fd1</Anchor>
-               </Node>
-               <Node>
-                <Name>Bcc</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a2e5bc7fa0ed5d046f966e4cdc84eb24ca66a59774de5bd71fe6dc95625ba39aa1</Anchor>
-               </Node>
-               <Node>
-                <Name>SMTP_PORT</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a2e5bc7fa0ed5d046f966e4cdc84eb24ca487d29dbc3d575af09622b015e15dfa0</Anchor>
-               </Node>
-               <Node>
-                <Name>DNS_PORT</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a2e5bc7fa0ed5d046f966e4cdc84eb24cad561440a13285468f61eff955367f7d7</Anchor>
-               </Node>
-               <Node>
-                <Name>authtype</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a2b2a1d301bbe0c72c78c5876691091d7</Anchor>
-                <Subnodes>
-                 <Node>
-                  <Name>LOGIN</Name>
-                  <Path>classjwsmtp_1_1mailer.html</Path>
-                  <Anchor>a2b2a1d301bbe0c72c78c5876691091d7acce388d92b15e797810f6ae76e3e91a2</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>PLAIN</Name>
-                  <Path>classjwsmtp_1_1mailer.html</Path>
-                  <Anchor>a2b2a1d301bbe0c72c78c5876691091d7ae7b4a2282bdb5f800eba4b51fb94efed</Anchor>
-                 </Node>
-                </Subnodes>
-               </Node>
-               <Node>
-                <Name>mailer</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>aa503174a1bfb40f7d6018240108f8e81</Anchor>
-               </Node>
-               <Node>
-                <Name>mailer</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a7bdd0c339465239da192b87622fb47af</Anchor>
-               </Node>
-               <Node>
-                <Name>mailer</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a95ce2db188c5efed81c689d3fb1bba15</Anchor>
-               </Node>
-               <Node>
-                <Name>~mailer</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>ad15bf85209a7fde2569142aac36f709d</Anchor>
-               </Node>
-               <Node>
-                <Name>addrecipient</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>addd31c1223de1b269973077f3f5ce60d</Anchor>
-               </Node>
-               <Node>
-                <Name>attach</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a9ce0dcada15b7afe5c48fea57c28140d</Anchor>
-               </Node>
-               <Node>
-                <Name>authtype</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a13e354584e6b389b53db283105e1d995</Anchor>
-               </Node>
-               <Node>
-                <Name>clearattachments</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a77d2b39ec4855a741ac0156e242d5224</Anchor>
-               </Node>
-               <Node>
-                <Name>clearrecipients</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>abe98321f7402147da6d43726b7f0b72c</Anchor>
-               </Node>
-               <Node>
-                <Name>operator()</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a64a9eee2d170acf7463daf2bdd278ccb</Anchor>
-               </Node>
-               <Node>
-                <Name>password</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>ab0d3608eefc489f80c145530f45e1c49</Anchor>
-               </Node>
-               <Node>
-                <Name>removeattachment</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a19da3595b2a9cb61555e9b5568c55005</Anchor>
-               </Node>
-               <Node>
-                <Name>removerecipient</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>aaf08ac5f9cfe7b2c2491cf9bd86dd2dc</Anchor>
-               </Node>
-               <Node>
-                <Name>reset</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a4bf4b663e343bad40f658cef48f78521</Anchor>
-               </Node>
-               <Node>
-                <Name>response</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a862d80a5c66fac98d254745fde7b1fb8</Anchor>
-               </Node>
-               <Node>
-                <Name>send</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a1e797008e879c8d5f0bd5a24c96b4cbd</Anchor>
-               </Node>
-               <Node>
-                <Name>setmessage</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>ac1a1bb8ed20a7bb0e2e09ee495ae7c8c</Anchor>
-               </Node>
-               <Node>
-                <Name>setmessage</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>afe8acd59ea809f7110bd391c09f5e163</Anchor>
-               </Node>
-               <Node>
-                <Name>setmessageHTML</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a57d9e64123a363c105c741f4be61d050</Anchor>
-               </Node>
-               <Node>
-                <Name>setmessageHTML</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a3a34f6893123bc4dd0b15cfb3c08d00e</Anchor>
-               </Node>
-               <Node>
-                <Name>setmessageHTMLfile</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a3c1c568d65e70362c090182bfa107777</Anchor>
-               </Node>
-               <Node>
-                <Name>setsender</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>ad57a8e1e89f333ee67cb97ed7dc79c16</Anchor>
-               </Node>
-               <Node>
-                <Name>setserver</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>ae07dfb015a5a14f023f7b24eef81ba7e</Anchor>
-               </Node>
-               <Node>
-                <Name>setsubject</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>aab8f43694c42a82043dce23a5c49dfdd</Anchor>
-               </Node>
-               <Node>
-                <Name>username</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a8f43636be8ea428371915b611c508fc3</Anchor>
-               </Node>
-               <Node>
-                <Name>type</Name>
-                <Path>classjwsmtp_1_1mailer.html</Path>
-                <Anchor>a34be8c1b0f30f2e794629a463450df4e</Anchor>
-               </Node>
-              </Subnodes>
-             </Node>
-            </Subnodes>
-           </Node>
-           <Node>
             <Name>ArrangeRollNo</Name>
             <Path>classArrangeRollNo.html</Path>
             <Subnodes>
@@ -545,10 +295,6 @@
               <Anchor>a88f3a0df87e5e40207100d5b1f7ee6b1</Anchor>
              </Node>
             </Subnodes>
-           </Node>
-           <Node>
-            <Name>Databaso</Name>
-            <Path>classDatabaso.html</Path>
            </Node>
            <Node>
             <Name>DataSheet</Name>
@@ -2518,10 +2264,6 @@
             <Path>classDatabase.html</Path>
            </Node>
            <Node>
-            <Name>Databaso</Name>
-            <Path>classDatabaso.html</Path>
-           </Node>
-           <Node>
             <Name>DataSheet</Name>
             <Path>classDataSheet.html</Path>
            </Node>
@@ -2586,10 +2328,6 @@
             <Path>classJavaScript.html</Path>
            </Node>
            <Node>
-            <Name>jwsmtp::mailer</Name>
-            <Path>classjwsmtp_1_1mailer.html</Path>
-           </Node>
-           <Node>
             <Name>MD5</Name>
             <Path>classMD5.html</Path>
            </Node>
@@ -2640,10 +2378,6 @@
            <Node>
             <Name>SendMail</Name>
             <Path>classSendMail.html</Path>
-           </Node>
-           <Node>
-            <Name>jwsmtp::SOCKADDR_IN</Name>
-            <Path>structjwsmtp_1_1SOCKADDR__IN.html</Path>
            </Node>
           </Subnodes>
          </Node>
@@ -3425,40 +3159,6 @@
                 <Name>header</Name>
                 <Path>dir_147863059a2b168dd3396712b9cb9141.html</Path>
                 <Subnodes>
-                 <Node>
-                  <Name>jwsmtp</Name>
-                  <Path>dir_81872c9ded6f1caab1b0c1f0153fc9f2.html</Path>
-                  <Subnodes>
-                   <Node>
-                    <Name>base64.cpp</Name>
-                    <Path>base64_8cpp_source.html</Path>
-                   </Node>
-                   <Node>
-                    <Name>base64.h</Name>
-                    <Path>base64_8h_source.html</Path>
-                   </Node>
-                   <Node>
-                    <Name>compat.cpp</Name>
-                    <Path>compat_8cpp_source.html</Path>
-                   </Node>
-                   <Node>
-                    <Name>compat.h</Name>
-                    <Path>compat_8h_source.html</Path>
-                   </Node>
-                   <Node>
-                    <Name>jwsmtp.h</Name>
-                    <Path>jwsmtp_8h_source.html</Path>
-                   </Node>
-                   <Node>
-                    <Name>mailer.cpp</Name>
-                    <Path>mailer_8cpp_source.html</Path>
-                   </Node>
-                   <Node>
-                    <Name>mailer.h</Name>
-                    <Path>mailer_8h_source.html</Path>
-                   </Node>
-                  </Subnodes>
-                 </Node>
                  <Node>
                   <Name>cgicc.h</Name>
                   <Path>cgicc_8h_source.html</Path>
