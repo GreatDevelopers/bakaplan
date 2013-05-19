@@ -83,6 +83,9 @@ class Database
         /** Insert Registration Detail */
         void InsertRegistrationDetail(string emailID, 
                                       string registrationKey);
+        /** Insert Reset Password */
+        void InsertResetPassword(string emailID, 
+                                 string resetKey);
 
         /** Insert Project Detail  */
         void InsertProjectDetail(string emailID,

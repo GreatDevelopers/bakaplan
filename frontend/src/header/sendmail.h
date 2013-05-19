@@ -54,11 +54,11 @@ class SendMail
         void SetMailData();
 
         /** Setting message of mail */
-        void SetHTMLMessage(string regKey);
+        void SetHTMLMessage(string regKey, string mail);
 
         /** Function for sending mail to new user(registeration link) */
         void RegistrationMail(string setRecipient, string regKey);
-
+        void ResetPasswordMail(string setRecipient, string regKey);
         /** Desrtuctor */
         ~SendMail();
     

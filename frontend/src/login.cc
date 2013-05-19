@@ -112,7 +112,9 @@ void Login :: LoginPage(string msg, string emailID, string password)
     page.Button("next", "submit", "btn", "Login");
 
     cout << page.brk << page.brk << page.startB;
-    page.Anchor("register", "Register Here");
+    page.Anchor("register", "Register Here"); 
+    cout << page.brk;
+    page.Anchor("reset", "Reset Password");
     cout << page.endB;
 
     page.FormEnd();
@@ -356,4 +358,76 @@ void Login :: LogoutPage()
     temp += "\";";
     database.DeleteQuery(temp);*/
     LoginPage();
+}
+ 
+void Login :: ResetPasswordPage(string type, string msg, string emailID)
+{
+     
+    page.ContentType();
+
+    Header("Reset Password");
+    
+    page.DivStart("DivResetPass", "");
+    cout << page.brk;
+
+    page.Anchor("login", "Login");
+/*
+    if(type != "1")
+    {
+        type = readField.ReadFieldValue("type");
+    }*/
+    ResetPasswordForm(type, msg, emailID);
+
+    page.DivEnd();
+    Footer();    
+}
+
+void Login :: ResetPasswordForm(string type, string msg, string emailID)
+{
+    if(type == "1")
+    {
+        page.FormStart("FormResetPass", "reset?type=2", "POST");
+    
+        cout << page.startH1 << " Enter email to reset pssword " 
+             << page.endH1 
+             <<  page.brk;
+    
+        ErrorMessage(msg);
+
+        page.Label(fieldName.emailID, "Email ID");
+        page.InputField("email", fieldName.emailID, emailID);
+    
+        cout << page.brk << page.brk;
+
+        page.Button("Send", "submit", "btn", "Send");
+
+        page.FormEnd();
+    }
+    else if(type == "2")
+    {
+        userEmailID = readField.ReadFieldValue(fieldName.emailID);
+
+        database.SelectColumn(vecTemp, "EmailID", "User");
+
+        if ( find(vecTemp.begin(), vecTemp.end(), userEmailID)
+             != vecTemp.end() )
+        {
+            currentTime = Time();
+            currentTime = md5(currentTime);
+
+            database.InsertResetPassword(userEmailID, currentTime);
+
+            sendMail.ResetPasswordMail(userEmailID, currentTime);
+    
+            msg = "Check mail for verification in Junk/Trash.";
+
+            ResetPasswordForm("1", msg, userEmailID);
+        }
+        else
+        {
+            msg = "User not registered ";
+            ResetPasswordPage( "1", msg, userEmailID );
+        }
+
+    }
 }

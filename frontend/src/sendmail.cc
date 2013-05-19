@@ -51,16 +51,29 @@ void SendMail :: SetMailData()
  *      \param  regKey Registration Key
  */
 
-void SendMail :: SetHTMLMessage(string regKey)
+void SendMail :: SetHTMLMessage(string regKey, string mail)
 {
-    url  = "http://202.164.53.122/~mandeep/cgi-bin/bakaplan";
-    url += "/frontend/bp/confirm.html?Key=" + regKey;
+    url  = "http://" + setServer  + "/~mandeep/cgi-bin/bp/";
+    if(mail == "register")
+        url += "confirm?Key=" + regKey;
+    else
+        url += "reset?type=3&Key=" + regKey;
               
     htmlMessage  = "<html> <body>";
-    htmlMessage += "Thanks for registration. </br></br>";
-    htmlMessage += "To complete your registration process, you need ";
-    htmlMessage += "to confirm your Email by clicking following link.";
-    htmlMessage += "</br></br>" + url + "</br></br>";
+    if(mail == "register")
+    {
+        htmlMessage += "Thanks for registration. </br></br>";
+        htmlMessage += "To complete your registration process, you need ";
+        htmlMessage += "to confirm your Email by clicking following link.";
+        htmlMessage += "</br></br>" + url + "</br></br>";
+    }
+    else
+    {
+        htmlMessage += "To rest your password, you need ";
+        htmlMessage += "to confirm your Email by clicking following link.";
+        htmlMessage += "</br></br>" + url + "</br></br>";
+    }
+
     htmlMessage += "</body> </html>";
 }
 
@@ -83,14 +96,31 @@ void SendMail :: RegistrationMail(string setRecipient, string regKey)
     mail.setmessage(setMessage);
     mail.setserver(setServer);
 
-    SetHTMLMessage(regKey);
+    SetHTMLMessage(regKey, "register");
     
     mail.setmessageHTML(htmlMessage);
 
     mail.send();
 
 }
+void SendMail :: ResetPasswordMail(string setRecipient, string regKey)
+{
+    SetMailData();
 
+    mailer mail;
+    mail.addrecipient(setRecipient);
+    mail.setsender(setSender);
+    mail.setsubject(setSubject);
+    mail.setmessage(setMessage);
+    mail.setserver(setServer);
+
+    SetHTMLMessage(regKey, "reset");
+    
+    mail.setmessageHTML(htmlMessage);
+
+    mail.send();
+
+}
 /**
  *      \class  SendMail
  *      \fn     SendMail :: ~SendMail()

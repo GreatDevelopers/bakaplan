@@ -57,6 +57,7 @@ SENDMAIL        =  sendmail
 LOGIN       =  login
 LOGOUT      =  logout
 REGISTER    =  register
+RESET       =  reset
 NEWUSER     =  newuser
 CONFIRM     =  confirm
 ADDUSER     =  adduser
@@ -188,6 +189,8 @@ D_LOGOUT_M      =   $(LOGOUT)$(MAIN)$(CPP) $(H_LOGIN)
 
 D_REGISTER_M    =   $(REGISTER)$(MAIN)$(CPP) $(H_LOGIN)
 
+D_RESET_M       =   $(RESET)$(MAIN)$(CPP) $(H_LOGIN)
+
 D_NEWUSER_M     =   $(NEWUSER)$(MAIN)$(CPP) $(H_LOGIN)
 
 D_CONFIRM_M     =   $(CONFIRM)$(MAIN)$(CPP) $(H_LOGIN)
@@ -225,6 +228,8 @@ L_LOGIN        =  $(LOGIN)$(MAIN)$(O) $(L_LOG)
 L_LOGOUT       =  $(LOGOUT)$(MAIN)$(O) $(L_LOG)
 
 L_REGISTER     =  $(REGISTER)$(MAIN)$(O) $(L_LOG)
+
+L_RESET        =  $(RESET)$(MAIN)$(O) $(L_LOG)
 
 L_NEWUSER      =  $(NEWUSER)$(MAIN)$(O) $(L_LOG)
 

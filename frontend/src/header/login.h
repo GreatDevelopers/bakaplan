@@ -77,8 +77,15 @@ class Login : public InputDetail
 
         void ConfirmPage(string msg = "", string password = "123456",
                          string retypePassword = "123456");
-
+        /** Add new user */
         void AddUser();
+    
+        /** Reset password of existing user */
+        void ResetPasswordPage(string type = "1", string msg = "", 
+                           string emailID = "abc@you.com");
+
+        /** Reset Password Forms  */
+        void ResetPasswordForm(string type, string msg, string emailID);
 
         /** Logout Page */
         void LogoutPage();

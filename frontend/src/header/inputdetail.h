@@ -42,12 +42,6 @@ class InputDetail //: public PageLayout
     protected:
         /* Common variables and objects */
         
-        /* Objects of InputFieldName and ReadFieldsValue class  */
-
-        InputFieldName fieldName;               /**< I/P field name */
-        ReadInputField readField;               /**< Read I/P Field */
-        Database database;                   /**< Accecing Database */
-        PageLayout page;                             /**< HTML Tags */
         
         int i, j, k, l;                      /**< Looping Variables */
 
@@ -126,6 +120,14 @@ class InputDetail //: public PageLayout
         STRING_VEC hours, minutes, ampm;
 
     public:
+    
+        /* Objects of InputFieldName and ReadFieldsValue class  */
+
+        InputFieldName fieldName;               /**< I/P field name */
+        ReadInputField readField;               /**< Read I/P Field */
+        Database database;                   /**< Accecing Database */
+        PageLayout page;                             /**< HTML Tags */
+
         /** Constructor */
         InputDetail(); 
 

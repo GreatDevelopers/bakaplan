@@ -193,7 +193,15 @@ void Database :: InsertRegistrationDetail(string emailID,
 
     InsertQuery(query);
 }
+void Database :: InsertResetPassword(string emailID,
+                                     string resetKey)
+{
+    query  = "insert into ResetPassword(EmailID, ResetKey) ";
+    query += "values(\"" + emailID + "\", \"" + resetKey;
+    query += "\");";
 
+    InsertQuery(query);
+}
 /**
  *      \class  Database
  *      \fn     Database :: InsertProjectDetail(string emailID, 

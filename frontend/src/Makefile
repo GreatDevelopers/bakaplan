@@ -25,7 +25,7 @@ include Make.common
 #   Targets
 # ====================================================================
 
-all: back $(F_BP)$(LOGIN)$(HTML) $(F_BP)$(REGISTER)$(HTML) $(F_BP)$(NEWUSER)$(HTML) $(F_BP)$(CONFIRM)$(HTML) $(F_BP)$(ADDUSER)$(HTML) $(F_BP)$(PROJECT)$(HTML) $(F_BP)$(LOGOUT)$(HTML) $(F_BP)$(CLASS)$(HTML) $(F_BP)$(ROLLNO)$(HTML) $(F_BP)$(DATESHEET)$(HTML) $(F_BP)$(EXAM)$(HTML) $(F_BP)$(ROOM)$(HTML) $(F_BP)$(STRATEGY)$(HTML) $(F_BP)$(VALIDATION)$(HTML) $(F_BP)$(REPORT)$(HTML)
+all: back $(F_BP)$(LOGIN)$(HTML) $(F_BP)$(REGISTER)$(HTML) $(F_BP)$(RESET)$(HTML) $(F_BP)$(NEWUSER)$(HTML) $(F_BP)$(CONFIRM)$(HTML) $(F_BP)$(ADDUSER)$(HTML) $(F_BP)$(PROJECT)$(HTML) $(F_BP)$(LOGOUT)$(HTML) $(F_BP)$(CLASS)$(HTML) $(F_BP)$(ROLLNO)$(HTML) $(F_BP)$(DATESHEET)$(HTML) $(F_BP)$(EXAM)$(HTML) $(F_BP)$(ROOM)$(HTML) $(F_BP)$(STRATEGY)$(HTML) $(F_BP)$(VALIDATION)$(HTML) $(F_BP)$(REPORT)$(HTML)
 
 back:
 	make -C backend
@@ -97,6 +97,9 @@ $(LOGIN)$(MAIN)$(O) : $(D_LOGIN_M)
 $(REGISTER)$(MAIN)$(O) : $(D_REGISTER_M)
 	$(CXX) $(CFLAG) $(REGISTER)$(MAIN)$(CPP) $(LMYSQL)
 
+$(RESET)$(MAIN)$(O) : $(D_RESET_M)
+	$(CXX) $(CFLAG) $(RESET)$(MAIN)$(CPP) $(LMYSQL)
+
 $(NEWUSER)$(MAIN)$(O) : $(D_NEWUSER_M)
 	$(CXX) $(CFLAG) $(NEWUSER)$(MAIN)$(CPP) $(LMYSQL)
 
@@ -144,6 +147,10 @@ $(F_BP)$(LOGIN)$(HTML) : $(L_LOGIN)
 
 $(F_BP)$(REGISTER)$(HTML) : $(L_REGISTER)
 	$(CXX) $(OFLAG) $(F_BP)$(REGISTER)$(HTML) $(L_REGISTER) \
+	$(LMYSQL) $(LCGICC) $(LSMTP)
+
+$(F_BP)$(RESET)$(HTML) : $(L_RESET)
+	$(CXX) $(OFLAG) $(F_BP)$(RESET)$(HTML) $(L_RESET) \
 	$(LMYSQL) $(LCGICC) $(LSMTP)
 
 $(F_BP)$(NEWUSER)$(HTML) : $(L_NEWUSER)

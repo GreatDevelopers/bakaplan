@@ -74,14 +74,14 @@ void Strategy :: ReadExamDetail()
         examName[i] = readField.ReadFieldValue(fieldName.examName, j);
         examSession[i] = readField.ReadFieldValue(
                          fieldName.examSession, j);
-//        examTime[i] = readField.ReadFieldValue(fieldName.examTime, j);
+        examTime[i] = readField.ReadFieldValue(fieldName.examTime, j);
         examVenue[i] = readField.ReadFieldValue(
                        fieldName.examVenue, j);
         if(sameDetail == "No")
         {
             date[i] = readField.ReadFieldValue(fieldName.date, j);
         }
-        vecTemp.resize(2);
+/*        vecTemp.resize(2);
         for(k = 0; k < 2; k++)
         {
             if( k == 0)
@@ -94,7 +94,7 @@ void Strategy :: ReadExamDetail()
             vecTemp[k] += " ";
             vecTemp[k] += readField.ReadFieldValue((temp + "AMPM"), j);
         }
-        examTime[i] = vecTemp[0] + " - " + vecTemp[1];
+        examTime[i] = vecTemp[0] + " - " + vecTemp[1];*/
     }
     SetDefaultValue();
     WriteExamDetail();
