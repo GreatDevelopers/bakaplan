@@ -28,6 +28,7 @@
 #include <cgicc/Cgicc.h> 
 #include <cgicc/HTTPHTMLHeader.h> 
 #include <cgicc/HTMLClasses.h>
+#include <cgicc/HTTPRedirectHeader.h>
 
 using namespace cgicc;
 
