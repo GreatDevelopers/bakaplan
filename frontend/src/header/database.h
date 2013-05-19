@@ -56,6 +56,10 @@ class Database
 
         /** Function for executing query ie for insertion or deletion */
         void Query(string query);
+
+        /** Update query */
+        void UpdateQuery(string table, string column, string value, 
+                         string where);
         
         /** Select Query */
         void SelectQuery(string query, STRING_VEC & result);

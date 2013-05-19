@@ -419,7 +419,7 @@ void Login :: ResetPasswordForm(string type, string msg, string emailID)
 
             sendMail.ResetPasswordMail(userEmailID, currentTime);
     
-            msg = "Check mail for verification in Junk/Trash.";
+            msg = "Check mail to reset password in Junk/Trash.";
 
             ResetPasswordForm("1", msg, userEmailID);
         }
@@ -427,6 +427,80 @@ void Login :: ResetPasswordForm(string type, string msg, string emailID)
         {
             msg = "User not registered ";
             ResetPasswordPage( "1", msg, userEmailID );
+        }
+
+    }
+    else if(type == "3")
+    {
+        key = readField.ReadFieldValue(fieldName.key);
+
+        database.SelectColumn(regKey, "ResetKey", "ResetPassword");
+
+        if ( find(regKey.begin(), regKey.end(), key) != regKey.end() )
+        {
+            page.FormStart("FormResetPass", "reset?type=4", "POST");
+        
+            cout << page.startH1 << " Email Confirmed " << page.endH1 
+                 <<  page.brk
+                 << page.startB << " Reset Password " << page.endB;
+    
+            page.InputField("hidden", "Key", key);
+
+            cout << page.brk << page.brk;
+
+            ErrorMessage(msg);
+
+            page.Label(fieldName.password, " Password ");
+            page.InputField("password", fieldName.password, "");
+    
+            cout << page.brk << page.brk;
+            page.Label(fieldName.retypePassword, " Retype Password ");
+            page.InputField("password", fieldName.retypePassword, "");
+
+            cout << page.brk << page.brk;
+
+            page.Button("next", "submit", "btn", "Submit");
+    
+            page.FormEnd();
+
+        }
+    }
+    else if(type == "4")
+    {
+        retypePassword = readField.ReadFieldValue(
+                         fieldName.retypePassword);
+
+        userPassword = readField.ReadFieldValue(fieldName.password);
+
+        key = readField.ReadFieldValue(fieldName.key);
+
+        database.SelectColumn(regKey, "ResetKey", "ResetPassword");
+        
+        temp = "ResetKey = \"" + key + "\"";
+
+        database.SelectColumn(vecTemp, "EmailID", "ResetPassword", temp);
+
+        userEmailID = vecTemp[0];
+
+        if ( find(regKey.begin(), regKey.end(), key) != regKey.end() )
+        {
+            if( retypePassword != userPassword )
+            {
+                msg = "Password doesn't match";
+                ResetPasswordForm("3", msg, "");
+            }
+            else
+            {
+                userPassword = md5(userPassword);
+                where = "EmailID = \"" + userEmailID + "\"";
+                database.UpdateQuery("User", "Password", userPassword,
+                                     where);
+            }
+        }
+        else
+        {
+            msg = "Invalid Link";
+            RegistrationPage( msg );
         }
 
     }

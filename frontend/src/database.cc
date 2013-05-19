@@ -62,6 +62,15 @@ void Database :: Query(string query)
         cout << " Query not executed " << query;
 }
 
+void Database :: UpdateQuery(string table, string column, string value,
+                             string where)
+{
+    query = "UPDATE " + table + " set " + column + " = \"" + value + 
+            "\" where " + where + ";";
+
+    Query(query);
+}
+
 /**
  *      \class  Database
  *      \fn     Database :: SelectQuery(string query, 
