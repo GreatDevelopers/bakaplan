@@ -119,6 +119,7 @@ void ExamDetail :: ReadRoomDetail()
     rows.resize(totalDays);
     columns.resize(totalDays);
     date.resize(totalDays);
+    roomInfo.resize(totalDays);
 
     for(i = 0; i < totalDays; i++)
     {
@@ -138,6 +139,7 @@ void ExamDetail :: ReadRoomDetail()
             temp1 = IntToString(i + 1) + index[j];//IntToString(j + 1);
 
             centreName[i].resize(totalCentres[i]);
+            roomInfo[i].resize(totalCentres[i]);
             roomNo[i].resize(totalCentres[i]);
             rows[i].resize(totalCentres[i]);
             columns[i].resize(totalCentres[i]);
@@ -146,13 +148,70 @@ void ExamDetail :: ReadRoomDetail()
             centreName[i][j] = readField.ReadFieldValue(temp);
  
             temp = fieldName.roomNo + temp1;
-            roomNo[i][j] = readField.ReadFieldValue(temp);
+            roomInfo[i][j] = readField.ReadFieldValue(temp);
             
-            temp = fieldName.rows + temp1;
+/*            temp = fieldName.rows + temp1;
             rows[i][j] = readField.ReadFieldValue(temp);
 
             temp = fieldName.columns + temp1;
-            columns[i][j] = readField.ReadFieldValue(temp);
+            columns[i][j] = readField.ReadFieldValue(temp);*/
+//            SplitString(roomInfo[i], roomNo[i][j], ",");
+        }
+    }
+
+    // Split roomInfo to roomNo, row and column
+
+    for(i = 0; i < totalDays; i++)
+    {
+        for(j = 0; j < totalCentres[i]; j++)
+        {
+/*             roomNo[i][j] = "";
+            rows[i][j] = "";
+            columns[i][j] = "";*/
+            temp = roomInfo[i][j];  // R1:6x6, R2:6x8
+            cout << temp;
+            STRING_VEC room1;
+            int t, a = 0, b = 0;
+            SplitString(room1, temp, ",");
+            for(unsigned k = 0; k < room1.size(); k++)
+            {
+                temp = room1[k];
+                STRING_VEC room2;
+                SplitString(room2, temp, ":");  // R1:6x6
+                for(unsigned l = 0; l < room2.size(); l++)
+                {
+
+                    t = room2.size() / 2;
+                    if((l % 2) == 0)
+                    {
+                        roomNo[i][j] += room2[l];
+                        if(a <= t )
+                            roomNo[i][j] += ",";
+                        a++;
+                    }
+                    else
+                    {
+                        STRING_VEC size;
+                        temp = room2[l];
+                        SplitString(size, temp, "x");   // 6x6
+                        b = 0;
+                        for(unsigned int m = 0; m < size.size(); m++)
+                        {
+//                        t = (size.size() / 2);
+                            rows[i][j] += size[m++];
+                            columns[i][j] += size[m];
+                            
+                            if(m < size.size())
+                            {
+                                rows[i][j] += ",";
+                                columns[i][j] += ",";
+                            }
+                            b++;
+                        }
+                    }
+                    
+                }
+            }
         }
     }
     

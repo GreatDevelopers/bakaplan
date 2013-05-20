@@ -27,13 +27,13 @@
 RoomDetail :: RoomDetail()
 {
     // constructor
-    totalCols = 5;
+    totalCols = 3;
     i = 0;
     tableHeading.resize(totalCols);
     tableHeading[i++] = "Centre Name";
-    tableHeading[i++] = "Room No.";
-    tableHeading[i++] = "Rows";
-    tableHeading[i++] = "Columns";
+    tableHeading[i++] = "Room No : Rows x Columns";
+//    tableHeading[i++] = "Rows";
+//    tableHeading[i++] = "Columns";
     tableHeading[i++] = "Delete Row";
 }
 
@@ -346,12 +346,15 @@ void RoomDetail :: RoomDetailPage()
         
                 cout << page.startTD;
                 temp = IntToString(i + 1);
-                temp += IntToString(j + 1);               
+                temp += IntToString(j + 1);            
+//                string roomValue = roomNo[i][j]// + " : " + rows[i][j] +
+//                                   " x " + columns[i][j];
+
                 page.InputField("text", fieldName.roomNo,
                                 StringToInt(temp),
-                                roomNo[i][j], roomNo[i][j]);
+                                "Room No:RowsxCols, R1:6x6");
                 cout << page.endTD;
- 
+ /*
                 cout << page.startTD;
                 temp  = IntToString(i + 1);
                 temp += IntToString(j + 1);
@@ -367,7 +370,7 @@ void RoomDetail :: RoomDetailPage()
                                 StringToInt(temp),
                                 columns[i][j], columns[i][j]);
                 cout << page.endTD;       
-                
+ */               
                 cout << page.startTD;
                 temp = "DelRow('" 
                        + (fieldName.rowIndex + IntToString(i + 1))  
@@ -397,10 +400,9 @@ void RoomDetail :: RoomDetailPage()
                 temp = IntToString(i + 1);
                 temp += IntToString(j + 1);               
                 page.InputField("text", fieldName.roomNo,
-                                StringToInt(temp),
-                                roomNo[i][j]);
+                                StringToInt(temp), "Room 1 : 6 x 7, R2 4x4");
                 cout << page.endTD;
- 
+ /*
                 cout << page.startTD;
                 temp = IntToString(i + 1);
                 temp += IntToString(j + 1);
@@ -416,7 +418,7 @@ void RoomDetail :: RoomDetailPage()
                                 StringToInt(temp),
                                 columns[i][j]);
                 cout << page.endTD;       
-
+*/
                 cout << page.startTD;
                 temp = "DelRow('" 
                        + (fieldName.rowIndex + IntToString(i + 1))  
