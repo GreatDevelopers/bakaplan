@@ -24,17 +24,16 @@
 ValidStrategy :: ValidStrategy()
 {
     // constructor
-    totalCols = 8;
+    totalCols = 7;
     tableHeading.resize(totalCols);
     i = 0;
-    tableHeading[i++] = "Date";
-    tableHeading[i++] = "Selected Strategy";
-    tableHeading[i++] = "Total Seats";
-    tableHeading[i++] = "Total Students";
-    tableHeading[i++] = "Total Strategy Group Seats";
-    tableHeading[i++] = "Total Strategy Group Students";
-    tableHeading[i++] = "Valid";
-    tableHeading[i++] = "Add Extra Rooms";
+    tableHeading[i++] = " Date";
+    tableHeading[i++] = " Selected <br> Strategy ";
+    tableHeading[i++] = " Total <br> Seats ";
+    tableHeading[i++] = " Total <br> Students ";
+    tableHeading[i++] = " Total Strategy <br> Group Seats ";
+    tableHeading[i++] = " Total Strategy <br> Group Students ";
+    tableHeading[i++] = " Valid";
 }
 
 /**
@@ -130,6 +129,29 @@ void ValidStrategy :: WriteStrategyDetail()
 
 void ValidStrategy :: ReadValidStrategy()
 {
+    where = "ProjectID = " + projectID;
+    database.SelectColumn(date, "Date", "ValidStrategy", where);
+    database.SelectColumn(totalSeats, "TotalSeats", 
+                          "ValidStrategy", where);   
+    database.SelectColumn(selectedStrategy, "SelectedStrategy", 
+                          "ValidStrategy", where);
+    database.SelectColumn(totalStudents, "TotalStudents", 
+                          "ValidStrategy", where);
+    database.SelectColumn(totalGroupSeats, "TotalGroupSeats", 
+                          "ValidStrategy", where);
+    database.SelectColumn(totalGroupStudents, "TotalGroupStudents", 
+                          "ValidStrategy", where);
+
+    valid.resize(date.size());
+    for(unsigned i = 0; i < date.size(); i++)
+    {
+        if(StringToInt(totalGroupSeats[i]) < StringToInt(totalGroupStudents[i]))
+            valid[i] = "No";
+        else
+            valid[i] = "Yes";
+    }
+
+/*
     temp = FileName(VALIDATION, projectID, 0);
     inFile.open(temp.c_str());
 
@@ -147,6 +169,7 @@ void ValidStrategy :: ReadValidStrategy()
     }
 
     inFile.close();
+*/
 }
 
 /**
@@ -187,20 +210,28 @@ void ValidStrategy :: ValidStrategyPage()
     else
         j = 0;
 
+    cout << page.startTR;
+
     for(i = j; i < totalCols; i++)
     {   
-        cout << page.startTR;
-        cout << page.startTD << page.startB
+        cout << page.startTH
              << tableHeading[i] 
-             << page.endB << page.endTD
-             << page.startTD << vecTemp[i] << page.endTD;
-        
-        if(vecTemp[i] == "Y")
-            i = i + 1;
-        else if(vecTemp[i] == "N")
-            i = totalCols;
-        else
-            //-
+             << page.endTH;        
+    } 
+    cout << page.endTR;
+    for(i = j; i < totalDays; i++)
+    {
+        cout << page.startTR;
+        if(j == 0)
+        {
+            cout << page.startTD << date[i] << page.endTD;
+        }
+        cout << page.startTD << selectedStrategy[i] << page.endTD;
+        cout << page.startTD << totalSeats[i] << page.endTD;
+        cout << page.startTD << totalStudents[i] << page.endTD;
+        cout << page.startTD << totalGroupSeats[i] << page.endTD;
+        cout << page.startTD << totalGroupStudents[i] << page.endTD;
+        cout << page.startTD << valid[i] << page.endTD;
         cout << page.endTR;
     }
 

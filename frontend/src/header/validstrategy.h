@@ -28,6 +28,10 @@ class ValidStrategy : public InputDetail
 
     Strategy validStrategy;
 
+    STRING_VEC selectedStrategy, totalSeats, totalGroupSeats, 
+               totalStudents, totalGroupStudents;
+    STRING_VEC valid;
+
     public:
         /** Constructor */
         ValidStrategy();
