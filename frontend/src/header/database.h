@@ -114,6 +114,14 @@ class Database
         void InsertStrategyDetail(string projectID, string dateSheetID,
                             string strategyName);
 
+        /** insert Strategy detail - Valid or Not */
+        void InsertValidStrategy(string projectID, string dateID, 
+                                 string date, string selectedStrategy,
+                                 string totalSeats, 
+                                 string totalStudents,
+                                 string totalGroupSeats,
+                                 string totalGroupStudents);
+
         /** Insert DateSheet */
         void InsertDateSheet(string projectID, string date, 
                              string examCode);

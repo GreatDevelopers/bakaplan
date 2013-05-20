@@ -174,7 +174,7 @@ void Strategy :: CheckValidation(int strategy, int i)
 
     if(totalSeats < totalStudents)
     {
-        outFile << "N";
+        outFile << "N" << endl;
         //outFile << "\t Add More rooms!" << endl;
         outFile.close();
     }

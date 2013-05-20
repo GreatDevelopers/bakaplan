@@ -19,6 +19,7 @@
  */
 
 #include "seatplan.h"
+#include "../../header/database.h"
 
 /**
  *      \class  Strategy
@@ -31,6 +32,7 @@ class Strategy : public SeatPlan
     protected:
         STRING_VEC strategyName;              /**< Name of Strategy */
         int totalStrategy;                    /**< Total Strategies */
+        Database db;
     
     public:
         /** Constructor */

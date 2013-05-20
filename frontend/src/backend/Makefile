@@ -30,6 +30,9 @@ all : main
 
 #	Target for compiling .cc or .cpp files
 
+$(DB): $(D_DB)
+	$(CXX) $(CFLAG) ../database.cc $(LMYSQL)
+
 $(READINPUT)$(O) : $(D_READINPUT)
 	$(CXX) $(CFLAG) $(READINPUT)$(CC)
 
@@ -43,16 +46,16 @@ $(DATESHEET)$(O) : $(D_DATESHEET)
 	$(CXX) $(CFLAG) $(DATESHEET)$(CC)
 
 $(SEATPLAN)$(O) : $(D_SEATPLAN)
-	$(CXX) $(CFLAG) $(SEATPLAN)$(CC)
+	$(CXX) $(CFLAG) $(SEATPLAN)$(CC) $(LMYSQL)
 
 $(STRATEGY)$(O) : $(D_STRATEGY)
-	$(CXX) $(CFLAG) $(STRATEGY)$(CC)
+	$(CXX) $(CFLAG) $(STRATEGY)$(CC) $(LMYSQL)
 
 main.o: main.cpp $(H_DATESHEET) $(H_STRATEGY)
-	$(CXX) $(CFLAG) main.cpp
+	$(CXX) $(CFLAG) main.cpp $(LMYSQL)
 
 main: $(L_DATESHEET) $(L_STRATEGY) main.o
-	$(CXX) $(OFLAG) main $(L_DATESHEET) $(L_STRATEGY) main.o
+	$(CXX) $(OFLAG) main $(L_DATESHEET) $(L_STRATEGY) main.o $(LMYSQL)
 
 run : main
 	./main

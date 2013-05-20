@@ -41,6 +41,8 @@ ARRANGEROLLNO =  arrangerollno
 DATESHEET     =  datesheet
 STRATEGY      =  strategy
 SEATPLAN      =  seatplan
+DB            =  database.o
+D_DB          =  ../header/database.h ../database.cc
 
 #   File Extention variables
 
@@ -64,10 +66,10 @@ D_EXPANDROLLNO  =  $(EXPANDROLLNO)$(CC) $(H_EXPANDROLLNO)
 D_ARRANGEROLLNO =  $(ARRANGEROLLNO)$(CC) $(H_ARRANGEROLLNO)
 D_DATESHEET     =  $(DATESHEET)$(CC) $(H_DATESHEET)
 D_SEATPLAN      =  $(SEATPLAN)$(CC) $(H_SEATPLAN)
-D_STRATEGY      =  $(STRATEGY)$(CC) $(H_STRATEGY)
+D_STRATEGY      =  $(STRATEGY)$(CC) $(H_STRATEGY) 
 
 #   Linking variables
 
 L_ARRANGE   =  $(READINPUT)$(O) $(EXPANDROLLNO)$(O) $(ARRANGEROLLNO)$(O)
 L_DATESHEET =  $(L_ARRANGE) $(DATESHEET)$(O)
-L_STRATEGY  =  $(SEATPLAN)$(O) $(STRATEGY)$(O)  #$(READINPUT)$(O)
+L_STRATEGY  =  $(SEATPLAN)$(O) $(STRATEGY)$(O) $(DB)  #$(READINPUT)$(O)

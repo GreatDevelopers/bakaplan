@@ -266,6 +266,23 @@ void Database :: InsertRoomDetail(string projectID, string dateSheetID,
     InsertQuery(query);
 }
 
+void Database :: InsertValidStrategy(string projectID, string dateID, 
+                                     string date, 
+                                     string selectedStrategy,
+                                     string totalSeats,
+                                     string totalStudents,
+                                     string totalGroupSeats,
+                                     string totalGroupStudents)
+{
+    query  = "insert into ValidStrategy(ProjectID, DateID, Date, ";
+    query += "SelectedStrategy, TotalSeats, TotalStudents, ";
+    query += "TotalGroupSeats, TotalGroupStudents) values(" +
+             projectID + ", " + dateID + ", \"" + date + "\", \"" +
+             selectedStrategy + "\", " + totalSeats + ", " + 
+             totalStudents + ", " + totalGroupSeats + ", " +
+             totalGroupStudents + ");";
+}
+
 void Database :: InsertStrategyDetail(string projectID, 
                                       string dateSheetID, 
                                       string strategyName)
