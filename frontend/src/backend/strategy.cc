@@ -172,6 +172,13 @@ void Strategy :: CheckValidation(int strategy, int i)
             << totalGroupSeats << endl
             << groupStudentSize[strategy-1] << endl;
 
+    db.InsertValidStrategy(projectID, IntToString(i + 1), date[i], 
+                           IntToString(strategy), 
+                           IntToString(totalSeats),
+                           IntToString(totalStudents), 
+                           IntToString(totalGroupSeats), 
+                           IntToString(groupStudentSize[strategy-1]));
+
     if(totalSeats < totalStudents)
     {
         outFile << "N" << endl;
@@ -196,7 +203,16 @@ void Strategy :: ChooseStrategy()
     temp = FileName(VALIDATION, projectID, 0);
     outFile.open(temp.c_str());
     outFile.close();
-    
+ 
+    STRING_VEC vecTemp;
+    string where = "ProjectID = " + projectID;                               
+    db.SelectColumn(vecTemp, "TotalSeats",                    
+                          "ValidStrategy", where);                   
+    if(vecTemp.size() > 0)                                            
+    {                                                                 
+        db.DeleteQuery("ValidStrategy", where);                
+    } 
+   
     for(i = 0; i < totalDays; i++)
     {
         totalSeats = totalStudents = totalGroupSeats = 0;
@@ -228,6 +244,13 @@ void Strategy :: Main(string pID)
     ReadStrategy(projectID);
 
     ChooseStrategy();
+}
+
+string Strategy :: IntToString(int value)
+{
+    ss.clear(); ss.str("");          /*   Empty stringstream object */
+    ss << value;                                                     
+    return ss.str();
 }
 
 /**

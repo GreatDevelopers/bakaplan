@@ -281,6 +281,8 @@ void Database :: InsertValidStrategy(string projectID, string dateID,
              selectedStrategy + "\", " + totalSeats + ", " + 
              totalStudents + ", " + totalGroupSeats + ", " +
              totalGroupStudents + ");";
+
+    InsertQuery(query);
 }
 
 void Database :: InsertStrategyDetail(string projectID, 

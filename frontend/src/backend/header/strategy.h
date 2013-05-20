@@ -33,6 +33,7 @@ class Strategy : public SeatPlan
         STRING_VEC strategyName;              /**< Name of Strategy */
         int totalStrategy;                    /**< Total Strategies */
         Database db;
+        stringstream ss;
     
     public:
         /** Constructor */
@@ -46,6 +47,8 @@ class Strategy : public SeatPlan
         void GroupCondition(int strategy, int i);
 
         void Main(string pID);
+
+        string IntToString(int value);
 
         /** Destructor */
         ~Strategy();

@@ -92,7 +92,7 @@ void ValidStrategy :: WriteStrategyDetail()
         database.InsertStrategyDetail(projectID, temp, 
                                       strategyChoice[i]);
     }
-
+    vecTemp.clear();
     /* Writing I/P file for strategy detail */
     where = "ProjectID = " + projectID;
     database.SelectColumn(vecTemp, "Date", "DateSheet", where);
