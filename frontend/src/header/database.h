@@ -106,6 +106,7 @@ class Database
 
         /** Insert Room Detail */
         void InsertRoomDetail(string projectID, string dateSheetID,
+                              string roomInfo,
                               string centreName, string roomNo, 
                               string rows, string cols);
 

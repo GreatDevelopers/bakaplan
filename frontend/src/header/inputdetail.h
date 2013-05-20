@@ -109,7 +109,8 @@ class InputDetail //: public PageLayout
         STRING_2DVEC centreName,                   /**< Centre Name */
                      roomNo,            /**< Room no. in one centre */
                      rows,                        /**< Rows of room */
-                     columns;                   /**< columns of room */
+                     columns,                  /**< columns of room */
+                     roomInfo;      /**< Room Detail filled by user */
 
         /* Temp variable used for writing details into file */
         INT_VEC totalSubjects;

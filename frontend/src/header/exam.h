@@ -29,7 +29,6 @@
 class ExamDetail : public InputDetail
 {
     protected:
-        STRING_2DVEC roomInfo;
        
     public:
         /** Constroctor  */

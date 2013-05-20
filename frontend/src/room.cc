@@ -51,6 +51,7 @@ void RoomDetail :: SetDefaultValue()
     roomNo.resize(totalDays);
     rows.resize(totalDays);
     columns.resize(totalDays);
+    roomInfo.resize(totalDays);
  
     where = "ProjectID = " + projectID;      
     database.SelectColumn(vecTemp, "CentreName", 
@@ -76,19 +77,21 @@ void RoomDetail :: SetDefaultValue()
                 {
                     totalCentres[i] = 1;
                     centreName[i].resize(totalCentres[i]);
+                    roomInfo[i].resize(totalCentres[i]);
                     roomNo[i].resize(totalCentres[i]);          
                     rows[i].resize(totalCentres[i]);
                     columns[i].resize(totalCentres[i]);
                 }
                 vecTemp.clear();
-                database.SelectColumn(vecTemp, "RoomNo",
+                database.SelectColumn(vecTemp, "RoomInfo",
                                       "RoomDetail", where);
                 if(vecTemp.size() > 0)
                 {
-                    roomNo[i].assign(vecTemp.begin(), 
+                    roomInfo[i].assign(vecTemp.begin(), 
                                          vecTemp.end());
                 }
                 vecTemp.clear();
+                /*
                 database.SelectColumn(vecTemp, "Rows",
                                       "RoomDetail", where);
                 if(vecTemp.size() > 0)
@@ -103,7 +106,7 @@ void RoomDetail :: SetDefaultValue()
                 {
                     columns[i].assign(vecTemp.begin(), 
                                          vecTemp.end());
-                }
+                }*/
 
 /*                for(unsigned j = 0; j < centreName[i].size(); j++)
                 {
@@ -132,9 +135,10 @@ void RoomDetail :: SetDefaultValue()
                 columns[i].resize(totalCentres[i]);
 
                 centreName[i][j] = "Centre 1";
-                roomNo[i][j] =  "Room 1, Room 2";
+                roomInfo[i][j]   = "R1:6x6, R2:6x6";
+/*                roomNo[i][j] =  "Room 1, Room 2";
                 rows[i][j]   =  "6, 6";
-                columns[i][j]=  "8, 8";
+                columns[i][j]=  "8, 8";*/
             }
         }
     }
@@ -352,7 +356,7 @@ void RoomDetail :: RoomDetailPage()
 
                 page.InputField("text", fieldName.roomNo,
                                 StringToInt(temp),
-                                "Room No:RowsxCols, R1:6x6");
+                                roomInfo[i][j], roomInfo[i][j]);
                 cout << page.endTD;
  /*
                 cout << page.startTD;
@@ -400,7 +404,7 @@ void RoomDetail :: RoomDetailPage()
                 temp = IntToString(i + 1);
                 temp += IntToString(j + 1);               
                 page.InputField("text", fieldName.roomNo,
-                                StringToInt(temp), "Room 1 : 6 x 7, R2 4x4");
+                                StringToInt(temp), roomInfo[i][j]);
                 cout << page.endTD;
  /*
                 cout << page.startTD;

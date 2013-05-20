@@ -253,14 +253,15 @@ void Database :: InsertRollNoDetail(string projectID, string classID,
 }
 
 void Database :: InsertRoomDetail(string projectID, string dateSheetID,
-                                  string centreName, string roomNo,
+                                  string centreName, string roomInfo,
+                                  string roomNo,
                                   string rows, string cols)
 {
     query  = "insert into RoomDetail(ProjectID, DateSheetID, ";
-    query += "CentreName, RoomNo, Rows, Columns) values(" + 
+    query += "CentreName, RoomInfo, RoomNo, Rows, Columns) values(" + 
              projectID + ", " + dateSheetID + ", \"" + centreName +
-             "\", \"" + roomNo + "\", \"" + rows + "\", \"" + cols +
-             "\");";
+             "\", \"" + roomInfo + "\", \"" + roomNo + "\", \"" + 
+             rows + "\", \"" + cols + "\");";
 
     InsertQuery(query);
 }

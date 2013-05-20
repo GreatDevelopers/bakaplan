@@ -246,7 +246,8 @@ void ExamDetail :: WriteRoomDetail()
         for(j = 0; j < totalCentres[i]; j++)
         {
             database.InsertRoomDetail(projectID, IntToString(k), 
-                                      centreName[i][j], roomNo[i][j],
+                                      centreName[i][j], roomInfo[i][j],
+                                      roomNo[i][j],
                                       rows[i][j], columns[i][j]);
         }
     }
