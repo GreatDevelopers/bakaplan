@@ -68,7 +68,7 @@ void ExamDetail :: SetDefaultValue()
             examTime.resize(totalDays);
             examVenue.resize(totalDays);
             date.resize(totalDays);
-            cout << totalDays;
+//            cout << totalDays;
             for(i = j; i < totalDays; i++)
             {
                 examName[i] = "";
@@ -169,9 +169,9 @@ void ExamDetail :: ReadRoomDetail()
             rows[i][j] = "";
             columns[i][j] = "";*/
             temp = roomInfo[i][j];  // R1:6x6, R2:6x8
-            cout << temp;
+//            cout << temp;
             STRING_VEC room1;
-            int t, a = 0, b = 0;
+            int a = 0, b = 0;
             SplitString(room1, temp, ",");
             for(unsigned k = 0; k < room1.size(); k++)
             {
@@ -180,33 +180,31 @@ void ExamDetail :: ReadRoomDetail()
                 SplitString(room2, temp, ":");  // R1:6x6
                 for(unsigned l = 0; l < room2.size(); l++)
                 {
-
-                    t = room2.size() / 2;
+                    
                     if((l % 2) == 0)
                     {
-                        roomNo[i][j] += room2[l];
-                        if(a <= t )
+                        if(a != 0 )
                             roomNo[i][j] += ",";
                         a++;
+                        roomNo[i][j] += room2[l];
                     }
                     else
                     {
                         STRING_VEC size;
                         temp = room2[l];
                         SplitString(size, temp, "x");   // 6x6
-                        b = 0;
+                        
                         for(unsigned int m = 0; m < size.size(); m++)
-                        {
-//                        t = (size.size() / 2);
-                            rows[i][j] += size[m++];
-                            columns[i][j] += size[m];
-                            
-                            if(m < size.size())
+                        {                          
+                            if(b != 0)
                             {
                                 rows[i][j] += ",";
                                 columns[i][j] += ",";
                             }
                             b++;
+                            rows[i][j] += size[m++];
+                            columns[i][j] += size[m];
+ 
                         }
                     }
                     
