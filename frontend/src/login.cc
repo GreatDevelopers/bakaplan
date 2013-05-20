@@ -140,7 +140,7 @@ void Login :: RegistrationPage(string msg, string emailID)
 
     page.Anchor("login", "Login");
 
-    page.FormStart("FormRegister", "newuser", "POST");
+    page.FormStart("FormEmail", "newuser", "POST");
     
     cout << page.startH1 << " Register New User " << page.endH1 
          <<  page.brk;
@@ -263,7 +263,7 @@ void Login :: ConfirmPage(string msg, string password,
 
         page.Anchor("login", "Login");
 
-        page.FormStart("FormConfirm", "adduser", "POST");
+        page.FormStart("FormSetPassword", "adduser", "POST");
     
         cout << page.startH1 << " Email Confirmed " << page.endH1 
              <<  page.brk
@@ -386,7 +386,7 @@ void Login :: ResetPasswordForm(string type, string msg, string emailID)
 {
     if(type == "1")
     {
-        page.FormStart("FormResetPass", "reset?type=2", "POST");
+        page.FormStart("FormEmail", "reset?type=2", "POST");
     
         cout << page.startH1 << " Enter email to reset pssword " 
              << page.endH1 
@@ -426,7 +426,7 @@ void Login :: ResetPasswordForm(string type, string msg, string emailID)
         else
         {
             msg = "User not registered ";
-            ResetPasswordPage( "1", msg, userEmailID );
+            ResetPasswordForm( "1", msg, userEmailID );
         }
 
     }
@@ -438,7 +438,7 @@ void Login :: ResetPasswordForm(string type, string msg, string emailID)
 
         if ( find(regKey.begin(), regKey.end(), key) != regKey.end() )
         {
-            page.FormStart("FormResetPass", "reset?type=4", "POST");
+            page.FormStart("FormSetPassword", "reset?type=4", "POST");
         
             cout << page.startH1 << " Email Confirmed " << page.endH1 
                  <<  page.brk
