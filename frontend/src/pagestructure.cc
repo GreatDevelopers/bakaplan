@@ -398,7 +398,7 @@ void PageStructureMaker :: InputField(string type,
          << "type=\"" << type << "\" name=\"" << name;
     cout << "\" id = \"" << name << "\" ";
 
-    if(type == "hidden" || type == "radio")
+    if(type == "hidden" || type == "radio" || type == "password")
     {
         cout << "value = \"" << placeholder << "\" ";
     }

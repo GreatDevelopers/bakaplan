@@ -60,7 +60,7 @@ class Login : public InputDetail
         /** Creating login page */
         void LoginPage(string msg = "", 
                        string emailID = "abc@you.com",
-                       string password = "123456");
+                       string password = "");
 
         /** Read Login Detail */
         void ReadLoginDetail();
@@ -75,8 +75,8 @@ class Login : public InputDetail
         /** For selecting emial and password fron user table */
         void SelectLoginDetail();
 
-        void ConfirmPage(string msg = "", string password = "123456",
-                         string retypePassword = "123456");
+        void ConfirmPage(string msg = "", string password = "",
+                         string retypePassword = "");
         /** Add new user */
         void AddUser();
     
