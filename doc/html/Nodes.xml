@@ -1820,7 +1820,7 @@
              <Node>
               <Name>RoomDetailPage</Name>
               <Path>classRoomDetail.html</Path>
-              <Anchor>a22f437f08d38ac6b878450e7d0e43dff</Anchor>
+              <Anchor>ab2c0a691ce4dea82d16f991c66021931</Anchor>
              </Node>
              <Node>
               <Name>SetDefaultValue</Name>
@@ -2225,6 +2225,11 @@
               <Name>WriteStrategyDetail</Name>
               <Path>classValidStrategy.html</Path>
               <Anchor>a093620e19cef0865e6e38a26bb41b8bd</Anchor>
+             </Node>
+             <Node>
+              <Name>addRoom</Name>
+              <Path>classValidStrategy.html</Path>
+              <Anchor>aa18f4ff7dd65ed5702148c192f8627a6</Anchor>
              </Node>
              <Node>
               <Name>selectedStrategy</Name>
@@ -3405,7 +3410,7 @@
                      <Node>
                       <Name>RoomDetailPage</Name>
                       <Path>classRoomDetail.html</Path>
-                      <Anchor>a22f437f08d38ac6b878450e7d0e43dff</Anchor>
+                      <Anchor>ab2c0a691ce4dea82d16f991c66021931</Anchor>
                      </Node>
                      <Node>
                       <Name>SetDefaultValue</Name>
@@ -3525,13 +3530,24 @@
                 </Subnodes>
                </Node>
                <Node>
+                <Name>addroom-main.cpp</Name>
+                <Path>addroom-main_8cpp.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>main</Name>
+                  <Path>addroom-main_8cpp.html</Path>
+                  <Anchor>a568b3afc214ba30be5bf526d6b27b611</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
                 <Name>adduser-main.cpp</Name>
                 <Path>adduser-main_8cpp.html</Path>
                 <Subnodes>
                  <Node>
                   <Name>main</Name>
                   <Path>adduser-main_8cpp.html</Path>
-                  <Anchor>a568b3afc214ba30be5bf526d6b27b611</Anchor>
+                  <Anchor>a840291bc02cba5474a4cb46a9b9566fe</Anchor>
                  </Node>
                 </Subnodes>
                </Node>

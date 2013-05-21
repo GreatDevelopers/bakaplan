@@ -6,10 +6,10 @@
       <APILanguage>c</APILanguage>
       <Type>func</Type>
     </TokenIdentifier>
-    <Path>adduser-main_8cpp.html</Path>
+    <Path>addroom-main_8cpp.html</Path>
     <Anchor>a568b3afc214ba30be5bf526d6b27b611</Anchor>
     <Abstract>Main Method.</Abstract>
-    <DeclaredIn>adduser-main.cpp</DeclaredIn>
+    <DeclaredIn>addroom-main.cpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8466,7 +8466,7 @@
       <Scope>RoomDetail</Scope>
     </TokenIdentifier>
     <Path>classRoomDetail.html</Path>
-    <Anchor>a22f437f08d38ac6b878450e7d0e43dff</Anchor>
+    <Anchor>ab2c0a691ce4dea82d16f991c66021931</Anchor>
     <Abstract>For Taking I/P from user of room details.</Abstract>
     <DeclaredIn>room.h</DeclaredIn>
   </Token>

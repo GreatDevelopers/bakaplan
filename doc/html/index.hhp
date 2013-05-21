@@ -12,6 +12,7 @@ Title=BaKaPlan
 main="BaKaPlan","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
 
 [FILES]
+addroom-main_8cpp_source.html
 adduser-main_8cpp_source.html
 arrangerollno_8cc_source.html
 backend_2datesheet_8cc_source.html
@@ -88,6 +89,7 @@ strategy-main_8cpp_source.html
 validstrategy-main_8cpp_source.html
 validstrategy_8cc_source.html
 README_8md_source.html
+addroom-main_8cpp.html
 adduser-main_8cpp.html
 arrangerollno_8cc.html
 expandrollno_8cc.html

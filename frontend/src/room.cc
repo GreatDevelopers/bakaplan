@@ -48,10 +48,12 @@ void RoomDetail :: SetDefaultValue()
 {
     totalCentres.resize(totalDays);
     centreName.resize(totalDays);
-    roomNo.resize(totalDays);
+/*    roomNo.resize(totalDays);
     rows.resize(totalDays);
-    columns.resize(totalDays);
+    columns.resize(totalDays);*/
     roomInfo.resize(totalDays);
+    date.resize(totalDays);
+    examCode.resize(totalDays);
  
     where = "ProjectID = " + projectID;      
     database.SelectColumn(vecTemp, "CentreName", 
@@ -78,9 +80,9 @@ void RoomDetail :: SetDefaultValue()
                     totalCentres[i] = 1;
                     centreName[i].resize(totalCentres[i]);
                     roomInfo[i].resize(totalCentres[i]);
-                    roomNo[i].resize(totalCentres[i]);          
+/*                    roomNo[i].resize(totalCentres[i]);          
                     rows[i].resize(totalCentres[i]);
-                    columns[i].resize(totalCentres[i]);
+                    columns[i].resize(totalCentres[i]);*/
                 }
                 vecTemp.clear();
                 database.SelectColumn(vecTemp, "RoomInfo",
@@ -91,22 +93,7 @@ void RoomDetail :: SetDefaultValue()
                                          vecTemp.end());
                 }
                 vecTemp.clear();
-                /*
-                database.SelectColumn(vecTemp, "Rows",
-                                      "RoomDetail", where);
-                if(vecTemp.size() > 0)
-                {
-                    rows[i].assign(vecTemp.begin(), 
-                                         vecTemp.end());
-                }
-                vecTemp.clear();
-                database.SelectColumn(vecTemp, "Columns",
-                                      "RoomDetail", where);
-                if(vecTemp.size() > 0)
-                {
-                    columns[i].assign(vecTemp.begin(), 
-                                         vecTemp.end());
-                }*/
+                
 
 /*                for(unsigned j = 0; j < centreName[i].size(); j++)
                 {
@@ -284,7 +271,7 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
                     IntToString(totalDays));
     page.InputField("hidden", fieldName.projectType, projectType);
     page.InputField("hidden", fieldName.sameDetail, sameDetail);
-    
+
     for(i = 0; i < totalDays; i++)
     {
   /*      if(projectType == "Old" || 
@@ -478,8 +465,15 @@ void RoomDetail :: AddMoreRooms()
     totalDays = StringToInt(readField.ReadFieldValue(
                             fieldName.totalDays));
     sameDetail = readField.ReadFieldValue(fieldName.sameDetail);
-
+    
     projectType = "Old";
+    vecTemp.clear();
+    where = "ProjectID = " + projectID;
+    database.SelectColumn(date, "Date", "DateSheet", where);
+    
+    vecTemp.clear();
+    database.SelectColumn(examCode, "ExamCode", "DateSheet", where);
+    vecTemp.clear();
     SetDefaultValue();
     RoomDetailPage(true);
 }
