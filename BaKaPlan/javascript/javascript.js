@@ -489,6 +489,56 @@ function ChangeBorder(field, color)
     document.getElementById(field).style.borderColor = color;
 }
 
+/** Validation exam detail form */
+
+function ValidateExamForm(totalID)
+{
+    try
+    {
+//        alert("Form");
+        var total = document.getElementById(totalID).value;
+
+        var returnFalse;
+
+        var msg = document.getElementById("Error");
+        msg.innerHTML = " ";
+
+        var fieldName = new Array("ExamName", 
+                                  "ExamTime", "ExamVenue");
+        for(i = 0; i < total; i++)
+        {
+            for(j = 0; j < fieldName.size; j++)
+            {
+                var fn = fieldName[j] + (i + 1);
+                alert(fn);
+                var value = document.getElementById(fn).value;
+                if(document.getElementById(fn).value.length == 0)
+                {
+                    emptyMsg = "<br> Fill Empty Fields!<br>";
+                    returnFalse = false;
+//                    ChangeBorder(fn), "red");
+                }
+                else
+                {
+//                    ChangeBorder(fn, "");
+                }
+            }
+        }
+        
+        if (returnFalse == false)
+        {
+            msg.innerHTML += emptyMsg;
+            return false;
+        }
+//        return false;
+    }
+    catch (e)
+    {
+        alert(e)
+        return false;
+    }
+}
+
 /** Function for validating room detail */
 /*
 function ValidateRoomForm(totalID)
@@ -502,8 +552,8 @@ function ValidateRoomForm(totalID)
         var msg = document.getElementById("Error");
         msg.innerHTML = " ";
 
-        var fieldName = new Array("CentreName", "RoomNo", 
-                                  "Rows", "Columns");
+        var fieldName = new Array("CentreName", "RoomNo");//, 
+//                                  "Rows", "Columns");
 
         for( var i = 0; i < parseInt(total); i++)
         {
@@ -515,23 +565,13 @@ function ValidateRoomForm(totalID)
             fn = "TotalCentres" + (i + 1);
             totalCentres = document.getElementById(
                             (fn).value;
-
+            alert(totalCentres);
             for(var j = 0; j < parseInt(totalCentres); j++)
             {
-                centreName = fieldName[0] + (i + 1) + index[j];
-                roomNo = fieldName[1] + (i + 1) + index[j];
-                rows = fieldName[2] + (i + 1) + index[j];
-                cols = fieldName[3] + (i + 1) + index[j];
-
-//                var temp = CompareRoom(roomNo, rows, cols);
-
-//                if(temp == false)
-//                    returnFalse = false;
-
                 // Checking field is empty or not
                 for (var k = 0; k < fieldName.length; k++)
                 {
-                    var fn = fieldName[k] + (i + 1) + index[j];
+                    fn = fieldName[k] + (i + 1) + index[j];
                     if(document.getElementById(fn).value.length == 0)
                     {
                         emptyMsg = "<br> Fill Empty Fields!";

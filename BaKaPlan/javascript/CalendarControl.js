@@ -154,7 +154,7 @@ function CalendarControl() {
       if (month < 10) {month = "0" + month;}
       if (day < 10) {day = "0" + day;}
 
-      var dateString = month+"-"+day+"-"+year;
+      var dateString = year+"-"+month+"-"+day;//day+"-"+year;
       dateField.value = dateString;
       hide();
     }
