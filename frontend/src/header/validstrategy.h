@@ -31,6 +31,7 @@ class ValidStrategy : public InputDetail
     STRING_VEC selectedStrategy, totalSeats, totalGroupSeats, 
                totalStudents, totalGroupStudents;
     STRING_VEC valid;
+    bool addRoom;
 
     public:
         /** Constructor */

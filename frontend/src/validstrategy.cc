@@ -34,6 +34,7 @@ ValidStrategy :: ValidStrategy()
     tableHeading[i++] = " Total Strategy <br> Group Seats ";
     tableHeading[i++] = " Total Strategy <br> Group Students ";
     tableHeading[i++] = " Valid";
+    addRoom = false;
 }
 
 /**
@@ -149,6 +150,9 @@ void ValidStrategy :: ReadValidStrategy()
             valid[i] = "No";
         else
             valid[i] = "Yes";
+
+        if(valid[i] == "No")
+            addRoom = true;
     }
 
 /*
@@ -190,9 +194,14 @@ void ValidStrategy :: ValidStrategyPage()
 
     cout << page.brk;
 
-    page.FormStart("FormValid", "report", "post");
+    if(addRoom == true)
+    {
+        page.FormStart("FormValid", "addroom", "POST");
+    }
+    else    
+        page.FormStart("FormValid", "report", "post");
 
-    cout << page.startH1 << "ValidStrategy Detail" 
+    cout << page.startH1 << "Valid Strategy Detail" 
          << page.endH1 << page.brk;
     
     page.InputField("hidden", fieldName.projectID, projectID);
@@ -239,11 +248,13 @@ void ValidStrategy :: ValidStrategyPage()
 
     cout << page.brk << page.brk;
     
-    if(vecTemp[6] == "Y")
+    if(addRoom == false)
         page.Button("next", "submit", "btn", "NEXT");
     else
+    {
         cout << page.startB << "Add More Rooms" << page.endB;
-
+        page.Button("next", "submit", "btn", "Add Rooms");
+    }
     page.FormEnd();
     page.DivEnd();
 

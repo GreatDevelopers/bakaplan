@@ -43,7 +43,7 @@ class RoomDetail : public InputDetail
         void WriteDateSheet();
 
         /** Room DEtail page for taking I/P from user */
-        void RoomDetailPage();
+        void RoomDetailPage(bool addRoom);
 
         /** Add More rooms if strategy in valid */
         void AddMoreRooms();

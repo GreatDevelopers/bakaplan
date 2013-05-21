@@ -186,7 +186,7 @@ void RoomDetail :: ReadDateSheet()
     }
 
     dateWiseRollNo.Main(projectID);
-    RoomDetailPage();
+    RoomDetailPage(false);
 }
 
 /**
@@ -249,7 +249,7 @@ void RoomDetail :: WriteDateSheet()
  *      \brief  For Taking I/P from user of room details
  */
 
-void RoomDetail :: RoomDetailPage()
+void RoomDetail :: RoomDetailPage(bool addRoom)
 {
 //    page.ContentType();
 
@@ -263,8 +263,16 @@ void RoomDetail :: RoomDetailPage()
 
     cout << page.brk;
 
-    page.FormStart("FormRoom", "exam", "POST",
-                    "return ValidateRoomForm(\"TotalDays\")");
+    if(addRoom == true)
+    {
+        page.FormStart("FormRoom", "validstrategy", "POST",
+                        "return ValidateRoomForm(\"TotalDays\")");
+    }
+    else
+    {
+        page.FormStart("FormRoom", "exam", "POST",
+                        "return ValidateRoomForm(\"TotalDays\")");
+    }
 
     cout << page.startH1 << "Room Detail" 
          << page.endH1 << page.brk;
@@ -463,7 +471,17 @@ void RoomDetail :: RoomDetailPage()
 
 void RoomDetail :: AddMoreRooms()
 {
+    page.ContentType();
+ 
+    projectID = readField.ReadFieldValue(fieldName.projectID);
+//    projectType = readField.ReadFieldValue(fieldName.projectType);
+    totalDays = StringToInt(readField.ReadFieldValue(
+                            fieldName.totalDays));
+    sameDetail = readField.ReadFieldValue(fieldName.sameDetail);
 
+    projectType = "Old";
+    SetDefaultValue();
+    RoomDetailPage(true);
 }
 
 /**

@@ -70,10 +70,10 @@ ROOM        =  room
 STRATEGY    =  strategy
 VALIDSTRATEGY  =  validstrategy
 REPORT      =  report
-
 READINPUT     =  readinput                                            
 EXPANDROLLNO  =  expandrollno                                         
 ARRANGEROLLNO =  arrangerollno
+ADDROOM       =  addroom
 
 #   File Extention variables
 
@@ -209,6 +209,8 @@ D_EXAM_M        =   $(EXAM)$(MAIN)$(CPP) $(H_EXAM)
 
 D_ROOM_M        =   $(ROOM)$(MAIN)$(CPP) $(H_ROOM)
 
+D_ADDROOM_M     =   $(ADDROOM)$(MAIN)$(CPP) $(H_ROOM)
+
 D_STRATEGY_M    =   $(STRATEGY)$(MAIN)$(CPP) $(H_STRATEGY)
 
 D_VALIDSTRATEGY_M  =   $(VALIDSTRATEGY)$(MAIN)$(CPP) $(H_VALIDSTRATEGY)
@@ -253,6 +255,9 @@ L_DATESHEET    =  $(DATESHEET)$(MAIN)$(O) $(DATESHEET)$(O) $(L_INPUT)
 L_EXAM         =  $(EXAM)$(MAIN)$(O) $(EXAM)$(O) $(L_INPUT)
 
 L_ROOM        :=  $(ROOM)$(MAIN)$(O) $(ROOM)$(O) $(L_INPUT) \
+                  $(L_B_DATESHEET)
+
+L_ADDROOM     :=  $(ADDROOM)$(MAIN)$(O) $(ROOM)$(O) $(L_INPUT) \
                   $(L_B_DATESHEET)
 
 L_STRATEGY     =  $(STRATEGY)$(MAIN)$(O) $(STRATEGY)$(O) $(L_INPUT)

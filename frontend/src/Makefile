@@ -25,7 +25,7 @@ include Make.common
 #   Targets
 # ====================================================================
 
-all: back $(F_BP)$(LOGIN)$(HTML) $(F_BP)$(REGISTER)$(HTML) $(F_BP)$(RESET)$(HTML) $(F_BP)$(NEWUSER)$(HTML) $(F_BP)$(CONFIRM)$(HTML) $(F_BP)$(ADDUSER)$(HTML) $(F_BP)$(PROJECT)$(HTML) $(F_BP)$(LOGOUT)$(HTML) $(F_BP)$(CLASS)$(HTML) $(F_BP)$(ROLLNO)$(HTML) $(F_BP)$(DATESHEET)$(HTML) $(F_BP)$(EXAM)$(HTML) $(F_BP)$(ROOM)$(HTML) $(F_BP)$(STRATEGY)$(HTML) $(F_BP)$(VALIDSTRATEGY)$(HTML) $(F_BP)$(REPORT)$(HTML)
+all: back $(F_BP)$(LOGIN)$(HTML) $(F_BP)$(REGISTER)$(HTML) $(F_BP)$(RESET)$(HTML) $(F_BP)$(NEWUSER)$(HTML) $(F_BP)$(CONFIRM)$(HTML) $(F_BP)$(ADDUSER)$(HTML) $(F_BP)$(PROJECT)$(HTML) $(F_BP)$(LOGOUT)$(HTML) $(F_BP)$(CLASS)$(HTML) $(F_BP)$(ROLLNO)$(HTML) $(F_BP)$(DATESHEET)$(HTML) $(F_BP)$(EXAM)$(HTML) $(F_BP)$(ADDROOM)$(HTML) $(F_BP)$(ROOM)$(HTML) $(F_BP)$(STRATEGY)$(HTML) $(F_BP)$(VALIDSTRATEGY)$(HTML) $(F_BP)$(REPORT)$(HTML)
 
 back:
 	make -C backend
@@ -130,6 +130,9 @@ $(EXAM)$(MAIN)$(O) : $(D_EXAM_M)
 $(ROOM)$(MAIN)$(O) : $(D_ROOM_M)
 	$(CXX) $(CFLAG) $(ROOM)$(MAIN)$(CPP) $(LMYSQL)
 
+$(ADDROOM)$(MAIN)$(O) : $(D_ADDROOM_M)
+	$(CXX) $(CFLAG) $(ADDROOM)$(MAIN)$(CPP) $(LMYSQL)
+
 $(STRATEGY)$(MAIN)$(O) : $(D_STRATEGY_M)
 	$(CXX) $(CFLAG) $(STRATEGY)$(MAIN)$(CPP) $(LMYSQL)
 
@@ -191,6 +194,10 @@ $(F_BP)$(EXAM)$(HTML) : $(L_EXAM)
 
 $(F_BP)$(ROOM)$(HTML) : $(L_ROOM)
 	$(CXX) $(OFLAG) $(F_BP)$(ROOM)$(HTML) $(L_ROOM) \
+	$(LMYSQL) $(LCGICC) $(LSMTP)
+
+$(F_BP)$(ADDROOM)$(HTML) : $(L_ADDROOM)
+	$(CXX) $(OFLAG) $(F_BP)$(ADDROOM)$(HTML) $(L_ADDROOM) \
 	$(LMYSQL) $(LCGICC) $(LSMTP)
 
 $(F_BP)$(STRATEGY)$(HTML) : $(L_STRATEGY)
