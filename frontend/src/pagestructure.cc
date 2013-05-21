@@ -419,7 +419,7 @@ void PageStructureMaker :: InputField(string type,
     {
         cout << "onfocus = \"showCalendarControl(this);\" ";
     }
-    cout << "/>" << endl;
+    cout << "required=\"yes\" />" << endl;
 }
 
 /**

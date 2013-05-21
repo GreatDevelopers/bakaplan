@@ -45,6 +45,9 @@ class RoomDetail : public InputDetail
         /** Room DEtail page for taking I/P from user */
         void RoomDetailPage();
 
+        /** Add More rooms if strategy in valid */
+        void AddMoreRooms();
+
         /** Desctructor */
         ~RoomDetail();
 };

@@ -38,9 +38,11 @@ void \hyperlink{classDatabase_ad0052cd5a48f5ba3233395096ba6e422}{Insert\-Class\-
 \item 
 void \hyperlink{classDatabase_a91882082bd5309ba21d7250f0877ab39}{Insert\-Roll\-No\-Detail} (string project\-I\-D, string class\-I\-D, string prefix, string start\-R\-No, string end\-R\-No, string not\-Included)
 \item 
-void \hyperlink{classDatabase_a5730dcdace3989ed7187ca3f6e054ef7}{Insert\-Room\-Detail} (string project\-I\-D, string date\-Sheet\-I\-D, string centre\-Name, string room\-No, string rows, string cols)
+void \hyperlink{classDatabase_a27092ca18e5f95b2808e54ad89c6ca35}{Insert\-Room\-Detail} (string project\-I\-D, string date\-Sheet\-I\-D, string room\-Info, string centre\-Name, string room\-No, string rows, string cols)
 \item 
 void \hyperlink{classDatabase_a8a13b478ab9c5c9fabc07b9513530bc0}{Insert\-Strategy\-Detail} (string project\-I\-D, string date\-Sheet\-I\-D, string strategy\-Name)
+\item 
+void \hyperlink{classDatabase_ae20d8dbfb3d8755cd4cf508a503fd9b6}{Insert\-Valid\-Strategy} (string project\-I\-D, string date\-I\-D, string date, string selected\-Strategy, string total\-Seats, string total\-Students, string total\-Group\-Seats, string total\-Group\-Students)
 \item 
 void \hyperlink{classDatabase_ab410079853d849a9104be0689abee878}{Insert\-Date\-Sheet} (string project\-I\-D, string date, string exam\-Code)
 \item 
@@ -123,7 +125,7 @@ Select last project Id of project name \hyperlink{classDatabase}{Database} Destr
 
  Class\-: \hyperlink{classDatabase}{Database} Method\-: \hyperlink{classDatabase}{Database} \-:\-: \hyperlink{classDatabase_a84d399a2ad58d69daab9b05330e1316d}{$\sim$\-Database()} \subsubsection*{Description\-: Destructor for closing database connectivity}
 
-Definition at line 328 of file database.\-cc.
+Definition at line 348 of file database.\-cc.
 
 
 
@@ -176,7 +178,7 @@ Definition at line 231 of file database.\-cc.
 )}}\label{classDatabase_ab410079853d849a9104be0689abee878}
 Insert \hyperlink{classDateSheet}{Date\-Sheet} 
 
-Definition at line 279 of file database.\-cc.
+Definition at line 299 of file database.\-cc.
 
 \hypertarget{classDatabase_a1c68383f46e3c3026ff53aeb4e5f76ab}{\index{Database@{Database}!Insert\-Exam\-Detail@{Insert\-Exam\-Detail}}
 \index{Insert\-Exam\-Detail@{Insert\-Exam\-Detail}!Database@{Database}}
@@ -192,7 +194,7 @@ Definition at line 279 of file database.\-cc.
 )}}\label{classDatabase_a1c68383f46e3c3026ff53aeb4e5f76ab}
 Insert Exam Detail 
 
-Definition at line 289 of file database.\-cc.
+Definition at line 309 of file database.\-cc.
 
 \hypertarget{classDatabase_a12b1d8ae6998720ad1842382ef5aa6cc}{\index{Database@{Database}!Insert\-Project\-Detail@{Insert\-Project\-Detail}}
 \index{Insert\-Project\-Detail@{Insert\-Project\-Detail}!Database@{Database}}
@@ -285,18 +287,19 @@ Insert Roll\-No detail
 
 Definition at line 243 of file database.\-cc.
 
-\hypertarget{classDatabase_a5730dcdace3989ed7187ca3f6e054ef7}{\index{Database@{Database}!Insert\-Room\-Detail@{Insert\-Room\-Detail}}
+\hypertarget{classDatabase_a27092ca18e5f95b2808e54ad89c6ca35}{\index{Database@{Database}!Insert\-Room\-Detail@{Insert\-Room\-Detail}}
 \index{Insert\-Room\-Detail@{Insert\-Room\-Detail}!Database@{Database}}
 \subsubsection[{Insert\-Room\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Insert\-Room\-Detail (
 \begin{DoxyParamCaption}
 \item[{string}]{project\-I\-D, }
 \item[{string}]{date\-Sheet\-I\-D, }
+\item[{string}]{room\-Info, }
 \item[{string}]{centre\-Name, }
 \item[{string}]{room\-No, }
 \item[{string}]{rows, }
 \item[{string}]{cols}
 \end{DoxyParamCaption}
-)}}\label{classDatabase_a5730dcdace3989ed7187ca3f6e054ef7}
+)}}\label{classDatabase_a27092ca18e5f95b2808e54ad89c6ca35}
 Insert Room Detail 
 
 Definition at line 255 of file database.\-cc.
@@ -311,7 +314,7 @@ Definition at line 255 of file database.\-cc.
 )}}\label{classDatabase_a61963a0b66aca78ffa950b22ee959c47}
 Insert Session Detail 
 
-Definition at line 302 of file database.\-cc.
+Definition at line 322 of file database.\-cc.
 
 \hypertarget{classDatabase_a8a13b478ab9c5c9fabc07b9513530bc0}{\index{Database@{Database}!Insert\-Strategy\-Detail@{Insert\-Strategy\-Detail}}
 \index{Insert\-Strategy\-Detail@{Insert\-Strategy\-Detail}!Database@{Database}}
@@ -324,7 +327,7 @@ Definition at line 302 of file database.\-cc.
 )}}\label{classDatabase_a8a13b478ab9c5c9fabc07b9513530bc0}
 Insert \hyperlink{classStrategy}{Strategy} Detail 
 
-Definition at line 268 of file database.\-cc.
+Definition at line 288 of file database.\-cc.
 
 \hypertarget{classDatabase_ac2a20fd57ba7a51f819446e799d7100f}{\index{Database@{Database}!Insert\-User\-Detail@{Insert\-User\-Detail}}
 \index{Insert\-User\-Detail@{Insert\-User\-Detail}!Database@{Database}}
@@ -350,6 +353,24 @@ Insert User Detail into database
 
 
 Definition at line 179 of file database.\-cc.
+
+\hypertarget{classDatabase_ae20d8dbfb3d8755cd4cf508a503fd9b6}{\index{Database@{Database}!Insert\-Valid\-Strategy@{Insert\-Valid\-Strategy}}
+\index{Insert\-Valid\-Strategy@{Insert\-Valid\-Strategy}!Database@{Database}}
+\subsubsection[{Insert\-Valid\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Insert\-Valid\-Strategy (
+\begin{DoxyParamCaption}
+\item[{string}]{project\-I\-D, }
+\item[{string}]{date\-I\-D, }
+\item[{string}]{date, }
+\item[{string}]{selected\-Strategy, }
+\item[{string}]{total\-Seats, }
+\item[{string}]{total\-Students, }
+\item[{string}]{total\-Group\-Seats, }
+\item[{string}]{total\-Group\-Students}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_ae20d8dbfb3d8755cd4cf508a503fd9b6}
+insert \hyperlink{classStrategy}{Strategy} detail -\/ Valid or Not 
+
+Definition at line 269 of file database.\-cc.
 
 \hypertarget{classDatabase_ab790a68bd8fdbd36133d56ca21ec45d0}{\index{Database@{Database}!Query@{Query}}
 \index{Query@{Query}!Database@{Database}}
@@ -449,7 +470,7 @@ Definition at line 84 of file database.\-cc.
 )}}\label{classDatabase_af237df2de117cf94e23d288ad3345ca0}
 Select sum of data entry in table of specific project\-I\-D 
 
-Definition at line 310 of file database.\-cc.
+Definition at line 330 of file database.\-cc.
 
 \hypertarget{classDatabase_adab1d6cc97c8b14e9d170d5659a92d3e}{\index{Database@{Database}!Update\-Query@{Update\-Query}}
 \index{Update\-Query@{Update\-Query}!Database@{Database}}

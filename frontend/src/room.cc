@@ -461,6 +461,11 @@ void RoomDetail :: RoomDetailPage()
 
 }
 
+void RoomDetail :: AddMoreRooms()
+{
+
+}
+
 /**
  *      \class  RoomDetail
  *      \fn     RoomDetail :: ~RoomDetail()

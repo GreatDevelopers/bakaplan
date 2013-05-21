@@ -96,10 +96,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad0052cd5a48f5ba3233395096ba6e422"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91882082bd5309ba21d7250f0877ab39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a91882082bd5309ba21d7250f0877ab39">InsertRollNoDetail</a> (string projectID, string classID, string prefix, string startRNo, string endRNo, string notIncluded)</td></tr>
 <tr class="separator:a91882082bd5309ba21d7250f0877ab39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5730dcdace3989ed7187ca3f6e054ef7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a5730dcdace3989ed7187ca3f6e054ef7">InsertRoomDetail</a> (string projectID, string dateSheetID, string centreName, string roomNo, string rows, string cols)</td></tr>
-<tr class="separator:a5730dcdace3989ed7187ca3f6e054ef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27092ca18e5f95b2808e54ad89c6ca35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a27092ca18e5f95b2808e54ad89c6ca35">InsertRoomDetail</a> (string projectID, string dateSheetID, string roomInfo, string centreName, string roomNo, string rows, string cols)</td></tr>
+<tr class="separator:a27092ca18e5f95b2808e54ad89c6ca35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a13b478ab9c5c9fabc07b9513530bc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a8a13b478ab9c5c9fabc07b9513530bc0">InsertStrategyDetail</a> (string projectID, string dateSheetID, string strategyName)</td></tr>
 <tr class="separator:a8a13b478ab9c5c9fabc07b9513530bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae20d8dbfb3d8755cd4cf508a503fd9b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#ae20d8dbfb3d8755cd4cf508a503fd9b6">InsertValidStrategy</a> (string projectID, string dateID, string date, string selectedStrategy, string totalSeats, string totalStudents, string totalGroupSeats, string totalGroupStudents)</td></tr>
+<tr class="separator:ae20d8dbfb3d8755cd4cf508a503fd9b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab410079853d849a9104be0689abee878"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#ab410079853d849a9104be0689abee878">InsertDateSheet</a> (string projectID, string date, string examCode)</td></tr>
 <tr class="separator:ab410079853d849a9104be0689abee878"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c68383f46e3c3026ff53aeb4e5f76ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a1c68383f46e3c3026ff53aeb4e5f76ab">InsertExamDetail</a> (string projectID, string dateSheetID, string examName, string examSession, string examTime, string examVenue)</td></tr>
@@ -183,7 +185,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
 <p> Class: <a class="el" href="classDatabase.html">Database</a> Method: <a class="el" href="classDatabase.html">Database</a> :: <a class="el" href="classDatabase.html#a84d399a2ad58d69daab9b05330e1316d">~Database()</a> </p>
 <h2>Description: Destructor for closing database connectivity</h2>
 
-<p>Definition at line <a class="el" href="database_8cc_source.html#l00328">328</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
+<p>Definition at line <a class="el" href="database_8cc_source.html#l00348">348</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
 
 </div>
 </div>
@@ -297,7 +299,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
 </div><div class="memdoc">
 <p>Insert <a class="el" href="classDateSheet.html" title="DateSheet class for reading datesheet detail, class detail and create datesheet.out file for seating ...">DateSheet</a> </p>
 
-<p>Definition at line <a class="el" href="database_8cc_source.html#l00279">279</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
+<p>Definition at line <a class="el" href="database_8cc_source.html#l00299">299</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
 
 </div>
 </div>
@@ -350,7 +352,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
 </div><div class="memdoc">
 <p>Insert Exam Detail </p>
 
-<p>Definition at line <a class="el" href="database_8cc_source.html#l00289">289</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
+<p>Definition at line <a class="el" href="database_8cc_source.html#l00309">309</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
 
 </div>
 </div>
@@ -532,7 +534,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5730dcdace3989ed7187ca3f6e054ef7"></a>
+<a class="anchor" id="a27092ca18e5f95b2808e54ad89c6ca35"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -547,6 +549,12 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
           <td></td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>dateSheetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>roomInfo</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -610,7 +618,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
 </div><div class="memdoc">
 <p>Insert Session Detail </p>
 
-<p>Definition at line <a class="el" href="database_8cc_source.html#l00302">302</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
+<p>Definition at line <a class="el" href="database_8cc_source.html#l00322">322</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
 
 </div>
 </div>
@@ -645,7 +653,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
 </div><div class="memdoc">
 <p>Insert <a class="el" href="classStrategy.html" title="Strategy class to check selected strategy is valid or not for seating plan.">Strategy</a> Detail </p>
 
-<p>Definition at line <a class="el" href="database_8cc_source.html#l00268">268</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
+<p>Definition at line <a class="el" href="database_8cc_source.html#l00288">288</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
 
 </div>
 </div>
@@ -684,6 +692,71 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="database_8cc_source.html#l00179">179</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae20d8dbfb3d8755cd4cf508a503fd9b6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Database::InsertValidStrategy </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>projectID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dateID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>date</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>selectedStrategy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>totalSeats</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>totalStudents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>totalGroupSeats</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>totalGroupStudents</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>insert <a class="el" href="classStrategy.html" title="Strategy class to check selected strategy is valid or not for seating plan.">Strategy</a> detail - Valid or Not </p>
+
+<p>Definition at line <a class="el" href="database_8cc_source.html#l00269">269</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
 
 </div>
 </div>
@@ -856,7 +929,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
 </div><div class="memdoc">
 <p>Select sum of data entry in table of specific projectID </p>
 
-<p>Definition at line <a class="el" href="database_8cc_source.html#l00310">310</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
+<p>Definition at line <a class="el" href="database_8cc_source.html#l00330">330</a> of file <a class="el" href="database_8cc_source.html">database.cc</a>.</p>
 
 </div>
 </div>
@@ -955,7 +1028,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>query</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 19 2013 20:38:38 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 21 2013 08:57:47 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

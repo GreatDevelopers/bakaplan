@@ -112,6 +112,24 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aac23ca61c16d79b48603a7db96617003"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac23ca61c16d79b48603a7db96617003"></a>
 <a class="el" href="classStrategy.html">Strategy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>validStrategy</b></td></tr>
 <tr class="separator:aac23ca61c16d79b48603a7db96617003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0400bdc1d25df2a613d50ed02c537eb2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0400bdc1d25df2a613d50ed02c537eb2"></a>
+STRING_VEC&#160;</td><td class="memItemRight" valign="bottom"><b>selectedStrategy</b></td></tr>
+<tr class="separator:a0400bdc1d25df2a613d50ed02c537eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad34fa679672d7685af9678e6c579e800"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad34fa679672d7685af9678e6c579e800"></a>
+STRING_VEC&#160;</td><td class="memItemRight" valign="bottom"><b>totalSeats</b></td></tr>
+<tr class="separator:ad34fa679672d7685af9678e6c579e800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7344a7cf32192fa494ed9dd6784c509e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7344a7cf32192fa494ed9dd6784c509e"></a>
+STRING_VEC&#160;</td><td class="memItemRight" valign="bottom"><b>totalGroupSeats</b></td></tr>
+<tr class="separator:a7344a7cf32192fa494ed9dd6784c509e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d0e361e6ed28a83332bebf66ab018e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d0e361e6ed28a83332bebf66ab018e2"></a>
+STRING_VEC&#160;</td><td class="memItemRight" valign="bottom"><b>totalStudents</b></td></tr>
+<tr class="separator:a4d0e361e6ed28a83332bebf66ab018e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d947570307ce9d87d35f699ee10cae6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d947570307ce9d87d35f699ee10cae6"></a>
+STRING_VEC&#160;</td><td class="memItemRight" valign="bottom"><b>totalGroupStudents</b></td></tr>
+<tr class="separator:a4d947570307ce9d87d35f699ee10cae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66d7ba02a423a08f4f0af7c714787e76"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66d7ba02a423a08f4f0af7c714787e76"></a>
+STRING_VEC&#160;</td><td class="memItemRight" valign="bottom"><b>valid</b></td></tr>
+<tr class="separator:a66d7ba02a423a08f4f0af7c714787e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classInputDetail"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classInputDetail')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classInputDetail.html">InputDetail</a></td></tr>
 <tr class="memitem:a2e9226db1b744de4bf406398f48cf962 inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e9226db1b744de4bf406398f48cf962"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>i</b></td></tr>
@@ -215,6 +233,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>rowIndex</b></td></
 <tr class="separator:aa203edbcfd4083624dbc4dc055c1e6e5 inherit pro_attribs_classInputDetail"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8563f1b6c4d2e74a9b8421a12585395c inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top">STRING_2DVEC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#a8563f1b6c4d2e74a9b8421a12585395c">columns</a></td></tr>
 <tr class="separator:a8563f1b6c4d2e74a9b8421a12585395c inherit pro_attribs_classInputDetail"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7472fa615f318a2553b750529c3a4b0e inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top">STRING_2DVEC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputDetail.html#a7472fa615f318a2553b750529c3a4b0e">roomInfo</a></td></tr>
+<tr class="separator:a7472fa615f318a2553b750529c3a4b0e inherit pro_attribs_classInputDetail"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09dcf8264ffc09609448e32b0f27bd9a inherit pro_attribs_classInputDetail"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09dcf8264ffc09609448e32b0f27bd9a"></a>
 INT_VEC&#160;</td><td class="memItemRight" valign="bottom"><b>totalSubjects</b></td></tr>
 <tr class="separator:a09dcf8264ffc09609448e32b0f27bd9a inherit pro_attribs_classInputDetail"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -299,7 +319,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Destructor. </p>
 <p>desrtuctor </p>
 
-<p>Definition at line <a class="el" href="validstrategy_8cc_source.html#l00229">229</a> of file <a class="el" href="validstrategy_8cc_source.html">validstrategy.cc</a>.</p>
+<p>Definition at line <a class="el" href="validstrategy_8cc_source.html#l00260">260</a> of file <a class="el" href="validstrategy_8cc_source.html">validstrategy.cc</a>.</p>
 
 </div>
 </div>
@@ -320,7 +340,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reading strategy value from last page. </p>
 <p>Read <a class="el" href="classStrategy.html" title="Strategy class to check selected strategy is valid or not for seating plan.">Strategy</a> Detail </p>
 
-<p>Definition at line <a class="el" href="validstrategy_8cc_source.html#l00046">46</a> of file <a class="el" href="validstrategy_8cc_source.html">validstrategy.cc</a>.</p>
+<p>Definition at line <a class="el" href="validstrategy_8cc_source.html#l00045">45</a> of file <a class="el" href="validstrategy_8cc_source.html">validstrategy.cc</a>.</p>
 
 </div>
 </div>
@@ -340,7 +360,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reading validation file for checking strategy is valid or not. </p>
 <p>Read ValidStrategy.out file </p>
 
-<p>Definition at line <a class="el" href="validstrategy_8cc_source.html#l00131">131</a> of file <a class="el" href="validstrategy_8cc_source.html">validstrategy.cc</a>.</p>
+<p>Definition at line <a class="el" href="validstrategy_8cc_source.html#l00130">130</a> of file <a class="el" href="validstrategy_8cc_source.html">validstrategy.cc</a>.</p>
 
 </div>
 </div>
@@ -360,7 +380,7 @@ Additional Inherited Members</h2></td></tr>
 <p>ValidStrategy.html page. </p>
 <p><a class="el" href="classValidStrategy.html">ValidStrategy</a> Page </p>
 
-<p>Definition at line <a class="el" href="validstrategy_8cc_source.html#l00158">158</a> of file <a class="el" href="validstrategy_8cc_source.html">validstrategy.cc</a>.</p>
+<p>Definition at line <a class="el" href="validstrategy_8cc_source.html#l00181">181</a> of file <a class="el" href="validstrategy_8cc_source.html">validstrategy.cc</a>.</p>
 
 </div>
 </div>
@@ -380,7 +400,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Write strategy detail into DB. </p>
 <p>Write <a class="el" href="classStrategy.html" title="Strategy class to check selected strategy is valid or not for seating plan.">Strategy</a> Detail </p>
 
-<p>Definition at line <a class="el" href="validstrategy_8cc_source.html#l00080">80</a> of file <a class="el" href="validstrategy_8cc_source.html">validstrategy.cc</a>.</p>
+<p>Definition at line <a class="el" href="validstrategy_8cc_source.html#l00079">79</a> of file <a class="el" href="validstrategy_8cc_source.html">validstrategy.cc</a>.</p>
 
 </div>
 </div>
@@ -391,7 +411,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 19 2013 20:38:40 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 21 2013 08:57:49 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

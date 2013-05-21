@@ -334,7 +334,8 @@ void ExamDetail :: ExamDetailPage()
 
     cout << page.brk;
 
-    page.FormStart("FormExam", "strategy", "POST");
+    page.FormStart("FormExam", "strategy", "POST",
+                   "return ValidateExamForm(\"TotalDays\")");
 
     cout << page.startH1 << "Exam Detail" 
          << page.endH1 << page.brk;

@@ -1195,6 +1195,16 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>roomInfo</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>InputDetail</Scope>
+    </TokenIdentifier>
+    <Path>classInputDetail.html</Path>
+    <Anchor>a7472fa615f318a2553b750529c3a4b0e</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>fieldName</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
@@ -1424,7 +1434,7 @@
       <Scope>Database</Scope>
     </TokenIdentifier>
     <Path>classDatabase.html</Path>
-    <Anchor>a5730dcdace3989ed7187ca3f6e054ef7</Anchor>
+    <Anchor>a27092ca18e5f95b2808e54ad89c6ca35</Anchor>
     <DeclaredIn>database.h</DeclaredIn>
   </Token>
   <Token>
@@ -1436,6 +1446,17 @@
     </TokenIdentifier>
     <Path>classDatabase.html</Path>
     <Anchor>a8a13b478ab9c5c9fabc07b9513530bc0</Anchor>
+    <DeclaredIn>database.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>InsertValidStrategy</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Database</Scope>
+    </TokenIdentifier>
+    <Path>classDatabase.html</Path>
+    <Anchor>ae20d8dbfb3d8755cd4cf508a503fd9b6</Anchor>
     <DeclaredIn>database.h</DeclaredIn>
   </Token>
   <Token>
@@ -2428,6 +2449,16 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>roomInfo</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>InputDetail</Scope>
+    </TokenIdentifier>
+    <Path>classInputDetail.html</Path>
+    <Anchor>a7472fa615f318a2553b750529c3a4b0e</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>rollNo</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
@@ -3119,6 +3150,16 @@
     </TokenIdentifier>
     <Path>classInputDetail.html</Path>
     <Anchor>a8563f1b6c4d2e74a9b8421a12585395c</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>roomInfo</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>InputDetail</Scope>
+    </TokenIdentifier>
+    <Path>classInputDetail.html</Path>
+    <Anchor>a7472fa615f318a2553b750529c3a4b0e</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -4170,6 +4211,16 @@
     </TokenIdentifier>
     <Path>classInputDetail.html</Path>
     <Anchor>a8563f1b6c4d2e74a9b8421a12585395c</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>roomInfo</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>InputDetail</Scope>
+    </TokenIdentifier>
+    <Path>classInputDetail.html</Path>
+    <Anchor>a7472fa615f318a2553b750529c3a4b0e</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5337,6 +5388,16 @@
     </TokenIdentifier>
     <Path>classInputDetail.html</Path>
     <Anchor>a8563f1b6c4d2e74a9b8421a12585395c</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>roomInfo</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>InputDetail</Scope>
+    </TokenIdentifier>
+    <Path>classInputDetail.html</Path>
+    <Anchor>a7472fa615f318a2553b750529c3a4b0e</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7678,6 +7739,16 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>roomInfo</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>InputDetail</Scope>
+    </TokenIdentifier>
+    <Path>classInputDetail.html</Path>
+    <Anchor>a7472fa615f318a2553b750529c3a4b0e</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>RollNoDetail</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
@@ -8322,6 +8393,16 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>roomInfo</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>InputDetail</Scope>
+    </TokenIdentifier>
+    <Path>classInputDetail.html</Path>
+    <Anchor>a7472fa615f318a2553b750529c3a4b0e</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>RoomDetail</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
@@ -8387,6 +8468,17 @@
     <Path>classRoomDetail.html</Path>
     <Anchor>a22f437f08d38ac6b878450e7d0e43dff</Anchor>
     <Abstract>For Taking I/P from user of room details.</Abstract>
+    <DeclaredIn>room.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AddMoreRooms</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>instm</Type>
+      <Scope>RoomDetail</Scope>
+    </TokenIdentifier>
+    <Path>classRoomDetail.html</Path>
+    <Anchor>ac4d4701717acda86a95c68ef5abbab28</Anchor>
     <DeclaredIn>room.h</DeclaredIn>
   </Token>
   <Token>
@@ -8921,6 +9013,16 @@
     </TokenIdentifier>
     <Path>classInputDetail.html</Path>
     <Anchor>a8563f1b6c4d2e74a9b8421a12585395c</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>roomInfo</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>InputDetail</Scope>
+    </TokenIdentifier>
+    <Path>classInputDetail.html</Path>
+    <Anchor>a7472fa615f318a2553b750529c3a4b0e</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -10738,6 +10840,16 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>roomInfo</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>InputDetail</Scope>
+    </TokenIdentifier>
+    <Path>classInputDetail.html</Path>
+    <Anchor>a7472fa615f318a2553b750529c3a4b0e</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>ValidStrategy</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
@@ -11338,6 +11450,16 @@
     </TokenIdentifier>
     <Path>classInputDetail.html</Path>
     <Anchor>a8563f1b6c4d2e74a9b8421a12585395c</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>roomInfo</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>InputDetail</Scope>
+    </TokenIdentifier>
+    <Path>classInputDetail.html</Path>
+    <Anchor>a7472fa615f318a2553b750529c3a4b0e</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>

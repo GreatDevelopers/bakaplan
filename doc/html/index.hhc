@@ -51,10 +51,11 @@
       <LI><OBJECT type="text/sitemap"><param name="Name" value="InsertRegistrationDetail"><param name="Local" value="classDatabase.html#a0da52e0b3d6e36d0833da38a01e592ea"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="InsertResetPassword"><param name="Local" value="classDatabase.html#a1ff67f74b3c9c7893880cfefda1dc692"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="InsertRollNoDetail"><param name="Local" value="classDatabase.html#a91882082bd5309ba21d7250f0877ab39"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="InsertRoomDetail"><param name="Local" value="classDatabase.html#a5730dcdace3989ed7187ca3f6e054ef7"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="InsertRoomDetail"><param name="Local" value="classDatabase.html#a27092ca18e5f95b2808e54ad89c6ca35"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="InsertSessionDetail"><param name="Local" value="classDatabase.html#a61963a0b66aca78ffa950b22ee959c47"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="InsertStrategyDetail"><param name="Local" value="classDatabase.html#a8a13b478ab9c5c9fabc07b9513530bc0"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="InsertUserDetail"><param name="Local" value="classDatabase.html#ac2a20fd57ba7a51f819446e799d7100f"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="InsertValidStrategy"><param name="Local" value="classDatabase.html#ae20d8dbfb3d8755cd4cf508a503fd9b6"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="Query"><param name="Local" value="classDatabase.html#ab790a68bd8fdbd36133d56ca21ec45d0"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="SelectColumn"><param name="Local" value="classDatabase.html#a52049c686ad213533bdb1c4f2ac3c157"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="SelectProjectID"><param name="Local" value="classDatabase.html#a20f7ccadac8f3b67d4344f7da4594eda"><param name="ImageNumber" value="11"></OBJECT>
@@ -152,6 +153,7 @@
       <LI><OBJECT type="text/sitemap"><param name="Name" value="projectType"><param name="Local" value="classInputDetail.html#ad2c46fdc8093eb88e01497e55b2e8e4d"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="readField"><param name="Local" value="classInputDetail.html#ac0cc70b017ef94fb55acb46fc44f0df5"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="rmNo"><param name="Local" value="classInputDetail.html#a01a2dbec27704527002029a9ed8bb35f"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="roomInfo"><param name="Local" value="classInputDetail.html#a7472fa615f318a2553b750529c3a4b0e"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="roomNo"><param name="Local" value="classInputDetail.html#a3193354764ba0b44b2eb4b366b4c273a"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="row"><param name="Local" value="classInputDetail.html#a2ecfc489098c98cf26d22ca422572a0f"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="rowIndex"><param name="Local" value="classInputDetail.html#a8294712a038ec4934eec54c835b20d23"><param name="ImageNumber" value="11"></OBJECT>
@@ -397,6 +399,7 @@
       <UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="RoomDetail"><param name="Local" value="classRoomDetail.html#acbbb21580bc1591daf23e614011acc06"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="~RoomDetail"><param name="Local" value="classRoomDetail.html#ae65b9b167e75a7dc994c4e2021937c68"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="AddMoreRooms"><param name="Local" value="classRoomDetail.html#ac4d4701717acda86a95c68ef5abbab28"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="ReadDateSheet"><param name="Local" value="classRoomDetail.html#ab8a07fd05ab314e85b374191e38e8556"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="RoomDetailPage"><param name="Local" value="classRoomDetail.html#a22f437f08d38ac6b878450e7d0e43dff"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="SetDefaultValue"><param name="Local" value="classRoomDetail.html#a117bed37b0f95b364b7133fe13afa9b7"><param name="ImageNumber" value="11"></OBJECT>
@@ -465,6 +468,7 @@
       <LI><OBJECT type="text/sitemap"><param name="Name" value="CheckValidation"><param name="Local" value="classStrategy.html#a6d6c096543de16317252cf9ae1572e2e"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="ChooseStrategy"><param name="Local" value="classStrategy.html#a26160fe07397c93179a75270056ca1a0"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="GroupCondition"><param name="Local" value="classStrategy.html#a7e76aa724063b44a471679eabb31e011"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="IntToString"><param name="Local" value="classStrategy.html#ab92d15ccf4d4d775f4bf9636248fba8f"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="Main"><param name="Local" value="classStrategy.html#a7d4c0323880066ee2815a3b3f20b61ea"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="ReadExamDetail"><param name="Local" value="classStrategy.html#abb7a716f8403d4ec3d5d127f789ba6ba"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="SetDefaultValue"><param name="Local" value="classStrategy.html#a5ae1ee77d05ad12afedef648f583328a"><param name="ImageNumber" value="11"></OBJECT>
@@ -473,6 +477,8 @@
       <LI><OBJECT type="text/sitemap"><param name="Name" value="TotalSeats"><param name="Local" value="classStrategy.html#a5d95968da6695ddc108341c2402d0be4"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="TotalStudents"><param name="Local" value="classStrategy.html#aeb83d384bc21ef9a4e522f890cfd2a72"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="WriteExamDetail"><param name="Local" value="classStrategy.html#a3825da44242fdf8442ffbd9cfd922803"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="db"><param name="Local" value="classStrategy.html#a542e7c73e393d4bfb1c11a2c243a21b3"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ss"><param name="Local" value="classStrategy.html#a190510a0a4957ac947ce5a09d2f7dad8"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="strategyName"><param name="Local" value="classStrategy.html#ae6c656d6bf12b37ad7ddf523b1eb1123"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="totalStrategy"><param name="Local" value="classStrategy.html#ace5cccbe2419bb086f0e0e5dd481b298"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
@@ -484,6 +490,12 @@
       <LI><OBJECT type="text/sitemap"><param name="Name" value="ReadValidStrategy"><param name="Local" value="classValidStrategy.html#a234ca3ab5aa4684306148afa47b6860b"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="ValidStrategyPage"><param name="Local" value="classValidStrategy.html#ad89451a935f815b4c85b595135d70d94"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="WriteStrategyDetail"><param name="Local" value="classValidStrategy.html#a093620e19cef0865e6e38a26bb41b8bd"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="selectedStrategy"><param name="Local" value="classValidStrategy.html#a0400bdc1d25df2a613d50ed02c537eb2"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="totalGroupSeats"><param name="Local" value="classValidStrategy.html#a7344a7cf32192fa494ed9dd6784c509e"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="totalGroupStudents"><param name="Local" value="classValidStrategy.html#a4d947570307ce9d87d35f699ee10cae6"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="totalSeats"><param name="Local" value="classValidStrategy.html#ad34fa679672d7685af9678e6c579e800"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="totalStudents"><param name="Local" value="classValidStrategy.html#a4d0e361e6ed28a83332bebf66ab018e2"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="valid"><param name="Local" value="classValidStrategy.html#a66d7ba02a423a08f4f0af7c714787e76"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="validStrategy"><param name="Local" value="classValidStrategy.html#aac23ca61c16d79b48603a7db96617003"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
     </UL>
@@ -783,6 +795,7 @@
               <UL>
               <LI><OBJECT type="text/sitemap"><param name="Name" value="RoomDetail"><param name="Local" value="classRoomDetail.html#acbbb21580bc1591daf23e614011acc06"><param name="ImageNumber" value="11"></OBJECT>
               <LI><OBJECT type="text/sitemap"><param name="Name" value="~RoomDetail"><param name="Local" value="classRoomDetail.html#ae65b9b167e75a7dc994c4e2021937c68"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="AddMoreRooms"><param name="Local" value="classRoomDetail.html#ac4d4701717acda86a95c68ef5abbab28"><param name="ImageNumber" value="11"></OBJECT>
               <LI><OBJECT type="text/sitemap"><param name="Name" value="ReadDateSheet"><param name="Local" value="classRoomDetail.html#ab8a07fd05ab314e85b374191e38e8556"><param name="ImageNumber" value="11"></OBJECT>
               <LI><OBJECT type="text/sitemap"><param name="Name" value="RoomDetailPage"><param name="Local" value="classRoomDetail.html#a22f437f08d38ac6b878450e7d0e43dff"><param name="ImageNumber" value="11"></OBJECT>
               <LI><OBJECT type="text/sitemap"><param name="Name" value="SetDefaultValue"><param name="Local" value="classRoomDetail.html#a117bed37b0f95b364b7133fe13afa9b7"><param name="ImageNumber" value="11"></OBJECT>

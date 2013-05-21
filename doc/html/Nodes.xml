@@ -207,7 +207,7 @@
              <Node>
               <Name>InsertRoomDetail</Name>
               <Path>classDatabase.html</Path>
-              <Anchor>a5730dcdace3989ed7187ca3f6e054ef7</Anchor>
+              <Anchor>a27092ca18e5f95b2808e54ad89c6ca35</Anchor>
              </Node>
              <Node>
               <Name>InsertSessionDetail</Name>
@@ -223,6 +223,11 @@
               <Name>InsertUserDetail</Name>
               <Path>classDatabase.html</Path>
               <Anchor>ac2a20fd57ba7a51f819446e799d7100f</Anchor>
+             </Node>
+             <Node>
+              <Name>InsertValidStrategy</Name>
+              <Path>classDatabase.html</Path>
+              <Anchor>ae20d8dbfb3d8755cd4cf508a503fd9b6</Anchor>
              </Node>
              <Node>
               <Name>Query</Name>
@@ -670,6 +675,11 @@
               <Name>rmNo</Name>
               <Path>classInputDetail.html</Path>
               <Anchor>a01a2dbec27704527002029a9ed8bb35f</Anchor>
+             </Node>
+             <Node>
+              <Name>roomInfo</Name>
+              <Path>classInputDetail.html</Path>
+              <Anchor>a7472fa615f318a2553b750529c3a4b0e</Anchor>
              </Node>
              <Node>
               <Name>roomNo</Name>
@@ -1798,6 +1808,11 @@
               <Anchor>ae65b9b167e75a7dc994c4e2021937c68</Anchor>
              </Node>
              <Node>
+              <Name>AddMoreRooms</Name>
+              <Path>classRoomDetail.html</Path>
+              <Anchor>ac4d4701717acda86a95c68ef5abbab28</Anchor>
+             </Node>
+             <Node>
               <Name>ReadDateSheet</Name>
               <Path>classRoomDetail.html</Path>
               <Anchor>ab8a07fd05ab314e85b374191e38e8556</Anchor>
@@ -2111,6 +2126,11 @@
               <Anchor>a7e76aa724063b44a471679eabb31e011</Anchor>
              </Node>
              <Node>
+              <Name>IntToString</Name>
+              <Path>classStrategy.html</Path>
+              <Anchor>ab92d15ccf4d4d775f4bf9636248fba8f</Anchor>
+             </Node>
+             <Node>
               <Name>Main</Name>
               <Path>classStrategy.html</Path>
               <Anchor>a7d4c0323880066ee2815a3b3f20b61ea</Anchor>
@@ -2149,6 +2169,16 @@
               <Name>WriteExamDetail</Name>
               <Path>classStrategy.html</Path>
               <Anchor>a3825da44242fdf8442ffbd9cfd922803</Anchor>
+             </Node>
+             <Node>
+              <Name>db</Name>
+              <Path>classStrategy.html</Path>
+              <Anchor>a542e7c73e393d4bfb1c11a2c243a21b3</Anchor>
+             </Node>
+             <Node>
+              <Name>ss</Name>
+              <Path>classStrategy.html</Path>
+              <Anchor>a190510a0a4957ac947ce5a09d2f7dad8</Anchor>
              </Node>
              <Node>
               <Name>strategyName</Name>
@@ -2195,6 +2225,36 @@
               <Name>WriteStrategyDetail</Name>
               <Path>classValidStrategy.html</Path>
               <Anchor>a093620e19cef0865e6e38a26bb41b8bd</Anchor>
+             </Node>
+             <Node>
+              <Name>selectedStrategy</Name>
+              <Path>classValidStrategy.html</Path>
+              <Anchor>a0400bdc1d25df2a613d50ed02c537eb2</Anchor>
+             </Node>
+             <Node>
+              <Name>totalGroupSeats</Name>
+              <Path>classValidStrategy.html</Path>
+              <Anchor>a7344a7cf32192fa494ed9dd6784c509e</Anchor>
+             </Node>
+             <Node>
+              <Name>totalGroupStudents</Name>
+              <Path>classValidStrategy.html</Path>
+              <Anchor>a4d947570307ce9d87d35f699ee10cae6</Anchor>
+             </Node>
+             <Node>
+              <Name>totalSeats</Name>
+              <Path>classValidStrategy.html</Path>
+              <Anchor>ad34fa679672d7685af9678e6c579e800</Anchor>
+             </Node>
+             <Node>
+              <Name>totalStudents</Name>
+              <Path>classValidStrategy.html</Path>
+              <Anchor>a4d0e361e6ed28a83332bebf66ab018e2</Anchor>
+             </Node>
+             <Node>
+              <Name>valid</Name>
+              <Path>classValidStrategy.html</Path>
+              <Anchor>a66d7ba02a423a08f4f0af7c714787e76</Anchor>
              </Node>
              <Node>
               <Name>validStrategy</Name>
@@ -3331,6 +3391,11 @@
                       <Name>~RoomDetail</Name>
                       <Path>classRoomDetail.html</Path>
                       <Anchor>ae65b9b167e75a7dc994c4e2021937c68</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>AddMoreRooms</Name>
+                      <Path>classRoomDetail.html</Path>
+                      <Anchor>ac4d4701717acda86a95c68ef5abbab28</Anchor>
                      </Node>
                      <Node>
                       <Name>ReadDateSheet</Name>
