@@ -68,11 +68,15 @@ void SendMail :: SetHTMLMessage(string regKey, string mail)
         htmlMessage += "to confirm your Email by clicking following link.";
         htmlMessage += "</br></br>" + url + "</br></br>";
     }
-    else
+    else if(mail == "reset")
     {
         htmlMessage += "To rest your password, you need ";
         htmlMessage += "to confirm your Email by clicking following link.";
         htmlMessage += "</br></br>" + url + "</br></br>";
+    }
+    else if(mail == "contact")
+    {
+        htmlMessage += regKey;
     }
 
     htmlMessage += "</body> </html>";
@@ -120,6 +124,27 @@ void SendMail :: ResetPasswordMail(string setRecipient, string regKey)
     mail.setserver(setServer);
 
     SetHTMLMessage(regKey, "reset");
+    
+    mail.setmessageHTML(htmlMessage);
+
+    mail.send();
+
+}
+void SendMail :: ContactMail(string setSender, string msg)
+{
+    SetMailData();
+
+    setSubject  =   "BaKaPlan : Feedback";
+    string setRecipient = SENDER_EMAILID;
+
+    mailer mail;
+    mail.addrecipient(setRecipient);
+    mail.setsender(setSender);
+    mail.setsubject(setSubject);
+    mail.setmessage(setMessage);
+    mail.setserver(setServer);
+
+    SetHTMLMessage(msg, "contact");
     
     mail.setmessageHTML(htmlMessage);
 

@@ -59,6 +59,7 @@ class SendMail
         /** Function for sending mail to new user(registeration link) */
         void RegistrationMail(string setRecipient, string regKey);
         void ResetPasswordMail(string setRecipient, string regKey);
+        void ContactMail(string setSender, string msg);
         /** Desrtuctor */
         ~SendMail();
     
