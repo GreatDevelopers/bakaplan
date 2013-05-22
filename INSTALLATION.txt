@@ -13,7 +13,7 @@ After this open terminal and run following commands
 
 Now edit database details
 
-Open ~/public_html/cgi-bin/bakaplan/frontend/header/database-detail.h
+Open ~/public_html/cgi-bin/bakaplan/frontend/src/header/database-detail.h
 
 Add your details and save file
 

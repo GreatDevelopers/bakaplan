@@ -121,7 +121,7 @@ Follow steps to install
     $ cd jwsmtp-X.X.X
     $ ./configure
     $ make
-    $ make install
+    $ sudo make install
 
     NOTE: If you got error in */mailer.cpp or */demo2.cpp file then
     include string header file in that. And again run make
