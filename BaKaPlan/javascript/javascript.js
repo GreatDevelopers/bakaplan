@@ -638,3 +638,48 @@ function CompareRoom(roomNo, rows, cols)
         ChangeBorder(cols1, "");
     }
 }*/
+
+/** Validation exam detail form */
+
+function ValidateStrategyForm(totalID)
+{
+    try
+    {
+//        alert("Form");
+        var total = document.getElementById(totalID).value;
+
+        var returnFalse, emptyMsg = "";
+
+        var msg = document.getElementById("Error");
+        msg.innerHTML = " ";
+
+        for(i = 0; i < total; i++)
+        {
+            var fn = "StrategyChoice" + (i + 1);
+              
+            var selIndex = document.getElementById(fn).selectedIndex;
+            var selValue = document.getElementsByTagName(
+                           "option")[selIndex].value;
+            if(selValue == "0")
+            {
+                emptyMsg = "<br> Fill Exam Session <br>";
+                returnFalse = false;
+            }
+        }
+        
+        if (returnFalse == false)
+        {
+            msg.innerHTML += emptyMsg;
+            return false;
+        }
+//        return false;
+    }
+    catch (e)
+    {
+        alert(e)
+        return false;
+    }
+
+}
+
+

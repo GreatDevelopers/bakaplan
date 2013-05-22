@@ -201,7 +201,8 @@ void Strategy :: StrategyPage()
 
     cout << page.brk;
 
-    page.FormStart("FormStrategy", "validstrategy", "post");
+    page.FormStart("FormStrategy", "validstrategy", "post",
+                   "return ValidateStrategyForm(\"TotalDays\")");
 
     cout << page.startH1 << "Strategy" 
          << page.endH1 << page.brk;
@@ -212,6 +213,8 @@ void Strategy :: StrategyPage()
     page.InputField("hidden", fieldName.projectType, projectType);
     page.InputField("hidden", fieldName.sameDetail, sameDetail);
     page.InputField("hidden", "AddRoom", "False");
+
+    ErrorMessage(msg);
 
     page.TableStart("TableStrategy", "");
     cout << page.startTR;
