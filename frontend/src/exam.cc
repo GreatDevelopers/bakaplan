@@ -419,7 +419,7 @@ void ExamDetail :: ExamDetailPage()
             temp = fieldName.examSession + IntToString(j);
             page.SelectFieldStart(temp);
         
-            page.SelectOptionStart("select", "y");
+            page.SelectOptionStart(" ", "y");
             cout << "Select";
             page.SelectOptionEnd();
             page.SelectOptionStart("Morming", "n");
@@ -487,7 +487,7 @@ void ExamDetail :: ExamDetailPage()
             }*/
             
             cout << page.startTD;
-            page.InputField("time", fieldName.examTime, j, "Time");
+            page.InputField("text", fieldName.examTime, j, "Time");
                             //examTime[i]);
             cout << page.endTD;
             
