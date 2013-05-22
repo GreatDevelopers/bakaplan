@@ -504,7 +504,7 @@ function ValidateExamForm(totalID)
         msg.innerHTML = " ";
 
         var fieldName = new Array("ExamName",
-                                  "ExamTime", "ExamVenue");
+                                  "StartTime", "EndTime", "ExamVenue");
         for(i = 0; i < total; i++)
         {
 //            alert(fieldName.size);
