@@ -1055,6 +1055,11 @@
               <Anchor>a79ea5bbaeaa2ec6d21cd3195c522b863</Anchor>
              </Node>
              <Node>
+              <Name>IndexPage</Name>
+              <Path>classLogin.html</Path>
+              <Anchor>aa73be2f0600a29169609315dcc43db0a</Anchor>
+             </Node>
+             <Node>
               <Name>LoginPage</Name>
               <Path>classLogin.html</Path>
               <Anchor>a2b2b36f506bcb5e7179b0b3afe164ace</Anchor>
