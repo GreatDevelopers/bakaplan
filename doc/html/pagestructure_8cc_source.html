@@ -261,96 +261,100 @@
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    {</div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;value = \&quot;&quot;</span> &lt;&lt; placeholder &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    }</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(type == <span class="stringliteral">&quot;button&quot;</span>)</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(type == <span class="stringliteral">&quot;password&quot;</span>)</div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    {</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;value = \&quot;&quot;</span> &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span></div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;             &lt;&lt; <span class="stringliteral">&quot;onclick = \&quot;&quot;</span> &lt;&lt; placeholder &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    }</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    {</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;placeholder = \&quot;&quot;</span> &lt;&lt; placeholder &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        <span class="keywordflow">if</span>(value != <span class="stringliteral">&quot;&quot;</span>)    </div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        {</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;value = \&quot;&quot;</span> &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        }</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    }</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <span class="keywordflow">if</span>(onFocus == <span class="stringliteral">&quot;date&quot;</span> &amp;&amp; type == <span class="stringliteral">&quot;text&quot;</span>)</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    {</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;onfocus = \&quot;showCalendarControl(this);\&quot; &quot;</span>;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;value = \&quot;\&quot; &quot;</span>;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    }</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(type == <span class="stringliteral">&quot;button&quot;</span>)</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    {</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;value = \&quot;&quot;</span> &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span></div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;             &lt;&lt; <span class="stringliteral">&quot;onclick = \&quot;&quot;</span> &lt;&lt; placeholder &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    }</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    {</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;placeholder = \&quot;&quot;</span> &lt;&lt; placeholder &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <span class="keywordflow">if</span>(value != <span class="stringliteral">&quot;&quot;</span>)    </div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        {</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;value = \&quot;&quot;</span> &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        }</div>
 <div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    }</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;required=\&quot;yes\&quot; /&gt;&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;}</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
-<div class="line"><a name="l00435"></a><span class="lineno"><a class="code" href="classPageStructureMaker.html#af528f8da142cbc47585c4dfeded873ba">  435</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">PageStructureMaker :: InputField</a>(<span class="keywordtype">string</span> type, <span class="keywordtype">string</span> name, </div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;                                      <span class="keywordtype">int</span> nameNo, <span class="keywordtype">string</span> placeholder,</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;                                      <span class="keywordtype">string</span> value)</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;{</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    stringstream ss;</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="comment">//ss.str(name);</span></div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="keywordtype">string</span> onFocus;</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <span class="keywordflow">if</span>(name == <span class="stringliteral">&quot;Date&quot;</span>)</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;        onFocus = <span class="stringliteral">&quot;date&quot;</span>;</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keywordflow">else</span> </div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;        onFocus = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160; </div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    ss &lt;&lt; nameNo;</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    name += ss.str();   </div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    </div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="keywordflow">if</span>(value == <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        <a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(type, name, placeholder, value, onFocus);</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        <a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(type, name, placeholder, value, onFocus);</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <span class="comment">/*  </span></div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="comment">    cout &lt;&lt; &quot;&lt;input type=\&quot;&quot; &lt;&lt; type &lt;&lt; &quot;\&quot; name=\&quot;&quot; &lt;&lt; name;</span></div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;<span class="comment">    if( nameNo != 0)</span></div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;<span class="comment">        cout &lt;&lt; nameNo;</span></div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;<span class="comment">    cout &lt;&lt; &quot;\&quot;&quot; &lt;&lt; &quot; value = \&quot;&quot; &lt;&lt; value &lt;&lt; &quot;\&quot; &quot;</span></div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="comment">         &lt;&lt; &quot; onfocus = \&quot;OnFocus(this.value, this.name, \&quot;&quot; &lt;&lt; value </span></div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;<span class="comment">         &lt;&lt; &quot;\&quot;)\&quot;&quot;</span></div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;<span class="comment">         &lt;&lt; &quot;&gt;&quot; &lt;&lt; endl;*/</span></div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;}</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;</div>
-<div class="line"><a name="l00473"></a><span class="lineno"><a class="code" href="classPageStructureMaker.html#ae8684bb66ca463e2f92e09c96137f9e3">  473</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#ae8684bb66ca463e2f92e09c96137f9e3">PageStructureMaker :: SelectFieldStart</a>(<span class="keywordtype">string</span> name)</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;{</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;&lt;select name=\&quot;&quot;</span> &lt;&lt; name &lt;&lt; <span class="stringliteral">&quot;\&quot;&gt;&quot;</span>;</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;}</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;</div>
-<div class="line"><a name="l00486"></a><span class="lineno"><a class="code" href="classPageStructureMaker.html#a81eb3cdbc840a4c8165cef87330ade09">  486</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a81eb3cdbc840a4c8165cef87330ade09">PageStructureMaker :: SelectFieldEnd</a>()</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;{</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;&lt;/select&gt;&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;}</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;</div>
-<div class="line"><a name="l00500"></a><span class="lineno"><a class="code" href="classPageStructureMaker.html#a77856078e74dab25329132ea07466f92">  500</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a77856078e74dab25329132ea07466f92">PageStructureMaker :: SelectOptionStart</a>(<span class="keywordtype">string</span> value, <span class="keywordtype">string</span> selected)</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;{</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;&lt;option value=\&quot;&quot;</span> &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    <span class="keywordflow">if</span>(selected == <span class="stringliteral">&quot;y&quot;</span> || selected == <span class="stringliteral">&quot;Y&quot;</span>)</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;selected&quot;</span>;</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot; &gt; &quot;</span>;<span class="comment">// &lt;&lt; value &lt;&lt; &quot;&lt;/option&gt;&quot;;</span></div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;}</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;</div>
-<div class="line"><a name="l00516"></a><span class="lineno"><a class="code" href="classPageStructureMaker.html#a7682f479f7f1012d426ec9f9535def60">  516</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a7682f479f7f1012d426ec9f9535def60">PageStructureMaker :: SelectOptionEnd</a>()</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;{</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;&lt;/option&gt;&quot;</span>;</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;}</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;</div>
-<div class="line"><a name="l00530"></a><span class="lineno"><a class="code" href="classPageStructureMaker.html#a53c013b1d6251be853be8f6c413e3455">  530</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a53c013b1d6251be853be8f6c413e3455">PageStructureMaker :: Button</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <span class="keywordtype">string</span> type, </div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                            <span class="keywordtype">string</span> className, <span class="keywordtype">string</span> value, </div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;                            <span class="keywordtype">string</span> onClick)</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;{</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;&lt;button id = \&quot;&quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="stringliteral">&quot;\&quot; type = \&quot;&quot;</span> &lt;&lt; type </div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;         &lt;&lt; <span class="stringliteral">&quot;\&quot; class=\&quot;&quot;</span> &lt;&lt; className &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    <span class="keywordflow">if</span>(onClick != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;onClick = \&quot;&quot;</span> &lt;&lt; onClick &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;         </div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;&gt;&quot;</span> &lt;&lt; value</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;         &lt;&lt; <span class="stringliteral">&quot;&lt;/button&gt;&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;}</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="keywordflow">if</span>(onFocus == <span class="stringliteral">&quot;date&quot;</span> &amp;&amp; type == <span class="stringliteral">&quot;text&quot;</span>)</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    {</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;onfocus = \&quot;showCalendarControl(this);\&quot; &quot;</span>;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    }</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot; /&gt;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;}</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;</div>
+<div class="line"><a name="l00439"></a><span class="lineno"><a class="code" href="classPageStructureMaker.html#af528f8da142cbc47585c4dfeded873ba">  439</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">PageStructureMaker :: InputField</a>(<span class="keywordtype">string</span> type, <span class="keywordtype">string</span> name, </div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;                                      <span class="keywordtype">int</span> nameNo, <span class="keywordtype">string</span> placeholder,</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;                                      <span class="keywordtype">string</span> value)</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;{</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    stringstream ss;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    <span class="comment">//ss.str(name);</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    <span class="keywordtype">string</span> onFocus;</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <span class="keywordflow">if</span>(name == <span class="stringliteral">&quot;Date&quot;</span>)</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        onFocus = <span class="stringliteral">&quot;date&quot;</span>;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <span class="keywordflow">else</span> </div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        onFocus = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    ss &lt;&lt; nameNo;</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    name += ss.str();   </div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    </div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <span class="keywordflow">if</span>(value == <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;        <a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(type, name, placeholder, value, onFocus);</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        <a class="code" href="classPageStructureMaker.html#a5e5876babd4602e5c799d3f551c7b779">InputField</a>(type, name, placeholder, value, onFocus);</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="comment">/*  </span></div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="comment">    cout &lt;&lt; &quot;&lt;input type=\&quot;&quot; &lt;&lt; type &lt;&lt; &quot;\&quot; name=\&quot;&quot; &lt;&lt; name;</span></div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;<span class="comment">    if( nameNo != 0)</span></div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;<span class="comment">        cout &lt;&lt; nameNo;</span></div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span class="comment">    cout &lt;&lt; &quot;\&quot;&quot; &lt;&lt; &quot; value = \&quot;&quot; &lt;&lt; value &lt;&lt; &quot;\&quot; &quot;</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;<span class="comment">         &lt;&lt; &quot; onfocus = \&quot;OnFocus(this.value, this.name, \&quot;&quot; &lt;&lt; value </span></div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;<span class="comment">         &lt;&lt; &quot;\&quot;)\&quot;&quot;</span></div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="comment">         &lt;&lt; &quot;&gt;&quot; &lt;&lt; endl;*/</span></div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;}</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;</div>
+<div class="line"><a name="l00477"></a><span class="lineno"><a class="code" href="classPageStructureMaker.html#ae8684bb66ca463e2f92e09c96137f9e3">  477</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#ae8684bb66ca463e2f92e09c96137f9e3">PageStructureMaker :: SelectFieldStart</a>(<span class="keywordtype">string</span> name)</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;{</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;&lt;select name=\&quot;&quot;</span> &lt;&lt; name &lt;&lt; <span class="stringliteral">&quot;\&quot; id = \&quot;&quot;</span> + name +<span class="stringliteral">&quot;\&quot; &gt;&quot;</span>;</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;}</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;</div>
+<div class="line"><a name="l00490"></a><span class="lineno"><a class="code" href="classPageStructureMaker.html#a81eb3cdbc840a4c8165cef87330ade09">  490</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a81eb3cdbc840a4c8165cef87330ade09">PageStructureMaker :: SelectFieldEnd</a>()</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;{</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;&lt;/select&gt;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;}</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;</div>
+<div class="line"><a name="l00504"></a><span class="lineno"><a class="code" href="classPageStructureMaker.html#a77856078e74dab25329132ea07466f92">  504</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a77856078e74dab25329132ea07466f92">PageStructureMaker :: SelectOptionStart</a>(<span class="keywordtype">string</span> value, <span class="keywordtype">string</span> selected)</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;{</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;&lt;option value=\&quot;&quot;</span> &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    <span class="keywordflow">if</span>(selected == <span class="stringliteral">&quot;y&quot;</span> || selected == <span class="stringliteral">&quot;Y&quot;</span>)</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;selected&quot;</span>;</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot; &gt; &quot;</span>;<span class="comment">// &lt;&lt; value &lt;&lt; &quot;&lt;/option&gt;&quot;;</span></div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;}</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;</div>
+<div class="line"><a name="l00520"></a><span class="lineno"><a class="code" href="classPageStructureMaker.html#a7682f479f7f1012d426ec9f9535def60">  520</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a7682f479f7f1012d426ec9f9535def60">PageStructureMaker :: SelectOptionEnd</a>()</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;{</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;&lt;/option&gt;&quot;</span>;</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;}</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;</div>
+<div class="line"><a name="l00534"></a><span class="lineno"><a class="code" href="classPageStructureMaker.html#a53c013b1d6251be853be8f6c413e3455">  534</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPageStructureMaker.html#a53c013b1d6251be853be8f6c413e3455">PageStructureMaker :: Button</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <span class="keywordtype">string</span> type, </div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;                            <span class="keywordtype">string</span> className, <span class="keywordtype">string</span> value, </div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;                            <span class="keywordtype">string</span> onClick)</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;{</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;&lt;button id = \&quot;&quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="stringliteral">&quot;\&quot; type = \&quot;&quot;</span> &lt;&lt; type </div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;         &lt;&lt; <span class="stringliteral">&quot;\&quot; class=\&quot;&quot;</span> &lt;&lt; className &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    <span class="keywordflow">if</span>(onClick != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;onClick = \&quot;&quot;</span> &lt;&lt; onClick &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;         </div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;&gt;&quot;</span> &lt;&lt; value</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;         &lt;&lt; <span class="stringliteral">&quot;&lt;/button&gt;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 21 2013 20:47:41 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 22 2013 10:57:43 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

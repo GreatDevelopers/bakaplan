@@ -233,8 +233,8 @@
       <LI><OBJECT type="text/sitemap"><param name="Name" value="Login"><param name="Local" value="classLogin.html#a4847f3e07e43b540d3339392346f87ff"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="~Login"><param name="Local" value="classLogin.html#a659bc7233ec12c79b9fa523c1734fbbc"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="AddUser"><param name="Local" value="classLogin.html#ac91737b2085d0b7e8943f49f2d08a0ff"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="ConfirmPage"><param name="Local" value="classLogin.html#a38f58197839dc8918425f69399ed5f8f"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="LoginPage"><param name="Local" value="classLogin.html#a97d84b3e5739041149d87774cb239fc6"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ConfirmPage"><param name="Local" value="classLogin.html#a79ea5bbaeaa2ec6d21cd3195c522b863"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="LoginPage"><param name="Local" value="classLogin.html#a2b2b36f506bcb5e7179b0b3afe164ace"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="LogoutPage"><param name="Local" value="classLogin.html#a153d72df8d3333317e60219e8f6b8257"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="NewUser"><param name="Local" value="classLogin.html#ae4f139afcb706f09b337befd123d5e18"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="ReadLoginDetail"><param name="Local" value="classLogin.html#ab5bc65de431f277f15a3b423ad915808"><param name="ImageNumber" value="11"></OBJECT>
@@ -448,6 +448,7 @@
       <UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="SendMail"><param name="Local" value="classSendMail.html#ae0d11ddeda1ae7ae1cc3b8f11678ed92"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="~SendMail"><param name="Local" value="classSendMail.html#acc86b2a9995472436dbd77b3c6bb91f3"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ContactMail"><param name="Local" value="classSendMail.html#a3d918a3f54b3a9be68fe732e9d5de43f"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="RegistrationMail"><param name="Local" value="classSendMail.html#a4c9983852dbcd1eb07170582761ed559"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="ResetPasswordMail"><param name="Local" value="classSendMail.html#a56180b5a27efd4d43514f91008b280ef"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="SetHTMLMessage"><param name="Local" value="classSendMail.html#a89c5a5bace5c21014b8184db5707b986"><param name="ImageNumber" value="11"></OBJECT>
@@ -486,6 +487,7 @@
       <UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="ValidStrategy"><param name="Local" value="classValidStrategy.html#ae168db88ebfa1eabdd7f241a631ffc27"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="~ValidStrategy"><param name="Local" value="classValidStrategy.html#aec9e6ff1c9e9058a17f5488fe3e6cfec"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ReadRoomDetail"><param name="Local" value="classValidStrategy.html#acf1a8763ec29b441c822a9ab8c80dc4b"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="ReadStrategyDetail"><param name="Local" value="classValidStrategy.html#ae8b17f98d81f8f70d974139086495dfa"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="ReadValidStrategy"><param name="Local" value="classValidStrategy.html#a234ca3ab5aa4684306148afa47b6860b"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="ValidStrategyPage"><param name="Local" value="classValidStrategy.html#ad89451a935f815b4c85b595135d70d94"><param name="ImageNumber" value="11"></OBJECT>
@@ -510,7 +512,10 @@
       <UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="ClassDetail"><param name="Local" value="classClassDetail.html"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="DateSheet"><param name="Local" value="classDateSheet.html"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="ExamDetail"><param name="Local" value="classExamDetail.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ExamDetail"><param name="Local" value="classExamDetail.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ValidStrategy"><param name="Local" value="classValidStrategy.html"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="Login"><param name="Local" value="classLogin.html"><param name="ImageNumber" value="1"></OBJECT>
         <UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="ProjectDetail"><param name="Local" value="classProjectDetail.html"><param name="ImageNumber" value="11"></OBJECT>
@@ -519,7 +524,6 @@
       <LI><OBJECT type="text/sitemap"><param name="Name" value="RollNoDetail"><param name="Local" value="classRollNoDetail.html"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="RoomDetail"><param name="Local" value="classRoomDetail.html"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="Strategy"><param name="Local" value="classStrategy.html"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="ValidStrategy"><param name="Local" value="classValidStrategy.html"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="InputFieldName"><param name="Local" value="classInputFieldName.html"><param name="ImageNumber" value="11"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="JavaScript"><param name="Local" value="classJavaScript.html"><param name="ImageNumber" value="11"></OBJECT>
@@ -815,6 +819,7 @@
               <UL>
               <LI><OBJECT type="text/sitemap"><param name="Name" value="SendMail"><param name="Local" value="classSendMail.html#ae0d11ddeda1ae7ae1cc3b8f11678ed92"><param name="ImageNumber" value="11"></OBJECT>
               <LI><OBJECT type="text/sitemap"><param name="Name" value="~SendMail"><param name="Local" value="classSendMail.html#acc86b2a9995472436dbd77b3c6bb91f3"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="ContactMail"><param name="Local" value="classSendMail.html#a3d918a3f54b3a9be68fe732e9d5de43f"><param name="ImageNumber" value="11"></OBJECT>
               <LI><OBJECT type="text/sitemap"><param name="Name" value="RegistrationMail"><param name="Local" value="classSendMail.html#a4c9983852dbcd1eb07170582761ed559"><param name="ImageNumber" value="11"></OBJECT>
               <LI><OBJECT type="text/sitemap"><param name="Name" value="ResetPasswordMail"><param name="Local" value="classSendMail.html#a56180b5a27efd4d43514f91008b280ef"><param name="ImageNumber" value="11"></OBJECT>
               <LI><OBJECT type="text/sitemap"><param name="Name" value="SetHTMLMessage"><param name="Local" value="classSendMail.html#a89c5a5bace5c21014b8184db5707b986"><param name="ImageNumber" value="11"></OBJECT>

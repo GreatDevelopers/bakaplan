@@ -1052,12 +1052,12 @@
              <Node>
               <Name>ConfirmPage</Name>
               <Path>classLogin.html</Path>
-              <Anchor>a38f58197839dc8918425f69399ed5f8f</Anchor>
+              <Anchor>a79ea5bbaeaa2ec6d21cd3195c522b863</Anchor>
              </Node>
              <Node>
               <Name>LoginPage</Name>
               <Path>classLogin.html</Path>
-              <Anchor>a97d84b3e5739041149d87774cb239fc6</Anchor>
+              <Anchor>a2b2b36f506bcb5e7179b0b3afe164ace</Anchor>
              </Node>
              <Node>
               <Name>LogoutPage</Name>
@@ -2035,6 +2035,11 @@
               <Anchor>acc86b2a9995472436dbd77b3c6bb91f3</Anchor>
              </Node>
              <Node>
+              <Name>ContactMail</Name>
+              <Path>classSendMail.html</Path>
+              <Anchor>a3d918a3f54b3a9be68fe732e9d5de43f</Anchor>
+             </Node>
+             <Node>
               <Name>RegistrationMail</Name>
               <Path>classSendMail.html</Path>
               <Anchor>a4c9983852dbcd1eb07170582761ed559</Anchor>
@@ -2207,6 +2212,11 @@
               <Anchor>aec9e6ff1c9e9058a17f5488fe3e6cfec</Anchor>
              </Node>
              <Node>
+              <Name>ReadRoomDetail</Name>
+              <Path>classValidStrategy.html</Path>
+              <Anchor>acf1a8763ec29b441c822a9ab8c80dc4b</Anchor>
+             </Node>
+             <Node>
               <Name>ReadStrategyDetail</Name>
               <Path>classValidStrategy.html</Path>
               <Anchor>ae8b17f98d81f8f70d974139086495dfa</Anchor>
@@ -2305,6 +2315,12 @@
              <Node>
               <Name>ExamDetail</Name>
               <Path>classExamDetail.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>ValidStrategy</Name>
+                <Path>classValidStrategy.html</Path>
+               </Node>
+              </Subnodes>
              </Node>
              <Node>
               <Name>Login</Name>
@@ -2331,10 +2347,6 @@
              <Node>
               <Name>Strategy</Name>
               <Path>classStrategy.html</Path>
-             </Node>
-             <Node>
-              <Name>ValidStrategy</Name>
-              <Path>classValidStrategy.html</Path>
              </Node>
             </Subnodes>
            </Node>
@@ -3464,6 +3476,11 @@
                       <Name>~SendMail</Name>
                       <Path>classSendMail.html</Path>
                       <Anchor>acc86b2a9995472436dbd77b3c6bb91f3</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>ContactMail</Name>
+                      <Path>classSendMail.html</Path>
+                      <Anchor>a3d918a3f54b3a9be68fe732e9d5de43f</Anchor>
                      </Node>
                      <Node>
                       <Name>RegistrationMail</Name>

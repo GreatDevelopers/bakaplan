@@ -16,7 +16,7 @@ Inheritance diagram for Login\-:\begin{figure}[H]
 \item 
 \hyperlink{classLogin_a4847f3e07e43b540d3339392346f87ff}{Login} ()
 \begin{DoxyCompactList}\small\item\em Comstructor. \end{DoxyCompactList}\item 
-void \hyperlink{classLogin_a97d84b3e5739041149d87774cb239fc6}{Login\-Page} (string \hyperlink{classInputDetail_a1abb16cd695678c3fa05e3c812823fee}{msg}=\char`\"{}\char`\"{}, string \hyperlink{classLogin_abea56d6d6403f1e627294f222dd77310}{email\-I\-D}=\char`\"{}abc@you.\-com\char`\"{}, string \hyperlink{classLogin_a39f7fd03b2b27c927c657ee73e7fcbbc}{password}=\char`\"{}123456\char`\"{})
+void \hyperlink{classLogin_a2b2b36f506bcb5e7179b0b3afe164ace}{Login\-Page} (string \hyperlink{classInputDetail_a1abb16cd695678c3fa05e3c812823fee}{msg}=\char`\"{}\char`\"{}, string \hyperlink{classLogin_abea56d6d6403f1e627294f222dd77310}{email\-I\-D}=\char`\"{}abc@you.\-com\char`\"{}, string \hyperlink{classLogin_a39f7fd03b2b27c927c657ee73e7fcbbc}{password}=\char`\"{}\char`\"{})
 \begin{DoxyCompactList}\small\item\em Function for creating login Page. \end{DoxyCompactList}\item 
 void \hyperlink{classLogin_ab5bc65de431f277f15a3b423ad915808}{Read\-Login\-Detail} ()
 \begin{DoxyCompactList}\small\item\em Reading login detail from text fields filled by user. \end{DoxyCompactList}\item 
@@ -26,7 +26,7 @@ void \hyperlink{classLogin_ae4f139afcb706f09b337befd123d5e18}{New\-User} ()
 \begin{DoxyCompactList}\small\item\em Adding new user into database and if user already exists then move back to register page for unique email id. \end{DoxyCompactList}\item 
 void \hyperlink{classLogin_ad127628ca09987d733477f90b828ad1e}{Select\-Login\-Detail} ()
 \begin{DoxyCompactList}\small\item\em For reading email Id and password from User table in database. \end{DoxyCompactList}\item 
-void \hyperlink{classLogin_a38f58197839dc8918425f69399ed5f8f}{Confirm\-Page} (string \hyperlink{classInputDetail_a1abb16cd695678c3fa05e3c812823fee}{msg}=\char`\"{}\char`\"{}, string \hyperlink{classLogin_a39f7fd03b2b27c927c657ee73e7fcbbc}{password}=\char`\"{}123456\char`\"{}, string \hyperlink{classLogin_ade36f8943aafce470ef4b8353c79b2c6}{retype\-Password}=\char`\"{}123456\char`\"{})
+void \hyperlink{classLogin_a79ea5bbaeaa2ec6d21cd3195c522b863}{Confirm\-Page} (string \hyperlink{classInputDetail_a1abb16cd695678c3fa05e3c812823fee}{msg}=\char`\"{}\char`\"{}, string \hyperlink{classLogin_a39f7fd03b2b27c927c657ee73e7fcbbc}{password}=\char`\"{}\char`\"{}, string \hyperlink{classLogin_ade36f8943aafce470ef4b8353c79b2c6}{retype\-Password}=\char`\"{}\char`\"{})
 \begin{DoxyCompactList}\small\item\em Page for validating email I\-D and setting user's password. \end{DoxyCompactList}\item 
 void \hyperlink{classLogin_ac91737b2085d0b7e8943f49f2d08a0ff}{Add\-User} ()
 \begin{DoxyCompactList}\small\item\em Add New user. \end{DoxyCompactList}\item 
@@ -122,17 +122,17 @@ Add New user.
 
 Add new user 
 
-Definition at line 310 of file login.\-cc.
+Definition at line 274 of file login.\-cc.
 
-\hypertarget{classLogin_a38f58197839dc8918425f69399ed5f8f}{\index{Login@{Login}!Confirm\-Page@{Confirm\-Page}}
+\hypertarget{classLogin_a79ea5bbaeaa2ec6d21cd3195c522b863}{\index{Login@{Login}!Confirm\-Page@{Confirm\-Page}}
 \index{Confirm\-Page@{Confirm\-Page}!Login@{Login}}
 \subsubsection[{Confirm\-Page}]{\setlength{\rightskip}{0pt plus 5cm}void Login\-::\-Confirm\-Page (
 \begin{DoxyParamCaption}
 \item[{string}]{msg = {\ttfamily \char`\"{}\char`\"{}}, }
-\item[{string}]{password = {\ttfamily \char`\"{}123456\char`\"{}}, }
-\item[{string}]{retype\-Password = {\ttfamily \char`\"{}123456\char`\"{}}}
+\item[{string}]{password = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{string}]{retype\-Password = {\ttfamily \char`\"{}\char`\"{}}}
 \end{DoxyParamCaption}
-)}}\label{classLogin_a38f58197839dc8918425f69399ed5f8f}
+)}}\label{classLogin_a79ea5bbaeaa2ec6d21cd3195c522b863}
 
 
 Page for validating email I\-D and setting user's password. 
@@ -148,17 +148,17 @@ Page for validating email I\-D and setting user's password.
 \end{DoxyParams}
 
 
-Definition at line 240 of file login.\-cc.
+Definition at line 213 of file login.\-cc.
 
-\hypertarget{classLogin_a97d84b3e5739041149d87774cb239fc6}{\index{Login@{Login}!Login\-Page@{Login\-Page}}
+\hypertarget{classLogin_a2b2b36f506bcb5e7179b0b3afe164ace}{\index{Login@{Login}!Login\-Page@{Login\-Page}}
 \index{Login\-Page@{Login\-Page}!Login@{Login}}
 \subsubsection[{Login\-Page}]{\setlength{\rightskip}{0pt plus 5cm}void Login\-::\-Login\-Page (
 \begin{DoxyParamCaption}
 \item[{string}]{msg = {\ttfamily \char`\"{}\char`\"{}}, }
 \item[{string}]{email\-I\-D = {\ttfamily \char`\"{}abc@you.com\char`\"{}}, }
-\item[{string}]{password = {\ttfamily \char`\"{}123456\char`\"{}}}
+\item[{string}]{password = {\ttfamily \char`\"{}\char`\"{}}}
 \end{DoxyParamCaption}
-)}}\label{classLogin_a97d84b3e5739041149d87774cb239fc6}
+)}}\label{classLogin_a2b2b36f506bcb5e7179b0b3afe164ace}
 
 
 Function for creating login Page. 
@@ -191,7 +191,7 @@ Page for logging out.
 
 Logout Page 
 
-Definition at line 352 of file login.\-cc.
+Definition at line 316 of file login.\-cc.
 
 \hypertarget{classLogin_ae4f139afcb706f09b337befd123d5e18}{\index{Login@{Login}!New\-User@{New\-User}}
 \index{New\-User@{New\-User}!Login@{Login}}
@@ -257,7 +257,7 @@ Definition at line 132 of file login.\-cc.
 )}}\label{classLogin_aa6978512971283a486347c3aa6ae0478}
 Reset Password Forms 
 
-Definition at line 385 of file login.\-cc.
+Definition at line 349 of file login.\-cc.
 
 \hypertarget{classLogin_a4c5f4b15cce8b6bf325f35544f512fe2}{\index{Login@{Login}!Reset\-Password\-Page@{Reset\-Password\-Page}}
 \index{Reset\-Password\-Page@{Reset\-Password\-Page}!Login@{Login}}
@@ -270,7 +270,7 @@ Definition at line 385 of file login.\-cc.
 )}}\label{classLogin_a4c5f4b15cce8b6bf325f35544f512fe2}
 Reset password of existing user 
 
-Definition at line 363 of file login.\-cc.
+Definition at line 327 of file login.\-cc.
 
 \hypertarget{classLogin_ad127628ca09987d733477f90b828ad1e}{\index{Login@{Login}!Select\-Login\-Detail@{Select\-Login\-Detail}}
 \index{Select\-Login\-Detail@{Select\-Login\-Detail}!Login@{Login}}
