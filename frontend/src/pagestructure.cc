@@ -472,7 +472,7 @@ void PageStructureMaker :: InputField(string type, string name,
 
 void PageStructureMaker :: SelectFieldStart(string name)
 {
-    cout << "<select name=\"" << name << "\">";
+    cout << "<select name=\"" << name << "\" id = \"" + name +"\" >";
 }
 
 /**

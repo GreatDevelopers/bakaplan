@@ -525,10 +525,14 @@ function ValidateExamForm(totalID)
                 {
                     ChangeBorder(fn, "");
                 }
-/*                if(document.getElementById(examSession).innerHTML == " ")
+                var selIndex = document.getElementById(examSession).selectedIndex;
+                var selValue = document.getElementsByTagName(
+                                "option")[selIndex].value;
+                if(selValue == " ")
                 {
                     sessionMsg = "<br> Fill Exam Session <br>";
-                }*/
+                    returnFalse = false;
+                }
             }
         }
         
@@ -547,7 +551,7 @@ function ValidateExamForm(totalID)
 }
 
 /** Function for validating room detail */
-/*
+
 function ValidateRoomForm(totalID)
 {
     try
@@ -565,14 +569,12 @@ function ValidateRoomForm(totalID)
         for( var i = 0; i < parseInt(total); i++)
         {
             var fn = "RowIndex" + (i + 1);
-            var rowIndex = document.getElementById(
-                            (fn).value;
+            var rowIndex = document.getElementById(fn).value;
 
             var index = rowIndex.split(',');
             fn = "TotalCentres" + (i + 1);
-            totalCentres = document.getElementById(
-                            (fn).value;
-            alert(totalCentres);
+            totalCentres = document.getElementById(fn).value;
+//            alert(totalCentres);
             for(var j = 0; j < parseInt(totalCentres); j++)
             {
                 // Checking field is empty or not
@@ -583,12 +585,12 @@ function ValidateRoomForm(totalID)
                     {
                         emptyMsg = "<br> Fill Empty Fields!";
                         returnFalse = false;
-                        ChangeBorder(fn), "red");
+                        ChangeBorder(fn, "red");
                     }
                     else
                     {
 //                        if(k == 0)
-                            ChangeBorder(fn), "");
+                            ChangeBorder(fn, "");
                     }
                 }
             }
@@ -598,7 +600,7 @@ function ValidateRoomForm(totalID)
             msg.innerHTML += emptyMsg;
             return false;
         }
-        return false;
+//        return false;
     }
     catch( e )
     {
@@ -606,7 +608,7 @@ function ValidateRoomForm(totalID)
         return false;
     }
 }
-*/
+
 /** comparing room detail */
 /*
 function CompareRoom(roomNo, rows, cols)
