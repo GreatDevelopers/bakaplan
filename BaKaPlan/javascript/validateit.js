@@ -62,7 +62,7 @@ function(errors, event)
 
 /** Validation for Registration Page*/
 
-var registerValidator = new FormValidator('FormRegister', 
+var emailValidator = new FormValidator('FormEmail', 
 [
 {
     name: 'EmailID',
@@ -88,7 +88,7 @@ function(errors, event)
 
 /** Password Setting Page Validation */
 
-var confirmValidator = new FormValidator('FormConfirm', 
+var setPasswordValidator = new FormValidator('FormSetPassword', 
 [
     {
         name: 'Password',
