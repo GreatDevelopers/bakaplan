@@ -197,33 +197,6 @@ void Login :: NewUser()
         RegistrationPage(msg);
     }
 
-    /* 
-    SelectLoginDetail();
-    
-    retypePassword = readField.ReadFieldValue(fieldName.retypePassword);
-
-    ReadLoginDetail();
-
-    if ( find(emailID.begin(), emailID.end(), userEmailID)
-         != emailID.end() )
-    {
-        msg = "User already exists. Try another email ID";
-        RegisterPage( msg, userEmailID );
-    }
-    else
-    {
-        if( retypePassword != userPassword )
-        {
-            msg = "Password doesn't match";
-            RegisterPage( msg, userEmailID );
-        }
-        else
-        {
-            userPassword = md5(userPassword);
-            database.InsertUser( userEmailID, userPassword );
-            LoginPage();
-        }
-    }*/
 }
 
 /**
@@ -240,18 +213,9 @@ void Login :: NewUser()
 void Login :: ConfirmPage(string msg, string password, 
                           string retypePassword)
 {
-    //if (key != "")
     key = readField.ReadFieldValue(fieldName.key);
-
     
     database.SelectColumn(regKey, "RegistrationKey", "Registeration");
-/* 
-    for(unsigned i = 0; i < regKey.size(); i++)
-    {
-        cout << regKey[i] << page.brk;
-    }*/
-
-
     if ( find(regKey.begin(), regKey.end(), key) != regKey.end() )
     {
        
