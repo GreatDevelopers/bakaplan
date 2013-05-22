@@ -211,6 +211,7 @@ void Strategy :: StrategyPage()
                     IntToString(totalDays));
     page.InputField("hidden", fieldName.projectType, projectType);
     page.InputField("hidden", fieldName.sameDetail, sameDetail);
+    page.InputField("hidden", "AddRoom", "False");
 
     page.TableStart("TableStrategy", "");
     cout << page.startTR;

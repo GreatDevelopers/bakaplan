@@ -27,7 +27,14 @@
 int main(void)
 {
     ValidStrategy valid;
-    valid.ReadStrategyDetail();
+    string addRoom = valid.readField.ReadFieldValue("AddRoom");
+    if(addRoom == "False")
+       valid.ReadStrategyDetail();
+    else 
+    {
+//        valid.page.ContentType();
+        valid.ReadRoomDetail();
+    }
 
     return 0;
 }

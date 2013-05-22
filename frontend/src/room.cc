@@ -254,6 +254,7 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
     {
         page.FormStart("FormRoom", "validstrategy", "POST",
                         "return ValidateRoomForm(\"TotalDays\")");
+
     }
     else
     {
@@ -271,6 +272,9 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
                     IntToString(totalDays));
     page.InputField("hidden", fieldName.projectType, projectType);
     page.InputField("hidden", fieldName.sameDetail, sameDetail);
+    
+    if(addRoom == true)
+        page.InputField("hidden", "AddRoom", "True");
 
     for(i = 0; i < totalDays; i++)
     {

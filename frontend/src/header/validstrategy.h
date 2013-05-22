@@ -19,10 +19,10 @@
 /**
  *  include inpudetail.h 
  */
-#include "inputdetail.h"
+#include "exam.h"
 #include "../backend/header/strategy.h"
 
-class ValidStrategy : public InputDetail
+class ValidStrategy : public ExamDetail
 {
     protected:
 
@@ -39,6 +39,8 @@ class ValidStrategy : public InputDetail
 
         /** Read Strategy Detail */
         void ReadStrategyDetail();
+
+        void ReadRoomDetail();
 
         /** Write Strategy Detail */
         void WriteStrategyDetail();

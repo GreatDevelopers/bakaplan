@@ -28,7 +28,7 @@
 int main(void)
 {
     ExamDetail exam;
-    exam.ReadRoomDetail();
+    exam.ExamDetailPage();   
 
     return 0;
 }

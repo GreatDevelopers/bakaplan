@@ -212,10 +212,10 @@ void ExamDetail :: ReadRoomDetail()
             }
         }
     }
-    
+/*    
     SetDefaultValue();
     WriteRoomDetail();
-    ExamDetailPage();
+    ExamDetailPage();*/
 }
 
 /**
@@ -326,6 +326,12 @@ void ExamDetail :: WriteRoomDetail()
 
 void ExamDetail :: ExamDetailPage()
 {
+//    page.ContentType();
+
+    ReadRoomDetail();
+    WriteRoomDetail();
+    SetDefaultValue();
+
     Header("Exam Detail");
 
     page.DivStart("DivExam", "");

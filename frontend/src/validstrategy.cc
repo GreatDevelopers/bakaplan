@@ -46,14 +46,14 @@ ValidStrategy :: ValidStrategy()
 void ValidStrategy :: ReadStrategyDetail()
 {
     page.ContentType();
-
+ 
     projectID = readField.ReadFieldValue(fieldName.projectID);
     projectType = readField.ReadFieldValue(fieldName.projectType);
     totalDays = StringToInt(readField.ReadFieldValue(
                             fieldName.totalDays));
 
     sameDetail = readField.ReadFieldValue(fieldName.sameDetail);
-
+    
     strategyChoice.resize(totalDays);
 
     for(i = 0; i < totalDays; i++)
@@ -63,12 +63,21 @@ void ValidStrategy :: ReadStrategyDetail()
                             fieldName.strategyChoice, j);
     }
     WriteStrategyDetail();
-
+    
     validStrategy.Main(projectID);
 
     ReadValidStrategy();
 
     ValidStrategyPage();
+}
+
+void ValidStrategy :: ReadRoomDetail()
+{
+     ExamDetail::ReadRoomDetail();
+     ExamDetail::WriteRoomDetail();
+     validStrategy.Main(projectID);
+     ReadValidStrategy();
+     ValidStrategyPage();
 }
 
 /**
@@ -130,7 +139,10 @@ void ValidStrategy :: WriteStrategyDetail()
 
 void ValidStrategy :: ReadValidStrategy()
 {
+     
     where = "ProjectID = " + projectID;
+//    cout << projectID << page.brk;
+    date.clear();
     database.SelectColumn(date, "Date", "ValidStrategy", where);
     database.SelectColumn(totalSeats, "TotalSeats", 
                           "ValidStrategy", where);   
@@ -142,10 +154,14 @@ void ValidStrategy :: ReadValidStrategy()
                           "ValidStrategy", where);
     database.SelectColumn(totalGroupStudents, "TotalGroupStudents", 
                           "ValidStrategy", where);
-
+ 
     valid.resize(date.size());
+//    cout << date.size() << " " << totalSeats.size();
+    
     for(unsigned i = 0; i < date.size(); i++)
     {
+//        cout << totalGroupSeats[i];
+        
         if(StringToInt(totalGroupSeats[i]) < StringToInt(totalGroupStudents[i]))
             valid[i] = "No";
         else
@@ -252,6 +268,7 @@ void ValidStrategy :: ValidStrategyPage()
         page.Button("next", "submit", "btn", "NEXT");
     else
     {
+        page.InputField("hidden", "AddRoom", "True");
         cout << page.startB << "Add More Rooms" << page.endB;
         page.Button("next", "submit", "btn", "Add Rooms");
     }
