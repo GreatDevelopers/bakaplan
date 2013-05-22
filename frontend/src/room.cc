@@ -117,10 +117,10 @@ void RoomDetail :: SetDefaultValue()
             for(j = 0; j < totalCentres[i]; j++)
             {
                 centreName[i].resize(totalCentres[i]);
-                roomNo[i].resize(totalCentres[i]);
+/*                 roomNo[i].resize(totalCentres[i]);
                 rows[i].resize(totalCentres[i]);
-                columns[i].resize(totalCentres[i]);
-
+                columns[i].resize(totalCentres[i]);*/
+                roomInfo[i].resize(totalCentres[i]);
                 centreName[i][j] = "Centre 1";
                 roomInfo[i][j]   = "R1:6x6, R2:6x6";
 /*                roomNo[i][j] =  "Room 1, Room 2";
@@ -140,31 +140,31 @@ void RoomDetail :: SetDefaultValue()
 void RoomDetail :: ReadDateSheet()
 {
     page.ContentType();
-
+ 
     projectID = readField.ReadFieldValue(fieldName.projectID);
     projectType = readField.ReadFieldValue(fieldName.projectType);
     totalDays = StringToInt(readField.ReadFieldValue(
                             fieldName.totalDays));
     sameDetail = readField.ReadFieldValue(fieldName.sameDetail);
-
+ 
     rowIndex = readField.ReadFieldValue(fieldName.rowIndex);
     STRING_VEC index;
     SplitString(index, rowIndex, ",");
-
+ 
     date.resize(totalDays);
     examCode.resize(totalDays);
     centreName.resize(totalDays);
     roomNo.resize(totalDays);
     rows.resize(totalDays);
     columns.resize(totalDays);
- 
+  
     for(i = 0; i < totalDays; i++)
     {
         j = StringToInt(index[i]);
         date[i] = readField.ReadFieldValue(fieldName.date, j);
         examCode[i] = readField.ReadFieldValue(fieldName.examCode, j);
     }
-  
+   
     SetDefaultValue();
     WriteDateSheet();
     if(sameDetail == "Yes")// && projectType == "New")
