@@ -67,20 +67,25 @@ void Strategy :: ReadExamDetail()
     examTime.resize(totalDays);
     examVenue.resize(totalDays);
     date.resize(totalDays);
-    
+    string startTime, endTime;
     for(i = 0; i < totalDays; i++)
     {
         j = i + 1;
         examName[i] = readField.ReadFieldValue(fieldName.examName, j);
         examSession[i] = readField.ReadFieldValue(
                          fieldName.examSession, j);
-        examTime[i] = readField.ReadFieldValue(fieldName.examTime, j);
+//        examTime[i] = readField.ReadFieldValue(fieldName.examTime, j);
         examVenue[i] = readField.ReadFieldValue(
                        fieldName.examVenue, j);
         if(sameDetail == "No")
         {
             date[i] = readField.ReadFieldValue(fieldName.date, j);
         }
+        startTime = readField.ReadFieldValue("StartTime", j);
+        endTime = readField.ReadFieldValue("EndTime", j);
+
+        examTime[i] = startTime + " - " + endTime;
+
 /*        vecTemp.resize(2);
         for(k = 0; k < 2; k++)
         {

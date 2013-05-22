@@ -167,7 +167,7 @@ void PageStructureMaker :: Javascript(string src)
 void PageStructureMaker :: BodyStart()
 {
     cout << "<BODY  class=\"coloredBody\" >" << endl;
-/*     
+     
     cout << " <nav class=\"side-menu\"> "
          << " <span id=\"toggle-menu\"> <p id=\"toggle-menu-circle\"> "
          << "Show Menu </p> </span> "
@@ -176,11 +176,11 @@ void PageStructureMaker :: BodyStart()
          << "<a href=\"about.html\"> About </a>"
          << "<a href=\"contribute.html\"> Contribute </a>"
          << "<a href=\"contact.html\">Contact  </a>"
-         << "<a href=\"login.html\"> Log Out </a>"
+         << "<a href=\"login\"> Log Out </a>"
          << "</nav> ";
-*/
+
     DivStart("page-wrap", "");                    /* (id, classname) */
-//    cout << "<h1>~</h1>" << endl;
+    cout << "<h1>~</h1>" << endl;
 }
 
 /**
@@ -210,8 +210,8 @@ void PageStructureMaker :: BodyEnd()
         <<" </SCRIPT>"; */
           string js ="../../BaKaPlan/javascript/validateit.js" ;
           Javascript(js);
-/*           cout << "<script type=\"text/javascript\" "
-               << "src=\"../../BaKaPlan/js/sidemenu.js\"></script>";*/
+           cout << "<script type=\"text/javascript\" "
+               << "src=\"../../BaKaPlan/js/sidemenu.js\"></script>";
           cout << "</BODY>" << endl;
 }
 
@@ -253,14 +253,17 @@ void PageStructureMaker :: DivEnd()
  */
 
 void PageStructureMaker :: FormStart(string name, // cssClass
-                                     string action, string method, 
+                                     string action, string method,
+//                                     string classId,
                                      string onSubmit)
 {
     
     cout << "<form "//class = \"" << cssClass
          << "\" name = \"" << name 
+         << "\" id =\"" << name
          << "\" action = \"" << action
          << "\" method = \"" << method << "\"";
+//         << "class =\"" + classId + "\"";
     if (onSubmit != "")
         cout << " onsubmit = \'" << onSubmit << "\'";
     else

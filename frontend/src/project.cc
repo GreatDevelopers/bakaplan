@@ -97,55 +97,57 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
     page.ContentType();
 
     Header("Project Detail");
-/* ---------------------------------------------------------
-    cout << "<form class=\"theForm\" id=\"contact-form\" action=\"#\" >"
-         << "<h2> Create a new project </h2>"
-         << "<label for=\"theProjectName\" class=\"theLabel\">Name your new project:</label>"
-	     << "<input type=\"text\" name=\"theProjectName\" "
-         << "id=\"theProjectName\" class=\"theFormTextInput\""
-         << " placeholder=\" Your Project name here_\""
-	     << "data-ot=\" Be innovative, This name should not clash with your old projects\""
-	     << "data-ot-style=\"dark\""
-         << "data-ot-delay=\"1\""
-	     << "data-ot-target=\"#theProjectName\""
-	     << "data-ot-tip-joint=\"right\""
-	     << "data-ot-show-on=\"click\""
-	     << "/>"
-	     << "<h2> Or, Open an existing one </h2>"
-	     << "<label for=\"oldProjectName\" class=\"theLabel\"> "
-         << "Name of your old project: </label>"
-	     << "<input type=\"text\" name=\"theOldProjectName\" "
-         << "id=\"theOldProjectName\"  class=\"theFormTextInput\" "
-         << "placeholder=\" one of your old projects\" "
-	     << "data-ot=\"@Mandy,will soon replace it with a drop down menu \""
-	     << "data-ot-style=\"dark\""
-	     << "data-ot-delay=\"1\""
-	     << "data-ot-target=\"#theOldProjectName\""
-	     << "data-ot-tip-joint=\"right\""
-	     << "data-ot-show-on=\"click\" />"
-	     << "<input type=\"submit\"name=\"theSubmit\" id=\"theSubmit\" class=\"theFormButton\" value=\"Start Project\" />"
-	     << "</form>";
-*/
-  
+/* 
+    where = "EmailID = \"" + userEmailID + "\"";
+
+    database.SelectColumn(oldProject, "ProjectName", "ProjectDetail",
+                          where);
+ErrorMessage(msg);
+
+cout << "<form class=\"theForm\" id=\"new-project-form\" name=\"FormProject\" action=\"class\" method=\"get\">	";
+page.InputField("hidden", fieldName.projectType, "new");
+page.InputField("hidden", fieldName.emailID, userEmailID);
+
+cout << "			<h2> Start A Project </h2>	";
+cout << "			<label for=\"theNewProject\" class=\"theLabel\">Give a name to your new project:</label>	";
+cout << "			<input type=\"text\" name=\"ProjectName\" id=\"theNewProject\" class=\"theFormTextInput\" placeholder=\"  Your New Project name here_\"/> 			";
+cout << "			<input type=\"submit\" name=\"theNewProjectSubmit\" id=\"theNewProjectSubmit\" class=\"theFormButton\" << value=\"Start New Project\" />		";
+cout << "		</form>	";
+cout << "		<h3> </h3>	";
+if(oldProject.size() > 0)
+{cout << "		<form class=\"theForm\" id=\"old-project-form\" name=\"FormProject\" action-\"class\" method=\"get\">	";
+page.InputField("hidden", fieldName.projectType, "Old");
+page.InputField("hidden", fieldName.emailID, userEmailID);
+cout << "			<label for=\"theOldProject\" class=\"theLabel\" >Or open an existing project</label>	";
+cout << "		<select class=\"theFormTextInput\" name = \"ProjectName\">	";
+    OldProject();*/
+/*
+cout <<  " 			<option value=\"Project 1\"class="theFormTextInput" >Project 1</option>	";
+cout <<   "			<option class="theFormTextInput" value="">M.Tech Seating Plan </option>	";
+cout <<   	"		<option class="theFormTextInput" value="">MBA </option>	";
+cout <<   	"		<option class="theFormTextInput" value="">RICCS </option>	";
+*//* 
+cout << 	"	</select>	 	";
+cout << 	"		<input type=\"submit\"name=\"theSubmit\" id=\"theSubmit\" class=\"theFormButton\" value=\"Open Existing Project\" />\"	";
+cout <<" 		</form>	";
+}*/
+   
     page.DivStart("DivProject", "");
 
     page.LogoutLink();
-
-    cout << page.brk;
 
     page.FormStart("FormProject", "class", "GET");
 
     cout << page.startH1 << "Project Detail" << page.endH1 << page.brk;
      
-    OldProject();
-    
     ErrorMessage(msg);
-
-    page.InputField("hidden", fieldName.emailID, userEmailID);
   
     page.Label(fieldName.projectName, " Project Name ");
     page.InputField("text", fieldName.projectName, projectName);
-  
+    page.InputField("hidden", fieldName.projectType, "New"); 
+    page.InputField("hidden", fieldName.emailID, userEmailID);
+
+/*  
     if(oldProject.size() > 0)
     {
         cout << page.brk << page.brk
@@ -160,12 +162,13 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
     {
         page.InputField("hidden", fieldName.projectType, "New");
     }
+*/
+
+    page.Button("next", "submit", "btn", "Start New Project");
 
     cout << page.brk << page.brk;
-
-    page.Button("next", "submit", "btn", "NEXT");
-
     page.FormEnd();
+    OldProject();
     page.DivEnd();
 
     Footer();
@@ -188,15 +191,38 @@ void ProjectDetail :: OldProject()
 
     if(oldProject.size() != 0)
     {
-        cout << " Old Projects " << page.brk;
+        page.FormStart("FormProject", "class", "GET");
+
+        page.Label(fieldName.projectName, " Project Name ");
+        page.InputField("hidden", fieldName.projectType, "Old"); 
+        page.InputField("hidden", fieldName.emailID, userEmailID);
+
+        page.SelectFieldStart(fieldName.projectName);
+        
+        page.SelectOptionStart(" ", "y");
+        cout << "Select";
+        page.SelectOptionEnd();
+                page.SelectOptionStart("Evening", "n");
+        cout << "Evening";
+        page.SelectOptionEnd();
+
         for(unsigned i = 0; i < oldProject.size(); i++)
         {
-            cout << (i + 1) << ") " << oldProject[i] << page.brk;
+            page.SelectOptionStart(IntToString(i), "n");
+            cout << oldProject[i];
+            page.SelectOptionEnd();
         }
-        cout << page.brk;
+        page.SelectFieldEnd();
+        cout << page.brk << page.brk;
+
+        page.Button("next", "submit", "btn", "Start Existing Project");
+
+        page.FormEnd();
+
     }
     else
-        cout << " No Previous Projects " << page.brk << page.brk;
+//        cout << " <option class=\"theFormTextInput\" >No Previous Projects </option>"; 
+        cout << page.brk << page.brk;
 }
 
 /**

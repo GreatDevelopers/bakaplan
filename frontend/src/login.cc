@@ -92,8 +92,6 @@ void Login :: LoginPage(string msg, string emailID, string password)
 
     page.DivStart("DivLogin", "");
 
-    cout << page.brk;
-
     page.FormStart("FormLogin", "project", "POST");
 
     cout << page.startH1 << "Login" << page.endH1 << page.brk;

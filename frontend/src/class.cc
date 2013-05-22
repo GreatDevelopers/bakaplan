@@ -99,8 +99,8 @@ void ClassDetail :: NewProject()
     where = "EmailID = \"" + emailID + "\"";
     database.SelectColumn(oldProject, "ProjectName", "ProjectDetail",
                           where);
-
-    if ( ( find(oldProject.begin(), oldProject.end(), projectName) 
+    if ( ( find(oldProject.begin(), oldProject.end(), projectName)
+     
          != oldProject.end() ) )                 /**< If projectName 
                                                      already exists */
     {
@@ -131,6 +131,9 @@ void ClassDetail :: NewProject()
 
 void ClassDetail :: OldProject()
 {
+    int pn = StringToInt(projectName);
+    projectName = oldProject[pn];
+   
     if ( ( find(oldProject.begin(), oldProject.end(), projectName) 
          != oldProject.end() ) )                 /**< If projectName 
                                                      already exists */

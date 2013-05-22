@@ -146,7 +146,7 @@ void PageLayout :: Head(string titleName)
          << "</script>";
 */
     // New Look
-/*
+
 //	<!-- Fonts from google fonts, Roboto and Arvo -->
     cout << "<link href='http://fonts.googleapis.com/css?family="
          << "Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>";
@@ -171,7 +171,7 @@ void PageLayout :: Head(string titleName)
          << "<link rel=\"stylesheet\" "
          << "href=\"../../BaKaPlan/styles/opentip.css\" "
          << "type=\"text/css\" media=\"all\">";
-*/
+
     HeadEnd();
 }
 
@@ -212,11 +212,13 @@ void PageLayout :: ContentType()
 
 void PageLayout :: LogoutLink()
 {
+    /*
     cout << brk;
     Anchor("logout", "Logout");
     cout << " | ";
     Anchor("project", "Home");
     cout << brk;
+    */
 }
 
 /**

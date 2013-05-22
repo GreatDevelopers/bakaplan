@@ -27,14 +27,14 @@
 ExamDetail :: ExamDetail()
 {
     // constructor
-    totalCols = 5;
+    totalCols = 6;
     tableHeading.resize(totalCols);
     i = 0;
     tableHeading[i++] = "Date";
     tableHeading[i++] = "Name";
     tableHeading[i++] = "Session";
-    tableHeading[i++] = "Time";
-//    tableHeading[i++] = "To";
+    tableHeading[i++] = "Start Time";
+    tableHeading[i++] = "End Time";
     tableHeading[i++] = "Venue";
 }
 
@@ -487,10 +487,13 @@ void ExamDetail :: ExamDetailPage()
             }*/
             
             cout << page.startTD;
-            page.InputField("text", fieldName.examTime, j, "Time");
-                            //examTime[i]);
+            page.InputField("time", "StartTime", j, "Start Time");
             cout << page.endTD;
             
+            cout << page.startTD;
+            page.InputField("time", "EndTime", j, "End Time");
+            cout << page.endTD;
+           
             cout << page.startTD;
             page.InputField("text", fieldName.examVenue, j, 
                              examVenue[i]);

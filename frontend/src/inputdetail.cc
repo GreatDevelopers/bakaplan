@@ -71,7 +71,7 @@ void InputDetail :: Header(string titleName)
     page.Head(titleName);
     page.PageLayout :: Header();
     page.BodyStart();
-    page.Logo("BaKaPlan");
+//    page.Logo("BaKaPlan");
 }
 
 /**
