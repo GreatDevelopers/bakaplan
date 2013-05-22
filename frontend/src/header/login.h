@@ -90,9 +90,6 @@ class Login : public InputDetail
         /** Logout Page */
         void LogoutPage();
 
-        void IndexPage(string page, string msg, string email, 
-                       string password);
-
         /** Destructor */
         ~Login(){}
 };
