@@ -498,36 +498,43 @@ function ValidateExamForm(totalID)
 //        alert("Form");
         var total = document.getElementById(totalID).value;
 
-        var returnFalse;
+        var returnFalse, emptyMsg = "", sessionMsg = "";
 
         var msg = document.getElementById("Error");
         msg.innerHTML = " ";
 
-        var fieldName = new Array("ExamName", 
+        var fieldName = new Array("ExamName",
                                   "ExamTime", "ExamVenue");
         for(i = 0; i < total; i++)
         {
-            for(j = 0; j < fieldName.size; j++)
+//            alert(fieldName.size);
+            for(j = 0; j < fieldName.length; j++)
             {
+
                 var fn = fieldName[j] + (i + 1);
-                alert(fn);
+                var examSession = "ExamSession" + (i + 1);
+//                alert(fn);
                 var value = document.getElementById(fn).value;
-                if(document.getElementById(fn).value.length == 0)
+                if(document.getElementById(fn).value.length == 0) 
                 {
                     emptyMsg = "<br> Fill Empty Fields!<br>";
                     returnFalse = false;
-//                    ChangeBorder(fn), "red");
+                    ChangeBorder(fn, "red");
                 }
                 else
                 {
-//                    ChangeBorder(fn, "");
+                    ChangeBorder(fn, "");
                 }
+/*                if(document.getElementById(examSession).innerHTML == " ")
+                {
+                    sessionMsg = "<br> Fill Exam Session <br>";
+                }*/
             }
         }
         
         if (returnFalse == false)
         {
-            msg.innerHTML += emptyMsg;
+            msg.innerHTML += emptyMsg + sessionMsg;
             return false;
         }
 //        return false;
