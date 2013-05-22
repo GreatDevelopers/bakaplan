@@ -40,7 +40,7 @@ void SendMail :: SetMailData()
 {
     setSender   =   SENDER_EMAILID;
     setMessage  =   "Plain text message body";
-    setServer   =   "202.164.53.122";
+    setServer   =   "localhost";
 }
 
 /**
@@ -52,7 +52,9 @@ void SendMail :: SetMailData()
 
 void SendMail :: SetHTMLMessage(string regKey, string mail)
 {
-    url  = "http://" + setServer  + "/~mandeep/cgi-bin/bp/";
+    url  = "http://";
+    url += SERVER_MAIL;
+    url += "/~mandeep/cgi-bin/bp/";
     if(mail == "register")
         url += "confirm?Key=" + regKey;
     else
