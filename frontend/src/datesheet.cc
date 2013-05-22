@@ -208,7 +208,8 @@ void DateSheet :: DateSheetPage()
     page.InputField("hidden", fieldName.projectType, projectType);
     page.InputField("hidden", fieldName.totalClasses, 
                     IntToString(totalClasses));
-    
+    page.InputField("hidden", "AddRoom", "False");
+
     page.InputField("button", "AddRow", 
                     "AddRows('TableDateSheet', 'TotalDays', 'date')",
                     "Add Row");
