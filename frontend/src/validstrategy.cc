@@ -244,7 +244,7 @@ void ValidStrategy :: ValidStrategyPage()
              << page.endTH;        
     } 
     cout << page.endTR;
-    for(i = j; i < totalDays; i++)
+    for(i = 0; i < totalDays; i++)
     {
         cout << page.startTR;
         if(j == 0)
@@ -276,7 +276,6 @@ void ValidStrategy :: ValidStrategyPage()
     page.DivEnd();
 
     Footer();
-
 }
 
 /**
