@@ -190,16 +190,16 @@ void DateSheet :: DateSheetPage()
 
     page.DivStart("DivDateSheet", "");
 
-    page.LogoutLink();
+//    page.LogoutLink();
 
-    cout << page.brk;
+//    cout << page.brk;
 
+    cout << page.startH1 << "Date Sheet" 
+         << page.endH1;
     page.FormStart("FormDateSheet", "room", "POST",
                    "return ValidateDateSheetForm(\"TotalDays\")");
 
-    cout << page.startH1 << "Date Sheet" 
-         << page.endH1 << page.brk;
-    
+   
     ErrorMessage(msg);
 
     page.InputField("hidden", fieldName.projectID, projectID);
@@ -391,10 +391,12 @@ void DateSheet :: DateSheetPage()
     cout << page.brk << page.brk
          << " Same room and exam details for each day ";
     page.InputField("radio", fieldName.sameDetail, "Yes");
-    page.Label(fieldName.sameDetail, "Yes");
+    cout << " Yes ";
+//    page.Label(fieldName.sameDetail, "Yes");
 
     page.InputField("radio", fieldName.sameDetail, "No");
-    page.Label(fieldName.sameDetail, "No");
+    cout << " No ";
+//    page.Label(fieldName.sameDetail, "No");
    
     page.InputField("hidden", fieldName.lastRow, lastRow);
     page.InputField("hidden", fieldName.rowIndex, rowIndex);
