@@ -167,18 +167,18 @@ void PageStructureMaker :: Javascript(string src)
 void PageStructureMaker :: BodyStart()
 {
     cout << "<BODY  class=\"coloredBody\" >" << endl;
-/*     
+     
     cout << " <nav class=\"side-menu\"> "
          << " <span id=\"toggle-menu\"> <p id=\"toggle-menu-circle\"> "
          << "Show Menu </p> </span> "
          << " <h3> Ba<span class=\"ka\">ka</span> Plan</h3>"
-         << "<a href=\"index.html\"> Home </a>"
-         << "<a href=\"about.html\"> About </a>"
-         << "<a href=\"contribute.html\"> Contribute </a>"
-         << "<a href=\"contact.html\">Contact  </a>"
-         << "<a href=\"login.html\"> Log Out </a>"
+         << "<a href=\"home\"> Home </a>"
+         << "<a href=\"../../BaKaPlan/about.html\"> About </a>"
+//         << "<a href=\"contribute.html\"> Contribute </a>"
+         << "<a href=\"../../BaKaPlan/contact.html\">Contact  </a>"
+         << "<a href=\"login\"> Log Out </a>"
          << "</nav> ";
-*/
+
     DivStart("page-wrap", "page-wrap");          /* (id, classname) */
 //    cout << "<h1>~</h1>" << endl;
 }
@@ -210,8 +210,8 @@ void PageStructureMaker :: BodyEnd()
         <<" </SCRIPT>"; */
           string js ="../../BaKaPlan/javascript/validateit.js" ;
           Javascript(js);
-/*           cout << "<script type=\"text/javascript\" "
-               << "src=\"../../BaKaPlan/js/sidemenu.js\"></script>";*/
+          cout << "<script type=\"text/javascript\" "
+               << "src=\"../../BaKaPlan/js/sidemenu.js\"></script>";
           cout << "</BODY>" << endl;
 }
 
