@@ -357,7 +357,7 @@ void ExamDetail :: ExamDetailPage()
     page.TableStart("TableExam", "");
     cout << page.startTR;
     
-    if(totalDays == 1)
+    if(sameDetail == "Yes")
         j = 1;
     else
         j = 0;

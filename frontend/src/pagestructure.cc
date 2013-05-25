@@ -167,7 +167,7 @@ void PageStructureMaker :: Javascript(string src)
 void PageStructureMaker :: BodyStart()
 {
     cout << "<BODY  class=\"coloredBody\" >" << endl;
-     
+/*     
     cout << " <nav class=\"side-menu\"> "
          << " <span id=\"toggle-menu\"> <p id=\"toggle-menu-circle\"> "
          << "Show Menu </p> </span> "
@@ -176,11 +176,11 @@ void PageStructureMaker :: BodyStart()
          << "<a href=\"about.html\"> About </a>"
          << "<a href=\"contribute.html\"> Contribute </a>"
          << "<a href=\"contact.html\">Contact  </a>"
-         << "<a href=\"login\"> Log Out </a>"
+         << "<a href=\"login.html\"> Log Out </a>"
          << "</nav> ";
-
-    DivStart("page-wrap", "");                    /* (id, classname) */
-    cout << "<h1>~</h1>" << endl;
+*/
+    DivStart("page-wrap", "page-wrap");          /* (id, classname) */
+//    cout << "<h1>~</h1>" << endl;
 }
 
 /**
@@ -210,8 +210,8 @@ void PageStructureMaker :: BodyEnd()
         <<" </SCRIPT>"; */
           string js ="../../BaKaPlan/javascript/validateit.js" ;
           Javascript(js);
-           cout << "<script type=\"text/javascript\" "
-               << "src=\"../../BaKaPlan/js/sidemenu.js\"></script>";
+/*           cout << "<script type=\"text/javascript\" "
+               << "src=\"../../BaKaPlan/js/sidemenu.js\"></script>";*/
           cout << "</BODY>" << endl;
 }
 
@@ -227,7 +227,7 @@ void PageStructureMaker :: BodyEnd()
 void PageStructureMaker :: DivStart(string id, string className)
 {
     cout << "<div id = \"" << id << "\" class = \"" << className
-         << " \">" << endl;
+         << "\" >" << endl;
 }
 
 /**
@@ -253,17 +253,14 @@ void PageStructureMaker :: DivEnd()
  */
 
 void PageStructureMaker :: FormStart(string name, // cssClass
-                                     string action, string method,
-//                                     string classId,
+                                     string action, string method, 
                                      string onSubmit)
 {
     
     cout << "<form "//class = \"" << cssClass
          << "\" name = \"" << name 
-         << "\" id =\"" << name
          << "\" action = \"" << action
          << "\" method = \"" << method << "\"";
-//         << "class =\"" + classId + "\"";
     if (onSubmit != "")
         cout << " onsubmit = \'" << onSubmit << "\'";
     else
@@ -379,7 +376,8 @@ void PageStructureMaker :: Anchor(string href, string target)
 
 void PageStructureMaker :: Label(string forField, string value)
 {
-    cout << "<label for=\"" << forField << "\" >" 
+    cout << "<label class=\"theLabel\" "
+         << "for=\"" << forField << "\" >" 
          << value << "</label>";
 }
 
@@ -401,13 +399,10 @@ void PageStructureMaker :: InputField(string type,
          << "type=\"" << type << "\" name=\"" << name;
     cout << "\" id = \"" << name << "\" ";
 
-    if(type == "hidden" || type == "radio")
+    if(type == "hidden" || type == "radio" || type == "password")
     {
-        cout << "value = \"" << placeholder << "\" ";
-    }
-    else if(type == "password")
-    {
-        cout << "value = \"\" ";
+        cout << "class = \"theFormTextInput\" "
+             << "value = \"" << placeholder << "\" ";
     }
     else if(type == "button")
     {
@@ -416,7 +411,8 @@ void PageStructureMaker :: InputField(string type,
     }
     else
     {
-        cout << "placeholder = \"" << placeholder << "\" ";
+        cout << "class = \"theFormTextInput\" "
+             << "placeholder = \"" << placeholder << "\" ";
         if(value != "")    
         {
             cout << "value = \"" << value << "\" ";
@@ -479,7 +475,9 @@ void PageStructureMaker :: InputField(string type, string name,
 
 void PageStructureMaker :: SelectFieldStart(string name)
 {
-    cout << "<select name=\"" << name << "\" id = \"" + name +"\" >";
+    cout << "<select class = \"theFormTextInput\" "
+         << "id = \"" << name << "\" "
+         << "name=\"" << name << "\">";
 }
 
 /**
@@ -539,7 +537,7 @@ void PageStructureMaker :: Button(string id, string type,
                             string onClick)
 {
     cout << "<button id = \"" << id << "\" type = \"" << type 
-         << "\" class=\"" << className << "\" ";
+         << "\" class=\"theFormButton\"";//" << className << "\" ";
 
     if(onClick != "")
         cout << "onClick = \"" << onClick << "\" ";

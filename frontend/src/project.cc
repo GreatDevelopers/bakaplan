@@ -97,41 +97,7 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
     page.ContentType();
 
     Header("Project Detail");
-/* 
-    where = "EmailID = \"" + userEmailID + "\"";
-
-    database.SelectColumn(oldProject, "ProjectName", "ProjectDetail",
-                          where);
-ErrorMessage(msg);
-
-cout << "<form class=\"theForm\" id=\"new-project-form\" name=\"FormProject\" action=\"class\" method=\"get\">	";
-page.InputField("hidden", fieldName.projectType, "new");
-page.InputField("hidden", fieldName.emailID, userEmailID);
-
-cout << "			<h2> Start A Project </h2>	";
-cout << "			<label for=\"theNewProject\" class=\"theLabel\">Give a name to your new project:</label>	";
-cout << "			<input type=\"text\" name=\"ProjectName\" id=\"theNewProject\" class=\"theFormTextInput\" placeholder=\"  Your New Project name here_\"/> 			";
-cout << "			<input type=\"submit\" name=\"theNewProjectSubmit\" id=\"theNewProjectSubmit\" class=\"theFormButton\" << value=\"Start New Project\" />		";
-cout << "		</form>	";
-cout << "		<h3> </h3>	";
-if(oldProject.size() > 0)
-{cout << "		<form class=\"theForm\" id=\"old-project-form\" name=\"FormProject\" action-\"class\" method=\"get\">	";
-page.InputField("hidden", fieldName.projectType, "Old");
-page.InputField("hidden", fieldName.emailID, userEmailID);
-cout << "			<label for=\"theOldProject\" class=\"theLabel\" >Or open an existing project</label>	";
-cout << "		<select class=\"theFormTextInput\" name = \"ProjectName\">	";
-    OldProject();*/
-/*
-cout <<  " 			<option value=\"Project 1\"class="theFormTextInput" >Project 1</option>	";
-cout <<   "			<option class="theFormTextInput" value="">M.Tech Seating Plan </option>	";
-cout <<   	"		<option class="theFormTextInput" value="">MBA </option>	";
-cout <<   	"		<option class="theFormTextInput" value="">RICCS </option>	";
-*//* 
-cout << 	"	</select>	 	";
-cout << 	"		<input type=\"submit\"name=\"theSubmit\" id=\"theSubmit\" class=\"theFormButton\" value=\"Open Existing Project\" />\"	";
-cout <<" 		</form>	";
-}*/
-   
+  
     page.DivStart("DivProject", "");
 
     page.LogoutLink();
@@ -164,9 +130,9 @@ cout <<" 		</form>	";
     }
 */
 
+    cout << page.brk << page.brk;
     page.Button("next", "submit", "btn", "Start New Project");
 
-    cout << page.brk << page.brk;
     page.FormEnd();
     OldProject();
     page.DivEnd();
@@ -201,9 +167,6 @@ void ProjectDetail :: OldProject()
         
         page.SelectOptionStart(" ", "y");
         cout << "Select";
-        page.SelectOptionEnd();
-                page.SelectOptionStart("Evening", "n");
-        cout << "Evening";
         page.SelectOptionEnd();
 
         for(unsigned i = 0; i < oldProject.size(); i++)
