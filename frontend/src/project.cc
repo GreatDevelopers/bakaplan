@@ -100,11 +100,11 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
   
     page.DivStart("DivProject", "");
 
-    page.LogoutLink();
+//    page.LogoutLink();
+
+    cout << page.startH1 << "Project Detail" << page.endH1;// << page.brk;
 
     page.FormStart("FormProject", "class", "GET");
-
-    cout << page.startH1 << "Project Detail" << page.endH1 << page.brk;
      
     ErrorMessage(msg);
   

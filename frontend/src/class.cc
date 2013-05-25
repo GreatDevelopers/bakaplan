@@ -189,14 +189,15 @@ void ClassDetail :: ClassDetailPage(string msg)
 
     page.DivStart("DivClass", "");
 
-    page.LogoutLink();
+//    page.LogoutLink();
+//
+    cout << page.startH1 << "Class/Branch/Trade Detail" 
+         << page.endH1;// << page.brk << page.brk;
 
-    cout << page.brk;
+//    cout << page.brk;
     page.FormStart("FormClass", "rollno", "POST", 
                    "return ValidateClassForm(\"TotalClasses\")");
 
-    cout << page.startH1 << "Class/Branch/Trade Detail" 
-         << page.endH1 << page.brk << page.brk;
 
     page.InputField("hidden", fieldName.projectID, projectID);
     page.InputField("hidden", fieldName.totalClasses, 
