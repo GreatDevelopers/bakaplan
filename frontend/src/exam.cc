@@ -333,12 +333,12 @@ void ExamDetail :: ExamDetailPage()
     SetDefaultValue();
 
     Header("Exam Detail");
-    cout << "<link href=\"../../BaKaPlan/css/jquery.timepicker.css\""
+/*    cout << "<link href=\"../../BaKaPlan/css/jquery.timepicker.css\""
          << "rel=\"stylesheet\" type=\"text/css\" />";
     page.Javascript("../../BaKaPlan/javascript/jquery-1.7.1.js");
     page.Javascript("../../BaKaPlan/javascript/jquery.timepicker.js");
     page.Javascript("../../BaKaPlan/javascript/main.js");
-    
+  */  
     page.DivStart("DivExam", "");
     cout << page.startH1 << "Exam Detail" 
          << page.endH1;
@@ -490,6 +490,7 @@ void ExamDetail :: ExamDetailPage()
             }*/
             
             cout << page.startTD;
+/*
 //            page.InputField("time", "StartTime", j, "Start Time");
             cout << "<input id=\"myPicker\" class=\"time\" "
                  << "name=\"StartTime\" type=\"text\" />";
@@ -497,7 +498,7 @@ void ExamDetail :: ExamDetailPage()
             
             cout << page.startTD;
             page.InputField("time", "EndTime", j, "End Time");
-/*            cout << "<input id=\"myPicker\" class=\"time\" "
+            cout << "<input id=\"myPicker\" class=\"time\" "
                  << "name=\"EndTime\" type=\"text\" />";*/
             cout << page.endTD;
            
@@ -508,9 +509,9 @@ void ExamDetail :: ExamDetailPage()
             cout << page.endTR;
         }
     }
-    cout << "<script> $(function() {"
+/*    cout << "<script> $(function() {"
          << " $('#EndTime').timepicker"
-         << "({ 'scrollDefaultNow': true }); });  </script>";
+         << "({ 'scrollDefaultNow': true }); });  </script>";*/
 
     page.TableEnd();
 
