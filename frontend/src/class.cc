@@ -191,7 +191,7 @@ void ClassDetail :: ClassDetailPage(string msg)
 
 //    page.LogoutLink();
 //
-    cout << page.startH1 << "Class/Branch/Trade Detail" 
+    cout << page.startH1 << "Branch/Trade Detail" 
          << page.endH1;// << page.brk << page.brk;
 
 //    cout << page.brk;
