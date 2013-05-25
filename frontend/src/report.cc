@@ -65,14 +65,14 @@ void Report :: ReportPage()
 
     page.DivStart("DivReport", "");
 
-    page.LogoutLink();
+//    page.LogoutLink();
 
-    cout << page.brk;
+//    cout << page.brk;
+    cout << page.startH1 << "Seating Plan" 
+         << page.endH1;// << page.brk;
 
     page.FormStart("FormReport", "", "post");
 
-    cout << page.startH1 << "Seating Plan" 
-         << page.endH1 << page.brk;
     
     page.InputField("hidden", fieldName.projectID, projectID);
     page.InputField("hidden", fieldName.totalDays, 

@@ -202,15 +202,15 @@ void Strategy :: StrategyPage()
 
     page.DivStart("DivStrategy", "");
 
-    page.LogoutLink();
+//    page.LogoutLink();
 
-    cout << page.brk;
+//    cout << page.brk;
+    cout << page.startH1 << "Strategy" 
+         << page.endH1;// << page.brk;
 
     page.FormStart("FormStrategy", "validstrategy", "post",
                    "return ValidateStrategyForm(\"TotalDays\")");
 
-    cout << page.startH1 << "Strategy" 
-         << page.endH1 << page.brk;
     
     page.InputField("hidden", fieldName.projectID, projectID);
     page.InputField("hidden", fieldName.totalDays, 

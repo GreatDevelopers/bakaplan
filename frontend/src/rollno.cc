@@ -235,12 +235,12 @@ void RollNoDetail :: RollNoDetailPage(string msg)
 
     page.LogoutLink();
 
-    cout << page.brk;
+//    cout << page.brk;
 
+    cout << page.startH1 << "Roll No Detail" << page.endH1;// << page.brk;
     page.FormStart("FormRollNo", "datesheet", "POST",
                    "return ValidateRollNoForm(\"TotalClasses\")");
 
-    cout << page.startH1 << "Roll No Detail" << page.endH1 << page.brk;
     
     ErrorMessage(msg);
 

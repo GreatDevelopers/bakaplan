@@ -206,9 +206,12 @@ void ValidStrategy :: ValidStrategyPage()
 
     page.DivStart("DivValidStrategy", "");
 
-    page.LogoutLink();
+//    page.LogoutLink();
 
-    cout << page.brk;
+//    cout << page.brk;
+
+    cout << page.startH1 << "Valid Strategy Detail" 
+         << page.endH1;// << page.brk;
 
     if(addRoom == true)
     {
@@ -216,9 +219,6 @@ void ValidStrategy :: ValidStrategyPage()
     }
     else    
         page.FormStart("FormValid", "report", "post");
-
-    cout << page.startH1 << "Valid Strategy Detail" 
-         << page.endH1 << page.brk;
     
     page.InputField("hidden", fieldName.projectID, projectID);
     page.InputField("hidden", fieldName.totalDays, 

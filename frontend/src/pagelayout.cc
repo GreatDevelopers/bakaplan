@@ -111,8 +111,8 @@ void PageLayout :: Head(string titleName)
     Title(titleName);
     string js = "../../BaKaPlan/javascript/javascript.js";
     Javascript(js);
-//    Javascript("https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js");
-//    Javascript(js);
+    Javascript("https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js");
+    Javascript(js);
     js = "../../BaKaPlan/javascript/CalendarControl.js";
     Javascript(js);
     string css = "../../BaKaPlan/css/CalendarControl.css";
@@ -164,8 +164,8 @@ void PageLayout :: Head(string titleName)
 
 //	<!-- Open Tooltip Javascript and css framework for adding tooltips -->	
 
-//         << "<script src=\"http://ajax.googleapis.com/ajax/"
-//         << "libs/jquery/2.0.0/jquery.min.js\"></script>"
+         << "<script src=\"http://ajax.googleapis.com/ajax/"
+         << "libs/jquery/2.0.0/jquery.min.js\"></script>"
          << "<script src=\"../../BaKaPlanjs/opentip-jquery.min.js\">"
          << "</script>"
          << "<script src=\"../../BaKaPlan/js/opentip-myStyles.js\">"

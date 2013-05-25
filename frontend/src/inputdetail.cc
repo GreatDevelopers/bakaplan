@@ -37,19 +37,21 @@
 InputDetail :: InputDetail()
 {
     // constructor
-    hours.resize(6);
-    minutes.resize(3);
+    hours.resize(9);
+    minutes.resize(2);
     ampm.resize(2);
     l = 0;
-    for(k = 9; k <= 12; k++)
+    for(k = 8; k <= 12; k++)
     {
         hours[l++] = IntToString(k);
     }
     hours[l++] = "1";
     hours[l++] = "2";
+    hours[l++] = "3";
+    hours[l++] = "4";
     l = 0;
     minutes[l++] = "00";
-    minutes[l++] = "15";
+//    minutes[l++] = "15";
     minutes[l++] = "30";
     l = 0;
     ampm[l++] = "AM";

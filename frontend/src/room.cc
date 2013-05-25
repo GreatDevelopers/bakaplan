@@ -246,10 +246,12 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
 
     page.DivStart("DivRoom", "");
 
-    page.LogoutLink();
+//    page.LogoutLink();
 
-    cout << page.brk;
-
+//    cout << page.brk;
+    cout << page.startH1 << "Room Detail" 
+         << page.endH1;// << page.brk;
+ 
     if(addRoom == true)
     {
         page.FormStart("FormRoom", "validstrategy", "POST",
@@ -262,9 +264,7 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
                         "return ValidateRoomForm(\"TotalDays\")");
     }
 
-    cout << page.startH1 << "Room Detail" 
-         << page.endH1 << page.brk;
-    
+   
     ErrorMessage(msg);
 
     page.InputField("hidden", fieldName.projectID, projectID);
