@@ -682,39 +682,4 @@ function ValidateStrategyForm(totalID)
 
 }
 
-/** Project detail form */
 
-function ValidateProjectForm()
-{
-    try
-    {
-        var returnFalse, emptyMsg = "";
-
-        var msg = document.getElementById("Error");
-        msg.innerHTML = " ";
-
-        var projectName = "ProjectName";
-//        alert(projectName);
-        var selIndex = document.getElementById("ProjectName").selectedIndex;
-        alert(selIndex);
-        var selValue = document.getElementsByTagName(
-                       "option")[selIndex].value;
-        if(selValue == "Select")
-        {
-            emptyMsg = "<br> Fill Exam Session <br>";
-            returnFalse = false;
-        }
-        
-        if (returnFalse == false)
-        {
-            msg.innerHTML += emptyMsg;
-            return false;
-        }
-//        return false;
-    }
-    catch (e)
-    {
-        alert(e)
-        return false;
-    }
-}
