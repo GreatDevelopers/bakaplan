@@ -198,9 +198,6 @@ void ClassDetail :: ClassDetailPage(string msg)
     page.FormStart("FormClass", "rollno", "POST", 
                    "return ValidateClassForm(\"TotalClasses\")");
 
-
-    page.InputField("hidden", "", "");//fieldName.totalClasses, 
-//                    IntToString(totalClasses));
     page.InputField("hidden", fieldName.projectType, projectType);
     page.InputField("hidden", fieldName.totalClasses, 
                     IntToString(totalClasses));

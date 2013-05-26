@@ -211,8 +211,6 @@ void Strategy :: StrategyPage()
     page.FormStart("FormStrategy", "validstrategy", "post",
                    "return ValidateStrategyForm(\"TotalDays\")");
 
-    page.InputField("hidden", "", "");//fieldName.projectID, projectID);
-   
     page.InputField("hidden", fieldName.projectID, projectID);
     page.InputField("hidden", fieldName.totalDays, 
                     IntToString(totalDays));
