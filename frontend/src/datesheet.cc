@@ -151,8 +151,11 @@ void DateSheet :: WriteRollNoDetail()
         erase_all(notIncluded[i], " ");
 
         outFile << prefix[i] << "-" << endl
-                << startRollNo[i] << "-" << endRollNo[i] << endl
-                << notIncluded[i] << endl;
+                << startRollNo[i] << "-" << endRollNo[i] << endl;
+        if(notIncluded[i].length() == 0)
+            outFile << "0" << endl;
+        else
+            outFile << notIncluded[i] << endl;
     }
 
     outFile.close();
