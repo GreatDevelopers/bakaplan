@@ -436,6 +436,7 @@ void ExamDetail :: ExamDetailPage()
 /*            page.InputField("text", fieldName.examSession, j, 
                              examSession[i]);*/
             cout << page.endTD;
+           
 // Timing
 /*             for(k = 0; k < 2; k++)
             {
@@ -488,16 +489,51 @@ void ExamDetail :: ExamDetailPage()
                 page.SelectFieldEnd();   
                 cout << page.endTD;
             }*/
-            
+ 
+            string startTime[10] = {"9:00 AM", "9:30 AM", "10:30 AM",
+                                  "11:00 AM", "11:30 AM", "12:00 PM",
+                                  "1:00 PM", "1:30 PM", "2:00 PM", 
+                                  "2:30 PM"};
+
+            string endTime[15] = {"9:30 AM", "10:30 AM", "11:00 AM", 
+                                "11:30 AM", "12:00 PM", "12:30 PM",
+                                "1:00 PM", "1:30 PM", "2:00 PM", 
+                                "2:30 PM", "3:00 PM", "3:30 PM",
+                                "4:00 PM", "4:30 PM", "5:00 PM"};
             cout << page.startTD;
+
+            page.SelectFieldStart("StartTime"+ IntToString(j));
+            page.SelectOptionStart(" ", "y");
+            cout << "Select";
+            page.SelectOptionEnd();
+            for(l = 0; l < 10; l++)
+            {
+                page.SelectOptionStart(startTime[l], "n");
+                cout << startTime[l];
+                page.SelectOptionEnd();
+            }
+            page.SelectFieldEnd();
+
 /*
 //            page.InputField("time", "StartTime", j, "Start Time");
             cout << "<input id=\"myPicker\" class=\"time\" "
-                 << "name=\"StartTime\" type=\"text\" />";
+                 << "name=\"StartTime\" type=\"text\" />";*/
             cout << page.endTD;
             
             cout << page.startTD;
-            page.InputField("time", "EndTime", j, "End Time");
+            page.SelectFieldStart("EndTime"+ IntToString(j));
+            page.SelectOptionStart(" ", "y");
+            cout << "Select";
+            page.SelectOptionEnd();
+            for(l = 0; l < 15; l++)
+            {
+                page.SelectOptionStart(endTime[l], "n");
+                cout << endTime[l];
+                page.SelectOptionEnd();
+            }
+            page.SelectFieldEnd();
+
+/*            page.InputField("time", "EndTime", j, "End Time");
             cout << "<input id=\"myPicker\" class=\"time\" "
                  << "name=\"EndTime\" type=\"text\" />";*/
             cout << page.endTD;
