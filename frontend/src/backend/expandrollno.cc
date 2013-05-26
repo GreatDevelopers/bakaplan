@@ -56,11 +56,11 @@ void ExpandRollNo :: ExpandRollNos(string projectID)
    
             outFile << v.back() << endl;
         }
-        else
+//        else
             outFile << "an error occured." << endl;
             
         // expanding not included roll nos
-        if(notIncluded[i] != " ")
+        if(notIncluded[i] != " " || notIncluded[i].size() != 0)
         {
             istringstream rollno(notIncluded[i]);
             deque<int> v;
@@ -74,7 +74,7 @@ void ExpandRollNo :: ExpandRollNos(string projectID)
       
                 outFile << v.back() << endl;
             }
-            else
+//            else
                 outFile << "an error occured." << endl;
         }
     }
