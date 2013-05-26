@@ -158,14 +158,14 @@ void ProjectDetail :: OldProject()
     if(oldProject.size() != 0)
     {
         page.FormStart("FormProject", "class", "GET");
-
-        page.Label(fieldName.projectName, " Project Name ");
+//                       "return ValidateProjectForm()");
+        page.Label(fieldName.projectName, " Existing Project Name ");
         page.InputField("hidden", fieldName.projectType, "Old"); 
         page.InputField("hidden", fieldName.emailID, userEmailID);
 
         page.SelectFieldStart(fieldName.projectName);
         
-        page.SelectOptionStart(" ", "y");
+        page.SelectOptionStart("Select", "y");
         cout << "Select";
         page.SelectOptionEnd();
 
