@@ -114,8 +114,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#ae20d8dbfb3d8755cd4cf508a503fd9b6"><param name="Name" value="InsertValidStrategy"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#a5b4fd605238ca66878959f5f3ba647f2"><param name="Name" value="j"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#a02965883689dd1d8007c86cebf6df89e"><param name="Name" value="numrows"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#ab790a68bd8fdbd36133d56ca21ec45d0"><param name="Name" value="Query"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#a851daa5b233ce54d75873631b7b2167a"><param name="Name" value="query"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#ab790a68bd8fdbd36133d56ca21ec45d0"><param name="Name" value="Query"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#ad5921cd2f70d0c22895f2cc5542ab4d7"><param name="Name" value="res_set"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#a71ad7ae59677936d2ca6666f9de9df40"><param name="Name" value="row"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#a52049c686ad213533bdb1c4f2ac3c157"><param name="Name" value="SelectColumn"></OBJECT>
@@ -241,11 +241,8 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInputField.html#a0d95496b5fc8fb4badd4af19492182ae"><param name="Name" value="fieldValue"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#a509ee6dd2de52e87cb764d0b0cceb05a"><param name="Name" value="FileName"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#a4a7fb27e52bed0f40de143634f2c486b"><param name="Name" value="fileName"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#a4a7fb27e52bed0f40de143634f2c486b"><param name="Name" value="InputDetail"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#a834acf783052b5b2f129644b4accaadc"><param name="Name" value="ReadInput"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#a990ac303132881774253593565e85bd0"><param name="Name" value="FileName"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#a834acf783052b5b2f129644b4accaadc"><param name="Name" value="fileName"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#acbc05b1bc6a371cf0a52222cc95e467d"><param name="Name" value="Footer"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#acbc05b1bc6a371cf0a52222cc95e467d"><param name="Name" value="InputDetail"></OBJECT>
@@ -276,7 +273,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#aa5794ec3922f26d376dba09946e73178"><param name="Name" value="ReadInput"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSeatPlan.html#a2c85aa97b3681f2ba5e27af197836b26"><param name="Name" value="index"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogin.html#aa73be2f0600a29169609315dcc43db0a"><param name="Name" value="IndexPage"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSeatPlan.html#af3fbce455c6744dee3fedb97442cd2c3"><param name="Name" value="indexValue"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#a4c62c1934fbfcdcc8e2afaee44a87c15"><param name="Name" value="inFile"></OBJECT>
   <UL>
@@ -463,7 +459,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogin.html#a79ea5bbaeaa2ec6d21cd3195c522b863"><param name="Name" value="ConfirmPage"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogin.html#a624f15ecf989648b73a91743f67a6880"><param name="Name" value="currentTime"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogin.html#abea56d6d6403f1e627294f222dd77310"><param name="Name" value="emailID"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogin.html#aa73be2f0600a29169609315dcc43db0a"><param name="Name" value="IndexPage"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogin.html#ab7769b44690490b43fc9046ad5958baf"><param name="Name" value="key"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogin.html#a4847f3e07e43b540d3339392346f87ff"><param name="Name" value="Login"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classLogin.html#a2b2b36f506bcb5e7179b0b3afe164ace"><param name="Name" value="LoginPage"></OBJECT>
@@ -648,8 +643,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#ad2c46fdc8093eb88e01497e55b2e8e4d"><param name="Name" value="InputDetail"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputFieldName.html#aaa398a603dfe98f4eca022ec9d90bc09"><param name="Name" value="InputFieldName"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#ab790a68bd8fdbd36133d56ca21ec45d0"><param name="Name" value="Query"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#a851daa5b233ce54d75873631b7b2167a"><param name="Name" value="query"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classDatabase.html#ab790a68bd8fdbd36133d56ca21ec45d0"><param name="Name" value="Query"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#aff1e359dc8b72c710bb15647ff4e78da"><param name="Name" value="ReadClassDetail"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#aff1e359dc8b72c710bb15647ff4e78da"><param name="Name" value="ReadInput"></OBJECT>
@@ -684,8 +679,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#a6ac62618d1b89d823230ae93c7b85c3b"><param name="Name" value="examSubName"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#a5699b918caccc7ac1a0f11fe718d175f"><param name="Name" value="examTime"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#a9a42610cf6380926b41de17cc82a8107"><param name="Name" value="examVenue"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#a834acf783052b5b2f129644b4accaadc"><param name="Name" value="fileName"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#a990ac303132881774253593565e85bd0"><param name="Name" value="FileName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#a834acf783052b5b2f129644b4accaadc"><param name="Name" value="fileName"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#aa5794ec3922f26d376dba09946e73178"><param name="Name" value="i"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#afe0f493fcb2da1f644445501823fd0e2"><param name="Name" value="inFile"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classReadInput.html#a9cff282fd247d9eca49c1acde4d08b11"><param name="Name" value="j"></OBJECT>
@@ -940,8 +935,8 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSendMail.html#a22e32135e60ad02a6beff91638907cc6"><param name="Name" value="setSubject"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classSeatPlan.html#a45d2c9c1d580d442bc15dcb50265d627"><param name="Name" value="size"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classArrangeRollNo.html#aae9734fb7b98d980d3f1feb1b52a6195"><param name="Name" value="SortRollNo"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#aba635a55313b14cf8bb285560a55498e"><param name="Name" value="SplitString"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#ab09ed4176090a72237531cedf00afb41"><param name="Name" value="splitString"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#aba635a55313b14cf8bb285560a55498e"><param name="Name" value="SplitString"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#a5284736b5fd3db0251cfeab7c581c0bd"><param name="Name" value="ss"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classInputDetail.html#a5284736b5fd3db0251cfeab7c581c0bd"><param name="Name" value="InputDetail"></OBJECT>
@@ -1088,8 +1083,8 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classValidStrategy.html#aac23ca61c16d79b48603a7db96617003"><param name="Name" value="validStrategy"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classValidStrategy.html"><param name="Name" value="ValidStrategy"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classValidStrategy.html#aac23ca61c16d79b48603a7db96617003"><param name="Name" value="validStrategy"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classValidStrategy.html#ae168db88ebfa1eabdd7f241a631ffc27"><param name="Name" value="ValidStrategy"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classValidStrategy.html#aac23ca61c16d79b48603a7db96617003"><param name="Name" value="validStrategy"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classValidStrategy.html#ad89451a935f815b4c85b595135d70d94"><param name="Name" value="ValidStrategyPage"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classValidStrategy.html#a093620e19cef0865e6e38a26bb41b8bd"><param name="Name" value="WriteStrategyDetail"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classValidStrategy.html#aec9e6ff1c9e9058a17f5488fe3e6cfec"><param name="Name" value="~ValidStrategy"></OBJECT>

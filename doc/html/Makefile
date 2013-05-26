@@ -25,9 +25,6 @@ docset:
 	rm -f $(DOCSET_RESOURCES)/Nodes.xml
 	rm -f $(DOCSET_RESOURCES)/Tokens.xml
 
-clean:
-	rm -rf $(DOCSET_NAME)
-
 install: docset
 	mkdir -p $(DESTDIR)
 	cp -R $(DOCSET_NAME) $(DESTDIR)
