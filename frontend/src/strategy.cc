@@ -220,6 +220,25 @@ void Strategy :: StrategyPage()
     page.InputField("hidden", fieldName.sameDetail, sameDetail);
     page.InputField("hidden", "AddRoom", "False");
 
+    cout << table();
+
+    cout << tr().add(td(img()
+                        .set("src", "../../BaKaPlan/images/cushy.png")
+                        .set("alt", "description")))
+                .add(td(img()
+                        .set("src", "../../BaKaPlan/images/flipflop.png")
+                        .set("alt", "description")))
+                .add(td(img()
+                        .set("src", "../../BaKaPlan/images/triplet.png")
+                        .set("alt", "description")));
+    cout << tr().add(td(img()
+                        .set("src", "../../BaKaPlan/images/quadlet.png")
+                        .set("alt", "description")))
+                .add(td(img()
+                        .set("src", "../../BaKaPlan/images/serpentime.png")
+                        .set("alt", "description")));
+    cout << table();
+
     ErrorMessage(msg);
 
     page.TableStart("TableStrategy", "");
