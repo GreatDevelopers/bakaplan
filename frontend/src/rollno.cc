@@ -55,7 +55,7 @@ void RollNoDetail :: ReadClassDetail()
     projectType = readField.ReadFieldValue(fieldName.projectType);
     totalClasses = StringToInt(readField.ReadFieldValue(
                                fieldName.totalClasses));
-
+ 
     rowIndex = readField.ReadFieldValue(fieldName.rowIndex);
     STRING_VEC index;
     SplitString(index, rowIndex, ",");

@@ -199,11 +199,13 @@ void ClassDetail :: ClassDetailPage(string msg)
                    "return ValidateClassForm(\"TotalClasses\")");
 
 
-    page.InputField("hidden", fieldName.projectID, projectID);
+    page.InputField("hidden", "", "");//fieldName.totalClasses, 
+//                    IntToString(totalClasses));
+    page.InputField("hidden", fieldName.projectType, projectType);
     page.InputField("hidden", fieldName.totalClasses, 
                     IntToString(totalClasses));
-    page.InputField("hidden", fieldName.projectType, projectType);
-    
+  
+    page.InputField("hidden", fieldName.projectID, projectID);
     page.InputField("button", "AddRow", 
                     "AddRows('TableClass', 'TotalClasses', 'class')",
                     "Add Row");

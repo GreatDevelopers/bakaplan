@@ -29,6 +29,7 @@ int main(void)
 {
     
     RollNoDetail rollNo;
+//    rollNo.page.ContentType();
     rollNo.RollNoDetailPage();
 
     return 0;
