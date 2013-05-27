@@ -173,7 +173,7 @@ void PageStructureMaker :: BodyStart()
          << "Show Menu </p> </span> "
          << " <h3> Ba<span class=\"ka\">ka</span> Plan</h3>"
          << "<a href=\"home\"> Home </a>"
-         << "<a href=\"../../BaKaPlan/about.html\"> About </a>"
+//         << "<a href=\"../../BaKaPlan/about.html\"> About </a>"
 //         << "<a href=\"contribute.html\"> Contribute </a>"
 //         << "<a href=\"../../BaKaPlan/contact.html\">Contact  </a>"
          << "<a href=\"login\"> Log Out </a>"
