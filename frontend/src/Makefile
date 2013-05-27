@@ -25,7 +25,7 @@ include Make.common
 #   Targets
 # ====================================================================
 
-all: back $(F_BP)$(LOGIN)$(HTML) $(F_BP)$(REGISTER)$(HTML) $(F_BP)$(RESET)$(HTML) $(F_BP)$(NEWUSER)$(HTML) $(F_BP)$(CONFIRM)$(HTML) $(F_BP)$(ADDUSER)$(HTML) $(F_BP)$(PROJECT)$(HTML) $(F_BP)$(LOGOUT)$(HTML) $(F_BP)$(CLASS)$(HTML) $(F_BP)$(ROLLNO)$(HTML) $(F_BP)$(DATESHEET)$(HTML) $(F_BP)$(EXAM)$(HTML) $(F_BP)$(ADDROOM)$(HTML) $(F_BP)$(ROOM)$(HTML) $(F_BP)$(STRATEGY)$(HTML) $(F_BP)$(VALIDSTRATEGY)$(HTML) $(F_BP)$(REPORT)$(HTML)
+all: back $(F_BP)$(LOGIN)$(HTML) $(F_BP)$(REGISTER)$(HTML) $(F_BP)$(RESET)$(HTML) $(F_BP)$(NEWUSER)$(HTML) $(F_BP)$(CONFIRM)$(HTML) $(F_BP)$(ADDUSER)$(HTML) $(F_BP)$(PROJECT)$(HTML) $(F_BP)$(HOME)$(HTML) $(F_BP)$(LOGOUT)$(HTML) $(F_BP)$(CLASS)$(HTML) $(F_BP)$(ROLLNO)$(HTML) $(F_BP)$(DATESHEET)$(HTML) $(F_BP)$(EXAM)$(HTML) $(F_BP)$(ADDROOM)$(HTML) $(F_BP)$(ROOM)$(HTML) $(F_BP)$(STRATEGY)$(HTML) $(F_BP)$(VALIDSTRATEGY)$(HTML) $(F_BP)$(REPORT)$(HTML)
 
 back:
 	make -C backend
@@ -64,6 +64,9 @@ $(LOGIN)$(O) : $(D_LOGIN)
 
 $(PROJECT)$(O) : $(D_PROJECT)
 	$(CXX) $(CFLAG) $(PROJECT)$(CC) $(LMYSQL)
+
+$(HOME)$(O) : $(D_HOME)
+	$(CXX) $(CFLAG) $(HOME)$(CC) $(LMYSQL)
 
 $(CLASS)$(O) : $(D_CLASS)
 	$(CXX) $(CFLAG) $(CLASS)$(CC) $(LMYSQL)
@@ -111,6 +114,9 @@ $(ADDUSER)$(MAIN)$(O) : $(D_ADDUSER_M)
 
 $(PROJECT)$(MAIN)$(O) : $(D_PROJECT_M)
 	$(CXX) $(CFLAG) $(PROJECT)$(MAIN)$(CPP) $(LMYSQL)
+
+$(HOME)$(MAIN)$(O) : $(D_HOME_M)
+	$(CXX) $(CFLAG) $(HOME)$(MAIN)$(CPP) $(LMYSQL)
 
 $(LOGOUT)$(MAIN)$(O) : $(D_LOGOUT_M)
 	$(CXX) $(CFLAG) $(LOGOUT)$(MAIN)$(CPP) $(LMYSQL)
@@ -170,6 +176,10 @@ $(F_BP)$(ADDUSER)$(HTML) : $(L_ADDUSER)
 
 $(F_BP)$(PROJECT)$(HTML) : $(L_PROJECT)
 	$(CXX) $(OFLAG) $(F_BP)$(PROJECT)$(HTML) $(L_PROJECT) \
+	$(LMYSQL) $(LCGICC) $(LSMTP)
+
+$(F_BP)$(HOME)$(HTML) : $(L_HOME)
+	$(CXX) $(OFLAG) $(F_BP)$(HOME)$(HTML) $(L_HOME) \
 	$(LMYSQL) $(LCGICC) $(LSMTP)
 
 $(F_BP)$(LOGOUT)$(HTML) : $(L_LOGOUT)

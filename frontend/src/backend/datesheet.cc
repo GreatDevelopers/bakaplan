@@ -89,8 +89,8 @@ void DateSheet :: AddRollNoWithDateSheet()
 }
 
 /**
- *      \class  DataSheet
- *      \fn     DataSheet :: WriteDateSheetWithRollNo(string projectID)
+ *      \class  DateSheet
+ *      \fn     DateSheet :: WriteDateSheetWithRollNo(string projectID)
  *      \brief  Writing Date sheet to file with roll nos.
  *              datesheet.out will be used for generating seating plan
  *      \param  projectID ProjectID of use's project

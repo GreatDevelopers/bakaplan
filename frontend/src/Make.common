@@ -62,6 +62,7 @@ NEWUSER     =  newuser
 CONFIRM     =  confirm
 ADDUSER     =  adduser
 PROJECT     =  project
+HOME        =  home
 CLASS       =  class
 ROLLNO      =  rollno
 DATESHEET   =  datesheet
@@ -119,6 +120,8 @@ H_LOGIN          :=  $(F_HEADER)$(LOGIN)$(H) $(H_INPUTDETAIL) \
 
 H_PROJECT        :=  $(F_HEADER)$(PROJECT)$(H) $(H_INPUTDETAIL)
 
+H_HOME           :=  $(F_HEADER)$(PROJECT)$(H) $(H_INPUTDETAIL)
+
 H_CLASS          :=  $(F_HEADER)$(CLASS)$(H) $(H_INPUTDETAIL) 
 
 H_ROLLNO         :=  $(F_HEADER)$(ROLLNO)$(H) $(H_INPUTDETAIL)
@@ -165,6 +168,8 @@ D_LOGIN            =    $(LOGIN)$(CC) $(H_LOGIN)
 
 D_PROJECT          =    $(PROJECT)$(CC) $(H_PROJECT)
 
+D_HOME             =    $(PROJECT)$(CC) $(H_PROJECT)
+
 D_CLASS            =    $(CLASS)$(CC) $(H_CLASS)
 
 D_ROLLNO           =    $(ROLLNO)$(CC) $(H_ROLLNO)
@@ -198,6 +203,8 @@ D_CONFIRM_M     =   $(CONFIRM)$(MAIN)$(CPP) $(H_LOGIN)
 D_ADDUSER_M     =   $(ADDUSER)$(MAIN)$(CPP) $(H_LOGIN)
 
 D_PROJECT_M     =   $(PROJECT)$(MAIN)$(CPP) $(H_PROJECT)
+
+D_HOME_M        =   $(HOME)$(MAIN)$(CPP) $(H_PROJECT)
 
 D_CLASS_M       =   $(CLASS)$(MAIN)$(CPP) $(H_CLASS)
 
@@ -240,6 +247,8 @@ L_CONFIRM      =  $(CONFIRM)$(MAIN)$(O) $(L_LOG)
 L_ADDUSER      =  $(ADDUSER)$(MAIN)$(O) $(L_LOG)
 
 L_PROJECT      =  $(PROJECT)$(MAIN)$(O) $(L_LOG) $(PROJECT)$(O)
+
+L_HOME         =  $(HOME)$(MAIN)$(O) $(L_LOG) $(PROJECT)$(O)
 
 L_CLASS        =  $(CLASS)$(MAIN)$(O) $(CLASS)$(O) $(PROJECT)$(O) $(L_LOG)
 

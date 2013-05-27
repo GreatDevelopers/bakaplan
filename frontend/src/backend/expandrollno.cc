@@ -56,7 +56,7 @@ void ExpandRollNo :: ExpandRollNos(string projectID)
    
             outFile << v.back() << endl;
         }
-//        else
+        else
             outFile << "an error occured." << endl;
             
         // expanding not included roll nos
@@ -74,7 +74,7 @@ void ExpandRollNo :: ExpandRollNos(string projectID)
       
                 outFile << v.back() << endl;
             }
-//            else
+            else
                 outFile << "an error occured." << endl;
         }
     }

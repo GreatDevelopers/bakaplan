@@ -131,6 +131,13 @@ void ClassDetail :: NewProject()
 
 void ClassDetail :: OldProject()
 {
+    if(projectName == "Select")
+    {
+        msg = "Select Existing Project";
+        project.ProjectDetailPage(msg); 
+    }
+    else
+    {
     int pn = StringToInt(projectName);
     projectName = oldProject[pn];
    
@@ -171,6 +178,7 @@ void ClassDetail :: OldProject()
     {
         msg = "Project doesn't exists.";
         project.ProjectDetailPage(msg); 
+    }
     }
 }
 

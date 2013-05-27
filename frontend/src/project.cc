@@ -196,7 +196,8 @@ void ProjectDetail :: OldProject()
 
 void ProjectDetail :: HomePage()
 {
-    
+    page.ContentType();
+   
     projectID = readField.ReadFieldValue(fieldName.projectID);
 
     where = "ProjectID = " + projectID;
