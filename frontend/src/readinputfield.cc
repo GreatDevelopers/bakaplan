@@ -73,7 +73,7 @@ string ReadInputField :: ReadFieldValue(string fieldName, int fieldNo)
  * Description:  Read cookies - email id and session id \n
  *--------------------------------------------------------------------
  */
- /*
+/*
 string ReadInputField :: ReadCookie(string cookieName)
 {
     // get environment variables                                       

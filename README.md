@@ -1,7 +1,7 @@
 BaKa Plan
 =========
 
-This software creates seating plan for examinations. It provides four 
+This software creates seating plan for examinations. It provides five 
 different strategies to create seat plan.
 
 REQUIREMENTS:
@@ -23,7 +23,10 @@ Run following command in terminal to install
     $ sudo apt-get install g++
 
 2) Configure public_html/cgi-bin folder for executing files on browser.<br>
-Assuming you already installed apache
+Assuming you already installed apache if not then run following
+command in terminal
+
+    $ sudo apt-get install apache2
     
 **Steps to configure public_html**
         
@@ -95,9 +98,11 @@ Then run following commands in terminal
     
 <!--    NOTE: If you got permission error then use sudo with command.-->
 
-4) MySQL Connector for C++
+4) MySQL and MySQL Connector for C++
 
 Run following commands in terminal
+
+    $ sudo apt-get install mysql-server mysql-client
     
     $ sudo apt-get install libmysql++
 
@@ -107,7 +112,7 @@ Run following commands in terminal
 
 Run following command in terminal
 
-    $ sudo apt-get install libboost1.53-all-dev 
+    $ sudo apt-get install libboost1.53-dev 
 
 6) jwSMTP Library
 

@@ -322,7 +322,7 @@ void Database :: InsertExamDetail(string projectID, string dateSheetID,
 void Database :: InsertSessionDetail(string emailID, string sessionKey)
 {
     query  = "insert into SessionDetail(EmailID, SessionKey) values(";
-    query += "\"" + emailID + "\"" + sessionKey + "\");";
+    query += "\"" + emailID + "\", \"" + sessionKey + "\");";
 
     InsertQuery(query);
 }

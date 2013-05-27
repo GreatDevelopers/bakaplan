@@ -34,3 +34,6 @@ source:
 
 clean:
 	make -C src clean
+
+clean-IO:
+	rm -f input/*.in output/*.out ~/public_html/SeatPlan/*.html

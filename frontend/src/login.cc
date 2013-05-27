@@ -315,11 +315,10 @@ void Login :: AddUser()
 void Login :: LogoutPage()
 {
     page.SetCookies("", "");
-    //string s = readField.ReadCookie("SessionID");
+//    string s = readField.ReadCookie("SessionID");
 /*    userEmailID = readField.ReadFieldValue(fieldName.emailID);
-    temp  = "delete from Session where EmailID = \"" + userEmailID;
-    temp += "\";";
-    database.DeleteQuery(temp);*/
+    temp = "SessionID = \"" + s + "\"";
+    database.DeleteQuery("SessionDetail", temp);*/
     LoginPage();
 }
  
