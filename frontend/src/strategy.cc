@@ -233,7 +233,7 @@ void Strategy :: StrategyPage()
                         .set("src", "../../BaKaPlan/images/quadlet.png")
                         .set("alt", "description")))
                 .add(td(img()
-                        .set("src", "../../BaKaPlan/images/serpentime.png")
+                        .set("src", "../../BaKaPlan/images/serpentine.png")
                         .set("alt", "description")));
     cout << table();
 
