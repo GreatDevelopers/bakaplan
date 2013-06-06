@@ -1,6 +1,6 @@
-This software creates seating plan for examinations. It provides four different strategies to create seat plan.
+This software creates seating plan for examinations. It provides five different strategies to create seat plan.
 
-\subsection*{R\-E\-Q\-U\-I\-R\-E\-M\-E\-N\-T\-S\-:}
+\subsection*{R\-E\-Q\-U\-I\-R\-E\-M\-E\-N\-T\-S\-: }
 
 \begin{DoxyVerb}1) GNU G++ Compiler
 2) Configure public_html and cgi-bin in home
@@ -20,7 +20,9 @@ Run following command in terminal to install \begin{DoxyVerb}$ sudo apt-get inst
 
 
 2) Configure public\-\_\-html/cgi-\/bin folder for executing files on browser.\par
- Assuming you already installed apache
+ Assuming you already installed apache if not then run following command in terminal \begin{DoxyVerb}$ sudo apt-get install apache2
+\end{DoxyVerb}
+
 
 {\bfseries Steps to configure public\-\_\-html} \begin{DoxyVerb}$ mkdir ~/public_html
 
@@ -91,9 +93,11 @@ $ sudo make install
 \end{DoxyVerb}
 
 
-4) My\-S\-Q\-L Connector for C++
+4) My\-S\-Q\-L and My\-S\-Q\-L Connector for C++
 
-Run following commands in terminal \begin{DoxyVerb}$ sudo apt-get install libmysql++
+Run following commands in terminal \begin{DoxyVerb}$ sudo apt-get install mysql-server mysql-client
+
+$ sudo apt-get install libmysql++
 
 $ sudo apt-get install libmysql++-dev
 \end{DoxyVerb}
@@ -101,7 +105,7 @@ $ sudo apt-get install libmysql++-dev
 
 5) Boost Library
 
-Run following command in terminal \begin{DoxyVerb}$ sudo apt-get install libboost1.53-all-dev 
+Run following command in terminal \begin{DoxyVerb}$ sudo apt-get install libboost1.53-dev 
 \end{DoxyVerb}
 
 
@@ -121,11 +125,11 @@ include string header file in that. And again run make
 \end{DoxyVerb}
 
 
-\subsection*{I\-N\-S\-T\-A\-L\-L\-A\-T\-I\-O\-N\-:}
+\subsection*{I\-N\-S\-T\-A\-L\-L\-A\-T\-I\-O\-N\-: }
 
 Check \href{https://github.com/GreatDevelopers/bakaplan/blob/master/INSTALLATION.txt}{\tt I\-N\-S\-T\-A\-L\-L\-A\-T\-I\-O\-N} steps for using this software.
 
-\subsection*{A\-U\-T\-H\-O\-R\-S\-:}
+\subsection*{A\-U\-T\-H\-O\-R\-S\-: }
 
 {\bfseries Mentor and Manager}
 
