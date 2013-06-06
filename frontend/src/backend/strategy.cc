@@ -237,7 +237,8 @@ void Strategy :: ChooseStrategy()
 void Strategy :: Main(string pID)
 {
     projectID = pID; 
-
+    
+    ReadClassDetail(projectID);
     ReadDateSheetOut(projectID);
     ReadRoomDetail(projectID);
     ReadExamDetail(projectID);

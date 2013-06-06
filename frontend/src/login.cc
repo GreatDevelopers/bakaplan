@@ -193,7 +193,7 @@ void Login :: NewUser()
     
         msg = "Check mail for verification in Junk/Trash.";
 
-        RegistrationPage(msg);
+        LoginPage(msg);
     }
 
 }

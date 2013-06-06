@@ -175,6 +175,11 @@ string SeatPlan :: RollNo(int s)
     
 }
 
+void SeatPlan :: AddRollNoInfo(string projectID, int i)
+{
+
+}
+
 void SeatPlan :: WriteSeatPlan(string projectID, int i)
 { 
     stringstream ss;
@@ -232,7 +237,8 @@ void SeatPlan :: WriteHTMLFile(string projectID, int i)
             << "<style> @media print { div {page-break-before:always} } "
             << "td {font-size:130%; font-weight:bold;}"
             << "h1 {font-size:300%; font-family: }"
-            << "body{font-family:\"Open Sans\";}"
+            << "body{font-family:\"Open Sans\"; text-align:center;"
+            << "margin:10 auto}"
             << "</style> "
             << "<link href='http://fonts.googleapis.com/css?family="
             << "Open+Sans' rel='stylesheet' type='text/css'>"
