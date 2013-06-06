@@ -1,28 +1,22 @@
-/*
- * ===================================================================
+/**
  *
- *       Filename:  detail.h
+ *       \file       inputdetail.h
  *
- *    Description:  Base class for all common variable declaration and
- *                  functions that are used by derived classes
+ *       \brief      Base class for all common variable declaration and
+ *                   functions that are used by derived classes
  *
- *        Version:  0.7
- *        Created:  Friday 22 February 2013 11:34:29  IST
- *       Compiler:  g++
+ *       \version    0.7
+ *       \date       Thursday 06 June 2013 10:20:20  IST\n
+ *       Compiler    g++
  *
- *         Author:  Mandeep Kaur, meghasimak@gmail.com
- *        License:  GNU General Public License
- *      Copyright:  Copyright (c) 2013, Great Developers
- *
- * ===================================================================
+ *       \author     Mandeep Kaur, meghasimak@gmail.com\n
+ *       License     GNU General Public License
+ *       \copyright  Copyright (c) 2013, GreatDevelopers
+ *                   https://github.com/GreatDevelopers
  */
 
 #ifndef INPUTDETAIL_H
 #define INPUTDETAIL_H
-
-/**
- *  Include Local header files 
- */
 
 #include "filename.h"                            /* I/O  File Names */
 #include "pagelayout.h"                         /* PageLayout Class */
@@ -45,17 +39,18 @@ class InputDetail //: public PageLayout
         
         int i, j, k, l;                      /**< Looping Variables */
 
-        stringstream ss;          /**< for converting int to string */
-        string temp, temp1;             /**< for temporary strorage */
+        stringstream ss;          /**< For converting int to string */
+        string temp, temp1;             /**< For temporary strorage */
         // For project detail
-        string projectID,                           /**< Project ID */
-               emailID,                               /**< Email id */
-               projectName;                       /**< Project Name */
+        string projectID,                           
+               emailID,                           
+               projectName;                     
 
-        string fileName,            /**< file name for opening file */
+        string fileName,            /**< File name for opening file */
                where,                     /**< Temp variable to store 
                                                        where clause */
-               msg;                   /**< For Displaying error msg */
+               msg;                   /**< For Displaying error 
+                                                            message */
 
         STRING_VEC vecTemp,        /**< string Vector temporary use */
                    oldProject,                 /**< For stroring old
@@ -79,20 +74,23 @@ class InputDetail //: public PageLayout
                sameDetail,                      /**< For holding value
                                                 yes/no for same detail 
                                                 for rest of pages*/
-               lastRow,
-               rowIndex;
+               lastRow,                 /**< Last row id for tables */
+               rowIndex;                        /**< Row index for 
+                                            defining available rows */
 
         STRING_VEC className,                /**< Class/Branch Name */
                    subjectName,                  /**< Subject Names */
                    subjectCode,                  /**< Subject Codes */
                    classID,                   /**< Class Details ID */
                    tableHeading,             /**< For table heading */
+
         /* Variables for roll no detail*/
                    prefix,                   /**< Prefix of roll no */
                    startRollNo,               /**< starting roll no */
                    endRollNo,                   /**< ending roll no */
                    notIncluded,                /**< roll no's that are 
                                        not included in seating plan */
+
         /* variables for datsheet detail */
                    date,                   /**< Date of examination */
                    examCode,                    /**< Exam/subject code 
@@ -129,32 +127,15 @@ class InputDetail //: public PageLayout
         Database database;                   /**< Accecing Database */
         PageLayout page;                             /**< HTML Tags */
 
-        /** Constructor */
         InputDetail(); 
-
-        /** Header of page  */
         void Header(string titleName);
-
-        /** Footer of page */
         void Footer();
-
-        /** Convert Integer to string */
         string IntToString(int value);
-        
-        /** Convert String to Integer */
         int StringToInt(string value);
-
-        /** Shows message if user filled data in field */
         void ErrorMessage(string msg = "");
-
-        /** For locating current time on system */
         string Time();
-
-        /** Spliting string  */
         void SplitString(STRING_VEC & output, 
                          string input, string token);
-
-        /** Retruning filename w.r.t. to project ID */
         string FileName(string file, string projectID, int fileType);
 };
 

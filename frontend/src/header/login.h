@@ -1,38 +1,30 @@
-/*
- * ===================================================================
+/**
  *
- *       Filename:  login.h
+ *       \file       login.h
  *
- *    Description:  Login class definition for user login 
+ *       \brief      Login class declaration for user login,
+ *                   registration and reset password.
  *
- *        Version:  0.7
- *        Created:  Sunday 03 March 2013 01:13:08  IST
- *       Compiler:  g++
+ *       \version    0.7
+ *       \date       Thursday 06 June 2013 10:40:55  IST\n
+ *       Compiler    g++
  *
- *         Author:  Mandeep Kaur, meghasimak@gmail.com
- *        License:  GNU General Public License
- *      Copyright:  Copyright (c) 2013, GreatDevelopers
- *                  https://github.com/GreatDevelopers
- *
- * ===================================================================
+ *       \author     Mandeep Kaur, meghasimak@gmail.com\n
+ *       License     GNU General Public License
+ *       \copyright  Copyright (c) 2013, GreatDevelopers
+ *                   https://github.com/GreatDevelopers
  */
 
 #ifndef LOGIN_H
 #define LOGIN_H
-
-/**-------------------------------------------------------------------
- *  Include required header files
- *------------------------------------------------------------------*/
 
 #include "inputdetail.h"
 #include "md5.h"
 #include "sendmail.h"
 
 /**
- * ===================================================================
- *        Class:  Login
- *  Description:  Login class for user login
- * ===================================================================
+ *      \class  Login
+ *      \brief  
  */
 
 class Login : public InputDetail

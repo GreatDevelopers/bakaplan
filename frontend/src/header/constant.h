@@ -1,25 +1,19 @@
-/*
- * ===================================================================
+/**
  *
- *       Filename:  constants.h
+ *       \file       constant.h
  *
- *    Description:  Include constant values for defining size of
- *    array.
+ *       \brief      Include constant values for defining size of
+ *                   array.
  *
- *        Version:  0.7
- *        Created:  Monday 18 February 2013 04:06:52  IST
- *       Compiler:  g++
+ *       \version    0.7
+ *       \date       Thursday 06 June 2013 09:14:42  IST\n
+ *       Compiler    g++
  *
- *         Author:  Mandeep Kaur, meghasimak@gmail.com
- *        License:  GNU General Public License
- *      Copyright:  Copyright (c) 2013, Great Developers
- *
- * ===================================================================
+ *       \author     Mandeep Kaur, meghasimak@gmail.com\n
+ *       License     GNU General Public License
+ *       \copyright  Copyright (c) 2013, GreatDevelopers
+ *                   https://github.com/GreatDevelopers
  */
-
-/**-------------------------------------------------------------------
- *  declare and define constant values
- *------------------------------------------------------------------*/
 
 #ifndef CONSTANT_H
 #define CONSTANT_H

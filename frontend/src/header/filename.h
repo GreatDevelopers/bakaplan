@@ -1,7 +1,8 @@
 /**
  *       \file       filename.h
  *
- *       \brief      File Name
+ *       \brief      Input/Output file names for class, room, roll no
+ *                   detail, etc.
  *
  *       \version    0.7
  *       \date       Sunday 31 March 2013 08:32:25  IST\n
@@ -17,6 +18,8 @@
 #define FILENAME_H
 
 #include "constant.h"
+
+/* Input/Output file names */
 
 const char INPUT[FILE_SIZE]   =   "../bakaplan/frontend/input/";
 const char OUTPUT[FILE_SIZE]  =   "../bakaplan/frontend/output/";

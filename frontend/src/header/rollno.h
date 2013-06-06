@@ -17,12 +17,7 @@
 #ifndef ROLLNO_H
 #define ROLLNO_H
 
-/**
- *  include class.h 
- */
-
 #include "inputdetail.h"
-
 
 /**
  *      \class  RollNoDetail
@@ -31,25 +26,12 @@
 
 class RollNoDetail : public InputDetail
 {
-    protected:
-
     public:
-        /** Roll No detail Constructor*/
         RollNoDetail();
-
-        /** Read Class Details */
         void ReadClassDetail();
-
-        /** Write class details in database */
         void WriteClassDetail();
-
-        /** Set default values of field */
         void SetDefaultValue(int totalClasses);
-
-        /** RollNo detail page */
         void RollNoDetailPage(string msg="");
-
-        /** Destructor */
         ~RollNoDetail();
 };
 

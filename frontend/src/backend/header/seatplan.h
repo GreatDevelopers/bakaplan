@@ -62,6 +62,7 @@ class SeatPlan : public ReadInput
         void CreateFile(string projectID);
         void WriteSeatPlan(string projectID, int i);
         void WriteHTMLFile(string projectID, int i);
+        void AddRollNoInfo(string projectID, int i);
 
         /** Destructor */
         ~SeatPlan();

@@ -1,27 +1,21 @@
-/*
- * ===================================================================
+/**
  *
- *       Filename:  header.h
+ *       \file       header.h
  *
- *    Description:  Header file for including commom headerfiles.
+ *       \brief      Header file for including commom headerfiles.
  *
- *        Version:  0.7
- *        Created:  Friday 15 February 2013 04:53:17  IST
- *       Compiler:  g++
+ *       \version    0.7
+ *       \date       Thursday 06 June 2013 09:29:59  IST\n
+ *       Compiler    g++
  *
- *         Author:  Mandeep Kaur, meghasimak@gmail.com
- *        License:  GNU General Public License
- *      Copyright:  Copyright (c) 2013, Great Developers
- *
- * ===================================================================
+ *       \author     Mandeep Kaur, meghasimak@gmail.com\n
+ *       License     GNU General Public License
+ *       \copyright  Copyright (c) 2013, GreatDevelopers
+ *                   https://github.com/GreatDevelopers
  */
 
 #ifndef HEADER_H
 #define HEADER_H
-
-/**-------------------------------------------------------------------
- *  Header file
- *------------------------------------------------------------------*/
 
 #include <iostream>
 #include <cstring>
@@ -33,7 +27,7 @@
 #include <ctime>
 #include <exception>
 
-// for using multi-dimentional array
+/* for using multi-dimentional array */
 #include <boost/multi_array.hpp>
 #include <boost/date_time/local_time/local_time.hpp>
 #include <boost/algorithm/string/split.hpp>
@@ -42,14 +36,11 @@
 #include <boost/algorithm/string/trim.hpp>
 #include <cassert>
 
-/**-------------------------------------------------------------------
- *  using namespace std
- *------------------------------------------------------------------*/
-
+/* Using namespaces */
 using namespace std;
 using namespace boost::algorithm;
 
-/**
+/*
  *  Typedef variables for using vector definiton
  */
 

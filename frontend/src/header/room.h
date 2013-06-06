@@ -16,10 +16,6 @@
 #ifndef ROOM_H
 #define ROOM_H
 
-/**
- *  include inpudetail.h 
- */
-
 #include "inputdetail.h"
 #include "../backend/header/datesheet.h"
 
@@ -30,25 +26,12 @@ class RoomDetail : public InputDetail
     DateSheet dateWiseRollNo;
 
     public:
-        /** Constructor */
         RoomDetail();
-
-        /** Set Default Value */
         void SetDefaultValue();
-
-        /** Reading Datesheet */
         void ReadDateSheet();
-
-        /** Writing DateSheet */
         void WriteDateSheet();
-
-        /** Room DEtail page for taking I/P from user */
         void RoomDetailPage(bool addRoom);
-
-        /** Add More rooms if strategy in valid */
         void AddMoreRooms();
-
-        /** Desctructor */
         ~RoomDetail();
 };
 

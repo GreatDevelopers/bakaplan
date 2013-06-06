@@ -1,36 +1,28 @@
-/*
- * ===================================================================
+/**
  *
- *       Filename:  pagelayout.h
+ *       \file       pagelayout.h
  *
- *    Description:  Add Header, Footer, Menus to webpage(output html
- *                  pages. PageLayout Class for this purpose.
+ *       \brief      Add Header, Footer, Menus to webpage(output html
+ *                   pages. PageLayout Class for this purpose.
  *
- *        Version:  0.7
- *        Created:  Friday 15 February 2013 06:10:40  IST
- *       Compiler:  g++
+ *       \version    0.7
+ *       \date       Thursday 06 June 2013 11:00:26  IST\n
+ *       Compiler    g++
  *
- *         Author:  Mandeep Kaur, meghasimak@gmail.com
- *        License:  GNU General Public License
- *      Copyright:  Copyright (c) 2013, Great Developers
- *
- * ===================================================================
+ *       \author     Mandeep Kaur, meghasimak@gmail.com\n
+ *       License     GNU General Public License
+ *       \copyright  Copyright (c) 2013, GreatDevelopers
+ *                   https://github.com/GreatDevelopers
  */
 
 #ifndef PAGELAYOUT_H
 #define PAGELAYOUT_H
 
-/**-------------------------------------------------------------------
- *  Include required header files
- *------------------------------------------------------------------*/
-
 #include "pagestructure.h"                   /* For basic HTML Tags */
 
 /**
- * ===================================================================
- *        Class:  PageLayout : public PageStructureMaker
- *  Description:  For adding header and footer to page
- * ===================================================================
+ *      \class  PageLayout
+ *      \brief  For adding header and footer to page
  */
 
 class PageLayout : public PageStructureMaker
@@ -39,33 +31,15 @@ class PageLayout : public PageStructureMaker
         string projectName;              /* Project Name = BaKaPlan */
         
     public:
-        /** Constructor */
         PageLayout();
-
-        /** Header Section of Page */
         void Header();                  
-
-        /** Footer Section of Page */
         void Footer();                  
-
-        /** List/Menu Navigation() */
         void Menu();                    
-
-        /** Logo on Page */
         void Logo(string logoName);    
-
-        /** Head Section of Page */
         void Head(string titleName);
-
-        /** For Cookies after login */
         void SetCookies(string emailID, string sessionID);
-
-        /** Content-Type header  */
         void ContentType();
-
-        /** Logout link  */
         void LogoutLink();
-
 };
 
 #endif

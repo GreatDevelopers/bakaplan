@@ -16,9 +16,6 @@
 #ifndef STRATEGY_H
 #define STRATEGY_H
 
-/**
- *  include inputdetail.h 
- */
 #include "inputdetail.h"
 
 class Strategy : InputDetail
@@ -28,22 +25,11 @@ class Strategy : InputDetail
         STRING_VEC strategyName;
 
     public:
-        /** Constructor */
         Strategy();
-
-        /** Reading exam detail */
         void ReadExamDetail();
-
-        /** Write Exam detail into database */
         void WriteExamDetail();
-
-        /** Setting default value */
         void SetDefaultValue();
-
-        /** strategy detail page */
         void StrategyPage();
-
-        /** Destructor */
         ~Strategy();
 };
 

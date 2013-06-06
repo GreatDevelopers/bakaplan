@@ -1,7 +1,10 @@
 /**
  *       \file       class.h
  *
- *       \brief      ClassDetail Class declaration
+ *       \brief      ClassDetail Class declaration for displaying form
+ *                   for taking values from user. Input details like
+ *                   class/branch name, subject code and subject
+ *                   names.
  *
  *       \version    0.7
  *       \date       Sunday 07 April 2013 07:45:59  IST\n
@@ -16,44 +19,27 @@
 #ifndef CLASS_H
 #define CLASS_H
 
-/**
- *  Include project.h 
- */
-
 #include "project.h"
 
 /**
  *      \class  ClassDetail
- *      \brief  For getting class details nd reading projectdetail
+ *      \brief  For getting class details and reading project detail
+ *              filled by user.
  */
 
 class ClassDetail : public InputDetail
 {
     protected:
         ProjectDetail project;
-
         STRING_VEC value;
 
     public:
-        /** Constructor */
         ClassDetail();
-
-        /** Set default values */
         void SetDefaultValue();
-
-        /** Type of project */
         void ProjectType();
-
-        /** Existing project */
         void OldProject();
-
-        /** New project */
         void NewProject();
-
-        /** Class detail page */
         void ClassDetailPage(string msg = "");
-
-        /** DEstructor */
         ~ClassDetail();
 };
 

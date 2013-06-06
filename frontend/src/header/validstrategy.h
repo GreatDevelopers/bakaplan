@@ -16,9 +16,6 @@
 #ifndef VALIDATION_H
 #define VALIDATION_H
 
-/**
- *  include inpudetail.h 
- */
 #include "exam.h"
 #include "../backend/header/strategy.h"
 
@@ -34,24 +31,12 @@ class ValidStrategy : public ExamDetail
     bool addRoom;
 
     public:
-        /** Constructor */
         ValidStrategy();
-
-        /** Read Strategy Detail */
         void ReadStrategyDetail();
-
         void ReadRoomDetail();
-
-        /** Write Strategy Detail */
         void WriteStrategyDetail();
-
-        /** Read ValidStrategy.out file */
         void ReadValidStrategy();
-
-        /** ValidStrategy Page */
         void ValidStrategyPage();
-    
-        /** desrtuctor  */
         ~ValidStrategy();
 };
 

@@ -1,7 +1,7 @@
 /**
  *       \file       report.h
  *
- *       \brief      Report class
+ *       \brief      Report class for generating reports
  *
  *       \version    0.7
  *       \date       Sunday 07 April 2013 08:27:13  IST\n
@@ -20,21 +20,11 @@
 
 class Report : InputDetail
 {
-    protected:
-
     public:
-        /** Constructor */
         Report();
-        
-        /** Reading validation page's hidden fields  */
         void ReadValidationDetail();
-
-        /** Report Page */
         void ReportPage();
-
-        /** Destructor */
         ~Report();
 };
-
 
 #endif

@@ -1,37 +1,29 @@
-/*
- * ===================================================================
+/**
  *
- *       Filename:  inputfieldnames.h
+ *       \file       inputfieldname.h
  *
- *    Description:  Declaration of InputFieldName Class ie used to
- *    store input field names.
+ *       \brief      Declaration of InputFieldName Class ie used to
+ *                   store input field names.
  *
- *        Version:  0.7
- *        Created:  Saturday 16 February 2013 02:28:58  IST
- *       Compiler:  g++
+ *       \version    0.7
+ *       \date       Thursday 06 June 2013 10:24:21  IST\n
+ *       Compiler    g++
  *
- *         Author:  Mandeep Kaur, meghasimak@gmail.com
- *        License:  GNU General Public License
- *      Copyright:  Copyright (c) 2013, Great Developers
- *
- * ===================================================================
+ *       \author     Mandeep Kaur, meghasimak@gmail.com\n
+ *       License     GNU General Public License
+ *       \copyright  Copyright (c) 2013, GreatDevelopers
+ *                   https://github.com/GreatDevelopers
  */
 
 #ifndef INPUTFIELDNAME_H
 #define INPUTFIELDNAME_H
 
-/**-------------------------------------------------------------------
- *  Include local header file that has global header files
- *------------------------------------------------------------------*/
-
 #include "header.h"
-                                                
+                                      
 /**
- * ===================================================================
- *        Class:  InputFieldName
- *  Description:  This class has variable names for all fields that
- *                are used to take input from user.
- * ===================================================================
+ *      \class  InputFieldName
+ *      \brief  This class has variable names for all fields that
+ *              are used to take input from user.
  */
 
 class InputFieldName

@@ -1,17 +1,3 @@
-/*
- * ===================================================================
- *
- *       Filename:  md5.h
- *
- *    Description:  For cencrypting password 
- *
- *        Version:  0.7
- *        Created:  Saturday 09 March 2013 12:56:23  IST
- *       Compiler:  g++
- *
- * ===================================================================
- */
-
 /* MD5
  converted to C++ class by Frank Thilo (thilo@unix-ag.org)
  for bzflag (http://www.bzflag.org)
