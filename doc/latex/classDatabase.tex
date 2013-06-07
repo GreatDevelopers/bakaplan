@@ -1,0 +1,497 @@
+\hypertarget{classDatabase}{\section{\-Database \-Class \-Reference}
+\label{classDatabase}\index{\-Database@{\-Database}}
+}
+
+
+{\ttfamily \#include $<$database.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDatabase_a4703c80e6969d33565ea340f768fdadf}{\-Database} ()
+\item 
+void \hyperlink{classDatabase_ab790a68bd8fdbd36133d56ca21ec45d0}{\-Query} (string query)
+\begin{DoxyCompactList}\small\item\em \-Function to execute any query. \end{DoxyCompactList}\item 
+void \hyperlink{classDatabase_adab1d6cc97c8b14e9d170d5659a92d3e}{\-Update\-Query} (string table, string column, string value, string where)
+\item 
+void \hyperlink{classDatabase_a4ccf07a8481a83055d8ce5fd27f0b415}{\-Select\-Query} (string query, \-S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \&result)
+\begin{DoxyCompactList}\small\item\em \-Select \-Query for selecting single column from table. \end{DoxyCompactList}\item 
+void \hyperlink{classDatabase_a63d8c1af7507b1dcdc81a411f9a0b4b4}{\-Insert\-Query} (string query)
+\begin{DoxyCompactList}\small\item\em \-Function for executing \-Insert\-Query. \end{DoxyCompactList}\item 
+void \hyperlink{classDatabase_a3ae42b73dea23470871c86af6b50bbf2}{\-Delete\-Query} (string table, string where)
+\begin{DoxyCompactList}\small\item\em \-Delete \-Query. \end{DoxyCompactList}\item 
+void \hyperlink{classDatabase_af237df2de117cf94e23d288ad3345ca0}{\-Select\-Sum} (string column, string table, string project\-I\-D, string \&result)
+\item 
+void \hyperlink{classDatabase_a52049c686ad213533bdb1c4f2ac3c157}{\-Select\-Column} (\-S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \&result, string column, string table, string where=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{classDatabase_a20f7ccadac8f3b67d4344f7da4594eda}{\-Select\-Project\-I\-D} (string \&project\-I\-D)
+\begin{DoxyCompactList}\small\item\em \-Select project \-I\-D from database. \end{DoxyCompactList}\item 
+void \hyperlink{classDatabase_ac2a20fd57ba7a51f819446e799d7100f}{\-Insert\-User\-Detail} (string email\-I\-D, string password)
+\begin{DoxyCompactList}\small\item\em \-Insert \-User detail into \-User tabele. \end{DoxyCompactList}\item 
+void \hyperlink{classDatabase_a0da52e0b3d6e36d0833da38a01e592ea}{\-Insert\-Registration\-Detail} (string email\-I\-D, string registration\-Key)
+\begin{DoxyCompactList}\small\item\em \-Inserting \-Registration detail. \end{DoxyCompactList}\item 
+void \hyperlink{classDatabase_a1ff67f74b3c9c7893880cfefda1dc692}{\-Insert\-Reset\-Password} (string email\-I\-D, string reset\-Key)
+\item 
+void \hyperlink{classDatabase_a12b1d8ae6998720ad1842382ef5aa6cc}{\-Insert\-Project\-Detail} (string email\-I\-D, string project\-Name)
+\begin{DoxyCompactList}\small\item\em \-Inserting \-Project \-Detail into database. \end{DoxyCompactList}\item 
+void \hyperlink{classDatabase_ad0052cd5a48f5ba3233395096ba6e422}{\-Insert\-Class\-Detail} (string project\-I\-D, string class\-Name, string subject\-Name, string subject\-Code)
+\item 
+void \hyperlink{classDatabase_a91882082bd5309ba21d7250f0877ab39}{\-Insert\-Roll\-No\-Detail} (string project\-I\-D, string class\-I\-D, string prefix, string start\-R\-No, string end\-R\-No, string not\-Included)
+\item 
+void \hyperlink{classDatabase_a27092ca18e5f95b2808e54ad89c6ca35}{\-Insert\-Room\-Detail} (string project\-I\-D, string date\-Sheet\-I\-D, string room\-Info, string centre\-Name, string room\-No, string rows, string cols)
+\item 
+void \hyperlink{classDatabase_a8a13b478ab9c5c9fabc07b9513530bc0}{\-Insert\-Strategy\-Detail} (string project\-I\-D, string date\-Sheet\-I\-D, string strategy\-Name)
+\item 
+void \hyperlink{classDatabase_ae20d8dbfb3d8755cd4cf508a503fd9b6}{\-Insert\-Valid\-Strategy} (string project\-I\-D, string date\-I\-D, string date, string selected\-Strategy, string total\-Seats, string total\-Students, string total\-Group\-Seats, string total\-Group\-Students)
+\item 
+void \hyperlink{classDatabase_ab410079853d849a9104be0689abee878}{\-Insert\-Date\-Sheet} (string project\-I\-D, string date, string exam\-Code)
+\item 
+void \hyperlink{classDatabase_a1c68383f46e3c3026ff53aeb4e5f76ab}{\-Insert\-Exam\-Detail} (string project\-I\-D, string date\-Sheet\-I\-D, string exam\-Name, string exam\-Session, string exam\-Time, string exam\-Venue)
+\item 
+void \hyperlink{classDatabase_a61963a0b66aca78ffa950b22ee959c47}{\-Insert\-Session\-Detail} (string email\-I\-D, string session\-Key)
+\item 
+\hyperlink{classDatabase_a84d399a2ad58d69daab9b05330e1316d}{$\sim$\-Database} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\-M\-Y\-S\-Q\-L $\ast$ \hyperlink{classDatabase_aa232b806b05ef654cd5579bca5f1dbad}{connect}
+\item 
+\hypertarget{classDatabase_ad5921cd2f70d0c22895f2cc5542ab4d7}{\-M\-Y\-S\-Q\-L\-\_\-\-R\-E\-S $\ast$ {\bfseries res\-\_\-set}}\label{classDatabase_ad5921cd2f70d0c22895f2cc5542ab4d7}
+
+\item 
+\hypertarget{classDatabase_a71ad7ae59677936d2ca6666f9de9df40}{\-M\-Y\-S\-Q\-L\-\_\-\-R\-O\-W {\bfseries row}}\label{classDatabase_a71ad7ae59677936d2ca6666f9de9df40}
+
+\item 
+unsigned int \hyperlink{classDatabase_a02965883689dd1d8007c86cebf6df89e}{numrows}
+\item 
+\hypertarget{classDatabase_a88f3a0df87e5e40207100d5b1f7ee6b1}{\-S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C {\bfseries vec\-Temp}}\label{classDatabase_a88f3a0df87e5e40207100d5b1f7ee6b1}
+
+\item 
+\hypertarget{classDatabase_a1b3174ab4ae9b3cb80448d48817375be}{int {\bfseries i}}\label{classDatabase_a1b3174ab4ae9b3cb80448d48817375be}
+
+\item 
+\hypertarget{classDatabase_a5b4fd605238ca66878959f5f3ba647f2}{int {\bfseries j}}\label{classDatabase_a5b4fd605238ca66878959f5f3ba647f2}
+
+\item 
+\hypertarget{classDatabase_a851daa5b233ce54d75873631b7b2167a}{string {\bfseries query}}\label{classDatabase_a851daa5b233ce54d75873631b7b2167a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ \-Include header.\-h, \hyperlink{database-detail_8h_source}{database-\/detail.\-h}, mysql.\-h -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ =================================================================== \-Class\-: \hyperlink{classDatabase}{\-Database} \-Description\-: \hyperlink{classDatabase}{\-Database} class for database accessability =================================================================== 
+
+\-Definition at line 37 of file database.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classDatabase_a4703c80e6969d33565ea340f768fdadf}{\index{\-Database@{\-Database}!\-Database@{\-Database}}
+\index{\-Database@{\-Database}!Database@{\-Database}}
+\subsubsection[{\-Database}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Database\-::\-Database} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a4703c80e6969d33565ea340f768fdadf}
+\hyperlink{classDatabase}{\-Database} \-Constructor
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ \-Include \hyperlink{database_8h_source}{database.\-h} file local header file(declaration of class) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ \-Class\-: \hyperlink{classDatabase}{\-Database} \-Method\-: \hyperlink{classDatabase}{\-Database} \-:\-: \hyperlink{classDatabase_a4703c80e6969d33565ea340f768fdadf}{\-Database()} \-Description\-: \-Constructor to initialize database conectivity -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+\-Definition at line 33 of file database.\-cc.
+
+\hypertarget{classDatabase_a84d399a2ad58d69daab9b05330e1316d}{\index{\-Database@{\-Database}!$\sim$\-Database@{$\sim$\-Database}}
+\index{$\sim$\-Database@{$\sim$\-Database}!Database@{\-Database}}
+\subsubsection[{$\sim$\-Database}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Database\-::$\sim$\-Database} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a84d399a2ad58d69daab9b05330e1316d}
+\-Select last project \-Id of project name \hyperlink{classDatabase}{\-Database} \-Destructor
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ \-Class\-: \hyperlink{classDatabase}{\-Database} \-Method\-: \hyperlink{classDatabase}{\-Database} \-:\-: \hyperlink{classDatabase_a84d399a2ad58d69daab9b05330e1316d}{$\sim$\-Database()} \-Description\-: \-Destructor for closing database connectivity -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+\-Definition at line 348 of file database.\-cc.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classDatabase_a3ae42b73dea23470871c86af6b50bbf2}{\index{\-Database@{\-Database}!\-Delete\-Query@{\-Delete\-Query}}
+\index{\-Delete\-Query@{\-Delete\-Query}!Database@{\-Database}}
+\subsubsection[{\-Delete\-Query}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Delete\-Query} (
+\begin{DoxyParamCaption}
+\item[{string}]{table, }
+\item[{string}]{where = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a3ae42b73dea23470871c86af6b50bbf2}
+
+
+\-Delete \-Query. 
+
+\-Delete \-Query
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 119 of file database.\-cc.
+
+\hypertarget{classDatabase_ad0052cd5a48f5ba3233395096ba6e422}{\index{\-Database@{\-Database}!\-Insert\-Class\-Detail@{\-Insert\-Class\-Detail}}
+\index{\-Insert\-Class\-Detail@{\-Insert\-Class\-Detail}!Database@{\-Database}}
+\subsubsection[{\-Insert\-Class\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Insert\-Class\-Detail} (
+\begin{DoxyParamCaption}
+\item[{string}]{project\-I\-D, }
+\item[{string}]{class\-Name, }
+\item[{string}]{subject\-Name, }
+\item[{string}]{subject\-Code}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_ad0052cd5a48f5ba3233395096ba6e422}
+\-Insert \-Class \-Detail 
+
+\-Definition at line 231 of file database.\-cc.
+
+\hypertarget{classDatabase_ab410079853d849a9104be0689abee878}{\index{\-Database@{\-Database}!\-Insert\-Date\-Sheet@{\-Insert\-Date\-Sheet}}
+\index{\-Insert\-Date\-Sheet@{\-Insert\-Date\-Sheet}!Database@{\-Database}}
+\subsubsection[{\-Insert\-Date\-Sheet}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Insert\-Date\-Sheet} (
+\begin{DoxyParamCaption}
+\item[{string}]{project\-I\-D, }
+\item[{string}]{date, }
+\item[{string}]{exam\-Code}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_ab410079853d849a9104be0689abee878}
+\-Insert \hyperlink{classDateSheet}{\-Date\-Sheet} 
+
+\-Definition at line 299 of file database.\-cc.
+
+\hypertarget{classDatabase_a1c68383f46e3c3026ff53aeb4e5f76ab}{\index{\-Database@{\-Database}!\-Insert\-Exam\-Detail@{\-Insert\-Exam\-Detail}}
+\index{\-Insert\-Exam\-Detail@{\-Insert\-Exam\-Detail}!Database@{\-Database}}
+\subsubsection[{\-Insert\-Exam\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Insert\-Exam\-Detail} (
+\begin{DoxyParamCaption}
+\item[{string}]{project\-I\-D, }
+\item[{string}]{date\-Sheet\-I\-D, }
+\item[{string}]{exam\-Name, }
+\item[{string}]{exam\-Session, }
+\item[{string}]{exam\-Time, }
+\item[{string}]{exam\-Venue}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a1c68383f46e3c3026ff53aeb4e5f76ab}
+\-Insert \-Exam \-Detail 
+
+\-Definition at line 309 of file database.\-cc.
+
+\hypertarget{classDatabase_a12b1d8ae6998720ad1842382ef5aa6cc}{\index{\-Database@{\-Database}!\-Insert\-Project\-Detail@{\-Insert\-Project\-Detail}}
+\index{\-Insert\-Project\-Detail@{\-Insert\-Project\-Detail}!Database@{\-Database}}
+\subsubsection[{\-Insert\-Project\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Insert\-Project\-Detail} (
+\begin{DoxyParamCaption}
+\item[{string}]{email\-I\-D, }
+\item[{string}]{project\-Name}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a12b1d8ae6998720ad1842382ef5aa6cc}
+
+
+\-Inserting \-Project \-Detail into database. 
+
+\-Insert \-Project \-Detail 
+
+\-Definition at line 221 of file database.\-cc.
+
+\hypertarget{classDatabase_a63d8c1af7507b1dcdc81a411f9a0b4b4}{\index{\-Database@{\-Database}!\-Insert\-Query@{\-Insert\-Query}}
+\index{\-Insert\-Query@{\-Insert\-Query}!Database@{\-Database}}
+\subsubsection[{\-Insert\-Query}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Insert\-Query} (
+\begin{DoxyParamCaption}
+\item[{string}]{query}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a63d8c1af7507b1dcdc81a411f9a0b4b4}
+
+
+\-Function for executing \-Insert\-Query. 
+
+\-Insert \-Query
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em query} & query for inserting into value \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 106 of file database.\-cc.
+
+\hypertarget{classDatabase_a0da52e0b3d6e36d0833da38a01e592ea}{\index{\-Database@{\-Database}!\-Insert\-Registration\-Detail@{\-Insert\-Registration\-Detail}}
+\index{\-Insert\-Registration\-Detail@{\-Insert\-Registration\-Detail}!Database@{\-Database}}
+\subsubsection[{\-Insert\-Registration\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Insert\-Registration\-Detail} (
+\begin{DoxyParamCaption}
+\item[{string}]{email\-I\-D, }
+\item[{string}]{registration\-Key}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a0da52e0b3d6e36d0833da38a01e592ea}
+
+
+\-Inserting \-Registration detail. 
+
+\-Insert \-Registration \-Detail
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em email\-I\-D} & email\-Id of user \\
+\hline
+{\em registration\-Key} & \-Registration \-Key \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 196 of file database.\-cc.
+
+\hypertarget{classDatabase_a1ff67f74b3c9c7893880cfefda1dc692}{\index{\-Database@{\-Database}!\-Insert\-Reset\-Password@{\-Insert\-Reset\-Password}}
+\index{\-Insert\-Reset\-Password@{\-Insert\-Reset\-Password}!Database@{\-Database}}
+\subsubsection[{\-Insert\-Reset\-Password}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Insert\-Reset\-Password} (
+\begin{DoxyParamCaption}
+\item[{string}]{email\-I\-D, }
+\item[{string}]{reset\-Key}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a1ff67f74b3c9c7893880cfefda1dc692}
+\-Insert \-Reset \-Password 
+
+\-Definition at line 205 of file database.\-cc.
+
+\hypertarget{classDatabase_a91882082bd5309ba21d7250f0877ab39}{\index{\-Database@{\-Database}!\-Insert\-Roll\-No\-Detail@{\-Insert\-Roll\-No\-Detail}}
+\index{\-Insert\-Roll\-No\-Detail@{\-Insert\-Roll\-No\-Detail}!Database@{\-Database}}
+\subsubsection[{\-Insert\-Roll\-No\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Insert\-Roll\-No\-Detail} (
+\begin{DoxyParamCaption}
+\item[{string}]{project\-I\-D, }
+\item[{string}]{class\-I\-D, }
+\item[{string}]{prefix, }
+\item[{string}]{start\-R\-No, }
+\item[{string}]{end\-R\-No, }
+\item[{string}]{not\-Included}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a91882082bd5309ba21d7250f0877ab39}
+\-Insert \-Roll\-No detail 
+
+\-Definition at line 243 of file database.\-cc.
+
+\hypertarget{classDatabase_a27092ca18e5f95b2808e54ad89c6ca35}{\index{\-Database@{\-Database}!\-Insert\-Room\-Detail@{\-Insert\-Room\-Detail}}
+\index{\-Insert\-Room\-Detail@{\-Insert\-Room\-Detail}!Database@{\-Database}}
+\subsubsection[{\-Insert\-Room\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Insert\-Room\-Detail} (
+\begin{DoxyParamCaption}
+\item[{string}]{project\-I\-D, }
+\item[{string}]{date\-Sheet\-I\-D, }
+\item[{string}]{room\-Info, }
+\item[{string}]{centre\-Name, }
+\item[{string}]{room\-No, }
+\item[{string}]{rows, }
+\item[{string}]{cols}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a27092ca18e5f95b2808e54ad89c6ca35}
+\-Insert \-Room \-Detail 
+
+\-Definition at line 255 of file database.\-cc.
+
+\hypertarget{classDatabase_a61963a0b66aca78ffa950b22ee959c47}{\index{\-Database@{\-Database}!\-Insert\-Session\-Detail@{\-Insert\-Session\-Detail}}
+\index{\-Insert\-Session\-Detail@{\-Insert\-Session\-Detail}!Database@{\-Database}}
+\subsubsection[{\-Insert\-Session\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Insert\-Session\-Detail} (
+\begin{DoxyParamCaption}
+\item[{string}]{email\-I\-D, }
+\item[{string}]{session\-Key}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a61963a0b66aca78ffa950b22ee959c47}
+\-Insert \-Session \-Detail 
+
+\-Definition at line 322 of file database.\-cc.
+
+\hypertarget{classDatabase_a8a13b478ab9c5c9fabc07b9513530bc0}{\index{\-Database@{\-Database}!\-Insert\-Strategy\-Detail@{\-Insert\-Strategy\-Detail}}
+\index{\-Insert\-Strategy\-Detail@{\-Insert\-Strategy\-Detail}!Database@{\-Database}}
+\subsubsection[{\-Insert\-Strategy\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Insert\-Strategy\-Detail} (
+\begin{DoxyParamCaption}
+\item[{string}]{project\-I\-D, }
+\item[{string}]{date\-Sheet\-I\-D, }
+\item[{string}]{strategy\-Name}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a8a13b478ab9c5c9fabc07b9513530bc0}
+\-Insert \hyperlink{classStrategy}{\-Strategy} \-Detail 
+
+\-Definition at line 288 of file database.\-cc.
+
+\hypertarget{classDatabase_ac2a20fd57ba7a51f819446e799d7100f}{\index{\-Database@{\-Database}!\-Insert\-User\-Detail@{\-Insert\-User\-Detail}}
+\index{\-Insert\-User\-Detail@{\-Insert\-User\-Detail}!Database@{\-Database}}
+\subsubsection[{\-Insert\-User\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Insert\-User\-Detail} (
+\begin{DoxyParamCaption}
+\item[{string}]{email\-I\-D, }
+\item[{string}]{password}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_ac2a20fd57ba7a51f819446e799d7100f}
+
+
+\-Insert \-User detail into \-User tabele. 
+
+\-Insert \-User \-Detail into database
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em email\-I\-D} & \-Email \-Id \\
+\hline
+{\em password} & \-Password of user in encrypted from \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 179 of file database.\-cc.
+
+\hypertarget{classDatabase_ae20d8dbfb3d8755cd4cf508a503fd9b6}{\index{\-Database@{\-Database}!\-Insert\-Valid\-Strategy@{\-Insert\-Valid\-Strategy}}
+\index{\-Insert\-Valid\-Strategy@{\-Insert\-Valid\-Strategy}!Database@{\-Database}}
+\subsubsection[{\-Insert\-Valid\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Insert\-Valid\-Strategy} (
+\begin{DoxyParamCaption}
+\item[{string}]{project\-I\-D, }
+\item[{string}]{date\-I\-D, }
+\item[{string}]{date, }
+\item[{string}]{selected\-Strategy, }
+\item[{string}]{total\-Seats, }
+\item[{string}]{total\-Students, }
+\item[{string}]{total\-Group\-Seats, }
+\item[{string}]{total\-Group\-Students}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_ae20d8dbfb3d8755cd4cf508a503fd9b6}
+insert \hyperlink{classStrategy}{\-Strategy} detail -\/ \-Valid or \-Not 
+
+\-Definition at line 269 of file database.\-cc.
+
+\hypertarget{classDatabase_ab790a68bd8fdbd36133d56ca21ec45d0}{\index{\-Database@{\-Database}!\-Query@{\-Query}}
+\index{\-Query@{\-Query}!Database@{\-Database}}
+\subsubsection[{\-Query}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Query} (
+\begin{DoxyParamCaption}
+\item[{string}]{query}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_ab790a68bd8fdbd36133d56ca21ec45d0}
+
+
+\-Function to execute any query. 
+
+\-Function for executing query ie for insertion or deletion 
+
+\-Definition at line 57 of file database.\-cc.
+
+\hypertarget{classDatabase_a52049c686ad213533bdb1c4f2ac3c157}{\index{\-Database@{\-Database}!\-Select\-Column@{\-Select\-Column}}
+\index{\-Select\-Column@{\-Select\-Column}!Database@{\-Database}}
+\subsubsection[{\-Select\-Column}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Select\-Column} (
+\begin{DoxyParamCaption}
+\item[{\-S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \&}]{result, }
+\item[{string}]{column, }
+\item[{string}]{table, }
+\item[{string}]{where = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a52049c686ad213533bdb1c4f2ac3c157}
+\-Select single column from table 
+
+\-Definition at line 137 of file database.\-cc.
+
+\hypertarget{classDatabase_a20f7ccadac8f3b67d4344f7da4594eda}{\index{\-Database@{\-Database}!\-Select\-Project\-I\-D@{\-Select\-Project\-I\-D}}
+\index{\-Select\-Project\-I\-D@{\-Select\-Project\-I\-D}!Database@{\-Database}}
+\subsubsection[{\-Select\-Project\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Select\-Project\-I\-D} (
+\begin{DoxyParamCaption}
+\item[{string \&}]{project\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a20f7ccadac8f3b67d4344f7da4594eda}
+
+
+\-Select project \-I\-D from database. 
+
+\-Select last \-Project \-I\-D from table
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em project\-I\-D} & \-Unique project \-I\-D \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 161 of file database.\-cc.
+
+\hypertarget{classDatabase_a4ccf07a8481a83055d8ce5fd27f0b415}{\index{\-Database@{\-Database}!\-Select\-Query@{\-Select\-Query}}
+\index{\-Select\-Query@{\-Select\-Query}!Database@{\-Database}}
+\subsubsection[{\-Select\-Query}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Database\-::\-Select\-Query} (
+\begin{DoxyParamCaption}
+\item[{string}]{query, }
+\item[{\-S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \&}]{result}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a4ccf07a8481a83055d8ce5fd27f0b415}
+
+
+\-Select \-Query for selecting single column from table. 
+
+\-Selecting column from table.
+
+\-Select \-Query
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em query} & \-Select query \\
+\hline
+{\em result} & \-For storing selected column valued in result variable\\
+\hline
+{\em result} & \\
+\hline
+{\em column} & \\
+\hline
+{\em table} & \\
+\hline
+{\em where} & \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 84 of file database.\-cc.
+
+\hypertarget{classDatabase_af237df2de117cf94e23d288ad3345ca0}{\index{\-Database@{\-Database}!\-Select\-Sum@{\-Select\-Sum}}
+\index{\-Select\-Sum@{\-Select\-Sum}!Database@{\-Database}}
+\subsubsection[{\-Select\-Sum}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Select\-Sum} (
+\begin{DoxyParamCaption}
+\item[{string}]{column, }
+\item[{string}]{table, }
+\item[{string}]{project\-I\-D, }
+\item[{string \&}]{result}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_af237df2de117cf94e23d288ad3345ca0}
+\-Select sum of data entry in table of specific project\-I\-D 
+
+\-Definition at line 330 of file database.\-cc.
+
+\hypertarget{classDatabase_adab1d6cc97c8b14e9d170d5659a92d3e}{\index{\-Database@{\-Database}!\-Update\-Query@{\-Update\-Query}}
+\index{\-Update\-Query@{\-Update\-Query}!Database@{\-Database}}
+\subsubsection[{\-Update\-Query}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Database\-::\-Update\-Query} (
+\begin{DoxyParamCaption}
+\item[{string}]{table, }
+\item[{string}]{column, }
+\item[{string}]{value, }
+\item[{string}]{where}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_adab1d6cc97c8b14e9d170d5659a92d3e}
+\-Update query 
+
+\-Definition at line 65 of file database.\-cc.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classDatabase_aa232b806b05ef654cd5579bca5f1dbad}{\index{\-Database@{\-Database}!connect@{connect}}
+\index{connect@{connect}!Database@{\-Database}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}\-M\-Y\-S\-Q\-L$\ast$ {\bf \-Database\-::connect}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classDatabase_aa232b806b05ef654cd5579bca5f1dbad}
+\-My\-S\-Q\-L connectivity \-Variables 
+
+\-Definition at line 41 of file database.\-h.
+
+\hypertarget{classDatabase_a02965883689dd1d8007c86cebf6df89e}{\index{\-Database@{\-Database}!numrows@{numrows}}
+\index{numrows@{numrows}!Database@{\-Database}}
+\subsubsection[{numrows}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \-Database\-::numrows}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classDatabase_a02965883689dd1d8007c86cebf6df89e}
+unsigned int variable 
+
+\-Definition at line 46 of file database.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+frontend/src/header/database.\-h\item 
+frontend/src/database.\-cc\end{DoxyCompactItemize}

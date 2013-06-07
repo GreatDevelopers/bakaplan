@@ -3,19 +3,48 @@ Inatallation steps for using this software.
 
 After this open terminal and run following commands
 
- $ cd public_html/cgi-bin
+    $ cd public_html/cgi-bin
 
- $ git clone https://github.com/GreatDevelopers/bakaplan.git
+    $ git clone https://github.com/GreatDevelopers/bakaplan.git
 
- $ cd bakaplan
+    $ cd bakaplan
 
- $ make install
+Now edit database details
+
+Open ~/public_html/cgi-bin/bakaplan/frontend/src/header/database-detail.h
+
+Add your details and save file
+
+Now cd to ~/public_html/cgi-bin/bakaplan and run 
+
+    $ make install
+
+Now import ~/public_html/cgi-bin/bakaplan/database/*.sql file in your
+database.
+
+Do as following in terminal
+
+    $ mysql -u username -p
+    $ create database database_name;
+    $ ctrl+d
+
+Now cd to place where .sql file exists
+
+    $ ~/public_html/cgi-bin/bakaplan/database
+    $ mysql -p -u root database_name < bakaplan.sql
 
 After all above steps open browser and open following link:
 
-http://localhost/~username/BaKaPlan
+http://localhost/~username/cgi-bin/bp/login
 
 Here username is your login username
+
+If this link not work and you got Internal Server Error. 
+Do as followong to remove that.
+
+$ sudo ln -s /usr/local/lib/libjwsmtp-<version>.so /usr/lib/libjwsmtp-<version>.so
+
+Replace <version> with your installed one or use tab.
 
 NOTE:    Be sure that you must have write permission in the directory
          (~/public_html/cgi-bin/bakaplan/ and ~/public_html/)
