@@ -26,8 +26,6 @@
 
 DateSheet :: DateSheet()
 {
-    // constructor
-     
     totalCols = 3;
     tableHeading.resize(totalCols);
     i = 0;
@@ -191,17 +189,19 @@ void DateSheet :: DateSheetPage()
 
     Header("DateSheet");
 
-    page.DivStart("DivDateSheet", "");
+    cout << cgicc::div().set("id", "DivDateSheet");
 
 //    page.LogoutLink();
 
-//    cout << page.brk;
 
-    cout << page.startH1 << "Date Sheet" 
-         << page.endH1;
-    page.FormStart("FormDateSheet", "room", "POST",
-                   "return ValidateDateSheetForm(\"TotalDays\")");
+    cout << h1() << "Date Sheet" << h1();
 
+/*    page.FormStart("FormDateSheet", "room", "POST",
+                   "return ValidateDateSheetForm(\"TotalDays\")");*/
+    cout << form().set("id", "FormDateSheet").set("action", "room")
+                  .set("method", "POST")
+                  .set("onsubmit",
+                       "return ValidateDateSheetForm('TotalDays')");
    
     ErrorMessage(msg);
 
@@ -221,7 +221,7 @@ void DateSheet :: DateSheetPage()
                     "deleteRow('TableDateSheet', 'TotalDays')",
                     "Delete Row");
 */
-    cout << page.brk << page.brk;
+    cout << br() << br();
 
 //------------- Temp. option -----------------------------------------
     
@@ -241,44 +241,46 @@ void DateSheet :: DateSheetPage()
         totalSubjects[j] = subCode[j].size();
     }
 
-    page.TableStart("ClassDetail", "");
-    cout << page.startTR;
-    cout << page.startTH << "Class Name" << page.endTH
-         << page.startTH << "Subject Codes" << page.endTH;
-    cout << page.endTR;    
+    cout << table().set("id", "ClassDetail");
+
+    cout << tr() 
+         << th() << "Class Name" << th()
+         << th() << "Subject Codes" << th()
+         << tr();
+
     for(i = 0; i < totalClasses; i++)
     {
-        cout << page.startTR 
-             << page.startTD << className[i] << page.endTD
-             << page.startTD << subjectCode[i];
+        cout << tr()
+             << td() << className[i] << td()
+             << td() << subjectCode[i];
 /*        for(j = 0; j < totalSubjects[i]; j++)
         {
             trim(subCode[i][j]);
             cout << subCode[i][j] << " ";
         }*/
-         cout << page.endTD;
-        cout << page.endTR;
+        cout << td();
+        cout << tr();
     }
-    
-    page.TableEnd();
 
-    cout << page.brk << page.brk;
+    cout << table();
+
+    cout << br() << br();
 
 //--------------------------------------------------------------------
-    page.TableStart("TableDateSheet", "");
+    cout << table().set("id", "TableDateSheet");
    
-    cout << page.startTR;
+    cout << tr();
 
 //    cout << page.startTH << "Date" << page.endTH;
 
     for(i = 0; i < totalCols; i++)
     {   
-        cout << page.startTH << tableHeading[i] << page.endTH;
+        cout << th() << tableHeading[i] << th();
     }
 
 //    cout << page.startTH << "Delete Row" << page.endTH;
 
-    cout << page.endTR;
+    cout << tr();
 
     rowIndex = "";
 
@@ -291,12 +293,12 @@ void DateSheet :: DateSheetPage()
         if(projectType == "Old")// && (className.size() >= 1 ) || 
 //           subjectName.size() >= 1 || subjectCode.size() >= 1 ))
         {
-            cout << page.startTR;
+            cout << tr();
         
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.date, (i + 1),
                             date[i], date[i]);
-            cout << page.endTD;
+            cout << td();
 
 /*
             // Adding all subjects w.r.t. to class
@@ -326,27 +328,27 @@ void DateSheet :: DateSheetPage()
             }*/
 
          
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.examCode, (i + 1),
                             examCode[i], examCode[i]);
-            cout << page.endTD;
+            cout << td();
         
-            cout << page.startTD;
+            cout << td();
             page.InputField("button", "DeleteRow", 
                             "DelRow('RowIndex', 'TotalDays', event)",
                             "Delete Row");
-            cout << page.endTD;
+            cout << td();
 
-            cout << page.endTR;
+            cout << td();
         }
         else
         {
-            cout << page.startTR;
+            cout << td();
         
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.date, (i + 1),
                             date[i]);
-            cout << page.endTD;
+            cout << td();
 /*             // Adding all subjects w.r.t. to class
             for(j = 0; j < totalClasses; j++)
             {
@@ -373,25 +375,25 @@ void DateSheet :: DateSheetPage()
                 cout << page.endTD;
             }*/
        
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.examCode, (i + 1),
                             examCode[i]);
-            cout << page.endTD;
+            cout << td();
 
-            cout << page.startTD;
+            cout << td();
             page.InputField("button", "DeleteRow", 
                             "DelRow('RowIndex', 'TotalDays', event)",
                             "Delete Row");
-            cout << page.endTD;
+            cout << td();
 
-            cout << page.endTR;
+            cout << tr();
         }
     }
     lastRow = IntToString(totalDays);
 
-    page.TableEnd();
+    cout << table();
   
-    cout << page.brk << page.brk
+    cout << br() << br()
          << " Same room and exam details for each day ";
     page.InputField("radio", fieldName.sameDetail, "Yes");
     cout << " Yes ";
@@ -404,12 +406,12 @@ void DateSheet :: DateSheetPage()
     page.InputField("hidden", fieldName.lastRow, lastRow);
     page.InputField("hidden", fieldName.rowIndex, rowIndex);
 
-    cout << page.brk << page.brk;
+    cout << br() << br();
 
     page.Button("next", "submit", "btn", "NEXT");
 
-    page.FormEnd();
-    page.DivEnd();
+    cout << form()
+         << cgicc::div();
 
     Footer();
 }

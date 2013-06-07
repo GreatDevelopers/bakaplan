@@ -204,21 +204,24 @@ void ValidStrategy :: ValidStrategyPage()
 
     Header("ValidStrategy");
 
-    page.DivStart("DivValidStrategy", "");
+    cout << cgicc :: div().set("id", "DivValidStrategy");
 
 //    page.LogoutLink();
 
 //    cout << page.brk;
 
-    cout << page.startH1 << "Valid Strategy Detail" 
-         << page.endH1;// << page.brk;
+    cout << h1() << "Valid Strategy Detail" << h1();// << page.brk;
 
     if(addRoom == true)
     {
-        page.FormStart("FormValid", "addroom", "POST");
+        cout << form().set("id", "FormValid")
+                      .set("action", "addroom")
+                      .set("method", "POST");
     }
     else    
-        page.FormStart("FormValid", "report", "post");
+         cout << form().set("id", "FormValid")
+                      .set("action", "report")
+                      .set("method", "POST");
     
     page.InputField("hidden", fieldName.projectID, projectID);
     page.InputField("hidden", fieldName.totalDays, 
@@ -228,41 +231,41 @@ void ValidStrategy :: ValidStrategyPage()
 
     ReadValidStrategy();
 
-    page.TableStart("TableValidStrategy", "");
+    cout << table().set("id", "TableValidStrategy");
 
     if(totalDays == 1)
         j = 1;
     else
         j = 0;
 
-    cout << page.startTR;
+    cout << tr();
 
     for(i = j; i < totalCols; i++)
     {   
-        cout << page.startTH
+        cout << th()
              << tableHeading[i] 
-             << page.endTH;        
+             << th();        
     } 
-    cout << page.endTR;
+    cout << tr();
     for(i = 0; i < totalDays; i++)
     {
-        cout << page.startTR;
+        cout << tr();
         if(j == 0)
         {
-            cout << page.startTD << date[i] << page.endTD;
+            cout << td() << date[i] << td();
         }
-        cout << page.startTD << selectedStrategy[i] << page.endTD;
-        cout << page.startTD << totalSeats[i] << page.endTD;
-        cout << page.startTD << totalStudents[i] << page.endTD;
-        cout << page.startTD << totalGroupSeats[i] << page.endTD;
-        cout << page.startTD << totalGroupStudents[i] << page.endTD;
-        cout << page.startTD << valid[i] << page.endTD;
-        cout << page.endTR;
+        cout << td() << selectedStrategy[i] << td();
+        cout << td() << totalSeats[i] << td();
+        cout << td() << totalStudents[i] << td();
+        cout << td() << totalGroupSeats[i] << td();
+        cout << td() << totalGroupStudents[i] << td();
+        cout << td() << valid[i] << td();
+        cout << tr();
     }
 
-    page.TableEnd();
+    cout << table()
+         << br() << br();
 
-    cout << page.brk << page.brk;
     
     if(addRoom == false)
         page.Button("next", "submit", "btn", "NEXT");
@@ -272,8 +275,8 @@ void ValidStrategy :: ValidStrategyPage()
         cout << page.startB << "Add More Rooms" << page.endB;
         page.Button("next", "submit", "btn", "Add Rooms");
     }
-    page.FormEnd();
-    page.DivEnd();
+
+    cout << form() << cgicc :: div();
 
     Footer();
 }

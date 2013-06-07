@@ -243,25 +243,31 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
 //    ReadDatesheet();
 
     Header("Room Detail");
-
-    page.DivStart("DivRoom", "");
+    
+    cout << cgicc :: div().set("id", "DivRoom");
 
 //    page.LogoutLink();
 
 //    cout << page.brk;
-    cout << page.startH1 << "Room Detail" 
-         << page.endH1;// << page.brk;
+    cout << h1() << "Room Detail" << h1();// << page.brk;
  
     if(addRoom == true)
     {
-        page.FormStart("FormRoom", "validstrategy", "POST",
-                        "return ValidateRoomForm(\"TotalDays\")");
+        cout << form().set("id", "FormRoom")
+                      .set("action", "validstrategy")
+                      .set("method", "POST")
+                      .set("onsubmit", 
+                           "return ValidateRoomForm(TotalDays)");
 
     }
     else
     {
-        page.FormStart("FormRoom", "exam", "POST",
-                        "return ValidateRoomForm(\"TotalDays\")");
+        cout << form().set("id", "FormRoom")
+                      .set("action", "exam")
+                      .set("method", "POST")
+                      .set("onsubmit", 
+                           "return ValidateRoomForm(TotalDays)");
+
     }
 
    
@@ -283,7 +289,7 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
         if(sameDetail == "No")
         {
 
-            cout << page.brk;
+            cout << br();
             cout << "Date : " << date[i] 
                  << " Exam Code : " << examCode[i];
             page.InputField("hidden", 
@@ -291,7 +297,7 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
                              date[i]);
         }
 
-        cout << page.brk << page.brk;       
+        cout << br() << br();       
         temp = "AddRow";
         temp += IntToString(i + 1);
 
@@ -311,17 +317,17 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
         page.InputField("button", temp, table, "Delete Row");
 
 */
-        cout << page.brk << page.brk;
+        cout << br() << br();
         temp = "TableRoom";
         temp += IntToString(i + 1);
 
-        page.TableStart(temp, "");
-        cout << page.startTR;
+        cout << cgicc :: table().set("id", temp.c_str());
+        cout << tr();
         for(k = 0; k < totalCols; k++)
         {   
-            cout << page.startTH << tableHeading[k] << page.endTH;
+            cout << th() << tableHeading[k] << th();
         }
-        cout << page.endTR;
+        cout << tr();
 
         temp = fieldName.totalCentres;
         temp += IntToString(i + 1);
@@ -337,17 +343,17 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
 
             if(projectType == "Old")
             {
-                cout << page.startTR;
+                cout << tr();
         
-                cout << page.startTD;
+                cout << td();
                 temp = IntToString(i + 1);
                 temp += IntToString(j + 1);
                 page.InputField("text", fieldName.centreName, 
                                 StringToInt(temp),
                                 centreName[i][j], centreName[i][j]);
-                cout << page.endTD;
+                cout << td();
         
-                cout << page.startTD;
+                cout << td();
                 temp = IntToString(i + 1);
                 temp += IntToString(j + 1);            
 //                string roomValue = roomNo[i][j]// + " : " + rows[i][j] +
@@ -356,7 +362,7 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
                 page.InputField("text", fieldName.roomNo,
                                 StringToInt(temp),
                                 roomInfo[i][j], roomInfo[i][j]);
-                cout << page.endTD;
+                cout << td();
  /*
                 cout << page.startTD;
                 temp  = IntToString(i + 1);
@@ -374,7 +380,7 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
                                 columns[i][j], columns[i][j]);
                 cout << page.endTD;       
  */               
-                cout << page.startTD;
+                cout << td();
                 temp = "DelRow('" 
                        + (fieldName.rowIndex + IntToString(i + 1))  
                        + "', 'TotalCentres" 
@@ -382,29 +388,29 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
                 page.InputField("button", IntToString(i + 1), 
                                 temp,
                                 "Delete Row");
-                cout << page.endTD;
+                cout << td();
 
 
-                cout << page.endTR;
+                cout << tr();
             }
             else
             {
-                cout << page.startTR;
+                cout << tr();
         
-                cout << page.startTD;
+                cout << td();
                 temp = IntToString(i + 1);
                 temp += IntToString(j + 1);
                 page.InputField("text", fieldName.centreName, 
                                 StringToInt(temp),
                                 centreName[i][j]);
-                cout << page.endTD;
+                cout << td();
         
-                cout << page.startTD;
+                cout << td();
                 temp = IntToString(i + 1);
                 temp += IntToString(j + 1);               
                 page.InputField("text", fieldName.roomNo,
                                 StringToInt(temp), roomInfo[i][j]);
-                cout << page.endTD;
+                cout << td();
  /*
                 cout << page.startTD;
                 temp = IntToString(i + 1);
@@ -422,7 +428,7 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
                                 columns[i][j]);
                 cout << page.endTD;       
 */
-                cout << page.startTD;
+                cout << td();
                 temp = "DelRow('" 
                        + (fieldName.rowIndex + IntToString(i + 1))  
                        + "', 'TotalCentres" 
@@ -431,9 +437,9 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
                 page.InputField("button", IntToString(i + 1), 
                                 temp,
                                 "Delete Row");
-                cout << page.endTD;
+                cout << td();
 
-                cout << page.endTR;
+                cout << tr();
                     
             }
         }
@@ -446,15 +452,14 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
                         (fieldName.rowIndex + IntToString(i + 1)), 
                         rowIndex);
        
-        page.TableEnd();
+        cout << cgicc :: table();
     }
 
-    cout << page.brk << page.brk;
+    cout << br() << br();
 
     page.Button("next", "submit", "btn", "NEXT");
 
-    page.FormEnd();
-    page.DivEnd();
+    cout << form() << cgicc :: div();
 
     Footer();
 

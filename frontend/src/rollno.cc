@@ -231,16 +231,19 @@ void RollNoDetail :: RollNoDetailPage(string msg)
 
     Header("Roll No Detail");
 
-    page.DivStart("DivRollNo", "");
+    cout << cgicc :: div().set("id", "DivRollNo");
 
 //    page.LogoutLink();
 
 //    cout << page.brk;
 
-    cout << page.startH1 << "Roll No Detail" << page.endH1;// << page.brk;
+    cout << h1() << "Roll No Detail" << h1();// << page.brk;
 
-    page.FormStart("FormRollNo", "datesheet", "POST",
-                   "return ValidateRollNoForm(\"TotalClasses\")");
+    cout << form().set("id", "FormRollNo")
+                  .set("action", "datesheet")
+                  .set("method", "POST")
+                  .set("onsubmit", 
+                       "return ValidateRollNoForm('TotalClasses')");
 
     ErrorMessage(msg);
 
@@ -249,14 +252,14 @@ void RollNoDetail :: RollNoDetailPage(string msg)
                     IntToString(totalClasses));
     page.InputField("hidden", fieldName.projectType, projectType);
 
-    page.TableStart("TableRollNo", "");
+    cout << table().set("id", "TableRollNo");
 
-    cout << page.startTR;
+    cout << tr();
     for(i = 0; i < totalCols; i++)
     {   
-        cout << page.startTH << tableHeading[i] << page.endTH;
+        cout << th() << tableHeading[i] << th();
     }
-    cout << page.endTR;
+    cout << tr();
 
     for(i = 0; i < totalClasses; i++)
     {
@@ -264,91 +267,90 @@ void RollNoDetail :: RollNoDetailPage(string msg)
 //           subjectName.size() >1 || subjectCode.size() > 1 ))
         {
 
-            cout << page.startTR;
+            cout << tr();
         
-            cout << page.startTD;
+            cout << td();
             cout << className[i];
             page.InputField("hidden", fieldName.className, (i + 1),
                             className[i]);
-            cout << page.endTD;
+            cout << td();
        
-            cout << page.startTD;
+            cout << td();
             cout << subjectCode[i];
             page.InputField("hidden", fieldName.subjectCode, (i + 1),
                             subjectCode[i]);
-            cout << page.endTD;
+            cout << td();
         
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.prefix, (i + 1),
                             prefix[i], prefix[i]);
-            cout << page.endTD;
+            cout << td();
          
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.startRollNo, (i + 1),
                             startRollNo[i], startRollNo[i]);
-            cout << page.endTD;
+            cout << td();
          
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.endRollNo, (i + 1),
                             endRollNo[i], endRollNo[i]);
-            cout << page.endTD;
+            cout << td();
          
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.notIncluded, (i + 1),
                             notIncluded[i], notIncluded[i]);
-            cout << page.endTD;
+            cout << td();
  
-            cout << page.endTR;
+            cout << tr();
         }
         else
         {
         
-            cout << page.startTR;
+            cout << tr();
         
-            cout << page.startTD;
+            cout << td();
             cout << className[i];
             page.InputField("hidden", fieldName.className, (i + 1),
                             className[i]);
-            cout << page.endTD;
+            cout << td();
         
-            cout << page.startTD;
+            cout << td();
             cout << subjectCode[i];
             page.InputField("hidden", fieldName.subjectCode, (i + 1),
                             subjectCode[i]);
-            cout << page.endTD;
+            cout << td();
         
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.prefix, (i + 1),
                             prefix[i]);
-            cout << page.endTD;
+            cout << td();
          
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.startRollNo, (i + 1),
                             startRollNo[i]);
-            cout << page.endTD;
+            cout << td();
          
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.endRollNo, (i + 1),
                             endRollNo[i]);
-            cout << page.endTD;
+            cout << td();
          
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.notIncluded, (i + 1),
                             notIncluded[i]);
-            cout << page.endTD;
+            cout << td();
  
-            cout << page.endTR;
+            cout << tr();
         }
     }
  
-    page.TableEnd();
+    cout << table();
 
-    cout << page.brk << page.brk;
+    cout << br() << br();
     
     page.Button("next", "submit", "btn", "Next");
 
-    page.FormEnd();
-    page.DivEnd();
+    cout << form() << cgicc :: div();
 
     Footer();
 }

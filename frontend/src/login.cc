@@ -90,34 +90,34 @@ void Login :: LoginPage(string msg, string emailID, string password)
 
     Header("Login");
 
-    page.DivStart("DivLogin", "");
+    cout << cgicc::div().set("id", "DivLogin")
+         << form().set("id", "FormLogin").set("action", "project")
+                  .set("method", "POST");
 
-    page.FormStart("FormLogin", "project", "POST");
-
-    cout << page.startH1 << "Login" << page.endH1 << page.brk;
+    cout << h1() << "Login" << h1() << br();;
     
     ErrorMessage(msg);
     
     page.Label(fieldName.emailID, " Email ID ");
     page.InputField("email", fieldName.emailID, emailID);
-    cout << page.brk << page.brk;
+    cout << br() << br();
 
     page.Label(fieldName.password, " Password ");
     page.InputField("password", fieldName.password, password);
     
-    cout << page.brk << page.brk;
+    cout << br() << br();
     
     page.Button("next", "submit", "btn", "Login");
 
-    cout << page.brk << page.brk << page.startB;
+    cout << br() << br() << b();
     page.Anchor("register", "Register Here"); 
     cout << " | ";
-//    cout << page.brk;
+    
     page.Anchor("reset?type=1", "Reset Password");
-    cout << page.endB;
+    cout << b()
 
-    page.FormEnd();
-    page.DivEnd();
+         << form()
+         << cgicc::div();
 
     Footer();
 }
@@ -133,29 +133,26 @@ void Login :: RegistrationPage(string msg, string emailID)
      
     page.ContentType();
     Header("Register");
-    
-    page.DivStart("DivRegister", "");
-    cout << page.brk;
+   
+    cout << cgicc::div().set("id", "DivRegister") << br();
 
     page.Anchor("login", "Login");
 
-    page.FormStart("FormEmail", "newuser", "POST");
+    cout << form().set("method", "POST").set("id", "FormEmail")
+                  .set("action", "newuser");
     
-    cout << page.startH1 << " Register New User " << page.endH1 
-         <<  page.brk;
+    cout << h1() << " Register New User " << h1() << br();
     
     ErrorMessage(msg);
 
     page.Label(fieldName.emailID, "Email ID");
     page.InputField("email", fieldName.emailID, emailID);
 
-    cout << page.brk << page.brk;
+    cout << br() << br();
 
     page.Button("Register", "submit", "btn", "Register");
 
-    page.FormEnd();
-
-    page.DivEnd();
+    cout << form() << cgicc::div();
 
     Footer();
     
@@ -220,39 +217,37 @@ void Login :: ConfirmPage(string msg, string password,
        
         page.ContentType();
         Header("Confirm Email");
-    
-        page.DivStart("DivConfirm", "");
-        cout << page.brk;
+        
+        cout << cgicc::div().set("id", "DivConfirm") << br();
 
         page.Anchor("login", "Login");
 
-        page.FormStart("FormSetPassword", "adduser", "POST");
+        cout << form().set("id", "FormSetPassword")
+                      .set("action", "adduser")
+                      .set("method", "POST");
     
-        cout << page.startH1 << " Email Confirmed " << page.endH1 
-             <<  page.brk
-             << page.startB << " Set Password " << page.endB;
+        cout << h1() << " Email Confirmed " << h1() << br()
+             << b() << " Set Password " << b();
     
         page.InputField("hidden", "Key", key);
 
-        cout << page.brk << page.brk;
+        cout << br() << br();
 
         ErrorMessage(msg);
 
         page.Label(fieldName.password, " Password ");
         page.InputField("password", fieldName.password, password);
     
-        cout << page.brk << page.brk;
+        cout << br() << br();
         page.Label(fieldName.retypePassword, " Retype Password ");
         page.InputField("password", fieldName.retypePassword, 
                         retypePassword);
 
-        cout << page.brk << page.brk;
+        cout << br() << br();
 
         page.Button("next", "submit", "btn", "Submit");
 
-        page.FormEnd();
-
-        page.DivEnd();
+        cout << form() << cgicc::div();
 
         Footer();
     }
@@ -329,8 +324,7 @@ void Login :: ResetPasswordPage(string type, string msg, string emailID)
 
     Header("Reset Password");
     
-    page.DivStart("DivResetPass", "");
-    cout << page.brk;
+    cout << cgicc::div().set("id", "DivResetPass") << br();
 
     page.Anchor("login", "Login");
 /*
@@ -340,7 +334,7 @@ void Login :: ResetPasswordPage(string type, string msg, string emailID)
     }*/
     ResetPasswordForm(type, msg, emailID);
 
-    page.DivEnd();
+    cout << cgicc::div();
     Footer();    
 }
 
@@ -348,22 +342,23 @@ void Login :: ResetPasswordForm(string type, string msg, string emailID)
 {
     if(type == "1")
     {
-        page.FormStart("FormEmail", "reset?type=2", "POST");
+        cout << form().set("id", "FormEmail")
+                      .set("action", "reset?type=2")
+                      .set("method", "POST");
     
-        cout << page.startH1 << " Enter email to reset pssword " 
-             << page.endH1 
-             <<  page.brk;
+        cout << h1() << " Enter email to reset pssword " 
+             << h1() << br();
     
         ErrorMessage(msg);
 
         page.Label(fieldName.emailID, "Email ID");
         page.InputField("email", fieldName.emailID, emailID);
     
-        cout << page.brk << page.brk;
+        cout << br() << br();
 
         page.Button("Send", "submit", "btn", "Send");
 
-        page.FormEnd();
+        cout << form();
     }
     else if(type == "2")
     {
@@ -400,30 +395,31 @@ void Login :: ResetPasswordForm(string type, string msg, string emailID)
 
         if ( find(regKey.begin(), regKey.end(), key) != regKey.end() )
         {
-            page.FormStart("FormSetPassword", "reset?type=4", "POST");
-        
-            cout << page.startH1 << " Email Confirmed " << page.endH1 
-                 <<  page.brk
-                 << page.startB << " Reset Password " << page.endB;
+            cout << form().set("id", "FormSetPassword")
+                          .set("action", "reset?type=4")
+                          .set("method", "POST");
+       
+            cout << h1() << " Email Confirmed " << h1() << br()
+                 << b() << " Reset Password " << b();
     
             page.InputField("hidden", "Key", key);
 
-            cout << page.brk << page.brk;
+            cout << b() << b();
 
             ErrorMessage(msg);
 
             page.Label(fieldName.password, " Password ");
             page.InputField("password", fieldName.password, "");
     
-            cout << page.brk << page.brk;
+            cout << br() << br();
             page.Label(fieldName.retypePassword, " Retype Password ");
             page.InputField("password", fieldName.retypePassword, "");
 
-            cout << page.brk << page.brk;
+            cout << br() << br();
 
             page.Button("next", "submit", "btn", "Submit");
     
-            page.FormEnd();
+            cout << form();
 
         }
     }

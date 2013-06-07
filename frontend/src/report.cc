@@ -63,16 +63,16 @@ void Report :: ReportPage()
 
     Header("Report");
 
-    page.DivStart("DivReport", "");
+    cout << cgicc::div().set("id", "DivReport");
 
 //    page.LogoutLink();
 
 //    cout << page.brk;
-    cout << page.startH1 << "Seating Plan" 
-         << page.endH1;// << page.brk;
+    cout << h1() << "Seating Plan" << h1();
 
     page.FormStart("FormReport", "", "post");
 
+    cout << form().set("id", "FormReport").set("method", "POST");
     
     page.InputField("hidden", fieldName.projectID, projectID);
     page.InputField("hidden", fieldName.totalDays, 
@@ -80,42 +80,41 @@ void Report :: ReportPage()
     page.InputField("hidden", fieldName.projectType, projectType);
     page.InputField("hidden", fieldName.sameDetail, sameDetail);
 
-    page.TableStart("TableReport", "");
+    cout << table().set("id", "TableReport");
     
-    cout << page.startTR;
+    cout << tr();
     for(i = 0; i < totalCols; i++)
     {   
-        cout << page.startTH
+        cout << th()
              << tableHeading[i] 
-             << page.endTH;
+             << th();
     } 
-    cout << page.endTR;
+    cout << tr();
     for(unsigned i = 0; i < date.size(); i++)
     {
-        cout << page.startTR;
-        cout << page.startTD
+        cout << tr();
+        cout << td()
              << date[i]
-             << page.endTD
+             << td()
 
-             << page.startTD
+             << td()
              << examCode[i]
-             << page.endTD;
+             << td();
 
          temp = "../../SeatPlan/seatplan-" + projectID +
                 "-" + IntToString(i + 1) + ".html";
-         cout << page.startTD;
+         cout << td();
          page.Anchor(temp, "View Report");
-         cout << page.endTD;
-         cout << page.endTR;
+         cout << td();
+         cout << tr();
     }
 
-    page.TableEnd();
+    cout << table();
 
-    cout << page.brk << page.brk;
+    cout << br() << br()
+         << form()
+         << cgicc::div();
     
-    page.FormEnd();
-    page.DivEnd();
-
     Footer();
 }
 

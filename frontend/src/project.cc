@@ -98,13 +98,14 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
 
     Header("Project Detail");
   
-    page.DivStart("DivProject", "");
+    cout << cgicc::div().set("id", "DivProject");
 
 //    page.LogoutLink();
 
-    cout << page.startH1 << "Project Detail" << page.endH1;// << page.brk;
+    cout << h1() << "Project Detail" << h1();
 
-    page.FormStart("FormProject", "class", "GET");
+    cout << form().set("id", "FormProject").set("action", "class")
+                  .set("method", "GET");
      
     ErrorMessage(msg);
   
@@ -130,12 +131,12 @@ void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
     }
 */
 
-    cout << page.brk << page.brk;
+    cout << br() << br();
     page.Button("next", "submit", "btn", "Start New Project");
 
-    page.FormEnd();
+    cout << form();
     OldProject();
-    page.DivEnd();
+    cout << cgicc::div();
 
     Footer();
 }

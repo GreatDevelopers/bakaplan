@@ -200,16 +200,18 @@ void Strategy :: StrategyPage()
 {
     Header("Strategy");
 
-    page.DivStart("DivStrategy", "");
+    cout << cgicc :: div().set("id", "DivStrategy");
 
 //    page.LogoutLink();
 
 //    cout << page.brk;
-    cout << page.startH1 << "Strategy" 
-         << page.endH1;// << page.brk;
+    cout << h1() << "Strategy" << h1();// << page.brk;
 
-    page.FormStart("FormStrategy", "validstrategy", "post",
-                   "return ValidateStrategyForm(\"TotalDays\")");
+    cout << form().set("id", "FormStrategy")
+                  .set("action", "validstrategy")
+                  .set("method", "POST")
+                  .set("onsubmit",
+                       "return ValidateStrategyForm('TotalDays')");
 
     page.InputField("hidden", fieldName.projectID, projectID);
     page.InputField("hidden", fieldName.totalDays, 
@@ -239,8 +241,8 @@ void Strategy :: StrategyPage()
 
     ErrorMessage(msg);
 
-    page.TableStart("TableStrategy", "");
-    cout << page.startTR;
+    cout << table().set("id", "TableStrategy");
+    cout << tr();
     
     if(totalDays == 1)
         j = 1;
@@ -249,23 +251,23 @@ void Strategy :: StrategyPage()
 
     for(k = j; k < totalCols; k++)
     {   
-        cout << page.startTH << tableHeading[k] << page.endTH;
+        cout << th() << tableHeading[k] << th();
     }
-    cout << page.endTR;
+    cout << tr();
 
     for(i = 0; i < totalDays; i++)
     {
         j = i + 1;
 
-        cout << page.startTR;
+        cout << tr();
         if(sameDetail == "No")
         {
-            cout << page.startTD;
+            cout << td();
             cout << date[i];
             page.InputField("hidden", fieldName.date, j, date[i]);
-            cout << page.endTD;
+            cout << td();
         }
-        cout << page.startTD;
+        cout << td();
         temp = fieldName.strategyChoice + IntToString(j);
         page.SelectFieldStart(temp);
         
@@ -286,19 +288,16 @@ void Strategy :: StrategyPage()
         }
 
         page.SelectFieldEnd();
-        cout << page.endTD;
-        cout << page.endTR;
-
+        cout << td() << tr();
     }
 
-    page.TableEnd();
+    cout << table();
 
-    cout << page.brk << page.brk;
+    cout << br() << br();
 
     page.Button("next", "submit", "btn", "NEXT");
 
-    page.FormEnd();
-    page.DivEnd();
+    cout << form() << cgicc :: div();
 
     Footer();
 }

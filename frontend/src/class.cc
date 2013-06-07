@@ -13,9 +13,6 @@
  *                   https://github.com/GreatDevelopers
  */
 
-/**
- *  Include class.h 
- */
 #include "header/class.h"
 
 /**
@@ -26,8 +23,6 @@
 
 ClassDetail :: ClassDetail()
 {
-    // constructor
-
     totalCols = 4;
     tableHeading.resize(totalCols);
     i = 0;
@@ -50,8 +45,6 @@ void ClassDetail :: ProjectType()
 {
 //    page.ContentType();
 
-//    cout << "Hello !";
- 
     projectType = readField.ReadFieldValue(fieldName.projectType);
     emailID = readField.ReadFieldValue(fieldName.emailID);
     projectName = readField.ReadFieldValue(fieldName.projectName); 
@@ -195,16 +188,19 @@ void ClassDetail :: ClassDetailPage(string msg)
 
     Header("Class Detail");
 
-    page.DivStart("DivClass", "");
+    cout << cgicc::div().set("id", "DivClass");
 
 //    page.LogoutLink();
 //
-    cout << page.startH1 << "Branch/Trade Detail" 
-         << page.endH1;// << page.brk << page.brk;
+    cout << h1() << "Branch/Trade Detail" << h1();
 
-//    cout << page.brk;
-    page.FormStart("FormClass", "rollno", "POST", 
-                   "return ValidateClassForm(\"TotalClasses\")");
+//    page.FormStart("FormClass", "rollno", "POST", 
+//                   "return ValidateClassForm(\"TotalClasses\")");
+
+    cout << form().set("id", "FormClass").set("action", "rollno")
+                  .set("method", "POST")
+                  .set("onsubmit",
+                       "return ValidateClassForm('TotalClasses')");
 
     page.InputField("hidden", fieldName.projectType, projectType);
     page.InputField("hidden", fieldName.totalClasses, 
@@ -219,18 +215,18 @@ void ClassDetail :: ClassDetailPage(string msg)
                     "DeleteRow('TableClass', 'TotalClasses')",
                     "Delete Row");
 */
-    cout << page.brk << page.brk;
+    cout << br() << br();
 
     ErrorMessage(msg);
-
-    page.TableStart("TableClass", "");
+    
+    cout << table().set("id","TableClass");
    
-    cout << page.startTR;
+    cout << tr();
     for(i = 0; i < totalCols; i++)
     {   
-        cout << page.startTH << tableHeading[i] << page.endTH;
+        cout << th() << tableHeading[i] << th();
     }
-    cout << page.endTR;
+    cout << tr();
 
     rowIndex = "";
 
@@ -244,79 +240,81 @@ void ClassDetail :: ClassDetailPage(string msg)
            subjectName.size() >= 1 || subjectCode.size() >= 1 ))
         {
         
-            cout << page.startTR;
+            cout << tr();
         
-            cout << page.startTD;
+            cout << td();
+
             page.InputField("text", fieldName.className, (i + 1),
                             className[i], className[i]);
-            cout << page.endTD;
+            cout << td();
         
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.subjectName, (i + 1),
                             subjectName[i], subjectName[i]);
-            cout << page.endTD;
+            cout << td();
         
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.subjectCode, (i + 1),
                             subjectCode[i], subjectCode[i]);
-            cout << page.endTD;
+            cout << td();
 
-            cout << page.startTD;
+            cout << td();
             page.InputField("button", IntToString(i + 1), 
 //                            "classSubjects('TotalClasses')",
 //                            "Check Subs");
             
                             "DelRow('RowIndex', 'TotalClasses', event)",
                             "Delete Row");
-            cout << page.endTD;
+            cout << td();
 
-            cout << page.endTR;
+            cout << tr();
         
         }
         else
         {
-            cout << page.startTR;
+            cout << tr();
         
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.className, (i + 1),
                             className[i]);
-            cout << page.endTD;
+            cout << td();
         
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.subjectName, (i + 1),
                              subjectName[i]);
-            cout << page.endTD;
+            cout << td();
         
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.subjectCode, (i + 1),
                             subjectCode[i]);
-            cout << page.endTD;
+            cout << td();
 
-            cout << page.startTD;
+            cout << td();
             page.InputField("button", IntToString(i + 1), 
                             "DelRow('RowIndex', 'TotalClasses', event)",
                             "Delete Row");
-            cout << page.endTD;
+            cout << td();
 
-            cout << page.endTR;
+            cout << tr();
         }
     }
 
     lastRow = IntToString(totalClasses);
 
-    page.TableEnd();
+    cout << table();
     
     page.InputField("hidden", fieldName.lastRow, lastRow);
     page.InputField("hidden", fieldName.rowIndex, rowIndex);
    
-    cout << page.brk << page.brk;
+    cout << br() << br();
 
     page.Button("next", "submit", "btn", "NEXT" );
 //                "javascript:classSubjects('TotalClasses')");
 //    page.InputField("submit", "submit", "", "Next");
 
-    page.FormEnd();
-    page.DivEnd();
+//    page.FormEnd();
+    cout << form();    
+    cout << cgicc::div();
 
     Footer();
 }
