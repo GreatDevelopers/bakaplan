@@ -1,7 +1,7 @@
 Installation steps for using this software.
 ===========================================
 
-After this open terminal and run following commands
+Open terminal and run following commands
 
     $ cd public_html/cgi-bin
 
