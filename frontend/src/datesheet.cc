@@ -196,8 +196,6 @@ void DateSheet :: DateSheetPage()
 
     cout << h1() << "Date Sheet" << h1();
 
-/*    page.FormStart("FormDateSheet", "room", "POST",
-                   "return ValidateDateSheetForm(\"TotalDays\")");*/
     cout << form().set("id", "FormDateSheet").set("action", "room")
                   .set("method", "POST")
                   .set("onsubmit",
@@ -271,14 +269,10 @@ void DateSheet :: DateSheetPage()
    
     cout << tr();
 
-//    cout << page.startTH << "Date" << page.endTH;
-
     for(i = 0; i < totalCols; i++)
     {   
         cout << th() << tableHeading[i] << th();
     }
-
-//    cout << page.startTH << "Delete Row" << page.endTH;
 
     cout << tr();
 
@@ -339,11 +333,11 @@ void DateSheet :: DateSheetPage()
                             "Delete Row");
             cout << td();
 
-            cout << td();
+            cout << tr();
         }
         else
         {
-            cout << td();
+            cout << tr();
         
             cout << td();
             page.InputField("text", fieldName.date, (i + 1),
@@ -419,7 +413,7 @@ void DateSheet :: DateSheetPage()
 /**
  *      \class  DateSheet
  *      \fn     DateSheet :: ~DateSheet()
- *      \brief  DEstructor
+ *      \brief  Destructor
  */
 
 DateSheet :: ~DateSheet()

@@ -257,7 +257,7 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
                       .set("action", "validstrategy")
                       .set("method", "POST")
                       .set("onsubmit", 
-                           "return ValidateRoomForm(TotalDays)");
+                           "return ValidateRoomForm('TotalDays')");
 
     }
     else
@@ -266,7 +266,7 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
                       .set("action", "exam")
                       .set("method", "POST")
                       .set("onsubmit", 
-                           "return ValidateRoomForm(TotalDays)");
+                           "return ValidateRoomForm('TotalDays')");
 
     }
 
