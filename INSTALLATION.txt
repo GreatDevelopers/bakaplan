@@ -1,4 +1,4 @@
-Inatallation steps for using this software.
+Installation steps for using this software.
 ===========================================
 
 After this open terminal and run following commands
@@ -26,7 +26,7 @@ Do as following in terminal
 
     $ mysql -u username -p
     $ create database database_name;
-    $ ctrl+d
+    $ quit
 
 Now cd to place where .sql file exists
 
