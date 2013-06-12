@@ -63,7 +63,7 @@ void Report :: ReportPage()
 
     Header("Report");
 
-    cout << cgicc::div().set("id", "DivReport");
+    cout << cgicc::div().set("id", "DivReport").set("align", "center");
 
 //    page.LogoutLink();
 
