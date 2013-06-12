@@ -339,16 +339,17 @@ void ExamDetail :: ExamDetailPage()
     page.Javascript("../../BaKaPlan/javascript/jquery.timepicker.js");
     page.Javascript("../../BaKaPlan/javascript/main.js");
   */  
-    page.DivStart("DivExam", "");
-    cout << page.startH1 << "Exam Detail" 
-         << page.endH1;
+    cout << cgicc::div().set("id", "DivExam").set("align", "center");
+    
+    cout << h1() << "Exam Detail" << h1();
 //    page.LogoutLink();
 
 //    cout << page.brk;
 
-    page.FormStart("FormExam", "strategy", "POST",
-                   "return ValidateExamForm(\"TotalDays\")");
-    
+    cout << form().set("id", "FormExam").set("action", "strategy")
+                  .set("method", "POST")
+                  .set("onsubmit", 
+                       "return ValidateExamForm('TotalDays')");
     ErrorMessage(msg);
 
     page.InputField("hidden", fieldName.projectID, projectID);
@@ -356,9 +357,10 @@ void ExamDetail :: ExamDetailPage()
                     IntToString(totalDays));
     page.InputField("hidden", fieldName.projectType, projectType);
     page.InputField("hidden", fieldName.sameDetail, sameDetail);
-
-    page.TableStart("TableExam", "");
-    cout << page.startTR;
+    
+    cout << table().set("id", "TableExam").set("align", "center");
+    
+    cout << tr();
     
     if(sameDetail == "Yes")
         j = 1;
@@ -367,9 +369,9 @@ void ExamDetail :: ExamDetailPage()
 
     for(k = j; k < totalCols; k++)
     {   
-        cout << page.startTH << tableHeading[k] << page.endTH;
+        cout << th() << tableHeading[k] << th();
     }
-    cout << page.endTR;
+    cout << tr();
 
     for(i = 0; i < totalDays; i++)
     {
@@ -405,19 +407,19 @@ void ExamDetail :: ExamDetailPage()
         }
         else*/
         {
-            cout << page.startTR;
+            cout << tr();
             if(sameDetail == "No")
             {
-                cout << page.startTD;
+                cout << td();
                 cout << date[i];
                 page.InputField("hidden", fieldName.date, j, date[i]);
-                cout << page.endTD;
+                cout << td();
             }
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.examName, j, 
                             examName[i]);
-            cout << page.endTD;
-            cout << page.startTD;
+            cout << td();
+            cout << td();
             
             temp = fieldName.examSession + IntToString(j);
             page.SelectFieldStart(temp);
@@ -435,7 +437,7 @@ void ExamDetail :: ExamDetailPage()
 
 /*            page.InputField("text", fieldName.examSession, j, 
                              examSession[i]);*/
-            cout << page.endTD;
+            cout << td();
            
 // Timing
 /*             for(k = 0; k < 2; k++)
@@ -500,7 +502,7 @@ void ExamDetail :: ExamDetailPage()
                                 "1:00 PM", "1:30 PM", "2:00 PM", 
                                 "2:30 PM", "3:00 PM", "3:30 PM",
                                 "4:00 PM", "4:30 PM", "5:00 PM"};
-            cout << page.startTD;
+            cout << td();
 
             page.SelectFieldStart("StartTime"+ IntToString(j));
             page.SelectOptionStart(" ", "y");
@@ -518,9 +520,9 @@ void ExamDetail :: ExamDetailPage()
 //            page.InputField("time", "StartTime", j, "Start Time");
             cout << "<input id=\"myPicker\" class=\"time\" "
                  << "name=\"StartTime\" type=\"text\" />";*/
-            cout << page.endTD;
+            cout << td();
             
-            cout << page.startTD;
+            cout << td();
             page.SelectFieldStart("EndTime"+ IntToString(j));
             page.SelectOptionStart(" ", "y");
             cout << "Select";
@@ -536,27 +538,27 @@ void ExamDetail :: ExamDetailPage()
 /*            page.InputField("time", "EndTime", j, "End Time");
             cout << "<input id=\"myPicker\" class=\"time\" "
                  << "name=\"EndTime\" type=\"text\" />";*/
-            cout << page.endTD;
+            cout << td();
            
-            cout << page.startTD;
+            cout << td();
             page.InputField("text", fieldName.examVenue, j, 
                              examVenue[i]);
-            cout << page.endTD;
-            cout << page.endTR;
+            cout << td();
+            cout << tr();
         }
     }
 /*    cout << "<script> $(function() {"
          << " $('#EndTime').timepicker"
          << "({ 'scrollDefaultNow': true }); });  </script>";*/
 
-    page.TableEnd();
+    cout << table();
 
-    cout << page.brk << page.brk;
+    cout << br() << br();
 
     page.Button("next", "submit", "btn", "NEXT");
 
-    page.FormEnd();
-    page.DivEnd();
+    cout << form()
+         << cgicc :: div();
 
     Footer();
 

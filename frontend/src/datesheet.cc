@@ -189,7 +189,8 @@ void DateSheet :: DateSheetPage()
 
     Header("DateSheet");
 
-    cout << cgicc::div().set("id", "DivDateSheet");
+    cout << cgicc::div().set("id", "DivDateSheet")
+                        .set("align", "center");
 
 //    page.LogoutLink();
 

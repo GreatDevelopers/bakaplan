@@ -200,7 +200,8 @@ void Strategy :: StrategyPage()
 {
     Header("Strategy");
 
-    cout << cgicc :: div().set("id", "DivStrategy");
+    cout << cgicc :: div().set("id", "DivStrategy")
+                          .set("align", "center");
 
 //    page.LogoutLink();
 

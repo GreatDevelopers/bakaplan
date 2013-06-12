@@ -244,8 +244,8 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
 
     Header("Room Detail");
     
-    cout << cgicc :: div().set("id", "DivRoom");
-
+    cout << cgicc :: div().set("id", "DivRoom")
+                          .set("align", "center");
 //    page.LogoutLink();
 
 //    cout << page.brk;

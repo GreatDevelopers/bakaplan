@@ -204,7 +204,8 @@ void ValidStrategy :: ValidStrategyPage()
 
     Header("ValidStrategy");
 
-    cout << cgicc :: div().set("id", "DivValidStrategy");
+    cout << cgicc :: div().set("id", "DivValidStrategy")
+                          .set("align", "center");
 
 //    page.LogoutLink();
 
