@@ -227,14 +227,17 @@ function DelRow(indexField, totalID, e)
         while ( (current = current.parentElement) && 
                 current.tagName !="TR");
         {
-//            alert(current.rowIndex);
+            alert(current.rowIndex);
             if(current.rowIndex != 1)
                 current.parentElement.removeChild(current);
         }
-        var newTotal = parseInt(total) - 1;
-        document.getElementById(totalID).value = newTotal;
-//        alert(indexField);
-        RemoveItem(indexField, rowId);
+        if(current.rowIndex != 1)
+        {
+            var newTotal = parseInt(total) - 1;
+            document.getElementById(totalID).value = newTotal;
+            alert(indexField);
+            RemoveItem(indexField, rowId);
+        }
     }
     catch(e)
     {

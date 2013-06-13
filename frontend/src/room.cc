@@ -385,7 +385,7 @@ void RoomDetail :: RoomDetailPage(bool addRoom)
                        + (fieldName.rowIndex + IntToString(i + 1))  
                        + "', 'TotalCentres" 
                        + IntToString(i + 1) + "', event)";
-                page.InputField("button", IntToString(i + 1), 
+                page.InputField("button", IntToString(j + 1), 
                                 temp,
                                 "Delete Row");
                 cout << td();
