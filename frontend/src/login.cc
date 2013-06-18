@@ -94,7 +94,8 @@ void Login :: LoginPage(string msg, string emailID, string password)
          << form().set("id", "FormLogin").set("action", "project")
                   .set("method", "POST");
 
-    cout << h1() << "Login" << h1() << br();;
+    cout << h1() << "BaKaPlan" << h1()
+         << h3() << "Baithne Ka Plan" << h3();
     
     ErrorMessage(msg);
     
