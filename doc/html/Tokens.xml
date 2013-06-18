@@ -1434,7 +1434,7 @@
     </TokenIdentifier>
     <Path>de/d0e/classDateSheet.html</Path>
     <Anchor>af17d25ae4f39caf7b9ea62d73541813b</Anchor>
-    <Abstract>DEstructor. </Abstract>
+    <Abstract>Destructor. </Abstract>
     <DeclaredIn>datesheet.h</DeclaredIn>
   </Token>
   <Token>
