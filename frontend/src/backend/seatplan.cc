@@ -165,7 +165,7 @@ string SeatPlan :: RollNo(int s)
     string rno;
      
     if(seatSize[s] == size[s])
-        rno = "-";
+        rno = "        -";
     else
     {
         rno = seatRollNo[s][size[s]];
@@ -217,13 +217,14 @@ void SeatPlan :: WriteSeatPlan(string projectID, int i)
     }
     outFile.close();
     WriteHTMLFile(projectID, i);
+    WritePDFFile(projectID, i);
 }
 
 /**
  *      \class  SeatPlan
  *      \fn     SeatPlan :: WriteHTMLFile(string projectID, int i)
  *      \brief  Creating HTML file
- *      \param  projectID   Project Id of eting plan project
+ *      \param  projectID   Project Id of seating plan project
  *      \param  i           For creating file accord to datesheet
  */
 
@@ -309,6 +310,176 @@ void SeatPlan :: WriteHTMLFile(string projectID, int i)
     
     outFile.close();
 }
+
+
+//PDF addition
+
+jmp_buf env;
+
+#ifdef HPDF_DLL
+void  __stdcall
+#else
+void
+#endif
+error_handler (HPDF_STATUS   error_no,
+               HPDF_STATUS   detail_no,
+               void         *user_data)
+{
+    printf ("ERROR: error_no=%04X, detail_no=%u\n", (HPDF_UINT)error_no,
+                (HPDF_UINT)detail_no);
+    longjmp(env, 1);
+}
+
+/**
+ *      \class  Seatplan
+ *      \fn     Seatplan :: WritePDFFile(string projectID, int i)
+ *      \brief  Creating PDF Files 
+ *      \param  projectID  Project ID of seating plan project
+ *      \param  i          For creating file according to datesheet
+ */
+
+void SeatPlan :: WritePDFFile(string projectID, int i)
+{
+  
+    HPDF_Doc  pdf;
+    HPDF_Font font;
+    HPDF_Page page[10][50];
+
+    temp = "../../SeatPlan/seatplan-" + projectID + ".pdf";
+
+    
+    pdf = HPDF_New (error_handler, NULL);
+    if  (!pdf) {
+        printf ("error: cannot create PdfDoc object\n");
+        //return 1;
+    }
+
+    if  (setjmp(env)) {
+        HPDF_Free (pdf);
+        //return 1;
+    }
+
+    
+    HPDF_SetCompressionMode (pdf, HPDF_COMP_ALL);
+
+    /* create default-font */
+    font = HPDF_GetFont (pdf, "Helvetica", NULL);
+
+    /* add a new page object. */
+     
+    for(centre=0 ; centre < totalCentres[i]; centre++)
+        for (room=0 ; room < totalRooms[i][centre] ; room++)
+             page[centre][room] = HPDF_AddPage (pdf);                        
+
+    
+     for(centre = 0; centre < totalCentres[i]; centre++)
+     {
+          
+         for(room = 0; room < totalRooms[i][centre]; room++)
+         {
+
+             z=55,
+             x=z,
+	     y=685,
+	     width=53,
+	     height=30;
+
+             HPDF_Page_SetSize (page[centre][room], HPDF_PAGE_SIZE_A4, HPDF_PAGE_PORTRAIT);
+             HPDF_SetPageMode(pdf, HPDF_PAGE_MODE_USE_OUTLINE);
+
+
+            for(row = 0; row < rows[i][centre][room]; row++)
+            {
+                for(col = 0; col < cols[i][centre][room]; col++)
+                {
+                    HPDF_Page_Rectangle (page[centre][room], x , y, width,height);	
+	            HPDF_Page_Stroke (page[centre][room]);
+		    x=x+width;
+	        }
+		x=z;
+		y=y-height;
+            }
+         }
+     }
+    
+
+     for(centre = 0; centre < totalCentres[i]; centre++)
+     {
+       
+         for(room = 0; room < totalRooms[i][centre]; room++)
+         {
+       
+             HPDF_Page_BeginText (page[centre][room]);
+             HPDF_Page_MoveTextPos (page[centre][room], 5, HPDF_Page_GetHeight(page[centre][room]) - 15);
+             HPDF_Page_SetFontAndSize(page[centre][room], font, 18);
+  
+             HPDF_Page_MoveTextPos (page[centre][room], 200 , -15);
+	     HPDF_Page_ShowText (page[centre][room], examName[i].c_str());
+        
+             HPDF_Page_MoveTextPos (page[centre][room], -145 , -25);
+             HPDF_Page_SetFontAndSize(page[centre][room], font, 14);
+	     HPDF_Page_ShowText (page[centre][room], examDate[i].c_str());
+        
+             HPDF_Page_MoveTextPos (page[centre][room], 85 , 0 );
+             HPDF_Page_ShowText (page[centre][room], " |  at  ");
+             HPDF_Page_ShowText (page[centre][room], examTime[i].c_str());
+
+             HPDF_Page_MoveTextPos (page[centre][room], 170 , 0 );
+	     HPDF_Page_ShowText (page[centre][room], " |  Venue : ");
+             HPDF_Page_ShowText (page[centre][room], examVenue[i].c_str());
+   
+             HPDF_Page_MoveTextPos (page[centre][room], -230, -25);
+             HPDF_Page_SetFontAndSize(page[centre][room], font, 16);
+             HPDF_Page_ShowText (page[centre][room], "Centre : ");
+             HPDF_Page_ShowText (page[centre][room], centreName[i][centre].c_str());
+
+             HPDF_Page_MoveTextPos (page[centre][room], 180, 0 );
+             HPDF_Page_ShowText (page[centre][room], "Room : ");
+             HPDF_Page_ShowText (page[centre][room], roomNo[i][centre][room].c_str());
+             
+             HPDF_Page_MoveTextPos (page[centre][room], -208, -60);
+
+             for(row = 0; row < rows[i][centre][room]; row++)
+             {
+                 for(col = 0; col < cols[i][centre][room]; col++)
+                 {
+                      if(strlen(seat[centre][room][row][col].c_str()) <= 7)
+                      HPDF_Page_SetFontAndSize(page[centre][room], font, 10);        
+                      else
+                      if(strlen(seat[centre][room][row][col].c_str()) <= 9)
+                      HPDF_Page_SetFontAndSize(page[centre][room], font, 9);        
+                      else 
+                      if(strlen(seat[centre][room][row][col].c_str()) <= 11)
+                      HPDF_Page_SetFontAndSize(page[centre][room], font, 8);        
+                      else
+                      if(strlen(seat[centre][room][row][col].c_str()) <= 13)
+                      HPDF_Page_SetFontAndSize(page[centre][room], font, 7);        
+                      else
+                      if(strlen(seat[centre][room][row][col].c_str()) <= 15)
+                      HPDF_Page_SetFontAndSize(page[centre][room], font, 6);        
+                      else
+                      HPDF_Page_SetFontAndSize(page[centre][room], font, 5);        
+            
+                      HPDF_Page_ShowText(page[centre][room],seat[centre][room][row][col].c_str());
+                      HPDF_Page_MoveTextPos (page[centre][room], width, 0);
+                 }
+                
+                 HPDF_Page_MoveTextPos (page[centre][room], -(col*53), -30);
+             }
+                HPDF_Page_SetFontAndSize(page[centre][room], font, 14);
+                HPDF_Page_EndText (page[centre][room]);                  
+                HPDF_Page_BeginText (page[centre][room]);
+                HPDF_Page_MoveTextPos (page[centre][room], 50,20);
+                HPDF_Page_ShowText(page[centre][room],"Generated by BaKaPlan(http://freecode.com/projects/bakaplan)"); 
+                HPDF_Page_MoveTextPos (page[centre][room], -215, -10);
+         }
+     }  
+
+     HPDF_SaveToFile (pdf, temp.c_str());
+     HPDF_Free (pdf);
+
+}
+
 
 /**
  *      \class  SeatPlan
