@@ -24,6 +24,7 @@ CFLAG   =   -c $(DEBUG)   #-Wl,--stack,8388608     # Compilation flag
 OFLAG   =   $(DEBUG) -o                  # O/p Flag
 LCGICC  =   -lcgicc     		         # cgicc lib flag
 LMYSQL  =   -L/usr/include/mysql -lmysqlclient -I/usr/include/mysql
+LHPDF   =   -lhpdf
 
 #   Target names
 

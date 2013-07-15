@@ -23,6 +23,8 @@
 
 #include <iostream>
 #include <string>
+#include <string.h>
+#include <stdio.h>
 #include <fstream>
 #include <sstream>
 #include <cstdlib>
@@ -32,6 +34,8 @@
 #include <deque>
 #include <algorithm>
 #include <ctime>
+#include <setjmp.h>
+#include <hpdf.h>
 
 #include "boost/multi_array.hpp"
 

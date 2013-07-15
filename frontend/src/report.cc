@@ -23,7 +23,7 @@ Report :: Report()
     i = 0;
     tableHeading[i++] = "Date";
     tableHeading[i++] = "Subject Code";
-    tableHeading[i++] = "Report";
+    tableHeading[i++] = "View Report";
 }
 
 /**
@@ -104,8 +104,13 @@ void Report :: ReportPage()
          temp = "../../SeatPlan/seatplan-" + projectID +
                 "-" + IntToString(i + 1) + ".html";
          cout << td();
-         page.Anchor(temp, "View Report");
+         page.Anchor(temp, "HTML");
          cout << td();
+         temp = "../../SeatPlan/seatplan-" + projectID +
+                "-" + IntToString(i + 1) + ".pdf";
+         cout << td();
+         page.Anchor(temp, "PDF");
+         cout << td(); 
          cout << tr();
     }
 

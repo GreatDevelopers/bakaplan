@@ -166,7 +166,7 @@ void PageLayout :: Head(string titleName)
 
          << "<script src=\"http://ajax.googleapis.com/ajax/"
          << "libs/jquery/2.0.0/jquery.min.js\"></script>"
-         << "<script src=\"../../BaKaPlanjs/opentip-jquery.min.js\">"
+         << "<script src=\"../../BaKaPlan/js/opentip-jquery.min.js\">"
          << "</script>"
          << "<script src=\"../../BaKaPlan/js/opentip-myStyles.js\">"
          << "</script>"
