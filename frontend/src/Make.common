@@ -25,7 +25,6 @@ OFLAG   =   $(DEBUG) -o                  # O/p Flag
 LCGICC  =   -lcgicc                      # cgicc lib flag
 LMYSQL  =   -L/usr/include/mysql -lmysqlclient -I/usr/include/mysql
 LSMTP   =   -ljwsmtp
-LHPDF   =   -lhpdf
 
 #   Target names
 

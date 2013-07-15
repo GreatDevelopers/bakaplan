@@ -34,7 +34,7 @@ $(DB): $(D_DB)
 	$(CXX) $(CFLAG) ../database.cc $(LMYSQL)
 
 $(READINPUT)$(O) : $(D_READINPUT)
-	$(CXX) $(CFLAG) $(READINPUT)$(CC) $(LHPDF)
+	$(CXX) $(CFLAG) $(READINPUT)$(CC)
 
 $(EXPANDROLLNO)$(O) : $(D_EXPANDROLLNO)
 	$(CXX) $(CFLAG) $(EXPANDROLLNO)$(CC)
@@ -46,16 +46,16 @@ $(DATESHEET)$(O) : $(D_DATESHEET)
 	$(CXX) $(CFLAG) $(DATESHEET)$(CC)
 
 $(SEATPLAN)$(O) : $(D_SEATPLAN)
-	$(CXX) $(CFLAG) $(SEATPLAN)$(CC) $(LMYSQL) $(LHPDF)
+	$(CXX) $(CFLAG) $(SEATPLAN)$(CC) $(LMYSQL)
 
 $(STRATEGY)$(O) : $(D_STRATEGY)
-	$(CXX) $(CFLAG) $(STRATEGY)$(CC) $(LMYSQL) $(LHPDF)
+	$(CXX) $(CFLAG) $(STRATEGY)$(CC) $(LMYSQL)
 
 main.o: main.cpp $(H_DATESHEET) $(H_STRATEGY)
-	$(CXX) $(CFLAG) main.cpp $(LMYSQL) $(LHPDF)
+	$(CXX) $(CFLAG) main.cpp $(LMYSQL)
 
 main: $(L_DATESHEET) $(L_STRATEGY) main.o
-	$(CXX) $(OFLAG) main $(L_DATESHEET) $(L_STRATEGY) main.o $(LMYSQL) $(LHPDF)
+	$(CXX) $(OFLAG) main $(L_DATESHEET) $(L_STRATEGY) main.o $(LMYSQL)
 
 run : main
 	./main

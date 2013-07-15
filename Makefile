@@ -21,13 +21,13 @@
 
 MAKE			=	make -C frontend
 CLEAN			=	make -C frontend clean
-COPY_HOMEPAGE	        =	cp -r BaKaPlan ~/public_html/
+COPY_HOMEPAGE	=	cp -r BaKaPlan ~/public_html/
 COPY_DOC 		=	cp -r doc ~/public_html/BaKaPlan/
-DOC			=	doxygen doxy.conf
+DOC				=	doxygen doxy.conf
 COPY			=	$(COPY_HOMEPAGE) && $(COPY_DOC)
-INSTALL                 =       $(COPY)
-BP                      =       mkdir ~/public_html/cgi-bin/bp && mkdir ~/public_html/SeatPlan
-PERMISSIONS             =       chmod -R 777 ~/public_html/cgi-bin/bp \
+INSTALL         =   $(COPY)
+BP              =   mkdir ~/public_html/cgi-bin/bp && mkdir ~/public_html/SeatPlan
+PERMISSIONS     =   chmod -R 777 ~/public_html/cgi-bin/bp \
 					~/public_html/cgi-bin/bakaplan/frontend/input \
                     ~/public_html/cgi-bin/bakaplan/frontend/output \
                     ~/public_html/SeatPlan
@@ -36,8 +36,8 @@ PERMISSIONS             =       chmod -R 777 ~/public_html/cgi-bin/bp \
 
 T_COPY			=	copy
 T_CLEAN			=	clean
-T_INSTALL               =   install
-T_FRONTEND              =   front
+T_INSTALL       =   install
+T_FRONTEND      =   front
 T_COPY_DOC		=	copy-doc
 T_DOC			=	Doc
 

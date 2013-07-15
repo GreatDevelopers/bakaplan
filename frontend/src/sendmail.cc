@@ -54,8 +54,7 @@ void SendMail :: SetHTMLMessage(string regKey, string mail)
 {
     url  = "http://";
     url += SERVER_MAIL;
-    url += USERNAME;
-    url += "/cgi-bin/bp/";
+    url += "/~mandeep/cgi-bin/bp/";
     if(mail == "register")
         url += "confirm?Key=" + regKey;
     else
@@ -71,7 +70,7 @@ void SendMail :: SetHTMLMessage(string regKey, string mail)
     }
     else if(mail == "reset")
     {
-        htmlMessage += "To reset your password, you need ";
+        htmlMessage += "To rest your password, you need ";
         htmlMessage += "to confirm your Email by clicking following link.";
         htmlMessage += "</br></br>" + url + "</br></br>";
     }

@@ -47,17 +47,9 @@ class SeatPlan : public ReadInput
                      subRollNo;
 
         STRING_4DVEC seat;
-
-        //PDF variables
-        
-        int z,
-            x,
-            y,
-            width, 
-            height;
       
         // for loop variables
-        int centre, room, room1, row, col;
+        int centre, room, row, col;
         int s, start, end, index; // temp
         
     public:
@@ -70,7 +62,6 @@ class SeatPlan : public ReadInput
         void CreateFile(string projectID);
         void WriteSeatPlan(string projectID, int i);
         void WriteHTMLFile(string projectID, int i);
-        void WritePDFFile(string projectID, int i);
         void AddRollNoInfo(string projectID, int i);
 
         /** Destructor */
