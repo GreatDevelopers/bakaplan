@@ -54,7 +54,7 @@ void SendMail :: SetHTMLMessage(string regKey, string mail)
 {
     url  = "http://";
     url += SERVER_MAIL;
-    url += USERNAME;
+    url += USER;
     url += "/cgi-bin/bp/";
     if(mail == "register")
         url += "confirm?Key=" + regKey;

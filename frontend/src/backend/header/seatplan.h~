@@ -50,11 +50,11 @@ class SeatPlan : public ReadInput
 
         //PDF variables
         
-        int z,
-            x,
-            y,
-            width, 
-            height;
+        HPDF_REAL z,
+                  x,
+                  y,
+                  width, 
+                  height;
       
         // for loop variables
         int centre, room, room1, row, col;

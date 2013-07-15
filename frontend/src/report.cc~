@@ -108,7 +108,6 @@ void Report :: ReportPage()
          cout << td();
          temp = "../../SeatPlan/seatplan-" + projectID +
                 "-" + IntToString(i + 1) + ".pdf";
-         cout << td();
          page.Anchor(temp, "PDF");
          cout << td(); 
          cout << tr();

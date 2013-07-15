@@ -34,7 +34,7 @@ $(DB): $(D_DB)
 	$(CXX) $(CFLAG) ../database.cc $(LMYSQL)
 
 $(READINPUT)$(O) : $(D_READINPUT)
-	$(CXX) $(CFLAG) $(READINPUT)$(CC) $(LHPDF)
+	$(CXX) $(CFLAG) $(READINPUT)$(CC)
 
 $(EXPANDROLLNO)$(O) : $(D_EXPANDROLLNO)
 	$(CXX) $(CFLAG) $(EXPANDROLLNO)$(CC)
