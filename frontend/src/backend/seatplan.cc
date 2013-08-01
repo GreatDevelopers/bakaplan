@@ -157,7 +157,7 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
         }
     }
 
-   // WriteSeatPlan(projectID, i);
+    //WriteSeatPlan(projectID, i);
 }
  
 string SeatPlan :: RollNo(int s)
