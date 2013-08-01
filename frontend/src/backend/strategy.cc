@@ -44,7 +44,7 @@ void Strategy :: TotalSeats(int strategy, int i)
 {
     roomSize.resize(totalDays);
     roomSize[i].resize(totalCentres[i]);
- 
+
     for(j = 0; j < totalCentres[i]; j++)
     {   
         roomSize[i][j].resize(totalRooms[i][j]);
@@ -171,13 +171,18 @@ void Strategy :: CheckValidation(int strategy, int i)
             << totalStudents << endl
             << totalGroupSeats << endl
             << groupStudentSize[strategy-1] << endl;
+    int stra;
+    if(strategy == 5)
+        stra = groupStudentSize[0];
+    else
+        stra = groupStudentSize[strategy-1];
 
     db.InsertValidStrategy(projectID, IntToString(i + 1), date[i], 
                            IntToString(strategy), 
                            IntToString(totalSeats),
                            IntToString(totalStudents), 
                            IntToString(totalGroupSeats), 
-                           IntToString(groupStudentSize[strategy-1]));
+                           IntToString(stra));//groupStudentSize[strategy-1]));
 
     if(totalSeats < totalStudents)
     {
