@@ -15,4 +15,5 @@ src/backend/*.o
 *.in
 *.out
 *.html
+*.orig
 frontend/src/backend/main
