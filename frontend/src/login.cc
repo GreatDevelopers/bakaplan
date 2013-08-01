@@ -188,7 +188,9 @@ void Login :: NewUser()
 
         sendMail.RegistrationMail(userEmailID, currentTime);
     
-        msg = "Check mail for verification in Junk/Trash.";
+        msg = "Check verification mail in your inbox (It might land "
+              "in Junk/Spam folder and sometimes it may not be "
+              "immediate)";
 
         LoginPage(msg);
     }
