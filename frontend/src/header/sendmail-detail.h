@@ -19,7 +19,7 @@
 #include "constant.h"
 
 const char SENDER_EMAILID[FILE_SIZE] = "USER_EMAIL_ID";
-const char SERVER_MAIL[FILE_SIZE]    = "LOCALHOST/SERVER_IP";
-const char USERNAME[FILE_SIZE]	     = "~SYSTEM_USERNAME";
+const char SERVER_MAIL[FILE_SIZE]    = "LOCALHOST_OR_SERVER_IP";
+const char USERNAME[FILE_SIZE]	     = "/~SYSTEM_USERNAME";
 
 #endif
