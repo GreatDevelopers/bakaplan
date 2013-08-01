@@ -26,8 +26,8 @@
  *------------------------------------------------------------------*/
 
 #define SERVER "localhost"
-#define USER "root"
-#define PASSWORD "jaskaran"
-#define DATABASE "bakaplan"
+#define USER "DATABASE_USERNAME"
+#define PASSWORD "DATABASE_PASSWORD"
+#define DATABASE "DATABASE_NAME"
 
 #endif
