@@ -222,8 +222,6 @@ void Login :: ConfirmPage(string msg, string password,
         
         cout << cgicc::div().set("id", "DivConfirm") << br();
 
-        page.Anchor("login", "Login");
-
         cout << form().set("id", "FormSetPassword")
                       .set("action", "adduser")
                       .set("method", "POST");
@@ -293,7 +291,8 @@ void Login :: AddUser()
         {
             userPassword = md5(userPassword);
             database.InsertUserDetail( userEmailID, userPassword );
-            LoginPage();
+            msg = "Password Changed.";
+            LoginPage(msg);
         }
     }
     else
@@ -328,7 +327,6 @@ void Login :: ResetPasswordPage(string type, string msg, string emailID)
     
     cout << cgicc::div().set("id", "DivResetPass") << br();
 
-    page.Anchor("login", "Login");
 /*
     if(type != "1")
     {
