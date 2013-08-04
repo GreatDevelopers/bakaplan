@@ -50,8 +50,9 @@ class SeatPlan : public ReadInput
 
         //PDF variables
         
-        int z,
-            x,
+        int textWidth;
+        int rectWidth;
+        int x,
             y,
             width, 
             height;
