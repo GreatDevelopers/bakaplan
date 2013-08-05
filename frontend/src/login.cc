@@ -188,7 +188,9 @@ void Login :: NewUser()
 
         sendMail.RegistrationMail(userEmailID, currentTime);
     
-        msg = "Check mail for verification in Junk/Trash.";
+        msg = "Check verification mail in your inbox (It might land "
+              "in Junk/Spam folder and sometimes it may not be "
+              "immediate)";
 
         LoginPage(msg);
     }
@@ -219,8 +221,6 @@ void Login :: ConfirmPage(string msg, string password,
         Header("Confirm Email");
         
         cout << cgicc::div().set("id", "DivConfirm") << br();
-
-        page.Anchor("login", "Login");
 
         cout << form().set("id", "FormSetPassword")
                       .set("action", "adduser")
@@ -291,7 +291,8 @@ void Login :: AddUser()
         {
             userPassword = md5(userPassword);
             database.InsertUserDetail( userEmailID, userPassword );
-            LoginPage();
+            msg = "Password Changed.";
+            LoginPage(msg);
         }
     }
     else
@@ -326,7 +327,6 @@ void Login :: ResetPasswordPage(string type, string msg, string emailID)
     
     cout << cgicc::div().set("id", "DivResetPass") << br();
 
-    page.Anchor("login", "Login");
 /*
     if(type != "1")
     {
