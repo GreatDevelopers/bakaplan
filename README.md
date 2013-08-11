@@ -13,6 +13,8 @@ REQUIREMENTS:
     4) MySQL Connector for C++
     5) Boost Library
     6) jwSMTP Library
+    7) libharu PDF Library
+    8) exim4 mail server
 
 Installation of requirements
 
@@ -130,6 +132,72 @@ Follow steps to install
 
     NOTE: If you got error in */mailer.cpp or */demo2.cpp file then
     include string header file in that. And again run make
+    
+7) libharu PDF Library
+
+Download
+[libharu](https://github.com/libharu/libharu/tarball/master)
+Library
+
+Follow the steps to install
+
+    $ cd ~/Downloads
+    $ tar -xzf libharu-libharu-RELEASE_2_3_0RC2-61-g22e741e.tar.gz
+    $ cd libharu-libharu-22e741e
+    $ cmake -G 'Unix Makefiles'
+    $ make
+    $ sudo make install
+    
+    NOTE: If you get any error regarding cmake, then run
+    $ sudo apt-get install cmake
+    to install cmake
+    
+8) exim4 Mail Server
+
+Run the following commands in terminal
+
+    $ sudo apt-get install exim4
+    $ sudo dpkg-reconfigure exim4-config
+    
+A Mail Server Configuration window will appear.<br>
+Follow the following instructions to configure the mail server.
+
+    1) The first page is just and introduction. Press ENTER
+    2) On the second page choose the second option i.e 
+       mail sent by smarthost; received via SMTP or fetchmail and 
+       press ENTER.
+    3) Next Keep the system mail name as it is and press ENTER.
+    4) Just Press Enter for the next page.
+    5) The next page asks you to enter IP addresses to listen on
+       incoming SMTP connections. Leave it as it is and Press ENTER
+    6) Even on the next page let the value be the default one and 
+       Press ENTER.
+    7) Leave the next page as it is and Press ENTER.
+    8) The next page asks you for IP address or host name of the outgoing
+       smarthost. Enter “smtp.example.com::587″. Where example refers to
+       gmail, yahoo or any other mail service provider and 587 is port number.
+    9) The Next page asks you if you want to hide local mail name in 
+       outgoing mail? Choose “No”.
+    10)The Next asks you if you want to keep number of DNS-queries minimal?
+       Choose “No”.
+    11)On the next page choose the  delivery method for local mail as
+       mbox format in /var/mail/.
+    12)Next page asks you if you want to split configuration into small
+       files? Choose “No”. 
+    13)Next keep root and postmaster mail recipient empty.
+
+Now terminal will show that MTA is being restarted.<br>
+After this is done, run the following command in terminal
+
+    $ sudo vim /etc/exim4/passwd.client
+
+Add following in the file
+
+    *:USERNAME@example.com:PASSWORD.
+
+    Where, USERNAME is  a valid email address and PASSWORD is  password for USERNAME.
+
+
 
 INSTALLATION:
 -------------
