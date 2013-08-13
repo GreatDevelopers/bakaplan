@@ -365,14 +365,36 @@ void SeatPlan :: WritePDFFile(string projectID, int i)
 
     /* create default-font */
     font = HPDF_GetFont (pdf, "Helvetica", NULL);
-
+    
+    HPDF_Page_SetFontAndSize(page[centre][room], font, 15);
+    //int tw;
+    //strcpy(text,seat[0][0][0][0].c_str());
+    //textWidth1 = HPDF_Page_TextWidth (page[centre][room],
+                         //          seat[0][0][0][1].c_str());
+    
+   /* for(row = 0; row < rows[i][centre][room]; row++)
+    {   
+         for(room = 0; room < totalRooms[i][centre]; room++)
+         {
+             for(row = 0; row < rows[i][centre][room]; row++)
+             {
+                 for(col = 1; col < cols[i][centre][room]; col++)
+                 {     
+                     tw=HPDF_Page_TextWidth (page[centre][room],
+                                   seat[centre][room][row][col].c_str());
+                     if( textWidth1 < tw )
+                       textWidth1 =  tw;
+                  }
+              }
+          }
+      }*/
 
     for(centre = 0; centre < totalCentres[i]; centre++)
      {   
          for(room = 0; room < totalRooms[i][centre]; room++)
          {
              y=430,
-	         width=60,
+	         width=70;
 	         height=25;
 
              rectWidth = cols[i][centre][room]*width; 
@@ -445,15 +467,15 @@ void SeatPlan :: WritePDFFile(string projectID, int i)
                      HPDF_Page_SetFontAndSize(page[centre][room],font,13);        
                      else 
                      if(strlen(seat[centre][room][row][col].c_str())<=11)
-                     HPDF_Page_SetFontAndSize(page[centre][room],font,12);        
-                     else
-                     if(strlen(seat[centre][room][row][col].c_str())<=13)
                      HPDF_Page_SetFontAndSize(page[centre][room],font,11);        
                      else
-                     if(strlen(seat[centre][room][row][col].c_str())<=15)
+                     if(strlen(seat[centre][room][row][col].c_str())<=13)
                      HPDF_Page_SetFontAndSize(page[centre][room],font,10);        
                      else
+                     if(strlen(seat[centre][room][row][col].c_str())<=15)
                      HPDF_Page_SetFontAndSize(page[centre][room],font,9);        
+                     else
+                     HPDF_Page_SetFontAndSize(page[centre][room],font,8);        
             
                      HPDF_Page_TextRect (page[centre][room], x , y+height
                      , x+width, y,seat[centre][room][row][col].c_str(),
