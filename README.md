@@ -215,7 +215,7 @@ Website: http://gndec.ac.in/~hsrai
 
 Mandeep Kaur
 
-Website: http://mandeepsimak.wordpress.com
+Website: http://simak.in
 
 Email: baithnekaplan \[AT\] gmail.com
 
