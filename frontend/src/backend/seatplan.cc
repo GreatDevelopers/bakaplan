@@ -185,7 +185,7 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
                             {
                                 if(s > ss)
                                     s = 1;
-                                else
+                                else 
                                     s = 0;
                             }
                             else

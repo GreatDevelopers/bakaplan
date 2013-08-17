@@ -57,7 +57,7 @@ void Strategy :: TotalSeats(int strategy, int i)
             int strategyDivValue = strategy;
             if(strategy == 6)
             {
-                cols[i][j][k] = cols[i][j][k] * 2;
+//                cols[i][j][k] = cols[i][j][k] * 2;
                 strategyDivValue = 4;
             }
             roomSize[i][j][k] = rows[i][j][k] * cols[i][j][k];
