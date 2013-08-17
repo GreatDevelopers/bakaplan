@@ -241,7 +241,7 @@ void Strategy :: StrategyPage()
                         .set("alt", "Serpentine")))
                 .add(td(img()
                         .set("src", "../../BaKaPlan/images/quadlet2.png")
-                        .set("alt", "Quadlet II")));
+                        .set("alt", "Quadlet II (2 seater desks)")));
 
     cout << table();
 
