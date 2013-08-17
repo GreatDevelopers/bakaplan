@@ -28,7 +28,7 @@
 Strategy :: Strategy()
 {
     // constructor
-    totalStrategy = 5;
+    totalStrategy = 6;
     strategyName.resize(totalStrategy);
     i = 0;
     strategyName[i++] = "1";
@@ -36,6 +36,7 @@ Strategy :: Strategy()
     strategyName[i++] = "3";
     strategyName[i++] = "4";
     strategyName[i++] = "5";
+    strategyName[i++] = "6";
 
     totalSeats = totalStudents = totalGroupSeats = 0;
 }
@@ -53,9 +54,15 @@ void Strategy :: TotalSeats(int strategy, int i)
     {
         for(k = 0; k < totalRooms[i][j]; k++)
         {
+            int strategyDivValue = strategy;
+            if(strategy == 6)
+            {
+                cols[i][j][k] = cols[i][j][k] * 2;
+                strategyDivValue = 4;
+            }
             roomSize[i][j][k] = rows[i][j][k] * cols[i][j][k];
             totalSeats = totalSeats + roomSize[i][j][k];
-            totalGroupSeats += roomSize[i][j][k] / strategy;
+            totalGroupSeats += roomSize[i][j][k] / strategyDivValue;//strategy;
         }
     }
 }
@@ -73,9 +80,23 @@ void Strategy :: TotalGroupStudents(int strategy, int i)
     iTemp.resize(totalExams[i]);
     indexValue.resize(totalExams[i]);
 
-    if(strategy == 5)
-        strategy = 1;
+    /* if(strategy == 5)
+        strategy = 1;*/
+
+    switch(strategy)
+    {
+        case 5:
+            strategy = 1;
+            break;
+        case 6:
+            strategy = 4;
+            break;
+        default:
+            break;
+    }
+    
     s = 0;
+
     for(j = 0; j < totalExams[i]; j++)
     {
         iTemp[j] = dateSheetRNoSize[i][j];
@@ -101,8 +122,7 @@ void Strategy :: TotalGroupStudents(int strategy, int i)
                 {
                     indexValue[k] = j;
                     break;
-                }
-                
+                }                
             }
         }
     }
@@ -174,6 +194,8 @@ void Strategy :: CheckValidation(int strategy, int i)
     int stra;
     if(strategy == 5)
         stra = groupStudentSize[0];
+    else if(strategy == 6)
+         stra = groupStudentSize[strategy-3];
     else
         stra = groupStudentSize[strategy-1];
 

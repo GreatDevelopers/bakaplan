@@ -32,12 +32,32 @@ SeatPlan :: SeatPlan()
 
 void SeatPlan :: SetRollNo(int strategy, int i)
 { 
-    int stra;
-    if(strategy == 5)
+    int stra, sss;
+    /*if(strategy == 5)
         stra = 1;
     else
-        stra = strategy;
+        stra = strategy;*/
+    
+    if(strategy == 6)
+        sss = 4;
+     else 
+        sss = strategy;
+
+    switch(sss)
+    {
+        case 5:
+            stra = 1;
+            break;
+        case 6:
+            stra = 4;
+            break;
+        default:
+            stra = strategy;
+            break;
+    }
+
     s = 0;
+    
     for(j = 0; j < strategy; j++)
     {
         seatSize[j] = 0;
@@ -71,11 +91,23 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
 
     SetRollNo(strategy, i);
     
-    if(strategy == 5)
+/*    if(strategy == 5)
         stra = 1;
     else
-        stra = strategy;
-    
+        stra = strategy;*/
+    switch(strategy)
+    {
+        case 5:
+            stra = 1;
+            break;
+        case 6:
+            stra = 4;
+            break;
+        default:
+            stra = strategy;
+            break;
+    }
+   
     size.resize(stra);
 
     for(j = 0; j < stra; j++)
@@ -105,14 +137,12 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
             {
                 if((row % 2) != 0)
                 {
-                    if(strategy == 2)
+                    if(strategy == 2 || strategy == 6)
                         s = 1;
-                    if(strategy > 2)
+                    else if(strategy > 2 && strategy < 5)
                         s = 2;
-                    if(strategy == 5)
-                    {
+                    else if(strategy == 5)
                         s = 0;
-                    }
                 }
                 else
                     s = 0;
@@ -146,10 +176,19 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
                 {
                     for(col = 0; col < rows[i][centre][room]; col++)
                     {
-                        if(s == strategy)
+                        int ss = strategy;
+                        if(strategy == 6)
+                            ss = 4;
+                        if(s >= ss)
                             s = 0;
                         seat[centre][room][col][row] = RollNo(s);
-                        s++;
+                        
+                        if(strategy == 6)
+                        {
+                            s = s + 2;
+                        }
+                        else
+                            s++;
                     }
                 }
                 
