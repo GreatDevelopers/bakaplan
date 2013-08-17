@@ -28,7 +28,7 @@
 Strategy :: Strategy()
 {
     // constructor
-    strategyName.resize(6);
+    strategyName.resize(7);
     
     i = 0;
     strategyName[i++] = "Select";
@@ -37,6 +37,7 @@ Strategy :: Strategy()
     strategyName[i++] = "Triplet";
     strategyName[i++] = "Quadlet";
     strategyName[i++] = "Serpentine";
+    strategyName[i++] = "Quadlet II";
 
     totalCols = 2;
     tableHeading.resize(totalCols);
@@ -225,19 +226,23 @@ void Strategy :: StrategyPage()
 
     cout << tr().add(td(img()
                         .set("src", "../../BaKaPlan/images/cushy.png")
-                        .set("alt", "description")))
+                        .set("alt", "Cushy")))
                 .add(td(img()
                         .set("src", "../../BaKaPlan/images/flipflop.png")
-                        .set("alt", "description")))
+                        .set("alt", "Flip Flop")))
                 .add(td(img()
                         .set("src", "../../BaKaPlan/images/triplet.png")
-                        .set("alt", "description")));
+                        .set("alt", "Triplet")));
     cout << tr().add(td(img()
                         .set("src", "../../BaKaPlan/images/quadlet.png")
-                        .set("alt", "description")))
+                        .set("alt", "Quadlet")))
                 .add(td(img()
                         .set("src", "../../BaKaPlan/images/serpentine.png")
-                        .set("alt", "description")));
+                        .set("alt", "Serpentine")))
+                .add(td(img()
+                        .set("src", "../../BaKaPlan/images/quadlet2.png")
+                        .set("alt", "Quadlet II")));
+
     cout << table();
 
     ErrorMessage(msg);
