@@ -454,7 +454,7 @@ void Login :: ResetPasswordForm(string type, string msg, string emailID)
                 where = "EmailID = \"" + userEmailID + "\"";
                 database.UpdateQuery("User", "Password", userPassword,
                                      where);
-                //cout << HTTPRedirectHeader("login");
+                cout << HTTPRedirectHeader("Login");
             }
         }
         else

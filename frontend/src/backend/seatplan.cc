@@ -179,10 +179,18 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
                         int ss = strategy;
                         if(strategy == 6)
                             ss = 4;
-                        if(s == ss)
-                            s = 0;
-                        else if(s > ss)
-                            s = 1;
+                        if(s >= ss)
+                        {
+                            if(strategy == 6)
+                            {
+                                if(s > ss)
+                                    s = 1;
+                                else
+                                    s = 0;
+                            }
+                            else
+                                s = 0;
+                        }
                         seat[centre][room][col][row] = RollNo(s);
                         
                         if(strategy == 6)
