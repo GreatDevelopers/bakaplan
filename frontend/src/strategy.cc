@@ -28,16 +28,17 @@
 Strategy :: Strategy()
 {
     // constructor
-    strategyName.resize(7);
+    strategyName.resize(8);
     
     i = 0;
     strategyName[i++] = "Select";
     strategyName[i++] = "Cushy";
     strategyName[i++] = "Flip-Flop";
     strategyName[i++] = "Triplet";
-    strategyName[i++] = "Quadlet";
+    strategyName[i++] = "Quadlet 1";
     strategyName[i++] = "Serpentine";
-    strategyName[i++] = "Quadlet II";
+    strategyName[i++] = "Quadlet 2";
+    strategyName[i++] = "Quadlet 3";
 
     totalCols = 2;
     tableHeading.resize(totalCols);
@@ -241,7 +242,11 @@ void Strategy :: StrategyPage()
                         .set("alt", "Serpentine")))
                 .add(td(img()
                         .set("src", "../../BaKaPlan/images/quadlet2.png")
-                        .set("alt", "Quadlet II")));
+                        .set("alt", "Quadlet 2")));
+    cout << tr().add(td(img()
+                        .set("src", "../../BaKaPlan/images/quadlet3.png")
+                        .set("alt", "Quadlet 3")));
+
 
     cout << table();
 

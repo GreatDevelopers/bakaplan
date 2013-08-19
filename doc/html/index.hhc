@@ -432,6 +432,7 @@
       <LI><OBJECT type="text/sitemap"><param name="Name" value="index"><param name="Local" value="classSeatPlan.html#a2c85aa97b3681f2ba5e27af197836b26"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="indexValue"><param name="Local" value="classSeatPlan.html#af3fbce455c6744dee3fedb97442cd2c3"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="iTemp"><param name="Local" value="classSeatPlan.html#a19a423aff33092a242f5dff5694efa37"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="rectWidth"><param name="Local" value="classSeatPlan.html#aff452e60a99eb2582210d3ea7f454a32"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="room"><param name="Local" value="classSeatPlan.html#ab01207ceddc85e4535874e2db71e36e3"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="room1"><param name="Local" value="classSeatPlan.html#a0b1f1e5086e938c3f484bbec62ff0dff"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="roomSize"><param name="Local" value="classSeatPlan.html#a52bafc6123bd54a8f95253c4693b2975"><param name="ImageNumber" value="11"></OBJECT>
@@ -444,13 +445,14 @@
       <LI><OBJECT type="text/sitemap"><param name="Name" value="start"><param name="Local" value="classSeatPlan.html#a03348c2da937f350737d7039dbd80cc8"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="subRollNo"><param name="Local" value="classSeatPlan.html#a38f161cde37bcfae5877a17f785cbb21"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="subSubCode"><param name="Local" value="classSeatPlan.html#ace374a7f84b7f9fb43fc56979a3793fb"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="textWidth"><param name="Local" value="classSeatPlan.html#ac623e253b6005a0907c2dab61705f2ab"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="textWidth1"><param name="Local" value="classSeatPlan.html#a2e67c39e7c6fff250ce3dc727f0680fd"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="totalGroupSeats"><param name="Local" value="classSeatPlan.html#a18b1d6497343d6a9e751159dcdd8a179"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="totalSeats"><param name="Local" value="classSeatPlan.html#a6915f74be45af73cda8c9a51b6cb99c9"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="totalStudents"><param name="Local" value="classSeatPlan.html#a3568dfc375740fd6b4075d7dc419a2e5"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="width"><param name="Local" value="classSeatPlan.html#af13573b0c9227b8bba267fc9f3476f43"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="x"><param name="Local" value="classSeatPlan.html#a878a765b96afb02615e7eb29bac8678d"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="y"><param name="Local" value="classSeatPlan.html#ab3a440c8ee63a36610340b1352d69f34"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="z"><param name="Local" value="classSeatPlan.html#a6ab2c5bd6291efe735b3f413ffe9f9bf"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="Seatplan"><param name="Local" value="classSeatplan.html"><param name="ImageNumber" value="11"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="SendMail"><param name="Local" value="classSendMail.html"><param name="ImageNumber" value="1"></OBJECT>
@@ -720,6 +722,7 @@
                 <LI><OBJECT type="text/sitemap"><param name="Name" value="index"><param name="Local" value="classSeatPlan.html#a2c85aa97b3681f2ba5e27af197836b26"><param name="ImageNumber" value="11"></OBJECT>
                 <LI><OBJECT type="text/sitemap"><param name="Name" value="indexValue"><param name="Local" value="classSeatPlan.html#af3fbce455c6744dee3fedb97442cd2c3"><param name="ImageNumber" value="11"></OBJECT>
                 <LI><OBJECT type="text/sitemap"><param name="Name" value="iTemp"><param name="Local" value="classSeatPlan.html#a19a423aff33092a242f5dff5694efa37"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="rectWidth"><param name="Local" value="classSeatPlan.html#aff452e60a99eb2582210d3ea7f454a32"><param name="ImageNumber" value="11"></OBJECT>
                 <LI><OBJECT type="text/sitemap"><param name="Name" value="room"><param name="Local" value="classSeatPlan.html#ab01207ceddc85e4535874e2db71e36e3"><param name="ImageNumber" value="11"></OBJECT>
                 <LI><OBJECT type="text/sitemap"><param name="Name" value="room1"><param name="Local" value="classSeatPlan.html#a0b1f1e5086e938c3f484bbec62ff0dff"><param name="ImageNumber" value="11"></OBJECT>
                 <LI><OBJECT type="text/sitemap"><param name="Name" value="roomSize"><param name="Local" value="classSeatPlan.html#a52bafc6123bd54a8f95253c4693b2975"><param name="ImageNumber" value="11"></OBJECT>
@@ -732,13 +735,14 @@
                 <LI><OBJECT type="text/sitemap"><param name="Name" value="start"><param name="Local" value="classSeatPlan.html#a03348c2da937f350737d7039dbd80cc8"><param name="ImageNumber" value="11"></OBJECT>
                 <LI><OBJECT type="text/sitemap"><param name="Name" value="subRollNo"><param name="Local" value="classSeatPlan.html#a38f161cde37bcfae5877a17f785cbb21"><param name="ImageNumber" value="11"></OBJECT>
                 <LI><OBJECT type="text/sitemap"><param name="Name" value="subSubCode"><param name="Local" value="classSeatPlan.html#ace374a7f84b7f9fb43fc56979a3793fb"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="textWidth"><param name="Local" value="classSeatPlan.html#ac623e253b6005a0907c2dab61705f2ab"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="textWidth1"><param name="Local" value="classSeatPlan.html#a2e67c39e7c6fff250ce3dc727f0680fd"><param name="ImageNumber" value="11"></OBJECT>
                 <LI><OBJECT type="text/sitemap"><param name="Name" value="totalGroupSeats"><param name="Local" value="classSeatPlan.html#a18b1d6497343d6a9e751159dcdd8a179"><param name="ImageNumber" value="11"></OBJECT>
                 <LI><OBJECT type="text/sitemap"><param name="Name" value="totalSeats"><param name="Local" value="classSeatPlan.html#a6915f74be45af73cda8c9a51b6cb99c9"><param name="ImageNumber" value="11"></OBJECT>
                 <LI><OBJECT type="text/sitemap"><param name="Name" value="totalStudents"><param name="Local" value="classSeatPlan.html#a3568dfc375740fd6b4075d7dc419a2e5"><param name="ImageNumber" value="11"></OBJECT>
                 <LI><OBJECT type="text/sitemap"><param name="Name" value="width"><param name="Local" value="classSeatPlan.html#af13573b0c9227b8bba267fc9f3476f43"><param name="ImageNumber" value="11"></OBJECT>
                 <LI><OBJECT type="text/sitemap"><param name="Name" value="x"><param name="Local" value="classSeatPlan.html#a878a765b96afb02615e7eb29bac8678d"><param name="ImageNumber" value="11"></OBJECT>
                 <LI><OBJECT type="text/sitemap"><param name="Name" value="y"><param name="Local" value="classSeatPlan.html#ab3a440c8ee63a36610340b1352d69f34"><param name="ImageNumber" value="11"></OBJECT>
-                <LI><OBJECT type="text/sitemap"><param name="Name" value="z"><param name="Local" value="classSeatPlan.html#a6ab2c5bd6291efe735b3f413ffe9f9bf"><param name="ImageNumber" value="11"></OBJECT>
                 </UL>
               </UL>
             <LI><OBJECT type="text/sitemap"><param name="Name" value="strategy.h"><param name="Local" value="backend_2header_2strategy_8h_source.html"><param name="ImageNumber" value="11"></OBJECT>

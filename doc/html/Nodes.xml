@@ -1964,6 +1964,11 @@
               <Anchor>a19a423aff33092a242f5dff5694efa37</Anchor>
              </Node>
              <Node>
+              <Name>rectWidth</Name>
+              <Path>classSeatPlan.html</Path>
+              <Anchor>aff452e60a99eb2582210d3ea7f454a32</Anchor>
+             </Node>
+             <Node>
               <Name>room</Name>
               <Path>classSeatPlan.html</Path>
               <Anchor>ab01207ceddc85e4535874e2db71e36e3</Anchor>
@@ -2024,6 +2029,16 @@
               <Anchor>ace374a7f84b7f9fb43fc56979a3793fb</Anchor>
              </Node>
              <Node>
+              <Name>textWidth</Name>
+              <Path>classSeatPlan.html</Path>
+              <Anchor>ac623e253b6005a0907c2dab61705f2ab</Anchor>
+             </Node>
+             <Node>
+              <Name>textWidth1</Name>
+              <Path>classSeatPlan.html</Path>
+              <Anchor>a2e67c39e7c6fff250ce3dc727f0680fd</Anchor>
+             </Node>
+             <Node>
               <Name>totalGroupSeats</Name>
               <Path>classSeatPlan.html</Path>
               <Anchor>a18b1d6497343d6a9e751159dcdd8a179</Anchor>
@@ -2052,11 +2067,6 @@
               <Name>y</Name>
               <Path>classSeatPlan.html</Path>
               <Anchor>ab3a440c8ee63a36610340b1352d69f34</Anchor>
-             </Node>
-             <Node>
-              <Name>z</Name>
-              <Path>classSeatPlan.html</Path>
-              <Anchor>a6ab2c5bd6291efe735b3f413ffe9f9bf</Anchor>
              </Node>
             </Subnodes>
            </Node>
@@ -3125,6 +3135,11 @@
                         <Anchor>a19a423aff33092a242f5dff5694efa37</Anchor>
                        </Node>
                        <Node>
+                        <Name>rectWidth</Name>
+                        <Path>classSeatPlan.html</Path>
+                        <Anchor>aff452e60a99eb2582210d3ea7f454a32</Anchor>
+                       </Node>
+                       <Node>
                         <Name>room</Name>
                         <Path>classSeatPlan.html</Path>
                         <Anchor>ab01207ceddc85e4535874e2db71e36e3</Anchor>
@@ -3185,6 +3200,16 @@
                         <Anchor>ace374a7f84b7f9fb43fc56979a3793fb</Anchor>
                        </Node>
                        <Node>
+                        <Name>textWidth</Name>
+                        <Path>classSeatPlan.html</Path>
+                        <Anchor>ac623e253b6005a0907c2dab61705f2ab</Anchor>
+                       </Node>
+                       <Node>
+                        <Name>textWidth1</Name>
+                        <Path>classSeatPlan.html</Path>
+                        <Anchor>a2e67c39e7c6fff250ce3dc727f0680fd</Anchor>
+                       </Node>
+                       <Node>
                         <Name>totalGroupSeats</Name>
                         <Path>classSeatPlan.html</Path>
                         <Anchor>a18b1d6497343d6a9e751159dcdd8a179</Anchor>
@@ -3213,11 +3238,6 @@
                         <Name>y</Name>
                         <Path>classSeatPlan.html</Path>
                         <Anchor>ab3a440c8ee63a36610340b1352d69f34</Anchor>
-                       </Node>
-                       <Node>
-                        <Name>z</Name>
-                        <Path>classSeatPlan.html</Path>
-                        <Anchor>a6ab2c5bd6291efe735b3f413ffe9f9bf</Anchor>
                        </Node>
                       </Subnodes>
                      </Node>

@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">BaKaPlan
-   &#160;<span id="projectnumber">0.7</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Prepare Seating Plan</div>
   </td>
@@ -49,6 +49,8 @@
 4) MySQL Connector for C++
 5) Boost Library
 6) jwSMTP Library
+7) libharu PDF Library
+8) exim4 mail server
 </pre><p>Installation of requirements</p>
 <p>1) GNU G++ Compiler</p>
 <p>Run following command in terminal to install </p>
@@ -129,6 +131,55 @@ $ sudo make install
 
 NOTE: If you got error in */mailer.cpp or */demo2.cpp file then
 include string header file in that. And again run make
+</pre><p>7) libharu PDF Library</p>
+<p>Download <a href="https://github.com/libharu/libharu/tarball/master">libharu</a> Library</p>
+<p>Follow the steps to install </p>
+<pre class="fragment">$ cd ~/Downloads
+$ tar -xzf libharu-libharu-RELEASE_2_3_0RC2-61-g22e741e.tar.gz
+$ cd libharu-libharu-22e741e
+$ cmake -G 'Unix Makefiles'
+$ make
+$ sudo make install
+
+NOTE: If you get any error regarding cmake, then run
+$ sudo apt-get install cmake
+to install cmake
+</pre><p>8) exim4 Mail Server</p>
+<p>Run the following commands in terminal </p>
+<pre class="fragment">$ sudo apt-get install exim4
+$ sudo dpkg-reconfigure exim4-config
+</pre><p>A Mail Server Configuration window will appear.<br/>
+ Follow the following instructions to configure the mail server. </p>
+<pre class="fragment">1) The first page is just and introduction. Press ENTER
+2) On the second page choose the second option i.e 
+   mail sent by smarthost; received via SMTP or fetchmail and 
+   press ENTER.
+3) Next Keep the system mail name as it is and press ENTER.
+4) Just Press Enter for the next page.
+5) The next page asks you to enter IP addresses to listen on
+   incoming SMTP connections. Leave it as it is and Press ENTER
+6) Even on the next page let the value be the default one and 
+   Press ENTER.
+7) Leave the next page as it is and Press ENTER.
+8) The next page asks you for IP address or host name of the outgoing
+   smarthost. Enter “smtp.example.com::587″. Where example refers to
+   gmail, yahoo or any other mail service provider and 587 is port number.
+9) The Next page asks you if you want to hide local mail name in 
+   outgoing mail? Choose “No”.
+10)The Next asks you if you want to keep number of DNS-queries minimal?
+   Choose “No”.
+11)On the next page choose the  delivery method for local mail as
+   mbox format in /var/mail/.
+12)Next page asks you if you want to split configuration into small
+   files? Choose “No”. 
+13)Next keep root and postmaster mail recipient empty.
+</pre><p>Now terminal will show that MTA is being restarted.<br/>
+ After this is done, run the following command in terminal </p>
+<pre class="fragment">$ sudo vim /etc/exim4/passwd.client
+</pre><p>Add following in the file </p>
+<pre class="fragment">*:USERNAME@example.com:PASSWORD.
+
+Where, USERNAME is  a valid email address and PASSWORD is  password for USERNAME.
 </pre><h2>INSTALLATION: </h2>
 <p>Check <a href="https://github.com/GreatDevelopers/bakaplan/blob/master/INSTALLATION.txt">INSTALLATION</a> steps for using this software.</p>
 <h2>AUTHORS: </h2>
@@ -137,12 +188,12 @@ include string header file in that. And again run make
 <p>Website: <a href="http://gndec.ac.in/~hsrai">http://gndec.ac.in/~hsrai</a></p>
 <p><b><a href="https://github.com/GreatDevelopers/bakaplan/wiki/Contributors">Developers</a></b></p>
 <p>Mandeep Kaur</p>
-<p>Website: <a href="http://mandeepsimak.wordpress.com">http://mandeepsimak.wordpress.com</a></p>
+<p>Website: <a href="http://simak.in">http://simak.in</a></p>
 <p>Email: baithnekaplan [AT] gmail.com </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 17 2013 17:16:39 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 19 2013 13:34:11 for BaKaPlan by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>
