@@ -28,7 +28,7 @@
 Strategy :: Strategy()
 {
     // constructor
-    totalStrategy = 6;
+    totalStrategy = 7;
     strategyName.resize(totalStrategy);
     i = 0;
     strategyName[i++] = "1";
@@ -37,6 +37,7 @@ Strategy :: Strategy()
     strategyName[i++] = "4";
     strategyName[i++] = "5";
     strategyName[i++] = "6";
+    strategyName[i++] = "7";
 
     totalSeats = totalStudents = totalGroupSeats = 0;
 }
@@ -54,12 +55,19 @@ void Strategy :: TotalSeats(int strategy, int i)
     {
         for(k = 0; k < totalRooms[i][j]; k++)
         {
-            int strategyDivValue = strategy;
-            if(strategy == 6)
+            int strategyDivValue;
+            if(strategy > 5)
             {
-//                cols[i][j][k] = cols[i][j][k] * 2;
+                if(strategy == 7)
+                    cols[i][j][k] = cols[i][j][k] * 2;
+
                 strategyDivValue = 4;
             }
+            else if(strategy == 5)
+                strategyDivValue = 1;
+            else
+                strategyDivValue = strategy;
+
             roomSize[i][j][k] = rows[i][j][k] * cols[i][j][k];
             totalSeats = totalSeats + roomSize[i][j][k];
             totalGroupSeats += roomSize[i][j][k] / strategyDivValue;//strategy;
@@ -89,6 +97,9 @@ void Strategy :: TotalGroupStudents(int strategy, int i)
             strategy = 1;
             break;
         case 6:
+            strategy = 4;
+            break;
+        case 7:
             strategy = 4;
             break;
         default:
@@ -194,8 +205,8 @@ void Strategy :: CheckValidation(int strategy, int i)
     int stra;
     if(strategy == 5)
         stra = groupStudentSize[0];
-    else if(strategy == 6)
-         stra = groupStudentSize[strategy-3];
+    else if(strategy > 5)
+        stra = groupStudentSize[3];
     else
         stra = groupStudentSize[strategy-1];
 
