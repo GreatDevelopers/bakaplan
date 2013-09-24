@@ -3,7 +3,7 @@
  *
  *       \brief      RoomDetail class definition
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Sunday 07 April 2013 08:17:36  IST\n
  *       Compiler    g++
  *

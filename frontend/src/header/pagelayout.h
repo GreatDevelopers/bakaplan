@@ -5,7 +5,7 @@
  *       \brief      Add Header, Footer, Menus to webpage(output html
  *                   pages. PageLayout Class for this purpose.
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Thursday 06 June 2013 11:00:26  IST\n
  *       Compiler    g++
  *

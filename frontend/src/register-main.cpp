@@ -3,7 +3,7 @@
  *
  *       \brief      Main method for register.html
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Friday 05 April 2013 10:56:56  IST\n
  *       Compiler    g++
  *

@@ -6,7 +6,7 @@
  *                   includes basic HTML tags that included for all 
  *                   pages like <HTML>, <HEAD>, </HEAD>, etc.
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Thursday 06 June 2013 11:02:25  IST\n
  *       Compiler    g++
  *

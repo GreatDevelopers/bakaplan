@@ -5,7 +5,7 @@
  *       \brief      Base class for all common variable declaration and
  *                   functions that are used by derived classes
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Thursday 06 June 2013 10:20:20  IST\n
  *       Compiler    g++
  *

@@ -5,7 +5,7 @@
  *                   project for seating plan or using existing 
  *                   project.
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Sunday 07 April 2013 03:24:31  IST\n
  *       Compiler    g++
  *

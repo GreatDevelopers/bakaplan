@@ -4,7 +4,7 @@
  *
  *       \brief      Function definition of SeatPlan Class
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Tuesday 02 April 2013 02:44:21  IST\n
  *       Compiler    g++
  *

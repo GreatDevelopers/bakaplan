@@ -4,7 +4,7 @@
  *       \brief      Declaration of SendMail Class usinf jwSMTP
  *                   library
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Saturday 06 April 2013 07:46:27  IST\n
  *       Compiler    g++
  *

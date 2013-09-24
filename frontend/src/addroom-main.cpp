@@ -4,7 +4,7 @@
  *       \brief      Adding extra rooms is contion for strategy
  *                   invalid
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Tuesday 21 May 2013 01:51:59  IST\n
  *       Compiler    g++
  *

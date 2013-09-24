@@ -5,7 +5,7 @@
  *       \brief      Login class declaration for user login,
  *                   registration and reset password.
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Thursday 06 June 2013 10:40:55  IST\n
  *       Compiler    g++
  *

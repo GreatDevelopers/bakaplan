@@ -4,7 +4,7 @@
  *       \brief      Report Class's menber function definition for
  *                   generating report
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Wednesday 03 April 2013 05:03:54  IST\n
  *       Compiler    g++
  *

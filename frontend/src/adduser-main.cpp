@@ -3,7 +3,7 @@
  *
  *       \brief      Adding new user and setting its password
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Sunday 07 April 2013 01:15:32  IST\n
  *       Compiler    g++
  *

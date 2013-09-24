@@ -3,7 +3,7 @@
  *
  *       \brief      Function definition of ProjectDetail class
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Sunday 07 April 2013 03:27:02  IST\n
  *       Compiler    g++
  *

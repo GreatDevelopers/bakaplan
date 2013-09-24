@@ -3,7 +3,7 @@
  *
  *       \brief      Function definition of Strategy class
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Tuesday 02 April 2013 03:02:04  IST\n
  *       Compiler    g++
  *

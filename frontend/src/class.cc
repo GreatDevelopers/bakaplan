@@ -3,7 +3,7 @@
  *
  *       \brief      ClassDetail function definition
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Sunday 07 April 2013 07:49:18  IST\n
  *       Compiler    g++
  *

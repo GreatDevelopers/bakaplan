@@ -5,7 +5,7 @@
  *       \brief      Declaring Database class for creating specific
  *                   functions for accessing database.
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Thursday 06 June 2013 09:16:48  IST\n
  *       Compiler    g++
  *

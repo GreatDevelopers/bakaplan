@@ -3,7 +3,7 @@
  *
  *       \brief      Function Definitons of SendMail Class
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Saturday 06 April 2013 07:58:56  IST\n
  *       Compiler    g++
  *

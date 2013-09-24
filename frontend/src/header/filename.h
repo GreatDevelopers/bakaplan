@@ -4,7 +4,7 @@
  *       \brief      Input/Output file names for class, room, roll no
  *                   detail, etc.
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Sunday 31 March 2013 08:32:25  IST\n
  *       Compiler    g++
  *

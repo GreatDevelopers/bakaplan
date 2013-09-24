@@ -3,7 +3,7 @@
  *
  *       \brief      function definition of javascript class
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Thursday 04 April 2013 09:15:01  IST\n
  *       Compiler    g++
  *

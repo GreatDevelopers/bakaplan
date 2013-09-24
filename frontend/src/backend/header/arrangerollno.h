@@ -5,7 +5,7 @@
  *                   sorting, and removing roll nos that are not 
  *                   required for seating plan
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Sunday 31 March 2013 06:33:39  IST\n
  *       Compiler    g++
  *

@@ -4,7 +4,7 @@
  *       \brief      Declaration of ReadInput class for reading input
  *                   details from file
  *
- *       \version    0.7
+ *       \version    0.8
  *       \date       Sunday 31 March 2013 02:33:49  IST\n
  *       Compiler    g++
  *
