@@ -213,9 +213,13 @@ Website: http://gndec.ac.in/~hsrai
 
 <b>[Developers](https://github.com/GreatDevelopers/bakaplan/wiki/Contributors)</b>
 
-Mandeep Kaur
+[Mandeep Kaur](https://github.com/megha55)
 
 Website: http://simak.in
+
+[Jaskaran Singh Lamba](https://github.com/Jaskaran28193)
+
+Blog: http://lambajaskaran.wordpress.com/
 
 Email: baithnekaplan \[AT\] gmail.com
 
