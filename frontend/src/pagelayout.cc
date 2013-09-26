@@ -111,6 +111,11 @@ void PageLayout :: Head(string titleName)
     Title(titleName);
     string js = "../../BaKaPlan/javascript/javascript.js";
     Javascript(js);
+    js = "../../BaKaPlan/javascript/validate.min.js";
+    Javascript(js);
+
+    js = "../../BaKaPlan/javascript/validateit.js";
+    Javascript(js);
     Javascript("https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js");
     Javascript(js);
     js = "../../BaKaPlan/javascript/CalendarControl.js";
