@@ -1,43 +1,60 @@
 /**
+ *
  *       \file       filename.h
  *
  *       \brief      Input/Output file names for class, room, roll no
  *                   detail, etc.
  *
- *       \version    1.0
- *       \date       07/15/2013 09:43:29 PM\n
- *       Compiler    g++
+ *       \compiler   g++\n
  *
  *       \author     Mandeep Kaur, meghasimak@gmail.com
- *       License     GNU General Public License
- *       \copyright  Copyright (c) 2013, GreatDevelopers
+ *       \license    GNU General Public License\n
+ *       \copyright  Copyright (c) 2013, GreatDevelopers\n
  *                   https://github.com/GreatDevelopers
  */
 
 #ifndef FILENAME_H
 #define FILENAME_H
 
-#include "constant.h"
+#include <iostream>
+#include <map>
+#include <string>
+
+using namespace std;
 
 /* Input/Output file names */
 
-const auto INPUT[FILE_SIZE]   =   "../input/";
-const auto OUTPUT[FILE_SIZE]  =   "../output/";
-const auto IN[FILE_SIZE]      =   ".in";
-const auto OUT[FILE_SIZE]     =   ".out";
+namespace filename
+{
+    
+    map<string, string> name;
+    
+    name["input"]   =   "../input";
+    name["output"]  =   "../output/";
+    name["in"]      =   ".in";
+    name["out"]     =   ".out";
 
-const auto CLASS_DETAIL[FILE_SIZE]   = "class-detail-";
-const auto ROLLNO_DETAIL[FILE_SIZE]  = "rollno-detail-";
-const auto DATESHEET[FILE_SIZE]      = "datesheet-";
-const auto EXAM_DETAIL[FILE_SIZE]    = "exam-detail-";
-const auto ROOM_DETAIL[FILE_SIZE]    = "room-detail-";
-const auto STRATEGY[FILE_SIZE]       = "strategy-";
+    name["classDetail"]     =   "class-detail-";
+    name["rollNoDetail"]    =   "rollno-detail-";
+    name["datesheet"]       =   "datesheet-";
+    name["examDetail"]      =   "exam-detail-";
+    name["roomDetail"]      =   "room-detail-";
+    name["strategy"]        =   "strategy-";
 
-const auto EXPAND_ROLLNO[FILE_SIZE]  = "expand-rollno-";
-const auto ARRANGE_ROLLNO[FILE_SIZE] = "arrange-rollno-";
-const auto VALIDATION[FILE_SIZE]     = "validation-";
-const auto SEATPLAN[FILE_SIZE]       = "seatplan-";
+    name["expandRollNo"]    =   "expand-rollno-";
+    name["arrangeRollNo"]   =   "arrange-rollno-";
+    name["validation"]      =   "validation-";
+    name["seatplan"]        =   "seatplan-";
 
-const auto TEMP[FILE_SIZE] = "temp-";
+    name["temp"]            =   "temp-";
+}
 
 #endif
+
+/*
+ * Local Variables:
+ * tab-width: 4
+ * expandtab
+ * ex: shiftwidth=4 tabstop=4
+ */
+
