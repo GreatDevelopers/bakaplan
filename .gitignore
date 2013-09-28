@@ -9,11 +9,7 @@
 *.o
 *.js
 *.html
-*/getcookie
-src/SeatPlan
-src/backend/*.o
 *.in
 *.out
 *.html
 *.orig
-frontend/src/backend/main
