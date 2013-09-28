@@ -11,10 +11,8 @@ REQUIREMENTS:
     2) Configure public_html and cgi-bin in home
     3) CGICC Library
     4) MySQL Connector for C++
-    5) Boost Library
-    6) jwSMTP Library
-    7) libharu PDF Library
-    8) exim4 mail server
+    5) jwSMTP Library
+    6) exim4 mail server
 
 Installation of requirements
 
@@ -24,7 +22,7 @@ Run following command in terminal to install
     
     $ sudo apt-get install g++
 
-2) Configure public_html/cgi-bin folder for executing files on browser.<br>
+2) Configure public\_html/cgi-bin folder for executing files on browser.<br>
 Assuming you already installed apache if not then run following
 command in terminal
 
@@ -38,7 +36,7 @@ command in terminal
         
     $ sudo service apache2 restart
         
-Give 755 permissions to public_html directory
+Give 755 permissions to public\_html directory
         
     $ chmod -R 755 ~/public_html
         
@@ -110,13 +108,7 @@ Run following commands in terminal
 
     $ sudo apt-get install libmysql++-dev
 
-5) Boost Library
-
-Run following command in terminal
-
-    $ sudo apt-get install libboost1.53-dev 
-
-6) jwSMTP Library
+5) jwSMTP Library
 
 Download
 [jwSMTP](http://sourceforge.net/projects/jwsmtp/files/latest/download) Library
@@ -133,26 +125,7 @@ Follow steps to install
     NOTE: If you got error in */mailer.cpp or */demo2.cpp file then
     include string header file in that. And again run make
     
-7) libharu PDF Library
-
-Download
-[libharu](https://github.com/libharu/libharu/tarball/master)
-Library
-
-Follow the steps to install
-
-    $ cd ~/Downloads
-    $ tar -xzf libharu-libharu-RELEASE_2_3_0RC2-61-g22e741e.tar.gz
-    $ cd libharu-libharu-22e741e
-    $ cmake -G 'Unix Makefiles'
-    $ make
-    $ sudo make install
-    
-    NOTE: If you get any error regarding cmake, then run
-    $ sudo apt-get install cmake
-    to install cmake
-    
-8) exim4 Mail Server
+6) exim4 Mail Server
 
 Run the following commands in terminal
 
@@ -201,7 +174,7 @@ Add following in the file
 
 INSTALLATION:
 -------------
-Check [INSTALLATION](https://github.com/GreatDevelopers/bakaplan/blob/master/INSTALLATION.txt) steps for using this software.
+Check [INSTALLATION]() steps for using this software.
 
 AUTHORS:
 --------
@@ -214,12 +187,6 @@ Website: http://gndec.ac.in/~hsrai
 <b>[Developers](https://github.com/GreatDevelopers/bakaplan/wiki/Contributors)</b>
 
 [Mandeep Kaur](https://github.com/megha55)
-
-Website: http://simak.in
-
-[Jaskaran Singh Lamba](https://github.com/Jaskaran28193)
-
-Blog: http://lambajaskaran.wordpress.com/
 
 Email: baithnekaplan \[AT\] gmail.com
 
