@@ -1,0 +1,117 @@
+# ====================================================================
+# 
+#        Filename:  Make.common
+# 
+#     Description:  Definition of common variables used in Makefile
+# 
+#         Created:  Saturday 13 July 2013 11:15:42  IST
+#        Compiler:  g++
+# 
+#          Author:  Mandeep Kaur, meghasimak@gmail.com
+#         License:  GNU General Public License
+#       Copyright:  Copyright (c) 2013, Great Developers
+#                   https://github.com/GreatDevelopers 
+# 
+# ====================================================================
+
+#   Variables for compilation of c/c++ files
+
+CXX     =   g++                          # Compiler 
+WALL    =   -Wall                        # Warning all flag
+WERROR  =   -Werror                      # Convert warnings into error
+DEBUG   =   -std=c++11 -g $(WALL) $(WERROR)         # Debugging flag
+CFLAG   =   -c $(DEBUG)                  # Compilation flag 
+OFLAG   =   $(DEBUG) -o                  # O/p Flag
+LCGICC  =   -lcgicc                      # cgicc lib flag
+LMYSQL  =   -L/usr/include/mysql -lmysqlclient -I/usr/include/mysql
+LSMTP   =   -ljwsmtp
+
+#   Target names
+
+CLEAN   =   clean
+
+#   Common variables
+
+F_HEADER        =  header/
+F_HEADER_JWSMTP =  header/jwsmtp/
+F_BP            =  ../bp/
+HEADER          =  header
+FILENAME        =  filename
+DETAIL          =  detail
+MAIN            =  -main
+CGICC           =  cgicc
+CONSTANT        =  constant
+DATABASE        =  database
+INPUTFIELDNAME  =  inputfieldname
+INPUTDETAIL     =  inputdetail
+MD5             =  md5
+READINPUTFIELD  =  readinputfield
+SENDMAIL        =  sendmail
+USER            =  user
+LOGIN           =  login
+
+#   Html pages file names
+
+SIGNUP      =  signup
+LOGIN       =  login
+
+#   File Extention variables
+
+H      =  .h
+O      =  .o
+CC     =  .cc
+CPP    =  .cpp
+
+#   Variables for defining header files
+
+H_CONSTANT        =  $(F_HEADER)$(CONSTANT)$(H)
+
+H_FILENAME        =  $(F_HEADER)$(FILENAME)$(H)
+
+H_HEADER          =  $(F_HEADER)$(HEADER)$(H)
+
+H_DATABASE       :=  $(F_HEADER)$(DATABASE)$(H) \
+                     $(F_HEADER)$(DATABASE)-$(DETAIL)$(H) $(H_HEADER)
+
+H_INPUTFIELDNAME  =  $(F_HEADER)$(INPUTFIELDNAME)$(H) $(H_HEADER)
+
+H_READINPUTFIELD :=  $(F_HEADER)$(READINPUTFIELD)$(H) $(H_HEADER) \
+                     $(F_HEADER)$(CGICC)$(H)
+
+H_MD5             =  $(F_HEADER)$(MD5)$(H)
+
+H_SENDMAIL       :=  $(F_HEADER)$(SENDMAIL)$(H) $(H_HEADER) \
+                     $(F_HEADER)$(SENDMAIL)-$(DETAIL)$(H)
+
+H_USER           :=  $(F_HEADER)$(USER)$(H) $(H_HEADER) $(H_DATABASE)\
+                     $(H_READINPUTFIELD) $(H_MD5) $(H_SENDMAIL)
+
+#   Variables for defining dependancy
+
+D_DATABASE         =    $(DATABASE)$(CC) $(H_DATABASE)
+
+D_INPUTFIELDNAME   =    $(INPUTFIELDNAME)$(CC) $(H_INPUTFIELDNAME)
+
+D_READINPUTFIELD   =    $(READINPUTFIELD)$(CC) $(H_READINPUTFIELD)
+
+D_MD5              =    $(MD5)$(CC) $(H_MD5)
+
+D_SENDMAIL         =    $(SENDMAIL)$(CC) $(H_SENDMAIL)
+
+D_USER             =    $(USER)$(CC) $(H_USER)
+
+#   Dependncy of main files
+
+D_M_SIGNUP      =   $(SIGNUP)$(MAIN)$(CPP) $(F_HEADER)$(USER)$(H)
+
+D_M_LOGIN       =   $(LOGIN)$(MAIN)$(CPP) $(F_HEADER)$(USER)$(H)
+
+#   Linking variables
+
+L_USER      :=   $(DATABASE)$(O) $(READINPUTFIELD)$(O) $(MD5)$(O) \
+                 $(SENDMAIL)$(O)
+
+L_SIGNUP    :=   $(SIGNUP)$(MAIN)$(O) $(L_USER) $(USER)$(O)
+
+L_LOGIN     :=   $(LOGIN)$(MAIN)$(O) $(L_USER) $(USER)$(O)
+

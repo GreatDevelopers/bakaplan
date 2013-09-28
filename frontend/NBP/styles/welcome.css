@@ -1,0 +1,211 @@
+/**************ekoangkarsatguruprasad*****************/
+/******************************************************
+/welcome.css
+*
+/Specific welcome page Css of Baka Plan 
+*
+/author: Inderpreet Singh (ishwerdas.com)
+*
+/copyright: Great Developers 2013
+*
+/license: GNU GPL V3.0 license
+*
+*****************************************************/
+
+/**************************
+~~GENERAL WELCOME STYLES~~
+***************************/
+
+.welcome-wrap
+{
+max-width:960px;
+margin:auto;
+}
+
+.intro-module
+{
+width:40%;
+float:left;
+margin: 5% 5%;
+min-width:300px;
+}
+
+/******************************
+~~ACCORDION STYLES~~
+******************************/
+
+.accordion-wrapper
+{
+width: 300px;
+}
+.accordion-heading
+{
+font-family:'Roboto slab', serif;
+text-align:right;
+position: relative;
+z-index: 20;
+display: block;
+height: 50px;
+cursor: pointer;
+color: #131313;
+line-height: 50px;
+font-size: 30px;
+font-weight:300;
+}
+
+.accordion-heading:hover, 
+.accordion-item-input:checked + .accordion-heading
+{
+border-bottom:1px dashed rgba(0,124,142,1);
+}
+
+.accordion-item-input
+{
+display:none;
+}
+
+.accordion-container
+{
+overflow:hidden;
+font-family:'Roboto slab',serif;
+height:0px;
+z-index:10;
+transition:height 1s ease;
+-webkit-transition:height 1s ease;
+}
+
+.accordion-item-input:checked ~ .accordion-container{
+transition:height 1s ease; 
+-webkit-transition:height 1s ease;
+}
+#accordion-signup,#accordion-login
+{
+width:100%;
+background:rgba(255,255,255,0.5);
+border-radius:5px;
+}
+.accordion-item-input:checked ~ #accordion-signup{ height: 150px; }
+
+.accordion-item-input:checked ~ #accordion-login{ height: 250px; }
+
+/*****************************
+~~FORM STYLES 
+*****************************/
+
+.welcome-input {
+	border:none;
+	font-size:1.25rem;
+	font-family:'Roboto slab',serif;
+	font-weight:100;
+	line-height:3rem;
+	height:3rem;
+	border-radius:5px;
+	width: 90%;
+	padding-left:10px;
+	margin:10px;
+}
+.welcome-button{
+	border-radius:5px;
+	font-family:'Roboto slab',serif;
+	font-size:1rem;
+	height:2.4rem;
+	line-height:2.4rem;
+	color:#fefefe;
+	border:none;
+	width:50%;
+	float:right;
+	margin-right:5px; 
+	background-color:#f04158;
+	cursor:pointer;
+}
+
+.welcome-button:hover{
+	background:#fd4158;
+	height:2.3rem;
+	border-bottom: 0.2rem solid #f04158;
+}
+
+.accordion-container label{	
+	margin:5px;
+	font-size:1.1rem;
+	line-height:2rem;
+	font-weight:300;
+	color:#131313;
+}
+
+/****************************
+RIGHT INTRO, CIRCLE STYLES
+****************************/
+
+#welcome-circle
+{
+color:#fefefe;
+margin-top:20px;
+width:300px;
+height:300px;
+background:rgba(0,142,124,0.5);
+border-radius:50%;
+box-shadow:2px 2px 4px rgba(0,0,0,0.2);
+ -webkit-transition: background-color 1000ms linear;
+     -moz-transition: background-color 1000ms linear;
+     -o-transition: background-color 1000ms linear;
+     -ms-transition: background-color 1000ms linear;
+     transition: background-color 1000ms linear;
+}
+#welcome-circle:hover{
+	background:rgba(0,142,124,0.7);
+}
+.logo
+{
+display:block;
+width: 100%;
+padding-top:60px;
+text-align:center;
+vertical-align:baseline;
+font-weight:100;
+}
+#ka
+{
+vertical-align:middle;
+}
+.tagline
+{
+text-align:center;
+width:90%;
+margin:auto;
+}
+
+/*ticker in the circle styles */
+#welcome-ticker-container{
+	height:100px;
+}
+
+.ticker{
+	padding:0;
+	height:80px;
+	overflow:hidden;
+}
+.ticker li{
+	height:80px;
+	font-size:1rem;
+}
+/**************************
+The repsonsiveness 
+***************************/
+
+/* tablets ----------- */
+@media only screen 
+and (max-width : 780px) {
+.intro-module{float:none; display:block; width:100%; margin:auto; min-height:150px; }
+#welcome-circle{margin:auto; margin-top:0px; }
+#welcome-ticker-container{float:none; display:block;}
+.accordion-wrapper{float:none; display:block; margin:auto; }
+.accordion-heading{background:rgba(0,124,142,0.5); text-align:center; color:#fff; border-bottom: 1px solid rgba(0,124,142,0.8); }
+.footer-nav{width:100%;}
+}
+/* Smartphones ---------- */
+@media only screen 
+and (max-width : 480px) 
+{
+.navelement {font-size:0.8rem; } 
+}
