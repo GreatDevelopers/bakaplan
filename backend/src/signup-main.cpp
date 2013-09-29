@@ -1,16 +1,15 @@
 /**
+ *
  *       \file       signup-main.cpp
  *
  *       \brief      Accessing sign up form for registeration of new
  *                   user.
  *
- *       \version    1.0
- *       \date       07/16/2013 08:13:34 AM\n
- *       Compiler    g++
+ *       \compiler   g++\n
  *
- *       \author     Mandeep Kaur, meghasimak@gmail.com\n
- *       License     GNU General Public License
- *       \copyright  Copyright (c) 2013, GreatDevelopers
+ *       \author     Mandeep Kaur, meghasimak@gmail.com
+ *       \license    GNU General Public License\n
+ *       \copyright  Copyright (c) 2013, GreatDevelopers\n
  *                   https://github.com/GreatDevelopers
  */
 
@@ -29,3 +28,11 @@ int main(void)
     
     return 0;
 }
+
+/*
+ * Local Variables:
+ * tab-width: 4
+ * expandtab
+ * ex: shiftwidth=4 tabstop=4
+ */
+

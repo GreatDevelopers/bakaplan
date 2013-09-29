@@ -1,22 +1,21 @@
 /**
+ *
  *       \file       sendmail.cc
  *
- *       \brief      Function Definitons of SendMail Class
+ *       \brief      Definitions of functions for sending emails to
+ *                   user and developer.
  *
- *       \version    1.0
- *       \date       07/15/2013 11:52:23 PM\n
- *       Compiler    g++
+ *       \compiler   g++\n
  *
  *       \author     Mandeep Kaur, meghasimak@gmail.com
- *       License     GNU General Public License
- *       \copyright  Copyright (c) 2013, GreatDevelopers
+ *       \license    GNU General Public License\n
+ *       \copyright  Copyright (c) 2013, GreatDevelopers\n
  *                   https://github.com/GreatDevelopers
  */
 
 #include "header/sendmail.h"
 
 /**
- *      \class  SendMail
  *      \fn     SendMail :: SendMail()
  *      \brief  Constructor
  */
@@ -27,7 +26,6 @@ SendMail :: SendMail()
 }
 
 /**
- *      \class  SendMail
  *      \fn     SendMail :: SetMailData()
  *      \brief  Settinf variable that are used to send mail
  */
@@ -40,10 +38,10 @@ void SendMail :: SetMailData()
 }
 
 /**
- *      \class  SendMail
  *      \fn     SendMail :: SetHTMLMessage(string regKey)
  *      \brief  Setting body of mail(message ie send to user)
- *      \param  regKey Registration Key
+ *      \param  regKey  Registration Key
+ *      \param  mail    Mail type - regiter/confirm/reset-password
  */
 
 void SendMail :: SetHTMLMessage(string regKey, string mail)
@@ -81,11 +79,11 @@ void SendMail :: SetHTMLMessage(string regKey, string mail)
 }
 
 /**
- *      \class  SendMail
  *      \fn     SendMail :: RegistrationMail(string setRecipient, 
  *                                           string regKey)
  *      \brief  Sending registration mail to user
- *      \param
+ *      \param  setRecipient    Reciever's email id
+ *      \param  regKey          Registration key
  */
 
 void SendMail :: RegistrationMail(string setRecipient, string regKey)
@@ -108,6 +106,14 @@ void SendMail :: RegistrationMail(string setRecipient, string regKey)
     mail.send();
 
 }
+
+/**
+ *      \fn     SendMail :: ResetPasswordMail(string setRecipient, 
+ *                                            string regKey)
+ *      \brief  Sending mail to user for changing password.
+ *      \param  setRecipient    Reciever's email id
+ *      \param  regKey          Registration key
+ */
 void SendMail :: ResetPasswordMail(string setRecipient, string regKey)
 {
     SetMailData();
@@ -128,6 +134,13 @@ void SendMail :: ResetPasswordMail(string setRecipient, string regKey)
     mail.send();
 
 }
+
+/**
+ *      \fn     SendMail :: ContactMail(string setSender, string msg)
+ *      \brief  Sending mail to developer from user.
+ *      \param  setSender    Sender's email id.
+ *      \param  msg          Message send by user for developer.
+ */
 void SendMail :: ContactMail(string setSender, string msg)
 {
     SetMailData();
@@ -149,13 +162,20 @@ void SendMail :: ContactMail(string setSender, string msg)
     mail.send();
 
 }
+
 /**
- *      \class  SendMail
  *      \fn     SendMail :: ~SendMail()
  *      \brief  Destructor
  */
-
 SendMail :: ~SendMail()
 {
     // Destructor
 }
+
+/*
+ * Local Variables:
+ * tab-width: 4
+ * expandtab
+ * ex: shiftwidth=4 tabstop=4
+ */
+

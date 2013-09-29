@@ -20,14 +20,12 @@
 #include <map>
 #include <string>
 
-using namespace std;
-
 /* Input/Output file names */
 
 namespace filename
 {
     
-    map<string, string> name;
+    std::map<string, string> name;
     
     name["input"]   =   "../input";
     name["output"]  =   "../output/";

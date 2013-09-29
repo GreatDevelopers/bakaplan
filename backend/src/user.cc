@@ -1,20 +1,20 @@
 /**
+ *
  *       \file       user.cc
  *
  *       \brief      Function definition of user class. See header
  *                   file for more detail.
  *
- *       \version    1.0
- *       \date       07/16/2013 01:04:18 AM\n
- *       Compiler    g++
+ *       \compiler   g++\n
  *
- *       \author     Mandeep Kaur, meghasimak@gmail.com\n
- *       License     GNU General Public License
- *       \copyright  Copyright (c) 2013, GreatDevelopers
+ *       \author     Mandeep Kaur, meghasimak@gmail.com
+ *       \license    GNU General Public License\n
+ *       \copyright  Copyright (c) 2013, GreatDevelopers\n
  *                   https://github.com/GreatDevelopers
  */
 
 #include "header/user.h"
+#include "header/input-fieldname.h"
 
 /**
  *      \fn     User :: User()
@@ -33,7 +33,7 @@ User :: User()
 
 void User :: ReadSignUpForm()
 {
-    userEmailID  = readField.ReadFieldValue("email-signup");
+    userEmailID  = readField.ReadFieldValue(fieldname::name["emailSignUp"]);//"email-signup");
 }
 
 /**
@@ -43,8 +43,8 @@ void User :: ReadSignUpForm()
 
 void User :: ReadLoginForm()
 {
-    userEmailID  = readField.ReadFieldValue("email-login");
-    userPassword = readField.ReadFieldValue("password-login");
+    userEmailID  = readField.ReadFieldValue(fieldname::name["emailLogin"]);
+    userPassword = readField.ReadFieldValue(fieldname::name["passwordLogin"]);
 }
 
 /**
