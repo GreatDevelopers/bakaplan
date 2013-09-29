@@ -1,25 +1,30 @@
 /**
+ *
  *       \file       sendmail-detail.h
  *
- *       \brief      SMTP swttings detail
+ *       \brief      Sending mail details
  *
- *       \version    1.0
- *       \date       07/15/2013 09:46:42 PM\n
- *       Compiler    g++
+ *       \compiler   g++\n
  *
  *       \author     Mandeep Kaur, meghasimak@gmail.com
- *       License     GNU General Public License
- *       \copyright  Copyright (c) 2013, GreatDevelopers
+ *       \license    GNU General Public License\n
+ *       \copyright  Copyright (c) 2013, GreatDevelopers\n
  *                   https://github.com/GreatDevelopers
  */
 
 #ifndef SENDMAIL_DETAIL_H
 #define SENDMAIL_DETAIL_H
 
-#include "constant.h"
-
-const char SENDER_EMAILID[FILE_SIZE] = "baithnekaplan@gmail.com";
-const char SERVER_MAIL[FILE_SIZE]    = "localhost";//"202.164.53.122";
-const char USERNAME[FILE_SIZE]       =  "mandy";
+const auto SENDER_EMAILID = "EMAIL_ID";      /**< Sender's email id */
+const auto SERVER_MAIL    = "LOCALHOST/IP-ADDR";
+const auto USERNAME       = "/~USERNAME";     /**< Systems username */
 
 #endif
+
+/*
+ * Local Variables:
+ * tab-width: 4
+ * expandtab
+ * ex: shiftwidth=4 tabstop=4
+ */
+
