@@ -14,7 +14,9 @@
  */
 
 #include "header/user.h"
-#include "header/input-fieldname.h"
+#include "header/fieldname.h"
+
+namespace field = fieldname;           /**< Shortname for namespace */
 
 /**
  *      \fn     User :: User()
@@ -33,7 +35,7 @@ User :: User()
 
 void User :: ReadSignUpForm()
 {
-    userEmailID  = readField.ReadFieldValue(fieldname::name["emailSignUp"]);//"email-signup");
+    userEmailID  = readField.ReadFieldValue(field::name["emailSignUp"]);
 }
 
 /**
@@ -43,8 +45,8 @@ void User :: ReadSignUpForm()
 
 void User :: ReadLoginForm()
 {
-    userEmailID  = readField.ReadFieldValue(fieldname::name["emailLogin"]);
-    userPassword = readField.ReadFieldValue(fieldname::name["passwordLogin"]);
+    userEmailID  = readField.ReadFieldValue(field::name["emailLogin"]);
+    userPassword = readField.ReadFieldValue(field::name["passwordLogin"]);
 }
 
 /**
@@ -54,8 +56,10 @@ void User :: ReadLoginForm()
 
 void User :: SelectUserDetail()
 {
-    database.SelectColumn(emailID, "EmailID", "User");
-    database.SelectColumn(password, "Password", "User");
+    database.SelectColumn(emailID, field::name["emailID"], 
+                          field::name["user"]);
+    database.SelectColumn(password, field::name["password"], 
+                          field::name["user"]);
 }
 
 /**
@@ -139,7 +143,9 @@ void User :: SignUpUser()
                                               currentTime);
             sendMail.RegistrationMail(userEmailID, currentTime);
     
-            msg = "Check mail for verification";
+            msg = "Check verification mail in your inbox (It might "
+                  "land in Junk/Spam folder and sometimes it may "
+                  "not be immediate)Check mail for verification";
      //       msg = "true";
         }
     }

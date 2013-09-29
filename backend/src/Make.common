@@ -42,7 +42,7 @@ MAIN            =  -main
 CGICC           =  cgicc
 CONSTANT        =  constant
 DATABASE        =  database
-INPUTFIELDNAME  =  input-fieldname
+FIELDNAME       =  fieldname
 MD5             =  md5
 READINPUTFIELD  =  read-inputfield
 SENDMAIL        =  sendmail
@@ -71,7 +71,7 @@ H_HEADER          =  $(F_HEADER)$(HEADER)$(H)
 H_DATABASE       :=  $(F_HEADER)$(DATABASE)$(H) \
                      $(F_HEADER)$(DATABASE)-$(DETAIL)$(H) $(H_HEADER)
 
-H_INPUTFIELDNAME  =  $(F_HEADER)$(INPUTFIELDNAME)$(H)
+H_FIELDNAME       =  $(F_HEADER)$(FIELDNAME)$(H)
 
 H_READINPUTFIELD :=  $(F_HEADER)$(READINPUTFIELD)$(H) $(H_HEADER) \
                      $(F_HEADER)$(CGICC)$(H)
@@ -83,7 +83,7 @@ H_SENDMAIL       :=  $(F_HEADER)$(SENDMAIL)$(H) $(H_HEADER) \
 
 H_USER           :=  $(F_HEADER)$(USER)$(H) $(H_HEADER) $(H_DATABASE)\
                      $(H_READINPUTFIELD) $(H_MD5) $(H_SENDMAIL) \
-                     $(H_INPUTFIELDNAME)
+                     $(H_FIELDNAME)
 
 #   Variables for defining dependancy
 
