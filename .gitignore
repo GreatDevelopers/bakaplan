@@ -14,4 +14,4 @@
 *.html
 *.orig
 
-backend/bp/./*
+backend/bp/*
