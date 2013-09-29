@@ -26,70 +26,75 @@
 
 namespace fieldname
 {
-    map<string, string> name;
+    std::map<string, string> name = 
+    {
 
-    /* Assign values of class details */
+        /* Assign values of class details */
 
-    name["className"]       =   "ClassName";
-    name["totalClasses"]    =   "TotalClasses";
-    name["totalSubjects"]   =   "TotalSubjects";
-    name["subjectCode"]     =   "SubjectCode";
-    name["subjectName"]     =   "SubjectName";
-    name["classID"]         =   "ClassID";
+        {"className", "ClassName"},
+        {"totalClasses", "TotalClasses"},
+        {"totalSubjects", "TotalSubjects"},
+        {"subjectCode", "SubjectCode"},
+        {"subjectName", "SubjectName"},
+        {"classID","ClassID"},
     
-    /* variable for roll no fields */
+        /* variable for roll no fields */
 
-    name["prefix"]          =   "Prefix";
-    name["startRollNo"]     =   "StartRollNo";
-    name["endRollNo"]       =   "EndRollNo";
-    name["notIncluded"]     =   "NotIncluded";
+        {"prefix", "Prefix"},
+        {"startRollNo", "StartRollNo"},
+        {"endRollNo", "EndRollNo"},
+        {"notIncluded", "NotIncluded"},
 
-    /* Login page fields */
+        /* Login page fields */
 
-    name["emailID"]         =   "EmailID";
-    name["password"]        =   "Password";
-    name["retypePassword"]  =   "RetypePassword";
-    name["key"]             =   "Key";
+        {"emailID", "EmailID"},
+        {"emailSignUp", "email-signup"},
+        {"emailLogin", "email-login"},
+        {"passwordLogin", "password-login"},
+        {"password", "Password"},
+        {"retypePassword", "RetypePassword"},
+        {"key","Key"},
 
-    /* Project Detail */
+        /* Project Detail */
 
-    name["projectName"]     =   "ProjectName";
-    name["projectID"]       =   "ProjectID";
-    name["projectType"]     =   "ProjectType";
+        {"projectName", "ProjectName"},
+        {"projectID", "ProjectID"},
+        {"projectType", "ProjectType"},
 
-    /* Room Detail Variables */
+        /* Room Detail Variables */
 
-    name["totalCentres"]    =   "TotalCentres";
-    name["totalRooms"]      =   "TotalRooms";
-    name["centreName"]      =   "CentreName";
-    name["roomNo"]          =   "RoomNo";
-    name["rows"]            =   "Rows";
-    name["columns"]         =   "Columns";
+        {"totalCentres", "TotalCentres"},
+        {"totalRooms", "TotalRooms"},
+        {"centreName", "CentreName"},
+        {"roomNo", "RoomNo"},
+        {"rows", "Rows"},
+        {"columns", "Columns"},
 
-    /* Strategy field */
+        /* Strategy field */
 
-    name["strategyChoice"]  =   "StrategyChoice";
+        {"strategyChoice", "StrategyChoice"},
 
-    /* Examination field's value */
+        /* Examination field's value */
 
-    name["examName"]        =   "ExamName";
-    name["examDate"]        =   "ExamDate";
-    name["examSession"]     =   "ExamSession";
-    name["examTime"]        =   "ExamTime";
-    name["examVenue"]       =   "ExamVenue";
+        {"examName", "ExamName"},
+        {"examDate", "ExamDate"},
+        {"examSession", "ExamSession"},
+        {"examTime", "ExamTime"},
+        {"examVenue", "ExamVenue"},
 
-    /* Date Sheet field values */
+        /* Date Sheet field values */
 
-    name["date"]            =   "Date";
-    name["examCode"]        =   "ExamCode";
-    name["totalDays"]       =   "TotalDays";
+        {"date", "Date"},
+        {"examCode", "ExamCode"},
+        {"totalDays", "TotalDays"},
     
-    /* Variable for holding value of same detail */
-    name["sameDetail"]      =   "SameDetail";
+        /* Variable for holding value of same detail */
+        {"sameDetail", "SameDetail"},
 
-    /* Variables for row index and last row in table */
-    name["lastRow"]         =   "LastRow";
-    name["rowIndex"]        =   "RowIndex";
+        /* Variables for row index and last row in table */
+        {"lastRow", "LastRow"},
+        {"rowIndex", "RowIndex"}
+    };
 }
 
 #endif
