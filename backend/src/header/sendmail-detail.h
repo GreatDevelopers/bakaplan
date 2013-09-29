@@ -15,9 +15,11 @@
 #ifndef SENDMAIL_DETAIL_H
 #define SENDMAIL_DETAIL_H
 
-const auto SENDER_EMAILID = "EMAIL_ID";      /**< Sender's email id */
-const auto SERVER_MAIL    = "LOCALHOST/IP-ADDR";
-const auto USERNAME       = "/~USERNAME";     /**< Systems username */
+const int SIZE = 30;
+
+const char SENDER_EMAILID[SIZE] = "EMAIL_ID";      /**< Sender's email id */
+const char SERVER_MAIL[SIZE]    = "LOCALHOST/IP_ADDR";
+const char USERNAME[SIZE]       = "/~USERNAME";     /**< Systems username */
 
 #endif
 

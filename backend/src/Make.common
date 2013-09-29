@@ -48,7 +48,6 @@ MD5             =  md5
 READINPUTFIELD  =  readinputfield
 SENDMAIL        =  sendmail
 USER            =  user
-LOGIN           =  login
 
 #   Html pages file names
 
