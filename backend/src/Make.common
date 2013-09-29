@@ -19,7 +19,7 @@
 CXX     =   g++                          # Compiler 
 WALL    =   -Wall                        # Warning all flag
 WERROR  =   -Werror                      # Convert warnings into error
-DEBUG   =   -std=c++11 -g $(WALL) $(WERROR)         # Debugging flag
+DEBUG   =   -std=c++0x -g $(WALL) $(WERROR)         # Debugging flag
 CFLAG   =   -c $(DEBUG)                  # Compilation flag 
 OFLAG   =   $(DEBUG) -o                  # O/p Flag
 LCGICC  =   -lcgicc                      # cgicc lib flag
