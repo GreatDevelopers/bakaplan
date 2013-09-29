@@ -42,10 +42,9 @@ MAIN            =  -main
 CGICC           =  cgicc
 CONSTANT        =  constant
 DATABASE        =  database
-INPUTFIELDNAME  =  inputfieldname
-INPUTDETAIL     =  inputdetail
+INPUTFIELDNAME  =  input-fieldname
 MD5             =  md5
-READINPUTFIELD  =  readinputfield
+READINPUTFIELD  =  read-inputfield
 SENDMAIL        =  sendmail
 USER            =  user
 

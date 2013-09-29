@@ -16,7 +16,7 @@
 
 #include "header.h"
 #include "database.h"
-#include "readinputfield.h"
+#include "read-inputfield.h"
 #include "sendmail.h"
 #include "md5.h"
 
