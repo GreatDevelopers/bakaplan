@@ -1,0 +1,74 @@
+
+<!-- ******Ekoangkarsatguruprasad ****** -->
+<!--**********************************************
+-file:projectDetail.html
+-brief: Confirmation page to set password for new user.
+-version: 2.0 
+-date: 8th May 2013
+-copyright: Great Developers
+-author: Inderpreet Singh (ishwerdas.com)
+************************************************ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Confirm BaKa-Plan: The easiest seating planner</title>
+	
+	<!-- Fonts from google fonts, Roboto and Arvo -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
+	<!-- CSS files for our pages layout -->
+	<link rel="stylesheet" href="styles/general.css" type="text/css" media="all">	
+	<link rel="stylesheet" href="styles/pages.css" type="text/css" media="all">
+	<!-- Open Tooltip Javascript and css framework for adding tooltips -->	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> 
+	<script src="js/opentip-jquery.min.js"></script> 
+	<script src="js/opentip-myStyles.js"></script>
+	<script src="js/backend/confirm.js"></script>
+	<link rel="stylesheet" href="styles/opentip.css" type="text/css" media="all">
+</head>
+<body class="coloredBody" onload="ConfirmEmail();" >
+	<nav class="side-menu">
+	<span id="toggle-menu"> <p id="toggle-menu-circle"> Show Menu </p> </span>
+	<h3> Ba<span class="ka">ka</span> Plan</h3>
+	<a href="index.html"> Home </a>
+	<a href="about.html"> About </a>
+	<a href="contribute.html"> Contribute </a>
+	<a href="contact.html">Contact  </a>
+	<a href="login.html"> Log Out </a>
+	</nav> 
+	<div class="page-wrap">
+		
+	<h1>~</h1>
+    <div id="msg"> </div>
+		<form class="theForm" id="confirm-form" action="#">	
+			<h2> Set Password </h2>
+			<label for="password" class="theLabel">Password:</label>
+			<input type="password" name="password" id="password"
+            class="theFormTextInput" placeholder=""
+			data-ot=" Fill password"
+			data-ot-style="dark"
+			data-ot-delay="1"
+			data-ot-target="#password"
+			data-ot-tip-joint="right"
+			data-ot-show-on="click"
+			/>
+			<label for="retype-password" class="theLabel">Retype Password:</label>
+			<input type="password" name="retype-password"
+            id="retype-password"
+            class="theFormTextInput" placeholder="Retype Password"
+			data-ot=" Retype Password"
+			data-ot-style="dark"
+			data-ot-delay="1"
+			data-ot-target="#retype-password"
+			data-ot-tip-joint="right"
+			data-ot-show-on="click"
+			/>
+
+			<input type="submit"name="theSubmit" id="theSubmit"
+            class="theFormButton" value="Set Password" />
+		</form>
+	</div>
+</div>
+<script type="text/javascript" src="js/sidemenu.js"></script>	
+</body>
+</html>

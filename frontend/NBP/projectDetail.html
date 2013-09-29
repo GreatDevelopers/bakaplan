@@ -1,0 +1,84 @@
+<!-- ******Ekoangkarsatguruprasad ****** -->
+<!--**********************************************
+-file:projectDetail.html
+-brief: Project page of BaKaPlan
+-version: 2.0 
+-date: 8th May 2013
+-copyright: Great Developers
+-author: Inderpreet Singh (ishwerdas.com)
+-author: Mandeep Kaur(simak.in)
+************************************************ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>New Project: The easiest seating planner</title>
+	
+	<!-- Fonts from google fonts, Roboto and Arvo -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
+	<!-- CSS files for our pages layout -->
+	<link rel="stylesheet" href="styles/general.css" type="text/css" media="all">	
+	<link rel="stylesheet" href="styles/pages.css" type="text/css" media="all">
+	<!-- Open Tooltip Javascript and css framework for adding tooltips -->	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> 
+	<script src="js/opentip-jquery.min.js"></script> 
+	<script src="js/opentip-myStyles.js"></script>
+	<link rel="stylesheet" href="styles/opentip.css" type="text/css" media="all">
+	<!-- Javascript for form validation, validate.js plugin -->
+	<script src ="js/validate.min.js"></script>	
+
+</head>
+<body class="coloredBody" >
+	<nav class="side-menu">
+	<span id="toggle-menu"> <p id="toggle-menu-circle"> Show Menu </p> </span>
+	<h3> Ba<span class="ka">ka</span> Plan</h3>
+	<a href="index.html"> Home </a>
+	<a href="about.html"> About </a>
+	<a href="contribute.html"> Contribute </a>
+	<a href="login.html"> Login/Signup </a>
+	</nav> 
+	<div class="page-wrap">
+		
+	<h1 id="tipTarget">~</h1>	
+		<form class="theForm" id="new-project-form" name="new-project-form" action="#" >	
+			<h2> Start A Project </h2>
+			<label for="theNewProject" class="theLabel">Give a name to your new project:</label>
+			<input type="text" name="theNewProject" id="theNewProject" class="theFormTextInput" placeholder=" Your New Project name here_"/> 		
+			<input type="submit" name="theNewProjectSubmit" id="theNewProjectSubmit" class="theFormButton" value="Start New Project" />	
+		</form>
+		<h3> </h3>
+		<form class="theForm" id="old-project-form" name="old-project-form" action-"#" >
+			<label for="theOldProject" class="theLabel" >Or open an existing project</label>
+		<select class="theFormTextInput">
+  			<option value="Project 1"class="theFormTextInput" >Project 1</option>
+  			<option class="theFormTextInput" value="">M.Tech Seating Plan </option>
+  			<option class="theFormTextInput" value="">MBA </option>
+  			<option class="theFormTextInput" value="">RICCS </option>
+		</select>	 
+			<input type="submit"name="theSubmit" id="theSubmit" class="theFormButton" value="Open Existing Project" />
+		</form>
+	</div>
+</div>
+<script type="text/javascript" src="js/sidemenu.js"></script>	
+<script type="text/javascript" src="js/opentip-myStyles.js"></script>
+<script>
+$(function(){
+	var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
+		
+	var validator = new FormValidator('new-project-form',[{
+		name:'theNewProject',
+		display:'Name of New Project',
+		rules:'required'
+		}],function(errors, event){
+			var errorString = '';
+			for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
+           			errorString += errors[i].message + '<br />';
+        		}
+			theErrorTip.setContent(errorString);
+			theErrorTip.show();	
+		}
+	);
+});
+</script>
+</body>
+</html>
