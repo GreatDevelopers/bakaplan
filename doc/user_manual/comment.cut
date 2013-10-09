@@ -1,0 +1,9 @@
+\usepackage{lastpage}
+\usepackage{macro/macro}
+\usepackage[colorlinks]{hyperref}
+\usepackage{cleveref}
+\usepackage{fancyhdr}
+\usepackage{verbatim}
+\lhead{\large\bfseries BaKaPlan}
+\usepackage[left=2.5cm, right=1.5cm, top=2.5cm, bottom=1.5cm]{geometry}
+\pagestyle{fancy}

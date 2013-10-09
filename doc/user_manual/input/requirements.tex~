@@ -1,0 +1,13 @@
+\subsection{List of requirements}
+\vskip 0.5cm
+\begin{itemize}
+\item GNU G++ Compiler
+\item apache2 server 
+\item CGICC Library 
+\item MySQL Connector for C++ 
+\item Boost Library
+\item jwSMTP Library  
+\item libharu PDF Library 
+\item exim4 Mail Server
+\end{itemize}
+

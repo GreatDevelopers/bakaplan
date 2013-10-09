@@ -1,0 +1,4 @@
+\image{0.7}{images/admin.png}{}\\\\
+As the name suggests, only admin have access to this site. Admin can enter new data into fiels using add option and delete previous data, using change option. The fileds of admin site depends on configuration of software, as in this case, I have used fields like material, tests, labs etc.
+
+

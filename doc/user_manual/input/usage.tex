@@ -1,0 +1,258 @@
+
+BaKaPlan is developed in a way which is extremely easy to
+understand and use as explained in this section.
+
+\subsection {Registeration}
+The last step of the installation (either manual or through script) will
+lead you to the first page i.e Login. You will have to login everytime
+ you want to use BaKaPlan.
+\\
+\image{0.3}{images/login.png}{Login Page}
+
+As a first time user, you will have to register first. Clicking on 
+\lq Register Here\rq, will direct you the page as shown in Figure 2.
+
+\image{0.3}{images/register.png}{Register New User}
+
+Here, enter your email id and click on \lq Register\rq.\\\\
+This will display a new page with the message \lq Check verification mail
+in your inbox (It might land in Junk/Spam folder and sometimes it may 
+not be immediate).\rq\\
+Now check your mail inbox and click on the hyperlink in the mail content 
+which will direct you to Figure 3 where you will be asked to set password
+ for your account.
+
+\image{0.29}{images/passwd.png}{Set Password}
+
+Once you have set your password, you will be again directed to Login Page.
+ To get started enter your email id and password which you have just set. 
+
+\subsection{Project Detail}
+The next page (as shown in the figure below) asks for the name of the 
+seating plan project you want to make.
+ 
+\image{0.29}{images/projectDetail.png}{Project Detail}
+
+Enter the name of your project and click on \lq Start New Project\rq.
+
+\subsection{Branch Detail}
+
+\image{0.3}{images/branchDetail.png}{Branch Detail}
+
+This page asks for the information about the \textbf{Class Name} i.e. the name 
+of the class whose exam is to be conduced, \textbf{Subject Name} related to the 
+exam to be conducted and the corresponding \textbf{Subject Code}.\\
+
+\textbf{NOTE}: For a single class, you can add names of more than one 
+subject and their corresponding subject codes seperated by a comma.\\
+
+The \textbf{Add Row} button allows you to add the information of another 
+class. This feature allows you to make seating plan for a number of classes.\\
+Similar to this is a \textbf{Delete Row} button in front of each row 
+which will remove that row. 
+\\
+
+\subsection{Roll No. Detail}
+
+The next page (Figure 6) is for providing the Roll Numbers for which 
+the examination is tobe conducted.
+The various fields to be provided on this page are :
+
+\begin{itemize}
+\item \textbf{Prefix}: This is the prefix value of the roll numbers 
+specific to a class or branch.
+\item \textbf{Start Roll no. \& End Roll. No}
+\item \textbf{Not Included}: These are the Roll Numbers of the students
+ who are not eligible for the examination. One can either give single values
+ seperated by comma or and range of values(for eg. 29-34).\\\\\\
+\end{itemize}
+\image{0.3}{images/rollnoDetail.png}{Roll No. Detail}
+
+\subsection{Datesheet}
+
+\image{0.29}{images/datesheet.png}{Datesheet}
+
+The \textbf{Datesheet} page (Figure 7) as the name suggests is for providing information
+ about the dates on which the different examinations are to be held.\\
+ The page asks for the \textbf{Date} of the exam and the corresponding
+ \textbf{Exam Code} which is \textbf{same} as the \textbf{Subject Code}.\\
+ The Add Row button can be used for setting exams on more than one date.\\
+ At the end of the page is \lq Same room and exam details for each day\rq.
+ Choosing \lq Yes\rq  will set the same exam detail for each date and 
+ vice versa.
+ 
+\subsection{Room Detail}
+ 
+ In the \textbf{Room Detail} page we have to provide information about 
+ the classes where the students appearing for the exam are to be seated.\\
+ The page asks for the following two fields:
+ 
+ \begin{itemize}
+ \item \textbf{Centre Name}: Means the name of a block in the institute 
+ constituting of a number of classes.
+ \item \textbf{Room No.}: Means the name of the rooms being allocated
+ for the examination in that centre. More than one rooms can be given in
+  this space seperated by a comma. You need to provide the Room info 
+ in the following manner - Room No:No. of Rows x No. of columns.\\
+ NOTE: The symbol used in the above sentence is small \lq x\rq.\\
+ \end{itemize}
+
+\image{0.3}{images/roomDetail.png}{Room Detail} 
+ 
+\subsection{Exam Detail}
+
+\image{0.3}{images/examDetail.png}{}
+ In the above given page, you need to fill the following fields:
+\begin{itemize}
+ \item \textbf{Name}: This is the name of the examination being carried 
+ out for eg. sessionals or semester.
+ \item \textbf{Session}: This is the session in which the examination
+ would be carried out i.e. Morning or Evening.
+ \item \textbf{Stat Time and End Time}: You can choose these timings
+ from the drop down lists.
+ \item \textbf{Venue}: For eg. Name of the College or University.
+\end{itemize}
+
+ 
+\subsection{Strategies}
+
+BaKaPlan has five different strategies. Each strategy has its own
+requirements, advantages and disadvantages. One should choose strategy
+according to the needs and requirements.
+
+List of strategies are as follows:
+
+\begin{itemize}
+\item Cushy
+\item Serpentime
+\item Flip-Flop
+\item Triplet
+\item Quadlet
+\end{itemize}
+
+
+\subsubsection{Cushy}
+Cushy means easy. This is the simplest strategy. In this strategy,
+seating plan is done continuously. For example, seating plan is done
+by allocating all roll nos. of first subject code then continuous with
+2nd subject code and so on.\\ \\
+{\bf Requirement}
+\begin{itemize}
+\item Minimum 1 Class/Branch with minimum 1 subject code.
+\end{itemize}
+{\bf When to use}
+\begin{itemize}
+\item When there is only one subject code.
+\item If examination has multiple sets of subjects.
+\item If seats in examination has more space between them.
+\item When there are equal seats with total students means there are no more
+extra rooms/seats.
+\item When only there is only one class for seating plan.
+\end{itemize}
+{\bf When not to use}
+\begin{itemize}
+\item When there is any entrance examination.
+\item When there is no sets/codes for subjects.
+\end{itemize}
+
+\image{0.6}{images/cushy.png}{Cushy}
+
+\subsubsection{Serpentine}
+Serpentime is the simplest strategy. In this strategy,
+seating plan is done continuously. For example, seating plan is done
+by allocating all roll nos. of first subject code then continuous with
+2nd subject code and so on.\\ \\
+{\bf Requirement}
+\begin{itemize}
+\item Minimum 1 Class/Branch with minimum 1 subject code.
+\end{itemize}
+{\bf When to use}
+\begin{itemize}
+\item When there is only one subject code.
+\item If examination has multiple sets of subjects.
+\item If seats in examination has more space between them.
+\item When there are equal seats with total students means there are no more
+extra rooms/seats.
+\item When only there is only one class for seating plan.
+\end{itemize}
+{\bf When not to use}
+\begin{itemize}
+\item When there is any entrance examination.
+\item When there is no sets/codes for subjects.
+\end{itemize}
+
+\image{0.6}{images/serpentine.png}{Serpentine}
+
+
+\subsubsection{Flip Flop}
+Flip Flop is the second strategy. In this strategy, seating plan is
+done by mixing two subject codes i.e. 1st subject code, 2nd subject
+code, 1st subject code and so on.\\ \\
+{\bf Requirement}
+\begin{itemize}
+\item Minimum 2 classes or 1 class with 2 subject codes.
+\end{itemize}
+{\bf When to use}
+\begin{itemize}
+\item When there are minimum 2 subject codes. 
+\item When there is only one set for each subject in examination.
+\end{itemize}
+
+\image{0.6}{images/flipflop.png}{Flip Flop}
+
+
+\subsubsection{Triplet}
+Triplet means combination of three subject codes. Their is no seating plan
+with continuous subject code.\\ \\
+{\bf Requirement}
+\begin{itemize}
+\item Minimum 3 classes with 1 subject each or minimum 3 subject
+codes.
+\item Must have extra rooms if required.
+\end{itemize}
+{\bf When to use}
+\begin{itemize}
+\item When there are not sets or different codes for same subject
+code.
+\item When there are minimum three classes.
+\item When extra rooms are available.
+\end{itemize}
+
+\image{0.6}{images/triplet.png}{Triplet}
+
+
+\subsubsection{Quadlet}
+Quadlet means combination of four subject codes. It is used whem heir 
+is no seating plan with continuous subject code.\\ \\
+{\bf Requrement}
+\begin{itemize}
+\item Minimum four classes with 1 subject each or minimum 3 subject
+codes.
+\item Must have extra rooms if required.
+\end{itemize}
+{\bf When to use}
+\begin{itemize}
+\item When there are not sets or different codes for same subject
+code.
+\item When there are minimum four classes.
+\item When extra rooms are available.
+\item For entrance test.
+\item When their is less distance between rows and columns.
+\end{itemize}
+
+\image{0.6}{images/quadlet.png}{Quadlet}
+
+
+\subsection{Valid Strategy Detail}
+This page gives the final details of the information given by the user 
+and tells if the given number of rooms are sufficient according to the 
+number of students to be seated.
+
+\image {0.3}{images/validSrategy2.png}{Valid Strategy Detail}
+
+
+\subsection{Seating Plan}
+This is the final page.
+The user is provided with 2 types of views - {\bf HTML} and {\bf PDF} 
+views.
+\image {0.3}{images/seatingPlan.png}{Seating Plan}

@@ -1,0 +1,196 @@
+{\bf NOTE :}
+\begin{itemize}
+\item If you are installing the software through script, there is no need to take care of the requirements. The script itself checks and installs all the essential requirements and makes the software work.
+\end{itemize}
+\subsection{Manual Installation}
+\vskip 0.5cm
+
+\subsubsection{Installation of requirements}
+\vskip 0.5cm
+\begin{itemize}
+
+\item GNU G++ Compiler\\
+\tab \$ sudo apt-get install g++\\
+
+\item Apache2 Server\\
+\tab \$ sudo apt-get install apache2\\
+
+\item CGICC Library\\
+\tab Run following command in terminal:\\\\
+\tab \$ sudo apt-get install libcgicc5-dev\\\\
+OR\\
+\tab Download any latest package from
+\href{http://ftp.gnu.org/gnu/cgicc/}{\underline{here}}\\
+\tab Then run following commands in terminal:\\\\
+\tab \$ tar xzf cgicc-X.X.X.tar.gz\\ 
+\tab \$ cd cgicc-X.X.X/ \\
+\tab \$ ./configure - -prefix=/usr\\ 
+\tab \$ make\\
+\tab \$ sudo make install\\
+
+\item  MySQL and MySQL Connector for C++\\
+\tab Run following commands in terminal:\\\\
+\tab \$ sudo apt-get install mysql-server mysql-client \\
+\tab \$ sudo apt-get install libmysql++ \\
+\tab \$ sudo apt-get install libmysql++-dev \\
+\item BOOST Library\\
+\tab \$sudo apt-get install libboost1.49-dev \\
+
+\item jwSMTP Library\\
+\tab Download jwSMTP Library from
+\href{http://sourceforge.net/projects/jwsmtp/files/latest/download}{\underline{here}}\\
+\tab Run following commands in terminal:\\\\
+\tab \$ cd $\sim$/Downloads \\
+\tab \$ tar -xzf jwsmtp-X.X.X.tar.gz \\
+\tab \$ cd jwsmtp-X.X.X \\
+\tab \$ ./configure \\
+\tab \$ make \\
+\tab \$ sudo make install \\\\
+NOTE: If you got error in */mailer.cpp or */demo2.cpp file while compiling then
+include string header file in that. And again run make.\\
+
+\item LIBHARU PDF Library\\
+\tab Download LIBHARU PDF Library from 
+\href{https://github.com/libharu/libharu/tarball/master}{\underline{here}}\\
+\tab Run following commands in terminal:\\\\
+\tab \$ cd $\sim$/Downloads\\
+\tab \$ tar -xzf libharu-libharu-RELEASE\_2\_3\_0RC2-61-g22e741e.tar.gz\\
+\tab \$ cd libharu-libharu-22e741e\\
+\tab \$ cmake -G `Unix Makefiles` \\
+\tab \$ make\\
+\tab \$ sudo make install\\
+
+NOTE: If you get any error regarding cmake, then run\\
+\tab \$ sudo apt-get install cmake \\
+\tab \$ cmake -G `Unix Makefiles`\\
+\tab \$ make\\
+\tab \$ sudo make install\\
+
+\item  EXIM4 Mail Server\\
+\tab Run the following commands in terminal:\\
+
+\tab \$ sudo apt-get install exim4\\
+\tab \$ sudo dpkg-reconfigure exim4-config\\
+
+A Mail Server Configuration window will appear.\\
+Follow the following instructions to configure the mail server.\\
+
+1) The first page is just and introduction. Press ENTER.\\
+2) On the second page choose the second option i.e 
+   mail sent by smarthost; received via SMTP or fetchmail and 
+   press ENTER.\\
+3) Next Keep the system mail name as it is and press ENTER.\\
+4) Just Press Enter for the next page.\\
+5) The next page asks you to enter IP addresses to listen on
+   incoming SMTP connections. Leave it as it is and Press ENTER.\\
+6) Even on the next page let the value be the default one and 
+   Press ENTER.\\
+7) Leave the next page as it is and Press ENTER.\\
+8) The next page asks you for IP address or host name of the outgoing
+   smarthost. Enter “smtp.example.com::587″. Where example refers to
+   gmail, yahoo or any other mail service provider and 587 is port number.\\
+9) The Next page asks you if you want to hide local mail name in 
+   outgoing mail? Choose “No”.\\
+10)The Next asks you if you want to keep number of DNS-queries minimal?
+   Choose “No”.\\
+11)On the next page choose the  delivery method for local mail as
+   mbox format in /var/mail/.\\
+12)Next page asks you if you want to split configuration into small
+   files? Choose “No”. \\
+13)Next keep root and postmaster mail recipient empty.\\\\
+Now terminal will show that MTA is being restarted.\\
+After this is done, run the following command in terminal.\\
+\tab \$ sudo vim /etc/exim4/passwd.client\\\\
+Add following in the file\\
+*:USERNAME@example.com:PASSWORD\\
+Where, USERNAME is  a valid email address and PASSWORD is  password for USERNAME.\\
+
+\end{itemize}
+
+\subsubsection{Installation steps for using BaKaPlan.}
+\vskip 0.5cm
+\begin{itemize} 
+\item Configuring public\_html/cgi-bin folder for executing files on browser.\\
+    
+**Steps to configure public\_html**\\
+\tab Run following command in terminal:   \\
+\tab \$ mkdir $\sim$/public\_html\\
+\tab \$ sudo a2enmod userdir\\
+\tab \$ sudo service apache2 restart\\
+        
+Giving 755 permissions to public\_html directory\\
+\tab \$ chmod -R 755 $\sim$/public\_html\\
+
+Now open http://localhost/$\sim$username in browser.\\
+Here username is your login name.\\
+    
+**Steps to configure cgi-bin in public\_html**\\    
+\tab \$ sudo a2enmod cgi\\
+\tab \$ sudo a2enmod cgid\\
+\tab \$ sudo service apache2 restart\\
+\tab \$ cd $\sim$/public\_html\\
+\tab \$ mkdir cgi-bin\\
+\tab \$ cd /etc/apache2\\
+\tab \$ sudo vim sites-available/default\\
+    
+Add following text in file:\\
+    
+\tab ScriptAlias /cgi-bin/ /home/*/public\_html/cgi-bin/\\
+\tab $<$Directory \lq\lq/home/*/public\_html/cgi-bin\rq\rq$>$\\
+\tab AllowOverride None\\
+\tab Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch\\
+\tab SetHandler cgi-script\\
+\tab Order allow,deny\\
+\tab Allow from all\\
+\tab $<$/Directory$>$\\
+    
+Save it and then restart apache \\
+\tab \$ sudo service apache2 restart\\
+
+
+\item Open terminal and run following commands\\
+\tab \$ cd public\_html/cgi-bin\\
+\tab \$ git clone https://github.com/GreatDevelopers/bakaplan.git\\
+\tab \$ cd bakaplan\\
+
+\item Editing database details\\
+\tab Open $\sim$/public\_html/cgi-bin/bakaplan/frontend/src/header/database-detail.h\\
+\tab Add your details and save file\\
+\tab Now cd to $\sim$/public\_html/cgi-bin/bakaplan and run\\ 
+\tab \$ make install\\
+
+\item Importing $\sim$/public\_html/cgi-bin/bakaplan/database/*.sql file in your
+database\\
+\tab Do as following in terminal:\\
+\tab \$ mysql -u username -p\\
+\tab \$ create database database\_name;\\
+\tab \$ quit\\
+
+\tab Now cd to place where .sql file exists\\
+\tab \$ $\sim$/public\_html/cgi-bin/bakaplan/database\\
+\tab \$ mysql -p -u root database\_name < bakaplan.sql\\
+
+\item Accessing BaKaPlan\\
+\tab After all above steps open browser and open following link:\\
+\tab http://localhost/$\sim$username/cgi-bin/bp/login\\
+
+\tab Here username is your login username
+
+\tab If this link does not work and you get an Internal Server Error, 
+do as following to remove \tab that:\\
+\tab \$ sudo ln -s /usr/local/lib/libjwsmtp-$<$version$>$.so /usr/lib/libjwsmtp-$<$version$>$.so\\
+\tab Replace $<$version$>$ with your installed one or use tab.\\
+
+NOTE:    Be sure that you must have write permission in the directory
+         ($\sim$/public\_html/cgi-bin/bakaplan/ and $\sim$ /public\_html/)
+         where outputfile is to be generated.\\
+
+\end{itemize}
+\subsection{Installation using Script}
+\vskip 0.2cm
+\begin{itemize}
+\item Go to the following link to download a folder named Script.\\
+\tab Run the following commands to install BaKaPlan:\\
+\tab \$ cd $\sim$/Downloads/script/script.sh\\
+\tab \$ bash script.sh
+\end{itemize}

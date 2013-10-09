@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage[print,nopanel]{pdfscreen}
+\begin{print}
+\usepackage{lastpage}
+\usepackage{macro/macro}
+\usepackage[colorlinks]{hyperref}
+\usepackage{cleveref}
+\usepackage{fancyhdr}
+\usepackage{verbatim}
+\lhead{\large\bfseries BaKaPlan}
+\usepackage[left=2.5cm, right=1.5cm, top=2.5cm, bottom=1.5cm]{geometry}
+\pagestyle{fancy}
+\end{print}
+\margins{.5cm}{.5cm}{.5cm}{.5cm}
+\begin{screen}
+
+\renewcommand{\encodingdefault}{T1}
+\usepackage{setspace}
+\linespread{1.5}
+\renewcommand{\rmdefault}{ptm}
+\end{screen}
+\screensize{8cm}{9cm}
+\overlay{overlay8.pdf}
+\usepackage{graphicx}
+
+\begin{document}
+\input{input/firstpage.tex}
+\begin{screen}
+\ppttitle
+\end{screen}
+\footskip 0.7cm
+\thispagestyle{empty} 
+\pagetitle
+\newpage
+\pagenumbering{Roman}
+\cfoot{\thepage}
+\newpage
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+\cfoot{\thepage}
+
+\newpage
+\section{\underline{Something about BaKaPlan}}
+\rhead{Something about BaKaPlan}
+\input{input/intro.tex}
+\newpage
+\section{\underline{Requirements}}
+\rhead{Requirements}
+\input{input/requirements.tex}
+\newpage
+\section{\underline{Installation}}
+\rhead{Installation}
+\input{input/installation.tex}
+\newpage
+\section{\underline{Using BaKaPlan}}
+\rhead{Using BaKaPlan}
+\input{input/usage.tex}
+
+\end{document}
+
