@@ -17,8 +17,8 @@
 #ifndef READ_INPUTFIELD_H
 #define READ_INPUTFIELD_H
 
-#include "header.h"                         /* Header File */
-#include "cgicc.h"                          /* CGICC Header Files */
+#include "header.h"                         
+#include "cgicc.h"                          
 
 /**
  *      \class  ReadInputField
@@ -41,8 +41,6 @@ class ReadInputField
     public:
         ReadInputField(){}
 
-        /* Public Member Functions */
-        
         string ReadFieldValue(string fieldName);
         string ReadFieldValue(string fieldName, int fieldNo);
 
