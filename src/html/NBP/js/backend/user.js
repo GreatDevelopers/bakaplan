@@ -15,7 +15,7 @@ function GetSignUpResponse()
 {
     XMLHttp.open
 
-    ("GET", "../cgi-bin/NBP/backend/bp/signup?"
+    ("GET", "../cgi-bin/nbp/signup?"
 
     + "email-signup=" + document.getElementById('email-signup').value
 
@@ -40,7 +40,7 @@ function GetLoginResponse()
 {
     XMLHttp.open
 
-    ("GET", "../cgi-bin/NBP/backend/bp/login?"
+    ("GET", "../cgi-bin/nbp/login?"
 
     + "email-login=" + document.getElementById('email-login').value
 
