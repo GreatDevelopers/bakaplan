@@ -21,7 +21,7 @@
 
 # Target Names
 
-BACKEND	=	back-end
+BACKEND	=	cpp
 CLEAN	=	clean
 
 # ====================================================================
@@ -35,11 +35,11 @@ all: $(BACKEND)
 # ====================================================================
 
 $(BACKEND):
-	make -C backend/src
+	make -C src/cpp/frontend
 
 # ====================================================================
 # 	Clean .o, .html files
 # ====================================================================
 
 $(CLEAN):
-	make -C backend/src clean
+	make -C src/cpp/frontend clean
