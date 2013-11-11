@@ -1,0 +1,76 @@
+# ====================================================================
+# 
+#        Filename:  Make.common
+# 
+#     Description:  Definition of common variables used in Makefile
+# 
+#         Created:  Saturday 30 March 2013 11:15:42  IST
+#        Compiler:  g++
+# 
+#          Author:  Mandeep Kaur, meghasimak@gmail.com
+#         License:  GNU General Public License
+#       Copyright:  Copyright (c) 2013, Great Developers
+#                   https://github.com/GreatDevelopers 
+# 
+# ====================================================================
+
+#   Variables for compilation of c/c++ files
+
+CXX     =   g++                          # Compiler 
+WALL    =   -Wall                        # Warning all flag
+WERROR  =   -Werror                      # Convert warnings into error
+DEBUG   =   -g $(WALL) $(WERROR)         # Debugging flag
+CFLAG   =   -c $(DEBUG)   #-Wl,--stack,8388608     # Compilation flag 
+OFLAG   =   $(DEBUG) -o                  # O/p Flag
+LCGICC  =   -lcgicc     		         # cgicc lib flag
+LMYSQL  =   -L/usr/include/mysql -lmysqlclient -I/usr/include/mysql
+LHPDF   =   -lhpdf
+
+#   Target names
+
+CLEAN   =   clean
+
+#   Common variables
+
+F_HEADER      =  header/
+HEADER        =  header
+FILENAME      =  filename
+MAIN          =  -main
+READINPUT     =  readinput
+EXPANDROLLNO  =  expandrollno
+ARRANGEROLLNO =  arrangerollno
+DATESHEET     =  datesheet
+STRATEGY      =  strategy
+SEATPLAN      =  seatplan
+DB            =  database.o
+D_DB          =  ../frontend/header/database.h ../frontend/database.cc
+
+#   File Extention variables
+
+H             =  .h
+O             =  .o
+CC            =  .cc
+CPP           =  .cpp
+
+#   Variables for defining dependancy
+
+H_HEADER        =  $(F_HEADER)$(HEADER)$(H) $(F_HEADER)$(FILENAME)$(H)
+H_READINPUT     =  $(F_HEADER)$(READINPUT)$(H) $(H_HEADER) 
+H_EXPANDROLLNO  =  $(F_HEADER)$(EXPANDROLLNO)$(H) $(H_READINPUT)
+H_ARRANGEROLLNO =  $(F_HEADER)$(ARRANGEROLLNO)$(H) $(H_EXPANDROLLNO)
+H_DATESHEET     =  $(F_HEADER)$(DATESHEET)$(H) $(H_ARRANGEROLLNO)
+H_SEATPLAN      =  $(F_HEADER)$(SEATPLAN)$(H) $(H_READINPUT)
+H_STRATEGY      =  $(F_HEADER)$(STRATEGY)$(H) $(H_SEATPLAN)
+
+D_READINPUT     =  $(READINPUT)$(CC) $(H_EXPANDROLLNO) 
+D_EXPANDROLLNO  =  $(EXPANDROLLNO)$(CC) $(H_EXPANDROLLNO) 
+D_ARRANGEROLLNO =  $(ARRANGEROLLNO)$(CC) $(H_ARRANGEROLLNO)
+D_DATESHEET     =  $(DATESHEET)$(CC) $(H_DATESHEET)
+D_SEATPLAN      =  $(SEATPLAN)$(CC) $(H_SEATPLAN)
+D_STRATEGY      =  $(STRATEGY)$(CC) $(H_STRATEGY) 
+
+#   Linking variables
+
+L_ARRANGE   =  $(READINPUT)$(O) $(EXPANDROLLNO)$(O) $(ARRANGEROLLNO)$(O)
+L_DATESHEET =  $(L_ARRANGE) $(DATESHEET)$(O)
+L_STRATEGY  =  $(SEATPLAN)$(O) $(STRATEGY)$(O) $(DB)  #$(READINPUT)$(O)
