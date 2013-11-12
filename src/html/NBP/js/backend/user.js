@@ -9,27 +9,40 @@ else
     XMLHttp = new XMLHttpRequest();
 }
 
+
 /** Getting Sign up response */
 
 function GetSignUpResponse() 
 {
-    XMLHttp.open
-
-    ("GET", "../cgi-bin/nbp/signup?"
-
-    + "email-signup=" + document.getElementById('email-signup').value
-
-    ,true);
-
-    XMLHttp.onreadystatechange=function() 
+    if(validate == "true")
     {
-        if(XMLHttp.responseText != "true")
-            document.getElementById('msg').innerHTML = XMLHttp.responseText;
-    }
-    XMLHttp.send(null);
+        XMLHttp.open
+
+        ("GET", "../cgi-bin/nbp/signup?"
+
+        + "email-signup=" + document.getElementById('email-signup').value
+
+        ,true);
+
+        XMLHttp.onreadystatechange=function() 
+        {
+            if(XMLHttp.responseText != "true")
+            {
+//            document.getElementById('msg').innerHTML = "<br>" + XMLHttp.responseText;
+
+                var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
+  	    		theErrorTip.setContent(XMLHttp.responseText);
+		        theErrorTip.show();	
     
-    if(XMLHttp.responseText == "true")
-        return true;
+            }
+        }
+        XMLHttp.send(null);
+    
+        if(XMLHttp.responseText == "true")
+            return true;
+        else
+            return false;
+    }
     else
         return false;
 }
@@ -38,25 +51,35 @@ function GetSignUpResponse()
 
 function GetLoginResponse() 
 {
-    XMLHttp.open
-
-    ("GET", "../cgi-bin/nbp/login?"
-
-    + "email-login=" + document.getElementById('email-login').value
-
-    + "&password-login=" + document.getElementById('password-login').value
-
-    ,true);
-
-    XMLHttp.onreadystatechange=function() 
+    if(validate == "true")
     {
-        if(XMLHttp.responseText != "true")
-            document.getElementById('msg').innerHTML = XMLHttp.responseText;
-    }
-    XMLHttp.send(null);
+        XMLHttp.open
+    
+        ("GET", "../cgi-bin/nbp/login?"
 
-    if(XMLHttp.responseText == "true")
-        return true;
+        + "email-login=" + document.getElementById('email-login').value
+
+        + "&password-login=" + document.getElementById('password-login').value
+
+        ,true);
+    
+        XMLHttp.onreadystatechange=function() 
+        {
+            if(XMLHttp.responseText != "true")
+            {
+//            document.getElementById('msg').innerHTML = XMLHttp.responseText;
+                var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
+  			    theErrorTip.setContent(XMLHttp.responseText);
+    		    theErrorTip.show();	
+            }
+        }
+        XMLHttp.send(null);
+
+        if(XMLHttp.responseText == "true")
+            return true;
+        else
+            return false;
+    }
     else
         return false;
 }

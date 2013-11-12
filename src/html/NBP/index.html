@@ -20,8 +20,12 @@
 	<link rel="stylesheet" href="styles/welcome.css" type="text/css" media="all">
 	<!-- Jquery for lightboxes,tickers and more -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<!-- Tooltips framework for our helping tooltips --> 
-	<script src="js/opentip-jquery.min.js"></script> 	
+	<!-- Open Tooltip Javascript and css framework for adding tooltips -->	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> 
+	<script src="js/opentip-jquery.min.js"></script> 
+	<script src="js/opentip-myStyles.js"></script>
+	<script src="js/validate.min.js"></script>
+
     <!-- For getting response of sign-up and login scripts -->
 	<script src="js/backend/user.js"></script> 	
     <link rel="stylesheet" href="styles/opentip.css" type="text/css" media="all">
@@ -35,6 +39,7 @@
 			<div class="intro-module">
 			<div class="accordion-wrapper">
 				<div>
+                    <h1 id="tipTarget"></h1>
 					<input  class="accordion-item-input"id="ac1" type="radio" checked name="welcome-accordion" />
 					<label class="accordion-heading" for="ac1">Sign Up </label>
 					<form  class="accordion-container"
@@ -122,6 +127,9 @@ $(window).resize(function() {
 
 });
 </script>
-	
+
+<!-- including validation javascript file -->
+<script type="text/javascript" src="js/validation/index.js"></script>
+
 </body>
 </html>
