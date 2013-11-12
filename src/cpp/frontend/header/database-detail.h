@@ -24,7 +24,7 @@
 #define SERVER "localhost"                                /**< host */
 #define USER "bakaplan"                       /**< Database Username */
 #define PASSWORD "bakaplan"               /**< Database Password */
-#define DATABASE "bakaplan"                       /**< Database name */
+#define DATABASE "nbp"                       /**< Database name */
 
 #endif
 
