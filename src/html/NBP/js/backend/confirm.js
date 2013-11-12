@@ -16,7 +16,7 @@ function ConfirmEmail()
     console.log("hello"); 
     XMLHttp.open
 
-    ("GET", "../cgi-bin/NBP/backend/bp/confirm?"
+    ("GET", "../cgi-bin/nbp/confirm?"
 
     + "Key=" + document.getElementById('Key').value
 

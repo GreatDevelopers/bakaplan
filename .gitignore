@@ -14,5 +14,5 @@
 *.html
 *.orig
 
-backend/bp/*
+src/cpp/bp/*
 .*swp

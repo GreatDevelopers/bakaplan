@@ -143,9 +143,8 @@ void User :: SignUpUser()
                                               currentTime);
             sendMail.RegistrationMail(userEmailID, currentTime);
     
-            msg = "Check verification mail in your inbox (It might "
-                  "land in Junk/Spam folder and sometimes it may "
-                  "not be immediate)Check mail for verification";
+            msg = "Check verification mail in your inbox "
+                  "(or Junk/Spam)";
      //       msg = "true";
         }
     }
