@@ -43,7 +43,7 @@ class User
                retypePassword;            /**< For reading password */
 
         string currentTime,                      /**< Currennt Time */
-               key,
+               key,                       /** Confirmation Link Key */
                msg,                   /**< Store error/info Message */
                temp,                        /**< Temporary variable */
                where;                             /**< where clause */
@@ -55,6 +55,8 @@ class User
         void SelectUserDetail();
         void LoginUser();
         void SignUpUser();
+        void ConfirmUser(string msg = "", string password = "",
+                         string retypePassword = "");
         string Time();
         ~User();
 };

@@ -52,6 +52,7 @@ USER            =  user
 
 SIGNUP      =  signup
 LOGIN       =  login
+CONFIRM     =  confirm-user
 
 #   File Extention variables
 
@@ -105,6 +106,8 @@ D_M_SIGNUP      =   $(SIGNUP)$(MAIN)$(CPP) $(F_HEADER)$(USER)$(H)
 
 D_M_LOGIN       =   $(LOGIN)$(MAIN)$(CPP) $(F_HEADER)$(USER)$(H)
 
+D_M_CONFIRM     =   $(CONFIRM)$(MAIN)$(CPP) $(F_HEADER)$(USER)$(H)
+
 #   Linking variables
 
 L_USER      :=   $(DATABASE)$(O) $(READINPUTFIELD)$(O) $(MD5)$(O) \
@@ -114,3 +117,4 @@ L_SIGNUP    :=   $(SIGNUP)$(MAIN)$(O) $(L_USER) $(USER)$(O)
 
 L_LOGIN     :=   $(LOGIN)$(MAIN)$(O) $(L_USER) $(USER)$(O)
 
+L_CONFIRM   :=   $(CONFIRM)$(MAIN)$(O) $(L_USER) $(USER)$(O)

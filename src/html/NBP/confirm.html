@@ -23,10 +23,11 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> 
 	<script src="js/opentip-jquery.min.js"></script> 
 	<script src="js/opentip-myStyles.js"></script>
+	<script src="js/validate.min.js"></script>
 	<script src="js/backend/confirm.js"></script>
 	<link rel="stylesheet" href="styles/opentip.css" type="text/css" media="all">
 </head>
-<body class="coloredBody" onload="ConfirmEmail();" >
+<body class="coloredBody" onload="" >
 	<nav class="side-menu">
 	<span id="toggle-menu"> <p id="toggle-menu-circle"> Show Menu </p> </span>
 	<h3> Ba<span class="ka">ka</span> Plan</h3>
@@ -34,41 +35,87 @@
 	<a href="about.html"> About </a>
 	<a href="contribute.html"> Contribute </a>
 	<a href="contact.html">Contact  </a>
-	<a href="login.html"> Log Out </a>
+	<a href="login.html"> Log In </a>
 	</nav> 
 	<div class="page-wrap">
 		
-	<h1>~</h1>
-    <div id="msg"> </div>
-		<form class="theForm" id="confirm-form" action="#">	
+	<h1 id="tipTarget">~</h1>
+    <div id="msg"></div>
+		<form class="theForm" id="set-password" name="set-password" action="#" >	
 			<h2> Set Password </h2>
-			<label for="password" class="theLabel">Password:</label>
+			<label for="password" class="theLabel">Password</label>
 			<input type="password" name="password" id="password"
-            class="theFormTextInput" placeholder=""
-			data-ot=" Fill password"
-			data-ot-style="dark"
-			data-ot-delay="1"
-			data-ot-target="#password"
-			data-ot-tip-joint="right"
-			data-ot-show-on="click"
-			/>
-			<label for="retype-password" class="theLabel">Retype Password:</label>
-			<input type="password" name="retype-password"
-            id="retype-password"
-            class="theFormTextInput" placeholder="Retype Password"
-			data-ot=" Retype Password"
-			data-ot-style="dark"
-			data-ot-delay="1"
-			data-ot-target="#retype-password"
-			data-ot-tip-joint="right"
-			data-ot-show-on="click"
-			/>
-
+            class="theFormTextInput" placeholder=" Fill Password"/>
+			<label for="retype-password" class="theLabel" >Retype
+            Password</label>
+			<input type="password" name="retupe-password"
+            id="retype-password"  class="theFormTextInput"
+            placeholder=" Retype Password"/>
 			<input type="submit"name="theSubmit" id="theSubmit"
-            class="theFormButton" value="Set Password" />
+            class="theFormButton" value="Submit" />
 		</form>
+
 	</div>
 </div>
 <script type="text/javascript" src="js/sidemenu.js"></script>	
+<script type="text/javascript" src="js/opentip-myStyles.js"></script>
+<script>
+	/* Change the position of OpenTip for mobile and tablet */
+$(function(){
+	if($(window).width() < 720){
+		var passOpenTip = new Opentip("#password","Fill Password",
+					{style:"myMobileInputStyle"});
+		var retypePassOpenTip = new Opentip("#retype-password","Fill Retype Password",
+					{style:"myMobileInputStyle"});
+	}
+	else{
+		var passOpenTip = new Opentip ("#password","Fill  Password",{
+					target:"#password",
+					style:"myInputStyle"});
+		var retypePassOpenTip = new Opentip("#retype-password","Fill Retype Password",{
+					target:"#retype-password",
+					style:"myInputStyle"});
+					
+	}
+	/* Changing the content of OpenTip based on content in input */
+	var password = $("#password");
+	password.keyup(function(){
+//		passOpenTip.setContent( "\"" + password.val() + "\" is a lovely name");
+		if (password.val() == "") passOpenTip.setContent("Fill Password"); 
+	});
+
+	var retypePass = $("#retype-password");
+	retypePass.keyup(function(){
+//		retypePassOpenTip.setContent("Make sure " + theEMail.val() +" is your correct Email ID");
+		if (retypePass.val() == "") retypePassOpenTip.setContent("Retype Password");
+
+	});
+	
+	var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
+	
+    var validator = new FormValidator('set-password',[{
+		name:'password',
+		display:'Password',
+		rules:'required|min_length[8]'
+		},{
+		name:'retype-password',
+		display:'Retype Password',
+		rules:'required|min_length[8]|matches[password]'
+		},{
+		name:'theFeedback',
+		display:'Feedback',
+		rules:'required'
+		}],function(errors, event){
+			var errorString = '';
+			for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
+           			errorString += errors[i].message + '<br />';
+        		}
+			theErrorTip.setContent(errorString);
+			theErrorTip.show();	
+		}
+	);	
+});
+
+</script>
 </body>
 </html>

@@ -152,6 +152,71 @@ void User :: SignUpUser()
 }
 
 /**
+ *      \fn     Login :: ConfirmUser(string msg, string password, 
+ *                       string retypePassword)
+ *      \brief  Page for validating email ID and setting user's
+ *              password
+ *      \param  msg Shows error message
+ *      \param  password Password filled by user
+ *      \param  retypePassword Password filled by user
+ */
+
+void User :: ConfirmUser(string msg, string password, 
+                          string retypePassword)
+{
+    cout << HTTPHTMLHeader() << endl;
+
+    key = readField.ReadFieldValue(field::name["key"]);
+    
+    database.SelectColumn(regKey, "RegistrationKey", "Registeration");
+    if ( find(regKey.begin(), regKey.end(), key) != regKey.end() )
+    {
+       
+        msg = "true";
+/*        
+        cout << cgicc::div().set("id", "DivConfirm") << br();
+
+        cout << form().set("id", "FormSetPassword")
+                      .set("action", "adduser")
+                      .set("method", "POST");
+    
+        cout << h1() << " Email Confirmed " << h1() << br()
+             << b() << " Set Password " << b();
+    
+        page.InputField("hidden", "Key", key);
+
+        cout << br() << br();
+
+        ErrorMessage(msg);
+
+        page.Label(fieldName.password, " Password ");
+        page.InputField("password", fieldName.password, password);
+    
+        cout << br() << br();
+        page.Label(fieldName.retypePassword, " Retype Password ");
+        page.InputField("password", fieldName.retypePassword, 
+                        retypePassword);
+
+        cout << br() << br();
+
+        page.Button("next", "submit", "btn", "Submit");
+
+        cout << form() << cgicc::div();
+
+        Footer();
+        */
+    }
+    else
+    {
+        msg = "false";
+//        RegistrationPage(msg);
+    }
+
+    cout << msg;
+    
+}
+
+/**
  *      \fn     User :: Time()
  *      \brief  For finding current time using boost library
  */

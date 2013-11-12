@@ -9,16 +9,26 @@ else
     XMLHttp = new XMLHttpRequest();
 }
 
+function GetUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, 
+function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+
 /** Check confirmation link */
 
-function ConfirmEmail() 
+function ConfirmEmail(key) 
 {
-    console.log("hello"); 
+    console.log(GetUrlVars()["Key"]); 
     XMLHttp.open
 
-    ("GET", "../cgi-bin/nbp/confirm?"
+    ("GET", "../cgi-bin/nbp/confirm-user?"
 
-    + "Key=" + document.getElementById('Key').value
+    + "Key=" + GetUrlVars()["Key"]
 
     ,true);
 
@@ -30,12 +40,13 @@ function ConfirmEmail()
         }
         else
         {
-            window.location.href = "index.html";
-            document.getElementById('msg').innerHTML = "Invalid Link";
+//            window.location.href = "index.html";
+            document.getElementById('msg').innerHTML = "Invalid Link" 
+                                                       + XMLHttp.responseText;
         }
     }
     XMLHttp.send(null);
-    document.getElementById('msg').innerHTML = "Invalid Link";
+//    document.getElementById('msg').innerHTML = "Invalid Link";
 
 }
 

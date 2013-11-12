@@ -25,7 +25,7 @@ include Make.common
 #   Targets
 # ====================================================================
 
-all: $(F_BP)$(SIGNUP) $(F_BP)$(LOGIN)
+all: $(F_BP)$(SIGNUP) $(F_BP)$(LOGIN) $(F_BP)$(CONFIRM)
 
 #	Target for compiling .cc or .cpp files
 
@@ -55,6 +55,9 @@ $(SIGNUP)$(MAIN)$(O) : $(D_M_SIGNUP)
 $(LOGIN)$(MAIN)$(O) : $(D_M_LOGIN)
 	$(CXX) $(CFLAG) $(LOGIN)$(MAIN)$(CPP) $(LMYSQL)
 
+$(CONFIRM)$(MAIN)$(O) : $(D_M_CONFIRM)
+	$(CXX) $(CFLAG) $(CONFIRM)$(MAIN)$(CPP) $(LMYSQL)
+
 #	Targets for html pages
 
 $(F_BP)$(SIGNUP) : $(L_SIGNUP)
@@ -63,6 +66,10 @@ $(F_BP)$(SIGNUP) : $(L_SIGNUP)
 
 $(F_BP)$(LOGIN) : $(L_LOGIN)
 	$(CXX) $(OFLAG) $(F_BP)$(LOGIN) $(L_LOGIN) $(LSMTP) \
+	$(LMYSQL) $(LCGICC)
+
+$(F_BP)$(CONFIRM) : $(L_CONFIRM)
+	$(CXX) $(OFLAG) $(F_BP)$(CONFIRM) $(L_CONFIRM) $(LSMTP) \
 	$(LMYSQL) $(LCGICC)
 
 $(CLEAN) : 

@@ -52,7 +52,7 @@ void SendMail :: SetHTMLMessage(string regKey, string mail)
     url += USERNAME; 
     url += "/cgi-bin/nbp/";
     if(mail == "register")
-        url += "confirm?Key=" + regKey;
+        url += "confirm-user?Key=" + regKey;
     else
         url += "reset?type=3&Key=" + regKey;
               
