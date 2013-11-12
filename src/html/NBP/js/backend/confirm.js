@@ -9,16 +9,6 @@ else
     XMLHttp = new XMLHttpRequest();
 }
 
-function GetUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, 
-function(m,key,value) {
-        vars[key] = value;
-    });
-    return vars;
-}
-
-
 /** Check confirmation link */
 
 function ConfirmEmail(key) 
@@ -41,13 +31,24 @@ function ConfirmEmail(key)
         else
         {
 //            window.location.href = "index.html";
-            document.getElementById('msg').innerHTML = "Invalid Link" 
-                                                       + XMLHttp.responseText;
+            document.getElementById('msg').innerHTML = "Invalid Link";
+//                                                       + XMLHttp.responseText;
         }
     }
     XMLHttp.send(null);
 //    document.getElementById('msg').innerHTML = "Invalid Link";
 
+}
+
+function GetUrlVars() 
+{
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, 
+                function(m,key,value) 
+                {
+                    vars[key] = value;
+                });
+    return vars;
 }
 
 $( window ).load( ConfirmEmail );
