@@ -27,12 +27,18 @@ function ConfirmEmail(key)
         if(XMLHttp.responseText == "true")
         {
             document.getElementById('msg').innerHTML = "Email Confirmed";
+            alert(XMLHttp.responseText);
+        }
+        else if(XMLHttp.responseText == "false")
+        {
+//            window.location.href = "index.html";
+            document.getElementById('msg').innerHTML = "Invalid Link"
+                                                       + XMLHttp.responseText;
+            alert(MLHttp.responseText);
         }
         else
         {
-//            window.location.href = "index.html";
-            document.getElementById('msg').innerHTML = "Invalid Link";
-//                                                       + XMLHttp.responseText;
+            alert(XMLHttp.responseText);
         }
     }
     XMLHttp.send(null);

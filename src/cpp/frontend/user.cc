@@ -172,7 +172,7 @@ void User :: ConfirmUser(string msg, string password,
     if ( find(regKey.begin(), regKey.end(), key) != regKey.end() )
     {
        
-        msg = "true";
+        cout << "true";
 /*        
         cout << cgicc::div().set("id", "DivConfirm") << br();
 
@@ -208,11 +208,11 @@ void User :: ConfirmUser(string msg, string password,
     }
     else
     {
-        msg = "false";
+        cout << "false";
 //        RegistrationPage(msg);
     }
 
-    cout << msg;
+//    cout << msg;
     
 }
 
