@@ -21,22 +21,25 @@ function ConfirmEmail(key)
     + "Key=" + GetUrlVars()["Key"]
 
     ,true);
-
+    
     XMLHttp.onreadystatechange=function() 
     {
+        console.log(XMLHttp.responseText + "1");
+        if(XMLHttp.responseText != "")
+        {
+            alert(XMLHttp.responseText);
         if(XMLHttp.responseText == "true")
         {
+            alert(XMLHttp.responseText);
             document.getElementById('msg').innerHTML = "Email Confirmed";
         }
-        else if(XMLHttp.responseText == "false")
+        else         
         {
+            alert(XMLHttp.responseText);
 //            window.location.href = "index.html";
             document.getElementById('msg').innerHTML = "Invalid Link"
                                                        + XMLHttp.responseText;
         }
-        else
-        {
-            alert(XMLHttp.responseText);
         }
     }
     XMLHttp.send(null);
