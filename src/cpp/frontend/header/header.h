@@ -25,7 +25,15 @@
 #include <ctime>
 #include <exception>
 
+#include <boost/date_time/local_time/local_time.hpp>
+#include <boost/algorithm/string/split.hpp>
+#include <boost/algorithm/string.hpp>
+#include <boost/algorithm/string/erase.hpp>
+#include <boost/algorithm/string/trim.hpp>
+#include <cassert>
+
 using namespace std;
+using namespace boost::algorithm;
 
 /*
  *  Typedef variables for using vector definiton

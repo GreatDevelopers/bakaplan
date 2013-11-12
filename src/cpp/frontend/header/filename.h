@@ -25,26 +25,27 @@
 namespace filename
 {
     
-    std::map<string, string> name;
-    
-    name["input"]   =   "../input";
-    name["output"]  =   "../output/";
-    name["in"]      =   ".in";
-    name["out"]     =   ".out";
+    std::map<string, string> name =
+    {
+        {"input", "../input"},
+        {"output", "../output/"},
+        {"in", ".in"},
+        {"out", ".out"},
 
-    name["classDetail"]     =   "class-detail-";
-    name["rollNoDetail"]    =   "rollno-detail-";
-    name["datesheet"]       =   "datesheet-";
-    name["examDetail"]      =   "exam-detail-";
-    name["roomDetail"]      =   "room-detail-";
-    name["strategy"]        =   "strategy-";
+        {"classDetail", "class-detail-"},
+        {"rollNoDetail", "rollno-detail-"},
+        {"datesheet", "datesheet-"},
+        {"examDetail", "exam-detail-"},
+        {"roomDetail", "room-detail-"},
+        {"strategy", "strategy-"},
 
-    name["expandRollNo"]    =   "expand-rollno-";
-    name["arrangeRollNo"]   =   "arrange-rollno-";
-    name["validation"]      =   "validation-";
-    name["seatplan"]        =   "seatplan-";
+        {"expandRollNo", "expand-rollno-"},
+        {"arrangeRollNo", "arrange-rollno-"},
+        {"validation", "validation-"},
+        {"seatplan", "seatplan-"},
 
-    name["temp"]            =   "temp-";
+        {"temp", "temp-"}
+    };
 }
 
 #endif
@@ -55,4 +56,5 @@ namespace filename
  * expandtab
  * ex: shiftwidth=4 tabstop=4
  */
+
 

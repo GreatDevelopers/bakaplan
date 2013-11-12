@@ -47,6 +47,7 @@ MD5             =  md5
 READINPUTFIELD  =  read-inputfield
 SENDMAIL        =  sendmail
 USER            =  user
+INPUTDETAIL     =  input-detail
 
 #   Html pages file names
 
@@ -86,6 +87,10 @@ H_USER           :=  $(F_HEADER)$(USER)$(H) $(H_HEADER) $(H_DATABASE)\
                      $(H_READINPUTFIELD) $(H_MD5) $(H_SENDMAIL) \
                      $(H_FIELDNAME)
 
+H_INPUTDETAIL    :=  $(F_HEADER)$(INPUTDETAIL)$(H) $(H_HEADER) $(H_DATABASE)\
+                     $(H_READINPUTFIELD) $(H_FIELDNAME)
+
+
 #   Variables for defining dependancy
 
 D_DATABASE         =    $(DATABASE)$(CC) $(H_DATABASE)
@@ -99,6 +104,9 @@ D_MD5              =    $(MD5)$(CC) $(H_MD5)
 D_SENDMAIL         =    $(SENDMAIL)$(CC) $(H_SENDMAIL)
 
 D_USER             =    $(USER)$(CC) $(H_USER)
+
+D_INPUTDETAIL      =    $(INPUTDETAIL)$(CC) $(H_INPUTDETAIL) \
+                        $(F_HEADER)$(FILENAME)$(H)
 
 #   Dependncy of main files
 
@@ -118,3 +126,5 @@ L_SIGNUP    :=   $(SIGNUP)$(MAIN)$(O) $(L_USER) $(USER)$(O)
 L_LOGIN     :=   $(LOGIN)$(MAIN)$(O) $(L_USER) $(USER)$(O)
 
 L_CONFIRM   :=   $(CONFIRM)$(MAIN)$(O) $(L_USER) $(USER)$(O)
+
+L_INPUTDETAIL  :=   $(DATABASE)$(O) $(READINPUTFIELD)$(O) 

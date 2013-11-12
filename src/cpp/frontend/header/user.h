@@ -2,14 +2,12 @@
  *       \file       user.h
  *
  *       \brief      Sign up and login module. Authenticate user for
- *                   logging in or registration of new user.
+ *                   logging in or registration of new user.\n
  *
- *       \version    1.0
- *       \date       07/16/2013 12:48:13 AM\n
  *       Compiler    g++
  *
  *       \author     Mandeep Kaur, meghasimak@gmail.com\n
- *       License     GNU General Public License
+ *       \license    GNU General Public License
  *       \copyright  Copyright (c) 2013, GreatDevelopers
  *                   https://github.com/GreatDevelopers
  */

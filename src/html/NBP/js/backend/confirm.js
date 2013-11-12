@@ -26,7 +26,7 @@ function ConfirmEmail(key)
     {
         if(XMLHttp.responseText != "")
         {
-            if(XMLHttp.responseText == "true")
+            if(XMLHttp.responseText === "true")
             {
 //                alert(XMLHttp.responseText);
                 document.getElementById('msg').innerHTML += "Email Confirmed";

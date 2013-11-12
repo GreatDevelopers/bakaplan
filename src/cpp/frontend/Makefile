@@ -25,7 +25,7 @@ include Make.common
 #   Targets
 # ====================================================================
 
-all: $(F_BP)$(SIGNUP) $(F_BP)$(LOGIN) $(F_BP)$(CONFIRM)
+all: $(F_BP)$(SIGNUP) $(F_BP)$(LOGIN) $(F_BP)$(CONFIRM) input-detail.o
 
 #	Target for compiling .cc or .cpp files
 
@@ -46,6 +46,10 @@ $(SENDMAIL)$(O) : $(D_SENDMAIL)
 
 $(USER)$(O) : $(D_USER)
 	$(CXX) $(CFLAG) $(USER)$(CC) $(LSMTP) $(LMYSQL) $(LCGICC)
+
+$(INPUTDETAIL)$(O) : $(D_INPUTDETAIL)
+	$(CXX) $(CFLAG) $(INPUTDETAIL)$(CC) $(LMYSQL) $(LCGICC)
+
 
 #	Targets for compiling cpp file(main files)
 
