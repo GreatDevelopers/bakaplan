@@ -50,7 +50,7 @@ void SendMail :: SetHTMLMessage(string regKey, string mail)
     url += SERVER_MAIL;
     url += "/~"; 
     url += USERNAME; 
-    url += "/cgi-bin/NBP/backend/bp/";
+    url += "/cgi-bin/nbp/";
     if(mail == "register")
         url += "confirm?Key=" + regKey;
     else
