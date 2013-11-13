@@ -16,7 +16,7 @@ function ConfirmEmail(key)
     console.log(GetUrlVars()["Key"]); 
     XMLHttp.open
 
-    ("GET", "../cgi-bin/nbp/confirm-user?"
+    ("GET", "../cgi-bin/nbp/confirm_user?"
 
     + "Key=" + GetUrlVars()["Key"]
 
