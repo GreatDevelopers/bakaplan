@@ -50,6 +50,18 @@ string ReadInputField :: ReadFieldValue(string fieldName, int fieldNo)
     return fieldValue;
 }
 
+
+/**
+ *      \fn     ReadInputField :: SetCookie(string, string)
+ *      \brief  Set session cookie
+ *      \param  cookieName Name of cookie
+ *      \param  value      Value of cookie
+ */
+void ReadInputField :: SetCookie(string cookieName, string value)
+{
+    cout << "Set-Cookie:" << cookieName << "=" << value << ";\r\n";
+}
+
 /**
  *      \fn     ReadInputField :: ReadCookie(string cookieName)
  *      \brief  Read cookies - email id and session id

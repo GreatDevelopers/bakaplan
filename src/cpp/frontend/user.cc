@@ -70,7 +70,7 @@ void User :: SelectUserDetail()
 
 void User :: LoginUser()
 {
-    cout << HTTPHTMLHeader() << endl;
+
     ReadLoginForm();
     SelectUserDetail();
 
@@ -85,13 +85,13 @@ void User :: LoginUser()
 
         if( temp == vecTemp[0] )   /**< If Password Correct */
         {
-            /* 
+             
             sessionID  = md5(userEmailID);
             currentTime = Time();
             sessionID += md5(currentTime);
             database.InsertSessionDetail(userEmailID, sessionID);
-            page.SetCookies(userEmailID, sessionID);
-            */
+            readField.SetCookie(field::name["sessionID"], sessionID);
+            
 
             msg = "true"; // Redirect to next page
         }
@@ -104,6 +104,7 @@ void User :: LoginUser()
     {
         msg = "Incorrect Email ID!";
     }
+    cout << HTTPHTMLHeader() << endl;
     cout << msg << endl;
 }
 

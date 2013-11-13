@@ -41,6 +41,7 @@ class User
                retypePassword;            /**< For reading password */
 
         string currentTime,                      /**< Currennt Time */
+               sessionID,                          /**< Session Key */
                key,                       /** Confirmation Link Key */
                msg,                   /**< Store error/info Message */
                temp,                        /**< Temporary variable */

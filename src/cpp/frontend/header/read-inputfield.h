@@ -43,7 +43,7 @@ class ReadInputField
 
         string ReadFieldValue(string fieldName);
         string ReadFieldValue(string fieldName, int fieldNo);
-
+        void SetCookie(string cookieName, string value);
         /* Read cookies */
         //string ReadCookie(string cookieName);
 };
