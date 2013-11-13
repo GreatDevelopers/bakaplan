@@ -73,7 +73,7 @@ H_FILENAME        =  $(F_HEADER)$(FILENAME)$(H)
 H_HEADER          =  $(F_HEADER)$(HEADER)$(H)
 
 H_DATABASE       :=  $(F_HEADER)$(DATABASE)$(H) \
-                     $(F_HEADER)$(DATABASE)-$(DETAIL)$(H) $(H_HEADER)
+                     $(F_HEADER)$(DATABASE)_$(DETAIL)$(H) $(H_HEADER)
 
 H_FIELDNAME       =  $(F_HEADER)$(FIELDNAME)$(H)
 
@@ -83,7 +83,7 @@ H_READINPUTFIELD :=  $(F_HEADER)$(READINPUTFIELD)$(H) $(H_HEADER) \
 H_MD5             =  $(F_HEADER)$(MD5)$(H)
 
 H_SENDMAIL       :=  $(F_HEADER)$(SENDMAIL)$(H) $(H_HEADER) \
-                     $(F_HEADER)$(SENDMAIL)-$(DETAIL)$(H)
+                     $(F_HEADER)$(SENDMAIL)_$(DETAIL)$(H)
 
 H_USER           :=  $(F_HEADER)$(USER)$(H) $(H_HEADER) $(H_DATABASE)\
                      $(H_READINPUTFIELD) $(H_MD5) $(H_SENDMAIL) \

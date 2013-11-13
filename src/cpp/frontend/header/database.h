@@ -17,7 +17,7 @@
 #define DATABASE_H
 
 #include "header.h"
-#include "database-detail.h"
+#include "database_detail.h"
 #include <mysql.h>
 
 

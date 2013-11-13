@@ -11,7 +11,7 @@
  *                   https://github.com/GreatDevelopers
  */
 
-#include "header/input-detail.h"
+#include "header/input_detail.h"
 #include "header/filename.h"
 
 namespace fn = filename;           /**< Shortname for namespace */

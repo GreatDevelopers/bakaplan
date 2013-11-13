@@ -16,7 +16,7 @@
 #ifndef  PROJECT_DETAIL_H
 #define  PROJECT_DETAIL_H
 
-#include "input-detail.h"
+#include "input_detail.h"
 
 /**
  *      \class  ProjectDetail

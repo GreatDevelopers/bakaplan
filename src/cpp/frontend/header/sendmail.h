@@ -20,7 +20,7 @@
 #include <iostream>
 #include "jwsmtp/jwsmtp.h"
 
-#include "sendmail-detail.h"
+#include "sendmail_detail.h"
 
 using namespace jwsmtp;
 using namespace std;
