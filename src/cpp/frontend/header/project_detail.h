@@ -12,11 +12,11 @@
  *                   https://github.com/GreatDevelopers
  */
 
-
 #ifndef  PROJECT_DETAIL_H
 #define  PROJECT_DETAIL_H
 
 #include "input_detail.h"
+#include "page_structure.h"
 
 /**
  *      \class  ProjectDetail
@@ -24,7 +24,7 @@
  *              save values in database.
  */
 
-class ProjectDetail : public InputDetail
+class ProjectDetail : public InputDetail, public PageStructure
 {
     protected:
         // For project detail

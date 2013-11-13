@@ -52,6 +52,8 @@ PAGESTRUCTURE   =  page_structure
 PROJECTDETAIL   =  project_detail
 CLASSDETAIL     =  class_detail
 
+BAKAPLAN        =  bakaplan
+
 #   Html pages file names
 
 SIGNUP      =  signup
@@ -97,6 +99,8 @@ H_PAGESTRUCTURE  :=  $(F_HEADER)$(PAGESTRUCTURE)$(H)
 
 H_PROJECTDETAIL  :=  $(H_INPUTDETAIL) $(F_HEADER)$(PROJECTDETAIL)$(H)
 
+H_BAKAPLAN       :=  $(H_PROJECTDETAIL) $(F_HEADER)$(BAKAPLAN)$(H)
+
 #   Variables for defining dependancy
 
 D_DATABASE         =    $(DATABASE)$(CC) $(H_DATABASE)
@@ -115,9 +119,13 @@ D_INPUTDETAIL      =    $(INPUTDETAIL)$(CC) $(H_INPUTDETAIL) \
                         $(F_HEADER)$(FILENAME)$(H)
 
 D_PROJECTDETAIL    =    $(PROJECTDETAIL)$(CC) $(H_PROJECTDETAIL) \
-                        $(F_HEADER)$(FILENAME)$(H)
+                        $(F_HEADER)$(FILENAME)$(H)\
+                        $(D_PAGESTRUCTURE)
                  
 D_PAGESTRUCTURE    =    $(PAGESTRUCTURE)$(CC) $(H_PAGESTRUCTURE)
+
+D_BAKAPLAN         =    $(BAKAPLAN)$(CC) $(H_BAKAPLAN)\
+                        $(D_PROJECTDETAIL)
 
 #   Dependncy of main files
 
@@ -126,6 +134,8 @@ D_M_SIGNUP      =   $(SIGNUP)$(MAIN)$(CPP) $(F_HEADER)$(USER)$(H)
 D_M_LOGIN       =   $(LOGIN)$(MAIN)$(CPP) $(F_HEADER)$(USER)$(H)
 
 D_M_CONFIRM     =   $(CONFIRM)$(MAIN)$(CPP) $(F_HEADER)$(USER)$(H)
+
+D_M_BAKAPLAN    =   $(BAKAPLAN)$(MAIN)$(CPP) $(F_HEADER)$(BAKAPLAN)$(H)
 
 #   Linking variables
 
@@ -140,4 +150,8 @@ L_CONFIRM   :=   $(CONFIRM)$(MAIN)$(O) $(L_USER) $(USER)$(O)
 
 L_INPUTDETAIL     :=   $(DATABASE)$(O) $(READINPUTFIELD)$(O)
 
-L_PROJECTDETAIL   :=   $(L_INPUTDETAIL) 
+L_PROJECTDETAIL   :=   $(L_INPUTDETAIL) $(PAGESTRUCTURE)$(O)
+
+L_BAKAPLAN        :=   $(L_PROJECTDETAIL) $(BAKAPLAN)$(MAIN)$(O)\
+                       $(BAKAPLAN)$(O) $(PROJECTDETAIL)$(O)\
+                       $(INPUTDETAIL)$(O)

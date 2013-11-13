@@ -46,6 +46,7 @@ void ProjectDetail :: WriteProjectDetail()
  */
 void ProjectDetail :: ProjectDetailPage()
 {
+    cout << HTTPHTMLHeader() << endl;
 
 }
 
