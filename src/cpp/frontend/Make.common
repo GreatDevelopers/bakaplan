@@ -38,22 +38,24 @@ F_BP            =  ../bp/
 HEADER          =  header
 FILENAME        =  filename
 DETAIL          =  detail
-MAIN            =  -main
+MAIN            =  _main
 CGICC           =  cgicc
 CONSTANT        =  constant
 DATABASE        =  database
 FIELDNAME       =  fieldname
 MD5             =  md5
-READINPUTFIELD  =  read-inputfield
+READINPUTFIELD  =  read_inputfield
 SENDMAIL        =  sendmail
 USER            =  user
-INPUTDETAIL     =  input-detail
+INPUTDETAIL     =  input_detail
+PROJECTDETAIL   =  project_detail
+CLASSDETAIL     =  class_detail
 
 #   Html pages file names
 
 SIGNUP      =  signup
 LOGIN       =  login
-CONFIRM     =  confirm-user
+CONFIRM     =  confirm_user
 
 #   File Extention variables
 

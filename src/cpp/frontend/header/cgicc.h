@@ -16,7 +16,7 @@
 #ifndef CGICC_H
 #define CGICC_H
 
-/**
+/*
  *  Header files for using cgicc library
  */
 
