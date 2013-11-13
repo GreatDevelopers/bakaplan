@@ -62,17 +62,12 @@ class InputDetail
 
     InputDetail();
       
-    void CSS(string href);              
-    void Javascript(string src);
-
-    void CommonJSFiles();
-    void CommonCSSFiles();
-
     string IntToString(int value);
     int StringToInt(string value);
     void SplitString(STRING_VEC & output, 
                      string input, string token);
     string FileName(string file, string projectID, int fileType);
+
 
     ~InputDetail();
 };

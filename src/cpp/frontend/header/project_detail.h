@@ -24,7 +24,7 @@
  *              save values in database.
  */
 
-class ProjectDetail :: InputDetail
+class ProjectDetail : public InputDetail
 {
     protected:
         // For project detail
@@ -34,7 +34,9 @@ class ProjectDetail :: InputDetail
     public:
         ProjectDetail();
 
-        ReadProjectDetail();
+        void ReadProjectDetail();
+        void WriteProjectDetail();
+        void ProjectDetailPage();
 
         ~ProjectDetail();
 };

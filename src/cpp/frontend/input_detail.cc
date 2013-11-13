@@ -25,6 +25,8 @@ InputDetail :: InputDetail()
     // Default Values
 }
 
+
+
 /**
  *      \fn     InputDetail :: IntToString(int)
  *      \brief  Converting integer to string

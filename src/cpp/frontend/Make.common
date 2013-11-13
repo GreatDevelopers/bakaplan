@@ -37,7 +37,7 @@ F_HEADER_JWSMTP =  header/jwsmtp/
 F_BP            =  ../bp/
 HEADER          =  header
 FILENAME        =  filename
-DETAIL          =  detail
+DETAIL          =  _detail
 MAIN            =  _main
 CGICC           =  cgicc
 CONSTANT        =  constant
@@ -48,6 +48,7 @@ READINPUTFIELD  =  read_inputfield
 SENDMAIL        =  sendmail
 USER            =  user
 INPUTDETAIL     =  input_detail
+PAGESTRUCTURE   =  page_structure
 PROJECTDETAIL   =  project_detail
 CLASSDETAIL     =  class_detail
 
@@ -73,7 +74,7 @@ H_FILENAME        =  $(F_HEADER)$(FILENAME)$(H)
 H_HEADER          =  $(F_HEADER)$(HEADER)$(H)
 
 H_DATABASE       :=  $(F_HEADER)$(DATABASE)$(H) \
-                     $(F_HEADER)$(DATABASE)_$(DETAIL)$(H) $(H_HEADER)
+                     $(F_HEADER)$(DATABASE)$(DETAIL)$(H) $(H_HEADER)
 
 H_FIELDNAME       =  $(F_HEADER)$(FIELDNAME)$(H)
 
@@ -83,15 +84,18 @@ H_READINPUTFIELD :=  $(F_HEADER)$(READINPUTFIELD)$(H) $(H_HEADER) \
 H_MD5             =  $(F_HEADER)$(MD5)$(H)
 
 H_SENDMAIL       :=  $(F_HEADER)$(SENDMAIL)$(H) $(H_HEADER) \
-                     $(F_HEADER)$(SENDMAIL)_$(DETAIL)$(H)
+                     $(F_HEADER)$(SENDMAIL)$(DETAIL)$(H)
 
 H_USER           :=  $(F_HEADER)$(USER)$(H) $(H_HEADER) $(H_DATABASE)\
                      $(H_READINPUTFIELD) $(H_MD5) $(H_SENDMAIL) \
                      $(H_FIELDNAME)
 
 H_INPUTDETAIL    :=  $(F_HEADER)$(INPUTDETAIL)$(H) $(H_HEADER) $(H_DATABASE)\
-                     $(H_READINPUTFIELD) $(H_FIELDNAME)
+                     $(H_READINPUTFIELD)
 
+H_PAGESTRUCTURE  :=  $(F_HEADER)$(PAGESTRUCTURE)$(H)
+
+H_PROJECTDETAIL  :=  $(H_INPUTDETAIL) $(F_HEADER)$(PROJECTDETAIL)$(H)
 
 #   Variables for defining dependancy
 
@@ -109,6 +113,11 @@ D_USER             =    $(USER)$(CC) $(H_USER)
 
 D_INPUTDETAIL      =    $(INPUTDETAIL)$(CC) $(H_INPUTDETAIL) \
                         $(F_HEADER)$(FILENAME)$(H)
+
+D_PROJECTDETAIL    =    $(PROJECTDETAIL)$(CC) $(H_PROJECTDETAIL) \
+                        $(F_HEADER)$(FILENAME)$(H)
+                 
+D_PAGESTRUCTURE    =    $(PAGESTRUCTURE)$(CC) $(H_PAGESTRUCTURE)
 
 #   Dependncy of main files
 
@@ -129,4 +138,6 @@ L_LOGIN     :=   $(LOGIN)$(MAIN)$(O) $(L_USER) $(USER)$(O)
 
 L_CONFIRM   :=   $(CONFIRM)$(MAIN)$(O) $(L_USER) $(USER)$(O)
 
-L_INPUTDETAIL  :=   $(DATABASE)$(O) $(READINPUTFIELD)$(O) 
+L_INPUTDETAIL     :=   $(DATABASE)$(O) $(READINPUTFIELD)$(O)
+
+L_PROJECTDETAIL   :=   $(L_INPUTDETAIL) 
