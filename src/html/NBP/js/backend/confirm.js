@@ -24,19 +24,21 @@ function ConfirmEmail(key)
     
     XMLHttp.onreadystatechange=function() 
     {
-        if(XMLHttp.responseText != "")
+        if(XMLHttp.responseText == "true")
         {
-            if(XMLHttp.responseText === "true")
-            {
-//                alert(XMLHttp.responseText);
-                document.getElementById('msg').innerHTML += "Email Confirmed";
-            }
-            else         
-            {
-                alert(XMLHttp.responseText);
-    //            window.location.href = "index.html";
-                document.getElementById('msg').innerHTML = "Invalid Link";
-            }
+//            document.getElementById('msg').innerHTML += "Email Confirmed";
+            var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
+  	    	theErrorTip.setContent("Email Confirmed");
+		    theErrorTip.show();	
+
+        }
+        else         
+        {
+            window.location.href = "index.html";
+//            document.getElementById('msg').innerHTML = "Invalid Link";
+            var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
+  	        theErrorTip.setContent("Invalid Link");
+		    theErrorTip.show();	
         }
     }
 

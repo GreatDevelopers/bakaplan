@@ -16,7 +16,6 @@
 #define  PROJECT_DETAIL_H
 
 #include "input_detail.h"
-#include "page_structure.h"
 
 /**
  *      \class  ProjectDetail
@@ -24,7 +23,7 @@
  *              save values in database.
  */
 
-class ProjectDetail : public InputDetail, public PageStructure
+class ProjectDetail : public InputDetail
 {
     protected:
         // For project detail

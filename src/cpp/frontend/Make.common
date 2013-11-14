@@ -93,7 +93,7 @@ H_USER           :=  $(F_HEADER)$(USER)$(H) $(H_HEADER) $(H_DATABASE)\
                      $(H_FIELDNAME)
 
 H_INPUTDETAIL    :=  $(F_HEADER)$(INPUTDETAIL)$(H) $(H_HEADER) $(H_DATABASE)\
-                     $(H_READINPUTFIELD)
+                     $(H_READINPUTFIELD) $(H_PAGESTRUCTURE)
 
 H_PAGESTRUCTURE  :=  $(F_HEADER)$(PAGESTRUCTURE)$(H)
 
@@ -116,11 +116,11 @@ D_SENDMAIL         =    $(SENDMAIL)$(CC) $(H_SENDMAIL)
 D_USER             =    $(USER)$(CC) $(H_USER)
 
 D_INPUTDETAIL      =    $(INPUTDETAIL)$(CC) $(H_INPUTDETAIL) \
-                        $(F_HEADER)$(FILENAME)$(H)
-
-D_PROJECTDETAIL    =    $(PROJECTDETAIL)$(CC) $(H_PROJECTDETAIL) \
                         $(F_HEADER)$(FILENAME)$(H)\
                         $(D_PAGESTRUCTURE)
+
+D_PROJECTDETAIL    =    $(PROJECTDETAIL)$(CC) $(H_PROJECTDETAIL) \
+                        $(F_HEADER)$(FILENAME)$(H)
                  
 D_PAGESTRUCTURE    =    $(PAGESTRUCTURE)$(CC) $(H_PAGESTRUCTURE)
 
@@ -148,9 +148,10 @@ L_LOGIN     :=   $(LOGIN)$(MAIN)$(O) $(L_USER) $(USER)$(O)
 
 L_CONFIRM   :=   $(CONFIRM)$(MAIN)$(O) $(L_USER) $(USER)$(O)
 
-L_INPUTDETAIL     :=   $(DATABASE)$(O) $(READINPUTFIELD)$(O)
+L_INPUTDETAIL     :=   $(DATABASE)$(O) $(READINPUTFIELD)$(O)\
+                       $(PAGESTRUCTURE)$(O)
 
-L_PROJECTDETAIL   :=   $(L_INPUTDETAIL) $(PAGESTRUCTURE)$(O)
+L_PROJECTDETAIL   :=   $(L_INPUTDETAIL) 
 
 L_BAKAPLAN        :=   $(L_PROJECTDETAIL) $(BAKAPLAN)$(MAIN)$(O)\
                        $(BAKAPLAN)$(O) $(PROJECTDETAIL)$(O)\

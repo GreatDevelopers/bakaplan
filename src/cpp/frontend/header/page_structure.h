@@ -33,7 +33,7 @@ class PageStructure
         PageStructure();
 
         void CSS(string href);              
-        void Javascript(string src);
+        void JS(string src);
 
         void CommonJSFiles();
         void CommonCSSFiles();

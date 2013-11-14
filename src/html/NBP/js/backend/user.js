@@ -26,14 +26,13 @@ function GetSignUpResponse()
 
         XMLHttp.onreadystatechange=function() 
         {
-            if(XMLHttp.responseText != "true")
+            if(XMLHttp.responseText.trim() != "true")
             {
 //            document.getElementById('msg').innerHTML = "<br>" + XMLHttp.responseText;
 
                 var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
   	    		theErrorTip.setContent(XMLHttp.responseText);
 		        theErrorTip.show();	
-    
             }
         }
         XMLHttp.send(null);
@@ -65,9 +64,8 @@ function GetLoginResponse()
     
         XMLHttp.onreadystatechange=function() 
         {
-            if(XMLHttp.responseText != "true")
+            if(XMLHttp.responseText.trim() != "true")
             {
-//            document.getElementById('msg').innerHTML = XMLHttp.responseText;
                 var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
   			    theErrorTip.setContent(XMLHttp.responseText);
     		    theErrorTip.show();	
@@ -75,7 +73,7 @@ function GetLoginResponse()
         }
         XMLHttp.send(null);
 
-        if(XMLHttp.responseText == "true")
+        if(XMLHttp.responseText.trim() == "true")
             return true;
         else
             return false;

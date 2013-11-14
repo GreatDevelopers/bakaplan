@@ -18,6 +18,7 @@
 #include "header.h"
 #include "database.h"
 #include "read_inputfield.h"
+#include "page_structure.h"
 
 /**
  *      \class  InputDetail
@@ -25,7 +26,7 @@
  *              as base class.
  */
 
-class InputDetail
+class InputDetail : public PageStructure
 {
     protected:
         /* Common variables and objects */
@@ -54,11 +55,10 @@ class InputDetail
         ofstream outFile;                     /**< For writing file */
         string sessionID;                       /**< Session ID */
 
-        Database db;                    /**< DataBase class's object*/
-        ReadInputField readField;         /**< Reading Inpur fields */
-
 
     public:
+        Database db;                    /**< DataBase class's object*/
+        ReadInputField readField;         /**< Reading Inpur fields */
 
         InputDetail();
       

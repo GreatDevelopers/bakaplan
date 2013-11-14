@@ -29,19 +29,19 @@ PageStructure :: PageStructure()
  */
 void PageStructure :: CSS(string href)
 {
-    cout << "<link href=\"" << href << "\"" 
-         << " rel=\"stylesheet\" media=\"screen\" type=\"text/css\">"
+    cout << "<link href=\"../../NBP/" << href << "\"" 
+         << " rel=\"stylesheet\" media=\"all\" type=\"text/css\">"
          << endl;
 }
 
 /**
- *      \fn     PageStructure :: Javascript(string)
+ *      \fn     PageStructure :: JS(string)
  *      \brief  Adding Javascript file in HTML Page
  *      \param  src source link
  */
-void PageStructure :: Javascript(string src)
+void PageStructure :: JS(string src)
 {
-    cout << "<script src=\"" << src << "\"></script>" << endl;
+    cout << "<script src=\"../../NBP/" << src << "\"></script>" << endl;
 }
 
 /**
@@ -54,12 +54,46 @@ void PageStructure :: SideMenu()
          << " <span id=\"toggle-menu\"> <p id=\"toggle-menu-circle\"> "
          << "Show Menu </p> </span> "
          << " <h3> Ba<span class=\"ka\">ka</span> Plan</h3>"
-         << "<a href=\"main\"> Home </a>"
+         << "<a href=\"bakaplan\"> Home </a>"
 //         << "<a href=\"../../BaKaPlan/about.html\"> About </a>"
 //         << "<a href=\"contribute.html\"> Contribute </a>"
 //         << "<a href=\"../../BaKaPlan/contact.html\">Contact  </a>"
-         << "<a href=\"main?log_out=yes\"> Log Out </a>"
+         << "<a href=\"bakaplan?LogOut=yes\"> Log Out </a>"
          << "</nav> ";
+}
+
+/**
+ *      \fn     PageStructure :: CommonCSSFiles()
+ *      \brief  Adding css files for all pages
+ */
+void PageStructure :: CommonCSSFiles()
+{
+    // Fonts from google fonts, Roboto and Arvo
+//    CSS("http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700");
+    cout << "<link href='http://fonts.googleapis.com/css?family="
+            "Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>";
+    // CSS files for our pages layout
+    CSS("styles/general.css");
+    CSS("styles/pages.css");
+    CSS("styles/opentip.css");
+}
+
+/**
+ *      \fn     PageStructure :: CommonJSFiles()
+ *      \brief  Adding JS files for all pages
+ */
+void PageStructure :: CommonJSFiles()
+{
+    // Open Tooltip Javascript and css framework for adding tooltips
+    cout << "<script src=\"http://"
+            "ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js\""
+            "></script>";
+
+    JS("js/opentip-jquery.min.js");
+    JS("js/opentip-myStyles.js");
+    JS("js/validate.min.js");
+    JS("js/sidemenu.js");
+    JS("js/opentip-myStyles.js");
 }
 
 /**
