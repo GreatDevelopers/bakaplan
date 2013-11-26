@@ -51,7 +51,8 @@ class ReadInput
                      subjectName,                 /**< Subject Name */
                      examSubCode,     /**< Examination/subject code */
                      examSubName,           /**< Exam/ subejct Name */
-                     centreName;                   /**< Centre NAme */
+                     centreName,                   /**< Centre NAme */
+                     arrangedRollNo;         /**< Arranged Roll Nos */
 
         STRING_3DVEC roomNo;                           /**< Room No */
 
@@ -93,6 +94,9 @@ class ReadInput
 
         /** Reading Class details from I/P file */
         void ReadClassDetail(string projectID);
+
+        /** Reading Arranged Roll No from O/P file */
+        void ReadArrangedRollNo(string projectID);
 
         /** Reading Datesheet */
         void ReadDateSheet(string projectID);

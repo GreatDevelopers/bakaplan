@@ -33,6 +33,7 @@
 #include <climits>
 #include <deque>
 #include <algorithm>
+#include <set>
 #include <ctime>
 #include <setjmp.h>
 #include <hpdf.h>

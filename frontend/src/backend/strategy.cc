@@ -281,6 +281,7 @@ void Strategy :: Main(string pID)
     ReadRoomDetail(projectID);
     ReadExamDetail(projectID);
     ReadStrategy(projectID);
+    ReadArrangedRollNo(projectID);
 
     ChooseStrategy();
 }

@@ -46,8 +46,14 @@ class SeatPlan : public ReadInput
         STRING_2DVEC seatRollNo, 
                      subRollNo;
 
-        STRING_4DVEC seat;
+        STRING_3DVEC rollNoInRoom;
 
+        STRING_4DVEC seat,
+                     totalRollNoInRoom;
+        
+ //       set<set<set<set<string> > > > totalRollNoInRoom;
+       // set<string> sortedString;
+        
         //PDF variables
         
         int textWidth,textWidth1;

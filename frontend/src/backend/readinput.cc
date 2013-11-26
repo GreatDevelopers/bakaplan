@@ -193,6 +193,41 @@ void ReadInput :: ReadRoomDetail(string projectID)
 
 /**
  *      \class  ReadInput
+ *      \fn     ReadInput :: ReadArrangedRollNo(string fileName)
+ *      \brief  Reading Roll No detail from file
+ *      \param  projectID Name of O/P file for roll nos.
+ */
+
+void ReadInput :: ReadArrangedRollNo(string projectID)
+{
+    temp = FileName(ARRANGE_ROLLNO, projectID, 0);
+
+    inFile.open(temp.c_str());
+    
+    int totalClass, totalRNo;
+
+    inFile >> totalClass;
+    
+    // Resizing vector's size
+    arrangedRollNo.resize(totalClass);
+
+    getline(inFile, temp, '\n');
+    
+    for(i = 0; i < totalClass; i++)
+    {
+        inFile >> totalRNo;
+        arrangedRollNo[i].resize(totalRNo);
+        getline(inFile, arrangedRollNo[i][0], '\n');
+        for(j = 0; j < totalRNo; j++)
+        {
+            getline(inFile, arrangedRollNo[i][j], '\n');
+        }
+    }
+
+    inFile.close();
+}
+/**
+ *      \class  ReadInput
  *      \fn     ReadInput :: ReadRollNoDetail(string fileName)
  *      \brief  Reading Roll No detail from file
  *      \param  projectID Name of I/P file for roll nos.

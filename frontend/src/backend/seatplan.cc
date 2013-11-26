@@ -116,9 +116,13 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
     }
 
     seat.resize(totalCentres[i]);
+    rollNoInRoom.resize(totalCentres[i]);
+    
     for(centre = 0; centre < totalCentres[i]; centre++)
     {
         seat[centre].resize(totalRooms[i][centre]);
+        rollNoInRoom[centre].resize(totalRooms[i][centre]);
+        
         for(room = 0; room < totalRooms[i][centre]; room++)
         {
             seat[centre][room].resize(rows[i][centre][room]);
@@ -159,6 +163,7 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
                             if(s == stra)
                                 s = 0;
                             seat[centre][room][col][row] = RollNo(s);
+                            rollNoInRoom[centre][room].push_back(seat[centre][room][col][row]);
                             s++;
                         }
                     }
@@ -170,6 +175,7 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
                             if(s == stra)
                                 s = 0;
                             seat[centre][room][col][row] = RollNo(s);
+                            rollNoInRoom[centre][room].push_back(seat[centre][room][col][row]);
                             s++;
                         }
                     }
@@ -193,7 +199,10 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
                             else
                                 s = 0;
                         }
+                        
+//                        rollNoInRoom[centre][room].push_back(RollNo(s));
                         seat[centre][room][col][row] = RollNo(s);
+                        rollNoInRoom[centre][room].push_back(seat[centre][room][col][row]);
                         
                         if(strategy == 6)
                         {
@@ -228,6 +237,7 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
                             s = 0;
                         }
                         seat[centre][room][row][col] = RollNo(s);
+                        rollNoInRoom[centre][room].push_back(seat[centre][room][col][row]);
                         s++;
                     }
                 }
@@ -257,6 +267,34 @@ string SeatPlan :: RollNo(int s)
 
 void SeatPlan :: AddRollNoInfo(string projectID, int i)
 {
+    totalRollNoInRoom.resize(totalCentres[i]);
+    
+    for(centre = 0; centre < totalCentres[i]; centre++)
+    {
+        totalRollNoInRoom[centre].resize(totalRooms[i][centre]);
+        
+        for(room = 0; room < totalRooms[i][centre]; room++)
+        {
+             
+            totalRollNoInRoom[centre][room].resize(totalClasses);
+            
+            for(int classNo = 0; classNo < totalClasses; classNo++)
+            {
+                
+                for(unsigned int rno = 0; rno < rollNoInRoom[centre][room].size(); rno++)
+                {                    
+                    if(find(arrangedRollNo[classNo].begin(), arrangedRollNo[classNo].end(), rollNoInRoom[centre][room][rno])
+                       != arrangedRollNo[classNo].end())
+                    {
+                        totalRollNoInRoom[centre][room][classNo].push_back(rollNoInRoom[centre][room][rno]);
+                    }
+                }
+                 
+//                sort(totalRollNoInRoom[centre][room][classNo].begin(), totalRollNoInRoom[centre][room][classNo].end());
+                
+            }
+        }
+    }
 
 }
 
@@ -296,6 +334,7 @@ void SeatPlan :: WriteSeatPlan(string projectID, int i)
         }
     }
     outFile.close();
+    AddRollNoInfo(projectID, i);
     WriteHTMLFile(projectID, i);
     WritePDFFile(projectID, i);
 }
@@ -329,11 +368,22 @@ void SeatPlan :: WriteHTMLFile(string projectID, int i)
             
             << endl;
      
+            int total = 0;
     for(centre = 0; centre < totalCentres[i]; centre++)
     {
         
         for(room = 0; room < totalRooms[i][centre]; room++)
         {
+            total = 0;
+            for(int classNo = 0; classNo < totalClasses; classNo++)
+            {
+                int sz = totalRollNoInRoom[centre][room][classNo].size();
+
+                total += sz;
+            }
+            
+            if(total != 0)
+            {
             outFile << "<h1 style = \" line-height:20%; font-family:arial;"
                     << " font-size: 170%;\"> " << examName[i] <<"</h1>"
                     << "<h2 style=\"font-size: 120%;\"> " << examDate[i]
@@ -380,10 +430,32 @@ void SeatPlan :: WriteHTMLFile(string projectID, int i)
                 outFile << "</tr>";
             }
             outFile << "</table>";
+            
+
+            for(int classNo = 0; classNo < totalClasses; classNo++)
+            {
+                int sz = totalRollNoInRoom[centre][room][classNo].size();
+
+                total += sz;
+
+                if(sz != 0)
+                {
+//                    outFile << "<br> " << totalClasses << endl;
+                
+                    outFile << "<br>"
+                            << className[classNo] << " {" 
+                            //<< totalRollNoInRoom[centre][room][classNo][0]
+                            << " - "
+                            //<< totalRollNoInRoom[centre][room][classNo][sz - 2]
+                            << "} : " << sz;
+                }
+                        
+            }
+
             outFile << "<br> Seating Plan generated by "
                 << "BaKaPlan(http://freecode.com/projects/bakaplan)";
             outFile << "<div>  </div>";
-
+        }
         }
     }
     outFile << "</body></html>";
