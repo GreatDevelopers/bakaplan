@@ -447,8 +447,8 @@ void SeatPlan :: WriteHTMLFile(string projectID, int i)
                             //<< totalRollNoInRoom[centre][room][classNo][0]
                             //<< " - "
                             //<< totalRollNoInRoom[centre][room][classNo][sz - 2]
-                            //<< "} : " 
-                            << sz;
+                            //<< "} " 
+                            << " : " << sz;
                 }
                         
             }
