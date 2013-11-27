@@ -443,11 +443,11 @@ void SeatPlan :: WriteHTMLFile(string projectID, int i)
 //                    outFile << "<br> " << totalClasses << endl;
                 
                     outFile << "<br>"
-                            << className[classNo] //<< " {" 
-                            //<< totalRollNoInRoom[centre][room][classNo][0]
-                            //<< " - "
-                            //<< totalRollNoInRoom[centre][room][classNo][sz - 2]
-                            //<< "} " 
+                            << className[classNo] << " {" 
+                            << totalRollNoInRoom[centre][room][classNo][0]
+                            << " - "
+                            << totalRollNoInRoom[centre][room][classNo][sz - 2]
+                            << "} " 
                             << " : " << sz;
                 }
                         
