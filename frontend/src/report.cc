@@ -111,6 +111,12 @@ void Report :: ReportPage()
          cout << td();
          page.Anchor(temp, "PDF");
          cout << td(); 
+         temp = "../../SeatPlan/attendance-file-" + projectID +
+                "-" + IntToString(i + 1) + ".html";
+         cout << td();
+         page.Anchor(temp, "Attendance List");
+         cout << td();
+
          cout << tr();
     }
 

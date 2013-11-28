@@ -76,6 +76,7 @@ class SeatPlan : public ReadInput
         void SeatingPlan(int strategy, int i);
         void CreateFile(string projectID);
         void WriteSeatPlan(string projectID, int i);
+        void WriteAttendanceFile(string projectID, int i);
         void WriteHTMLFile(string projectID, int i);
         void WritePDFFile(string projectID, int i);
         void AddRollNoInfo(string projectID, int i);

@@ -337,6 +337,7 @@ void SeatPlan :: WriteSeatPlan(string projectID, int i)
     AddRollNoInfo(projectID, i);
     WriteHTMLFile(projectID, i);
     WritePDFFile(projectID, i);
+    WriteAttendanceFile(projectID, i);
 }
 
 /**
@@ -448,7 +449,7 @@ void SeatPlan :: WriteHTMLFile(string projectID, int i)
                             << " - "
                             << totalRollNoInRoom[centre][room][classNo][sz - 2]
                             << "} " 
-                            << " : " << sz;
+                            << ": " << sz;
                 }
                         
             }
@@ -466,6 +467,179 @@ void SeatPlan :: WriteHTMLFile(string projectID, int i)
     outFile.close();
 }
 
+/**
+ *      \class  SeatPlan
+ *      \fn     SeatPlan :: WriteAttendanceFile(string projectID, int i)
+ *      \brief  Creating HTML file for Attendance file
+ *      \param  projectID   Project Id of seating plan project
+ *      \param  i           For creating file accord to datesheet
+ */
+
+void SeatPlan :: WriteAttendanceFile(string projectID, int i)
+{
+
+    temp = "../../SeatPlan/attendance-file-" + projectID + ".html";
+    
+    outFile.open(temp.c_str());
+    outFile << "<html><head><title>BaKaPlan</title>"
+            << "<style> @media print { div {page-break-before:always} } "
+            << "td {font-size:130%; font-weight:bold;}"
+            << "h1 {font-size:300%; font-family: }"
+            << "body{font-family:\"Open Sans\"; text-align:center;"
+            << "margin:10 auto}"
+            << "</style> "
+            << "<link href='http://fonts.googleapis.com/css?family="
+            << "Open+Sans' rel='stylesheet' type='text/css'>"
+            
+            << "</head>"
+            << "<body align = \"center\" > "
+            
+            << endl;
+     
+            int total = 0;
+    for(centre = 0; centre < totalCentres[i]; centre++)
+    {
+        
+        for(room = 0; room < totalRooms[i][centre]; room++)
+        {
+            total = 0;
+            for(int classNo = 0; classNo < totalClasses; classNo++)
+            {
+                int sz = totalRollNoInRoom[centre][room][classNo].size();
+
+                total += sz;
+            }
+            row = 1;
+            if(total != 0)
+            {
+            outFile << "<h1 style = \" line-height:20%; font-family:arial;"
+                    << " font-size: 170%;\"> " << examName[i] <<"</h1>"
+                    << "<h2 style=\"font-size: 120%;\"> " << examDate[i]
+                    << " | at " << examTime[i] << " |&nbsp Venue : " 
+                    << examVenue[i]
+                    << "</h2>";
+                    
+            outFile << "<h2 style=\"line-height:20%;\" >Centre : " 
+                    << centreName[i][centre] 
+                    << "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"
+                    << " Room : " << roomNo[i][centre][room] << "</h2>";
+            outFile << "<table align = \"center\" cellpadding = \"2\""
+                    << " cellspacing = \"1\" border = \"1\" width = \"800px\">";
+                    
+             outFile << "<tr>";
+             
+             //j = 65 + cols[i][centre][room];
+             string tableHead[] = {"S. No.", "Roll No.", "Sheet No.",
+                                   "Signature"};
+
+                for(k = 0; k < 4; k++)
+                {
+                    outFile << "<th width = \"80\" height = \"30\""
+                            << " align = \"center\" valign = \"center\">" 
+                            << tableHead[k] << "</th>";
+                }
+                outFile << "</tr>";
+            {
+                row = 1;
+                for(unsigned int rno = 0; rno < rollNoInRoom[centre][room].size(); rno++)
+                {
+       
+            outFile << "<tr><td width = \"80\" height = \"30\" "
+                        << "align = \"center\" valign = \"center\">"
+                        << rno + 1
+                        << "</td>";
+                    outFile << "<td width = \"80\" height = \"30\" "
+                            << "align = \"center\" valign = \"center\">" 
+                            << rollNoInRoom[centre][room][rno]
+                            << "</td>";
+    
+                    outFile << "<td width = \"100\" height = \"30\" "
+                            << "align = \"center\" valign = \"center\">" 
+                            << " "
+                            << "</td>";
+
+                    outFile << "<td width = \"100\" height = \"30\" "
+                            << "align = \"center\" valign = \"center\">" 
+                            << " "
+                            << "</td>";
+
+                outFile << "</tr>";
+                if(row == 25)
+                {
+                    outFile << "</table>";
+
+                    outFile << "<div>  </div>";
+
+     outFile << "<h1 style = \" line-height:20%; font-family:arial;"
+                    << " font-size: 170%;\"> " << examName[i] <<"</h1>"
+                    << "<h2 style=\"font-size: 120%;\"> " << examDate[i]
+                    << " | at " << examTime[i] << " |&nbsp Venue : " 
+                    << examVenue[i]
+                    << "</h2>";
+                    
+            outFile << "<h2 style=\"line-height:20%;\" >Centre : " 
+                    << centreName[i][centre] 
+                    << "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"
+                    << " Room : " << roomNo[i][centre][room] << "</h2>";
+            outFile << "<table align = \"center\" cellpadding = \"2\""
+                    << " cellspacing = \"1\" border = \"1\" width = \"800px\">";
+                    
+             outFile << "<tr>";
+             
+             //j = 65 + cols[i][centre][room];
+             string tableHead[] = {"S. No.", "Roll No.", "Sheet No.",
+                                   "Signature"};
+
+                for(k = 0; k < 4; k++)
+                {
+                    outFile << "<th width = \"80\" height = \"30\""
+                            << " align = \"center\" valign = \"center\">" 
+                            << tableHead[k] << "</th>";
+                }
+                outFile << "</tr>";
+
+
+                    row = 1;
+                }
+                    row++;
+                }
+            }
+            outFile << "</table>";
+            
+
+            for(int classNo = 0; classNo < totalClasses; classNo++)
+            {
+                int sz = totalRollNoInRoom[centre][room][classNo].size();
+
+//                total += sz;
+
+                if(sz != 0)
+                {
+//                    outFile << "<br> " << totalClasses << endl;
+                
+                    outFile << "<br>"
+                            << className[classNo] << " {" 
+                            << totalRollNoInRoom[centre][room][classNo][0]
+                            << " - "
+                            << totalRollNoInRoom[centre][room][classNo][sz - 2]
+                            << "} " 
+                            << ": " << sz;
+                }
+                        
+            }
+
+            outFile << "<br>" << "Total Students: " << total << "<br>";
+
+            outFile << "<br> Seating Plan generated by "
+                << "BaKaPlan(http://freecode.com/projects/bakaplan)";
+            outFile << "<div>  </div>";
+        }
+        }
+    }
+    outFile << "</body></html>";
+    
+    outFile.close();
+}
 
 //PDF addition
 
