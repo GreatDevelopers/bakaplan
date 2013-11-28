@@ -104,17 +104,19 @@ void Report :: ReportPage()
          temp = "../../SeatPlan/seatplan-" + projectID +
                 "-" + IntToString(i + 1) + ".html";
          cout << td();
+         cout << "Seating Plan (";
          page.Anchor(temp, "HTML");
-         cout << td();
+         
          temp = "../../SeatPlan/seatplan-" + projectID +
                 "-" + IntToString(i + 1) + ".pdf";
-         cout << td();
+         cout << "/";
          page.Anchor(temp, "PDF");
-         cout << td(); 
+         cout << ") ";
          temp = "../../SeatPlan/attendance-file-" + projectID +
                 "-" + IntToString(i + 1) + ".html";
-         cout << td();
+         
          page.Anchor(temp, "Attendance List");
+         
          cout << td();
 
          cout << tr();
