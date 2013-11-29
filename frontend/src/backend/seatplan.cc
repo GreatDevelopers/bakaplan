@@ -555,12 +555,12 @@ void SeatPlan :: WriteAttendanceFile(string projectID, int i)
     
                     outFile << "<td width = \"100\" height = \"30\" "
                             << "align = \"center\" valign = \"center\">" 
-                            << " "
+                            << "&nbsp;"
                             << "</td>";
 
                     outFile << "<td width = \"100\" height = \"30\" "
                             << "align = \"center\" valign = \"center\">" 
-                            << " "
+                            << "&nbsp;"
                             << "</td>";
 
                 outFile << "</tr>";
@@ -569,6 +569,7 @@ void SeatPlan :: WriteAttendanceFile(string projectID, int i)
                     outFile << "</table>";
 
                     outFile << "<div>  </div>";
+                    outFile << "<br>";
 
      outFile << "<h1 style = \" line-height:20%; font-family:arial;"
                     << " font-size: 170%;\"> " << examName[i] <<"</h1>"
