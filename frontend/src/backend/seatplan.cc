@@ -447,7 +447,7 @@ void SeatPlan :: WriteHTMLFile(string projectID, int i)
                             << className[classNo] << " {" 
                             << totalRollNoInRoom[centre][room][classNo][0]
                             << " - "
-                            << totalRollNoInRoom[centre][room][classNo][sz - 2]
+                            << totalRollNoInRoom[centre][room][classNo][sz - 1]
                             << "} " 
                             << ": " << sz;
                 }
@@ -622,7 +622,7 @@ void SeatPlan :: WriteAttendanceFile(string projectID, int i)
                             << className[classNo] << " {" 
                             << totalRollNoInRoom[centre][room][classNo][0]
                             << " - "
-                            << totalRollNoInRoom[centre][room][classNo][sz - 2]
+                            << totalRollNoInRoom[centre][room][classNo][sz - 1]
                             << "} " 
                             << ": " << sz;
                 }
