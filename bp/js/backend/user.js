@@ -18,7 +18,7 @@ function GetSignUpResponse()
     {
         XMLHttp.open
 
-        ("GET", "../cgi-bin/nbp/signup?"
+        ("GET", "http://202.164.53.116/~mandeep/cgi-bin/nbp/signup?"
 
         + "email-signup=" + document.getElementById('email-signup').value
 
@@ -54,7 +54,7 @@ function GetLoginResponse()
     {
         XMLHttp.open
     
-        ("GET", "../cgi-bin/nbp/login?"
+        ("GET", "http://202.164.53.116/~mandeep/cgi-bin/nbp/login?"
 
         + "email-login=" + document.getElementById('email-login').value
 
