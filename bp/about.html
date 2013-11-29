@@ -1,0 +1,81 @@
+<!-- ******Ekoangkarsatguruprasad ****** -->
+<!--**********************************************
+-file:about.html
+-brief: about page of BaKaPlan
+-version: 2.0 
+-date: 8th May 2013
+-copyright: Great Developers
+-author: Mandeep Kaur (simak.in)
+-author: Inderpreet Singh (ishwerdas.com)
+************************************************ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>About BaKa-Plan: The easiest seating planner</title>
+	
+	<!-- Fonts from google fonts, Roboto and Arvo -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
+	<!-- CSS files for our pages layout -->
+	<link rel="stylesheet" href="styles/general.css" type="text/css" media="all">	
+	<link rel="stylesheet" href="styles/pages.css" type="text/css" media="all">
+</head>
+<body>
+	<nav class="side-menu">
+	<span id="toggle-menu"> <p id="toggle-menu-circle"> Show Menu </p> </span>
+	<h3> Ba<span class="ka">ka</span> Plan</h3>
+	<a href="index.html"> Home </a>
+	<a href="contact.html"> Contact </a>
+	<a href="contribute.html"> Contribute </a>
+	<a href="login.html"> Login/Signup </a>
+	
+	</nav> 
+	<div class="page-wrap">
+		<h1> About BaKa-Plan </h1>
+		<h2> Baithne Ka Plan</h2>
+		<article>
+<!-- ****************************** THE PAGE TEXT CONTENT ************************************ --> 
+<p>
+BaKaPlan generate seating plan on the basis of subject code. All
+strategies allocate seats acording to subject code whether it is
+continuous or dis-continuous subjects. Simplest strategy is Cushy. If
+examination has multiple set of subject then this is best.
+</p>
+<h3>Strategies of seating plan for examination</h3>
+<ul>
+    <li>Cushy</li>
+    <li>Flip Flop</li>
+    <li>Triplet</li>
+    <li>Quadlet</li>
+    <li>Serpentine</li>
+</ul>
+</article>
+	</div>	
+</body>
+
+<script type="text/javascript">
+var isMenuOpen= false;
+var menu = document.getElementsByClassName('side-menu');
+var toggle = document.getElementById('toggle-menu');
+var toggleCircle = document.getElementById('toggle-menu-circle');
+	toggle.onclick=function(){
+	console.log("entered function");
+	if (isMenuOpen== true){
+		console.log("hell yeah"); 
+		isMenuOpen = false;
+		menu.item(0).style.left="-200px";	
+		toggle.style.left="10px";
+		toggleCircle.innerHTML=" Show Menu ";
+	}
+	else{
+		isMenuOpen = true;
+		console.log(isMenuOpen);
+		console.log("this si it");
+		menu.item(0).style.left="0px";
+		toggle.style.left="210px";
+		toggleCircle.innerHTML=" Hide Menu ";
+	}
+	
+}
+</script>
+</html>

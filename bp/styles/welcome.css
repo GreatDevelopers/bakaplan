@@ -120,8 +120,9 @@ border-radius:5px;
 }
 
 .welcome-button:hover{
-	color:#fad34e;
-	text-shadow:1px 1px 1px rgba(13,13,13,0.8);
+	background:#fd4158;
+	height:2.3rem;
+	border-bottom: 0.2rem solid #f04158;
 }
 
 .accordion-container label{	
