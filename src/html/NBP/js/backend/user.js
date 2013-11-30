@@ -64,11 +64,22 @@ function GetLoginResponse()
     
         XMLHttp.onreadystatechange=function() 
         {
-            if(XMLHttp.responseText.trim() != "true")
+            if(XMLHttp.responseText.trim() == "false")
             {
                 var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
-  			    theErrorTip.setContent(XMLHttp.responseText);
+  			    theErrorTip.setContent("Incorrect Password or Email ID");//XMLHttp.responseText);
     		    theErrorTip.show();	
+            }
+            else
+            {
+                var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
+                var link = "../cgi-bin/bp/project-detail?sid="
+                                       + XMLHttp.responseText;
+
+  			    theErrorTip.setContent(link);
+//    		    theErrorTip.show();	
+
+                window.location.href = link;
             }
         }
         XMLHttp.send(null);

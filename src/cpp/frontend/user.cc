@@ -91,18 +91,25 @@ void User :: LoginUser()
             sessionID += md5(currentTime);
             database.InsertSessionDetail(userEmailID, sessionID);
             readField.SetCookie(field::name["sessionID"], sessionID);
-            
+           
+            where = "SessionKey = \"" + sessionID + "\"";
+            string sID;
+            STRING_VEC vSID;
+            database.SelectColumn(vSID, "SessionID", "SessionDetail",
+                                  where);
 
-            msg = "true"; // Redirect to next page
+            sID = vSID[0];
+
+            msg = sID; // Redirect to next page
         }
         else                             /**< If Password Incorrect */
         {
-            msg = "Incorrect Password!";
+            msg = "false";
         }
     }
     else                                   /**< If Email ID invalid */
     {
-        msg = "Incorrect Email ID!";
+        msg = "false";
     }
     cout << HTTPHTMLHeader() << endl;
     cout << msg << endl;

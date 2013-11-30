@@ -13,6 +13,7 @@ else
 
 function ConfirmEmail(key) 
 {
+    document.getElementById("set-password").style.display="none";
     console.log(GetUrlVars()["Key"]); 
     XMLHttp.open
 
@@ -24,21 +25,21 @@ function ConfirmEmail(key)
     
     XMLHttp.onreadystatechange=function() 
     {
-        if(XMLHttp.responseText == "true")
+        if(XMLHttp.responseText.trim() == "true")
         {
 //            document.getElementById('msg').innerHTML += "Email Confirmed";
             var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
   	    	theErrorTip.setContent("Email Confirmed");
 		    theErrorTip.show();	
-
+            document.getElementById("set-password").style.display="none";
         }
         else         
         {
-            window.location.href = "index.html";
-//            document.getElementById('msg').innerHTML = "Invalid Link";
+//            window.location.href = "index.html";
             var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
   	        theErrorTip.setContent("Invalid Link");
 		    theErrorTip.show();	
+            document.getElementById("set-password").style.display="none";
         }
     }
 
