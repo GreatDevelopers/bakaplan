@@ -38,7 +38,18 @@ int main(void)
     }
     else
     {
-        cout << "Content-type=text/html\n\n";
+        cout << "Content-type:text/html\n\n";
+//        cout << "Invalid Link";
+        cout << html() << head() 
+//             << "<meta http-equiv=\"refresh\" content=\"0; url=../../NBP\" />";
+             << head() 
+             << body()//.set("onload", "window.location.href = ../../NBP")
+             << "<script type=\"text/javascript\">"
+             << "window.location.href = \"../../NBP\";"
+             << "</script>"
+             << body()
+             << html();
+
     }
 
 }
