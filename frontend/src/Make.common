@@ -76,6 +76,7 @@ READINPUT     =  readinput
 EXPANDROLLNO  =  expandrollno                                         
 ARRANGEROLLNO =  arrangerollno
 ADDROOM       =  addroom
+PROJECTDETAIL =  project-detail
 
 #   File Extention variables
 
@@ -205,6 +206,8 @@ D_ADDUSER_M     =   $(ADDUSER)$(MAIN)$(CPP) $(H_LOGIN)
 
 D_PROJECT_M     =   $(PROJECT)$(MAIN)$(CPP) $(H_PROJECT)
 
+D_PROJECTDETAIL_M     =   $(PROJECTDETAIL)$(MAIN)$(CPP) $(H_PROJECT)
+
 D_HOME_M        =   $(HOME)$(MAIN)$(CPP) $(H_PROJECT)
 
 D_CLASS_M       =   $(CLASS)$(MAIN)$(CPP) $(H_CLASS)
@@ -276,4 +279,6 @@ L_VALIDSTRATEGY  :=  $(VALIDSTRATEGY)$(MAIN)$(O) $(VALIDSTRATEGY)$(O) \
 				  $(L_INPUT) $(L_B_STRATEGY) $(EXAM)$(O)
 
 L_REPORT       =  $(REPORT)$(MAIN)$(O) $(REPORT)$(O) $(L_INPUT)
+
+L_PROJECTDETAIL      =  $(PROJECTDETAIL)$(MAIN)$(O) $(L_LOG) $(PROJECT)$(O)
 
