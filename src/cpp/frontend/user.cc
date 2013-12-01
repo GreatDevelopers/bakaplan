@@ -183,6 +183,7 @@ void User :: ConfirmUser()
     {
         msg = "false";
     }
+    cout << msg;
 }
 
 
