@@ -13,7 +13,6 @@ else
 
 function ConfirmEmail(key) 
 {
-    document.getElementById("set-password").style.display="none";
     console.log(GetUrlVars()["Key"]); 
     XMLHttp.open
 
@@ -25,21 +24,18 @@ function ConfirmEmail(key)
     
     XMLHttp.onreadystatechange=function() 
     {
-        if(XMLHttp.responseText.trim() == "true")
+        if(XMLHttp.responseText.trim() != "false" &&  XMLHttp.responseText.trim() != "" )
         {
-//            document.getElementById('msg').innerHTML += "Email Confirmed";
             var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
   	    	theErrorTip.setContent("Email Confirmed");
-		    theErrorTip.show();	
-            document.getElementById("set-password").style.display="none";
+		    theErrorTip.show();
+            document.getElementById('EmailID').value = XMLHttp.responseText;
         }
         else         
         {
-//            window.location.href = "index.html";
             var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
   	        theErrorTip.setContent("Invalid Link");
 		    theErrorTip.show();	
-            document.getElementById("set-password").style.display="none";
         }
     }
 
@@ -58,3 +54,52 @@ function GetUrlVars()
 }
 
 $( window ).load( ConfirmEmail );
+
+/** Set Password for new user */
+
+function SetPassword() 
+{
+
+    if(validate == "true")
+    {
+    XMLHttp.open
+
+        ("GET", "../cgi-bin/nbp/set_password?"
+
+        + "EmailID=" + document.getElementById('EmailID').value
+        + "&Password=" + document.getElementById('password').value
+        + "&RetypePassword=" + document.getElementById('retype-password').value
+    
+        ,true);
+    
+        XMLHttp.onreadystatechange=function() 
+        {
+        
+            if(XMLHttp.responseText.trim() != "false")
+            {
+                var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
+  	    	    theErrorTip.setContent("Password Changed");
+    		    theErrorTip.show();	
+                document.getElementById("set-password").style.display="none";
+                window.setTimeout(function()
+                {
+                    window.location.href = "index.html";
+                }, 100);
+            }
+            else         
+            {
+                var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
+  	            theErrorTip.setContent("Password not set");
+		        theErrorTip.show();	
+            }
+           }
+
+        XMLHttp.send(null);
+        if(XMLHttp.responseText == "true")
+            return true;
+        else
+            return false;
+    }
+    else
+        return false;
+}

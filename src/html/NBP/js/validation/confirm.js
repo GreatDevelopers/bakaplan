@@ -1,4 +1,6 @@
-	/* Change the position of OpenTip for mobile and tablet */
+var validate = '';
+
+/* Change the position of OpenTip for mobile and tablet */
 $(function(){
 	if($(window).width() < 720){
 		var passOpenTip = new Opentip("#password","Fill Password",
@@ -48,8 +50,20 @@ $(function(){
 			for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
            			errorString += errors[i].message + '<br />';
         		}
-			theErrorTip.setContent(errorString);
-			theErrorTip.show();	
+            if(errorString == '')
+            {
+                validate = "true"
+			    theErrorTip.hide();	
+            }
+            else
+            {
+    			theErrorTip.setContent(errorString);
+			    theErrorTip.show();	
+                validate = "false";
+            }
+
+//			theErrorTip.setContent(errorString);
+//			theErrorTip.show();	
 		}
 	);	
 });

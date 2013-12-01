@@ -51,6 +51,7 @@ INPUTDETAIL     =  input_detail
 PAGESTRUCTURE   =  page_structure
 PROJECTDETAIL   =  project_detail
 CLASSDETAIL     =  class_detail
+SETPASSWORD     =  set_password
 
 BAKAPLAN        =  bakaplan
 
@@ -135,6 +136,8 @@ D_M_LOGIN       =   $(LOGIN)$(MAIN)$(CPP) $(F_HEADER)$(USER)$(H)
 
 D_M_CONFIRM     =   $(CONFIRM)$(MAIN)$(CPP) $(F_HEADER)$(USER)$(H)
 
+D_M_SETPASSWORD     =   $(SETPASSWORD)$(MAIN)$(CPP) $(USER)$(CC) $(F_HEADER)$(USER)$(H)
+
 D_M_BAKAPLAN    =   $(BAKAPLAN)$(MAIN)$(CPP) $(F_HEADER)$(BAKAPLAN)$(H)
 
 #   Linking variables
@@ -147,6 +150,8 @@ L_SIGNUP    :=   $(SIGNUP)$(MAIN)$(O) $(L_USER) $(USER)$(O)
 L_LOGIN     :=   $(LOGIN)$(MAIN)$(O) $(L_USER) $(USER)$(O)
 
 L_CONFIRM   :=   $(CONFIRM)$(MAIN)$(O) $(L_USER) $(USER)$(O)
+
+L_SETPASSWORD   :=   $(SETPASSWORD)$(MAIN)$(O) $(L_USER) $(USER)$(O)
 
 L_INPUTDETAIL     :=   $(DATABASE)$(O) $(READINPUTFIELD)$(O)\
                        $(PAGESTRUCTURE)$(O)

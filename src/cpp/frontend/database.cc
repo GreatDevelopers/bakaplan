@@ -192,7 +192,7 @@ void Database :: InsertUserDetail(string emailID, string password)
  *      \fn     Database :: InsertRegistrationDetail(string emailID, 
  *                          string registrationKey)
  *      \brief  Inserting Registration detail
- *      \param  emailID   emailId of user
+ *      \param  emailID   emailID of user
  *      \param  registrationKey  Registration Key 
  */
 

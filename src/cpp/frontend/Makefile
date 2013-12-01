@@ -25,7 +25,9 @@ include Make.common
 #   Targets
 # ====================================================================
 
-all: $(F_BP)$(SIGNUP) $(F_BP)$(LOGIN) $(F_BP)$(CONFIRM) $(F_BP)$(BAKAPLAN)
+all: $(F_BP)$(SIGNUP) $(F_BP)$(LOGIN) $(F_BP)$(CONFIRM) $(F_BP)$(BAKAPLAN)\
+     $(F_BP)$(SETPASSWORD)
+
 
 #	Target for compiling .cc or .cpp files
 
@@ -70,6 +72,9 @@ $(LOGIN)$(MAIN)$(O) : $(D_M_LOGIN)
 $(CONFIRM)$(MAIN)$(O) : $(D_M_CONFIRM)
 	$(CXX) $(CFLAG) $(CONFIRM)$(MAIN)$(CPP) $(LMYSQL)
 
+$(SETPASSWORD)$(MAIN)$(O) : $(D_M_SETPASSWORD)
+	$(CXX) $(CFLAG) $(SETPASSWORD)$(MAIN)$(CPP) $(LMYSQL)
+
 $(BAKAPLAN)$(MAIN)$(O) : $(D_M_BAKAPLAN)
 	$(CXX) $(CFLAG) $(BAKAPLAN)$(MAIN)$(CPP) $(LMYSQL)
 
@@ -85,6 +90,10 @@ $(F_BP)$(LOGIN) : $(L_LOGIN)
 
 $(F_BP)$(CONFIRM) : $(L_CONFIRM)
 	$(CXX) $(OFLAG) $(F_BP)$(CONFIRM) $(L_CONFIRM) $(LSMTP) \
+	$(LMYSQL) $(LCGICC)
+
+$(F_BP)$(SETPASSWORD) : $(L_SETPASSWORD)
+	$(CXX) $(OFLAG) $(F_BP)$(SETPASSWORD) $(L_SETPASSWORD) $(LSMTP) \
 	$(LMYSQL) $(LCGICC)
 
 $(F_BP)$(BAKAPLAN) : $(L_BAKAPLAN)

@@ -54,8 +54,8 @@ class User
         void SelectUserDetail();
         void LoginUser();
         void SignUpUser();
-        void ConfirmUser(string msg = "", string password = "",
-                         string retypePassword = "");
+        void ConfirmUser();
+        void SetPassword();
         string Time();
         ~User();
 };

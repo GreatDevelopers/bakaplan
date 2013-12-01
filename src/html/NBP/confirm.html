@@ -42,14 +42,16 @@
 	<h1 id="tipTarget">~</h1>
     <div id="msg"></div>
         <div if="form">
-		<form class="theForm" id="set-password" name="set-password" action="#" >	
+		<form class="theForm" id="set-password" name="set-password"
+        onsubmit="return SetPassword();" action="#" >	
 			<h2> Set Password </h2>
+            <input type="hidden" id="EmailID" value="emailid" />
 			<label for="password" class="theLabel">Password</label>
 			<input type="password" name="password" id="password"
             class="theFormTextInput" placeholder=" Fill Password"/>
 			<label for="retype-password" class="theLabel" >Retype
             Password</label>
-			<input type="password" name="retupe-password"
+			<input type="password" name="retype-password"
             id="retype-password"  class="theFormTextInput"
             placeholder=" Retype Password"/>
 			<input type="submit"name="theSubmit" id="theSubmit"
