@@ -45,7 +45,7 @@ int main(void)
              << head() 
              << body()//.set("onload", "window.location.href = ../../NBP")
              << "<script type=\"text/javascript\">"
-             << "window.location.href = \"../../NBP\";"
+             << "window.location.href = \"../../bakaplan\";"
              << "</script>"
              << body()
              << html();
