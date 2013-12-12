@@ -34,7 +34,7 @@ CLEAN   =   clean
 
 F_HEADER        =  header/
 F_HEADER_JWSMTP =  header/jwsmtp/
-F_BP            =  ../bp/
+F_BP            =  ../bin/
 HEADER          =  header
 FILENAME        =  filename
 DETAIL          =  _detail

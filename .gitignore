@@ -14,5 +14,5 @@
 *.html
 *.orig
 
-src/cpp/bp/*
+src/cpp/bin/*
 .*swp
