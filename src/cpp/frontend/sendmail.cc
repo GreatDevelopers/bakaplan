@@ -50,11 +50,11 @@ void SendMail :: SetHTMLMessage(string regKey, string mail)
     url += SERVER_MAIL;
     //url += "/~"; 
     //url += USERNAME; 
-    url += "/bakaplan/";
+    //url += "/bakaplan/";
     if(mail == "register")
-        url += "confirm.html?Key=" + regKey;
+        url += "/confirm.html?Key=" + regKey;
     else
-        url += "reset?type=3&Key=" + regKey;
+        url += "/reset?type=3&Key=" + regKey;
               
     htmlMessage  = "<html> <body>";
     if(mail == "register")

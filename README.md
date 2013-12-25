@@ -13,6 +13,7 @@ REQUIREMENTS:
     4) MySQL Connector for C++
     5) jwSMTP Library
     6) exim4 mail server
+    7) Enable site(localhost/bakaplan) for BaKaPlan
 
 Installation of requirements
 
@@ -170,7 +171,21 @@ Add following in the file
 
     Where, USERNAME is  a valid email address and PASSWORD is  password for USERNAME.
 
+7) Enable site(bakaplan) using Apache
 
+Do as following:
+
+    1) Open misc/bakaplan.conf file
+    2) Change username(*) with your username and save
+    3) Copy bakaplan.conf to /etc/apache2/sites-available
+        $ sudo cp ~/public_html/cgi-bin/bakaplan/misc/bakpalan.conf
+        /etc/apache2/site-available
+    4) Enable site
+        $ sudo a2ensite bakaplan.conf
+    5) Reload apache
+        $ sudo service apache2 reload
+    6) Now open site on browser
+        localhost/bakaplan
 
 INSTALLATION:
 -------------
@@ -180,13 +195,15 @@ AUTHORS:
 --------
 <b>Mentor and Manager</b>
 
-Dr. Hardeep Singh Rai
+[Dr. Hardeep Singh Rai](https://github.com/hsrai)
 
 Website: http://gndec.ac.in/~hsrai
 
 <b>[Developers](https://github.com/GreatDevelopers/bakaplan/wiki/Contributors)</b>
 
 [Mandeep Kaur](https://github.com/megha55)
+[Inderpreet Singh](https://github.com/inderpreetsingh)
+[Jaskaran Singh](https://github.com/Jaskaran28193)
 
-Email: baithnekaplan \[AT\] gmail.com
+Email: baithnekaplan \[AT\] gmail \[DOT\] com
 
