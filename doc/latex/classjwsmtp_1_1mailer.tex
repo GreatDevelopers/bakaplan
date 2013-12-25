@@ -1,0 +1,120 @@
+\hypertarget{classjwsmtp_1_1mailer}{\section{jwsmtp\-:\-:mailer Class Reference}
+\label{classjwsmtp_1_1mailer}\index{jwsmtp\-::mailer@{jwsmtp\-::mailer}}
+}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+{\bfseries T\-O}, 
+{\bfseries Cc}, 
+{\bfseries Bcc}, 
+{\bfseries S\-M\-T\-P\-\_\-\-P\-O\-R\-T} = 25, 
+\\*
+{\bfseries D\-N\-S\-\_\-\-P\-O\-R\-T} = 53
+ \}
+\item 
+enum {\bfseries authtype} \{ {\bfseries L\-O\-G\-I\-N} = 1, 
+{\bfseries P\-L\-A\-I\-N}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classjwsmtp_1_1mailer_aa503174a1bfb40f7d6018240108f8e81}{{\bfseries mailer} (const char $\ast$T\-Oaddress, const char $\ast$F\-R\-O\-Maddress, const char $\ast$Subject, const std\-::vector$<$ char $>$ \&Message, const char $\ast$server=\char`\"{}127.\-0.\-0.\-1\char`\"{}, unsigned short Port=S\-M\-T\-P\-\_\-\-P\-O\-R\-T, bool M\-X\-Lookup=true)}\label{classjwsmtp_1_1mailer_aa503174a1bfb40f7d6018240108f8e81}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_a7bdd0c339465239da192b87622fb47af}{{\bfseries mailer} (const char $\ast$T\-Oaddress, const char $\ast$F\-R\-O\-Maddress, const char $\ast$Subject, const char $\ast$Message, const char $\ast$server=\char`\"{}127.\-0.\-0.\-1\char`\"{}, unsigned short Port=S\-M\-T\-P\-\_\-\-P\-O\-R\-T, bool M\-X\-Lookup=true)}\label{classjwsmtp_1_1mailer_a7bdd0c339465239da192b87622fb47af}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_a95ce2db188c5efed81c689d3fb1bba15}{{\bfseries mailer} (bool M\-X\-Lookup=false, unsigned short Port=S\-M\-T\-P\-\_\-\-P\-O\-R\-T)}\label{classjwsmtp_1_1mailer_a95ce2db188c5efed81c689d3fb1bba15}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_a64a9eee2d170acf7463daf2bdd278ccb}{void {\bfseries operator()} ()}\label{classjwsmtp_1_1mailer_a64a9eee2d170acf7463daf2bdd278ccb}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_a1e797008e879c8d5f0bd5a24c96b4cbd}{void {\bfseries send} ()}\label{classjwsmtp_1_1mailer_a1e797008e879c8d5f0bd5a24c96b4cbd}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_a9ce0dcada15b7afe5c48fea57c28140d}{bool {\bfseries attach} (const std\-::string \&filename)}\label{classjwsmtp_1_1mailer_a9ce0dcada15b7afe5c48fea57c28140d}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_a19da3595b2a9cb61555e9b5568c55005}{bool {\bfseries removeattachment} (const std\-::string \&filename)}\label{classjwsmtp_1_1mailer_a19da3595b2a9cb61555e9b5568c55005}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_ac1a1bb8ed20a7bb0e2e09ee495ae7c8c}{bool {\bfseries setmessage} (const std\-::string \&newmessage)}\label{classjwsmtp_1_1mailer_ac1a1bb8ed20a7bb0e2e09ee495ae7c8c}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_afe8acd59ea809f7110bd391c09f5e163}{bool {\bfseries setmessage} (const std\-::vector$<$ char $>$ \&newmessage)}\label{classjwsmtp_1_1mailer_afe8acd59ea809f7110bd391c09f5e163}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_a57d9e64123a363c105c741f4be61d050}{bool {\bfseries setmessage\-H\-T\-M\-L} (const std\-::string \&newmessage)}\label{classjwsmtp_1_1mailer_a57d9e64123a363c105c741f4be61d050}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_a3a34f6893123bc4dd0b15cfb3c08d00e}{bool {\bfseries setmessage\-H\-T\-M\-L} (const std\-::vector$<$ char $>$ \&newmessage)}\label{classjwsmtp_1_1mailer_a3a34f6893123bc4dd0b15cfb3c08d00e}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_a3c1c568d65e70362c090182bfa107777}{bool {\bfseries setmessage\-H\-T\-M\-Lfile} (const std\-::string \&filename)}\label{classjwsmtp_1_1mailer_a3c1c568d65e70362c090182bfa107777}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_aab8f43694c42a82043dce23a5c49dfdd}{bool {\bfseries setsubject} (const std\-::string \&new\-Subject)}\label{classjwsmtp_1_1mailer_aab8f43694c42a82043dce23a5c49dfdd}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_ae07dfb015a5a14f023f7b24eef81ba7e}{bool {\bfseries setserver} (const std\-::string \&nameserver\-\_\-or\-\_\-smtpserver)}\label{classjwsmtp_1_1mailer_ae07dfb015a5a14f023f7b24eef81ba7e}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_ad57a8e1e89f333ee67cb97ed7dc79c16}{bool {\bfseries setsender} (const std\-::string \&newsender)}\label{classjwsmtp_1_1mailer_ad57a8e1e89f333ee67cb97ed7dc79c16}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_addd31c1223de1b269973077f3f5ce60d}{bool {\bfseries addrecipient} (const std\-::string \&newrecipient, short recipient\-\_\-type=T\-O)}\label{classjwsmtp_1_1mailer_addd31c1223de1b269973077f3f5ce60d}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_aaf08ac5f9cfe7b2c2491cf9bd86dd2dc}{bool {\bfseries removerecipient} (const std\-::string \&recipient)}\label{classjwsmtp_1_1mailer_aaf08ac5f9cfe7b2c2491cf9bd86dd2dc}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_abe98321f7402147da6d43726b7f0b72c}{void {\bfseries clearrecipients} ()}\label{classjwsmtp_1_1mailer_abe98321f7402147da6d43726b7f0b72c}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_a77d2b39ec4855a741ac0156e242d5224}{void {\bfseries clearattachments} ()}\label{classjwsmtp_1_1mailer_a77d2b39ec4855a741ac0156e242d5224}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_a4bf4b663e343bad40f658cef48f78521}{void {\bfseries reset} ()}\label{classjwsmtp_1_1mailer_a4bf4b663e343bad40f658cef48f78521}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_a862d80a5c66fac98d254745fde7b1fb8}{const std\-::string \& {\bfseries response} () const }\label{classjwsmtp_1_1mailer_a862d80a5c66fac98d254745fde7b1fb8}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_a13e354584e6b389b53db283105e1d995}{void {\bfseries authtype} (const enum authtype Type)}\label{classjwsmtp_1_1mailer_a13e354584e6b389b53db283105e1d995}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_a8f43636be8ea428371915b611c508fc3}{void {\bfseries username} (const std\-::string \&\hyperlink{classUser}{User})}\label{classjwsmtp_1_1mailer_a8f43636be8ea428371915b611c508fc3}
+
+\item 
+\hypertarget{classjwsmtp_1_1mailer_ab0d3608eefc489f80c145530f45e1c49}{void {\bfseries password} (const std\-::string \&Pass)}\label{classjwsmtp_1_1mailer_ab0d3608eefc489f80c145530f45e1c49}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classjwsmtp_1_1mailer_a34be8c1b0f30f2e794629a463450df4e}{enum jwsmtp\-::mailer\-::authtype {\bfseries type}}\label{classjwsmtp_1_1mailer_a34be8c1b0f30f2e794629a463450df4e}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classjwsmtp_1_1mailer_abdf7408f0f12643fa0591ea90ebd151f}{static const enum \\*
+jwsmtp\-::mailer\-:: \{ ... \}  {\bfseries consts}}\label{classjwsmtp_1_1mailer_abdf7408f0f12643fa0591ea90ebd151f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 33 of file mailer.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/cpp/frontend/header/jwsmtp/mailer.\-h\item 
+src/cpp/frontend/header/jwsmtp/mailer.\-cpp\end{DoxyCompactItemize}

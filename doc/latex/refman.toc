@@ -1,0 +1,298 @@
+\contentsline {chapter}{\numberline {1}Main Page}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Namespace Index}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Namespace List}{5}{section.2.1}
+\contentsline {chapter}{\numberline {3}Hierarchical Index}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Class Hierarchy}{7}{section.3.1}
+\contentsline {chapter}{\numberline {4}Class Index}{9}{chapter.4}
+\contentsline {section}{\numberline {4.1}Class List}{9}{section.4.1}
+\contentsline {chapter}{\numberline {5}File Index}{11}{chapter.5}
+\contentsline {section}{\numberline {5.1}File List}{11}{section.5.1}
+\contentsline {chapter}{\numberline {6}Namespace Documentation}{13}{chapter.6}
+\contentsline {section}{\numberline {6.1}name Namespace Reference}{13}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{13}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Variable Documentation}{13}{subsection.6.1.2}
+\contentsline {subsubsection}{\numberline {6.1.2.1}table}{13}{subsubsection.6.1.2.1}
+\contentsline {chapter}{\numberline {7}Class Documentation}{15}{chapter.7}
+\contentsline {section}{\numberline {7.1}Arrange\discretionary {-}{}{}Roll\discretionary {-}{}{}No Class Reference}{15}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Detailed Description}{16}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Constructor \& Destructor Documentation}{16}{subsection.7.1.2}
+\contentsline {subsubsection}{\numberline {7.1.2.1}Arrange\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{16}{subsubsection.7.1.2.1}
+\contentsline {subsubsection}{\numberline {7.1.2.2}$\sim $\discretionary {-}{}{}Arrange\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{16}{subsubsection.7.1.2.2}
+\contentsline {subsection}{\numberline {7.1.3}Member Function Documentation}{16}{subsection.7.1.3}
+\contentsline {subsubsection}{\numberline {7.1.3.1}Add\discretionary {-}{}{}Prefix\discretionary {-}{}{}With\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{16}{subsubsection.7.1.3.1}
+\contentsline {subsubsection}{\numberline {7.1.3.2}Main}{16}{subsubsection.7.1.3.2}
+\contentsline {subsubsection}{\numberline {7.1.3.3}Remove\discretionary {-}{}{}Non\discretionary {-}{}{}Eligible\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{17}{subsubsection.7.1.3.3}
+\contentsline {subsubsection}{\numberline {7.1.3.4}Remove\discretionary {-}{}{}Redundancy}{17}{subsubsection.7.1.3.4}
+\contentsline {subsubsection}{\numberline {7.1.3.5}Sort\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{17}{subsubsection.7.1.3.5}
+\contentsline {subsubsection}{\numberline {7.1.3.6}Write\discretionary {-}{}{}Arranged\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{17}{subsubsection.7.1.3.6}
+\contentsline {subsection}{\numberline {7.1.4}Member Data Documentation}{17}{subsection.7.1.4}
+\contentsline {subsubsection}{\numberline {7.1.4.1}expand\discretionary {-}{}{}R\discretionary {-}{}{}No}{17}{subsubsection.7.1.4.1}
+\contentsline {subsubsection}{\numberline {7.1.4.2}not\discretionary {-}{}{}Included\discretionary {-}{}{}R\discretionary {-}{}{}No}{17}{subsubsection.7.1.4.2}
+\contentsline {subsubsection}{\numberline {7.1.4.3}prefix}{18}{subsubsection.7.1.4.3}
+\contentsline {subsubsection}{\numberline {7.1.4.4}prefix\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{18}{subsubsection.7.1.4.4}
+\contentsline {subsubsection}{\numberline {7.1.4.5}roll\discretionary {-}{}{}No}{18}{subsubsection.7.1.4.5}
+\contentsline {section}{\numberline {7.2}Ba\discretionary {-}{}{}Ka\discretionary {-}{}{}Plan Class Reference}{18}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Detailed Description}{19}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Constructor \& Destructor Documentation}{19}{subsection.7.2.2}
+\contentsline {subsubsection}{\numberline {7.2.2.1}$\sim $\discretionary {-}{}{}Ba\discretionary {-}{}{}Ka\discretionary {-}{}{}Plan}{19}{subsubsection.7.2.2.1}
+\contentsline {subsection}{\numberline {7.2.3}Member Function Documentation}{19}{subsection.7.2.3}
+\contentsline {subsubsection}{\numberline {7.2.3.1}Main}{19}{subsubsection.7.2.3.1}
+\contentsline {section}{\numberline {7.3}Database Class Reference}{19}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Detailed Description}{20}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Constructor \& Destructor Documentation}{20}{subsection.7.3.2}
+\contentsline {subsubsection}{\numberline {7.3.2.1}Database}{20}{subsubsection.7.3.2.1}
+\contentsline {subsubsection}{\numberline {7.3.2.2}$\sim $\discretionary {-}{}{}Database}{21}{subsubsection.7.3.2.2}
+\contentsline {subsection}{\numberline {7.3.3}Member Function Documentation}{21}{subsection.7.3.3}
+\contentsline {subsubsection}{\numberline {7.3.3.1}Delete\discretionary {-}{}{}Query}{21}{subsubsection.7.3.3.1}
+\contentsline {subsubsection}{\numberline {7.3.3.2}Insert\discretionary {-}{}{}Class\discretionary {-}{}{}Detail}{21}{subsubsection.7.3.3.2}
+\contentsline {subsubsection}{\numberline {7.3.3.3}Insert\discretionary {-}{}{}Date\discretionary {-}{}{}Sheet}{21}{subsubsection.7.3.3.3}
+\contentsline {subsubsection}{\numberline {7.3.3.4}Insert\discretionary {-}{}{}Exam\discretionary {-}{}{}Detail}{21}{subsubsection.7.3.3.4}
+\contentsline {subsubsection}{\numberline {7.3.3.5}Insert\discretionary {-}{}{}Project\discretionary {-}{}{}Detail}{21}{subsubsection.7.3.3.5}
+\contentsline {subsubsection}{\numberline {7.3.3.6}Insert\discretionary {-}{}{}Query}{21}{subsubsection.7.3.3.6}
+\contentsline {subsubsection}{\numberline {7.3.3.7}Insert\discretionary {-}{}{}Registration\discretionary {-}{}{}Detail}{22}{subsubsection.7.3.3.7}
+\contentsline {subsubsection}{\numberline {7.3.3.8}Insert\discretionary {-}{}{}Reset\discretionary {-}{}{}Password}{22}{subsubsection.7.3.3.8}
+\contentsline {subsubsection}{\numberline {7.3.3.9}Insert\discretionary {-}{}{}Roll\discretionary {-}{}{}No\discretionary {-}{}{}Detail}{22}{subsubsection.7.3.3.9}
+\contentsline {subsubsection}{\numberline {7.3.3.10}Insert\discretionary {-}{}{}Room\discretionary {-}{}{}Detail}{22}{subsubsection.7.3.3.10}
+\contentsline {subsubsection}{\numberline {7.3.3.11}Insert\discretionary {-}{}{}Session\discretionary {-}{}{}Detail}{22}{subsubsection.7.3.3.11}
+\contentsline {subsubsection}{\numberline {7.3.3.12}Insert\discretionary {-}{}{}Strategy\discretionary {-}{}{}Detail}{22}{subsubsection.7.3.3.12}
+\contentsline {subsubsection}{\numberline {7.3.3.13}Insert\discretionary {-}{}{}User\discretionary {-}{}{}Detail}{22}{subsubsection.7.3.3.13}
+\contentsline {subsubsection}{\numberline {7.3.3.14}Insert\discretionary {-}{}{}Valid\discretionary {-}{}{}Strategy}{23}{subsubsection.7.3.3.14}
+\contentsline {subsubsection}{\numberline {7.3.3.15}Query}{23}{subsubsection.7.3.3.15}
+\contentsline {subsubsection}{\numberline {7.3.3.16}Select\discretionary {-}{}{}Column}{23}{subsubsection.7.3.3.16}
+\contentsline {subsubsection}{\numberline {7.3.3.17}Select\discretionary {-}{}{}Project\discretionary {-}{}{}I\discretionary {-}{}{}D}{23}{subsubsection.7.3.3.17}
+\contentsline {subsubsection}{\numberline {7.3.3.18}Select\discretionary {-}{}{}Query}{23}{subsubsection.7.3.3.18}
+\contentsline {subsubsection}{\numberline {7.3.3.19}Select\discretionary {-}{}{}Sum}{24}{subsubsection.7.3.3.19}
+\contentsline {subsubsection}{\numberline {7.3.3.20}Update\discretionary {-}{}{}Query}{24}{subsubsection.7.3.3.20}
+\contentsline {subsection}{\numberline {7.3.4}Member Data Documentation}{24}{subsection.7.3.4}
+\contentsline {subsubsection}{\numberline {7.3.4.1}connect}{24}{subsubsection.7.3.4.1}
+\contentsline {subsubsection}{\numberline {7.3.4.2}numrows}{24}{subsubsection.7.3.4.2}
+\contentsline {section}{\numberline {7.4}Data\discretionary {-}{}{}Sheet Class Reference}{24}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Detailed Description}{24}{subsection.7.4.1}
+\contentsline {section}{\numberline {7.5}Date\discretionary {-}{}{}Sheet Class Reference}{24}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Detailed Description}{25}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.2}Constructor \& Destructor Documentation}{25}{subsection.7.5.2}
+\contentsline {subsubsection}{\numberline {7.5.2.1}Date\discretionary {-}{}{}Sheet}{25}{subsubsection.7.5.2.1}
+\contentsline {subsubsection}{\numberline {7.5.2.2}$\sim $\discretionary {-}{}{}Date\discretionary {-}{}{}Sheet}{25}{subsubsection.7.5.2.2}
+\contentsline {subsection}{\numberline {7.5.3}Member Function Documentation}{25}{subsection.7.5.3}
+\contentsline {subsubsection}{\numberline {7.5.3.1}Add\discretionary {-}{}{}Roll\discretionary {-}{}{}No\discretionary {-}{}{}With\discretionary {-}{}{}Date\discretionary {-}{}{}Sheet}{25}{subsubsection.7.5.3.1}
+\contentsline {subsubsection}{\numberline {7.5.3.2}Main}{26}{subsubsection.7.5.3.2}
+\contentsline {subsubsection}{\numberline {7.5.3.3}Write\discretionary {-}{}{}Date\discretionary {-}{}{}Sheet}{26}{subsubsection.7.5.3.3}
+\contentsline {section}{\numberline {7.6}Exapand\discretionary {-}{}{}Roll\discretionary {-}{}{}No Class Reference}{26}{section.7.6}
+\contentsline {subsection}{\numberline {7.6.1}Detailed Description}{26}{subsection.7.6.1}
+\contentsline {section}{\numberline {7.7}Expand\discretionary {-}{}{}Roll\discretionary {-}{}{}No Class Reference}{26}{section.7.7}
+\contentsline {subsection}{\numberline {7.7.1}Detailed Description}{27}{subsection.7.7.1}
+\contentsline {subsection}{\numberline {7.7.2}Constructor \& Destructor Documentation}{27}{subsection.7.7.2}
+\contentsline {subsubsection}{\numberline {7.7.2.1}Expand\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{27}{subsubsection.7.7.2.1}
+\contentsline {subsubsection}{\numberline {7.7.2.2}$\sim $\discretionary {-}{}{}Expand\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{27}{subsubsection.7.7.2.2}
+\contentsline {subsection}{\numberline {7.7.3}Member Function Documentation}{27}{subsection.7.7.3}
+\contentsline {subsubsection}{\numberline {7.7.3.1}Expand\discretionary {-}{}{}Roll\discretionary {-}{}{}No\discretionary {-}{}{}List}{27}{subsubsection.7.7.3.1}
+\contentsline {subsubsection}{\numberline {7.7.3.2}Expand\discretionary {-}{}{}Roll\discretionary {-}{}{}Nos}{27}{subsubsection.7.7.3.2}
+\contentsline {subsubsection}{\numberline {7.7.3.3}Write\discretionary {-}{}{}Expand\discretionary {-}{}{}Roll\discretionary {-}{}{}No}{27}{subsubsection.7.7.3.3}
+\contentsline {section}{\numberline {7.8}Input\discretionary {-}{}{}Detail Class Reference}{28}{section.7.8}
+\contentsline {subsection}{\numberline {7.8.1}Detailed Description}{29}{subsection.7.8.1}
+\contentsline {subsection}{\numberline {7.8.2}Constructor \& Destructor Documentation}{29}{subsection.7.8.2}
+\contentsline {subsubsection}{\numberline {7.8.2.1}Input\discretionary {-}{}{}Detail}{29}{subsubsection.7.8.2.1}
+\contentsline {subsection}{\numberline {7.8.3}Member Function Documentation}{29}{subsection.7.8.3}
+\contentsline {subsubsection}{\numberline {7.8.3.1}File\discretionary {-}{}{}Name}{29}{subsubsection.7.8.3.1}
+\contentsline {subsubsection}{\numberline {7.8.3.2}Int\discretionary {-}{}{}To\discretionary {-}{}{}String}{29}{subsubsection.7.8.3.2}
+\contentsline {subsubsection}{\numberline {7.8.3.3}String\discretionary {-}{}{}To\discretionary {-}{}{}Int}{30}{subsubsection.7.8.3.3}
+\contentsline {subsection}{\numberline {7.8.4}Member Data Documentation}{30}{subsection.7.8.4}
+\contentsline {subsubsection}{\numberline {7.8.4.1}db}{30}{subsubsection.7.8.4.1}
+\contentsline {subsubsection}{\numberline {7.8.4.2}file\discretionary {-}{}{}Name}{30}{subsubsection.7.8.4.2}
+\contentsline {subsubsection}{\numberline {7.8.4.3}in\discretionary {-}{}{}File}{30}{subsubsection.7.8.4.3}
+\contentsline {subsubsection}{\numberline {7.8.4.4}l}{30}{subsubsection.7.8.4.4}
+\contentsline {subsubsection}{\numberline {7.8.4.5}msg}{30}{subsubsection.7.8.4.5}
+\contentsline {subsubsection}{\numberline {7.8.4.6}old\discretionary {-}{}{}Project}{30}{subsubsection.7.8.4.6}
+\contentsline {subsubsection}{\numberline {7.8.4.7}out\discretionary {-}{}{}File}{30}{subsubsection.7.8.4.7}
+\contentsline {subsubsection}{\numberline {7.8.4.8}read\discretionary {-}{}{}Field}{31}{subsubsection.7.8.4.8}
+\contentsline {subsubsection}{\numberline {7.8.4.9}session\discretionary {-}{}{}I\discretionary {-}{}{}D}{31}{subsubsection.7.8.4.9}
+\contentsline {subsubsection}{\numberline {7.8.4.10}split\discretionary {-}{}{}String}{31}{subsubsection.7.8.4.10}
+\contentsline {subsubsection}{\numberline {7.8.4.11}ss}{31}{subsubsection.7.8.4.11}
+\contentsline {subsubsection}{\numberline {7.8.4.12}temp1}{31}{subsubsection.7.8.4.12}
+\contentsline {subsubsection}{\numberline {7.8.4.13}vec\discretionary {-}{}{}Temp}{31}{subsubsection.7.8.4.13}
+\contentsline {subsubsection}{\numberline {7.8.4.14}where}{31}{subsubsection.7.8.4.14}
+\contentsline {section}{\numberline {7.9}jwsmtp\discretionary {-}{}{}:\discretionary {-}{}{}:mailer Class Reference}{31}{section.7.9}
+\contentsline {subsection}{\numberline {7.9.1}Detailed Description}{32}{subsection.7.9.1}
+\contentsline {section}{\numberline {7.10}M\discretionary {-}{}{}D5 Class Reference}{32}{section.7.10}
+\contentsline {subsection}{\numberline {7.10.1}Detailed Description}{33}{subsection.7.10.1}
+\contentsline {section}{\numberline {7.11}Page\discretionary {-}{}{}Structure Class Reference}{33}{section.7.11}
+\contentsline {subsection}{\numberline {7.11.1}Detailed Description}{34}{subsection.7.11.1}
+\contentsline {subsection}{\numberline {7.11.2}Member Function Documentation}{34}{subsection.7.11.2}
+\contentsline {subsubsection}{\numberline {7.11.2.1}C\discretionary {-}{}{}S\discretionary {-}{}{}S}{34}{subsubsection.7.11.2.1}
+\contentsline {subsubsection}{\numberline {7.11.2.2}J\discretionary {-}{}{}S}{34}{subsubsection.7.11.2.2}
+\contentsline {section}{\numberline {7.12}Project\discretionary {-}{}{}Detail Class Reference}{34}{section.7.12}
+\contentsline {subsection}{\numberline {7.12.1}Detailed Description}{35}{subsection.7.12.1}
+\contentsline {section}{\numberline {7.13}Read\discretionary {-}{}{}Input Class Reference}{35}{section.7.13}
+\contentsline {subsection}{\numberline {7.13.1}Detailed Description}{37}{subsection.7.13.1}
+\contentsline {subsection}{\numberline {7.13.2}Constructor \& Destructor Documentation}{37}{subsection.7.13.2}
+\contentsline {subsubsection}{\numberline {7.13.2.1}Read\discretionary {-}{}{}Input}{37}{subsubsection.7.13.2.1}
+\contentsline {subsubsection}{\numberline {7.13.2.2}$\sim $\discretionary {-}{}{}Read\discretionary {-}{}{}Input}{37}{subsubsection.7.13.2.2}
+\contentsline {subsection}{\numberline {7.13.3}Member Function Documentation}{37}{subsection.7.13.3}
+\contentsline {subsubsection}{\numberline {7.13.3.1}File\discretionary {-}{}{}Name}{37}{subsubsection.7.13.3.1}
+\contentsline {subsubsection}{\numberline {7.13.3.2}Read\discretionary {-}{}{}Class\discretionary {-}{}{}Detail}{37}{subsubsection.7.13.3.2}
+\contentsline {subsubsection}{\numberline {7.13.3.3}Read\discretionary {-}{}{}Date\discretionary {-}{}{}Sheet}{38}{subsubsection.7.13.3.3}
+\contentsline {subsubsection}{\numberline {7.13.3.4}Read\discretionary {-}{}{}Date\discretionary {-}{}{}Sheet\discretionary {-}{}{}Out}{38}{subsubsection.7.13.3.4}
+\contentsline {subsubsection}{\numberline {7.13.3.5}Read\discretionary {-}{}{}Exam\discretionary {-}{}{}Detail}{38}{subsubsection.7.13.3.5}
+\contentsline {subsubsection}{\numberline {7.13.3.6}Read\discretionary {-}{}{}Roll\discretionary {-}{}{}No\discretionary {-}{}{}Detail}{38}{subsubsection.7.13.3.6}
+\contentsline {subsubsection}{\numberline {7.13.3.7}Read\discretionary {-}{}{}Room\discretionary {-}{}{}Detail}{38}{subsubsection.7.13.3.7}
+\contentsline {subsubsection}{\numberline {7.13.3.8}Read\discretionary {-}{}{}Strategy}{39}{subsubsection.7.13.3.8}
+\contentsline {subsection}{\numberline {7.13.4}Member Data Documentation}{39}{subsection.7.13.4}
+\contentsline {subsubsection}{\numberline {7.13.4.1}centre\discretionary {-}{}{}Name}{39}{subsubsection.7.13.4.1}
+\contentsline {subsubsection}{\numberline {7.13.4.2}class\discretionary {-}{}{}Name}{39}{subsubsection.7.13.4.2}
+\contentsline {subsubsection}{\numberline {7.13.4.3}cols}{39}{subsubsection.7.13.4.3}
+\contentsline {subsubsection}{\numberline {7.13.4.4}date}{39}{subsubsection.7.13.4.4}
+\contentsline {subsubsection}{\numberline {7.13.4.5}date\discretionary {-}{}{}Sheet\discretionary {-}{}{}R\discretionary {-}{}{}No}{39}{subsubsection.7.13.4.5}
+\contentsline {subsubsection}{\numberline {7.13.4.6}date\discretionary {-}{}{}Sheet\discretionary {-}{}{}R\discretionary {-}{}{}No\discretionary {-}{}{}Size}{39}{subsubsection.7.13.4.6}
+\contentsline {subsubsection}{\numberline {7.13.4.7}exam\discretionary {-}{}{}Sub\discretionary {-}{}{}Code}{39}{subsubsection.7.13.4.7}
+\contentsline {subsubsection}{\numberline {7.13.4.8}exam\discretionary {-}{}{}Sub\discretionary {-}{}{}Name}{40}{subsubsection.7.13.4.8}
+\contentsline {subsubsection}{\numberline {7.13.4.9}file\discretionary {-}{}{}Name}{40}{subsubsection.7.13.4.9}
+\contentsline {subsubsection}{\numberline {7.13.4.10}in\discretionary {-}{}{}File}{40}{subsubsection.7.13.4.10}
+\contentsline {subsubsection}{\numberline {7.13.4.11}n}{40}{subsubsection.7.13.4.11}
+\contentsline {subsubsection}{\numberline {7.13.4.12}not\discretionary {-}{}{}Included}{40}{subsubsection.7.13.4.12}
+\contentsline {subsubsection}{\numberline {7.13.4.13}out\discretionary {-}{}{}File}{40}{subsubsection.7.13.4.13}
+\contentsline {subsubsection}{\numberline {7.13.4.14}prefix}{40}{subsubsection.7.13.4.14}
+\contentsline {subsubsection}{\numberline {7.13.4.15}project\discretionary {-}{}{}I\discretionary {-}{}{}D}{40}{subsubsection.7.13.4.15}
+\contentsline {subsubsection}{\numberline {7.13.4.16}roll\discretionary {-}{}{}No}{40}{subsubsection.7.13.4.16}
+\contentsline {subsubsection}{\numberline {7.13.4.17}room\discretionary {-}{}{}No}{41}{subsubsection.7.13.4.17}
+\contentsline {subsubsection}{\numberline {7.13.4.18}rows}{41}{subsubsection.7.13.4.18}
+\contentsline {subsubsection}{\numberline {7.13.4.19}strategy\discretionary {-}{}{}Option}{41}{subsubsection.7.13.4.19}
+\contentsline {subsubsection}{\numberline {7.13.4.20}subject\discretionary {-}{}{}Code}{41}{subsubsection.7.13.4.20}
+\contentsline {subsubsection}{\numberline {7.13.4.21}subject\discretionary {-}{}{}Name}{41}{subsubsection.7.13.4.21}
+\contentsline {subsubsection}{\numberline {7.13.4.22}temp}{41}{subsubsection.7.13.4.22}
+\contentsline {subsubsection}{\numberline {7.13.4.23}total\discretionary {-}{}{}Centres}{41}{subsubsection.7.13.4.23}
+\contentsline {subsubsection}{\numberline {7.13.4.24}total\discretionary {-}{}{}Classes}{41}{subsubsection.7.13.4.24}
+\contentsline {subsubsection}{\numberline {7.13.4.25}total\discretionary {-}{}{}Days}{41}{subsubsection.7.13.4.25}
+\contentsline {subsubsection}{\numberline {7.13.4.26}total\discretionary {-}{}{}Exams}{42}{subsubsection.7.13.4.26}
+\contentsline {subsubsection}{\numberline {7.13.4.27}total\discretionary {-}{}{}Rooms}{42}{subsubsection.7.13.4.27}
+\contentsline {subsubsection}{\numberline {7.13.4.28}total\discretionary {-}{}{}Subjects}{42}{subsubsection.7.13.4.28}
+\contentsline {section}{\numberline {7.14}Read\discretionary {-}{}{}Input\discretionary {-}{}{}Field Class Reference}{42}{section.7.14}
+\contentsline {subsection}{\numberline {7.14.1}Detailed Description}{42}{subsection.7.14.1}
+\contentsline {subsection}{\numberline {7.14.2}Member Function Documentation}{42}{subsection.7.14.2}
+\contentsline {subsubsection}{\numberline {7.14.2.1}Read\discretionary {-}{}{}Field\discretionary {-}{}{}Value}{42}{subsubsection.7.14.2.1}
+\contentsline {subsubsection}{\numberline {7.14.2.2}Read\discretionary {-}{}{}Field\discretionary {-}{}{}Value}{43}{subsubsection.7.14.2.2}
+\contentsline {subsubsection}{\numberline {7.14.2.3}Set\discretionary {-}{}{}Cookie}{43}{subsubsection.7.14.2.3}
+\contentsline {subsection}{\numberline {7.14.3}Member Data Documentation}{43}{subsection.7.14.3}
+\contentsline {subsubsection}{\numberline {7.14.3.1}fi}{43}{subsubsection.7.14.3.1}
+\contentsline {subsubsection}{\numberline {7.14.3.2}field\discretionary {-}{}{}Value}{43}{subsubsection.7.14.3.2}
+\contentsline {subsubsection}{\numberline {7.14.3.3}form\discretionary {-}{}{}Data}{43}{subsubsection.7.14.3.3}
+\contentsline {section}{\numberline {7.15}Seatplan Class Reference}{43}{section.7.15}
+\contentsline {section}{\numberline {7.16}Seat\discretionary {-}{}{}Plan Class Reference}{44}{section.7.16}
+\contentsline {subsection}{\numberline {7.16.1}Detailed Description}{45}{subsection.7.16.1}
+\contentsline {subsection}{\numberline {7.16.2}Constructor \& Destructor Documentation}{45}{subsection.7.16.2}
+\contentsline {subsubsection}{\numberline {7.16.2.1}$\sim $\discretionary {-}{}{}Room\discretionary {-}{}{}Report}{45}{subsubsection.7.16.2.1}
+\contentsline {subsubsection}{\numberline {7.16.2.2}Seat\discretionary {-}{}{}Plan}{45}{subsubsection.7.16.2.2}
+\contentsline {subsubsection}{\numberline {7.16.2.3}$\sim $\discretionary {-}{}{}Seat\discretionary {-}{}{}Plan}{45}{subsubsection.7.16.2.3}
+\contentsline {subsection}{\numberline {7.16.3}Member Function Documentation}{45}{subsection.7.16.3}
+\contentsline {subsubsection}{\numberline {7.16.3.1}Read\discretionary {-}{}{}Exam\discretionary {-}{}{}Detail}{45}{subsubsection.7.16.3.1}
+\contentsline {subsubsection}{\numberline {7.16.3.2}Read\discretionary {-}{}{}Seat\discretionary {-}{}{}Plan}{46}{subsubsection.7.16.3.2}
+\contentsline {subsubsection}{\numberline {7.16.3.3}Room\discretionary {-}{}{}Report}{46}{subsubsection.7.16.3.3}
+\contentsline {subsubsection}{\numberline {7.16.3.4}Write\discretionary {-}{}{}H\discretionary {-}{}{}T\discretionary {-}{}{}M\discretionary {-}{}{}L\discretionary {-}{}{}File}{46}{subsubsection.7.16.3.4}
+\contentsline {subsubsection}{\numberline {7.16.3.5}Write\discretionary {-}{}{}H\discretionary {-}{}{}T\discretionary {-}{}{}M\discretionary {-}{}{}L\discretionary {-}{}{}File}{46}{subsubsection.7.16.3.5}
+\contentsline {section}{\numberline {7.17}Send\discretionary {-}{}{}Mail Class Reference}{46}{section.7.17}
+\contentsline {subsection}{\numberline {7.17.1}Detailed Description}{47}{subsection.7.17.1}
+\contentsline {subsection}{\numberline {7.17.2}Member Function Documentation}{47}{subsection.7.17.2}
+\contentsline {subsubsection}{\numberline {7.17.2.1}Contact\discretionary {-}{}{}Mail}{47}{subsubsection.7.17.2.1}
+\contentsline {subsubsection}{\numberline {7.17.2.2}Registration\discretionary {-}{}{}Mail}{47}{subsubsection.7.17.2.2}
+\contentsline {subsubsection}{\numberline {7.17.2.3}Reset\discretionary {-}{}{}Password\discretionary {-}{}{}Mail}{47}{subsubsection.7.17.2.3}
+\contentsline {subsubsection}{\numberline {7.17.2.4}Set\discretionary {-}{}{}H\discretionary {-}{}{}T\discretionary {-}{}{}M\discretionary {-}{}{}L\discretionary {-}{}{}Message}{47}{subsubsection.7.17.2.4}
+\contentsline {subsubsection}{\numberline {7.17.2.5}Set\discretionary {-}{}{}Mail\discretionary {-}{}{}Data}{49}{subsubsection.7.17.2.5}
+\contentsline {subsection}{\numberline {7.17.3}Member Data Documentation}{49}{subsection.7.17.3}
+\contentsline {subsubsection}{\numberline {7.17.3.1}html\discretionary {-}{}{}Message}{49}{subsubsection.7.17.3.1}
+\contentsline {subsubsection}{\numberline {7.17.3.2}set\discretionary {-}{}{}Message}{49}{subsubsection.7.17.3.2}
+\contentsline {subsubsection}{\numberline {7.17.3.3}set\discretionary {-}{}{}Sender}{49}{subsubsection.7.17.3.3}
+\contentsline {subsubsection}{\numberline {7.17.3.4}set\discretionary {-}{}{}Server}{49}{subsubsection.7.17.3.4}
+\contentsline {subsubsection}{\numberline {7.17.3.5}set\discretionary {-}{}{}Subject}{49}{subsubsection.7.17.3.5}
+\contentsline {subsubsection}{\numberline {7.17.3.6}url}{49}{subsubsection.7.17.3.6}
+\contentsline {section}{\numberline {7.18}jwsmtp\discretionary {-}{}{}:\discretionary {-}{}{}:S\discretionary {-}{}{}O\discretionary {-}{}{}C\discretionary {-}{}{}K\discretionary {-}{}{}A\discretionary {-}{}{}D\discretionary {-}{}{}D\discretionary {-}{}{}R\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}I\discretionary {-}{}{}N Struct Reference}{50}{section.7.18}
+\contentsline {subsection}{\numberline {7.18.1}Detailed Description}{50}{subsection.7.18.1}
+\contentsline {section}{\numberline {7.19}Strategy Class Reference}{50}{section.7.19}
+\contentsline {subsection}{\numberline {7.19.1}Detailed Description}{51}{subsection.7.19.1}
+\contentsline {subsection}{\numberline {7.19.2}Constructor \& Destructor Documentation}{51}{subsection.7.19.2}
+\contentsline {subsubsection}{\numberline {7.19.2.1}Strategy}{51}{subsubsection.7.19.2.1}
+\contentsline {subsubsection}{\numberline {7.19.2.2}$\sim $\discretionary {-}{}{}Strategy}{51}{subsubsection.7.19.2.2}
+\contentsline {subsection}{\numberline {7.19.3}Member Function Documentation}{51}{subsection.7.19.3}
+\contentsline {subsubsection}{\numberline {7.19.3.1}Main}{51}{subsubsection.7.19.3.1}
+\contentsline {subsection}{\numberline {7.19.4}Member Data Documentation}{52}{subsection.7.19.4}
+\contentsline {subsubsection}{\numberline {7.19.4.1}strategy\discretionary {-}{}{}Name}{52}{subsubsection.7.19.4.1}
+\contentsline {subsubsection}{\numberline {7.19.4.2}total\discretionary {-}{}{}Strategy}{52}{subsubsection.7.19.4.2}
+\contentsline {section}{\numberline {7.20}User Class Reference}{52}{section.7.20}
+\contentsline {subsection}{\numberline {7.20.1}Detailed Description}{53}{subsection.7.20.1}
+\contentsline {subsection}{\numberline {7.20.2}Member Function Documentation}{53}{subsection.7.20.2}
+\contentsline {subsubsection}{\numberline {7.20.2.1}Login\discretionary {-}{}{}User}{53}{subsubsection.7.20.2.1}
+\contentsline {subsection}{\numberline {7.20.3}Member Data Documentation}{53}{subsection.7.20.3}
+\contentsline {subsubsection}{\numberline {7.20.3.1}current\discretionary {-}{}{}Time}{53}{subsubsection.7.20.3.1}
+\contentsline {subsubsection}{\numberline {7.20.3.2}database}{53}{subsubsection.7.20.3.2}
+\contentsline {subsubsection}{\numberline {7.20.3.3}email\discretionary {-}{}{}I\discretionary {-}{}{}D}{54}{subsubsection.7.20.3.3}
+\contentsline {subsubsection}{\numberline {7.20.3.4}msg}{54}{subsubsection.7.20.3.4}
+\contentsline {subsubsection}{\numberline {7.20.3.5}password}{54}{subsubsection.7.20.3.5}
+\contentsline {subsubsection}{\numberline {7.20.3.6}reg\discretionary {-}{}{}Key}{54}{subsubsection.7.20.3.6}
+\contentsline {subsubsection}{\numberline {7.20.3.7}retype\discretionary {-}{}{}Password}{54}{subsubsection.7.20.3.7}
+\contentsline {subsubsection}{\numberline {7.20.3.8}session\discretionary {-}{}{}I\discretionary {-}{}{}D}{54}{subsubsection.7.20.3.8}
+\contentsline {subsubsection}{\numberline {7.20.3.9}temp}{54}{subsubsection.7.20.3.9}
+\contentsline {subsubsection}{\numberline {7.20.3.10}user\discretionary {-}{}{}Email\discretionary {-}{}{}I\discretionary {-}{}{}D}{54}{subsubsection.7.20.3.10}
+\contentsline {subsubsection}{\numberline {7.20.3.11}user\discretionary {-}{}{}Password}{54}{subsubsection.7.20.3.11}
+\contentsline {subsubsection}{\numberline {7.20.3.12}vec\discretionary {-}{}{}Temp}{55}{subsubsection.7.20.3.12}
+\contentsline {subsubsection}{\numberline {7.20.3.13}where}{55}{subsubsection.7.20.3.13}
+\contentsline {chapter}{\numberline {8}File Documentation}{57}{chapter.8}
+\contentsline {section}{\numberline {8.1}src/cpp/backend/arrangerollno.cc File Reference}{57}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Detailed Description}{57}{subsection.8.1.1}
+\contentsline {section}{\numberline {8.2}src/cpp/backend/datesheet.cc File Reference}{57}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Detailed Description}{58}{subsection.8.2.1}
+\contentsline {section}{\numberline {8.3}src/cpp/backend/expandrollno.cc File Reference}{58}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Detailed Description}{58}{subsection.8.3.1}
+\contentsline {section}{\numberline {8.4}src/cpp/backend/header/arrangerollno.h File Reference}{59}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}Detailed Description}{59}{subsection.8.4.1}
+\contentsline {section}{\numberline {8.5}src/cpp/backend/header/datesheet.h File Reference}{59}{section.8.5}
+\contentsline {subsection}{\numberline {8.5.1}Detailed Description}{59}{subsection.8.5.1}
+\contentsline {section}{\numberline {8.6}src/cpp/backend/header/expandrollno.h File Reference}{60}{section.8.6}
+\contentsline {subsection}{\numberline {8.6.1}Detailed Description}{60}{subsection.8.6.1}
+\contentsline {section}{\numberline {8.7}src/cpp/backend/header/readinput.h File Reference}{61}{section.8.7}
+\contentsline {subsection}{\numberline {8.7.1}Detailed Description}{61}{subsection.8.7.1}
+\contentsline {section}{\numberline {8.8}src/cpp/backend/header/report.h File Reference}{61}{section.8.8}
+\contentsline {subsection}{\numberline {8.8.1}Detailed Description}{61}{subsection.8.8.1}
+\contentsline {section}{\numberline {8.9}src/cpp/backend/header/seatplan.h File Reference}{62}{section.8.9}
+\contentsline {subsection}{\numberline {8.9.1}Detailed Description}{62}{subsection.8.9.1}
+\contentsline {section}{\numberline {8.10}src/cpp/backend/header/strategy.h File Reference}{63}{section.8.10}
+\contentsline {subsection}{\numberline {8.10.1}Detailed Description}{63}{subsection.8.10.1}
+\contentsline {section}{\numberline {8.11}src/cpp/backend/main.cpp File Reference}{63}{section.8.11}
+\contentsline {subsection}{\numberline {8.11.1}Detailed Description}{64}{subsection.8.11.1}
+\contentsline {subsection}{\numberline {8.11.2}Function Documentation}{64}{subsection.8.11.2}
+\contentsline {subsubsection}{\numberline {8.11.2.1}main}{64}{subsubsection.8.11.2.1}
+\contentsline {section}{\numberline {8.12}src/cpp/backend/readinput.cc File Reference}{64}{section.8.12}
+\contentsline {subsection}{\numberline {8.12.1}Detailed Description}{64}{subsection.8.12.1}
+\contentsline {section}{\numberline {8.13}src/cpp/backend/report.cc File Reference}{65}{section.8.13}
+\contentsline {subsection}{\numberline {8.13.1}Detailed Description}{65}{subsection.8.13.1}
+\contentsline {section}{\numberline {8.14}src/cpp/backend/seatplan.cc File Reference}{65}{section.8.14}
+\contentsline {subsection}{\numberline {8.14.1}Detailed Description}{66}{subsection.8.14.1}
+\contentsline {section}{\numberline {8.15}src/cpp/backend/strategy.cc File Reference}{66}{section.8.15}
+\contentsline {subsection}{\numberline {8.15.1}Detailed Description}{66}{subsection.8.15.1}
+\contentsline {section}{\numberline {8.16}src/cpp/frontend/bakaplan.cc File Reference}{67}{section.8.16}
+\contentsline {subsection}{\numberline {8.16.1}Detailed Description}{67}{subsection.8.16.1}
+\contentsline {section}{\numberline {8.17}src/cpp/frontend/bakaplan\discretionary {-}{}{}\_\discretionary {-}{}{}main.cpp File Reference}{67}{section.8.17}
+\contentsline {subsection}{\numberline {8.17.1}Detailed Description}{67}{subsection.8.17.1}
+\contentsline {section}{\numberline {8.18}src/cpp/frontend/database.cc File Reference}{68}{section.8.18}
+\contentsline {subsection}{\numberline {8.18.1}Detailed Description}{68}{subsection.8.18.1}
+\contentsline {section}{\numberline {8.19}src/cpp/frontend/header/bakaplan.h File Reference}{68}{section.8.19}
+\contentsline {subsection}{\numberline {8.19.1}Detailed Description}{68}{subsection.8.19.1}
+\contentsline {section}{\numberline {8.20}src/cpp/frontend/header/cgicc.h File Reference}{69}{section.8.20}
+\contentsline {subsection}{\numberline {8.20.1}Detailed Description}{69}{subsection.8.20.1}
+\contentsline {section}{\numberline {8.21}src/cpp/frontend/header/database.h File Reference}{69}{section.8.21}
+\contentsline {subsection}{\numberline {8.21.1}Detailed Description}{69}{subsection.8.21.1}
+\contentsline {section}{\numberline {8.22}src/cpp/frontend/header/page\discretionary {-}{}{}\_\discretionary {-}{}{}structure.h File Reference}{70}{section.8.22}
+\contentsline {subsection}{\numberline {8.22.1}Detailed Description}{70}{subsection.8.22.1}
+\contentsline {section}{\numberline {8.23}src/cpp/frontend/header/sendmail.h File Reference}{70}{section.8.23}
+\contentsline {subsection}{\numberline {8.23.1}Detailed Description}{70}{subsection.8.23.1}
+\contentsline {section}{\numberline {8.24}src/cpp/frontend/header/user.h File Reference}{71}{section.8.24}
+\contentsline {subsection}{\numberline {8.24.1}Detailed Description}{71}{subsection.8.24.1}
+\contentsline {section}{\numberline {8.25}src/cpp/frontend/input\discretionary {-}{}{}\_\discretionary {-}{}{}detail.cc File Reference}{71}{section.8.25}
+\contentsline {subsection}{\numberline {8.25.1}Detailed Description}{71}{subsection.8.25.1}
+\contentsline {section}{\numberline {8.26}src/cpp/frontend/page\discretionary {-}{}{}\_\discretionary {-}{}{}structure.cc File Reference}{72}{section.8.26}
+\contentsline {subsection}{\numberline {8.26.1}Detailed Description}{72}{subsection.8.26.1}
+\contentsline {section}{\numberline {8.27}src/cpp/frontend/project\discretionary {-}{}{}\_\discretionary {-}{}{}detail.cc File Reference}{72}{section.8.27}
+\contentsline {subsection}{\numberline {8.27.1}Detailed Description}{72}{subsection.8.27.1}
+\contentsline {section}{\numberline {8.28}src/cpp/frontend/sendmail.cc File Reference}{73}{section.8.28}
+\contentsline {subsection}{\numberline {8.28.1}Detailed Description}{73}{subsection.8.28.1}
+\contentsline {section}{\numberline {8.29}src/cpp/frontend/set\discretionary {-}{}{}\_\discretionary {-}{}{}password\discretionary {-}{}{}\_\discretionary {-}{}{}main.cpp File Reference}{73}{section.8.29}
+\contentsline {subsection}{\numberline {8.29.1}Detailed Description}{73}{subsection.8.29.1}
+\contentsline {section}{\numberline {8.30}src/cpp/frontend/user.cc File Reference}{74}{section.8.30}
+\contentsline {subsection}{\numberline {8.30.1}Detailed Description}{74}{subsection.8.30.1}

@@ -1,0 +1,222 @@
+\hypertarget{classSendMail}{\section{Send\-Mail Class Reference}
+\label{classSendMail}\index{Send\-Mail@{Send\-Mail}}
+}
+
+
+Class for sending mail to user for registeration and for changing password.  
+
+
+
+
+{\ttfamily \#include $<$sendmail.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSendMail_ae0d11ddeda1ae7ae1cc3b8f11678ed92}{\hyperlink{classSendMail_ae0d11ddeda1ae7ae1cc3b8f11678ed92}{Send\-Mail} ()}\label{classSendMail_ae0d11ddeda1ae7ae1cc3b8f11678ed92}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classSendMail_a25ba5afabc97cf3dab525f2eb1e67e0e}{Set\-Mail\-Data} ()
+\begin{DoxyCompactList}\small\item\em Settinf variable that are used to send mail. \end{DoxyCompactList}\item 
+void \hyperlink{classSendMail_a89c5a5bace5c21014b8184db5707b986}{Set\-H\-T\-M\-L\-Message} (string reg\-Key, string mail)
+\begin{DoxyCompactList}\small\item\em Setting body of mail(message ie send to user) \end{DoxyCompactList}\item 
+void \hyperlink{classSendMail_a4c9983852dbcd1eb07170582761ed559}{Registration\-Mail} (string set\-Recipient, string reg\-Key)
+\begin{DoxyCompactList}\small\item\em Sending registration mail to user. \end{DoxyCompactList}\item 
+void \hyperlink{classSendMail_a56180b5a27efd4d43514f91008b280ef}{Reset\-Password\-Mail} (string set\-Recipient, string reg\-Key)
+\begin{DoxyCompactList}\small\item\em Sending mail to user for changing password. \end{DoxyCompactList}\item 
+void \hyperlink{classSendMail_a3d918a3f54b3a9be68fe732e9d5de43f}{Contact\-Mail} (string \hyperlink{classSendMail_ae6776dfd1b92b97837f25259f7b57d2f}{set\-Sender}, string msg)
+\begin{DoxyCompactList}\small\item\em Sending mail to developer from user. \end{DoxyCompactList}\item 
+\hypertarget{classSendMail_acc86b2a9995472436dbd77b3c6bb91f3}{\hyperlink{classSendMail_acc86b2a9995472436dbd77b3c6bb91f3}{$\sim$\-Send\-Mail} ()}\label{classSendMail_acc86b2a9995472436dbd77b3c6bb91f3}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classSendMail_ae6776dfd1b92b97837f25259f7b57d2f}{set\-Sender}
+\item 
+string \hyperlink{classSendMail_a22e32135e60ad02a6beff91638907cc6}{set\-Subject}
+\item 
+string \hyperlink{classSendMail_ac4e386f1e7775484429f7b01ef1623a3}{set\-Message}
+\item 
+string \hyperlink{classSendMail_a5337895c22cda4db5ebd05e43925e391}{set\-Server}
+\item 
+string \hyperlink{classSendMail_a962ca34d61eab5c0f8c47e760cce4a53}{html\-Message}
+\item 
+string \hyperlink{classSendMail_a6b02c708619c2fb35216b2ee3061f33b}{url}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for sending mail to user for registeration and for changing password. 
+
+Definition at line 34 of file sendmail.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSendMail_a3d918a3f54b3a9be68fe732e9d5de43f}{\index{Send\-Mail@{Send\-Mail}!Contact\-Mail@{Contact\-Mail}}
+\index{Contact\-Mail@{Contact\-Mail}!SendMail@{Send\-Mail}}
+\subsubsection[{Contact\-Mail}]{\setlength{\rightskip}{0pt plus 5cm}void Send\-Mail\-::\-Contact\-Mail (
+\begin{DoxyParamCaption}
+\item[{string}]{set\-Sender, }
+\item[{string}]{msg}
+\end{DoxyParamCaption}
+)}}\label{classSendMail_a3d918a3f54b3a9be68fe732e9d5de43f}
+
+
+Sending mail to developer from user. 
+
+Contacl mail to developer send by user
+
+
+\begin{DoxyParams}{Parameters}
+{\em set\-Sender} & Sender's email id. \\
+\hline
+{\em msg} & Message send by user for developer. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 144 of file sendmail.\-cc.
+
+\hypertarget{classSendMail_a4c9983852dbcd1eb07170582761ed559}{\index{Send\-Mail@{Send\-Mail}!Registration\-Mail@{Registration\-Mail}}
+\index{Registration\-Mail@{Registration\-Mail}!SendMail@{Send\-Mail}}
+\subsubsection[{Registration\-Mail}]{\setlength{\rightskip}{0pt plus 5cm}void Send\-Mail\-::\-Registration\-Mail (
+\begin{DoxyParamCaption}
+\item[{string}]{set\-Recipient, }
+\item[{string}]{reg\-Key}
+\end{DoxyParamCaption}
+)}}\label{classSendMail_a4c9983852dbcd1eb07170582761ed559}
+
+
+Sending registration mail to user. 
+
+Registration emial for new user
+
+
+\begin{DoxyParams}{Parameters}
+{\em set\-Recipient} & Reciever's email id \\
+\hline
+{\em reg\-Key} & Registration key \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 89 of file sendmail.\-cc.
+
+\hypertarget{classSendMail_a56180b5a27efd4d43514f91008b280ef}{\index{Send\-Mail@{Send\-Mail}!Reset\-Password\-Mail@{Reset\-Password\-Mail}}
+\index{Reset\-Password\-Mail@{Reset\-Password\-Mail}!SendMail@{Send\-Mail}}
+\subsubsection[{Reset\-Password\-Mail}]{\setlength{\rightskip}{0pt plus 5cm}void Send\-Mail\-::\-Reset\-Password\-Mail (
+\begin{DoxyParamCaption}
+\item[{string}]{set\-Recipient, }
+\item[{string}]{reg\-Key}
+\end{DoxyParamCaption}
+)}}\label{classSendMail_a56180b5a27efd4d43514f91008b280ef}
+
+
+Sending mail to user for changing password. 
+
+Sending mail to reset password
+
+
+\begin{DoxyParams}{Parameters}
+{\em set\-Recipient} & Reciever's email id \\
+\hline
+{\em reg\-Key} & Registration key \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 117 of file sendmail.\-cc.
+
+\hypertarget{classSendMail_a89c5a5bace5c21014b8184db5707b986}{\index{Send\-Mail@{Send\-Mail}!Set\-H\-T\-M\-L\-Message@{Set\-H\-T\-M\-L\-Message}}
+\index{Set\-H\-T\-M\-L\-Message@{Set\-H\-T\-M\-L\-Message}!SendMail@{Send\-Mail}}
+\subsubsection[{Set\-H\-T\-M\-L\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void Send\-Mail\-::\-Set\-H\-T\-M\-L\-Message (
+\begin{DoxyParamCaption}
+\item[{string}]{reg\-Key, }
+\item[{string}]{mail}
+\end{DoxyParamCaption}
+)}}\label{classSendMail_a89c5a5bace5c21014b8184db5707b986}
+
+
+Setting body of mail(message ie send to user) 
+
+H\-T\-M\-L Message of mail
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg\-Key} & Registration Key \\
+\hline
+{\em mail} & Mail type -\/ regiter/confirm/reset-\/password \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file sendmail.\-cc.
+
+\hypertarget{classSendMail_a25ba5afabc97cf3dab525f2eb1e67e0e}{\index{Send\-Mail@{Send\-Mail}!Set\-Mail\-Data@{Set\-Mail\-Data}}
+\index{Set\-Mail\-Data@{Set\-Mail\-Data}!SendMail@{Send\-Mail}}
+\subsubsection[{Set\-Mail\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Send\-Mail\-::\-Set\-Mail\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSendMail_a25ba5afabc97cf3dab525f2eb1e67e0e}
+
+
+Settinf variable that are used to send mail. 
+
+Setting mail information 
+
+Definition at line 33 of file sendmail.\-cc.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classSendMail_a962ca34d61eab5c0f8c47e760cce4a53}{\index{Send\-Mail@{Send\-Mail}!html\-Message@{html\-Message}}
+\index{html\-Message@{html\-Message}!SendMail@{Send\-Mail}}
+\subsubsection[{html\-Message}]{\setlength{\rightskip}{0pt plus 5cm}string Send\-Mail\-::html\-Message\hspace{0.3cm}{\ttfamily [protected]}}}\label{classSendMail_a962ca34d61eab5c0f8c47e760cce4a53}
+Message in html form 
+
+Definition at line 38 of file sendmail.\-h.
+
+\hypertarget{classSendMail_ac4e386f1e7775484429f7b01ef1623a3}{\index{Send\-Mail@{Send\-Mail}!set\-Message@{set\-Message}}
+\index{set\-Message@{set\-Message}!SendMail@{Send\-Mail}}
+\subsubsection[{set\-Message}]{\setlength{\rightskip}{0pt plus 5cm}string Send\-Mail\-::set\-Message\hspace{0.3cm}{\ttfamily [protected]}}}\label{classSendMail_ac4e386f1e7775484429f7b01ef1623a3}
+Plain/\-Rich text mail 
+
+Definition at line 38 of file sendmail.\-h.
+
+\hypertarget{classSendMail_ae6776dfd1b92b97837f25259f7b57d2f}{\index{Send\-Mail@{Send\-Mail}!set\-Sender@{set\-Sender}}
+\index{set\-Sender@{set\-Sender}!SendMail@{Send\-Mail}}
+\subsubsection[{set\-Sender}]{\setlength{\rightskip}{0pt plus 5cm}string Send\-Mail\-::set\-Sender\hspace{0.3cm}{\ttfamily [protected]}}}\label{classSendMail_ae6776dfd1b92b97837f25259f7b57d2f}
+Sender's email id 
+
+Definition at line 38 of file sendmail.\-h.
+
+\hypertarget{classSendMail_a5337895c22cda4db5ebd05e43925e391}{\index{Send\-Mail@{Send\-Mail}!set\-Server@{set\-Server}}
+\index{set\-Server@{set\-Server}!SendMail@{Send\-Mail}}
+\subsubsection[{set\-Server}]{\setlength{\rightskip}{0pt plus 5cm}string Send\-Mail\-::set\-Server\hspace{0.3cm}{\ttfamily [protected]}}}\label{classSendMail_a5337895c22cda4db5ebd05e43925e391}
+Server\-: localhost or domain name 
+
+Definition at line 38 of file sendmail.\-h.
+
+\hypertarget{classSendMail_a22e32135e60ad02a6beff91638907cc6}{\index{Send\-Mail@{Send\-Mail}!set\-Subject@{set\-Subject}}
+\index{set\-Subject@{set\-Subject}!SendMail@{Send\-Mail}}
+\subsubsection[{set\-Subject}]{\setlength{\rightskip}{0pt plus 5cm}string Send\-Mail\-::set\-Subject\hspace{0.3cm}{\ttfamily [protected]}}}\label{classSendMail_a22e32135e60ad02a6beff91638907cc6}
+Subject of mail 
+
+Definition at line 38 of file sendmail.\-h.
+
+\hypertarget{classSendMail_a6b02c708619c2fb35216b2ee3061f33b}{\index{Send\-Mail@{Send\-Mail}!url@{url}}
+\index{url@{url}!SendMail@{Send\-Mail}}
+\subsubsection[{url}]{\setlength{\rightskip}{0pt plus 5cm}string Send\-Mail\-::url\hspace{0.3cm}{\ttfamily [protected]}}}\label{classSendMail_a6b02c708619c2fb35216b2ee3061f33b}
+Confirmation link or url 
+
+Definition at line 38 of file sendmail.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/cpp/frontend/header/\hyperlink{sendmail_8h}{sendmail.\-h}\item 
+src/cpp/frontend/\hyperlink{sendmail_8cc}{sendmail.\-cc}\end{DoxyCompactItemize}
