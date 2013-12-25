@@ -1,5 +1,5 @@
 /**
- *       \file       input-detail.cc
+ *       \file       input_detail.cc
  *
  *       \brief      Definition of functions \n
  *
@@ -57,13 +57,13 @@ int InputDetail :: StringToInt(string value)
  *      \param  input   string for spliting
  *      \param  token   eg , or . or - any char to split string
  */
-
+/*
 void InputDetail :: SplitString(STRING_VEC & output, string input,
                                 string token)
 {
     split( output, input, is_any_of(token), token_compress_on ); 
 }
-
+*/
 /**
  *      \fn     InputDetail :: FileName(string projectID, string file,
  *                                    string io)

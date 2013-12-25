@@ -16,7 +16,7 @@
 #include "header/user.h"
 #include "header/fieldname.h"
 
-namespace field = fieldname;           /**< Shortname for namespace */
+//namespace field = fieldname;           /**< Shortname for namespace */
 
 /**
  *      \fn     User :: User()
@@ -35,7 +35,7 @@ User :: User()
 
 void User :: ReadSignUpForm()
 {
-    userEmailID  = readField.ReadFieldValue(field::name["emailSignUp"]);
+    userEmailID  = readField.ReadFieldValue(name::field["emailSignUp"]);
 }
 
 /**
@@ -45,8 +45,8 @@ void User :: ReadSignUpForm()
 
 void User :: ReadLoginForm()
 {
-    userEmailID  = readField.ReadFieldValue(field::name["emailLogin"]);
-    userPassword = readField.ReadFieldValue(field::name["passwordLogin"]);
+    userEmailID  = readField.ReadFieldValue(name::field["emailLogin"]);
+    userPassword = readField.ReadFieldValue(name::field["passwordLogin"]);
 }
 
 /**
@@ -56,10 +56,10 @@ void User :: ReadLoginForm()
 
 void User :: SelectUserDetail()
 {
-    database.SelectColumn(emailID, field::name["emailID"], 
-                          field::name["user"]);
-    database.SelectColumn(password, field::name["password"], 
-                          field::name["user"]);
+    database.SelectColumn(emailID, name::field["emailID"], 
+                          name::table["user"]);
+    database.SelectColumn(password, name::field["password"], 
+                          name::table["user"]);
 }
 
 /**
@@ -80,8 +80,9 @@ void User :: LoginUser()
     {
         temp = md5(userPassword);
         
-        where = "EmailID = \"" + userEmailID + "\"";
-        database.SelectColumn(vecTemp, "Password", "User", where);
+        where = name::field["emailID"] + " = \"" + userEmailID + "\"";
+        database.SelectColumn(vecTemp, name::field["password"], 
+                              name::table["user"], where);
 
         if( temp == vecTemp[0] )   /**< If Password Correct */
         {
@@ -90,13 +91,14 @@ void User :: LoginUser()
             currentTime = Time();
             sessionID += md5(currentTime);
             database.InsertSessionDetail(userEmailID, sessionID);
-            readField.SetCookie(field::name["sessionID"], sessionID);
+            readField.SetCookie(name::field["sessionID"], sessionID);
            
-            where = "SessionKey = \"" + sessionID + "\"";
+            where = name::field["sessionKey"] + " = \"" 
+                    + sessionID + "\"";
             string sID;
             STRING_VEC vSID;
-            database.SelectColumn(vSID, "SessionID", "SessionDetail",
-                                  where);
+            database.SelectColumn(vSID, name::field["sessionID"], 
+                                  name::table["session"], where);
 
             sID = vSID[0];
 
@@ -127,7 +129,7 @@ void User :: SignUpUser()
     SelectUserDetail();
 
     cout << HTTPHTMLHeader() << endl;
-
+ 
     if ( find(emailID.begin(), emailID.end(), userEmailID)
          != emailID.end() )
     {
@@ -135,7 +137,8 @@ void User :: SignUpUser()
     }
     else
     {
-        database.SelectColumn(emailID, "EmailID", "Registeration");
+        database.SelectColumn(emailID, name::field["emailID"], 
+                              name::table["reg"]);
 
         if ( find(emailID.begin(), emailID.end(), userEmailID)
              != emailID.end() )
@@ -156,6 +159,7 @@ void User :: SignUpUser()
      //       msg = "true";
         }
     }
+
     cout << msg << endl;
 }
 
@@ -169,13 +173,16 @@ void User :: ConfirmUser()
 {
     cout << HTTPHTMLHeader() << endl;
 
-    key = readField.ReadFieldValue(field::name["key"]);
+    key = readField.ReadFieldValue(name::field["key"]);
 
-    database.SelectColumn(regKey, "RegistrationKey", "Registeration");
+    database.SelectColumn(regKey, name::field["regKey"], 
+                          name::table["reg"]);
+
     if ( find(regKey.begin(), regKey.end(), key) != regKey.end() )
     {
-        where = "RegistrationKey =\"" + key + "\"";
-        database.SelectColumn(emailID, "EmailID", "Registeration");
+        where = name::field["regKey"] + " =\"" + key + "\"";
+        database.SelectColumn(emailID, name::field["emailID"], 
+                              name::table["reg"]);
         
         msg = emailID[0];
     }
@@ -197,9 +204,9 @@ void User :: SetPassword()
 {
     cout << HTTPHTMLHeader() << endl;
 
-    userEmailID = readField.ReadFieldValue(field::name["emailID"]);
-    userPassword = readField.ReadFieldValue(field::name["password"]);
-    retypePassword = readField.ReadFieldValue(field::name["retypePassword"]);
+    userEmailID = readField.ReadFieldValue(name::field["emailID"]);
+    userPassword = readField.ReadFieldValue(name::field["password"]);
+    retypePassword = readField.ReadFieldValue(name::field["retypePassword"]);
 
     if(userPassword == retypePassword)
     {

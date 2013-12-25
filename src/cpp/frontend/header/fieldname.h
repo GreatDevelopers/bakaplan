@@ -26,9 +26,10 @@
  *  pages and column name of tables in database.
  */
 
-namespace fieldname
+namespace name
 {
-    std::map<string, string> name = 
+    // These names can also be used for table columns
+    std::map<string, string> field = 
     {
 
         /* Assign values of class details */
@@ -58,6 +59,8 @@ namespace fieldname
         {"key","Key"},
         {"user", "User"},
         {"sessionID", "SessionID"},
+        {"sessionKey", "SessionKey"},
+        {"regKey", "RegKey"},
 
         /* Project Detail */
 
@@ -98,6 +101,19 @@ namespace fieldname
         /* Variables for row index and last row in table */
         {"lastRow", "LastRow"},
         {"rowIndex", "RowIndex"}
+    };
+
+    std::map<string, string> table = 
+    {
+
+        /* Assign values of class details */
+
+        {"user", "User"},
+        {"reg", "Registration"},
+        {"project", "ProjectDetail"},
+        {"session", "SessionDetail"},
+        {"contact", "ContactDetail"},
+        {"reset","ResetPassword"}
     };
 }
 

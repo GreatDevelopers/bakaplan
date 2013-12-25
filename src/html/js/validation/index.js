@@ -6,8 +6,8 @@ $(function()
 {
 
     var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
-		
-    var validator = new FormValidator('accordion-signup',[{
+    // Sign up form validation
+    var signupValidator = new FormValidator('accordion-signup',[{
 		name:'email-signup',
 		display:'Email ID',
 		rules:'required|valid_email'

@@ -18,7 +18,7 @@ function GetSignUpResponse()
     {
         XMLHttp.open
 
-        ("GET", "../cgi-bin/nbp/signup?"
+        ("GET", "/bp/signup?"
 
         + "email-signup=" + document.getElementById('email-signup').value
 
@@ -50,11 +50,13 @@ function GetSignUpResponse()
 
 function GetLoginResponse() 
 {
+    var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
+
     if(validate == "true")
     {
         XMLHttp.open
     
-        ("GET", "../cgi-bin/nbp/login?"
+        ("GET", "/bp/login?"
 
         + "email-login=" + document.getElementById('email-login').value
 
@@ -66,20 +68,23 @@ function GetLoginResponse()
         {
             if(XMLHttp.responseText.trim() == "false")
             {
-                var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
   			    theErrorTip.setContent("Incorrect Password or Email ID");//XMLHttp.responseText);
     		    theErrorTip.show();	
             }
+            else if(XMLHttp.responseText.trim() == "true")
+            {
+//                var link = "../cgi-bin/bp/project-detail?sid="
+//                                       + XMLHttp.responseText;
+
+  			    theErrorTip.setContent("Valid User Info" + XMLHttp.responseText);
+    		    theErrorTip.show();	
+
+//                window.location.href = link;
+            }
             else
             {
-                var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
-                var link = "../cgi-bin/bp/project-detail?sid="
-                                       + XMLHttp.responseText;
-
-  			    theErrorTip.setContent(link);
-//    		    theErrorTip.show();	
-
-                window.location.href = link;
+                theErrorTip.setContent(XMLHttp.responseText);
+    		    theErrorTip.show().delay(5000).hide(0);
             }
         }
         XMLHttp.send(null);

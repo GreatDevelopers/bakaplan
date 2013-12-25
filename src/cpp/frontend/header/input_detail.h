@@ -64,8 +64,8 @@ class InputDetail : public PageStructure
       
         string IntToString(int value);
         int StringToInt(string value);
-        void SplitString(STRING_VEC & output, 
-                         string input, string token);
+//        void SplitString(STRING_VEC & output, 
+//                         string input, string token);
         string FileName(string file, string projectID, int fileType);
 
 

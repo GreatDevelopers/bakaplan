@@ -36,8 +36,8 @@ Database :: Database()
     {
         cout << "Content-type: type/html \n\n";
         cout << "Database Connection Failed\n"
-                "Check database details in NBP"
-                "/backend/src/header/database-detail.h file";
+                "Check database details in ~/public_html/cgi-bin/bakaplan"
+                "/src/frontend/header/database_detail.h file";
     }
 }
 
@@ -199,7 +199,7 @@ void Database :: InsertUserDetail(string emailID, string password)
 void Database :: InsertRegistrationDetail(string emailID,
                                           string registrationKey)
 {
-    query  = "insert into Registeration(EmailID, RegistrationKey) ";
+    query  = "insert into Registration(EmailID, RegKey) ";
     query += "values(\"" + emailID + "\", \"" + registrationKey;
     query += "\");";
 
@@ -230,7 +230,7 @@ void Database :: InsertProjectDetail(string emailID,
 
     InsertQuery(query);
 }
-
+/* 
 void Database :: InsertClassDetail(string projectID, string className,
                                    string subjectName, 
                                    string subjectCode)
@@ -321,7 +321,7 @@ void Database :: InsertExamDetail(string projectID, string dateSheetID,
 
     InsertQuery(query);
 }
-
+*/
 void Database :: InsertSessionDetail(string emailID, string sessionKey)
 {
     query  = "insert into SessionDetail(EmailID, SessionKey) values(";
@@ -329,7 +329,7 @@ void Database :: InsertSessionDetail(string emailID, string sessionKey)
 
     InsertQuery(query);
 }
-
+/* 
 void Database :: SelectSum(string column, string table, 
                            string projectID, string & result)
 {
@@ -339,7 +339,7 @@ void Database :: SelectSum(string column, string table,
     SelectQuery(query, vecTemp);
     result = vecTemp[0];
 }
-
+*/
 /**
  *--------------------------------------------------------------------
  *       Class:  Database

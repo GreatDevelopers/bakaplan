@@ -48,8 +48,8 @@ void SendMail :: SetHTMLMessage(string regKey, string mail)
 {
     url  = "http://";
     url += SERVER_MAIL;
-    url += "/~"; 
-    url += USERNAME; 
+    //url += "/~"; 
+    //url += USERNAME; 
     url += "/bakaplan/";
     if(mail == "register")
         url += "confirm.html?Key=" + regKey;
