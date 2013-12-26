@@ -38,7 +38,7 @@ class PageStructure
         void CommonJSFiles();
         void CommonCSSFiles();
 
-        void SideMenu();
+        void SideMenu(int sid);
         ~PageStructure();
 };
 

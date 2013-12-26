@@ -71,21 +71,21 @@ function GetLoginResponse()
   			    theErrorTip.setContent("Incorrect Password or Email ID");//XMLHttp.responseText);
     		    theErrorTip.show();	
             }
-            else if(XMLHttp.responseText.trim() == "true")
+            else //if(XMLHttp.responseText.trim() == "true")
             {
-//                var link = "../cgi-bin/bp/project-detail?sid="
-//                                       + XMLHttp.responseText;
+                var link = "bp/bakaplan?sid="
+                                       + XMLHttp.responseText;
 
-  			    theErrorTip.setContent("Valid User Info" + XMLHttp.responseText);
-    		    theErrorTip.show();	
+//  			    theErrorTip.setContent("Valid User Info" + XMLHttp.responseText);
+//    		    theErrorTip.show();	
 
-//                window.location.href = link;
+                window.location.href = link;
             }
-            else
+/*            else
             {
                 theErrorTip.setContent(XMLHttp.responseText);
     		    theErrorTip.show().delay(5000).hide(0);
-            }
+            }*/
         }
         XMLHttp.send(null);
 

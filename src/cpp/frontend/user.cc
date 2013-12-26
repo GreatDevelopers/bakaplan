@@ -76,7 +76,7 @@ void User :: LoginUser()
 
     /** Matching user details with values in database */
     if ( ( find(emailID.begin(), emailID.end(), userEmailID) 
-         != emailID.end() ) )                /**< If Email ID valid */
+         != emailID.end() ) )                  /* If Email ID valid */
     {
         temp = md5(userPassword);
         
@@ -84,7 +84,7 @@ void User :: LoginUser()
         database.SelectColumn(vecTemp, name::field["password"], 
                               name::table["user"], where);
 
-        if( temp == vecTemp[0] )   /**< If Password Correct */
+        if( temp == vecTemp[0] )   /* If Password Correct */
         {
              
             sessionID  = md5(userEmailID);
@@ -104,12 +104,12 @@ void User :: LoginUser()
 
             msg = sID; // Redirect to next page
         }
-        else                             /**< If Password Incorrect */
+        else                             /* If Password Incorrect */
         {
             msg = "false";
         }
     }
-    else                                   /**< If Email ID invalid */
+    else                                   /* If Email ID invalid */
     {
         msg = "false";
     }

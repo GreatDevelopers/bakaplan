@@ -13,6 +13,7 @@
  */
 
 #include "header/bakaplan.h"
+#include "header/fieldname.h"
 
 /**
  *      \fn     BaKaPlan :: BaKaPlan()
@@ -20,7 +21,80 @@
  */
 BaKaPlan :: BaKaPlan()
 {
-    // constructor
+    // default constructor
+    
+    sessionID = "sid";
+    
+    // Initializing page titles
+    pageTitle.push_back("Logout");              // step 0
+    pageTitle.push_back("Project Detail");      // step 1
+    pageTitle.push_back("Class Detail");        // step 2
+    pageTitle.push_back("Roll No Detail");      // step 3
+    pageTitle.push_back("Exam Detail");         // step 4
+}
+
+/**
+ *      \fn     BaKaPlan :: StartPage(string title, int sid)
+ *      \brief  Starting of HTML Page(head, body section)
+ *      \param  title Title of html page
+ *      \param  sid session id
+ */
+void BaKaPlan :: StartPage(string pageTitle, int sid)
+{
+    cout << HTTPHTMLHeader() << endl;
+
+    cout << html() 
+         << head() << title(pageTitle);
+
+    CommonCSSFiles();
+    CommonJSFiles();
+
+    cout << head()
+         << body().set("class", "coloredBody");
+    
+    SideMenu(sid);
+
+    cout << cgicc::div().set("class", "page-wrap");
+
+    cout << h1().set("id", "tipTarget") << "~" << h1()
+         << cgicc::div().set("id", "msg") << cgicc::div();
+}
+
+/**
+ *      \fn     BaKaPlan :: EndPage()
+ *      \brief  Ending of html page(close body and html tags)
+ */
+void BaKaPlan :: EndPage()
+{
+    cout << cgicc::div();
+    JS("js/sidemenu.js");
+
+    cout << body()
+         << html();
+}
+
+/**
+ *      \fn     BaKaPlan :: SessionExpired(int &sid)
+ *      \brief  Read session id and then check whether session expired
+ *              or not
+ *      \param  sid Session ID
+ *      \return Return false id session expired else true
+ */
+bool BaKaPlan :: SessionExpired(int& sid)
+{
+    sid = StringToInt(readField.ReadFieldValue(sessionID));
+
+    return true;
+}
+
+/**
+ *      \fn     BaKaPlan :: Logout()
+ *      \brief  Logout user
+ */
+void BaKaPlan :: Logout()
+{
+
+
 }
 
 /**
@@ -30,15 +104,22 @@ BaKaPlan :: BaKaPlan()
  */
 void BaKaPlan :: Main(int step)
 {
+    int sid = 6;
+    StartPage(pageTitle[step], sid);
     switch(step)
     {
-        case 0:
+        case 1:
             project.ProjectDetailPage();
             break;
+
+        case 0:
+            // Log out
+            Logout();
 
         default:
             project.ProjectDetailPage();
     }
+    EndPage();
 }
 
 /**

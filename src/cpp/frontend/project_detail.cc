@@ -46,28 +46,8 @@ void ProjectDetail :: WriteProjectDetail()
  */
 void ProjectDetail :: ProjectDetailPage()
 {
-    cout << HTTPHTMLHeader() << endl;
-
-    cout << html() 
-         << head() << title("Project Detail");
-
-    CommonCSSFiles();
-    CommonJSFiles();
-
-    cout << head()
-         << body().set("class", "coloredBody");
     
-    SideMenu();
-
-    cout << cgicc::div().set("class", "page-wrap");
-
-    cout << h1().set("id", "tipTarget") << "~" << h1()
-         << cgicc::div().set("id", "msg") << cgicc::div();
-
-    cout << cgicc::div();
-
-    cout << body()
-         << html();
+    cout << h1() << "Project Detail" << h1();
 
 }
 

@@ -29,7 +29,7 @@ PageStructure :: PageStructure()
  */
 void PageStructure :: CSS(string href)
 {
-    cout << "<link href=\"../../NBP/" << href << "\"" 
+    cout << "<link href=\"../../bakaplan/" << href << "\"" 
          << " rel=\"stylesheet\" media=\"all\" type=\"text/css\">"
          << endl;
 }
@@ -41,14 +41,14 @@ void PageStructure :: CSS(string href)
  */
 void PageStructure :: JS(string src)
 {
-    cout << "<script src=\"../../NBP/" << src << "\"></script>" << endl;
+    cout << "<script src=\"../../bakaplan/" << src << "\"></script>" << endl;
 }
 
 /**
  *      \fn     PageStructure :: SideMenu()
  *      \brief  Side Menu Bar
  */
-void PageStructure :: SideMenu()
+void PageStructure :: SideMenu(int sid)
 {
     cout << " <nav class=\"side-menu\"> "
          << " <span id=\"toggle-menu\"> <p id=\"toggle-menu-circle\"> "
@@ -92,7 +92,7 @@ void PageStructure :: CommonJSFiles()
     JS("js/opentip-jquery.min.js");
     JS("js/opentip-myStyles.js");
     JS("js/validate.min.js");
-    JS("js/sidemenu.js");
+    //JS("js/sidemenu.js");
     JS("js/opentip-myStyles.js");
 }
 

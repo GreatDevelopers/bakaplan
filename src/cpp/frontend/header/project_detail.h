@@ -36,6 +36,7 @@ class ProjectDetail : public InputDetail
         void ReadProjectDetail();
         void WriteProjectDetail();
         void ProjectDetailPage();
+        void ProjectPage();
 
         ~ProjectDetail();
 };

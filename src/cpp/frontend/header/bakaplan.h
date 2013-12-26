@@ -24,12 +24,19 @@
 class BaKaPlan : public InputDetail
 {
     protected:
-        ProjectDetail project;
+        ProjectDetail project;            /**< Obj of Project class */
+        int sid;                                    /**< Session ID */
+        STRING_VEC  pageTitle;                      /**< Page title */
+        string sessionID;                           /**< Session ID */
 
     public:
         BaKaPlan();
 
-        void Main(int step = 0);
+        void StartPage(string title, int sid);
+        void EndPage();
+        bool SessionExpired(int& sid);
+        void Main(int step = 1);
+        void Logout();
 
         ~BaKaPlan();
 };
