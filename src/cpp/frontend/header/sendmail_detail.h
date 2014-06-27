@@ -20,7 +20,7 @@ const int SIZE = 30;
 const char SENDER_EMAILID[SIZE] = "EMAIL_ID";/**< Sender's email id */
 const char SERVER_MAIL[SIZE]    = "LOCALHOST_OR_IP_ADDR"; /**< localhost 
                                               or IP addr of server  */
-const char USERNAME[SIZE]       = "mandy";    /**< Systems username */
+const char USERNAME[SIZE]       = "USERNAME";    /**< Systems username */
 
 #endif
 
