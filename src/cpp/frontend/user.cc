@@ -56,8 +56,16 @@ void User :: ReadLoginForm()
 
 void User :: SelectUserDetail()
 {
-    database.SelectColumn(emailID, name::field["emailID"], 
-                          name::table["user"]);
+    database.SelectColumn(regID, name::field["regID"], name::table["user"]);
+
+    for(vecStringIt = regID.begin(); vecStringIt != regID.end(); vecStringIt++)
+    {
+        where = name::field["regID"] + " = " + *vecStringIt + " ";
+        database.SelectColumn(emailID, name::field["emailID"], 
+                              name::table["reg"], where);
+    }
+
+//    database.SelectColumn(emailID, name::field["emailID"], name::table["user"]);
     database.SelectColumn(password, name::field["password"], 
                           name::table["user"]);
 }
@@ -181,10 +189,10 @@ void User :: ConfirmUser()
     if ( find(regKey.begin(), regKey.end(), key) != regKey.end() )
     {
         where = name::field["regKey"] + " =\"" + key + "\"";
-        database.SelectColumn(emailID, name::field["emailID"], 
+        database.SelectColumn(regID, name::field["emailID"], 
                               name::table["reg"]);
         
-        msg = emailID[0];
+        msg = regID[0];
     }
     else
     {
@@ -204,7 +212,7 @@ void User :: SetPassword()
 {
     cout << HTTPHTMLHeader() << endl;
 
-    userEmailID = readField.ReadFieldValue(name::field["emailID"]);
+    userRegID = readField.ReadFieldValue(name::field["regID"]);
     userPassword = readField.ReadFieldValue(name::field["password"]);
     retypePassword = readField.ReadFieldValue(name::field["retypePassword"]);
 

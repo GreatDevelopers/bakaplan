@@ -60,6 +60,8 @@ namespace name
         {"user", "User"},
         {"sessionID", "SessionID"},
         {"sessionKey", "SessionKey"},
+        {"active", "Active"},
+        {"regID", "RegID"},
         {"regKey", "RegKey"},
 
         /* Project Detail */

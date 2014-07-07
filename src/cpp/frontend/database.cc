@@ -36,7 +36,7 @@ Database :: Database()
     {
         cout << "Content-type: type/html \n\n";
         cout << "Database Connection Failed\n"
-                "Check database details in ~/public_html/cgi-bin/bakaplan"
+                "Check database details in /path/to/bakaplan"
                 "/src/frontend/header/database_detail.h file";
     }
 }
@@ -65,8 +65,8 @@ void Database :: Query(string query)
  *      \param  where   Where clause if any
  */
 
-void Database :: UpdateQuery(string table, string column, string value,
-                             string where)
+void Database :: UpdateQuery(string table, string column, 
+                             string value, string where)
 {
     query = "UPDATE " + table + " set " + column + " = \"" + value + 
             "\" where " + where + ";";

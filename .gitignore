@@ -16,3 +16,7 @@
 
 src/cpp/bin/*
 .*swp
+src/cpp/frontend/CMakeLists.txt
+src/cpp/frontend/build
+src/cpp/frontend/cmake
+.*swo
