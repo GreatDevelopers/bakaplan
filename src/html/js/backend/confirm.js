@@ -16,7 +16,7 @@ function ConfirmEmail(key)
     console.log(GetUrlVars()["Key"]); 
     XMLHttp.open
 
-    ("GET", "/bp/confirm_user?"
+    ("GET", "bakaplan/cgi/confirm_user?"
 
     + "Key=" + GetUrlVars()["Key"]
 
@@ -64,7 +64,7 @@ function SetPassword()
     {
     XMLHttp.open
 
-        ("GET", "/bp/set_password?"
+        ("GET", "bakaplan/cgi/set_password?"
 
         + "RegID=" + document.getElementById('RegID').value
         + "&Password=" + document.getElementById('password').value

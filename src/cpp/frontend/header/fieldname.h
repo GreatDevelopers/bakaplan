@@ -63,6 +63,7 @@ namespace name
         {"active", "Active"},
         {"regID", "RegID"},
         {"regKey", "RegKey"},
+        {"userID", "UserID"},
 
         /* Project Detail */
 

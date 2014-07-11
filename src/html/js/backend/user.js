@@ -18,7 +18,7 @@ function GetSignUpResponse()
     {
         XMLHttp.open
 
-        ("GET", "/bp/signup?"
+        ("GET", "/bakaplan/cgi/signup?"
 
         + "email-signup=" + document.getElementById('email-signup').value
 
@@ -56,7 +56,7 @@ function GetLoginResponse()
     {
         XMLHttp.open
     
-        ("GET", "/bp/login?"
+        ("GET", "/bakaplan/cgi/login?"
 
         + "email-login=" + document.getElementById('email-login').value
 
@@ -75,10 +75,10 @@ function GetLoginResponse()
                 }
                 else 
                 {
-                    var link = "bp/bakaplan?sid="
+                    var link = "cgi/bakaplan?sid="
                                + XMLHttp.responseText.trim();
 
-//      			    theErrorTip.setContent(link);
+//      			    theErrorTip.setContent(XMLHttp.responseText.trim());
 //        		    theErrorTip.show();	
 
                     window.location.href = link;

@@ -32,9 +32,9 @@ class User
         SendMail sendMail;
         
         STRING_VEC emailID,                          /**< Email ID as vector */
+                   regID,                               /**< Registration ID */
                    password,                /**< password as vector variable */
                    regKey,                             /**< Registration key */
-                   regID,                               /**< Registration ID */
                    activeLink,          /**< Confirmation link active or not */
                    vecTemp;                        /**< Vector temp variable */
 
@@ -50,7 +50,7 @@ class User
                temp,                                 /**< Temporary variable */
                where;                                      /**< where clause */
 
-        vector<string> :: iterator vecStringIt;              /**< Iterator for vector */
+        vector<string> :: iterator vecStringIt;     /**< Iterator for vector */
 
     public:
         User();

@@ -57,17 +57,17 @@ void User :: ReadLoginForm()
 void User :: SelectUserDetail()
 {
     database.SelectColumn(regID, name::field["regID"], name::table["user"]);
-
+ 
     for(vecStringIt = regID.begin(); vecStringIt != regID.end(); vecStringIt++)
     {
         where = name::field["regID"] + " = " + *vecStringIt + " ";
         database.SelectColumn(emailID, name::field["emailID"], 
-                              name::table["reg"], where);
+                name::table["reg"], where);
     }
 
 //    database.SelectColumn(emailID, name::field["emailID"], name::table["user"]);
-    database.SelectColumn(password, name::field["password"], 
-                          name::table["user"]);
+    database.SelectColumn(password, name::field["password"],
+            name::table["user"]);
 }
 
 /**
@@ -89,16 +89,25 @@ void User :: LoginUser()
         temp = md5(userPassword);
         
         where = name::field["emailID"] + " = \"" + userEmailID + "\"";
-        database.SelectColumn(vecTemp, name::field["password"], 
-                              name::table["user"], where);
+        database.SelectColumn(vecTemp, name::field["regID"],    // index = 0
+                              name::table["reg"], where);
+        string regID = vecTemp[0];
 
-        if( temp == vecTemp[0] )   /* If Password Correct */
+        where = name::field["regID"] + " = " + regID;
+
+        database.SelectColumn(vecTemp, name::field["password"], // index = 1
+                              name::table["user"], where);
+        database.SelectColumn(vecTemp, name::field["userID"],   // index = 2 
+                              name::table["user"], where);
+        string userID = vecTemp[2];
+
+        if( temp == vecTemp[1] )   /* If Password Correct */
         {
              
             sessionID  = md5(userEmailID);
             currentTime = Time();
             sessionID += md5(currentTime);
-            database.InsertSessionDetail(userEmailID, sessionID);
+            database.InsertSessionDetail(userID, sessionID);
             readField.SetCookie(name::field["sessionID"], sessionID);
            
             where = name::field["sessionKey"] + " = \"" 
@@ -121,7 +130,7 @@ void User :: LoginUser()
     {
         msg = "false";
     }
-    cout << HTTPHTMLHeader() << endl;
+    cout << HTTPHTMLHeader() << endl; 
     cout << msg << endl;
 }
 

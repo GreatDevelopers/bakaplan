@@ -322,10 +322,10 @@ void Database :: InsertExamDetail(string projectID, string dateSheetID,
     InsertQuery(query);
 }
 */
-void Database :: InsertSessionDetail(string emailID, string sessionKey)
+void Database :: InsertSessionDetail(string userID, string sessionKey)
 {
-    query  = "insert into SessionDetail(EmailID, SessionKey) values(";
-    query += "\"" + emailID + "\", \"" + sessionKey + "\");";
+    query  = "insert into SessionDetail(UserID, SessionKey) values(";
+    query += userID + ", \"" + sessionKey + "\");";
 
     InsertQuery(query);
 }

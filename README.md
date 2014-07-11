@@ -173,6 +173,11 @@ Add following in the file
 
 7) Enable site(bakaplan) using Apache
 
+First create symbolic link of bin(containing exe files) in html folder
+
+    $ cd /path/to/bakaplan/src/html
+    $ ln -s ../cpp/bin ./cgi 
+
 Do as following:
 
     1) Open misc/bakaplan.conf file
