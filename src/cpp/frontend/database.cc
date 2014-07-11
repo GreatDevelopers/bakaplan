@@ -175,14 +175,14 @@ void Database :: SelectProjectID(string & projectID)
  *      \fn     Database :: InsertUserDetail(string emailID, 
  *                          string password)
  *      \brief  Insert User detail into User tabele
- *      \param  emailID     Email Id
+ *      \param  regID       Registration Id
  *      \param  password    Password of user in encrypted from
  */
 
-void Database :: InsertUserDetail(string emailID, string password)
+void Database :: InsertUserDetail(string regID, string password)
 {
-    query = "insert into User(EmailID, Password) values(\"" + emailID
-            + "\", \"" + password + "\");";
+    query = "insert into User(RegID, Password) values(" + regID
+            + ", \"" + password + "\");";
 
     InsertQuery(query);
 }

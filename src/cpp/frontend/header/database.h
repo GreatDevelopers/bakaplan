@@ -95,7 +95,7 @@ class Database
         /**
          *  Inserting into User table 
          */
-        void InsertUserDetail(string emailID, string password);
+        void InsertUserDetail(string regID, string password);
         
         /**
          *  Inserting into registration table 

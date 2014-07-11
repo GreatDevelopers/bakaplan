@@ -29,7 +29,7 @@ function ConfirmEmail(key)
             var theErrorTip = new Opentip("#tipTarget",'',{ style:"myErrorStyle"});
   	    	theErrorTip.setContent("Email Confirmed");
 		    theErrorTip.show();
-            document.getElementById('EmailID').value = XMLHttp.responseText;
+            document.getElementById('RegID').value = XMLHttp.responseText;
         }
         else         
         {
@@ -66,7 +66,7 @@ function SetPassword()
 
         ("GET", "/bp/set_password?"
 
-        + "EmailID=" + document.getElementById('EmailID').value
+        + "RegID=" + document.getElementById('RegID').value
         + "&Password=" + document.getElementById('password').value
         + "&RetypePassword=" + document.getElementById('retype-password').value
     

@@ -189,8 +189,10 @@ void User :: ConfirmUser()
     if ( find(regKey.begin(), regKey.end(), key) != regKey.end() )
     {
         where = name::field["regKey"] + " =\"" + key + "\"";
-        database.SelectColumn(regID, name::field["emailID"], 
-                              name::table["reg"]);
+        database.UpdateQuery(name::table["reg"], name::field["active"], "YES",
+                where);
+        database.SelectColumn(regID, name::field["regID"], name::table["reg"], 
+                where);
         
         msg = regID[0];
     }
@@ -218,7 +220,7 @@ void User :: SetPassword()
 
     if(userPassword == retypePassword)
     {
-        database.InsertUserDetail(userEmailID, md5(userPassword));
+        database.InsertUserDetail(userRegID, md5(userPassword));
         cout << "true";
     }
     else
