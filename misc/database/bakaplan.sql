@@ -117,11 +117,11 @@ CREATE TABLE `Registration` (
   `RegID` int(50) NOT NULL AUTO_INCREMENT,
   `EmailID` varchar(50) NOT NULL,
   `RegKey` varchar(100) NOT NULL,
-  `Active` varchar(10) NOT NULL DEFAULT 'No',
+  `Active` varchar(10) NOT NULL DEFAULT 'NO',
   `TimeStamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`EmailID`),
   UNIQUE KEY `RegID` (`RegID`,`EmailID`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COMMENT='Registration table for BaKaPlan';
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1 COMMENT='Registration table for BaKaPlan';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -199,7 +199,7 @@ CREATE TABLE `SessionDetail` (
   PRIMARY KEY (`SessionID`),
   KEY `UserID` (`UserID`),
   CONSTRAINT `SessionDetail_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `User` (`UserID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Session Detail for BaKaPlan';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COMMENT='Session Detail for BaKaPlan';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -244,12 +244,12 @@ DROP TABLE IF EXISTS `User`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `User` (
   `UserID` int(50) NOT NULL AUTO_INCREMENT,
-  `EmailID` varchar(50) NOT NULL,
+  `RegID` int(50) NOT NULL,
   `Password` varchar(50) NOT NULL,
   PRIMARY KEY (`UserID`),
-  UNIQUE KEY `EmailID` (`EmailID`),
-  CONSTRAINT `FK_EmailID` FOREIGN KEY (`EmailID`) REFERENCES `Registration` (`EmailID`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COMMENT='User Table for BaKaPlan';
+  KEY `FK_RegID` (`RegID`),
+  CONSTRAINT `FK_RegID` FOREIGN KEY (`RegID`) REFERENCES `Registration` (`RegID`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COMMENT='User Table for BaKaPlan';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -284,4 +284,4 @@ CREATE TABLE `ValidStrategy` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-07-06  4:10:27
+-- Dump completed on 2014-07-14 15:00:32
