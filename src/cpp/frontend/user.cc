@@ -82,7 +82,7 @@ void User :: LoginUser()
     ReadLoginForm();
     SelectUserDetail();
 
-    /** Matching user details with values in database */
+    /* Matching user details with values in database */
     if ( ( find(emailID.begin(), emailID.end(), userEmailID) 
          != emailID.end() ) )                  /* If Email ID valid */
     {
@@ -108,7 +108,7 @@ void User :: LoginUser()
             currentTime = Time();
             sessionID += md5(currentTime);
             database.InsertSessionDetail(userID, sessionID);
-            readField.SetCookie(name::field["sessionID"], sessionID);
+            //readField.SetCookie(name::field["sessionID"], sessionID);
            
             where = name::field["sessionKey"] + " = \"" 
                     + sessionID + "\"";
@@ -130,7 +130,24 @@ void User :: LoginUser()
     {
         msg = "false";
     }
-    cout << HTTPHTMLHeader() << endl; 
+
+    int maxAge, hrs = 6, sec = 60, min = 60;
+    maxAge = sec * min * hrs;
+
+    if(msg == "true")
+    {
+        HTTPCookie sessionCookie;
+        sessionCookie.setName(name::field["sessionID"]);
+        sessionCookie.setValue(sessionID);
+        sessionCookie.setMaxAge(maxAge);
+
+        cout << HTTPHTMLHeader().setCookie(sessionCookie) << endl; 
+    }
+    else
+    {
+        cout << HTTPHTMLHeader() << endl; 
+    }
+    
     cout << msg << endl;
 }
 
@@ -168,7 +185,7 @@ void User :: SignUpUser()
             currentTime = md5(currentTime);
 
             database.InsertRegistrationDetail(userEmailID, 
-                                              currentTime);
+                    currentTime);
             sendMail.RegistrationMail(userEmailID, currentTime);
     
             msg = "Check verification mail in your inbox "
