@@ -14,6 +14,7 @@
 
 #include "header/bakaplan.h"
 #include "header/fieldname.h"
+//#include "header/cgicc.h"                          
 
 /**
  *      \fn     BaKaPlan :: BaKaPlan()
@@ -34,12 +35,11 @@ BaKaPlan :: BaKaPlan()
 }
 
 /**
- *      \fn     BaKaPlan :: StartPage(string title, int sid)
+ *      \fn     BaKaPlan :: StartPage(string title)
  *      \brief  Starting of HTML Page(head, body section)
  *      \param  title Title of html page
- *      \param  sid session id
  */
-void BaKaPlan :: StartPage(string pageTitle, int sid)
+void BaKaPlan :: StartPage(string pageTitle)
 {
     cout << HTTPHTMLHeader() << endl;
 
@@ -77,14 +77,41 @@ void BaKaPlan :: EndPage()
  *      \fn     BaKaPlan :: SessionExpired(int &sid)
  *      \brief  Read session id and then check whether session expired
  *              or not
- *      \param  sid Session ID
- *      \return Return false id session expired else true
+ *      \return Return true id session expired else false
  */
-bool BaKaPlan :: SessionExpired(int& sid)
+bool BaKaPlan :: SessionExpired()
 {
-    sid = StringToInt(readField.ReadFieldValue(sessionID));
+    Cgicc cgi;
+    const_cookie_iterator cci; 
+    bool sessionExpired;
 
-    return true;
+    // Get a pointer to the environment                                         
+    const CgiEnvironment& env = cgi.getEnvironment(); 
+
+    for( cci = env.getCookieList().begin();
+        cci != env.getCookieList().end();
+        ++cci )
+    {
+        if(cci->getName() == name::field["sessionID"])
+        {
+            if(cci->isRemoved())
+            {
+                sessionExpired = true;
+                break;
+            }
+            else
+            {
+                sessionExpired = false;
+                break;
+            }
+        }
+        else
+            sessionExpired = true;
+    }
+
+//    sid = StringToInt(readField.ReadFieldValue(sessionID));
+
+    return sessionExpired;
 }
 
 /**
@@ -104,22 +131,24 @@ void BaKaPlan :: Logout()
  */
 void BaKaPlan :: Main(int step)
 {
-    int sid = 6;
-    StartPage(pageTitle[step], sid);
-    switch(step)
+    if(!SessionExpired())
     {
-        case 1:
-            project.ProjectDetailPage();
-            break;
+        StartPage(pageTitle[step]);
+        switch(step)
+        {
+            case 1:
+                project.ProjectDetailPage();
+                break;
 
-        case 0:
-            // Log out
-            Logout();
+            case 0:
+                // Log out
+                Logout();
 
-        default:
-            project.ProjectDetailPage();
+            default:
+                project.ProjectDetailPage();
+        }
+        EndPage();
     }
-    EndPage();
 }
 
 /**

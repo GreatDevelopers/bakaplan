@@ -75,8 +75,8 @@ function GetLoginResponse()
                 }
                 else 
                 {
-                    var link = "cgi/bakaplan?sid="
-                               + XMLHttp.responseText.trim();
+                    var link = "cgi/bakaplan";//?sid="
+//                               + XMLHttp.responseText.trim();
 
 //      			    theErrorTip.setContent(XMLHttp.responseText.trim());
 //        		    theErrorTip.show();	

@@ -32,9 +32,9 @@ class BaKaPlan : public InputDetail
     public:
         BaKaPlan();
 
-        void StartPage(string title, int sid);
+        void StartPage(string title);
         void EndPage();
-        bool SessionExpired(int& sid);
+        bool SessionExpired();
         void Main(int step = 1);
         void Logout();
 

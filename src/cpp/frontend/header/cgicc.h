@@ -16,10 +16,6 @@
 #ifndef CGICC_H
 #define CGICC_H
 
-/*
- *  Header files for using cgicc library
- */
-
 #include <cgicc/CgiDefs.h> 
 #include <cgicc/Cgicc.h> 
 #include <cgicc/HTTPHTMLHeader.h> 

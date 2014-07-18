@@ -119,7 +119,7 @@ void User :: LoginUser()
 
             sID = vSID[0];
 
-            msg = sID; // Redirect to next page
+            msg = "true"; //sID; // Redirect to next page
         }
         else                             /* If Password Incorrect */
         {
