@@ -12,8 +12,8 @@
  *                   https://github.com/GreatDevelopers
  */
 
-#ifndef  CSS-CLASS_H
-#define  CSS-CLASS_H
+#ifndef  CSS_CLASS_H
+#define  CSS_CLASS_H
 
 #include <iostream>
 #include <map>

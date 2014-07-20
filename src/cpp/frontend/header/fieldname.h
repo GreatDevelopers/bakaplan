@@ -1,6 +1,6 @@
 /**
  *
- *       \file       input-fieldname.h
+ *       \file       fieldname.h
  *
  *       \brief      Declaration and definition of namespace fieldname
  *                   for declaring names of input fields and database
@@ -14,8 +14,8 @@
  *                   https://github.com/GreatDevelopers
  */
 
-#ifndef INPUT_FIELDNAME_H
-#define INPUT_FIELDNAME_H
+#ifndef FIELDNAME_H
+#define FIELDNAME_H
 
 #include <iostream>
 #include <map>
@@ -118,6 +118,20 @@ namespace name
         {"contact", "ContactDetail"},
         {"reset","ResetPassword"}
     };
+
+    std::map<string, string> tagID = 
+    {
+
+        /* Assign ID's of HTML Tags */
+
+        {"project", "ProjectForm"},
+        {"class", "ClassForm"},
+        {"rollno", "RollNoForm"},
+        {"datesheet", "DateSheetForm"},
+        {"room", "RoomForm"},
+        {"toolTip","tipTarget"}
+    };
+
 }
 
 #endif

@@ -12,6 +12,7 @@
  */
 
 #include "header/project_detail.h"
+#include "header/css_class.h"
 
 /**
  *      \fn     ProjectDetail :: ProjectDetail()
@@ -33,7 +34,7 @@ void ProjectDetail :: ReadProjectDetail()
 
 /**
  *      \fn     ProjectDetail :: WriteProjectDetail()
- *      \brief  Writing Project detail into file and database
+ *      \brief  Writing Project detail into database
  */
 void ProjectDetail :: WriteProjectDetail()
 {
@@ -46,9 +47,16 @@ void ProjectDetail :: WriteProjectDetail()
  */
 void ProjectDetail :: ProjectDetailPage()
 {
-    
-    cout << h1() << "Project Detail" << h1();
+    cout << cgicc::div().set("id", "DivProject");
 
+    cout << h1() << "Project Detail" << h1();
+    cout << form().set("id", "FormProject").set("action", "")
+                  .set("method", "POST");
+
+    cout << input().set("type", "text").set("class", css::className["text"]);
+
+    cout << form();
+    cout << cgicc::div();
 }
 
 /**

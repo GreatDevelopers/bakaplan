@@ -16,8 +16,6 @@
 #include "header/user.h"
 #include "header/fieldname.h"
 
-//namespace field = fieldname;           /**< Shortname for namespace */
-
 /**
  *      \fn     User :: User()
  *      \brief  Contructor
@@ -131,7 +129,8 @@ void User :: LoginUser()
         msg = "false";
     }
 
-    int maxAge, hrs = 6, sec = 60, min = 60;
+    int maxAge,                                 /**< Maximum age of cookies */
+        hrs = 6, sec = 60, min = 60;
     maxAge = sec * min * hrs;
 
     if(msg == "true")

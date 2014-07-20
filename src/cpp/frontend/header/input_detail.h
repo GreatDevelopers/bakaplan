@@ -20,6 +20,13 @@
 #include "read_inputfield.h"
 #include "page_structure.h"
 
+#ifndef  FIELD_H
+#define  FIELD_H
+
+#include "fieldname.h"
+
+#endif   /* #ifndef FIELD_H */
+
 /**
  *      \class  InputDetail
  *      \brief  For declaring common variables and functions also used

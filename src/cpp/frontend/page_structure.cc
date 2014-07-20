@@ -90,7 +90,6 @@ void PageStructure :: CommonJSFiles()
             "></script>";
 
     JS("js/opentip-jquery.min.js");
-    JS("js/opentip-myStyles.js");
     JS("js/validate.min.js");
     //JS("js/sidemenu.js");
     JS("js/opentip-myStyles.js");

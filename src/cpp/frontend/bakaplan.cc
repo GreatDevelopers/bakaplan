@@ -13,8 +13,6 @@
  */
 
 #include "header/bakaplan.h"
-#include "header/fieldname.h"
-//#include "header/cgicc.h"                          
 
 /**
  *      \fn     BaKaPlan :: BaKaPlan()
@@ -148,6 +146,11 @@ void BaKaPlan :: Main(int step)
                 project.ProjectDetailPage();
         }
         EndPage();
+    }
+    else
+    {
+        // Redirect to Home Page if session expired
+        cout << HTTPRedirectHeader("../index.html") << endl;
     }
 }
 
