@@ -90,10 +90,10 @@ void ProjectDetail :: AuthorizeUser()
  *--------------------------------------------------------------------
  */
 
-void ProjectDetail :: ProjectDetailPage(string emailID, string projectName)
+void ProjectDetail :: ProjectDetailPage(string msg, string projectName)
 {
-//    if(msg != "")
-        userEmailID = emailID;//readField.ReadFieldValue(fieldName.emailID);
+    if(msg != "")
+        userEmailID = readField.ReadFieldValue(fieldName.emailID);
     page.ContentType();
 
     Header("Project Detail");
