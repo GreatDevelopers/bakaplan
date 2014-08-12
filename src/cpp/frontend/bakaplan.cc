@@ -13,6 +13,7 @@
  */
 
 #include "header/bakaplan.h"
+#include "header/fieldname.h"
 
 /**
  *      \fn     BaKaPlan :: BaKaPlan()

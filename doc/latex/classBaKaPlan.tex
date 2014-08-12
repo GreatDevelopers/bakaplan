@@ -22,15 +22,30 @@ Inheritance diagram for Ba\-Ka\-Plan\-:\begin{figure}[H]
 \hypertarget{classBaKaPlan_ab5d60f1b75c11a57f7998b709436dd03}{\hyperlink{classBaKaPlan_ab5d60f1b75c11a57f7998b709436dd03}{Ba\-Ka\-Plan} ()}\label{classBaKaPlan_ab5d60f1b75c11a57f7998b709436dd03}
 
 \begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
-void \hyperlink{classBaKaPlan_ae45ff4492dd7282c9bd4f0fe16a949ad}{Main} (int step=0)
+void \hyperlink{classBaKaPlan_a8075b479df84a6cdb14362b3c9cff2ae}{Start\-Page} (string title)
+\begin{DoxyCompactList}\small\item\em Starting of H\-T\-M\-L Page(head, body section) \end{DoxyCompactList}\item 
+\hypertarget{classBaKaPlan_afc46e5f94732254151181cbbab23f9f2}{void \hyperlink{classBaKaPlan_afc46e5f94732254151181cbbab23f9f2}{End\-Page} ()}\label{classBaKaPlan_afc46e5f94732254151181cbbab23f9f2}
+
+\begin{DoxyCompactList}\small\item\em Ending of html page(close body and html tags) \end{DoxyCompactList}\item 
+bool \hyperlink{classBaKaPlan_ad10bc1730e8ba4203c4dfe03dc9a1b8c}{Session\-Expired} ()
+\begin{DoxyCompactList}\small\item\em Read session id and then check whether session expired or not. \end{DoxyCompactList}\item 
+void \hyperlink{classBaKaPlan_a178180219c76a27ba2f962aeca65dfbe}{Main} (int step=1)
 \begin{DoxyCompactList}\small\item\em Main Program. \end{DoxyCompactList}\item 
+\hypertarget{classBaKaPlan_aebb2837fc53024969f1d8f3c47b1b11b}{void \hyperlink{classBaKaPlan_aebb2837fc53024969f1d8f3c47b1b11b}{Logout} ()}\label{classBaKaPlan_aebb2837fc53024969f1d8f3c47b1b11b}
+
+\begin{DoxyCompactList}\small\item\em Logout user. \end{DoxyCompactList}\item 
 \hyperlink{classBaKaPlan_aa68c1ddc933bfce4856982527467f679}{$\sim$\-Ba\-Ka\-Plan} ()
 \begin{DoxyCompactList}\small\item\em Desrtuctor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classBaKaPlan_af802b4a612592ab04a2fdba7838a1ffd}{\hyperlink{classProjectDetail}{Project\-Detail} {\bfseries project}}\label{classBaKaPlan_af802b4a612592ab04a2fdba7838a1ffd}
-
+\hyperlink{classProjectDetail}{Project\-Detail} \hyperlink{classBaKaPlan_af802b4a612592ab04a2fdba7838a1ffd}{project}
+\item 
+int \hyperlink{classBaKaPlan_ac6fc57dc646a8ff922fca7bf46764e4c}{sid}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classBaKaPlan_a04ca68d41d916c92f258e3dfa1e06600}{page\-Title}
+\item 
+string \hyperlink{classBaKaPlan_a2fcda3c2e60e6a8433dff76c6803fb30}{session\-I\-D}
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -61,18 +76,18 @@ Desrtuctor.
 \end{DoxyParams}
 
 
-Definition at line 49 of file bakaplan.\-cc.
+Definition at line 163 of file bakaplan.\-cc.
 
 
 
 \subsection{Member Function Documentation}
-\hypertarget{classBaKaPlan_ae45ff4492dd7282c9bd4f0fe16a949ad}{\index{Ba\-Ka\-Plan@{Ba\-Ka\-Plan}!Main@{Main}}
+\hypertarget{classBaKaPlan_a178180219c76a27ba2f962aeca65dfbe}{\index{Ba\-Ka\-Plan@{Ba\-Ka\-Plan}!Main@{Main}}
 \index{Main@{Main}!BaKaPlan@{Ba\-Ka\-Plan}}
 \subsubsection[{Main}]{\setlength{\rightskip}{0pt plus 5cm}void Ba\-Ka\-Plan\-::\-Main (
 \begin{DoxyParamCaption}
-\item[{int}]{step = {\ttfamily 0}}
+\item[{int}]{step = {\ttfamily 1}}
 \end{DoxyParamCaption}
-)}}\label{classBaKaPlan_ae45ff4492dd7282c9bd4f0fe16a949ad}
+)}}\label{classBaKaPlan_a178180219c76a27ba2f962aeca65dfbe}
 
 
 Main Program. 
@@ -84,7 +99,88 @@ Main Program.
 \end{DoxyParams}
 
 
-Definition at line 31 of file bakaplan.\-cc.
+Reimplemented from \hyperlink{classPageStructure}{Page\-Structure}.
+
+
+
+Definition at line 131 of file bakaplan.\-cc.
+
+\hypertarget{classBaKaPlan_ad10bc1730e8ba4203c4dfe03dc9a1b8c}{\index{Ba\-Ka\-Plan@{Ba\-Ka\-Plan}!Session\-Expired@{Session\-Expired}}
+\index{Session\-Expired@{Session\-Expired}!BaKaPlan@{Ba\-Ka\-Plan}}
+\subsubsection[{Session\-Expired}]{\setlength{\rightskip}{0pt plus 5cm}bool Ba\-Ka\-Plan\-::\-Session\-Expired (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBaKaPlan_ad10bc1730e8ba4203c4dfe03dc9a1b8c}
+
+
+Read session id and then check whether session expired or not. 
+
+\begin{DoxyReturn}{Returns}
+Return true id session expired else false 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classPageStructure}{Page\-Structure}.
+
+
+
+Definition at line 81 of file bakaplan.\-cc.
+
+\hypertarget{classBaKaPlan_a8075b479df84a6cdb14362b3c9cff2ae}{\index{Ba\-Ka\-Plan@{Ba\-Ka\-Plan}!Start\-Page@{Start\-Page}}
+\index{Start\-Page@{Start\-Page}!BaKaPlan@{Ba\-Ka\-Plan}}
+\subsubsection[{Start\-Page}]{\setlength{\rightskip}{0pt plus 5cm}void Ba\-Ka\-Plan\-::\-Start\-Page (
+\begin{DoxyParamCaption}
+\item[{string}]{title}
+\end{DoxyParamCaption}
+)}}\label{classBaKaPlan_a8075b479df84a6cdb14362b3c9cff2ae}
+
+
+Starting of H\-T\-M\-L Page(head, body section) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & Title of html page \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classPageStructure}{Page\-Structure}.
+
+
+
+Definition at line 41 of file bakaplan.\-cc.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classBaKaPlan_a04ca68d41d916c92f258e3dfa1e06600}{\index{Ba\-Ka\-Plan@{Ba\-Ka\-Plan}!page\-Title@{page\-Title}}
+\index{page\-Title@{page\-Title}!BaKaPlan@{Ba\-Ka\-Plan}}
+\subsubsection[{page\-Title}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Ba\-Ka\-Plan\-::page\-Title\hspace{0.3cm}{\ttfamily [protected]}}}\label{classBaKaPlan_a04ca68d41d916c92f258e3dfa1e06600}
+Page title 
+
+Definition at line 29 of file bakaplan.\-h.
+
+\hypertarget{classBaKaPlan_af802b4a612592ab04a2fdba7838a1ffd}{\index{Ba\-Ka\-Plan@{Ba\-Ka\-Plan}!project@{project}}
+\index{project@{project}!BaKaPlan@{Ba\-Ka\-Plan}}
+\subsubsection[{project}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Project\-Detail} Ba\-Ka\-Plan\-::project\hspace{0.3cm}{\ttfamily [protected]}}}\label{classBaKaPlan_af802b4a612592ab04a2fdba7838a1ffd}
+Obj of Project class 
+
+Definition at line 27 of file bakaplan.\-h.
+
+\hypertarget{classBaKaPlan_a2fcda3c2e60e6a8433dff76c6803fb30}{\index{Ba\-Ka\-Plan@{Ba\-Ka\-Plan}!session\-I\-D@{session\-I\-D}}
+\index{session\-I\-D@{session\-I\-D}!BaKaPlan@{Ba\-Ka\-Plan}}
+\subsubsection[{session\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}string Ba\-Ka\-Plan\-::session\-I\-D\hspace{0.3cm}{\ttfamily [protected]}}}\label{classBaKaPlan_a2fcda3c2e60e6a8433dff76c6803fb30}
+Session I\-D 
+
+Definition at line 30 of file bakaplan.\-h.
+
+\hypertarget{classBaKaPlan_ac6fc57dc646a8ff922fca7bf46764e4c}{\index{Ba\-Ka\-Plan@{Ba\-Ka\-Plan}!sid@{sid}}
+\index{sid@{sid}!BaKaPlan@{Ba\-Ka\-Plan}}
+\subsubsection[{sid}]{\setlength{\rightskip}{0pt plus 5cm}int Ba\-Ka\-Plan\-::sid\hspace{0.3cm}{\ttfamily [protected]}}}\label{classBaKaPlan_ac6fc57dc646a8ff922fca7bf46764e4c}
+Session I\-D 
+
+Definition at line 28 of file bakaplan.\-h.
 
 
 

@@ -13,8 +13,6 @@ refman.pdf: clean refman.tex
 	      pdflatex refman ;\
 	      latex_count=`expr $$latex_count - 1` ;\
 	    done
-	makeindex refman.idx
-	pdflatex refman
 
 
 clean:

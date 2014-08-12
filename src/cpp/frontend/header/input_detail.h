@@ -23,7 +23,7 @@
 #ifndef  FIELD_H
 #define  FIELD_H
 
-#include "fieldname.h"
+//#include "fieldname.h"
 
 #endif   /* #ifndef FIELD_H */
 

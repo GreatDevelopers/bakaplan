@@ -28,6 +28,9 @@ using namespace std;
 class PageStructure
 {
     protected:
+        int sid;                                    /**< Session ID */
+//        STRING_VEC  pageTitle;                      /**< Page title */
+        string sessionID;                           /**< Session ID */
 
     public:
         PageStructure();
@@ -39,6 +42,13 @@ class PageStructure
         void CommonCSSFiles();
 
         void SideMenu(int sid);
+
+        void StartPage(string title);
+        void EndPage();
+        bool SessionExpired();
+        void Main(int step = 1);
+        void Logout();
+
         ~PageStructure();
 };
 

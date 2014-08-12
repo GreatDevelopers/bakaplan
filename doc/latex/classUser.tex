@@ -55,13 +55,19 @@ void \hyperlink{classUser_a2e2afafdfe57243dd1630929a7330eed}{Login\-User} ()
 \item 
 S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classUser_a2bc69a747b93045d1dce16bd5cd00b9b}{email\-I\-D}
 \item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classUser_a06abd54eca25f11ccdb4c326812e34ee}{reg\-I\-D}
+\item 
 S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classUser_a77b451700a9695b2a0905a12f8aedd44}{password}
 \item 
 S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classUser_a8753abeefb69d3c9db3c585992c7944f}{reg\-Key}
 \item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classUser_a96dbf856809021df4b12c3a0f175f747}{active\-Link}
+\item 
 S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classUser_addb446e2ea86d984e243909311967052}{vec\-Temp}
 \item 
 string \hyperlink{classUser_a18c8f47943a8ebefcdaa709636a53e81}{user\-Email\-I\-D}
+\item 
+string \hyperlink{classUser_a2e4c2abea5d64bf9bfcd1c73b227a6b8}{user\-Reg\-I\-D}
 \item 
 string \hyperlink{classUser_aabe10090d6867d81bc17dd6c362196e8}{user\-Password}
 \item 
@@ -79,6 +85,8 @@ string \hyperlink{classUser_ac46bf208ffc0525d4f637b8458bdb49e}{msg}
 string \hyperlink{classUser_a03e84c43560a0cd720fbff832ade1d08}{temp}
 \item 
 string \hyperlink{classUser_aaa4322929700c09aad2594331d3c2071}{where}
+\item 
+vector$<$ string $>$\-::iterator \hyperlink{classUser_a1bef92bf2e92dc13d4c3a9fb03582d3f}{vec\-String\-It}
 \end{DoxyCompactItemize}
 
 
@@ -101,27 +109,26 @@ Definition at line 27 of file user.\-h.
 
 Login user if entered email and password matched with values in database. 
 
-Matching user details with values in database
+$<$ Maximum age of cookies 
 
-$<$ If Email I\-D valid
-
-$<$ If Password Correct
-
-$<$ If Password Incorrect
-
-$<$ If Email I\-D invalid 
-
-Definition at line 71 of file user.\-cc.
+Definition at line 77 of file user.\-cc.
 
 
 
 \subsection{Member Data Documentation}
+\hypertarget{classUser_a96dbf856809021df4b12c3a0f175f747}{\index{User@{User}!active\-Link@{active\-Link}}
+\index{active\-Link@{active\-Link}!User@{User}}
+\subsubsection[{active\-Link}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C User\-::active\-Link\hspace{0.3cm}{\ttfamily [protected]}}}\label{classUser_a96dbf856809021df4b12c3a0f175f747}
+Confirmation link active or not 
+
+Definition at line 34 of file user.\-h.
+
 \hypertarget{classUser_a55989a6bc06339e3dc1de6aa5dc25c38}{\index{User@{User}!current\-Time@{current\-Time}}
 \index{current\-Time@{current\-Time}!User@{User}}
 \subsubsection[{current\-Time}]{\setlength{\rightskip}{0pt plus 5cm}string User\-::current\-Time\hspace{0.3cm}{\ttfamily [protected]}}}\label{classUser_a55989a6bc06339e3dc1de6aa5dc25c38}
 Currennt Time 
 
-Definition at line 43 of file user.\-h.
+Definition at line 46 of file user.\-h.
 
 \hypertarget{classUser_ae693492927dc1ebbca8407137d1f78d3}{\index{User@{User}!database@{database}}
 \index{database@{database}!User@{User}}
@@ -142,12 +149,19 @@ Definition at line 34 of file user.\-h.
 \subsubsection[{msg}]{\setlength{\rightskip}{0pt plus 5cm}string User\-::msg\hspace{0.3cm}{\ttfamily [protected]}}}\label{classUser_ac46bf208ffc0525d4f637b8458bdb49e}
 Confirmation Link Key Store error/info Message 
 
-Definition at line 43 of file user.\-h.
+Definition at line 46 of file user.\-h.
 
 \hypertarget{classUser_a77b451700a9695b2a0905a12f8aedd44}{\index{User@{User}!password@{password}}
 \index{password@{password}!User@{User}}
 \subsubsection[{password}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C User\-::password\hspace{0.3cm}{\ttfamily [protected]}}}\label{classUser_a77b451700a9695b2a0905a12f8aedd44}
 password as vector variable 
+
+Definition at line 34 of file user.\-h.
+
+\hypertarget{classUser_a06abd54eca25f11ccdb4c326812e34ee}{\index{User@{User}!reg\-I\-D@{reg\-I\-D}}
+\index{reg\-I\-D@{reg\-I\-D}!User@{User}}
+\subsubsection[{reg\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C User\-::reg\-I\-D\hspace{0.3cm}{\ttfamily [protected]}}}\label{classUser_a06abd54eca25f11ccdb4c326812e34ee}
+Registration I\-D 
 
 Definition at line 34 of file user.\-h.
 
@@ -163,35 +177,49 @@ Definition at line 34 of file user.\-h.
 \subsubsection[{retype\-Password}]{\setlength{\rightskip}{0pt plus 5cm}string User\-::retype\-Password\hspace{0.3cm}{\ttfamily [protected]}}}\label{classUser_af51ac37cc65721f03e592311d7ead4d4}
 For reading password 
 
-Definition at line 39 of file user.\-h.
+Definition at line 41 of file user.\-h.
 
 \hypertarget{classUser_ab60b88d500e9575634790a518dc584d7}{\index{User@{User}!session\-I\-D@{session\-I\-D}}
 \index{session\-I\-D@{session\-I\-D}!User@{User}}
 \subsubsection[{session\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}string User\-::session\-I\-D\hspace{0.3cm}{\ttfamily [protected]}}}\label{classUser_ab60b88d500e9575634790a518dc584d7}
 Session Key 
 
-Definition at line 43 of file user.\-h.
+Definition at line 46 of file user.\-h.
 
 \hypertarget{classUser_a03e84c43560a0cd720fbff832ade1d08}{\index{User@{User}!temp@{temp}}
 \index{temp@{temp}!User@{User}}
 \subsubsection[{temp}]{\setlength{\rightskip}{0pt plus 5cm}string User\-::temp\hspace{0.3cm}{\ttfamily [protected]}}}\label{classUser_a03e84c43560a0cd720fbff832ade1d08}
 Temporary variable 
 
-Definition at line 43 of file user.\-h.
+Definition at line 46 of file user.\-h.
 
 \hypertarget{classUser_a18c8f47943a8ebefcdaa709636a53e81}{\index{User@{User}!user\-Email\-I\-D@{user\-Email\-I\-D}}
 \index{user\-Email\-I\-D@{user\-Email\-I\-D}!User@{User}}
 \subsubsection[{user\-Email\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}string User\-::user\-Email\-I\-D\hspace{0.3cm}{\ttfamily [protected]}}}\label{classUser_a18c8f47943a8ebefcdaa709636a53e81}
 For reading email\-I\-D in text field 
 
-Definition at line 39 of file user.\-h.
+Definition at line 41 of file user.\-h.
 
 \hypertarget{classUser_aabe10090d6867d81bc17dd6c362196e8}{\index{User@{User}!user\-Password@{user\-Password}}
 \index{user\-Password@{user\-Password}!User@{User}}
 \subsubsection[{user\-Password}]{\setlength{\rightskip}{0pt plus 5cm}string User\-::user\-Password\hspace{0.3cm}{\ttfamily [protected]}}}\label{classUser_aabe10090d6867d81bc17dd6c362196e8}
 For reading password in text field 
 
-Definition at line 39 of file user.\-h.
+Definition at line 41 of file user.\-h.
+
+\hypertarget{classUser_a2e4c2abea5d64bf9bfcd1c73b227a6b8}{\index{User@{User}!user\-Reg\-I\-D@{user\-Reg\-I\-D}}
+\index{user\-Reg\-I\-D@{user\-Reg\-I\-D}!User@{User}}
+\subsubsection[{user\-Reg\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}string User\-::user\-Reg\-I\-D\hspace{0.3cm}{\ttfamily [protected]}}}\label{classUser_a2e4c2abea5d64bf9bfcd1c73b227a6b8}
+\hyperlink{classUser}{User} registration key 
+
+Definition at line 41 of file user.\-h.
+
+\hypertarget{classUser_a1bef92bf2e92dc13d4c3a9fb03582d3f}{\index{User@{User}!vec\-String\-It@{vec\-String\-It}}
+\index{vec\-String\-It@{vec\-String\-It}!User@{User}}
+\subsubsection[{vec\-String\-It}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$\-:: iterator User\-::vec\-String\-It\hspace{0.3cm}{\ttfamily [protected]}}}\label{classUser_a1bef92bf2e92dc13d4c3a9fb03582d3f}
+Iterator for vector 
+
+Definition at line 53 of file user.\-h.
 
 \hypertarget{classUser_addb446e2ea86d984e243909311967052}{\index{User@{User}!vec\-Temp@{vec\-Temp}}
 \index{vec\-Temp@{vec\-Temp}!User@{User}}
@@ -205,7 +233,7 @@ Definition at line 34 of file user.\-h.
 \subsubsection[{where}]{\setlength{\rightskip}{0pt plus 5cm}string User\-::where\hspace{0.3cm}{\ttfamily [protected]}}}\label{classUser_aaa4322929700c09aad2594331d3c2071}
 where clause 
 
-Definition at line 43 of file user.\-h.
+Definition at line 46 of file user.\-h.
 
 
 

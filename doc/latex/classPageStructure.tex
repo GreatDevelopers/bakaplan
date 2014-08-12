@@ -32,12 +32,36 @@ void \hyperlink{classPageStructure_ae9f524db12d813e052d8b24834aa4c5b}{J\-S} (str
 \hypertarget{classPageStructure_aea0a385d963928fea183c01d5cdfe5ab}{void \hyperlink{classPageStructure_aea0a385d963928fea183c01d5cdfe5ab}{Common\-C\-S\-S\-Files} ()}\label{classPageStructure_aea0a385d963928fea183c01d5cdfe5ab}
 
 \begin{DoxyCompactList}\small\item\em Adding css files for all pages. \end{DoxyCompactList}\item 
-\hypertarget{classPageStructure_aa6f5cea2a7c9f56e776a89bae7de4887}{void \hyperlink{classPageStructure_aa6f5cea2a7c9f56e776a89bae7de4887}{Side\-Menu} ()}\label{classPageStructure_aa6f5cea2a7c9f56e776a89bae7de4887}
+\hypertarget{classPageStructure_a48684e8472242fe9b164074f89fa8c98}{void \hyperlink{classPageStructure_a48684e8472242fe9b164074f89fa8c98}{Side\-Menu} (int \hyperlink{classPageStructure_a70428385ed3cdc60d45bd432b984f6b9}{sid})}\label{classPageStructure_a48684e8472242fe9b164074f89fa8c98}
 
 \begin{DoxyCompactList}\small\item\em Side Menu Bar. \end{DoxyCompactList}\item 
+\hypertarget{classPageStructure_a64fe757647e3cc6bef84f57963c670a2}{void {\bfseries Start\-Page} (string title)}\label{classPageStructure_a64fe757647e3cc6bef84f57963c670a2}
+
+\item 
+\hypertarget{classPageStructure_a5ac429859ccea438a54e71861c7c0635}{void {\bfseries End\-Page} ()}\label{classPageStructure_a5ac429859ccea438a54e71861c7c0635}
+
+\item 
+\hypertarget{classPageStructure_a5df3b6891370ea23aab712875ef15354}{bool {\bfseries Session\-Expired} ()}\label{classPageStructure_a5df3b6891370ea23aab712875ef15354}
+
+\item 
+\hypertarget{classPageStructure_afbd2622eed071f47a25f1a47ca00b7c2}{void {\bfseries Main} (int step=1)}\label{classPageStructure_afbd2622eed071f47a25f1a47ca00b7c2}
+
+\item 
+\hypertarget{classPageStructure_a4392473b27947f6a1a4853cdf26845b6}{void {\bfseries Logout} ()}\label{classPageStructure_a4392473b27947f6a1a4853cdf26845b6}
+
+\item 
 \hypertarget{classPageStructure_aed8de6249916b83439ae471bc364f2bb}{\hyperlink{classPageStructure_aed8de6249916b83439ae471bc364f2bb}{$\sim$\-Page\-Structure} ()}\label{classPageStructure_aed8de6249916b83439ae471bc364f2bb}
 
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classPageStructure_a70428385ed3cdc60d45bd432b984f6b9}{sid}
+\item 
+S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C \hyperlink{classPageStructure_a7a327c938b42b50933fad2e7ec9b8869}{page\-Title}
+\item 
+string \hyperlink{classPageStructure_a1e7dca20dd65b68157b35f529d43b7a6}{session\-I\-D}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -87,6 +111,30 @@ Adding Javascript file in H\-T\-M\-L Page.
 
 
 Definition at line 42 of file page\-\_\-structure.\-cc.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classPageStructure_a7a327c938b42b50933fad2e7ec9b8869}{\index{Page\-Structure@{Page\-Structure}!page\-Title@{page\-Title}}
+\index{page\-Title@{page\-Title}!PageStructure@{Page\-Structure}}
+\subsubsection[{page\-Title}]{\setlength{\rightskip}{0pt plus 5cm}S\-T\-R\-I\-N\-G\-\_\-\-V\-E\-C Page\-Structure\-::page\-Title\hspace{0.3cm}{\ttfamily [protected]}}}\label{classPageStructure_a7a327c938b42b50933fad2e7ec9b8869}
+Page title 
+
+Definition at line 32 of file page\-\_\-structure.\-h.
+
+\hypertarget{classPageStructure_a1e7dca20dd65b68157b35f529d43b7a6}{\index{Page\-Structure@{Page\-Structure}!session\-I\-D@{session\-I\-D}}
+\index{session\-I\-D@{session\-I\-D}!PageStructure@{Page\-Structure}}
+\subsubsection[{session\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}string Page\-Structure\-::session\-I\-D\hspace{0.3cm}{\ttfamily [protected]}}}\label{classPageStructure_a1e7dca20dd65b68157b35f529d43b7a6}
+Session I\-D 
+
+Definition at line 33 of file page\-\_\-structure.\-h.
+
+\hypertarget{classPageStructure_a70428385ed3cdc60d45bd432b984f6b9}{\index{Page\-Structure@{Page\-Structure}!sid@{sid}}
+\index{sid@{sid}!PageStructure@{Page\-Structure}}
+\subsubsection[{sid}]{\setlength{\rightskip}{0pt plus 5cm}int Page\-Structure\-::sid\hspace{0.3cm}{\ttfamily [protected]}}}\label{classPageStructure_a70428385ed3cdc60d45bd432b984f6b9}
+Session I\-D 
+
+Definition at line 31 of file page\-\_\-structure.\-h.
 
 
 

@@ -31,7 +31,7 @@ void \hyperlink{classDatabase_a52049c686ad213533bdb1c4f2ac3c157}{Select\-Column}
 \item 
 void \hyperlink{classDatabase_a20f7ccadac8f3b67d4344f7da4594eda}{Select\-Project\-I\-D} (string \&project\-I\-D)
 \begin{DoxyCompactList}\small\item\em Select project I\-D from database. \end{DoxyCompactList}\item 
-void \hyperlink{classDatabase_ac2a20fd57ba7a51f819446e799d7100f}{Insert\-User\-Detail} (string email\-I\-D, string password)
+void \hyperlink{classDatabase_ad72f075dcb11584d342bcbc7661c64a4}{Insert\-User\-Detail} (string reg\-I\-D, string password)
 \begin{DoxyCompactList}\small\item\em Insert \hyperlink{classUser}{User} detail into \hyperlink{classUser}{User} tabele. \end{DoxyCompactList}\item 
 void \hyperlink{classDatabase_a0da52e0b3d6e36d0833da38a01e592ea}{Insert\-Registration\-Detail} (string email\-I\-D, string registration\-Key)
 \begin{DoxyCompactList}\small\item\em Inserting Registration detail. \end{DoxyCompactList}\item 
@@ -118,7 +118,7 @@ For closing database connection
 
 
 
- Class\-: \hyperlink{classDatabase}{Database} Method\-: \hyperlink{classDatabase}{Database} \-:\-: \hyperlink{classDatabase_a84d399a2ad58d69daab9b05330e1316d}{$\sim$\-Database()} \subsubsection*{Description\-: Destructor for closing database connectivity }
+ Class\-: \hyperlink{classDatabase}{Database} Method\-: \hyperlink{classDatabase}{Database} \-:\-: \hyperlink{classDatabase_a84d399a2ad58d69daab9b05330e1316d}{$\sim$\-Database()} \subsubsection*{Description\-: Destructor for closing database connectivity}
 
 Definition at line 351 of file database.\-cc.
 
@@ -300,14 +300,14 @@ Definition at line 325 of file database.\-cc.
 \item[{string}]{strategy\-Name}
 \end{DoxyParamCaption}
 )}}\label{classDatabase_a8a13b478ab9c5c9fabc07b9513530bc0}
-Inserting strategy details \hypertarget{classDatabase_ac2a20fd57ba7a51f819446e799d7100f}{\index{Database@{Database}!Insert\-User\-Detail@{Insert\-User\-Detail}}
+Inserting strategy details \hypertarget{classDatabase_ad72f075dcb11584d342bcbc7661c64a4}{\index{Database@{Database}!Insert\-User\-Detail@{Insert\-User\-Detail}}
 \index{Insert\-User\-Detail@{Insert\-User\-Detail}!Database@{Database}}
 \subsubsection[{Insert\-User\-Detail}]{\setlength{\rightskip}{0pt plus 5cm}void Database\-::\-Insert\-User\-Detail (
 \begin{DoxyParamCaption}
 \item[{string}]{email\-I\-D, }
 \item[{string}]{password}
 \end{DoxyParamCaption}
-)}}\label{classDatabase_ac2a20fd57ba7a51f819446e799d7100f}
+)}}\label{classDatabase_ad72f075dcb11584d342bcbc7661c64a4}
 
 
 Insert \hyperlink{classUser}{User} detail into \hyperlink{classUser}{User} tabele. 
@@ -316,7 +316,7 @@ Inserting into \hyperlink{classUser}{User} table
 
 
 \begin{DoxyParams}{Parameters}
-{\em email\-I\-D} & Email Id \\
+{\em reg\-I\-D} & Registration Id \\
 \hline
 {\em password} & Password of user in encrypted from \\
 \hline
