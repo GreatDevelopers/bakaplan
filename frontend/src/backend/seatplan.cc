@@ -336,7 +336,7 @@ void SeatPlan :: WriteSeatPlan(string projectID, int i)
     outFile.close();
     AddRollNoInfo(projectID, i);
     WriteHTMLFile(projectID, i);
-//    WritePDFFile(projectID, i);
+    WritePDFFile(projectID, i);
     WriteAttendanceFile(projectID, i);
 }
 
