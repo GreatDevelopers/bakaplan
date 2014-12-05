@@ -137,6 +137,7 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
     {
         for(room = 0; room < totalRooms[i][centre]; room++)
         {
+            rollNoInRoom[centre][room].clear();
             if(strategy != 7)
             {
             for(row = 0; row < cols[i][centre][room]; row++)
@@ -267,6 +268,7 @@ string SeatPlan :: RollNo(int s)
 
 void SeatPlan :: AddRollNoInfo(string projectID, int i)
 {
+
     totalRollNoInRoom.resize(totalCentres[i]);
     
     for(centre = 0; centre < totalCentres[i]; centre++)
@@ -275,12 +277,11 @@ void SeatPlan :: AddRollNoInfo(string projectID, int i)
         
         for(room = 0; room < totalRooms[i][centre]; room++)
         {
-             
-            totalRollNoInRoom[centre][room].resize(totalClasses);
+           totalRollNoInRoom[centre][room].clear();
+           totalRollNoInRoom[centre][room].resize(totalClasses);
             
             for(int classNo = 0; classNo < totalClasses; classNo++)
             {
-                
                 for(unsigned int rno = 0; rno < rollNoInRoom[centre][room].size(); rno++)
                 {                    
                     if(find(arrangedRollNo[classNo].begin(), arrangedRollNo[classNo].end(), rollNoInRoom[centre][room][rno])
@@ -289,9 +290,6 @@ void SeatPlan :: AddRollNoInfo(string projectID, int i)
                         totalRollNoInRoom[centre][room][classNo].push_back(rollNoInRoom[centre][room][rno]);
                     }
                 }
-                 
-//                sort(totalRollNoInRoom[centre][room][classNo].begin(), totalRollNoInRoom[centre][room][classNo].end());
-                
             }
         }
     }
@@ -436,7 +434,13 @@ void SeatPlan :: WriteHTMLFile(string projectID, int i)
             for(int classNo = 0; classNo < totalClasses; classNo++)
             {
                 int sz = totalRollNoInRoom[centre][room][classNo].size();
-
+//                for(unsigned int dss = 0; dss < rollNoInRoom[centre][room].size(); dss++)
+/*                 {
+                outFile << "<ul><b> " << rollNoInRoom[centre][room].size()
+                //totalRollNoInRoom[centre][room][classNo].size() 
+                << "</b></ul>";
+                }
+*/
 //                total += sz;
 
                 if(sz != 0)
