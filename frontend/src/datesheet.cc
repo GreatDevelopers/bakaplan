@@ -26,11 +26,12 @@
 
 DateSheet :: DateSheet()
 {
-    totalCols = 3;
+    totalCols = 4;
     tableHeading.resize(totalCols);
     i = 0;
     tableHeading[i++] = "Date";
-    tableHeading[i++] = "Exams Code";
+    tableHeading[i++] = "Subject Code";
+    tableHeading[i++] = "Add Subject Code";
     tableHeading[i++] = "Delete Row";
 }
 
@@ -242,7 +243,8 @@ void DateSheet :: DateSheetPage()
 
     cout << table().set("id", "ClassDetail");
 
-    cout << tr() 
+    cout << tr()
+         << th() << "S. No." << th()
          << th() << "Class Name" << th()
          << th() << "Subject Codes" << th()
          << tr();
@@ -250,6 +252,7 @@ void DateSheet :: DateSheetPage()
     for(i = 0; i < totalClasses; i++)
     {
         cout << tr()
+             << td() << (i + 1) << td()
              << td() << className[i] << td()
              << td() << subjectCode[i];
 /*        for(j = 0; j < totalSubjects[i]; j++)
@@ -295,7 +298,7 @@ void DateSheet :: DateSheetPage()
                             date[i], date[i]);
             cout << td();
 
-/*
+/* 
             // Adding all subjects w.r.t. to class
             for(j = 0; j < totalClasses; j++)
             {
@@ -320,12 +323,63 @@ void DateSheet :: DateSheetPage()
  
                 page.SelectFieldEnd();
                 cout << page.endTD;
-            }*/
+            }
 
-         
+   */      
+
+            // Adding all subjects in one variable
+            
+            vector<string> addSubCode;
+            addSubCode.clear();
+            for(j = 0; j < totalClasses; j++)
+            {
+//                outFile << className[j] << endl
+                for(k = 0; k < totalSubjects[j]; k++)
+                {
+                    trim(subCode[j][k]);
+//                    outFile << subCode[j][k] << endl
+                    addSubCode.push_back(subCode[j][k]);
+                }
+            }
+            // using default comparison:
+            std::vector<string>::iterator it;
+            it = std::unique (addSubCode.begin(), addSubCode.end());   // 10 20 30 20 10 ?  ?  ?  ?
+
+            addSubCode.resize(std::distance(addSubCode.begin(),it) ); // 10 20 30 20 10
+
             cout << td();
             page.InputField("text", fieldName.examCode, (i + 1),
                             examCode[i], examCode[i]);
+            cout << td();
+
+            cout << td();
+
+            // Displaying subject codes in select field
+//            for(j = 0; j < totalClasses; j++)
+            {
+                temp = "AddSubCode" + IntToString(i + 1);
+                //       + IntToString(j + 1);
+                page.SelectFieldStart(temp);
+
+                page.SelectOptionStart("Select", "y");
+                cout << " Select ";    
+                page.SelectOptionEnd();
+
+//                outFile << className[j] << endl
+                for(unsigned k = 0; k < addSubCode.size(); k++)
+                {
+                    page.SelectOptionStart(IntToString(k), "n");
+                    cout << addSubCode[k];    
+                    page.SelectOptionEnd();
+                }
+ 
+                page.SelectFieldEnd();
+            }
+        
+
+            page.InputField("button", "AddSubCode", 
+                            "AddSubCode('RowIndex', 'TotalDays', event)",
+                            "Add");
             cout << td();
         
             cout << td();
