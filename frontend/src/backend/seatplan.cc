@@ -693,7 +693,6 @@ void SeatPlan :: WritePDFFile(string projectID, int i)
         HPDF_Free (pdf);
         //return 1;
     }
-
     
     HPDF_SetCompressionMode (pdf, HPDF_COMP_ALL);
 
@@ -701,32 +700,21 @@ void SeatPlan :: WritePDFFile(string projectID, int i)
     font = HPDF_GetFont (pdf, "Helvetica", NULL);
     
     HPDF_Page_SetFontAndSize(page[centre][room], font, 15);
-    //int tw;
-    //strcpy(text,seat[0][0][0][0].c_str());
-    //textWidth1 = HPDF_Page_TextWidth (page[centre][room],
-                         //          seat[0][0][0][1].c_str());
-    
-   /* for(row = 0; row < rows[i][centre][room]; row++)
-    {   
-         for(room = 0; room < totalRooms[i][centre]; room++)
-         {
-             for(row = 0; row < rows[i][centre][room]; row++)
-             {
-                 for(col = 1; col < cols[i][centre][room]; col++)
-                 {     
-                     tw=HPDF_Page_TextWidth (page[centre][room],
-                                   seat[centre][room][row][col].c_str());
-                     if( textWidth1 < tw )
-                       textWidth1 =  tw;
-                  }
-              }
-          }
-      }*/
-
+    int total;
     for(centre = 0; centre < totalCentres[i]; centre++)
      {   
          for(room = 0; room < totalRooms[i][centre]; room++)
          {
+            total = 0;
+            for(int classNo = 0; classNo < totalClasses; classNo++)
+            {
+                int sz = totalRollNoInRoom[centre][room][classNo].size();
+
+                total += sz;
+            }
+
+            if (total)
+            {
              y=430,
 	         width=70;
 	         height=25;
@@ -742,17 +730,17 @@ void SeatPlan :: WritePDFFile(string projectID, int i)
              HPDF_Page_MoveTextPos (page[centre][room], 5,
                         HPDF_Page_GetHeight(page[centre][room]) - 25);
 
-             HPDF_Page_SetFontAndSize(page[centre][room], font, 25);
+             HPDF_Page_SetFontAndSize(page[centre][room], font, 23);
               
              textWidth = HPDF_Page_TextWidth (page[centre][room],
                                              examName[i].c_str());
              
              HPDF_Page_TextOut (page[centre][room], (HPDF_Page_GetWidth
                                  (page[centre][room]) - textWidth) / 2,
-             HPDF_Page_GetHeight (page[centre][room]) - 25, 
+             HPDF_Page_GetHeight (page[centre][room]) - 30, 
                                     examName[i].c_str());
             
-             HPDF_Page_SetFontAndSize(page[centre][room], font, 16);
+             HPDF_Page_SetFontAndSize(page[centre][room], font, 14);
             
              HPDF_Page_EndText (page[centre][room]);
              HPDF_Page_BeginText (page[centre][room]);
@@ -767,8 +755,9 @@ void SeatPlan :: WritePDFFile(string projectID, int i)
             
              HPDF_Page_TextOut (page[centre][room], (HPDF_Page_GetWidth
                                 (page[centre][room]) - textWidth) / 2,
-             HPDF_Page_GetHeight (page[centre][room]) - 50 , text);
+             HPDF_Page_GetHeight (page[centre][room]) - 60 , text);
    
+            HPDF_Page_SetFontAndSize(page[centre][room], font, 17);
              
              strcpy(text,"Centre : ");
              strcat(text,centreName[i][centre].c_str());
@@ -779,7 +768,7 @@ void SeatPlan :: WritePDFFile(string projectID, int i)
             
              HPDF_Page_TextOut (page[centre][room], (HPDF_Page_GetWidth
                                 (page[centre][room]) - textWidth) / 2,
-             HPDF_Page_GetHeight (page[centre][room]) - 75 , text);
+             HPDF_Page_GetHeight (page[centre][room]) - 85 , text);
                 
 
              for(row = 0; row < rows[i][centre][room]; row++)
@@ -821,14 +810,49 @@ void SeatPlan :: WritePDFFile(string projectID, int i)
                  y=y-height; 
                
              }
-                 HPDF_Page_SetFontAndSize(page[centre][room],font,15);
+
+              for(int classNo = 0; classNo < totalClasses; classNo++)
+            {
+                int sz = totalRollNoInRoom[centre][room][classNo].size();
+
+                if(sz != 0)
+                {   
+                    HPDF_Page_SetFontAndSize(page[centre][room],font,12);                
+                    
+                    strcpy(text,className[classNo].c_str());
+                    strcat(text," {");
+                    strcat(text,totalRollNoInRoom[centre][room][classNo][0].c_str());
+                    strcat(text," - ");
+                    strcat(text,totalRollNoInRoom[centre][room][classNo][sz - 1].c_str());
+                    strcat(text,"} : ");
+                    strcat(text,to_string(sz).c_str());
+
+                    textWidth = HPDF_Page_TextWidth (page[centre][room], text);
+
+                    HPDF_Page_TextOut (page[centre][room], 
+                    (HPDF_Page_GetWidth(page[centre][room]) - textWidth) / 2,
+                    y, text);
+                    
+                    y=y-15; 
+                }           
+            }
+
+                 strcpy(text,"Total Students: ");
+                 strcat(text,to_string(total).c_str());
+                 
+                textWidth = HPDF_Page_TextWidth (page[centre][room], text);
+
+                HPDF_Page_TextOut (page[centre][room], 
+                (HPDF_Page_GetWidth(page[centre][room]) - textWidth) / 2,
+                y, text);
+
                  strcpy(text,"Seating Plan generated by BaKaPlan(http:");
                  strcat(text,"//freecode.com/projects/bakaplan)");
                  textWidth = HPDF_Page_TextWidth (page[centre][room], text);
                  HPDF_Page_TextOut (page[centre][room], 
                  (HPDF_Page_GetWidth(page[centre][room]) - textWidth) / 2,
                  y-30 , text);
-
+            }
          }
      }   
 
