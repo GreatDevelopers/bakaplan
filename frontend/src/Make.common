@@ -16,7 +16,7 @@
 
 #   Variables for compilation of c/c++ files
 
-CXX     =   g++                          # Compiler 
+CXX     =   g++ -std=c++11               # Compiler 
 WALL    =   -Wall                        # Warning all flag
 WERROR  =   -Werror                      # Convert warnings into error
 DEBUG   =   -g $(WALL) $(WERROR)         # Debugging flag
