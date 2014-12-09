@@ -17,3 +17,5 @@ src/backend/*.o
 *.html
 *.orig
 frontend/src/backend/main
+frontend/src/header/sendmail-detail.h
+frontend/src/header/database-detail.h
