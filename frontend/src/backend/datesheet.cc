@@ -140,11 +140,11 @@ void DateSheet :: WriteDateSheet(string projectID)
  *      \param  pID project ID
  */
 
-void DateSheet :: Main(string pID)
+void DateSheet :: Main(string pID, bool startFromExpand)
 {
     projectID = pID;
 
-    ArrangeRollNo::Main(projectID);
+    ArrangeRollNo::Main(projectID, startFromExpand);
 
     ReadClassDetail(projectID);
     ReadDateSheet(projectID);

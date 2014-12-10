@@ -67,7 +67,7 @@ class ArrangeRollNo : public ReadInput
         void WriteArrangedRollNo();
 
         /** Main method to call all function in order/sequence  */
-        void Main(string pID);
+        void Main(string pID, bool startFromExpand = false);
 
         /** Desrtuctor */
         ~ArrangeRollNo();

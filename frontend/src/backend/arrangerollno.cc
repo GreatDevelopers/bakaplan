@@ -148,11 +148,14 @@ void ArrangeRollNo :: WriteArrangedRollNo()
  *      \param  pID Project ID
  */
 
-void ArrangeRollNo :: Main(string pID)
+void ArrangeRollNo :: Main(string pID, bool startFromExpand)
 {
     projectID = pID;
 
-    expandRNo.ExpandRollNos(pID);
+    if(!startFromExpand)
+        expandRNo.ExpandRollNos(pID);
+//    else
+//        expandRNo.ReadRollNoDetail(pID);
 
     temp = FileName(EXPAND_ROLLNO, projectID, 0);
 

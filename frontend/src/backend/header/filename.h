@@ -18,8 +18,8 @@
 
 const int FILE_SIZE = 50;
 
-const char INPUT[FILE_SIZE]   =   "../bakaplan/frontend/input/";
-const char OUTPUT[FILE_SIZE]  =   "../bakaplan/frontend/output/";
+const char INPUT[FILE_SIZE]   =   "../../input/";//"../bakaplan/frontend/input/";
+const char OUTPUT[FILE_SIZE]  =   "../../output/";//"../bakaplan/frontend/output/";
 const char IN[FILE_SIZE]      =   ".in";
 const char OUT[FILE_SIZE]     =   ".out";
 

@@ -39,7 +39,7 @@ class DateSheet : public ArrangeRollNo
         void WriteDateSheet(string projectID);
 
         /** Main function to call other functions */
-        void Main(string pID);
+        void Main(string pID, bool startFromExpand);
 
         /** Desructor */
         ~DateSheet();

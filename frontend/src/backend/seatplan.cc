@@ -334,7 +334,7 @@ void SeatPlan :: WriteSeatPlan(string projectID, int i)
     outFile.close();
     AddRollNoInfo(projectID, i);
     WriteHTMLFile(projectID, i);
-    WritePDFFile(projectID, i);
+//    WritePDFFile(projectID, i);
     WriteAttendanceFile(projectID, i);
 }
 
@@ -349,8 +349,9 @@ void SeatPlan :: WriteSeatPlan(string projectID, int i)
 void SeatPlan :: WriteHTMLFile(string projectID, int i)
 {
 
-    temp = "../../SeatPlan/seatplan-" + projectID + ".html";
-    
+//    temp = "../../SeatPlan/seatplan-" + projectID + ".html";
+    temp = "../../../../../expandBP/seatplan-" + projectID + ".html";
+   
     outFile.open(temp.c_str());
     outFile << "<html><head><title>BaKaPlan</title>"
             << "<style> @media print { div {page-break-before:always} } "
@@ -482,8 +483,9 @@ void SeatPlan :: WriteHTMLFile(string projectID, int i)
 void SeatPlan :: WriteAttendanceFile(string projectID, int i)
 {
 
-    temp = "../../SeatPlan/attendance-file-" + projectID + ".html";
-    
+//    temp = "../../SeatPlan/attendance-file-" + projectID + ".html";
+    temp = "~/public_html/SeatPlan/attendance-file-" + projectID + ".html";
+
     outFile.open(temp.c_str());
     outFile << "<html><head><title>BaKaPlan</title>"
             << "<style> @media print { div {page-break-before:always} } "
@@ -680,7 +682,8 @@ void SeatPlan :: WritePDFFile(string projectID, int i)
     HPDF_Page page[10][50];
     char text[100];
     
-    temp = "../../SeatPlan/seatplan-" + projectID + ".pdf";
+//    temp = "../../SeatPlan/seatplan-" + projectID + ".pdf";
+    temp = "../../../../../expandBP/seatplan-" + projectID + ".pdf";
 
     
     pdf = HPDF_New (error_handler, NULL);
