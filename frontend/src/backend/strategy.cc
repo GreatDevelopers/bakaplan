@@ -131,7 +131,7 @@ void Strategy :: TotalGroupStudents(int strategy, int i)
         groupStudentSize[j] = 0;
     }
     
-    sort(iTemp.begin(), iTemp.end());
+    sort(iTemp.begin(), iTemp.end(), std::greater<int>());
     
     for(j = 0; j < totalExams[i]; j++)
     {
@@ -156,7 +156,7 @@ void Strategy :: TotalGroupStudents(int strategy, int i)
         s++;
                
     }
-    sort(groupStudentSize.begin(), groupStudentSize.end());
+    sort(groupStudentSize.begin(), groupStudentSize.end(), std::greater<int>());
 }
 
 void Strategy :: GroupCondition(int strategy, int i)
