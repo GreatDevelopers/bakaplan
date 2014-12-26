@@ -38,7 +38,7 @@ void SeatPlan :: SetRollNo(int strategy, int i)
     else
         stra = strategy;*/
     
-    if(strategy > 5)
+    if(strategy > 5 && strategy < 8)
         sss = 4;
     else 
         sss = strategy;
@@ -47,6 +47,12 @@ void SeatPlan :: SetRollNo(int strategy, int i)
     {
         case 5:
             stra = 1;
+            break;
+        case 8:
+            stra = 2;
+            break;
+        case 9:
+            stra = 2;
             break;
         default:
             stra = sss;
@@ -103,6 +109,12 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
         case 7:
             stra = 4;
             break;
+        case 8:
+            stra = 2;
+            break;
+        case 9:
+            stra = 2;
+            break;
         default:
             stra = strategy;
             break;
@@ -144,11 +156,11 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
             {
                 if((row % 2) != 0)
                 {
-                    if(strategy == 2 || strategy == 6)
+                    if(strategy == 2 || strategy == 6 || strategy == 9)
                         s = 1;
                     else if(strategy > 2 && strategy < 5)
                         s = 2;
-                    else if(strategy == 5)
+                    else if(strategy == 5 || strategy == 8)
                         s = 0;
                 }
                 else
@@ -188,6 +200,8 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
                         int ss = strategy;
                         if(strategy == 6)
                             ss = 4;
+                        else if (strategy == 8)
+                            ss = 2;
                         if(s >= ss)
                         {
                             if(strategy == 6)
@@ -209,7 +223,7 @@ void SeatPlan :: SeatingPlan(int strategy, int i)
                         {
                             s = s + 2;
                         }
-                        else
+                        else if(strategy != 6 && strategy != 9)
                             s++;
                     }
                 }    
