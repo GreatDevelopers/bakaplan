@@ -59,7 +59,7 @@ Here username is your login name.
     
     $ cd /etc/apache2
     
-    $ sudo vim sites-available/default
+    $ sudo vim sites-available/000-default.conf 
     
 Add following text in file:
     
@@ -106,7 +106,7 @@ Run following commands in terminal
 
     $ sudo apt-get install mysql-server mysql-client
     
-    $ sudo apt-get install libmysql++
+    $ sudo apt-get install libmysql++3v5
 
     $ sudo apt-get install libmysql++-dev
 
@@ -114,7 +114,7 @@ Run following commands in terminal
 
 Run following command in terminal
 
-    $ sudo apt-get install libboost1.53-dev 
+    $ sudo apt-get install libboost1.61-dev 
 
 6) jwSMTP Library
 

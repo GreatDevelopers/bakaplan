@@ -44,6 +44,8 @@ Do as followong to remove that.
 
 $ sudo ln -s /usr/local/lib/libjwsmtp-<version>.so /usr/lib/libjwsmtp-<version>.so
 
+$ sudo ln -s /usr/local/lib/libhpdf.so /usr/lib/libhpdf.so
+
 Replace <version> with your installed one or use tab.
 
 NOTE:    Be sure that you must have write permission in the directory
